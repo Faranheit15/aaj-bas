@@ -1,0 +1,57 @@
+:root {
+  color-scheme: light dark;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f7f4ef;
+  color: #1f2520;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: inherit;
+  color: inherit;
+}
+
+.reader-shell {
+  width: min(100% - 2rem, 42rem);
+  margin: 0 auto;
+  padding: clamp(2rem, 8vw, 5rem) 0;
+}
+
+.brand-line {
+  margin: 0 0 clamp(3rem, 10vw, 6rem);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 8vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+p {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: #181b18;
+    color: #f3f0e9;
+  }
+}
+
+@media (max-width: 34rem) {
+  .reader-shell {
+    width: min(100% - 1.5rem, 42rem);
+  }
+}

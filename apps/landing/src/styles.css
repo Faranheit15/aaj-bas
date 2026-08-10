@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light dark;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f7f4ef;
+  color: #1f2520;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: inherit;
+  color: inherit;
+}
+
+.landing-page {
+  width: min(100% - 2rem, 44rem);
+  margin: 0 auto;
+  padding: clamp(3rem, 10vw, 7rem) 0 4rem;
+}
+
+.landing-hero,
+.how-it-works,
+.audience-note {
+  max-width: 38rem;
+}
+
+.brand-line {
+  margin: 0 0 2.5rem;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 34rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.4rem, 8vw, 4.75rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.intro {
+  max-width: 31rem;
+  font-size: clamp(1.125rem, 3vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.primary-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 1.25rem 0 1.75rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.primary-link:hover {
+  background: #1f2520;
+  color: #f7f4ef;
+}
+
+.primary-link:focus-visible {
+  outline: 3px solid #a84315;
+  outline-offset: 3px;
+}
+
+.principles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Arial, sans-serif;
+  line-height: 1.75;
+}
+
+.principles li::before {
+  content: "— ";
+}
+
+.how-it-works {
+  margin-top: clamp(4rem, 12vw, 7rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid #8b918a;
+}
+
+ol {
+  margin: 0;
+  padding-left: 1.35rem;
+  line-height: 1.65;
+}
+
+.audience-note {
+  margin: clamp(4rem, 12vw, 7rem) 0 0;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: #181b18;
+    color: #f3f0e9;
+  }
+
+  .primary-link:hover {
+    background: #f3f0e9;
+    color: #181b18;
+  }
+
+  .how-it-works {
+    border-color: #9ba39a;
+  }
+}
+
+@media (max-width: 34rem) {
+  .landing-page {
+    width: min(100% - 1.5rem, 44rem);
+    padding-top: 2rem;
+  }
+
+  h1 br {
+    display: none;
+  }
+}
