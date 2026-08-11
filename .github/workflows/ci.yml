@@ -1,13 +1,17 @@
-name: CI
+name: CI/CD
 
 on:
   pull_request:
   push:
     branches:
-      - main
+      - develop
 
 permissions:
   contents: read
+
+concurrency:
+  group: pages-production
+  cancel-in-progress: false
 
 jobs:
   check:
@@ -19,3 +23,56 @@ jobs:
           bun-version: 1.3.14
       - run: bun ci
       - run: bun run check
+
+  deploy-web:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    outputs:
+      deployment_url: ${{ steps.deploy.outputs.deployment-url }}
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.deployment-url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - run: bun ci
+      - run: bun run --filter @aaj-bas/web build
+      - id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy apps/web/dist --project-name=aaj-bas-web --branch=develop --commit-hash=${{ github.sha }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-landing:
+    needs: deploy-web
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.deployment-url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - run: bun ci
+      - run: bun run --filter @aaj-bas/landing build
+        env:
+          VITE_APP_URL: ${{ needs.deploy-web.outputs.deployment_url }}
+      - id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy apps/landing/dist --project-name=aaj-bas-landing --branch=develop --commit-hash=${{ github.sha }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

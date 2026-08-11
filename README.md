@@ -6,7 +6,7 @@ The product is deliberately not a feed. A completed edition is the intended outc
 
 ## Architecture
 
-This repository is a Bun workspace monorepo. It currently contains two static React + Vite applications, small shared TypeScript packages, versioned content directories, and CI. Cloudflare Pages is the future hosting target.
+This repository is a Bun workspace monorepo. It contains two static React + Vite applications, small shared TypeScript packages, versioned content directories, and GitHub Actions CI/CD. Cloudflare Pages hosts the applications through direct uploads from GitHub Actions.
 
 There is intentionally no runtime backend, database, authentication, or analytics. Published content will be versioned in Git and served as static files.
 
@@ -67,6 +67,10 @@ bun run check
 
 `bun run check` runs every merge-blocking formatting, linting, type-checking, test, and production-build check.
 
+## Deployment
+
+Pull requests and pushes to `develop` run the full CI suite. A successful push to `develop` deploys `apps/web` and then `apps/landing` to Cloudflare Pages; the landing CTA is built with the deployed reader URL. The one-time Cloudflare project and GitHub secret setup is documented in the [Cloudflare Pages deployment runbook](docs/runbooks/cloudflare-pages-deployment.md).
+
 ## Governing documents
 
 - [Repository instructions](AGENTS.md)
@@ -77,4 +81,4 @@ bun run check
 
 ## Current scope
 
-This is foundation work only. The repository deliberately does not yet include an edition schema, news UI, content fetching, RSS ingestion, LLM integration, local reading state, PWA support, or deployment configuration.
+This is foundation work only. The repository deliberately does not yet include an edition schema, news UI, content fetching, RSS ingestion, LLM integration, local reading state, or PWA support. Deployment is limited to static application shells.

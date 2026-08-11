@@ -1,0 +1,43 @@
+# Cloudflare Pages deployment
+
+## Purpose
+
+`develop` is the production branch. Every successful push to it runs the full Bun check suite and then deploys the reader followed by the landing page. Pull requests run checks only and never receive Cloudflare credentials.
+
+The deployment uses Cloudflare Pages Direct Upload. Do not connect these projects to Cloudflare Git integration: Cloudflare does not support converting a Direct Upload project to Git integration later.
+
+## One-time setup
+
+Create two Cloudflare Pages Direct Upload projects in the intended Cloudflare account:
+
+- `aaj-bas-web`
+- `aaj-bas-landing`
+
+Set each project's production branch to `develop`. With an authenticated Cloudflare account, the equivalent Bun commands are:
+
+```bash
+bunx wrangler pages project create aaj-bas-web --production-branch=develop
+bunx wrangler pages project create aaj-bas-landing --production-branch=develop
+```
+
+Create a Cloudflare API token with only `Account > Cloudflare Pages > Edit` permission for that account. In the GitHub repository, add these Actions secrets:
+
+- `CLOUDFLARE_ACCOUNT_ID`
+- `CLOUDFLARE_API_TOKEN`
+
+Do not add either value to a local `.env` file, source file, test, or GitHub Actions variable.
+
+## Delivery flow
+
+1. Push a reviewed commit to `develop`.
+2. The `check` job runs `bun ci` and `bun run check`.
+3. If it succeeds, `aaj-bas-web` is built and deployed.
+4. The landing page is built with that reader deployment URL in `VITE_APP_URL` and then deployed to `aaj-bas-landing`.
+
+The first deployment makes the reader URL available at the project Pages URL. The landing page always uses the precise deployment URL emitted by Cloudflare for the same commit.
+
+## Rollback
+
+In Cloudflare Dashboard, open **Workers & Pages**, select the affected project, open its deployment history, select the last known-good production deployment, and choose **Rollback**. Roll back the reader first if both applications must return to an earlier state, then roll back the landing page.
+
+Record the incident and the reverted deployment in the relevant pull request or issue. Do not remove deployment history.

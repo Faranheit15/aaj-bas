@@ -1,3 +1,3 @@
 # Runbooks
 
-Operational runbooks will be added when the project has deployable content or automation. This foundation has no production service to operate.
+- [Cloudflare Pages deployment](cloudflare-pages-deployment.md)
