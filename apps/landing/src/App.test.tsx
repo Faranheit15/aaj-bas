@@ -13,9 +13,10 @@ describe("landing page", () => {
         name: "Know what happened. Then get on with your day.",
       }),
     ).toBeInTheDocument();
+    // A blank VITE_APP_URL must not reach href, where it would self-link.
     expect(
       screen.getByRole("link", { name: "Read today's edition" }),
-    ).toBeInTheDocument();
+    ).toHaveAttribute("href", "/");
   });
 
   it("states the finite-news positioning", () => {

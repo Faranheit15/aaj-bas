@@ -9,6 +9,14 @@ on:
 permissions:
   contents: read
 
+env:
+  # The landing CTA points at the reader's stable production alias, never at the
+  # per-commit URL wrangler emits. A per-commit deployment URL is immutable, so
+  # rolling the reader back in the Cloudflare dashboard would leave the landing page
+  # still linking at the withdrawn build. ADR-0002's rollback plan depends on the
+  # two applications being rollback-independent, which only this indirection gives.
+  READER_PRODUCTION_URL: https://aaj-bas-web.pages.dev
+
 concurrency:
   # Pull requests use a per-branch group so contributors' runs do not queue behind
   # one another, and a superseded run is cancelled. Pushes to develop keep the
@@ -34,8 +42,6 @@ jobs:
     permissions:
       contents: read
       deployments: write
-    outputs:
-      deployment_url: ${{ steps.deploy.outputs.deployment-url }}
     environment:
       name: production
       url: ${{ steps.deploy.outputs.deployment-url }}
@@ -71,7 +77,7 @@ jobs:
       - run: bun ci
       - run: bun run --filter @aaj-bas/landing build
         env:
-          VITE_APP_URL: ${{ needs.deploy-web.outputs.deployment_url }}
+          VITE_APP_URL: ${{ env.READER_PRODUCTION_URL }}
       - id: deploy
         uses: cloudflare/wrangler-action@v3
         with:

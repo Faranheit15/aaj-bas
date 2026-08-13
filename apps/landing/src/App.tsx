@@ -1,7 +1,8 @@
 import type { JSX } from "react";
 import { BrandMark } from "@aaj-bas/ui";
+import { resolveReaderUrl } from "./reader-url";
 
-const readerUrl = import.meta.env.VITE_APP_URL ?? "/";
+const readerUrl = resolveReaderUrl(import.meta.env.VITE_APP_URL);
 
 export function App(): JSX.Element {
   return (
