@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "date": "2026-07-21",
-  "editionVersion": 1,
-  "status": "published",
+  "editionVersion": 2,
+  "status": "corrected",
   "publishedAt": "2026-07-21T06:00:00+05:30",
-  "updatedAt": "2026-07-21T13:45:00+05:30",
+  "updatedAt": "2026-07-21T19:20:00+05:30",
   "estimatedMinutes": 8,
   "coreStoryIds": [
     "story-vetrapur-ring-road-repair",
@@ -170,9 +170,9 @@
       "topic": "policy-geopolitics",
       "reportingType": "reporting",
       "headline": "Public consultation on Vetrakhand's draft coastal-zone rules closes",
-      "deck": "The consultation on Vetrakhand's draft coastal-zone rules has closed after six weeks, with the secretariat's tally recording 1,240 written submissions.",
+      "deck": "The consultation on Vetrakhand's draft coastal-zone rules has closed after six weeks, with the secretariat's tally recording 240 written submissions.",
       "whatChanged": [
-        "The public consultation on Vetrakhand's draft coastal-zone rules closed on Monday after six weeks. The draft revises the setback distances applied to construction along the shoreline and adds a permit stage for works within the intertidal margin. The secretariat's published tally records 1,240 written submissions received during the consultation period.",
+        "The public consultation on Vetrakhand's draft coastal-zone rules closed on Monday after six weeks. The draft revises the setback distances applied to construction along the shoreline and adds a permit stage for works within the intertidal margin. The secretariat's published tally records 240 written submissions received during the consultation period.",
         "The secretariat said the submissions would be examined before a revised draft is placed before the state cabinet, and gave no date for that. It has not published the submissions themselves."
       ],
       "whyItMatters": "The setback distances in the draft decide what can be built along a coastline that already carries settlements inside the current line, so the consultation record is the main public account of who objected and on what grounds. The volume of submissions is the only part of that record published so far.",
@@ -180,7 +180,7 @@
       "sourceCount": 2,
       "confidence": "multi-source",
       "firstPublishedAt": "2026-07-21T06:00:00+05:30",
-      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T19:20:00+05:30",
       "reviewed": true
     },
     {
@@ -382,5 +382,14 @@
       "publishedAt": "2026-07-20T20:35:00+05:30"
     }
   ],
-  "correctionNotes": []
+  "correctionNotes": [
+    {
+      "id": "correction-coastal-zone-submission-count",
+      "storyId": "story-coastal-zone-consultation",
+      "correctedAt": "2026-07-21T19:20:00+05:30",
+      "editionVersion": 2,
+      "summary": "An earlier version of this story said the consultation received 1,240 written submissions. The correct figure, from the secretariat's published tally, is 240. The original figure is recorded here.",
+      "detail": "The higher figure came from a summary table that combined written submissions with oral depositions recorded at the regional hearings. The secretariat's tally lists the two separately. Both source reports were re-read before this correction was published, and the story text now gives the written-submission count only."
+    }
+  ]
 }
