@@ -3,8 +3,8 @@ dist/
 coverage/
 .vite/
 .env
-.env.local
-.env.*.local
+.env.*
 !.env.example
 .DS_Store
 .claude/settings.local.json
+AGENTS.override.md

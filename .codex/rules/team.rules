@@ -1,0 +1,95 @@
+# Aaj, Bas. -- repository command policy for Codex.
+#
+# Mirrors .claude/settings.json so both agent tools are held to the same
+# guardrails. These encode AGENTS.md section 8 (Bun is the only package manager)
+# and section 47 (no autonomous deployment or secret handling).
+#
+# Loads only when this project's .codex/ layer is trusted.
+# Validate with:
+#   codex execpolicy check --pretty --rules .codex/rules/team.rules -- <command>
+#
+# A pattern element is one argv position; a list is a union of alternatives at
+# that position. Each wrangler entry point therefore needs its own rule -- a
+# union spread across positions would leave the other spellings unmatched.
+
+prefix_rule(
+    pattern = [["npm", "npx", "pnpm", "pnpx", "yarn"]],
+    decision = "forbidden",
+    justification = "AGENTS.md section 8: Bun is the only package manager. Use bun or bunx.",
+    match = ["npm install", "pnpm add react", "yarn", "npx vite build"],
+    not_match = ["bun install", "bunx @biomejs/biome lint ."],
+)
+
+prefix_rule(
+    pattern = ["wrangler"],
+    decision = "forbidden",
+    justification = "AGENTS.md section 47: deployment happens only through CI on develop, never from an agent session.",
+    match = ["wrangler pages deploy apps/web/dist", "wrangler deploy", "wrangler login"],
+)
+
+prefix_rule(
+    pattern = ["bunx", "wrangler"],
+    decision = "forbidden",
+    justification = "AGENTS.md section 47: deployment happens only through CI on develop, never from an agent session.",
+    match = ["bunx wrangler pages deploy apps/web/dist", "bunx wrangler deploy", "bunx wrangler secret put X"],
+    not_match = ["bunx @biomejs/biome format ."],
+)
+
+prefix_rule(
+    pattern = ["bun", "x", "wrangler"],
+    decision = "forbidden",
+    justification = "AGENTS.md section 47: bun x is an alias of bunx; deployment happens only through CI on develop.",
+    match = ["bun x wrangler pages deploy apps/web/dist", "bun x wrangler login"],
+)
+
+prefix_rule(
+    pattern = ["bun", "run", "wrangler"],
+    decision = "forbidden",
+    justification = "AGENTS.md section 47: deployment happens only through CI on develop, never from an agent session.",
+    match = ["bun run wrangler pages deploy apps/web/dist"],
+    not_match = ["bun run check"],
+)
+
+prefix_rule(
+    pattern = ["gh", ["secret", "variable", "api"]],
+    decision = "forbidden",
+    justification = "AGENTS.md section 47: production secrets are handled by a human, not an agent.",
+    match = ["gh secret set CLOUDFLARE_API_TOKEN", "gh variable set CLOUDFLARE_ACCOUNT_ID", "gh api -X PUT /repos/o/r/actions/secrets/N"],
+    not_match = ["gh run list"],
+)
+
+# Routine, non-mutating repository commands. Precedence is forbidden > prompt >
+# allow, so these cannot loosen anything above. This mirrors the allow list in
+# .claude/settings.json so a Codex session is not prompted for the check suite.
+
+prefix_rule(
+    pattern = ["bun", "run", ["check", "check:agents", "check:pm", "format:check", "lint", "typecheck", "test", "build"]],
+    decision = "allow",
+    justification = "AGENTS.md section 30: the merge-blocking check suite.",
+    match = ["bun run check", "bun run typecheck"],
+)
+
+prefix_rule(
+    pattern = ["bun", ["install", "ci"]],
+    decision = "allow",
+    justification = "AGENTS.md section 8: permitted Bun install commands.",
+    match = ["bun install", "bun ci"],
+)
+
+prefix_rule(
+    pattern = ["git", ["push", "merge", "rebase"]],
+    decision = "prompt",
+    justification = "AGENTS.md section 47: a push to develop is the production deployment and needs explicit human authorization.",
+    match = ["git push origin develop", "git merge feature"],
+    not_match = ["git status --short"],
+)
+
+prefix_rule(
+    pattern = ["git", ["status", "diff", "log", "show", "branch"]],
+    decision = "allow",
+    justification = "Read-only inspection of the working tree.",
+    match = ["git status --short", "git diff"],
+    not_match = ["git push origin develop"],
+)
+
+# check-package-manager:allow-names

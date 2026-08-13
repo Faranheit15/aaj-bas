@@ -1,5 +1,3 @@
-# AGENTS.md
-
 # Aaj, Bas. — Repository Instructions for AI Coding Agents
 
 This file contains binding engineering and product rules for every AI coding agent operating in this repository.
@@ -10,16 +8,15 @@ These instructions are not suggestions.
 
 When an implementation request conflicts with this file, stop the conflicting implementation, explain the conflict, and choose the smallest compliant solution unless a human explicitly changes the governing requirement.
 
-This file is agent-tool agnostic and is the single source of truth. Agent tools that look for their own instruction file must point at this one rather than restate it:
+This file is agent-tool agnostic and is the single source of truth. Codex reads it directly; Claude Code loads root `CLAUDE.md`, which imports it and adds only tool-specific notes.
 
-- Codex and other agents that read `AGENTS.md` load this file directly.
-- Claude Code loads `CLAUDE.md`, which imports this file and adds only tool-specific operating notes in `.claude/`.
+Add or change binding rules here, never in a tool-specific file, where they would drift.
 
-Add or change binding rules here. Do not duplicate them into a tool-specific file, where they would drift.
+Do not create a root `AGENTS.override.md`. Codex reads it *instead of* this file, silently disabling every rule below.
 
 ---
 
-## 1. Product mission
+# 1. Product mission
 
 Aaj, Bas. is a finite daily news product.
 
@@ -60,7 +57,9 @@ Authority order:
 6. issue/task acceptance criteria;
 7. existing implementation conventions.
 
-A lower-priority document may not silently override a higher-priority document.
+A lower-priority document may not silently override a higher-priority document. The single exception: `docs/PRODUCT_CONSTITUTION.md` is canonical for the product commitments themselves. This file ranks above it only for engineering rules, and section 3 restates none of those commitments.
+
+The three repository procedures are defined once in `docs/workflows/`: `check.md`, `slice.md`, and `adr.md`. Claude Code invokes them as `/check`, `/slice`, `/adr`; Codex invokes them as `$check`, `$slice`, `$adr`.
 
 If two governing documents materially conflict, report the conflict rather than guessing.
 
@@ -68,7 +67,7 @@ If two governing documents materially conflict, report the conflict rather than 
 
 # 3. Product constitution
 
-The following rules are binding.
+The constitution is stated canonically in `docs/PRODUCT_CONSTITUTION.md`. The engineering prohibitions below follow from it and are equally binding.
 
 ## 3.1 Finite by design
 
@@ -162,7 +161,7 @@ GitHub monorepo
 │   └── versioned content-as-code
 │
 ├── scripts/*
-│   └── future content automation
+│   └── repository checks and future content automation
 │
 └── GitHub Actions
     └── CI and future scheduled content workflows
@@ -174,6 +173,8 @@ Hosting target:
 apps/landing → Cloudflare Pages
 apps/web     → Cloudflare Pages
 ```
+
+`develop` is the production branch: a push to it deploys both applications to Cloudflare Pages (ADR-0002).
 
 Content is initially versioned JSON in Git.
 
@@ -194,8 +195,7 @@ Use:
 - Zod;
 - Vitest;
 - React Testing Library where needed;
-- Playwright for end-to-end testing;
-- axe-core for automated accessibility checks;
+- Playwright (end-to-end) and axe-core (accessibility) — neither is installed; adding either requires an ADR;
 - Biome for formatting and linting;
 - GitHub Actions;
 - plain CSS and CSS custom properties.
@@ -313,6 +313,8 @@ scripts/
 docs/
 .github/
 .claude/
+.codex/
+.agents/
 ```
 
 Applications may depend on shared packages.
@@ -761,6 +763,8 @@ Secrets must not appear in:
 - screenshots;
 - generated artifacts.
 
+Reference secrets by name and let CI inject them; never read, print, or otherwise access production secret values.
+
 Environment files containing real values must remain ignored.
 
 `.env.example` contains variable names and safe documentation only.
@@ -895,8 +899,7 @@ Use:
 - unit tests for deterministic logic;
 - schema tests for contracts;
 - component tests for important user-visible behavior;
-- accessibility checks for main flows;
-- end-to-end tests for critical journeys;
+- accessibility checks for main flows, and end-to-end tests for critical journeys, once the tooling in section 5 is introduced;
 - golden fixtures for future content-processing behavior.
 
 Tests must not depend on:
@@ -921,6 +924,8 @@ Before declaring a task complete, run the relevant repository checks.
 For normal repository-wide changes:
 
 ```bash
+bun run check:agents
+bun run check:pm
 bun run format:check
 bun run lint
 bun run typecheck
@@ -958,10 +963,10 @@ A change is done only when:
 - formatting passes;
 - relevant unit tests pass;
 - relevant integration tests pass;
-- relevant end-to-end tests pass;
+- relevant end-to-end tests pass where such a suite exists;
 - production builds pass;
 - accessibility implications have been checked;
-- error/offline/stale states are handled where applicable;
+- loading, success, empty, error, stale, and offline states are handled where applicable;
 - schemas and fixtures are updated where applicable;
 - documentation is updated where behavior changed;
 - no unauthorized tracking was added;
@@ -1039,13 +1044,7 @@ Review the diff for:
 
 ## Step 7 — Report
 
-Final agent response should state:
-
-- what changed;
-- important implementation choices;
-- tests/checks actually run;
-- remaining risks or limitations;
-- files materially changed.
+Respond in the format required by section 51.
 
 Do not hide failed checks.
 
@@ -1291,7 +1290,7 @@ Do not expose production secrets to workflows triggered from untrusted forks.
 
 Third-party GitHub Actions should be well-established and minimized.
 
-Content automation must never push unvalidated generated editions directly to `main`.
+Content automation must never push unvalidated generated editions directly to `develop` or `main`.
 
 Human review remains the publication gate until an approved milestone says otherwise.
 
@@ -1362,7 +1361,7 @@ Without explicit human authorization, do not:
 - delete production data;
 - remove correction history;
 - bypass CI;
-- merge to `main`;
+- push or merge to `develop` (the production branch) or `main`;
 - weaken security controls;
 - weaken type checking;
 - disable tests;

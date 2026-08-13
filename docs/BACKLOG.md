@@ -13,9 +13,9 @@
 
 **Deliverables**
 
-- pnpm workspace;
-- `apps/web` Vite React application;
-- `packages/domain`, `packages/schemas`, and `packages/test-fixtures`;
+- Bun workspace;
+- `apps/landing` and `apps/web` Vite React applications;
+- `packages/domain`, `packages/schemas`, `packages/ui`, and `packages/test-fixtures`;
 - strict TypeScript configuration;
 - lint, format, test, and build commands;
 - CI workflow.
@@ -30,7 +30,7 @@
 
 **Deliverables**
 
-- `docs/PRODUCT_CONSTITUTION.md` copied from the PRD;
+- `docs/PRODUCT_CONSTITUTION.md` as the canonical constitution, with the PRD pointing at it rather than restating it;
 - root `AGENTS.md` with scope, privacy, accessibility, dependency, schema, and testing rules;
 - ADR template.
 
@@ -75,7 +75,7 @@
 
 **Deliverables**
 
-- `pnpm content:validate`;
+- `bun run content:validate`;
 - structural, diversity, duplicate, length, URL, and correction checks;
 - human-readable and machine-readable reports.
 
@@ -423,7 +423,7 @@
 
 **Acceptance criteria**
 
-- workflow never pushes directly to main;
+- workflow never pushes directly to `develop`;
 - failed validation still creates a diagnostic artifact but cannot publish;
 - secrets are masked.
 
@@ -480,10 +480,10 @@
 
 **Deliverables**
 
-- Hono endpoint;
+- Hono endpoint (a runtime backend; requires an approved ADR and unlocked milestone; see AGENTS.md sections 6 and 7);
 - Zod validation;
 - edge rate limiting strategy;
-- D1 table or durable zero-cost equivalent;
+- D1 table or durable zero-cost equivalent (data persistence; requires an approved ADR per AGENTS.md section 34 and an unlocked milestone);
 - retention job.
 
 **Acceptance criteria**
@@ -599,14 +599,14 @@
 
 ## 11. Agent review prompt
 
-Use this checklist in every reviewer-agent task:
+Use this checklist during `AGENTS.md` section 32 step 6 self-review, and during human review before merge:
 
 1. Does the change preserve a finite daily edition?
 2. Does it add any hidden engagement loop, guilt, urgency, or behavioral ranking?
 3. Does it expose or collect more user data than necessary?
 4. Are source provenance and correction behavior preserved?
 5. Can the same outcome be achieved with less infrastructure or fewer dependencies?
-6. Are loading, error, stale, and offline states handled?
+6. Are loading, success, empty, error, stale, and offline states handled?
 7. Are keyboard, screen-reader, contrast, and reduced-motion needs covered?
 8. Are external inputs validated and sanitized?
 9. Do tests prove the acceptance criteria rather than implementation details?

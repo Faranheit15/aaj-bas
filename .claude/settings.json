@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_note": "This file names npm, pnpm, npx and yarn in order to deny them. check-package-manager:allow-names",
   "permissions": {
     "allow": [
       "Bash(bun install)",
@@ -11,14 +12,19 @@
       "Bash(bun run typecheck)",
       "Bash(bun run test)",
       "Bash(bun run build)",
-      "Bash(bun run --filter *)",
-      "Bash(bunx biome *)",
       "Bash(git status *)",
       "Bash(git diff *)",
       "Bash(git log *)",
       "Bash(git show *)",
-      "Bash(git branch *)"
+      "Bash(git branch *)",
+      "Bash(bunx @biomejs/biome *)",
+      "Bash(bun run --filter @aaj-bas/* build)",
+      "Bash(bun run --filter @aaj-bas/* test)",
+      "Bash(bun run --filter @aaj-bas/* typecheck)",
+      "Bash(bash scripts/check-agents-md-size.sh)",
+      "Bash(bash scripts/check-package-manager.sh)"
     ],
+    "ask": ["Bash(git push *)", "Bash(git merge *)", "Bash(git rebase *)"],
     "deny": [
       "Bash(npm *)",
       "Bash(npx *)",
@@ -27,11 +33,113 @@
       "Bash(yarn *)",
       "Bash(wrangler *)",
       "Bash(bunx wrangler *)",
+      "Bash(bun run wrangler *)",
+      "Bash(bun x wrangler *)",
       "Bash(gh secret *)",
       "Read(./.env)",
       "Read(./.env.local)",
       "Read(./**/.env)",
-      "Read(./**/.env.local)"
+      "Read(./**/.env.local)",
+      "Write(./AGENTS.override.md)",
+      "Edit(./AGENTS.override.md)",
+      "Write(./**/AGENTS.override.md)",
+      "Edit(./**/AGENTS.override.md)",
+      "Bash(bunx npm *)",
+      "Bash(bunx pnpm *)",
+      "Bash(bunx yarn *)",
+      "Bash(bunx npx *)",
+      "Bash(bun x npm *)",
+      "Bash(bun x pnpm *)",
+      "Bash(bun x yarn *)",
+      "Bash(bunx wrangler@*)",
+      "Bash(bun x wrangler@*)",
+      "Bash(bunx --bun wrangler *)",
+      "Bash(bun x --bun wrangler *)",
+      "Bash(./node_modules/.bin/wrangler *)",
+      "Bash(node_modules/.bin/wrangler *)",
+      "Bash(gh variable *)",
+      "Bash(gh workflow run *)",
+      "Edit(./.env)",
+      "Write(./.env)",
+      "Read(./.env.production)",
+      "Read(./**/.env.production)",
+      "Read(./.env.development)",
+      "Read(./**/.env.development)",
+      "Read(./.env.staging)",
+      "Read(./**/.env.staging)",
+      "Read(./.env.test)",
+      "Read(./**/.env.test)",
+      "Read(./.env.*.local)",
+      "Read(./**/.env.*.local)",
+      "Edit(./**/.env)",
+      "Edit(./.env.local)",
+      "Edit(./**/.env.local)",
+      "Edit(./.env.production)",
+      "Edit(./**/.env.production)",
+      "Edit(./.env.development)",
+      "Edit(./**/.env.development)",
+      "Edit(./.env.staging)",
+      "Edit(./**/.env.staging)",
+      "Edit(./.env.test)",
+      "Edit(./**/.env.test)",
+      "Edit(./.env.*.local)",
+      "Edit(./**/.env.*.local)",
+      "Write(./**/.env)",
+      "Write(./.env.local)",
+      "Write(./**/.env.local)",
+      "Write(./.env.production)",
+      "Write(./**/.env.production)",
+      "Write(./.env.development)",
+      "Write(./**/.env.development)",
+      "Write(./.env.staging)",
+      "Write(./**/.env.staging)",
+      "Write(./.env.test)",
+      "Write(./**/.env.test)",
+      "Write(./.env.*.local)",
+      "Write(./**/.env.*.local)",
+      "Bash(bunx pnpx *)",
+      "Bash(bun x npx *)",
+      "Bash(bun x pnpx *)",
+      "Bash(gh api *)",
+      "Bash(gh run rerun *)",
+      "Bash(gh workflow enable *)",
+      "Bash(gh workflow disable *)",
+      "Bash(bun x --bun wrangler)",
+      "Read(./.env.preview)",
+      "Read(./.env.ci)",
+      "Read(./**/.env.preview)",
+      "Read(./**/.env.ci)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "timeout": 15,
+            "statusMessage": "Formatting edited file",
+            "command": "f=$(jq -r '.tool_input.file_path // \"\"' 2>/dev/null); [ -n \"$f\" ] || exit 0; [ -n \"$CLAUDE_PROJECT_DIR\" ] || exit 0; f=$(realpath -m \"$f\" 2>/dev/null) || exit 0; r=$(realpath -m \"$CLAUDE_PROJECT_DIR\" 2>/dev/null) || exit 0; case \"$f\" in \"$r\"/*) ;; *) exit 0 ;; esac; case \"$f\" in *.ts|*.tsx|*.mts|*.cts|*.js|*.jsx|*.mjs|*.cjs|*.json|*.jsonc|*.css) cd \"$r\" && bunx @biomejs/biome format --write \"$f\" >/dev/null 2>&1 ;; esac; exit 0"
+          },
+          {
+            "type": "command",
+            "timeout": 10,
+            "command": "f=$(jq -r '.tool_input.file_path // \"\"' 2>/dev/null); [ -n \"$f\" ] || exit 0; [ -n \"$CLAUDE_PROJECT_DIR\" ] || exit 0; f=$(realpath -m \"$f\" 2>/dev/null) || exit 0; r=$(realpath -m \"$CLAUDE_PROJECT_DIR\" 2>/dev/null) || exit 0; case \"$f\" in \"$r\"/*) ;; *) exit 0 ;; esac; case \"$f\" in */package-lock.json|*/pnpm-lock.yaml|*/yarn.lock|*/npm-shrinkwrap.json) echo \"Blocked by AGENTS.md section 8: bun.lock is the only permitted lockfile. Delete $f and use bun install / bun ci.\" >&2; exit 2 ;; esac; grep -qF \"check-package-manager:allow-names\" \"$f\" 2>/dev/null && exit 0; l='(^|[^[:alnum:]_-])'; v='(install|add|ci|run|exec|test|start|build|create|init|i|publish|uninstall|remove|audit|update|upgrade|link|unlink|version|ls|list|pack|dedupe|rebuild|outdated|config|why|workspace|workspaces|dlx)'; m=$(grep -inE \"${l}(npm|pnpm|yarn)[[:space:]]+${v}([^[:alnum:]_-]|$)|${l}(npx|pnpx)[[:space:]]+[^[:space:]]|${l}yarn[[:space:]]*$\" \"$f\" 2>/dev/null | head -3); [ -z \"$m\" ] && exit 0; printf 'AGENTS.md section 8 violation in %s - Bun is the only package manager. Use bun install / bun add / bun ci / bun run / bunx instead.\\n%s\\n' \"$f\" \"$m\" >&2; exit 2"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "timeout": 10,
+            "command": "i=$(cat); [ \"$(printf '%s' \"$i\" | jq -r '.stop_hook_active // false' 2>/dev/null)\" = \"true\" ] && exit 0; t=$(printf '%s' \"$i\" | jq -r '.transcript_path // \"\"' 2>/dev/null); [ -f \"$t\" ] || exit 0; e=$(jq -r '.message.content[]? | select(.type==\"tool_use\") | .name' \"$t\" 2>/dev/null | grep -cE '^(Edit|Write|MultiEdit|NotebookEdit)$'); [ \"${e:-0}\" -gt 0 ] 2>/dev/null || exit 0; c=$(jq -r '.message.content[]? | select(.type==\"tool_use\" and .name==\"Bash\") | .input.command // \"\" | split(\"\\n\")[0]' \"$t\" 2>/dev/null | grep -cE '^[[:space:]]*(cd [^&;|]+ (&&|;) )?bun run check([[:space:]]|$)'); [ \"${c:-0}\" -gt 0 ] && exit 0; echo 'Files were edited this session but the AGENTS.md section 30 blocking suite was never run. Run `bun run check` and report the real result, then close with the section 51 format (## Completed / ## Decisions / ## Validation / ## Files changed / ## Risks / limitations / ## Deferred). Do not conceal a failing check.' >&2; exit 2"
+          }
+        ]
+      }
     ]
   }
 }

@@ -34,18 +34,11 @@ People will return to a calm daily edition when it is:
 
 ## 2. Product constitution
 
-Every product and engineering decision must satisfy these rules.
+The product constitution is binding for every product and engineering decision. It is stated once, canonically, in [`docs/PRODUCT_CONSTITUTION.md`](PRODUCT_CONSTITUTION.md).
 
-1. **The edition ends.** No infinite scroll, next-page feed, hidden backlog, or post-completion recommendations.
-2. **The app respects agency.** No forced breathing exercises, guilt, punitive streaks, or locked screens.
-3. **Trust is a feature.** Every story exposes its sources, generation time, update history, and reporting type.
-4. **No behavioral ranking.** Reading behavior does not alter story importance or ordering.
-5. **No account before value.** The complete v1 works without authentication.
-6. **No unnecessary platform.** Ship a PWA before native applications.
-7. **Content is versioned.** Published editions and corrections are auditable.
-8. **Automation may assist; it may not invent.** A generated statement must be supported by supplied source material.
-9. **No attention monetization.** No ads, sponsored story insertion, autoplay, urgency colors, or notification spam.
-10. **Scope expands only after evidence.** New features require a measured user problem and a written architecture decision.
+It is deliberately not restated here. A second copy would drift, and `AGENTS.md` section 2 ranks these documents by authority, so a divergence would silently change which rule wins.
+
+`AGENTS.md` section 3 lists the concrete engineering prohibitions that follow from the constitution.
 
 ---
 
@@ -275,7 +268,7 @@ GitHub is the v1 editorial system.
 - editorial changes and corrections: pull requests and commits;
 - source health: generated action report;
 - audit log: Git history;
-- publication: merge to the main branch;
+- publication: merge to the production branch, `develop`;
 - deployment: automatic static build.
 
 This replaces the proposed CRUD-heavy admin panel during validation.
@@ -420,30 +413,36 @@ Use one TypeScript monorepo and a static-first deployment.
 | Concern | Decision |
 |---|---|
 | Frontend | React + Vite PWA |
-| Styling | CSS variables and a small utility layer; avoid a large component dependency |
+| Styling | Plain CSS and CSS custom properties; no utility-CSS framework and no component-library dependency |
 | Validation | Zod schemas shared by content scripts and UI |
 | Content | Versioned JSON in Git |
 | Automation | TypeScript scripts in GitHub Actions |
 | Hosting | Cloudflare Pages static hosting |
-| Optional API | Small Hono Worker for feedback and aggregate events |
-| Optional database | Cloudflare D1 only for feedback and aggregate counters |
-| ORM | Drizzle only if D1 is introduced |
-| Testing | Vitest, Playwright, axe-core, schema validation, golden content tests |
-| Package manager | pnpm |
+| Optional API | Small Hono Worker for feedback and aggregate events (a runtime backend; requires an approved ADR and unlocked milestone per AGENTS.md sections 6 and 7) |
+| Optional database | Cloudflare D1 only for feedback and aggregate counters (data persistence; requires an approved ADR per AGENTS.md section 34 and an unlocked milestone) |
+| ORM | Drizzle only if D1 is introduced (a significant dependency; requires an approved ADR per AGENTS.md sections 11 and 34) |
+| Testing | Vitest and schema validation today; Playwright, axe-core, and golden content tests when the milestone that needs them is unlocked (each requires an ADR; see AGENTS.md section 5) |
+| Package manager | Bun (Bun workspaces) |
 
 Do not introduce FastAPI, NextAuth, React Native, PostgreSQL, or a second application language in v1.
 
 ### 12.2 Repository layout
 
+The tree below shows the directories and instruction files that exist today. Workspace manifests, tool configuration, and per-directory `README.md` files are omitted for brevity.
+
 ```text
 /
 ├── AGENTS.md
+├── CLAUDE.md
 ├── README.md
+├── .agents/
+│   └── skills/                   # shared agent skill definitions
+├── .claude/                      # Claude Code commands and settings
+├── .codex/                       # Codex agent configuration
 ├── apps/
-│   ├── web/
-│   └── feedback-worker/          # optional until pilot feedback requires it
+│   ├── landing/                  # marketing surface, React + Vite
+│   └── web/                      # reader application, React + Vite
 ├── content/
-│   ├── sources.yml
 │   ├── editions/
 │   ├── drafts/
 │   └── corrections/
@@ -453,26 +452,36 @@ Do not introduce FastAPI, NextAuth, React Native, PostgreSQL, or a second applic
 │   ├── ui/
 │   └── test-fixtures/
 ├── prompts/
-│   ├── summarize-v1.md
-│   └── classify-v1.md
 ├── scripts/
-│   ├── fetch-sources.ts
-│   ├── normalize-items.ts
-│   ├── cluster-stories.ts
-│   ├── rank-candidates.ts
-│   ├── generate-draft.ts
-│   ├── validate-edition.ts
-│   └── publish-edition.ts
+│   ├── check-agents-md-size.sh
+│   └── check-package-manager.sh
 ├── docs/
+│   ├── PRD.md
+│   ├── BACKLOG.md
 │   ├── PRODUCT_CONSTITUTION.md
 │   ├── architecture/
 │   ├── editorial/
-│   └── runbooks/
-└── .github/workflows/
-    ├── ci.yml
-    ├── draft-edition.yml
-    └── deploy.yml
+│   ├── runbooks/
+│   └── workflows/
+└── .github/
+    └── workflows/
+        └── ci.yml                # validation and deployment
 ```
+
+Deployment lives inside `.github/workflows/ci.yml` by decision of ADR-0002. Do not add a
+separate `deploy.yml`; a second deployment workflow would contradict an accepted ADR.
+
+The following are not in the repository yet. Create each only in the backlog item that needs it:
+
+- `content/sources.yml`;
+- content automation scripts in `scripts/` (`fetch-sources.ts`, `normalize-items.ts`,
+  `cluster-stories.ts`, `rank-candidates.ts`, `generate-draft.ts`, `validate-edition.ts`,
+  `publish-edition.ts`);
+- prompt files in `prompts/` (`summarize-v1.md`, `classify-v1.md`);
+- a scheduled draft-edition workflow, only when generated-content automation is unlocked;
+- `apps/feedback-worker/` — a runtime backend. It requires both an approved ADR and an
+  explicitly unlocked product milestone before it may be created (AGENTS.md sections 6 and
+  7). Do not scaffold it speculatively.
 
 ### 12.3 Public content API
 
@@ -694,7 +703,7 @@ Do not optimize:
 - no new dependency without an architecture decision record;
 - no database or authentication system without a gated milestone;
 - no schema change without migration and compatibility tests;
-- every UI slice needs loading, empty, error, stale, and offline behavior where applicable;
+- every UI slice needs loading, success, empty, error, stale, and offline behavior where applicable;
 - all public content must validate against shared schemas;
 - generated summaries must never deploy when validators fail;
 - tests, accessibility checks, and build must pass before merge;
@@ -702,11 +711,14 @@ Do not optimize:
 
 ### 18.2 Work sequence per issue
 
-1. Planner agent writes a scoped implementation note and acceptance tests.
-2. Builder agent implements one vertical slice.
-3. Test agent adds or runs unit, contract, accessibility, and end-to-end checks.
-4. Reviewer agent checks scope, security, privacy, performance, and product constitution.
-5. Human approves merge.
+Follow the seven-step work sequence defined in `AGENTS.md` section 32: understand, scope,
+plan, implement, test, self-review, report.
+
+Those stages may be performed by one agent in sequence or by separate agents. The repository
+does not define Planner, Builder, Test, and Reviewer roles, and no arrangement removes any
+stage.
+
+Either way, a human approval gate before merge is required.
 
 An agent that discovers a larger architectural need opens an ADR; it does not silently broaden the task.
 
@@ -717,7 +729,7 @@ A feature is done only when:
 - acceptance criteria are demonstrably met;
 - type check, lint, unit, integration, and relevant end-to-end tests pass;
 - accessibility has been checked;
-- offline and error behavior are handled;
+- loading, success, empty, error, stale, and offline behavior are handled where applicable;
 - no unsupported product metric or tracking identifier was added;
 - documentation and schemas are updated;
 - the feature stays inside the v1 constitution;
@@ -815,7 +827,7 @@ A feature is done only when:
 | Four daily drops | Remove; reconsider one optional curiosity story only after validation |
 | Timer, limit, breathing lock, streak | Remove; the finite structure is the intervention |
 | Optional auth and sync | Remove from v1 |
-| Next.js + FastAPI + React Native + PostgreSQL | Static React PWA + TypeScript content scripts; tiny Worker/D1 only if needed |
+| Next.js + FastAPI + React Native + PostgreSQL | Static React PWA + TypeScript content scripts; a tiny Worker or D1 only behind an approved ADR and an unlocked milestone |
 | Full admin dashboard | GitHub pull requests, YAML, JSON, and Actions |
 | Six free LLM providers | One provider plus deterministic fallback |
 | Summarize every article | Cluster first; summarize only likely edition stories |

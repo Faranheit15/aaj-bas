@@ -1,0 +1,15 @@
+# Codex project configuration for Aaj, Bas.
+#
+# Loads only when this project is trusted. Accept the trust prompt on the first
+# Codex run in a fresh clone, or Codex silently runs without this file and
+# without .codex/rules/team.rules.
+
+# AGENTS.md is the binding rule set (AGENTS.md section 2). Codex reads at most
+# project_doc_max_bytes of project instructions and truncates mid-file with only
+# a log warning, so whatever sits past the cutoff -- the end of the file, working
+# backwards from the closing rules -- stops binding invisibly. Raising the budget
+# removes that cliff for a trusted project.
+#
+# This is not a licence to grow the file. `bun run check:agents` still fails the
+# build above the 32 KiB default, because an untrusted clone gets the default.
+project_doc_max_bytes = 131072

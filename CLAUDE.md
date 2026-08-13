@@ -16,7 +16,7 @@ These notes describe how the rules in `AGENTS.md` map onto Claude Code. They add
 
 - `AGENTS.md` — binding rules. Edit rules here only.
 - `CLAUDE.md` — this pointer file. Do not duplicate rules from `AGENTS.md` into it.
-- A nested `AGENTS.md` may narrow behavior for a subdirectory; nested `CLAUDE.md` files are not used.
+- A nested `AGENTS.md` may narrow behavior for a subdirectory; nested `CLAUDE.md` files are not used. Keep any nested file short: Codex reads the root file first and gives nested files only the remaining byte budget.
 
 ### Work sequence
 
@@ -32,14 +32,31 @@ These notes describe how the rules in `AGENTS.md` map onto Claude Code. They add
 - `/slice` — carry out one backlog item as a single vertical slice, following section 32.
 - `/adr` — draft an architecture decision record from the ADR template.
 
+Each is a thin pointer to a shared procedure in `docs/workflows/`. The same three procedures are also published as skills in `.agents/skills/`, which Codex reads as `$check`, `$slice`, and `$adr` and Claude Code also picks up. Every entry point resolves to the same file. Change a procedure in `docs/workflows/`, never in the wrapper, so the two tools cannot drift apart.
+
 ### Permissions
 
 `.claude/settings.json` encodes the parts of `AGENTS.md` that a permission rule can enforce:
 
-- Bun commands from section 8 are allowed without prompting; npm, pnpm, and Yarn are denied.
-- Production deployment commands are denied, per section 47; deployment happens only through CI on `develop`.
-- Local environment files are not readable, per section 23 and section 24.
+- The routine Bun install and `bun run` commands from section 8 are allowed without prompting. `bun add` and `bun remove` still prompt, because section 11 makes every dependency a decision. npm, pnpm, and Yarn are denied.
+- Deployment commands are denied, per section 47; deployment happens only through CI on `develop`. Because a push to `develop` *is* that deployment, `git push`, `git merge`, and `git rebase` always prompt rather than being denied outright — an approved prompt is the human authorization section 47 asks for.
+- Local environment files can be neither read nor written, per section 24. `.env.example` stays readable.
+- Creating a root `AGENTS.override.md` is denied. Codex would read it *instead of* `AGENTS.md`, and because the file is git-ignored the change would never appear in a diff.
 
-Permission rules are a safety net, not the rule set. The written rules in `AGENTS.md` still bind in cases no permission rule covers.
+Permission rules are a safety net, not the rule set. They match the command a session runs, so an equivalent form they do not list — a denied binary invoked from inside a `package.json` script, for example — still reaches the shell. The written rules in `AGENTS.md` bind regardless of whether a permission rule happens to cover the case.
 
 Keep personal overrides in `.claude/settings.local.json`, which is git-ignored.
+
+### Hooks
+
+`.claude/settings.json` defines three local hooks. They shell out to tools already in the repo, reach no network, and write nothing into the working tree beyond formatting the file just edited:
+
+- after a write or edit, Biome formats that one file, so formatting drift never reaches `bun run check`;
+- after a write or edit, the file is checked for npm, pnpm, Yarn, or npx commands and for a foreign lockfile;
+- on stopping, if the session edited files but never ran the blocking suite, it says so. It can tell whether the command was run, not whether it passed; reporting a failing check honestly is still section 30's requirement, not the hook's.
+
+The hooks require `jq`. Without it they exit quietly and enforce nothing, so treat them as fast feedback rather than as the guarantee.
+
+The guarantee is `bun run check`, which both tools and CI run. `check:agents` measures the instruction files against the Codex budget, and `check:pm` enforces section 8 across every tracked and untracked file — the second hook is only the immediate-feedback copy of that check. Hooks are Claude Code only; `AGENTS.md`, `.codex/rules/team.rules`, and the check suite are what hold a Codex session to the same rules.
+
+<!-- check-package-manager:allow-names -->

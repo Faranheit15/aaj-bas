@@ -8,6 +8,8 @@ The deployment uses Cloudflare Pages Direct Upload. Do not connect these project
 
 ## One-time setup
 
+**Human only. Agents must not run this section.** Creating the Cloudflare projects, the API token, and the GitHub secrets is paid-infrastructure and secret handling, which AGENTS.md section 47 reserves for an authorized human. `.claude/settings.json` denies `Bash(bunx wrangler *)` and `Bash(gh secret *)`, and `.codex/rules/team.rules` forbids the same for Codex, so an agent that runs these commands is denied without further explanation. An agent following this runbook starts at **Delivery flow**.
+
 Create two Cloudflare Pages Direct Upload projects in the intended Cloudflare account:
 
 - `aaj-bas-web`
