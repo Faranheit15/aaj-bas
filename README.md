@@ -30,7 +30,7 @@ docs/workflows/   Shared procedures both agent tools follow
 .claude/          Claude Code permissions, hooks, and repository commands
 .codex/           Codex project configuration and command policy
 .agents/skills/   Codex skills for the repository workflows
-.github/          CI/CD workflow and pull-request template
+.github/          CI/CD workflow, issue and pull-request templates, code owners
 ```
 
 ## Prerequisites
@@ -81,6 +81,16 @@ bun run check
 
 Pull requests and pushes to `develop` run the full CI suite. A successful push to `develop` deploys `apps/web` and then `apps/landing` to Cloudflare Pages; the landing CTA is built with the deployed reader URL. The one-time Cloudflare project and GitHub secret setup is documented in the [Cloudflare Pages deployment runbook](docs/runbooks/cloudflare-pages-deployment.md).
 
+`develop` is protected. Reaching it takes a pull request with a passing `check` job and an approval from a code owner; the maintainer keeps an administrative bypass, because GitHub does not allow approving your own pull request. The ruleset is version-controlled in [`docs/runbooks/develop-ruleset.json`](docs/runbooks/develop-ruleset.json) and applied as described in the [contributions and branch protection runbook](docs/runbooks/contributions-and-branch-protection.md).
+
+## Contributing
+
+Contributions are welcome. [`CONTRIBUTING.md`](CONTRIBUTING.md) covers setup, the single command that has to pass, the review process, and — most usefully before you start building — what gets a change declined. This product rules some things out by design rather than by preference, and it is much better to find that out from the contribution guide than from a review.
+
+Report a security issue privately through a [GitHub security advisory](https://github.com/Faranheit15/aaj-bas/security/advisories/new), never in a public issue. See [`SECURITY.md`](SECURITY.md).
+
+The code is MIT licensed; see [`LICENSE`](LICENSE). Editorial content, generated summaries, and third-party source material are governed separately under `AGENTS.md` section 18.
+
 ## AI coding agents
 
 [`AGENTS.md`](AGENTS.md) holds the binding engineering and product rules, and is the single source of truth for every agent tool. Codex reads it directly. Claude Code reads [`CLAUDE.md`](CLAUDE.md), which imports `AGENTS.md` and adds only tool-specific notes.
@@ -100,6 +110,8 @@ Change rules in `AGENTS.md`; do not restate them in tool-specific files.
 
 ## Governing documents
 
+- [Contribution guide](CONTRIBUTING.md)
+- [Security policy](SECURITY.md)
 - [Repository instructions](AGENTS.md)
 - [Claude Code entry point](CLAUDE.md)
 - [Shared agent workflows](docs/workflows/)
