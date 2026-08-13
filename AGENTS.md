@@ -10,6 +10,13 @@ These instructions are not suggestions.
 
 When an implementation request conflicts with this file, stop the conflicting implementation, explain the conflict, and choose the smallest compliant solution unless a human explicitly changes the governing requirement.
 
+This file is agent-tool agnostic and is the single source of truth. Agent tools that look for their own instruction file must point at this one rather than restate it:
+
+- Codex and other agents that read `AGENTS.md` load this file directly.
+- Claude Code loads `CLAUDE.md`, which imports this file and adds only tool-specific operating notes in `.claude/`.
+
+Add or change binding rules here. Do not duplicate them into a tool-specific file, where they would drift.
+
 ---
 
 ## 1. Product mission
@@ -305,6 +312,7 @@ prompts/
 scripts/
 docs/
 .github/
+.claude/
 ```
 
 Applications may depend on shared packages.

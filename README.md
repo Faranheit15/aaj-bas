@@ -25,6 +25,7 @@ content/          Versioned editions, drafts, and corrections
 prompts/          Future versioned editorial prompts
 scripts/          Future content automation
 docs/             Product, editorial, runbook, and architecture documentation
+.claude/          Claude Code permissions and repository commands
 ```
 
 ## Prerequisites
@@ -71,9 +72,18 @@ bun run check
 
 Pull requests and pushes to `develop` run the full CI suite. A successful push to `develop` deploys `apps/web` and then `apps/landing` to Cloudflare Pages; the landing CTA is built with the deployed reader URL. The one-time Cloudflare project and GitHub secret setup is documented in the [Cloudflare Pages deployment runbook](docs/runbooks/cloudflare-pages-deployment.md).
 
+## AI coding agents
+
+[`AGENTS.md`](AGENTS.md) holds the binding engineering and product rules, and is the single source of truth for every agent tool. Codex and other `AGENTS.md`-aware agents read it directly. Claude Code reads [`CLAUDE.md`](CLAUDE.md), which imports `AGENTS.md` and adds only tool-specific notes.
+
+`.claude/settings.json` encodes the rules a permission rule can enforce — Bun-only package management, no production deployment from a session, no reading of local environment files — and `.claude/commands/` provides `/check`, `/slice`, and `/adr` for the workflows in `AGENTS.md`. Personal overrides belong in the git-ignored `.claude/settings.local.json`.
+
+Change rules in `AGENTS.md`; do not restate them in tool-specific files.
+
 ## Governing documents
 
 - [Repository instructions](AGENTS.md)
+- [Claude Code entry point](CLAUDE.md)
 - [Product requirements document](docs/PRD.md)
 - [Build backlog](docs/BACKLOG.md)
 - [Product constitution](docs/PRODUCT_CONSTITUTION.md)
