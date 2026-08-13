@@ -521,8 +521,9 @@ interface Edition {
   updatedAt: string;
   estimatedMinutes: number;
   coreStoryIds: string[];
-  interestPools: Record<InterestSlug, string[]>;
+  interestPools: Partial<Record<InterestSlug, string[]>>;
   stories: Story[];
+  sources: SourceReference[];
   correctionNotes: CorrectionNote[];
 }
 ```
@@ -565,7 +566,46 @@ interface SourceReference {
 }
 ```
 
+### 13.4 Correction note
+
+```ts
+interface CorrectionNote {
+  id: string;
+  storyId: string;
+  correctedAt: string;
+  editionVersion: number;
+  summary: string;
+  detail?: string;
+}
+```
+
+`summary` is required and reader-visible. A correction that records only that something changed is the silent factual rewrite section 46 of `AGENTS.md` forbids. `editionVersion` is always 2 or above: version 1 is the original publication.
+
+### 13.5 Topic and interest slugs
+
+```ts
+type TopicSlug =
+  | "india"
+  | "world"
+  | "business-economy"
+  | "science-health-climate"
+  | "technology-ai"
+  | "culture-entertainment"
+  | "sports"
+  | "policy-geopolitics";
+
+type InterestSlug = Exclude<TopicSlug, "india" | "world">;
+```
+
+Interests are a strict subset of topics, so choosing an interest means nothing more than "more stories whose topic is this" — deterministic and inspectable, with no mapping table holding an editorial decision nobody reads. `india` and `world` are core coverage and cannot be opted into, per section 5.3.
+
+An edition file holds eight core stories plus interest pools, not ten stories: ten is what a reader is shown, being the eight core plus two selected locally. The contract guarantees ten are reachable. Interest pools are partial because requiring all six to carry two stories each would force at least twenty stories into every edition.
+
+### 13.6 Validation
+
 The JSON schema is the contract. Content that fails validation cannot deploy.
+
+`packages/schemas` is the authoritative implementation. Its JSON Schema export describes field shapes only — cross-field rules such as source-mapping integrity, the core story count, and pool-topic agreement cannot be expressed in JSON Schema and live in the Zod schema alone.
 
 ---
 
