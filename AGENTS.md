@@ -380,6 +380,8 @@ Avoid network, filesystem, browser, and UI dependencies.
 
 Small reusable presentation primitives.
 
+It also owns `src/palette.css`, the shared colour tokens both applications import. That file is colours only: spacing, typography, and component styles stay in the applications.
+
 It must not become a large design-system project.
 
 It must not contain news ranking, storage, fetching, analytics, or business orchestration.

@@ -1,8 +1,10 @@
+@import "@aaj-bas/ui/palette.css";
+
 :root {
   color-scheme: light dark;
   font-family: Georgia, "Times New Roman", serif;
-  background: #f7f4ef;
-  color: #1f2520;
+  background: var(--surface);
+  color: var(--ink);
 }
 
 * {
@@ -76,12 +78,14 @@ h2 {
 }
 
 .primary-link:hover {
-  background: #1f2520;
-  color: #f7f4ef;
+  background: var(--ink);
+  color: var(--surface);
 }
 
+/* outline-offset must stay positive: hovering inverts the link's fill to --ink,
+   and the gap keeps the ring's contrast measured against --surface either way. */
 .primary-link:focus-visible {
-  outline: 3px solid #a84315;
+  outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
@@ -100,7 +104,7 @@ h2 {
 .how-it-works {
   margin-top: clamp(4rem, 12vw, 7rem);
   padding-top: 1.5rem;
-  border-top: 1px solid #8b918a;
+  border-top: 1px solid var(--rule);
 }
 
 ol {
@@ -114,22 +118,6 @@ ol {
   font-size: 1.1rem;
   font-style: italic;
   line-height: 1.55;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    background: #181b18;
-    color: #f3f0e9;
-  }
-
-  .primary-link:hover {
-    background: #f3f0e9;
-    color: #181b18;
-  }
-
-  .how-it-works {
-    border-color: #9ba39a;
-  }
 }
 
 @media (max-width: 34rem) {

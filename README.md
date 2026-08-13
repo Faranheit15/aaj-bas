@@ -20,7 +20,7 @@ packages/
   domain/         Future pure product behavior
   logger/         Developer console logging
   schemas/        Public Zod content contracts for published editions
-  ui/             Small reusable presentation primitives
+  ui/             Small reusable presentation primitives and the shared colour palette
   test-fixtures/  Deterministic test-only editions and data
 content/          Versioned editions, drafts, and corrections
 prompts/          Future versioned editorial prompts
