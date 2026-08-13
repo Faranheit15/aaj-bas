@@ -1,0 +1,10 @@
+# Code owners for Aaj, Bas.
+#
+# The develop ruleset requires a review from a code owner before a pull request
+# can merge. That is what makes the maintainer's approval specifically required,
+# rather than any one approval from anybody with write access.
+#
+# A code owner must have write access to the repository. See
+# docs/runbooks/contributions-and-branch-protection.md.
+
+* @Faranheit15

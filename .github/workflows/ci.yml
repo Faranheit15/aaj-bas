@@ -10,8 +10,11 @@ permissions:
   contents: read
 
 concurrency:
-  group: pages-production
-  cancel-in-progress: false
+  # Pull requests use a per-branch group so contributors' runs do not queue behind
+  # one another, and a superseded run is cancelled. Pushes to develop keep the
+  # shared group with cancellation off, so production deployments stay serialised.
+  group: ${{ github.event_name == 'push' && 'pages-production' || format('pr-{0}', github.ref) }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   check:

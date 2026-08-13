@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/Faranheit15/aaj-bas/security/advisories/new
+    about: Report privately through a GitHub security advisory. Never in a public issue.
+  - name: Contribution guide
+    url: https://github.com/Faranheit15/aaj-bas/blob/develop/CONTRIBUTING.md
+    about: Setup, the check suite, review expectations, and what gets a change declined.
