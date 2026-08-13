@@ -30,7 +30,7 @@ docs/workflows/   Shared procedures both agent tools follow
 .claude/          Claude Code permissions, hooks, and repository commands
 .codex/           Codex project configuration and command policy
 .agents/skills/   Codex skills for the repository workflows
-.github/          CI/CD workflow, issue and pull-request templates, code owners
+.github/          CI/CD workflow, dependency updates, issue and pull-request templates, code owners
 ```
 
 ## Prerequisites
