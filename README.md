@@ -79,7 +79,7 @@ bun run check
 
 ## Deployment
 
-Pull requests and pushes to `develop` run the full CI suite. A successful push to `develop` deploys `apps/web` and then `apps/landing` to Cloudflare Pages; the landing CTA is built with the deployed reader URL. The one-time Cloudflare project and GitHub secret setup is documented in the [Cloudflare Pages deployment runbook](docs/runbooks/cloudflare-pages-deployment.md).
+Pull requests and pushes to `develop` run the full CI suite. A successful push to `develop` deploys `apps/web` and then `apps/landing` to Cloudflare Pages; the landing CTA is built with the reader's stable production URL, so rolling the reader back changes what the CTA serves. The one-time Cloudflare project and GitHub secret setup is documented in the [Cloudflare Pages deployment runbook](docs/runbooks/cloudflare-pages-deployment.md).
 
 `develop` is protected. Reaching it takes a pull request with a passing `check` job and an approval from a code owner; the maintainer keeps an administrative bypass, because GitHub does not allow approving your own pull request. The ruleset is version-controlled in [`docs/runbooks/develop-ruleset.json`](docs/runbooks/develop-ruleset.json) and applied as described in the [contributions and branch protection runbook](docs/runbooks/contributions-and-branch-protection.md).
 
