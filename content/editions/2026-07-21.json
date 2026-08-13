@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-07-21",
+  "editionVersion": 1,
+  "status": "published",
+  "publishedAt": "2026-07-21T06:00:00+05:30",
+  "updatedAt": "2026-07-21T13:45:00+05:30",
+  "estimatedMinutes": 8,
+  "coreStoryIds": [
+    "story-vetrapur-ring-road-repair",
+    "story-vetrakhand-bus-fare-order",
+    "story-verrin-sea-fisheries-compact",
+    "story-nallanadu-freight-tariff",
+    "story-monsoon-onset-preprint",
+    "story-grid-scheduling-pilot",
+    "story-kalvapur-archive-restoration",
+    "story-coastal-zone-consultation"
+  ],
+  "interestPools": {
+    "sports": ["story-sethanadu-twenty-expansion"],
+    "technology-ai": ["story-compute-grant-criteria"]
+  },
+  "stories": [
+    {
+      "id": "story-vetrapur-ring-road-repair",
+      "slug": "vetrapur-ring-road-repair",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "Vetrapur ring road to lose two lanes for a 60-day repair programme",
+      "deck": "The Vetrakhand Department of Highways has cleared a 60-day repair after a survey found 400 metres of subsidence on the ring road.",
+      "whatChanged": [
+        "The Vetrakhand Department of Highways published a road survey on Monday evening recording 400 metres of subsidence on the Vetrapur ring road, between the eastern interchange and the river crossing. The department said the section has settled unevenly and no longer carries load as designed.",
+        "The department cleared a 60-day repair programme for the stretch on the same day. Two of the four lanes close from Saturday, with traffic held on the remaining two in both directions. The department's chief engineer said the work would run in three phases."
+      ],
+      "whyItMatters": "The ring road carries freight between the port road and the eastern industrial belt, and the closed lanes sit on its only continuous river crossing. Sixty days of reduced capacity would be expected to show first in morning freight timings and on the two feeder roads that absorb diverted traffic.",
+      "background": "The ring road opened four years ago as a bypass for through traffic that had used the old town corridor. This is the second closure on the same stretch: a shorter resurfacing was carried out in its second year, after which the department said the surface would be monitored. The survey published now is the first public measurement of that stretch since.",
+      "sourceIds": [
+        "src-ring-road-chronicle",
+        "src-ring-road-broadcaster",
+        "src-ring-road-survey-note"
+      ],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-vetrakhand-bus-fare-order",
+      "slug": "vetrakhand-bus-fare-order",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Urban transport department orders a ceiling on city bus fares for the monsoon quarter",
+      "deck": "A departmental order sets a ceiling on city bus fares for the monsoon quarter. The department said it covers 62 routes across the state.",
+      "whatChanged": [
+        "The Vetrakhand Department of Urban Transport issued an order early on Tuesday setting a ceiling on city bus fares for the monsoon quarter. According to the order, the ceiling holds until the end of September and applies to stage-carriage services within municipal limits. The department said 62 routes fall under it."
+      ],
+      "whyItMatters": "Bus fares are among the few household costs a state can change directly and quickly, and the monsoon quarter is when these routes carry their heaviest loads. What the order does in practice will depend on enforcement at boarding points, which the department has not described.",
+      "uncertainty": "This account rests on the department's own order and nothing else. The figures in it, including the count of 62 affected routes, have not been independently verified, and no separate count of affected routes has been published elsewhere.",
+      "sourceIds": ["src-fare-order-notice"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-verrin-sea-fisheries-compact",
+      "slug": "verrin-sea-fisheries-compact",
+      "topic": "world",
+      "reportingType": "reporting",
+      "headline": "Verrin Sea Fisheries Compact admits two new signatories",
+      "deck": "Marovia and Ostrenia have joined the Verrin Sea Fisheries Compact, which is extending its catch reporting requirement to a fourth season.",
+      "whatChanged": [
+        "The Verrin Sea Fisheries Compact admitted Marovia and Ostrenia as signatories at a secretariat meeting on Monday, taking its membership to nine. Both accede under the existing terms rather than negotiated exceptions. The compact also extends its catch reporting requirement to a fourth season, so vessels registered with members will report through the winter months for the first time."
+      ],
+      "whyItMatters": "Catch reporting is the compact's only shared instrument, and its coverage has until now stopped at three seasons, leaving the winter fishery outside the record. A fourth season closes that gap on paper. Whether it closes in practice depends on the reporting each new member can collect.",
+      "sourceIds": ["src-compact-newswire", "src-compact-secretariat"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-nallanadu-freight-tariff",
+      "slug": "nallanadu-freight-tariff",
+      "topic": "business-economy",
+      "reportingType": "analysis",
+      "headline": "Assessments read the new Nallanadu port tariff as shifting cost to smaller consignments",
+      "deck": "Two assessments read the new Nallanadu port tariff schedule as moving cost onto smaller inland consignments. The first quarterly volumes will test that reading.",
+      "whatChanged": [
+        "The Nallanadu port authority's revised freight tariff schedule takes effect this month, and two published assessments read it the same way. Both see the new bands lowering the per-tonne charge on large consolidated loads while raising the effective rate on consignments below the smallest band, which is where most inland shippers sit.",
+        "Neither assessment claims to know what shippers will do. Both set the same test: if smaller consignments move to road haulage, it will appear in the first quarterly volumes the port publishes after the schedule takes effect. Until those figures exist, the shift in cost is documented and the response to it is not."
+      ],
+      "whyItMatters": "Inland shippers using Nallanadu mostly move part-loads, so a schedule that rewards consolidation changes what the port costs them to use. The alternative is road, slower over the same distance and priced differently again. This is an assessment of a schedule, not a measured outcome.",
+      "background": "The schedule it replaces ran six years unchanged, long enough that its bands stopped matching the consignment sizes actually moving through the port. Rates set for the traffic mix of six years ago were still being applied to one holding far more small inland loads. The port authority described the revision as a periodic realignment.",
+      "sourceIds": ["src-freight-review", "src-freight-ledger"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-monsoon-onset-preprint",
+      "slug": "monsoon-onset-preprint",
+      "topic": "science-health-climate",
+      "reportingType": "research",
+      "headline": "Preprint proposes a revised monsoon onset indicator for the coastal belt",
+      "deck": "Researchers at the Vetrapur Centre for Monsoon Research propose a revised onset indicator for the coastal belt, drawn from a thirty-year rainfall series.",
+      "whatChanged": [
+        "A preprint from the Vetrapur Centre for Monsoon Research proposes changing how monsoon onset is declared along the coastal belt. The authors build the indicator from a thirty-year daily rainfall series, requiring a sustained threshold across a run of days at coastal stations rather than a single-day crossing. Applied backwards, it dates onset differently from the current rule in roughly a third of years."
+      ],
+      "whyItMatters": "Onset dates set the calendar for sowing advice, reservoir drawdown and civic preparation along the coast, so a rule that moves the declared date moves those decisions with it. Nothing changes on the strength of a preprint; it offers a documented alternative for the belt it covers.",
+      "uncertainty": "The paper is a preprint and has not been peer reviewed. Its series covers one coastal belt, so the indicator is not tested against inland stations or other coasts, and the authors do not claim it generalises. No meteorological body has said it is considering the change.",
+      "sourceIds": ["src-monsoon-preprint", "src-monsoon-broadcaster"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-grid-scheduling-pilot",
+      "slug": "grid-scheduling-pilot",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Reports disagree on how much peak demand a grid scheduling pilot moved",
+      "deck": "Two reports on the Vetrakhand grid scheduling pilot put the peak demand shifted at 4 percent and at 1.5 percent. They use different baselines.",
+      "whatChanged": [
+        "A scheduling pilot on the Vetrakhand state grid, which moved a set of large industrial loads to automated day-ahead scheduling, has been reported on twice this week, and the two accounts do not agree on what it achieved. One puts the peak demand shifted at 4 percent; the other puts it at 1.5 percent.",
+        "The gap appears to be a baseline difference rather than a contradiction in the data. The 4 percent figure compares the pilot weeks with the same weeks a year earlier. The 1.5 percent figure compares them with the immediately preceding weeks, which were unusually mild. Neither report publishes the load series, so the two cannot be reconciled from what is available."
+      ],
+      "whyItMatters": "The pilot's result is the number that will be cited when the scheme is proposed for the rest of the grid, and 4 percent and 1.5 percent argue for different decisions. Until the load series is published, neither figure can be checked.",
+      "uncertainty": "The two figures come from different baselines and neither report shows its working, so this story does not treat either as the result. The grid operator has not published a figure of its own. If the load series is released, the discrepancy should resolve; until then it stands.",
+      "sourceIds": ["src-grid-ledger", "src-grid-chronicle"],
+      "sourceCount": 2,
+      "confidence": "disputed",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-kalvapur-archive-restoration",
+      "slug": "kalvapur-archive-restoration",
+      "topic": "culture-entertainment",
+      "reportingType": "reporting",
+      "headline": "Kalvapur Film Archive names 22 titles for restoration before winter",
+      "deck": "The Kalvapur Film Archive has listed 22 titles for restoration ahead of its winter programme, four of them added in an afternoon update.",
+      "whatChanged": [
+        "The Kalvapur Film Archive said on Monday that it had selected 18 titles for restoration ahead of its winter programme, drawn from prints held in its own vaults and in three regional collections. The archive said the selection favoured prints whose only surviving copies are in a condition that will not survive another storage cycle.",
+        "The archive published its full list on Tuesday afternoon, and it carries 22 titles rather than 18. The four additions are documentaries from a single donated collection whose condition assessment finished after the first announcement."
+      ],
+      "whyItMatters": "Restoration lists are the practical form of what survives: a print not selected waits for the next cycle, and for the titles the archive describes there may not be one. The published list also names the collections involved, which allows the holdings to be checked.",
+      "sourceIds": [
+        "src-archive-weekly",
+        "src-archive-chronicle",
+        "src-archive-restoration-list"
+      ],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T13:45:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-coastal-zone-consultation",
+      "slug": "coastal-zone-consultation",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "Public consultation on Vetrakhand's draft coastal-zone rules closes",
+      "deck": "The consultation on Vetrakhand's draft coastal-zone rules has closed after six weeks, with the secretariat's tally recording 1,240 written submissions.",
+      "whatChanged": [
+        "The public consultation on Vetrakhand's draft coastal-zone rules closed on Monday after six weeks. The draft revises the setback distances applied to construction along the shoreline and adds a permit stage for works within the intertidal margin. The secretariat's published tally records 1,240 written submissions received during the consultation period.",
+        "The secretariat said the submissions would be examined before a revised draft is placed before the state cabinet, and gave no date for that. It has not published the submissions themselves."
+      ],
+      "whyItMatters": "The setback distances in the draft decide what can be built along a coastline that already carries settlements inside the current line, so the consultation record is the main public account of who objected and on what grounds. The volume of submissions is the only part of that record published so far.",
+      "sourceIds": ["src-coastal-newswire", "src-coastal-zone-tally"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-sethanadu-twenty-expansion",
+      "slug": "sethanadu-twenty-expansion",
+      "topic": "sports",
+      "reportingType": "reporting",
+      "headline": "Sethanadu Twenty League to add two clubs and split its season",
+      "deck": "The Sethanadu Twenty League has voted to add two clubs from the 2027 season and to move to a split-season calendar.",
+      "whatChanged": [
+        "The Sethanadu Twenty League voted on Monday to expand from twelve clubs to fourteen from the 2027 season, with the two places to be filled through an application process opening later this year. The same vote moves the competition to a split-season calendar, dividing the fixture list into two blocks with a break between them. The league said the change follows a scheduling review."
+      ],
+      "whyItMatters": "Fourteen clubs and a split calendar change how many fixtures a season holds and when it stops, which is what the league's broadcast and ticketing arrangements are built around. The application process, not this vote, will decide which two clubs come in.",
+      "sourceIds": ["src-league-announcement", "src-league-broadcaster"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    },
+    {
+      "id": "story-compute-grant-criteria",
+      "slug": "compute-grant-criteria",
+      "topic": "technology-ai",
+      "reportingType": "opinion",
+      "headline": "Column argues compute-grant criteria should be published before the next round",
+      "deck": "A public-finance researcher argues in a column that the Vetrakhand compute-grant scheme should publish its allocation criteria before the next funding round.",
+      "whatChanged": [
+        "A column published on Monday argues that the Vetrakhand compute-grant scheme should publish its allocation criteria before the next funding round opens. The author, a public-finance researcher, writes that the scheme has announced recipients without the weightings used to choose them, and that publication after the fact leaves unsuccessful applicants unable to tell why. This is an argument that was published, not a finding."
+      ],
+      "whyItMatters": "The scheme is the state's main route to subsidised compute, and the next round is its largest. Whether criteria are published in advance is a question about how the allocation can be checked; the column sets out one position on it and reports no decision by the scheme.",
+      "sourceIds": ["src-compute-column"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-21T06:00:00+05:30",
+      "updatedAt": "2026-07-21T06:00:00+05:30",
+      "reviewed": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ring-road-chronicle",
+      "publisher": "Vetrapur Morning Chronicle",
+      "title": "Survey finds 400 metres of subsidence on the ring road",
+      "url": "https://vetrapur-chronicle.invalid/2026/07/20/ring-road-subsidence-survey",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T21:15:00+05:30"
+    },
+    {
+      "id": "src-ring-road-broadcaster",
+      "publisher": "Vetrakhand Public Broadcaster",
+      "title": "Two ring road lanes to close for sixty days of repair work",
+      "url": "https://vetrakhand-broadcaster.invalid/news/2026/07/20/ring-road-lane-closure",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T22:40:00+05:30"
+    },
+    {
+      "id": "src-ring-road-survey-note",
+      "publisher": "Vetrakhand Department of Highways",
+      "title": "Condition survey note: Vetrapur ring road, eastern section",
+      "url": "https://highways.vetrakhand.invalid/notices/2026/ring-road-condition-survey",
+      "sourceType": "official",
+      "publishedAt": "2026-07-20T18:30:00+05:30"
+    },
+    {
+      "id": "src-fare-order-notice",
+      "publisher": "Vetrakhand Department of Urban Transport",
+      "title": "Order: ceiling on city bus fares for the monsoon quarter",
+      "url": "https://transport.vetrakhand.invalid/orders/2026/city-bus-fare-ceiling",
+      "sourceType": "official",
+      "publishedAt": "2026-07-21T05:05:00+05:30"
+    },
+    {
+      "id": "src-compact-newswire",
+      "publisher": "Meridian Newswire",
+      "title": "Verrin Sea fisheries pact takes in two more states",
+      "url": "https://meridian-newswire.invalid/world/2026/07/20/verrin-sea-compact-signatories",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T20:10:00+05:30"
+    },
+    {
+      "id": "src-compact-secretariat",
+      "publisher": "Verrin Sea Fisheries Compact Secretariat",
+      "title": "Accession of Marovia and Ostrenia: secretariat statement",
+      "url": "https://verrin-sea-compact.invalid/statements/2026/accession-marovia-ostrenia",
+      "sourceType": "primary",
+      "publishedAt": "2026-07-20T17:45:00+05:30"
+    },
+    {
+      "id": "src-freight-review",
+      "publisher": "Nallanadu Business Review",
+      "title": "What the new port tariff bands mean for inland shippers",
+      "url": "https://nallanadu-review.invalid/analysis/2026/07/20/port-tariff-bands-inland-shippers",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T23:05:00+05:30"
+    },
+    {
+      "id": "src-freight-ledger",
+      "publisher": "The Estuary Ledger",
+      "title": "Reading the Nallanadu tariff schedule: consolidation rewarded",
+      "url": "https://estuary-ledger.invalid/business/2026/07/21/nallanadu-tariff-schedule-reading",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-21T04:20:00+05:30"
+    },
+    {
+      "id": "src-monsoon-preprint",
+      "publisher": "Vetrapur Centre for Monsoon Research",
+      "title": "A revised onset indicator for the coastal belt from a thirty-year rainfall series",
+      "url": "https://monsoon-research.invalid/preprints/2026/coastal-onset-indicator",
+      "sourceType": "research",
+      "publishedAt": "2026-07-16T15:30:00+05:30"
+    },
+    {
+      "id": "src-monsoon-broadcaster",
+      "publisher": "Vetrakhand Public Broadcaster",
+      "title": "Researchers propose a new way of dating monsoon onset on the coast",
+      "url": "https://vetrakhand-broadcaster.invalid/science/2026/07/20/monsoon-onset-indicator",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T19:50:00+05:30"
+    },
+    {
+      "id": "src-grid-ledger",
+      "publisher": "The Estuary Ledger",
+      "title": "Grid scheduling pilot shifted 4 percent of peak demand",
+      "url": "https://estuary-ledger.invalid/energy/2026/07/20/grid-scheduling-pilot-peak-demand",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T21:40:00+05:30"
+    },
+    {
+      "id": "src-grid-chronicle",
+      "publisher": "Vetrapur Morning Chronicle",
+      "title": "Scheduling pilot moved 1.5 percent of peak demand, figures suggest",
+      "url": "https://vetrapur-chronicle.invalid/2026/07/21/grid-scheduling-pilot-figures",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-21T05:35:00+05:30"
+    },
+    {
+      "id": "src-archive-weekly",
+      "publisher": "Kalvapur Weekly",
+      "title": "Film archive picks eighteen titles for winter restoration",
+      "url": "https://kalvapur-weekly.invalid/culture/2026/07/20/archive-restoration-titles",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T18:55:00+05:30"
+    },
+    {
+      "id": "src-archive-chronicle",
+      "publisher": "Vetrapur Morning Chronicle",
+      "title": "Restoration list draws on three regional print collections",
+      "url": "https://vetrapur-chronicle.invalid/2026/07/21/archive-restoration-collections",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-21T04:45:00+05:30"
+    },
+    {
+      "id": "src-archive-restoration-list",
+      "publisher": "Kalvapur Film Archive",
+      "title": "Winter restoration programme: full list of selected titles",
+      "url": "https://kalvapur-archive.invalid/programmes/2026/winter-restoration-list",
+      "sourceType": "primary",
+      "publishedAt": "2026-07-21T12:55:00+05:30"
+    },
+    {
+      "id": "src-coastal-newswire",
+      "publisher": "Meridian Newswire",
+      "title": "Coastal zone consultation closes after six weeks",
+      "url": "https://meridian-newswire.invalid/policy/2026/07/20/coastal-zone-consultation-closes",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T22:15:00+05:30"
+    },
+    {
+      "id": "src-coastal-zone-tally",
+      "publisher": "The Estuary Ledger",
+      "title": "Secretariat publishes tally of coastal-zone submissions",
+      "url": "https://estuary-ledger.invalid/policy/2026/07/21/coastal-zone-submission-tally",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-21T05:15:00+05:30"
+    },
+    {
+      "id": "src-league-announcement",
+      "publisher": "Sethanadu Twenty League",
+      "title": "League vote: two new clubs and a split-season calendar from 2027",
+      "url": "https://sethanadu-twenty.invalid/announcements/2026/expansion-and-calendar-vote",
+      "sourceType": "primary",
+      "publishedAt": "2026-07-20T19:20:00+05:30"
+    },
+    {
+      "id": "src-league-broadcaster",
+      "publisher": "Vetrakhand Public Broadcaster",
+      "title": "Sethanadu Twenty to grow to fourteen clubs in 2027",
+      "url": "https://vetrakhand-broadcaster.invalid/sport/2026/07/20/sethanadu-twenty-expansion",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T21:05:00+05:30"
+    },
+    {
+      "id": "src-compute-column",
+      "publisher": "Nallanadu Business Review",
+      "title": "Publish the compute-grant criteria before the next round",
+      "url": "https://nallanadu-review.invalid/opinion/2026/07/20/compute-grant-criteria",
+      "sourceType": "publisher",
+      "publishedAt": "2026-07-20T20:35:00+05:30"
+    }
+  ],
+  "correctionNotes": []
+}
