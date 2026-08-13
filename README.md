@@ -19,9 +19,9 @@ apps/
 packages/
   domain/         Future pure product behavior
   logger/         Developer console logging
-  schemas/        Future public Zod content contracts
+  schemas/        Public Zod content contracts for published editions
   ui/             Small reusable presentation primitives
-  test-fixtures/  Deterministic test-only data
+  test-fixtures/  Deterministic test-only editions and data
 content/          Versioned editions, drafts, and corrections
 prompts/          Future versioned editorial prompts
 scripts/          Repository check scripts; future content automation
@@ -122,4 +122,4 @@ Change rules in `AGENTS.md`; do not restate them in tool-specific files.
 
 ## Current scope
 
-This is foundation work only. The repository deliberately does not yet include an edition schema, news UI, content fetching, RSS ingestion, LLM integration, local reading state, or PWA support. Deployment is limited to static application shells.
+The edition content contract is defined (`packages/schemas`, ADR-0005). The repository deliberately does not yet include a news UI, content fetching, RSS ingestion, LLM integration, local reading state, or PWA support, and no edition has been authored. Deployment is limited to static application shells.

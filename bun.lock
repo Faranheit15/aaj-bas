@@ -66,10 +66,19 @@
       "dependencies": {
         "zod": "^4.0.0",
       },
+      "devDependencies": {
+        "vitest": "^3.0.0",
+      },
     },
     "packages/test-fixtures": {
       "name": "@aaj-bas/test-fixtures",
       "version": "0.1.0",
+      "dependencies": {
+        "@aaj-bas/schemas": "workspace:*",
+      },
+      "devDependencies": {
+        "vitest": "^3.0.0",
+      },
     },
     "packages/ui": {
       "name": "@aaj-bas/ui",
