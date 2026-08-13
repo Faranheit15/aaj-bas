@@ -8,4 +8,4 @@ Versioned editorial content lives here. The contract it must satisfy is defined 
 
 Edition JSON must parse against `editionSchema` before it is published. `packages/test-fixtures` holds the
 minimal valid and invalid editions the contract is tested against; the first realistic edition is AB-102.
-No edition data is authored yet.
+The only edition authored so far is development sample data, described in `editions/README.md`.
