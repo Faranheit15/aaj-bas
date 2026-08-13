@@ -17,8 +17,21 @@ set -euo pipefail
 limit=32768
 warn_at=$(( limit * 85 / 100 ))
 
-mapfile -t files < <(git ls-files -z 'AGENTS.md' '*/AGENTS.md' | tr '\0' '\n')
+# mapfile is a bash 4 builtin and macOS ships bash 3.2, so it would abort this
+# check on a stock Mac before it measured anything. read -d '' predates bash 3.2
+# and keeps git's -z output, which matters: without -z, core.quotePath C-quotes
+# any path holding non-ASCII or a backslash, and the quoted string then fails the
+# existence guard below for a file that is really there.
+# The empty initialisation is load-bearing: under set -u, ${#files[@]} on an array
+# the loop never created would replace the deliberate failure below with an
+# unbound-variable error.
+files=()
+while IFS= read -r -d '' f; do
+  files+=("$f")
+done < <(git ls-files -z 'AGENTS.md' '*/AGENTS.md')
 
+# This guard must stay ahead of every "${files[@]}" expansion below: on bash 3.2,
+# expanding an empty array under set -u is itself an error.
 if [ "${#files[@]}" -eq 0 ]; then
   echo "FAIL: no tracked AGENTS.md found." >&2
   echo "AGENTS.md is the binding rule set for every agent tool; it must exist and be tracked." >&2
