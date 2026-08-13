@@ -384,6 +384,12 @@ It must not become a large design-system project.
 
 It must not contain news ranking, storage, fetching, analytics, or business orchestration.
 
+## `packages/logger`
+
+Developer console logging.
+
+It must not gain a network transport, a buffer, an identifier, or a pluggable sink. Each would turn it into telemetry. See ADR-0003.
+
 ## `packages/test-fixtures`
 
 Test-only deterministic fixtures.

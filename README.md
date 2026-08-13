@@ -18,6 +18,7 @@ apps/
   web/            Reader application shell
 packages/
   domain/         Future pure product behavior
+  logger/         Developer console logging
   schemas/        Future public Zod content contracts
   ui/             Small reusable presentation primitives
   test-fixtures/  Deterministic test-only data

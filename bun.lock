@@ -13,6 +13,7 @@
       "name": "@aaj-bas/landing",
       "version": "0.1.0",
       "dependencies": {
+        "@aaj-bas/logger": "workspace:*",
         "@aaj-bas/ui": "workspace:*",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
@@ -32,6 +33,7 @@
       "name": "@aaj-bas/web",
       "version": "0.1.0",
       "dependencies": {
+        "@aaj-bas/logger": "workspace:*",
         "@aaj-bas/ui": "workspace:*",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
@@ -50,6 +52,13 @@
     "packages/domain": {
       "name": "@aaj-bas/domain",
       "version": "0.1.0",
+    },
+    "packages/logger": {
+      "name": "@aaj-bas/logger",
+      "version": "0.1.0",
+      "devDependencies": {
+        "vitest": "^3.0.0",
+      },
     },
     "packages/schemas": {
       "name": "@aaj-bas/schemas",
@@ -78,6 +87,8 @@
     "@aaj-bas/domain": ["@aaj-bas/domain@workspace:packages/domain"],
 
     "@aaj-bas/landing": ["@aaj-bas/landing@workspace:apps/landing"],
+
+    "@aaj-bas/logger": ["@aaj-bas/logger@workspace:packages/logger"],
 
     "@aaj-bas/schemas": ["@aaj-bas/schemas@workspace:packages/schemas"],
 
