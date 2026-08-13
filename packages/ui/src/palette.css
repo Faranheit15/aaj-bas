@@ -1,0 +1,25 @@
+/* The Aaj, Bas. palette, shared by apps/landing and apps/web. Dark values live
+   here and nowhere else: a new colour needs an entry in both blocks below.
+   Colours only. Spacing, type, and component styles stay in the applications,
+   because packages/ui must not become a design system (AGENTS.md section 10). */
+
+:root {
+  --surface: #f7f4ef;
+  --ink: #1f2520;
+  --rule: #8b918a;
+  /* One value for both themes, deliberately: the previous #a84315 was 2.88:1 on
+     the dark page background and failed WCAG 2.2 SC 1.4.11's 3:1. A positive
+     outline-offset keeps page background, not the inverted hover fill, adjacent
+     to the ring, so the two page backgrounds are what must clear 3:1. This value
+     clears both hover fills too (worst case 3.43:1), so it survives that offset
+     being removed. Re-check all four before changing it. */
+  --focus-ring: #b85c2e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #181b18;
+    --ink: #f3f0e9;
+    --rule: #9ba39a;
+  }
+}

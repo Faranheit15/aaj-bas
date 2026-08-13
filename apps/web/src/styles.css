@@ -1,8 +1,10 @@
+@import "@aaj-bas/ui/palette.css";
+
 :root {
   color-scheme: light dark;
   font-family: Georgia, "Times New Roman", serif;
-  background: #f7f4ef;
-  color: #1f2520;
+  background: var(--surface);
+  color: var(--ink);
 }
 
 * {
@@ -41,13 +43,6 @@ p {
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.6;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    background: #181b18;
-    color: #f3f0e9;
-  }
 }
 
 @media (max-width: 34rem) {
