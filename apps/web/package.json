@@ -14,7 +14,8 @@
     "@aaj-bas/schemas": "workspace:*",
     "@aaj-bas/ui": "workspace:*",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "zod": "^4.0.0"
   },
   "devDependencies": {
     "@aaj-bas/test-fixtures": "workspace:*",
