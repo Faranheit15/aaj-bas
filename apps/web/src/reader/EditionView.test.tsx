@@ -10,13 +10,19 @@ import {
 } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import editionJson from "../../../../content/editions/2026-07-21.json";
+import type { EditionFreshness } from "../edition/edition-freshness";
 import {
   formatEditionDate,
   formatEditionInstant,
 } from "../edition/editorial-day";
 import { localStateV1Schema } from "../local-state/local-state";
-import { LOCAL_STATE_KEY } from "../local-state/local-state-store";
+import {
+  LOCAL_STATE_KEY,
+  rememberViewed,
+} from "../local-state/local-state-store";
 import { EditionView } from "./EditionView";
+import type { EditionEndedStore } from "./edition-ended";
+import { useEditionEnded } from "./edition-ended";
 import type { ViewedStoriesStore } from "./viewed-stories";
 import { useViewedStories } from "./viewed-stories";
 
@@ -45,9 +51,23 @@ vi.mock("./viewed-stories", async (importOriginal) => {
   return { ...actual, useViewedStories: vi.fn(actual.useViewedStories) };
 });
 
+/*
+  The same wrapping, for the same reason, on the ended store. The ending is
+  visible in the DOM, so most of it can be asserted there — but "the ended state
+  is already right on the FIRST render" cannot be: `render` is wrapped in `act`,
+  so an implementation that loaded the flag in an effect has already corrected
+  itself before any DOM query runs. Reading the value the hook returned to
+  `EditionView` on its first render is the version of that claim that can fail.
+*/
+vi.mock("./edition-ended", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("./edition-ended")>();
+  return { ...actual, useEditionEnded: vi.fn(actual.useEditionEnded) };
+});
+
 afterEach(() => {
   cleanup();
   vi.mocked(useViewedStories).mockClear();
+  vi.mocked(useEditionEnded).mockClear();
   // jsdom keeps one storage area for the whole file, so a document written by
   // one test would otherwise be on the device when the next one renders.
   localStorage.clear();
@@ -144,6 +164,68 @@ function viewedIdsOnFirstRender(): string[] {
     throw new Error("the viewed store threw instead of returning");
   }
   return [...first.value.viewed.storyIds];
+}
+
+/** The ended store as of the component's most recent render. */
+function endedNow(): EditionEndedStore {
+  const { results } = vi.mocked(useEditionEnded).mock;
+  const last = present(results[results.length - 1], "a render of the store");
+  if (last.type !== "return") {
+    throw new Error("the ended store threw instead of returning");
+  }
+  return last.value;
+}
+
+/** Whether the edition was already ended on the component's FIRST render. */
+function endedOnFirstRender(): boolean {
+  const { results } = vi.mocked(useEditionEnded).mock;
+  const first = present(results[0], "the store's first render");
+  if (first.type !== "return") {
+    throw new Error("the ended store threw instead of returning");
+  }
+  return first.value.hasEnded;
+}
+
+/** The one line that says how much of the edition has been opened. */
+function progressLine(container: HTMLElement): HTMLElement {
+  return present(
+    container.querySelector<HTMLElement>(".edition-progress"),
+    "the progress line",
+  );
+}
+
+/** How many cards the page actually rendered. Never a literal. */
+function cardCount(): number {
+  return screen.getAllByRole("listitem").length;
+}
+
+/**
+ * A story in the file that this render deliberately does not show.
+ *
+ * The interest pool AB-204 will select from. Used to seed the device with a
+ * viewed id the reader cannot see on the page, which is the real shape of the
+ * bug it guards against rather than an invented identifier.
+ */
+const poolStory: Story = present(
+  edition.stories.find((story) => !edition.coreStoryIds.includes(story.id)),
+  "an interest-pool story",
+);
+
+/** The block at the end of the edition, in whichever state it is in. */
+function endingBlock(container: HTMLElement): HTMLElement {
+  return present(
+    container.querySelector<HTMLElement>(".edition-ending"),
+    "the ending block",
+  );
+}
+
+/** The end-edition control, or null once the edition is over. */
+function endControl(): HTMLElement | null {
+  return screen.queryByRole("button", { name: /^End (today's|this) edition$/ });
+}
+
+function pressEnd(): void {
+  fireEvent.click(present(endControl(), "the end-edition control"));
 }
 
 /** What the device holds for one edition, read back through the real schema. */
@@ -410,8 +492,10 @@ describe("what an expanded card leaves on the device", () => {
     expect(viewedIds()).toEqual([coreStoryAt(0).id]);
     // And the cards themselves start collapsed: what survives is the record of
     // what was opened, not the shape of the page the reader left behind.
-    for (const toggle of screen.getAllByRole("button")) {
-      expect(toggle).toHaveAttribute("aria-expanded", "false");
+    // Scoped to the cards: the end-edition control is a button on this page too,
+    // and it is not a disclosure.
+    for (const card of screen.getAllByRole("listitem")) {
+      expect(toggleIn(card)).toHaveAttribute("aria-expanded", "false");
     }
   });
 
@@ -501,5 +585,465 @@ describe("recording which stories were viewed", () => {
     render(<EditionView edition={edition} freshness="current" />);
 
     expect(viewedIds()).toEqual([]);
+  });
+});
+
+describe("how much of the edition has been opened", () => {
+  it("counts the edition from zero, before the reader has opened anything", () => {
+    /*
+      Present on the first render, not conjured by the first expand. A counter
+      that materialised when the reader opened a story would be a thing they
+      made happen — a micro-reward — and its first appearance would read as a
+      score rather than as the size of what is in front of them.
+
+      The denominator is read back out of the DOM rather than written here as
+      an eight, for the same reason the card ordinals are: a test carrying its
+      own constant cannot tell "0 of 8 viewed" over eight cards from the same
+      sentence over ten.
+    */
+    render(<EditionView edition={edition} freshness="current" />);
+
+    expect(screen.getByText(`0 of ${cardCount()} viewed`)).toBeInTheDocument();
+  });
+
+  it("counts against the same denominator the cards number themselves against", () => {
+    // The one number the reader sees twice. "3 of 10 viewed" above a list whose
+    // last card says "8 of 8" tells them two stories exist somewhere they
+    // cannot reach, which is the hidden backlog constitution 1 forbids — and
+    // two independently derived denominators are two chances to say it.
+    const { container } = render(
+      <EditionView edition={edition} freshness="current" />,
+    );
+
+    const cards = screen.getAllByRole("listitem");
+    const total = cards.length;
+    cards.forEach((card, index) => {
+      expect(
+        within(card).getByText(`${index + 1} of ${total}`),
+      ).toBeInTheDocument();
+    });
+
+    const counted = /^\d+ of (\d+) viewed$/.exec(
+      progressLine(container).textContent ?? "",
+    );
+    expect(present(counted, "a progress sentence")[1]).toBe(String(total));
+  });
+
+  it("counts each story the reader expands, once", () => {
+    const { container } = render(
+      <EditionView edition={edition} freshness="current" />,
+    );
+    const total = cardCount();
+
+    const cards = screen.getAllByRole("listitem");
+    fireEvent.click(toggleIn(present(cards[0], "the first card")));
+    fireEvent.click(toggleIn(present(cards[3], "the fourth card")));
+
+    expect(progressLine(container)).toHaveTextContent(`2 of ${total} viewed`);
+  });
+
+  it("does not count a stored story that is not on this page", () => {
+    /*
+      The AB-204 guard, at the level the reader would see it. The viewed set is
+      keyed by edition date, not by what this render put on screen, so a reader
+      whose interests changed between visits has stored ids for pool stories
+      this render does not include. Counting the stored set's size would print
+      a numerator the reader cannot reconcile with anything in front of them,
+      and in the worst case one larger than the denominator.
+    */
+    rememberViewed(edition.date, coreStoryAt(0).id);
+    rememberViewed(edition.date, poolStory.id);
+
+    const { container } = render(
+      <EditionView edition={edition} freshness="current" />,
+    );
+
+    const total = cardCount();
+    expect(progressLine(container)).toHaveTextContent(`1 of ${total} viewed`);
+    expect(progressLine(container)).not.toHaveTextContent(
+      `2 of ${total} viewed`,
+    );
+  });
+
+  it("is a sentence with nothing beside it, never a bar", () => {
+    /*
+      `role="progressbar"` and `aria-valuenow` are asserted absent just below,
+      and they are exactly what a bar can be built without: a styled `<div>`
+      37.5% wide has neither, no accessible name to query it by, and no text to
+      catch it with. A percentage inside the SENTENCE is caught by the sentence;
+      a bar drawn next to it is not.
+
+      So this asserts the shape instead, in the two places a bar has to be. It
+      has to sit beside the number it fills against, so the counter's neighbours
+      are named: the freshness line above, the story list below, nothing
+      between. And it has to express a fill as a length, so nothing in the
+      edition carries an inline width — the one form a dynamic percentage cannot
+      avoid, since a stylesheet cannot know the number.
+
+      Why it matters rather than being a style preference: a bar is a thing to
+      complete, and a filling bar is a reward waiting to be collected, which is
+      the mechanic section 3.2 rules out. The sentence is a fact the reader
+      could check by counting the cards.
+    */
+    const { container } = render(
+      <EditionView edition={edition} freshness="current" />,
+    );
+    const counter = progressLine(container);
+
+    expect(counter.textContent).toBe(`0 of ${cardCount()} viewed`);
+    // Text and no elements: nothing is nested inside the sentence either.
+    expect(counter.children).toHaveLength(0);
+    expect(counter.previousElementSibling).toHaveClass("edition-freshness");
+    expect(counter.nextElementSibling).toBe(screen.getByRole("list"));
+
+    for (const styled of container.querySelectorAll("[style]")) {
+      expect(styled.getAttribute("style")).not.toMatch(/width|%/);
+    }
+  });
+
+  it("keeps the count out of the live region", () => {
+    // The counter is a fact on the page, not an announcement. A count that
+    // spoke every time the reader opened a story would turn expanding a card
+    // into a scored event, which is the mechanic section 3.2 rules out — and
+    // the shell's status region is the obvious place a later edit would put it.
+    const { container } = render(
+      <EditionView edition={edition} freshness="current" />,
+    );
+    // Read while every card is shut: an expanded card contributes its own
+    // source list, so list items stop being the count of stories once one is
+    // open.
+    const total = cardCount();
+
+    const cards = screen.getAllByRole("listitem");
+    fireEvent.click(toggleIn(present(cards[0], "the first card")));
+    fireEvent.click(toggleIn(present(cards[1], "the second card")));
+
+    expect(progressLine(container)).toHaveTextContent(`2 of ${total} viewed`);
+    expect(screen.queryByRole("status")).toBeNull();
+    expect(container.querySelector("[aria-live]")).toBeNull();
+    expect(screen.queryByRole("progressbar")).toBeNull();
+  });
+});
+
+describe("ending the edition", () => {
+  it("says so without comment when the reader read nothing at all", () => {
+    /*
+      Acceptance criterion 1 at its extreme: a reader may end before the tenth
+      story, including before the first. Zero is deliberately not special-cased
+      — a distinct message for a reader who read little would be the product
+      commenting on how little they read, and PRD section 5.1 is explicit that
+      ending early must not tell the reader they failed.
+    */
+    render(<EditionView edition={edition} freshness="current" />);
+    const total = cardCount();
+
+    pressEnd();
+
+    expect(
+      screen.getByText(`You read 0 of ${total}. That can be enough for today.`),
+    ).toBeInTheDocument();
+    expect(endControl()).toBeNull();
+  });
+
+  it("leaves every story where it was, including the open ones", () => {
+    /*
+      What makes an irreversible control defensible. Ending removes the control
+      and shows a sentence; it does not clear the page, collapse what the
+      reader opened, or lock anything. A reader who ends and keeps reading is
+      doing something the product allows, so there is nothing to undo.
+    */
+    render(<EditionView edition={edition} freshness="current" />);
+    const headlinesBefore = screen.getAllByRole("heading", { level: 2 }).length;
+
+    const cards = screen.getAllByRole("listitem");
+    const first = toggleIn(present(cards[0], "the first card"));
+    const third = toggleIn(present(cards[2], "the third card"));
+    fireEvent.click(first);
+    fireEvent.click(third);
+
+    pressEnd();
+
+    expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(
+      headlinesBefore,
+    );
+    expect(first).toHaveAttribute("aria-expanded", "true");
+    expect(third).toHaveAttribute("aria-expanded", "true");
+  });
+
+  it("opens no new way out of the edition", () => {
+    // The end of the edition adds nothing to click away to: no next edition,
+    // no archive, no related reading, no share (section 3.1). Counted against
+    // the links an expanded card legitimately contributes, so this is about
+    // what ending adds rather than about the page being empty.
+    render(<EditionView edition={edition} freshness="current" />);
+    fireEvent.click(
+      toggleIn(present(screen.getAllByRole("listitem")[0], "the first card")),
+    );
+    const linksBefore = screen.getAllByRole("link").length;
+    expect(linksBefore).toBeGreaterThan(0);
+
+    pressEnd();
+
+    expect(screen.getAllByRole("link")).toHaveLength(linksBefore);
+  });
+
+  it("marks no story viewed", () => {
+    // Ending is not reading. The count the reader is shown has to be what they
+    // actually opened, or the sentence about it is untrue.
+    render(<EditionView edition={edition} freshness="current" />);
+
+    pressEnd();
+
+    expect(viewedIds()).toEqual([]);
+    expect(storedIdsFor(edition.date)).toEqual([]);
+    expect(endedNow().hasEnded).toBe(true);
+  });
+
+  it("is the last thing in the edition, with nothing after it", () => {
+    // Rendered inside a `main` so the placement can be asserted where the shell
+    // will put it. Nothing continues the edition, so nothing follows the
+    // ending: it is the bottom of the document, and the shell's footer is
+    // outside `main` entirely.
+    render(
+      <main>
+        <EditionView edition={edition} freshness="current" />
+      </main>,
+    );
+
+    const main = screen.getByRole("main");
+    expect(main.lastElementChild).toHaveClass("edition-ending");
+    expect(main.lastElementChild?.previousElementSibling).toBe(
+      screen.getByRole("list"),
+    );
+  });
+
+  it("stays ended on the first render after a remount", () => {
+    /*
+      Acceptance criterion 3. The same reload proxy, with the same limitation,
+      as the viewed set above: unmounting and rendering again destroys the React
+      tree but keeps the same JavaScript realm, so it proves the flag came back
+      off the device rather than out of a closure — it is not a browser reload,
+      which would also re-evaluate the bundle. A real reload needs Playwright,
+      which section 5 lists as not installed and requiring an ADR to add.
+
+      Asserted on the remounted tree's FIRST render, which is the version of the
+      claim that can fail: there must be no render in which a reader who already
+      ended is offered the control again before it disappears.
+    */
+    const first = render(<EditionView edition={edition} freshness="current" />);
+    pressEnd();
+    first.unmount();
+
+    // So that `results[0]` is the remount's first render rather than the
+    // original mount's, which was legitimately not ended.
+    vi.mocked(useEditionEnded).mockClear();
+    render(<EditionView edition={edition} freshness="current" />);
+
+    expect(endedOnFirstRender()).toBe(true);
+    expect(endControl()).toBeNull();
+    expect(
+      screen.getByText(
+        `You read 0 of ${cardCount()}. That can be enough for today.`,
+      ),
+    ).toBeInTheDocument();
+  });
+
+  it("ends each edition with its own freshness's words", () => {
+    /*
+      The wire, not the table. `endingCopy` is exercised over all three
+      freshnesses in `edition-progress.test.ts` and `EditionEnding` over all
+      three from props — and both stay green while this component hands the
+      ending a constant, because neither of them can see what it passes.
+
+      What a constant does to a reader: with "current" hardcoded, an ARCHIVED
+      edition ends "That's today's edition." and "See you tomorrow.", on the
+      same page as the notice reading "This is a past edition." That is a false
+      statement about which day is on screen — section 26's rule against
+      presenting stale content as current, applied to copy — plus an invitation
+      to come back tomorrow for an edition that is already old. With "archived"
+      hardcoded, today's edition ends without saying there is a tomorrow at all.
+
+      Asserted as the block's whole text, so the two halves that differ by
+      freshness — the message and the line about what follows — are both
+      covered, and the label is checked before the press because it is the third
+      thing the table varies.
+    */
+    const endings: readonly {
+      readonly freshness: EditionFreshness;
+      readonly label: string;
+      readonly ended: (total: number) => string;
+    }[] = [
+      {
+        freshness: "current",
+        label: "End today's edition",
+        ended: (total) =>
+          `You read 0 of ${total}. That can be enough for today.See you tomorrow.`,
+      },
+      {
+        freshness: "stale",
+        label: "End this edition",
+        ended: (total) =>
+          `You read 0 of ${total}. That can be enough for today.The next edition will appear here when it is published.`,
+      },
+      {
+        freshness: "archived",
+        label: "End this edition",
+        // No line about what follows: the reader chose a past date, and "See
+        // you tomorrow." there is an invitation rather than an ending.
+        ended: (total) =>
+          `You read 0 of ${total}. That can be enough for today.`,
+      },
+    ];
+
+    for (const { freshness, label, ended } of endings) {
+      const { container } = render(
+        <EditionView edition={edition} freshness={freshness} />,
+      );
+      const total = cardCount();
+
+      expect(screen.getByRole("button", { name: label })).toBeInTheDocument();
+      pressEnd();
+
+      expect(endingBlock(container).textContent).toBe(ended(total));
+
+      cleanup();
+      localStorage.clear();
+    }
+  });
+
+  it("keeps the ending to the edition whose date it is", () => {
+    /*
+      Ending is a fact about ONE edition, keyed by its date. Keyed by anything
+      else — a constant, the last edition opened, the reader — ending today's
+      renders every other edition already ended too, including archive dates the
+      reader has never opened: a claim about what they did that is simply false,
+      and the accumulating cross-edition flag section 3.5 and `edition-ended.ts`
+      both say this state must never become.
+
+      Two dates rather than one, because a single edition cannot tell the
+      difference: the remount test above passes just as well against a hardcoded
+      key.
+    */
+    const other: Edition = { ...edition, date: "2026-07-20" };
+
+    const today = render(<EditionView edition={edition} freshness="current" />);
+    pressEnd();
+    expect(endControl()).toBeNull();
+    today.unmount();
+
+    render(<EditionView edition={other} freshness="archived" />);
+
+    expect(useEditionEnded).toHaveBeenCalledWith(other.date);
+    // Untouched: the edition the reader has not ended still offers its ending,
+    // and says nothing about having been read.
+    expect(endControl()).toBeInTheDocument();
+    expect(screen.queryByText(/That can be enough for today/)).toBeNull();
+    expect(screen.queryByText(/That's the whole edition/)).toBeNull();
+  });
+
+  it("adds no control of its own to the page it ends", () => {
+    /*
+      Irreversibility is a load-bearing product claim, and this is the level it
+      is easy to break at. `EditionEnding` proves the ending offers no way back;
+      a "Reopen the edition" control placed a line above it in THIS file leaves
+      every one of those assertions green.
+
+      Counted rather than named, because the claim is that nothing was added —
+      an un-end, a share, an install prompt, a survey, a "read yesterday's" —
+      not that one particular string is absent. Every button left on the page is
+      a card's disclosure, which is what makes the count an argument rather than
+      a number that happens to match.
+    */
+    render(<EditionView edition={edition} freshness="current" />);
+    const cards = cardCount();
+    // The cards' toggles, plus the one control that ends the edition.
+    expect(screen.getAllByRole("button")).toHaveLength(cards + 1);
+
+    pressEnd();
+
+    const remaining = screen.getAllByRole("button");
+    expect(remaining).toHaveLength(cards);
+    for (const button of remaining) {
+      expect(button).toHaveAttribute("aria-expanded");
+    }
+  });
+
+  it("stays ended when the reader keeps reading afterwards", () => {
+    /*
+      The flow the slice explicitly allows: end the edition, then open another
+      story. Ending is non-destructive — the stories stay exactly where they
+      were — so reading on is something the reader may do, and the write that
+      records the story they opened shares one document on the device with the
+      ended flag.
+
+      Asserted across a remount because the damage is invisible until then: the
+      React state is already true, so the edition looks ended for the rest of
+      the session and comes back un-ended, with the control offered again on an
+      edition the reader has already finished with.
+    */
+    const first = render(<EditionView edition={edition} freshness="current" />);
+    pressEnd();
+    fireEvent.click(
+      toggleIn(present(screen.getAllByRole("listitem")[0], "the first card")),
+    );
+    expect(endControl()).toBeNull();
+    first.unmount();
+
+    vi.mocked(useEditionEnded).mockClear();
+    render(<EditionView edition={edition} freshness="current" />);
+
+    expect(endedOnFirstRender()).toBe(true);
+    expect(endControl()).toBeNull();
+    // And the story opened after ending is still on the device: neither write
+    // erased the other.
+    expect(storedIdsFor(edition.date)).toEqual([coreStoryAt(0).id]);
+  });
+
+  it("keeps saying what the reader has read as they keep reading", () => {
+    /*
+      Ending after one story says "You read 1 of 8."; opening the remaining
+      seven turns the same block into "That's today's edition." The number is
+      DERIVED from the viewed set on every render rather than frozen at the
+      press, and that is a decision, not an oversight — it is recorded here
+      because nothing else in the slice records it.
+
+      Freezing it would mean storing a second fact, how much had been read at
+      the moment the control was pressed, and then printing a number that
+      contradicts the page it sits on: "You read 1 of 8." beneath eight open
+      cards. The block states what is true now. Completion wins over ending
+      early for the same reason: a reader who went on to open everything did
+      read the whole edition, and telling them otherwise would be the less
+      accurate sentence.
+
+      Nothing about the change is announced or rewarded — no live region here,
+      and no focus move for it in `EditionEnding` — so the sentence is simply
+      different when the reader next looks at it.
+    */
+    const { container } = render(
+      <EditionView edition={edition} freshness="current" />,
+    );
+    const cards = screen.getAllByRole("listitem");
+    const total = cards.length;
+
+    fireEvent.click(toggleIn(present(cards[0], "the first card")));
+    pressEnd();
+
+    expect(endingBlock(container).textContent).toBe(
+      `You read 1 of ${total}. That can be enough for today.See you tomorrow.`,
+    );
+
+    // Held from before the first expand: an open card has a second button in
+    // it, so `toggleIn` only answers for a card that is still shut — which each
+    // of these is at the moment it is clicked.
+    for (const card of cards.slice(1)) {
+      fireEvent.click(toggleIn(card));
+    }
+
+    expect(endingBlock(container).textContent).toBe(
+      "That's today's edition.See you tomorrow.",
+    );
+    expect(progressLine(container)).toHaveTextContent(
+      `${total} of ${total} viewed`,
+    );
   });
 });

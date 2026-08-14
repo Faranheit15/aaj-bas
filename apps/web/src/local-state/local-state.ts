@@ -14,9 +14,9 @@
  * those four properties are decided.
  *
  * The document deliberately holds only which stories were expanded, per
- * edition. It records no timestamps and no ordering, so it cannot become a
- * reading-behaviour record (section 23), and it never leaves the device
- * (section 17).
+ * edition, and which editions the reader ended. It records no timestamps and no
+ * ordering, so it cannot become a reading-behaviour record (section 23), and it
+ * never leaves the device (section 17).
  */
 
 import { editionDateSchema, identifierSchema } from "@aaj-bas/schemas";
@@ -26,11 +26,17 @@ import { z } from "zod";
 export const LOCAL_STATE_VERSION = 1;
 
 /**
- * How many editions' viewed sets are kept.
+ * How many editions each field of the document remembers.
  *
  * A month of archive browsing is remembered and everything older is dropped, so
  * the document has a bounded size no matter how long a device is used. It is a
  * storage bound, not a product feature: nothing shows the reader a history.
+ *
+ * One bound, applied per field rather than across them, because the fields are
+ * evicted independently and a shared budget would let a reader's ended editions
+ * push out their viewed sets. Every field that accumulates per edition takes
+ * it: an unbounded one would be the single thing in this document that grows
+ * without limit, which is exactly what ADR-0007 promised it would not have.
  */
 export const MAX_REMEMBERED_EDITIONS = 30;
 
@@ -50,6 +56,27 @@ export const MAX_REMEMBERED_EDITIONS = 30;
 export const localStateV1Schema = z.looseObject({
   schemaVersion: z.literal(1),
   viewedByEdition: z.record(editionDateSchema, z.array(identifierSchema)),
+  /*
+    Editions the reader ENDED, by pressing the end control. Not "editions the
+    reader finished": finishing is derived from the viewed set at render time
+    and writes nothing, so an edition every story of which was expanded is
+    absent here unless the reader also chose to end it.
+
+    That distinction is the whole value of the field, and it is written down
+    because the next reader of it will not have this slice in front of them.
+    PRD section 7.1 wants an install prompt after three ended-or-completed
+    editions; a slice implementing that has to combine this field with a
+    derived completion count, and must argue its own semantics rather than
+    inherit a field whose name it guessed the meaning of.
+
+    OPTIONAL, and `schemaVersion` stays 1. ADR-0007 settles this: an additive
+    optional field does not bump the version, and names this exact field as the
+    case it was settled for. Required would mean every document already on a
+    reader's device fails validation, reads as `replaceable`, and has its
+    viewed set destroyed by the next write — a field that records one boolean
+    per edition would have cost readers a month of state to add.
+  */
+  endedEditions: z.array(editionDateSchema).optional(),
 });
 
 export type LocalStateV1 = z.infer<typeof localStateV1Schema>;
@@ -233,6 +260,52 @@ export function viewedStoryIds(
 }
 
 /**
+ * The document that results from the reader ending one edition.
+ *
+ * Idempotent, sorted and size-bounded for the same three reasons
+ * `withViewedStory` is, and the second one bites harder here. This field is a
+ * bare list of dates: unsorted, its order IS the order the reader ended
+ * editions in, which is a behavioural sequence nothing asks for and section 23
+ * says not to collect. Sorting discards it at the point it would be written
+ * down, and buys byte-stability with it.
+ *
+ * Unknown top-level keys on `state` are carried through untouched; see the
+ * schema comment above.
+ */
+export function withEndedEdition(
+  state: LocalStateV1,
+  editionDate: string,
+): LocalStateV1 {
+  const existing = state.endedEditions ?? [];
+  const dates = existing.includes(editionDate)
+    ? existing
+    : [...existing, editionDate];
+
+  return {
+    ...state,
+    endedEditions: rememberedDates(dates, editionDate),
+  };
+}
+
+/**
+ * Whether the reader ended this edition — pressed the end control on it, not
+ * merely expanded every story in it.
+ *
+ * No `Object.hasOwn` guard, unlike `ownEntry` below, and the difference is the
+ * shape rather than an oversight: this field is an array, so an edition date of
+ * "constructor" or "__proto__" is a value being compared, never a key being
+ * looked up, and there is no prototype chain for it to resolve through. The
+ * hazard the guard exists for cannot arise here. It is asserted anyway, because
+ * "this shape is safe" is a claim that should fail a test if the shape changes.
+ */
+export function hasEndedEdition(
+  state: LocalStateV1,
+  editionDate: string,
+): boolean {
+  return (state.endedEditions ?? []).includes(editionDate);
+}
+
+/**
  * One edition's stored ids, or none.
  *
  * `Object.hasOwn` rather than a plain lookup with `?? []`, because a plain
@@ -258,13 +331,24 @@ function ownEntry(
 }
 
 /**
- * Applies the size bound, keeping whole entries only.
+ * Applies the size bound.
+ *
+ * Two forms of one rule set: `rememberedDates` bounds `endedEditions`, which is
+ * a list of dates, and `remembered` bounds `viewedByEdition`, which is a map
+ * from a date to a set of ids. Documented once, here, so the two cannot drift
+ * into evicting differently.
+ *
+ * The list form de-duplicates through a `Set` because, unlike an object's keys,
+ * an array read off a device can hold the same date twice. Two copies would
+ * each spend an entry of the budget, so the bound would quietly hold fewer
+ * editions than it says.
  *
  * Three rules, each of which is a way of getting this wrong:
  *
  * - entries are dropped WHOLE and ids inside an entry are never trimmed. Half a
  *   viewed set is worse than none of it: it produces a count that is wrong and
- *   looks right, and neither the reader nor a later read can tell.
+ *   looks right, and neither the reader nor a later read can tell. The list
+ *   form has nothing inside an entry to trim, so it satisfies this by shape.
  *
  * - the edition being written is ALWAYS kept, even when its date is the oldest
  *   of them all. Otherwise a reader opening a story in an old archive edition
@@ -274,10 +358,24 @@ function ownEntry(
  * - the survivors are chosen by sorting the dates, never by object key order or
  *   a clock. `YYYY-MM-DD` sorts chronologically as a string, so "newest" needs
  *   no date arithmetic and no timezone, and the result is identical whatever
- *   order the entries were inserted in. The output object is rebuilt in sorted
- *   key order for the same reason: JSON.stringify follows insertion order, so
- *   without this the same set of editions could serialise two different ways.
+ *   order the entries were inserted in. The output is rebuilt in sorted order
+ *   for the same reason: JSON.stringify follows insertion order for an object
+ *   and array order for a list, so without this the same set of editions could
+ *   serialise two different ways.
  */
+function rememberedDates(
+  dates: readonly string[],
+  alwaysKeep: string,
+): string[] {
+  const others = [...new Set(dates)]
+    .filter((date) => date !== alwaysKeep)
+    .sort()
+    .reverse()
+    .slice(0, MAX_REMEMBERED_EDITIONS - 1);
+
+  return [alwaysKeep, ...others].sort();
+}
+
 function remembered(
   entries: Record<string, readonly string[]>,
   alwaysKeep: string,

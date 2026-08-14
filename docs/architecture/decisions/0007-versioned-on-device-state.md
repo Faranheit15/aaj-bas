@@ -65,7 +65,7 @@ Reading history now exists durably on the device. That is the uncomfortable sent
 
 The structural guarantee against ranking is that the ordering code cannot see the data: `coreStories` takes an edition and nothing else, and this slice changes neither its signature nor its module's imports.
 
-Browsing leaves no trace. Nothing is written when a reader merely opens an edition; the first byte is written when they expand their first story.
+Browsing leaves no trace. Nothing is written when a reader merely opens an edition; the first byte is written when they act on it. At the time of writing that meant expanding a story; AB-203 added a second such act, pressing the control that ends the edition, so a reader who ends an edition without opening anything also writes. The property that matters is unchanged: reading without acting records nothing.
 
 Discarding on an unrecognised version is acceptable *for this payload*, because losing which cards were open costs a reader one recoverable count and blocks nothing. That acceptability is a property of the data, not of the mechanism. AB-204 must re-argue it for interests, which are choices a reader deliberately made.
 

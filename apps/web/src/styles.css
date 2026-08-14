@@ -75,6 +75,18 @@ p {
   font-size: 0.95rem;
 }
 
+/* The counter, set in the same small sans as the freshness line above it: it
+   is metadata about the list it introduces, not a headline. Only type here —
+   no bar, no percentage, no fill, and no colour that changes as the number
+   rises. A bar is a thing to complete and a filling one is a reward waiting to
+   be collected, which is the mechanic AGENTS.md section 3.2 rules out; a
+   sentence is a fact the reader could check by counting the cards. */
+.edition-progress {
+  margin: 0 0 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
 .edition-stories {
   margin: 0;
   padding: 0;
@@ -391,6 +403,52 @@ p {
 .edition-action:focus-visible {
   outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
+}
+
+/* The end of the edition. Separated from the last story by the same hairline
+   rule the stories use between themselves, so it reads as the bottom of the
+   list rather than as a panel bolted underneath it.
+
+   Static position, deliberately. `position: sticky` and `position: fixed` are
+   both wrong here and neither may be added: "persistent" in PRD section 6.4
+   means the control is always at the end, in the same place, not a bar that
+   travels down the page with the reader. A control pinned to the viewport is a
+   standing invitation to stop that follows the reader through every story —
+   attention-seeking furniture (section 28) — and on a phone it covers the
+   story being read.
+
+   No `@keyframes`, no `transition`, and no `animation`, here or anywhere in
+   this file, which declares none. The ending is not a reveal and completion is
+   not a celebration: the message is simply there when the reader reaches it.
+   With no motion at all there is nothing for `prefers-reduced-motion` to gate.
+
+   No focus rule of its own. The block takes focus programmatically when the
+   reader ends the edition, exactly as `.reader-main` does on a route change,
+   and like it keeps the browser's own outline rather than suppressing or
+   restyling it (section 25). */
+.edition-ending {
+  margin-top: clamp(2rem, 6vw, 3rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.edition-ending-message {
+  margin: 0;
+}
+
+/* One line of quiet metadata under the closing sentence, not a second message
+   competing with it. */
+.edition-next {
+  margin: 0.5rem 0 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+/* While the edition is unfinished the control is the block's only child, and
+   `.edition-actions`'s top margin would then stack on the block's own padding
+   into a gap twice the size it is meant to be. */
+.edition-ending > .edition-actions:first-child {
+  margin-top: 0;
 }
 
 .reader-footer {

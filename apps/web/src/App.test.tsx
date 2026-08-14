@@ -111,14 +111,65 @@ describe("the reader application", () => {
     expect(fetch).not.toHaveBeenCalled();
   });
 
-  it("ends the edition at the story list, with the footer after it", () => {
+  it("ends the edition at the ending block, with the footer after it", () => {
     // The finite ending is the product's first commitment. Nothing continues
     // the edition: no next link, no recommendation, no pager, and no archive.
+    // The ending block is the last thing in `main`, directly after the story
+    // list, and nothing follows it inside the landmark.
     renderState(readyState());
 
     const main = screen.getByRole("main");
-    expect(main.lastElementChild).toBe(screen.getByRole("list"));
+    const ending = main.lastElementChild;
+    expect(ending).toHaveClass("edition-ending");
+    expect(ending?.previousElementSibling).toBe(screen.getByRole("list"));
     expect(main.nextElementSibling?.tagName).toBe("FOOTER");
+  });
+
+  it("keeps the progress count out of the shell's live region", () => {
+    // The status region carries short signals about the load, never the
+    // edition and never a count of what the reader has opened: a number that
+    // spoke on every expand would turn opening a story into a scored event.
+    renderState(readyState());
+
+    expect(screen.getByRole("status")).not.toHaveTextContent(/\d+ of \d+/);
+    expect(screen.getByRole("status")).toHaveTextContent(
+      `The edition for ${formatEditionDate(edition.date)} is ready.`,
+    );
+  });
+
+  it("offers the ending and the count only where there is an edition to end", () => {
+    /*
+      Loading, nothing published, and a failed load are all states with no
+      stories on the page. An end-edition control there would end nothing, and
+      "0 of 0 viewed" would be a count of an edition the reader was never
+      shown — a fact about a failure dressed up as progress (section 26).
+
+      Paired with the state that DOES have an edition in it, in the same test,
+      and that half is what makes the three absences mean anything: on their own
+      they are satisfied just as well by an application that offers no ending
+      anywhere, which is the feature deleted rather than correctly withheld.
+    */
+    const withoutAnEdition: EditionLoadState[] = [
+      { status: "loading" },
+      { status: "none", contentSet: "published" },
+      { status: "failed", reason: "network", priorDate: null },
+    ];
+
+    for (const state of withoutAnEdition) {
+      renderState(state);
+      expect(
+        screen.queryByRole("button", { name: /End (today's|this) edition/ }),
+      ).toBeNull();
+      expect(screen.queryByText(/\d+ of \d+ viewed/)).toBeNull();
+      cleanup();
+    }
+
+    renderState(readyState());
+
+    expect(
+      screen.getByRole("button", { name: "End today's edition" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/^\d+ of \d+ viewed$/)).toBeInTheDocument();
   });
 
   it("offers no link to another edition when the edition loaded", () => {

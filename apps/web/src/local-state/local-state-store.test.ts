@@ -173,6 +173,82 @@ describe("remembering an expanded story", () => {
   });
 });
 
+describe("remembering that an edition was ended", () => {
+  it("survives a reload", async () => {
+    const store = await freshStore();
+    store.rememberEnded(EDITION);
+
+    // A second module instance can only see this through the device.
+    const afterReload = await freshStore();
+
+    expect(afterReload.readEditionEnded(EDITION)).toBe(true);
+    expect(afterReload.readEditionEnded("2026-07-20")).toBe(false);
+  });
+
+  it("writes exactly one key, and it is the documented one", async () => {
+    const store = await freshStore();
+    store.rememberEnded(EDITION);
+
+    expect(localStorage.length).toBe(1);
+    expect(localStorage.key(0)).toBe(KEY);
+  });
+
+  it("keeps the viewed sets, because it reads before it writes", async () => {
+    // The two fields live in one document, so a blind write from either side
+    // would drop the other. This is that, from the ending side.
+    const store = await freshStore();
+    store.rememberViewed(EDITION, "story-a");
+
+    store.rememberEnded(EDITION);
+
+    expect(store.readViewedStoryIds(EDITION)).toEqual(new Set(["story-a"]));
+
+    const document = localStateV1Schema.parse(storedDocument());
+    expect(document.viewedByEdition[EDITION]).toEqual(["story-a"]);
+    expect(document.endedEditions).toEqual([EDITION]);
+  });
+
+  it("still holds thirty ended editions after thirty-one were written", async () => {
+    const store = await freshStore();
+    for (const date of editionDates(31)) {
+      store.rememberEnded(date);
+    }
+
+    const document = localStateV1Schema.parse(storedDocument());
+
+    expect(document.endedEditions).toHaveLength(30);
+    expect(store.readEditionEnded("2026-01-01")).toBe(false);
+    expect(store.readEditionEnded("2026-01-31")).toBe(true);
+  });
+
+  const rejectedDates = [
+    { label: "a date that is not on the calendar", date: "2026-02-30" },
+    { label: "a date that is not a date", date: "not-a-date" },
+    { label: "an empty date", date: "" },
+    {
+      label: "a date naming a property of Object.prototype",
+      date: "__proto__",
+    },
+  ];
+
+  it.each(rejectedDates)("refuses $label", async ({ date }) => {
+    // One rejected date inside `endedEditions` would fail the whole document's
+    // next read, which reads as `replaceable`, which the write after that
+    // overwrites — costing the reader every viewed set they had accumulated.
+    const store = await freshStore();
+    store.rememberViewed(EDITION, "story-a");
+    const before = localStorage.getItem(KEY);
+
+    expect(() => store.rememberEnded(date)).not.toThrow();
+
+    expect(localStorage.getItem(KEY)).toBe(before);
+    expect(store.readViewedStoryIds(EDITION)).toEqual(new Set(["story-a"]));
+    expect(warn).toHaveBeenCalledTimes(1);
+    // The reason, and neither value: `afterEach` sweeps this call for dates.
+    expect(warn.mock.calls[0]?.[2]).toEqual({ reason: "unwritable-values" });
+  });
+});
+
 describe("a document written by a newer build", () => {
   it("is neither read from nor written over", async () => {
     const foreign = JSON.stringify({
@@ -190,6 +266,23 @@ describe("a document written by a newer build", () => {
 
     // Byte-identical. An older bundle served from a stale edge, or later from a
     // service worker, must not destroy the state a newer bundle wrote.
+    expect(localStorage.getItem(KEY)).toBe(foreign);
+  });
+
+  it("is neither read from nor written over when an edition is ended", async () => {
+    const foreign = JSON.stringify({
+      schemaVersion: 2,
+      endedEditions: [EDITION],
+      somethingThisBuildHasNeverHeardOf: true,
+    });
+    localStorage.setItem(KEY, foreign);
+
+    const store = await freshStore();
+
+    expect(store.readEditionEnded(EDITION)).toBe(false);
+
+    store.rememberEnded(EDITION);
+
     expect(localStorage.getItem(KEY)).toBe(foreign);
   });
 
