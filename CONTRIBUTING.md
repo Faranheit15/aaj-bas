@@ -85,8 +85,13 @@ bun run check
 ```
 
 That runs, in order: the agent-instruction size guard, the package-manager guard, formatting, lint,
-type checking, tests, and production builds for both applications. CI runs exactly the same command,
-so if it passes locally it should pass there.
+type checking, edition validation, tests, and production builds for both applications. CI runs
+exactly the same command, so if it passes locally it should pass there.
+
+The validation step is `bun run content:validate`. It checks every edition in `content/editions/`
+against `editionSchema` and the editorial rules in `packages/domain`; blocking findings fail the
+suite, warnings are printed and do not. It also has a `--publish` mode, which additionally
+refuses to deploy development sample data.
 
 If formatting is the only complaint, `bun run format` rewrites the files for you.
 

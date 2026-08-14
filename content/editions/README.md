@@ -10,6 +10,14 @@ This content exists to exercise `editionSchema` in `packages/schemas` and, later
 
 - `2026-07-21.json` — the sample edition authored for AB-102: ten stories, at least six publishers, and one instance of each state the contract can express.
 
-It is a `corrected` edition at version 2 because that is the only shape the contract permits a correction note to appear in: `editionSchema` requires an edition carrying corrections to have status `corrected` and a version of at least 2. Running `git log -p content/editions/2026-07-21.json` shows the version-1 text the correction replaced, which is the archive section 46 asks for.
+It is a `corrected` edition at version 2 because that is the only shape the contract permits a correction note to appear in: `editionSchema` requires an edition carrying corrections to have status `corrected` and a version of at least 2. The figure the correction replaced is preserved in the correction note's own `summary` field, which is the archive section 46 asks for: it is part of the published edition, so it reaches every reader and survives any merge strategy. Git history is not that archive here — this edition arrived in a squash merge, which collapses per-commit history, so the version-1 text was never a commit on `develop`.
 
-`packages/test-fixtures/src/sample-edition.test.ts` validates this file. AB-103 will replace those checks with `bun run content:validate` across every edition here.
+## Validation
+
+`bun run content:validate` checks every file in this directory against `editionSchema` and the editorial rules in `packages/domain`. It is part of `bun run check`, so a broken edition fails the merge-blocking suite.
+
+This edition is deliberately not publishable. Every source host is a reserved `.invalid` domain, which the `url/sample-data-hosts` rule reads as development sample data: an ordinary run reports it as a warning and exits 0, and `bun run content:validate --publish` treats it as fatal.
+
+The publish profile is not wired into CI yet, because it would refuse the only edition that exists and so fail every deployment of applications that do not read this directory at all. It belongs in the slice that first copies `content/` into a build, which is the point at which sample data could actually reach a reader.
+
+`packages/test-fixtures/src/sample-edition.test.ts` still parses this file against the contract and asserts that no source could resolve. The structural, diversity, and correction assertions it used to carry now live in `bun run content:validate`.

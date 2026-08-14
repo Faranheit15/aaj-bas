@@ -17,14 +17,14 @@ apps/
   landing/        Public positioning page
   web/            Reader application shell
 packages/
-  domain/         Future pure product behavior
+  domain/         Pure product behavior; the edition validation rule engine
   logger/         Developer console logging
   schemas/        Public Zod content contracts for published editions
   ui/             Small reusable presentation primitives and the shared colour palette
   test-fixtures/  Deterministic test-only editions and data
 content/          Versioned editions, drafts, and corrections
 prompts/          Future versioned editorial prompts
-scripts/          Repository check scripts; future content automation
+scripts/          Repository check scripts and edition validation; future content automation
 docs/             Product, editorial, runbook, and architecture documentation
 docs/workflows/   Shared procedures both agent tools follow
 .claude/          Claude Code permissions, hooks, and repository commands
@@ -68,18 +68,21 @@ bun run check:pm
 bun run format:check
 bun run lint
 bun run typecheck
+bun run content:validate
 bun run test
 bun run build
 bun run check
 ```
 
+`bun run content:validate` checks every edition in `content/editions/` against `editionSchema` and the editorial rules in `packages/domain` — structural, diversity, duplicate, length, URL, and correction — exiting non-zero on a blocking finding and printing advisory warnings otherwise; it takes explicit paths instead of the default directory, `--json` for a machine-readable report, and `--publish`, which additionally treats a not-publishable edition as fatal.
+
 `bun run format` rewrites files rather than checking them, so it is a fix-up command rather than a validation step.
 
-`bun run check` runs every merge-blocking formatting, linting, type-checking, test, and production-build check.
+`bun run check` runs every merge-blocking formatting, linting, type-checking, content-validation, test, and production-build check.
 
 ## Deployment
 
-Pull requests and pushes to `develop` run the full CI suite. A successful push to `develop` deploys `apps/web` and then `apps/landing` to Cloudflare Pages; the landing CTA is built with the reader's stable production URL, so rolling the reader back changes what the CTA serves. The one-time Cloudflare project and GitHub secret setup is documented in the [Cloudflare Pages deployment runbook](docs/runbooks/cloudflare-pages-deployment.md).
+Pull requests and pushes to `develop` run the full CI suite. Because both deploy jobs depend on the `check` job, a blocking validation finding stops a deployment before it starts. A successful push to `develop` deploys `apps/web` and then `apps/landing` to Cloudflare Pages; the landing CTA is built with the reader's stable production URL, so rolling the reader back changes what the CTA serves. The one-time Cloudflare project and GitHub secret setup is documented in the [Cloudflare Pages deployment runbook](docs/runbooks/cloudflare-pages-deployment.md).
 
 `develop` is protected. Reaching it takes a pull request with a passing `check` job and an approval from a code owner; the maintainer keeps an administrative bypass, because GitHub does not allow approving your own pull request. The ruleset is version-controlled in [`docs/runbooks/develop-ruleset.json`](docs/runbooks/develop-ruleset.json) and applied as described in the [contributions and branch protection runbook](docs/runbooks/contributions-and-branch-protection.md).
 
@@ -122,4 +125,4 @@ Change rules in `AGENTS.md`; do not restate them in tool-specific files.
 
 ## Current scope
 
-The edition content contract is defined (`packages/schemas`, ADR-0005). The repository deliberately does not yet include a news UI, content fetching, RSS ingestion, LLM integration, local reading state, or PWA support, and no edition has been authored. Deployment is limited to static application shells.
+The edition content contract is defined (`packages/schemas`, ADR-0005) and enforced by `bun run content:validate` (`packages/domain`). The repository deliberately does not yet include a news UI, content fetching, RSS ingestion, LLM integration, local reading state, or PWA support. No real edition has been authored: `content/editions/` holds development sample data only, which the publish profile keeps out of production. Deployment is limited to static application shells.
