@@ -455,7 +455,9 @@ The tree below shows the directories and instruction files that exist today. Wor
 ├── prompts/
 ├── scripts/
 │   ├── check-agents-md-size.sh
-│   └── check-package-manager.sh
+│   ├── check-package-manager.sh
+│   ├── stage-content.ts          # stages publishable editions into the reader build
+│   └── validate-edition.ts       # edition validation against the schema and editorial rules
 ├── docs/
 │   ├── PRD.md
 │   ├── BACKLOG.md
@@ -475,9 +477,9 @@ separate `deploy.yml`; a second deployment workflow would contradict an accepted
 The following are not in the repository yet. Create each only in the backlog item that needs it:
 
 - `content/sources.yml`;
-- content automation scripts in `scripts/` (`fetch-sources.ts`, `normalize-items.ts`,
-  `cluster-stories.ts`, `rank-candidates.ts`, `generate-draft.ts`, `validate-edition.ts`,
-  `publish-edition.ts`);
+- the remaining content automation scripts in `scripts/` (`fetch-sources.ts`,
+  `normalize-items.ts`, `cluster-stories.ts`, `rank-candidates.ts`, `generate-draft.ts`,
+  `publish-edition.ts`) — `validate-edition.ts` and `stage-content.ts` already exist;
 - prompt files in `prompts/` (`summarize-v1.md`, `classify-v1.md`);
 - a scheduled draft-edition workflow, only when generated-content automation is unlocked;
 - `apps/feedback-worker/` — a runtime backend. It requires both an approved ADR and an
@@ -492,6 +494,14 @@ The static application reads versioned JSON:
 /content/latest.json
 /content/editions/YYYY-MM-DD.json
 ```
+
+`/content/latest.json` is a pointer, not a copy of an edition. Its shape is defined by
+`editionIndexSchema` in `packages/schemas`: a `schemaVersion`, the `contentSet` the build was made
+from, the `latest` edition date or `null` when nothing was publishable, and `editions`, every staged
+date newest first. The reader loads it, then loads the dated edition it names, and
+validates both against the schemas before use. Both paths are produced by `bun run content:stage`,
+which copies editions out of `content/editions/` byte for byte and writes the pointer from what it
+actually staged; the staged directory is a build artifact and is not committed.
 
 No authenticated user API is required.
 

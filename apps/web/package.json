@@ -4,18 +4,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "dev": "bun ../../scripts/stage-content.ts --include-sample-data && vite",
+    "build": "bun ../../scripts/stage-content.ts && tsc --noEmit && vite build",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@aaj-bas/logger": "workspace:*",
+    "@aaj-bas/schemas": "workspace:*",
     "@aaj-bas/ui": "workspace:*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@aaj-bas/test-fixtures": "workspace:*",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.0.0",
     "@types/react": "^19.0.0",

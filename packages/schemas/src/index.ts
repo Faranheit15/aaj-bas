@@ -16,6 +16,12 @@ export {
   editionSchema,
   editionStatusSchema,
 } from "./edition";
+export {
+  CONTENT_SETS,
+  contentSetSchema,
+  editionIndexSchema,
+} from "./edition-index";
+export type { ContentSet, EditionIndex } from "./edition-index";
 export type { Edition, EditionStatus } from "./edition";
 
 export { correctionNoteSchema } from "./correction-note";

@@ -54,14 +54,41 @@ jobs:
       # Deployment already depends on validation: this job needs `check`, and
       # `bun run check` runs `bun run content:validate`, so a blocking finding in
       # any edition stops the deploy before it starts.
-      #
-      # `--publish` is deliberately NOT run here yet. It additionally refuses an
-      # edition that is development sample data, and the only edition in the
-      # repository today is exactly that, so wiring it now would red-line every
-      # deploy of applications that do not read content/ at all. It belongs in
-      # the slice that first copies content/ into a build (AB-201), which is the
-      # point at which sample data could actually reach a reader.
       - run: bun run --filter @aaj-bas/web build
+      # The build stages only publishable editions, so this re-checks the bytes
+      # that are about to be uploaded rather than the archive they came from. It
+      # is the gate AB-103 built and left unwired until content reached a build:
+      # a defect in the staging script cannot publish invented news past it.
+      #
+      # Zero staged editions is a legitimate state, not a failure. No edition has
+      # been published yet, and the reader renders its no-edition state, so the
+      # step reports that and passes. nullglob is load-bearing: without it bash
+      # passes the literal pattern and the validator exits 2 on a usage error.
+      - name: Refuse to deploy an edition that is not publishable
+        shell: bash
+        run: |
+          shopt -s nullglob
+          staged=(apps/web/dist/content/editions/*.json)
+          if [ ${#staged[@]} -eq 0 ]; then
+            echo "OK: no publishable edition; the reader deploys its no-edition state."
+            exit 0
+          fi
+          bun run content:validate --publish "${staged[@]}"
+      # The editions are only half of what is deployed. Every reader loads
+      # `/content/latest.json` before anything else, so a corrupt pointer is not
+      # one unreadable edition but the whole site answering "We could not
+      # display this edition." on every route -- and until now nothing looked at
+      # it after the build wrote it.
+      #
+      # It is checked here rather than added to the glob above, because
+      # `content:validate` validates editions: handed the index, it would report
+      # a perfectly good pointer as a malformed edition. This asks the published
+      # index contract instead, which is the same contract the reader applies.
+      #
+      # An index naming no edition passes, for the same reason the step above
+      # passes with none staged: that is a legitimate build, not a failure.
+      - name: Refuse to deploy a pointer the reader cannot read
+        run: bun run content:stage --verify-index apps/web/dist/content/latest.json
       - id: deploy
         uses: cloudflare/wrangler-action@v4
         with:
@@ -94,16 +121,8 @@ jobs:
         with:
           bun-version: 1.3.14
       - run: bun ci
-      # Deployment already depends on validation: this job needs `check`, and
-      # `bun run check` runs `bun run content:validate`, so a blocking finding in
-      # any edition stops the deploy before it starts.
-      #
-      # `--publish` is deliberately NOT run here yet. It additionally refuses an
-      # edition that is development sample data, and the only edition in the
-      # repository today is exactly that, so wiring it now would red-line every
-      # deploy of applications that do not read content/ at all. It belongs in
-      # the slice that first copies content/ into a build (AB-201), which is the
-      # point at which sample data could actually reach a reader.
+      # The landing page ships no editions, so the publish gate lives only in
+      # deploy-web. This job still depends on `check`, which validates content.
       - run: bun run --filter @aaj-bas/landing build
         env:
           VITE_APP_URL: ${{ env.READER_PRODUCTION_URL }}

@@ -18,6 +18,6 @@ It is a `corrected` edition at version 2 because that is the only shape the cont
 
 This edition is deliberately not publishable. Every source host is a reserved `.invalid` domain, which the `url/sample-data-hosts` rule reads as development sample data: an ordinary run reports it as a warning and exits 0, and `bun run content:validate --publish` treats it as fatal.
 
-The publish profile is not wired into CI yet, because it would refuse the only edition that exists and so fail every deployment of applications that do not read this directory at all. It belongs in the slice that first copies `content/` into a build, which is the point at which sample data could actually reach a reader.
+The publish profile now gates deployment. `bun run content:stage`, which the reader's build runs, stages only publishable editions into `apps/web/public/content/`, and the `deploy-web` job re-runs `bun run content:validate --publish` over those staged bytes before uploading them. Both refuse this edition, so it is visible in development — `bun run dev:web` stages it with `--include-sample-data` — and never in production. A production build therefore stages zero editions today and the deployed reader renders its no-edition state, which is the correct outcome until a real edition is authored.
 
 `packages/test-fixtures/src/sample-edition.test.ts` still parses this file against the contract and asserts that no source could resolve. The structural, diversity, and correction assertions it used to carry now live in `bun run content:validate`.

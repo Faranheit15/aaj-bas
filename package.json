@@ -18,6 +18,7 @@
     "lint": "bunx @biomejs/biome lint .",
     "typecheck": "bun run --filter @aaj-bas/* typecheck && bunx tsc --noEmit -p scripts/tsconfig.json",
     "content:validate": "bun scripts/validate-edition.ts",
+    "content:stage": "bun scripts/stage-content.ts",
     "test": "bun run --filter @aaj-bas/* test",
     "build": "bun run --filter @aaj-bas/landing build && bun run --filter @aaj-bas/web build",
     "check": "bun run check:agents && bun run check:pm && bun run format:check && bun run lint && bun run typecheck && bun run content:validate && bun run test && bun run build"

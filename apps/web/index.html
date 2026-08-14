@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f4ef" />
     <title>Aaj, Bas.</title>
+    <!-- With scripting off the placeholder below is never replaced, so leaving
+         it visible would say the edition is loading directly above the notice
+         explaining that it cannot. Exactly one of the two is shown. -->
+    <noscript>
+      <style>
+        #root {
+          display: none;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- One line, and it must stay one line. React replaces the container's
+         children on mount, so anything richer here would be a second copy of
+         the header and footer, drifting from the shell that renders them. -->
+    <div id="root"><p>Loading the edition.</p></div>
+    <noscript>
+      <p>
+        The reader needs JavaScript to show an edition. The published content is
+        plain JSON and can be read without it, starting at
+        <a href="/content/latest.json">/content/latest.json</a>.
+      </p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 node_modules/
 dist/
 coverage/
+apps/web/public/content/
 .vite/
 .env
 .env.*

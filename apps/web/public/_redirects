@@ -1,0 +1,11 @@
+# Client-side routes, served the application shell so a deep link and a reload
+# both reach the reader.
+#
+# Never replace these with `/* /index.html 200`. Cloudflare Pages applies a
+# _redirects rule "regardless of whether or not an asset matches the incoming
+# request", so a catch-all would answer /content/latest.json, every
+# /content/editions/*.json, and every hashed asset with the HTML shell — the
+# reader would then fail to parse its own edition as JSON. Add a line per route
+# instead.
+/edition /index.html 200
+/edition/* /index.html 200
