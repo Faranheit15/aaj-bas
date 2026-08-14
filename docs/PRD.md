@@ -515,6 +515,8 @@ GET  /v1/health
 
 The feedback endpoint accepts no account identifier. Rate limits and abuse controls are applied at the edge.
 
+None of it is built, and section 7 of `AGENTS.md` rules out standing up a backend to serve it. Until it exists, section 6.2's "Report an issue" opens a pre-filled issue on the public GitHub repository. The URL is composed on the reader's device and carries the edition date, the story id, and the four categories; it carries nothing about the reader, and nothing is sent unless they choose to submit. The trade is stated plainly rather than hidden: it needs a GitHub account, and a report is public under the reader's own name, so the control says where it goes. Replacing it with the endpoint above is a product decision, not a refactor.
+
 ---
 
 ## 13. Content contracts
