@@ -14,6 +14,8 @@ import {
   formatEditionDate,
   formatEditionInstant,
 } from "../edition/editorial-day";
+import { localStateV1Schema } from "../local-state/local-state";
+import { LOCAL_STATE_KEY } from "../local-state/local-state-store";
 import { EditionView } from "./EditionView";
 import type { ViewedStoriesStore } from "./viewed-stories";
 import { useViewedStories } from "./viewed-stories";
@@ -46,6 +48,9 @@ vi.mock("./viewed-stories", async (importOriginal) => {
 afterEach(() => {
   cleanup();
   vi.mocked(useViewedStories).mockClear();
+  // jsdom keeps one storage area for the whole file, so a document written by
+  // one test would otherwise be on the device when the next one renders.
+  localStorage.clear();
 });
 
 /**
@@ -119,9 +124,38 @@ function viewedNow(): ViewedStoriesStore {
   return last.value;
 }
 
-/** Viewed story ids in the order they were marked. */
+/** Viewed story ids, as the store holds them. */
 function viewedIds(): string[] {
   return [...viewedNow().viewed.storyIds];
+}
+
+/**
+ * Viewed story ids as of the component's FIRST render.
+ *
+ * `render` is wrapped in `act`, so every assertion made after it has already
+ * had the effects flushed: `viewedIds()` cannot distinguish a store that was
+ * correct immediately from one that flashed empty and then settled. Reading
+ * `results[0]` is reading the value `EditionView` actually rendered with.
+ */
+function viewedIdsOnFirstRender(): string[] {
+  const { results } = vi.mocked(useViewedStories).mock;
+  const first = present(results[0], "the store's first render");
+  if (first.type !== "return") {
+    throw new Error("the viewed store threw instead of returning");
+  }
+  return [...first.value.viewed.storyIds];
+}
+
+/** What the device holds for one edition, read back through the real schema. */
+function storedIdsFor(editionDate: string): readonly string[] {
+  const raw = localStorage.getItem(LOCAL_STATE_KEY);
+  if (raw === null) {
+    return [];
+  }
+
+  const document = localStateV1Schema.parse(JSON.parse(raw));
+
+  return document.viewedByEdition[editionDate] ?? [];
 }
 
 describe("a rendered edition", () => {
@@ -319,14 +353,16 @@ describe("expanding a story", () => {
       "false",
     );
   });
+});
 
-  it("persists nothing to the device", () => {
+describe("what an expanded card leaves on the device", () => {
+  it("stores exactly the expanded stories, under this edition's date", () => {
     /*
-      Viewed state is in memory and nowhere else until AB-301 ships the
-      versioned, validated, migratable local-state adapter section 17
-      requires. Writing an unversioned key now would put a legacy format on
-      readers' devices for AB-301 to migrate away from. This assertion is what
-      makes that a fact rather than an intention.
+      The positive counterpart of the assertion this file used to carry. Until
+      AB-301 landed, "persists nothing to the device" was the executable
+      statement that the durable half had not been built; replacing it with
+      "now, and exactly this" is the seam closing correctly. `EditionView` is
+      unchanged either way — the hook's signature did not move.
     */
     render(<EditionView edition={edition} freshness="current" />);
 
@@ -334,11 +370,85 @@ describe("expanding a story", () => {
     fireEvent.click(present(toggles[0], "the first card's toggle"));
     fireEvent.click(present(toggles[1], "the second card's toggle"));
 
-    expect(localStorage.length).toBe(0);
-    // Both, and for the same reason: `sessionStorage` is no less a legacy
-    // format for AB-301 to migrate away from just because it empties when the
-    // tab closes.
+    expect(storedIdsFor(edition.date)).toEqual(
+      [coreStoryAt(0).id, coreStoryAt(1).id].sort(),
+    );
+    // One key, the documented one, and nothing else anywhere: the edition
+    // date, the ordering, and the reader are not written down.
+    expect(localStorage.length).toBe(1);
     expect(sessionStorage.length).toBe(0);
+  });
+
+  it("restores the viewed set on the first render after a remount", () => {
+    /*
+      A reload proxy, and the limitation is worth stating: unmounting and
+      rendering again destroys the React tree but keeps the same JavaScript
+      realm, so it proves the state came back off the device rather than out of
+      a closure — but it is not a browser reload, which would also re-evaluate
+      the bundle. A real reload needs Playwright, which section 5 lists as not
+      installed and requiring an ADR to add.
+
+      Asserted on the remounted tree's FIRST render, which is the version of
+      that claim that can fail. `render` is wrapped in `act`, so an
+      implementation that loaded in an effect has already settled by the time
+      any assertion runs, and reading the latest value cannot see the empty set
+      it showed on the way — the one AB-203's counter would render before
+      correcting itself.
+    */
+    const first = render(<EditionView edition={edition} freshness="current" />);
+    fireEvent.click(
+      present(screen.getAllByRole("button")[0], "the first card's toggle"),
+    );
+    first.unmount();
+
+    // So that `results[0]` is the remount's first render rather than the
+    // original mount's, which was legitimately empty.
+    vi.mocked(useViewedStories).mockClear();
+    render(<EditionView edition={edition} freshness="current" />);
+
+    expect(viewedIdsOnFirstRender()).toEqual([coreStoryAt(0).id]);
+    expect(viewedIds()).toEqual([coreStoryAt(0).id]);
+    // And the cards themselves start collapsed: what survives is the record of
+    // what was opened, not the shape of the page the reader left behind.
+    for (const toggle of screen.getAllByRole("button")) {
+      expect(toggle).toHaveAttribute("aria-expanded", "false");
+    }
+  });
+
+  it("expands normally, and says nothing to the reader, when the write is refused", () => {
+    // Quota exhaustion, or an origin that refuses writes. The reader was never
+    // promised that the edition remembers anything, so the failure degrades to
+    // the fresh-device experience rather than to a message on a page whose job
+    // is today's news.
+    const setItem = vi
+      .spyOn(Storage.prototype, "setItem")
+      .mockImplementation(() => {
+        throw new DOMException("quota exceeded", "QuotaExceededError");
+      });
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => undefined);
+
+    try {
+      const { container } = render(
+        <EditionView edition={edition} freshness="current" />,
+      );
+      const toggle = present(
+        screen.getAllByRole("button")[0],
+        "the first card's toggle",
+      );
+      fireEvent.click(toggle);
+
+      expect(toggle).toHaveAttribute("aria-expanded", "true");
+      expect(viewedIds()).toEqual([coreStoryAt(0).id]);
+      // The whole edition is still on the page, and nothing on it mentions
+      // storage. Counted by headline rather than by list item: an expanded
+      // card contributes its own source list, so list items are no longer the
+      // count of stories once one is open.
+      expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(8);
+      expect(container).not.toHaveTextContent(/storage|saved|offline/i);
+    } finally {
+      setItem.mockRestore();
+      warn.mockRestore();
+    }
   });
 });
 
