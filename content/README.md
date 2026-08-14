@@ -11,6 +11,11 @@ which applies the editorial rules in `packages/domain` — structural, diversity
 correction. That command is part of `bun run check`, so a broken edition fails the merge-blocking suite, and
 because both deploy jobs depend on that suite, a blocking finding also stops a deployment.
 
+A build stages editions from here into the reader: `bun run content:stage` copies only the publishable ones
+into `apps/web/public/content/`, and the `deploy-web` job re-checks those staged bytes with
+`bun run content:validate --publish` before upload. The publish profile is wired into CI, not pending.
+
 `packages/test-fixtures` holds the minimal valid and invalid editions the contract is tested against; the
 first realistic edition is AB-102. The only edition authored so far is development sample data, described in
-`editions/README.md`, and the publish profile is what keeps it out of production.
+`editions/README.md`. It is not publishable, so it is visible in development and never in production, and a
+production build stages no edition at all until a real one is authored.

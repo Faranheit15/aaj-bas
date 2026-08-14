@@ -58,6 +58,10 @@ bun run dev:web       # the reader
 bun run dev:landing   # the public landing page
 ```
 
+`dev:web` stages content into `apps/web/public/content/` before starting Vite, sample data included, so
+the reader has an edition to render locally. That directory is a generated build artifact and is
+git-ignored — edit editions in `content/editions/`, never the staged copy.
+
 ## Making a change
 
 **One issue, one vertical slice, one pull request.** This is the unit of work (`AGENTS.md` section 33).
@@ -91,7 +95,8 @@ exactly the same command, so if it passes locally it should pass there.
 The validation step is `bun run content:validate`. It checks every edition in `content/editions/`
 against `editionSchema` and the editorial rules in `packages/domain`; blocking findings fail the
 suite, warnings are printed and do not. It also has a `--publish` mode, which additionally
-refuses to deploy development sample data.
+refuses development sample data; CI runs that mode over the staged editions before deploying the
+reader, so sample data cannot reach production.
 
 If formatting is the only complaint, `bun run format` rewrites the files for you.
 

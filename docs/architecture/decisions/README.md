@@ -7,3 +7,4 @@ ADRs document material architecture, dependency, security, privacy, and product-
 - [ADR-0003: Shared logging package](0003-logging-package.md)
 - [ADR-0004: Reviewed pull requests on develop](0004-reviewed-pull-requests-on-develop.md)
 - [ADR-0005: Edition content contract](0005-edition-content-contract.md) — the first public data contract; closes four gaps PRD section 13 left, and fixes the topic vocabulary written into every published edition.
+- [ADR-0006: Published content in the reader build](0006-published-content-in-the-reader-build.md) — extends ADR-0002 and ADR-0005; the reader deployment now carries content, `/content/latest.json` becomes a second published artifact, and the AB-103 publish gate is what keeps development sample data out of production.

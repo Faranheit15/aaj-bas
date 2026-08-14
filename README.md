@@ -8,23 +8,23 @@ The product is deliberately not a feed. A completed edition is the intended outc
 
 This repository is a Bun workspace monorepo. It contains two static React + Vite applications, small shared TypeScript packages, versioned content directories, and GitHub Actions CI/CD. Cloudflare Pages hosts the applications through direct uploads from GitHub Actions.
 
-There is intentionally no runtime backend, database, authentication, or analytics. Published content will be versioned in Git and served as static files.
+There is intentionally no runtime backend, database, authentication, or analytics. Published content is versioned in Git and served as static files: `bun run content:stage` copies the editions a build may carry into `apps/web/public/content/`, and the reader fetches them from there.
 
 ## Repository structure
 
 ```text
 apps/
   landing/        Public positioning page
-  web/            Reader application shell
+  web/            Reader application: today's edition and the dated archive
 packages/
   domain/         Pure product behavior; the edition validation rule engine
   logger/         Developer console logging
   schemas/        Public Zod content contracts for published editions
   ui/             Small reusable presentation primitives and the shared colour palette
   test-fixtures/  Deterministic test-only editions and data
-content/          Versioned editions, drafts, and corrections
+content/          Versioned editions, drafts, and corrections; a build stages these into the reader
 prompts/          Future versioned editorial prompts
-scripts/          Repository check scripts and edition validation; future content automation
+scripts/          Repository check scripts, edition validation, and content staging; future content automation
 docs/             Product, editorial, runbook, and architecture documentation
 docs/workflows/   Shared procedures both agent tools follow
 .claude/          Claude Code permissions, hooks, and repository commands
@@ -52,11 +52,13 @@ Run the public landing page:
 bun run dev:landing
 ```
 
-Run the reader application shell:
+Run the reader application:
 
 ```bash
 bun run dev:web
 ```
+
+That stages content before starting Vite, with sample data included, so the reader renders the sample edition in `content/editions/` locally. A production build stages published editions only — see [Deployment](#deployment). `apps/web/public/content/` is a build artifact and is git-ignored; it is rebuilt on every `dev` and `build`.
 
 Set `VITE_APP_URL` in a local `.env` file at the repository root when the landing-page CTA should point to a reader deployment. `apps/landing/vite.config.ts` sets `envDir` to the repository root, so the landing build reads that file rather than one inside `apps/landing/`. See `.env.example`; no production URL is assumed in this repository.
 
@@ -74,7 +76,9 @@ bun run build
 bun run check
 ```
 
-`bun run content:validate` checks every edition in `content/editions/` against `editionSchema` and the editorial rules in `packages/domain` — structural, diversity, duplicate, length, URL, and correction — exiting non-zero on a blocking finding and printing advisory warnings otherwise; it takes explicit paths instead of the default directory, `--json` for a machine-readable report, and `--publish`, which additionally treats a not-publishable edition as fatal.
+`bun run content:stage` is deliberately not in that list. It writes a build artifact rather than checking anything, and `bun run build` invokes it, so running it separately verifies nothing the suite does not already cover. Run it directly only to inspect what a build would stage.
+
+`bun run content:validate` checks every edition in `content/editions/` against `editionSchema` and the editorial rules in `packages/domain` — structural, diversity, duplicate, length, URL, and correction — exiting non-zero on a blocking finding and printing advisory warnings otherwise; it takes explicit paths instead of the default directory, `--json` for a machine-readable report, and `--publish`, which additionally treats a not-publishable edition as fatal. CI runs the `--publish` mode over the staged bytes before uploading the reader.
 
 `bun run format` rewrites files rather than checking them, so it is a fix-up command rather than a validation step.
 
@@ -83,6 +87,10 @@ bun run check
 ## Deployment
 
 Pull requests and pushes to `develop` run the full CI suite. Because both deploy jobs depend on the `check` job, a blocking validation finding stops a deployment before it starts. A successful push to `develop` deploys `apps/web` and then `apps/landing` to Cloudflare Pages; the landing CTA is built with the reader's stable production URL, so rolling the reader back changes what the CTA serves. The one-time Cloudflare project and GitHub secret setup is documented in the [Cloudflare Pages deployment runbook](docs/runbooks/cloudflare-pages-deployment.md).
+
+Editions reach a reader through a publish gate. The reader's build stages only publishable editions, and the `deploy-web` job then re-runs `bun run content:validate --publish` over the staged bytes — the files about to be uploaded, not the archive they came from — so a defect in the staging script cannot publish content the validator would refuse.
+
+**No edition is publishable today.** The only edition authored so far is development sample data, whose every source host is a reserved `.invalid` domain, so a production build stages zero editions and the deployed reader shows its no-edition state. That is the intended outcome, not a failure: nothing invented reaches a reader, and the state disappears on its own when the first real edition is published.
 
 `develop` is protected. Reaching it takes a pull request with a passing `check` job and an approval from a code owner; the maintainer keeps an administrative bypass, because GitHub does not allow approving your own pull request. The ruleset is version-controlled in [`docs/runbooks/develop-ruleset.json`](docs/runbooks/develop-ruleset.json) and applied as described in the [contributions and branch protection runbook](docs/runbooks/contributions-and-branch-protection.md).
 
@@ -125,4 +133,4 @@ Change rules in `AGENTS.md`; do not restate them in tool-specific files.
 
 ## Current scope
 
-The edition content contract is defined (`packages/schemas`, ADR-0005) and enforced by `bun run content:validate` (`packages/domain`). The repository deliberately does not yet include a news UI, content fetching, RSS ingestion, LLM integration, local reading state, or PWA support. No real edition has been authored: `content/editions/` holds development sample data only, which the publish profile keeps out of production. Deployment is limited to static application shells.
+The edition content contract is defined (`packages/schemas`, ADR-0005) and enforced by `bun run content:validate` (`packages/domain`). The reader renders an edition at `/` and a dated one at `/edition/YYYY-MM-DD`, reading the staged JSON a build produces. The repository deliberately does not yet include content fetching, RSS ingestion, LLM integration, local reading state, or PWA support. No real edition has been authored: `content/editions/` holds development sample data only, which the publish profile keeps out of production, so the deployed reader currently shows its no-edition state.
