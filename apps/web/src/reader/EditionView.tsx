@@ -6,9 +6,10 @@
  * handed the answer as `freshness` so that every freshness case can be
  * rendered in a test without moving a clock.
  *
- * The one piece of state it holds is which stories the reader has expanded.
- * That lives here rather than in the cards because it is edition-wide: AB-203's
- * ending block, which goes below this list, is the place it becomes visible.
+ * The two pieces of state it holds are which stories the reader has expanded
+ * and whether they have ended the edition. Both live here rather than in the
+ * cards because both are edition-wide: the counter above the list and the
+ * ending block below it are where they become visible.
  */
 
 import type { Edition } from "@aaj-bas/schemas";
@@ -20,6 +21,9 @@ import {
   formatEditionInstant,
 } from "../edition/editorial-day";
 import { storySources } from "../edition/story-sources";
+import { EditionEnding } from "./EditionEnding";
+import { useEditionEnded } from "./edition-ended";
+import { editionProgress, progressText } from "./edition-progress";
 import { EDITION_HEADING_ID } from "./ReaderShell";
 import { StoryCard } from "./StoryCard";
 import { useViewedStories } from "./viewed-stories";
@@ -41,15 +45,18 @@ export function EditionView({
     about where reading state is kept, which section 15 puts behind a narrow
     boundary; a card that can only say "this one was expanded" cannot grow one.
 
-    Nothing on screen changes when a story is marked. That is deliberate, not
-    an unfinished wire-up: PRD section 6.1 lists no viewed marker on a card, and
-    a per-card "Viewed" badge would imply "unviewed" on every other card, which
-    turns a finite edition into a checklist to clear — the accumulating
-    obligation section 3.5 rules out. AB-203's "6 of 10 viewed" summary, shown
-    once at the end where the reader is already leaving, is where this surfaces.
-    Until then the store is written and deliberately not read.
+    Nothing on the card itself changes when a story is marked. That is
+    deliberate: PRD section 6.1 lists no viewed marker on a card, and a per-card
+    "Viewed" badge would imply "unviewed" on every other card, which turns a
+    finite edition into a checklist to clear — the accumulating obligation
+    section 3.5 rules out. What the set feeds instead is the one summary line
+    below, which counts the edition rather than scoring the cards.
   */
-  const viewed = useViewedStories(edition.date);
+  const { viewed, markViewed } = useViewedStories(edition.date);
+
+  // Ending is a fact about this edition alone, keyed by its date, so it says
+  // nothing about yesterday's and accumulates into nothing.
+  const ended = useEditionEnded(edition.date);
 
   /*
     `coreStories`, not `edition.stories`. The file holds the eight shared core
@@ -65,6 +72,21 @@ export function EditionView({
     larger pool would start numbering the eighth card "8 of 14".
   */
   const stories = coreStories(edition);
+
+  /*
+    One binding, read by the cards' ordinals and by the counter alike. The
+    denominator is a promise about what is on the page, and two independently
+    derived denominators are two chances to make different promises: "3 of 10
+    viewed" over a list whose last card says "8 of 8" tells the reader two
+    stories exist somewhere they cannot reach.
+  */
+  const total = stories.length;
+
+  // Counted against the stories actually rendered, not against the size of the
+  // stored set: from AB-204 the device can hold ids for pool stories this
+  // render does not include, and `.size` would print a number larger than the
+  // list.
+  const progress = editionProgress(stories, viewed.storyIds);
 
   // Compared as instants, not as strings: two timestamps in different offsets
   // can be the same moment while sorting in the wrong order as text.
@@ -100,6 +122,22 @@ export function EditionView({
         ) : null}
       </p>
 
+      {/*
+        Rendered from zero, before the reader has expanded anything. A counter
+        that appeared on the first expand would be a thing the reader made
+        happen — a micro-reward, and a number whose first appearance reads as a
+        score. Present from the start it reads as what it is: the size of the
+        edition, stated once, which is also the reassurance that this list ends.
+
+        A sentence, never a bar. There is no percentage, no `role="progressbar"`
+        and no `aria-valuenow` anywhere: a bar is a thing to fill, and a filling
+        bar is a reward waiting to be collected (section 3.2). It is also not in
+        a live region — the count changing under a reader who just opened a
+        story is not news, and announcing it would turn expanding a card into a
+        scored event.
+      */}
+      <p className="edition-progress">{progressText(progress)}</p>
+
       <ol className="edition-stories">
         {stories.map((story, index) => (
           <li className="edition-story" key={story.id}>
@@ -113,20 +151,27 @@ export function EditionView({
                 (note) => note.storyId === story.id,
               )}
               position={index + 1}
-              total={stories.length}
+              total={total}
               editionDate={edition.date}
-              onExpand={viewed.markViewed}
+              onExpand={markViewed}
             />
           </li>
         ))}
       </ol>
 
       {/*
-        AB-203's ending block goes here, after the list and inside `main`: the
-        completion message and the end-edition control. Nothing else may go
-        here. Anything that continues the edition — more stories, related
+        The end of the edition, after the list and inside `main`. It is the last
+        thing in the document flow before the shell's footer, and it stays that
+        way: anything that continues the edition — more stories, related
         reading, a next-edition link — is ruled out by AGENTS.md section 3.1.
+        `EditionEnding` names the full list of what may never follow it.
       */}
+      <EditionEnding
+        freshness={freshness}
+        progress={progress}
+        hasEnded={ended.hasEnded}
+        onEnd={ended.endEdition}
+      />
     </>
   );
 }

@@ -1,12 +1,13 @@
 /**
  * The device-backed store: one key, a read-modify-write, and the logging.
  *
- * This is the seam the reader hook sits on. Everything above it asks two
- * questions — which stories were already expanded in this edition, and please
- * remember this one — and nothing above it knows that localStorage exists
- * (section 15). The rules for what a stored document means are in
- * `local-state.ts`; the browser access is in `device-storage.ts`; what is left
- * here is the key, the order of operations, and what a developer gets told.
+ * This is the seam the reader hooks sit on. Everything above it asks four
+ * questions — which stories were already expanded in this edition, please
+ * remember this one, was this edition ended, please remember that it was — and
+ * nothing above it knows that localStorage exists (section 15). The rules for
+ * what a stored document means are in `local-state.ts`; the browser access is
+ * in `device-storage.ts`; what is left here is the key, the order of
+ * operations, and what a developer gets told.
  */
 
 import { createLogger } from "@aaj-bas/logger";
@@ -14,9 +15,11 @@ import { editionDateSchema, identifierSchema } from "@aaj-bas/schemas";
 import { readRaw, writeRaw } from "./device-storage";
 import {
   EMPTY_LOCAL_STATE,
+  hasEndedEdition,
   type LocalStateV1,
   readLocalState,
   viewedStoryIds,
+  withEndedEdition,
   withViewedStory,
 } from "./local-state";
 
@@ -125,6 +128,54 @@ export function rememberViewed(editionDate: string, storyId: string): void {
 
   const base = read.kind === "usable" ? read.state : EMPTY_LOCAL_STATE;
   const next = withViewedStory(base, editionDate, storyId);
+
+  if (!writeRaw(LOCAL_STATE_KEY, JSON.stringify(next))) {
+    report("write-refused");
+  }
+}
+
+/**
+ * Whether the reader ended this edition on this device.
+ *
+ * `false` for every read this build could not make sense of, which is the same
+ * answer a fresh device gives: an edition that cannot be shown to have been
+ * ended is offered its ending again, and the cost of being wrong is one control
+ * the reader has already used once. The opposite default would hide the ending
+ * from a reader who never had one.
+ */
+export function readEditionEnded(editionDate: string): boolean {
+  const read = load();
+
+  return read.kind === "usable" && hasEndedEdition(read.state, editionDate);
+}
+
+/**
+ * Records that the reader ended one edition.
+ *
+ * `void` for the same reason as `rememberViewed`: the edition has already ended
+ * on screen by the time this runs, and it stays ended whether or not the device
+ * accepts the write. A boolean here would be a value a caller could mistake for
+ * a rendering decision.
+ */
+export function rememberEnded(editionDate: string): void {
+  // Checked at the entry, exactly as in `rememberViewed` and for the same
+  // reason — a date the schema rejects does not cost this one field, it makes
+  // the WHOLE document fail its next read and takes the reader's viewed sets
+  // with it. Reported without the value (section 38).
+  if (!editionDateSchema.safeParse(editionDate).success) {
+    report("unwritable-values");
+    return;
+  }
+
+  const read = load();
+  if (read.kind === "foreign" || read.kind === "unavailable") {
+    // Never write over a document this build could not read. See the version
+    // rule in `local-state.ts`; `load` has already reported the reason.
+    return;
+  }
+
+  const base = read.kind === "usable" ? read.state : EMPTY_LOCAL_STATE;
+  const next = withEndedEdition(base, editionDate);
 
   if (!writeRaw(LOCAL_STATE_KEY, JSON.stringify(next))) {
     report("write-refused");

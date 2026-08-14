@@ -1,12 +1,14 @@
 import { describe, expect, it } from "vitest";
 import {
   EMPTY_LOCAL_STATE,
+  hasEndedEdition,
   LOCAL_STATE_VERSION,
   type LocalStateV1,
   MAX_REMEMBERED_EDITIONS,
   readLocalState,
   toCurrentVersion,
   viewedStoryIds,
+  withEndedEdition,
   withViewedStory,
 } from "./local-state";
 
@@ -42,6 +44,13 @@ function withEditions(dates: readonly string[]): LocalStateV1 {
   );
 }
 
+function endedEditions(dates: readonly string[]): LocalStateV1 {
+  return dates.reduce(
+    (state, date) => withEndedEdition(state, date),
+    EMPTY_LOCAL_STATE,
+  );
+}
+
 function editionsIn(state: LocalStateV1): string[] {
   return Object.keys(state.viewedByEdition).sort();
 }
@@ -67,19 +76,20 @@ describe("reading a stored document", () => {
   });
 
   it("carries an unrecognised top-level key through a write untouched", () => {
-    // The case this protects: a newer build wrote `endedEditions`, and this
-    // build — served from a stale edge — must hand it back rather than strip it.
+    // The case this protects: a newer build wrote a field this one has never
+    // heard of — AB-205's theme, now that `endedEditions` is ours — and this
+    // build, served from a stale edge, must hand it back rather than strip it.
     const stored = JSON.stringify({
       schemaVersion: LOCAL_STATE_VERSION,
       viewedByEdition: { [EDITION]: ["story-a"] },
-      endedEditions: [EDITION],
+      preferredTheme: "dark",
     });
 
     const written = JSON.stringify(
       withViewedStory(usable(stored), EDITION, "story-b"),
     );
 
-    expect(JSON.parse(written)).toMatchObject({ endedEditions: [EDITION] });
+    expect(JSON.parse(written)).toMatchObject({ preferredTheme: "dark" });
     expect(viewedStoryIds(usable(written), EDITION)).toEqual(
       new Set(["story-a", "story-b"]),
     );
@@ -126,6 +136,18 @@ describe("reading a stored document", () => {
     {
       label: "a date that is not on the calendar",
       raw: '{"schemaVersion":1,"viewedByEdition":{"2026-02-30":["story-a"]}}',
+    },
+    {
+      label: "endedEditions holding a date that is not on the calendar",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"endedEditions":["2026-02-30"]}',
+    },
+    {
+      label: "endedEditions holding something that is not a date",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"endedEditions":["yesterday"]}',
+    },
+    {
+      label: "endedEditions that is not an array",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"endedEditions":"2026-07-21"}',
     },
   ];
 
@@ -310,10 +332,197 @@ describe("an edition date that names something on Object.prototype", () => {
       withViewedStory(EMPTY_LOCAL_STATE, name, "story-a"),
     ).not.toThrow();
   });
+
+  it.each(inherited)("reads %s as an edition that was not ended", (name) => {
+    // `endedEditions` is a list, so the name is compared as a value and never
+    // resolved as a key: the hazard cannot arise while the field has this
+    // shape. Asserted so that changing the shape has to fail here first.
+    expect(() => hasEndedEdition(EMPTY_LOCAL_STATE, name)).not.toThrow();
+    expect(hasEndedEdition(EMPTY_LOCAL_STATE, name)).toBe(false);
+  });
+
+  it.each(inherited)("ends %s without throwing", (name) => {
+    expect(() => withEndedEdition(EMPTY_LOCAL_STATE, name)).not.toThrow();
+  });
 });
 
 describe("reading one edition's viewed stories", () => {
   it("is empty for an edition that was never opened", () => {
     expect(viewedStoryIds(EMPTY_LOCAL_STATE, EDITION)).toEqual(new Set());
+  });
+});
+
+describe("recording that a story was expanded, once editions can be ended", () => {
+  it("keeps the ended editions it was given", () => {
+    /*
+      The mirror of "recording that an edition was ended keeps the viewed sets",
+      below, and the direction that was missing. Both writes rebuild the whole
+      document from a spread, so either one can drop the other's field, and only
+      one of the two directions was held to it.
+
+      The flow this protects is one the slice explicitly blesses: ending is
+      non-destructive, so a reader may end the edition and carry on reading. The
+      viewed write that follows must not take the ended flag with it — and the
+      loss is invisible until they come back, because the flag is already true
+      in React state for the rest of the session. On the next visit the edition
+      reads as un-ended, with the end control offered again on an edition they
+      have already finished with.
+    */
+    const ended = withEndedEdition(EMPTY_LOCAL_STATE, EDITION);
+
+    const afterReadingOn = withViewedStory(ended, EDITION, "story-a");
+
+    expect(hasEndedEdition(afterReadingOn, EDITION)).toBe(true);
+    expect(viewedStoryIds(afterReadingOn, EDITION)).toEqual(
+      new Set(["story-a"]),
+    );
+    // Asserted through the serialised form as well: an `endedEditions` of
+    // `undefined` is still a key on the object and would satisfy the check
+    // above only by accident, while `JSON.stringify` drops it — and the
+    // serialised form is what the device actually keeps.
+    expect(JSON.parse(JSON.stringify(afterReadingOn))).toHaveProperty(
+      "endedEditions",
+      [EDITION],
+    );
+  });
+
+  it("keeps another edition's ended flag too", () => {
+    // The write is keyed by one edition; the field it must not disturb spans
+    // all of them.
+    const ended = withEndedEdition(EMPTY_LOCAL_STATE, "2026-07-20");
+
+    const written = withViewedStory(ended, EDITION, "story-a");
+
+    expect(hasEndedEdition(written, "2026-07-20")).toBe(true);
+    expect(hasEndedEdition(written, EDITION)).toBe(false);
+  });
+});
+
+describe("recording that an edition was ended", () => {
+  it("reads a document written before the field existed", () => {
+    /*
+      The compatibility assertion ADR-0007 asks for, and the reason the field
+      is optional. Every document already on a reader's device looks exactly
+      like this one; if the field were required this would read as
+      `replaceable`, and the next write would take the viewed sets with it.
+    */
+    const stored = JSON.stringify({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: { [EDITION]: ["story-a"] },
+    });
+
+    expect(readLocalState(stored).kind).toBe("usable");
+    expect(hasEndedEdition(usable(stored), EDITION)).toBe(false);
+    expect(viewedStoryIds(usable(stored), EDITION)).toEqual(
+      new Set(["story-a"]),
+    );
+  });
+
+  it("reads a document holding the field, at the same schema version", () => {
+    const stored = JSON.stringify({
+      schemaVersion: 1,
+      viewedByEdition: {},
+      endedEditions: [EDITION],
+    });
+
+    expect(readLocalState(stored).kind).toBe("usable");
+    expect(hasEndedEdition(usable(stored), EDITION)).toBe(true);
+    expect(hasEndedEdition(usable(stored), "2026-07-20")).toBe(false);
+    // An additive optional field does not bump the version (ADR-0007). A build
+    // that bumped it would decline to read every document already written.
+    expect(LOCAL_STATE_VERSION).toBe(1);
+  });
+
+  it("writes no such key for a reader who only expands stories", () => {
+    // Ending is a thing the reader does, not a thing they accumulate: a
+    // document only ever grows this field once the end control is used.
+    const written = JSON.parse(
+      JSON.stringify(withViewedStory(EMPTY_LOCAL_STATE, EDITION, "story-a")),
+    );
+
+    expect(written).not.toHaveProperty("endedEditions");
+    expect(EMPTY_LOCAL_STATE).toEqual({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: {},
+    });
+  });
+
+  it("keeps the viewed sets and unknown top-level keys it was given", () => {
+    const stored = JSON.stringify({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: { [EDITION]: ["story-a"] },
+      preferredTheme: "dark",
+    });
+
+    const written = JSON.stringify(withEndedEdition(usable(stored), EDITION));
+
+    expect(JSON.parse(written)).toMatchObject({ preferredTheme: "dark" });
+    expect(viewedStoryIds(usable(written), EDITION)).toEqual(
+      new Set(["story-a"]),
+    );
+    expect(hasEndedEdition(usable(written), EDITION)).toBe(true);
+  });
+
+  it("is idempotent", () => {
+    const once = withEndedEdition(EMPTY_LOCAL_STATE, EDITION);
+    const twice = withEndedEdition(once, EDITION);
+
+    expect(twice).toEqual(once);
+    expect(JSON.stringify(twice)).toBe(JSON.stringify(once));
+  });
+
+  it("sorts the dates, so the same set is the same bytes", () => {
+    const dates = editionDates(5);
+
+    const ended = endedEditions(dates);
+    const endedInReverse = endedEditions([...dates].reverse());
+
+    expect(JSON.stringify(ended)).toBe(JSON.stringify(endedInReverse));
+    // Sorted, so the document does not record the order the reader ended in.
+    expect(ended.endedEditions).toEqual(dates);
+  });
+});
+
+describe("bounding how many ended editions are remembered", () => {
+  it("drops exactly the oldest when one more is written", () => {
+    const dates = editionDates(MAX_REMEMBERED_EDITIONS + 1);
+    const full = endedEditions(dates.slice(0, MAX_REMEMBERED_EDITIONS));
+
+    expect(full.endedEditions).toHaveLength(MAX_REMEMBERED_EDITIONS);
+
+    const overflowed = withEndedEdition(
+      full,
+      dates[MAX_REMEMBERED_EDITIONS] ?? "",
+    );
+
+    expect(overflowed.endedEditions).toEqual(dates.slice(1));
+  });
+
+  it("keeps an archive edition being ended, and drops the oldest other one", () => {
+    // Without this, a reader ending an old archive edition has it forgotten by
+    // the very write that recorded it.
+    const dates = editionDates(MAX_REMEMBERED_EDITIONS);
+    const archive = "2025-01-01";
+
+    const written = withEndedEdition(endedEditions(dates), archive);
+
+    expect(written.endedEditions).toEqual([archive, ...dates.slice(1)]);
+    expect(hasEndedEdition(written, archive)).toBe(true);
+    expect(hasEndedEdition(written, dates[0] ?? "")).toBe(false);
+  });
+
+  it("serialises identically when the same editions end on a different write", () => {
+    const dates = editionDates(MAX_REMEMBERED_EDITIONS);
+    const oldest = dates[0] ?? "";
+
+    const endingOnTheNewest = endedEditions(dates);
+    const endingOnTheOldest = withEndedEdition(
+      endedEditions(dates.slice(1)),
+      oldest,
+    );
+
+    expect(JSON.stringify(endingOnTheOldest)).toBe(
+      JSON.stringify(endingOnTheNewest),
+    );
   });
 });
