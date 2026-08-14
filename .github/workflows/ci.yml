@@ -51,6 +51,16 @@ jobs:
         with:
           bun-version: 1.3.14
       - run: bun ci
+      # Deployment already depends on validation: this job needs `check`, and
+      # `bun run check` runs `bun run content:validate`, so a blocking finding in
+      # any edition stops the deploy before it starts.
+      #
+      # `--publish` is deliberately NOT run here yet. It additionally refuses an
+      # edition that is development sample data, and the only edition in the
+      # repository today is exactly that, so wiring it now would red-line every
+      # deploy of applications that do not read content/ at all. It belongs in
+      # the slice that first copies content/ into a build (AB-201), which is the
+      # point at which sample data could actually reach a reader.
       - run: bun run --filter @aaj-bas/web build
       - id: deploy
         uses: cloudflare/wrangler-action@v4
@@ -84,6 +94,16 @@ jobs:
         with:
           bun-version: 1.3.14
       - run: bun ci
+      # Deployment already depends on validation: this job needs `check`, and
+      # `bun run check` runs `bun run content:validate`, so a blocking finding in
+      # any edition stops the deploy before it starts.
+      #
+      # `--publish` is deliberately NOT run here yet. It additionally refuses an
+      # edition that is development sample data, and the only edition in the
+      # repository today is exactly that, so wiring it now would red-line every
+      # deploy of applications that do not read content/ at all. It belongs in
+      # the slice that first copies content/ into a build (AB-201), which is the
+      # point at which sample data could actually reach a reader.
       - run: bun run --filter @aaj-bas/landing build
         env:
           VITE_APP_URL: ${{ env.READER_PRODUCTION_URL }}

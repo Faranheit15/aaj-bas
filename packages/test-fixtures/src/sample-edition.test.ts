@@ -12,10 +12,21 @@
  * applications from importing this package at runtime, so a sample edition
  * reached from here cannot end up in a bundle.
  *
- * This test is INTERIM. AB-103's `bun run content:validate` is the real home for
- * structural, diversity, duplicate, length, URL, and correction checks across
- * every file in `content/editions/`, and should subsume the structural
- * assertions below rather than sit alongside them.
+ * AB-103 subsumed most of what this file used to assert. `bun run content:validate`
+ * now applies structural, diversity, duplicate, length, URL, and correction rules
+ * to every file in `content/editions/`, and it runs in the blocking check suite,
+ * so the story count, the publisher floor, and the correction assertions were
+ * removed rather than left to duplicate a rule. Three checks stay, for reasons
+ * the validator does not cover:
+ *
+ * - the schema parse, which is cheap and localises a contract break to this file
+ *   instead of to a CLI report;
+ * - the unresolvable-hostname check, which is about this sample data specifically;
+ * - the state coverage, which is AB-102's deliverable rather than a property of
+ *   editions in general.
+ *
+ * The last two are each documented at the assertion, because both look
+ * removable to someone who has just read the validator's rule list.
  */
 
 import type { Edition } from "@aaj-bas/schemas";
@@ -43,10 +54,10 @@ const sampleEdition: unknown = sampleEditionJson;
 const result = editionSchema.safeParse(sampleEdition);
 
 /**
- * The parsed edition, for the assertions that are about content rather than
- * about the contract.
+ * The parsed edition, for the assertion that is about content rather than about
+ * the contract.
  *
- * Narrowing through the parse result means those assertions read typed data
+ * Narrowing through the parse result means that assertion reads typed data
  * instead of re-inspecting `unknown`. When the parse failed, the contract test
  * below is the honest failure and this throws rather than reporting a second,
  * derived one.
@@ -68,68 +79,52 @@ describe("the AB-102 sample edition", () => {
     expect(result.success).toBe(true);
   });
 
-  it("carries ten stories", () => {
-    // AB-102 asks for ten. The schema requires eight core plus at least two
-    // pooled and would accept more, so the count is asserted here, not there.
-    expect(parsedEdition().stories).toHaveLength(10);
-  });
-
-  it("draws on at least six publishers", () => {
-    const publishers = new Set(
-      parsedEdition().sources.map((source) => source.publisher),
-    );
-
-    expect(publishers.size).toBeGreaterThanOrEqual(6);
-  });
-
   it("cites nothing that could resolve", () => {
     // The machine-checkable half of "clearly marked as development sample
     // data": RFC 2606 reserves `.invalid`, so no source link can ever reach a
     // real publisher, and section 18 stays satisfied by construction rather
     // than by an author remembering.
+    //
+    // Do not delete this as covered by `bun run content:validate`. It is not.
+    // The validator's `url/sample-data-hosts` rule only *observes* that every
+    // host is reserved and marks the edition not publishable; it does not
+    // require it, and it must never require it, because a global rule of that
+    // shape would block the first real edition. The requirement is a property
+    // of this development sample data alone, so it is asserted here alone.
     for (const source of parsedEdition().sources) {
       expect(new URL(source.url).hostname).toMatch(/\.invalid$/);
     }
   });
 
-  it("covers every state AB-102 names", () => {
-    // Named rather than counted, so deleting a state fails here instead of
-    // quietly shrinking what the sample edition demonstrates.
+  it("still demonstrates every state AB-102 was written to show", () => {
+    // Also not covered by `bun run content:validate`, and for a subtler reason
+    // than the check above. The validator has rules *about* reportingType,
+    // confidence and uncertainty, but none that requires an edition to exhibit
+    // all of them, and none ever should: a real edition on a quiet day may
+    // legitimately carry no disputed story and no correction.
+    //
+    // Demonstrating them is this fixture's whole job. AB-201 builds the reader
+    // against it, so a state quietly disappearing here would surface as a UI
+    // path nobody exercised rather than as a failing test.
     const edition = parsedEdition();
     const reportingTypes = new Set(
       edition.stories.map((story) => story.reportingType),
     );
-    const confidences = new Set(
-      edition.stories.map((story) => story.confidence),
-    );
+    const confidences = new Set(edition.stories.map((s) => s.confidence));
 
     expect([...reportingTypes]).toEqual(
       expect.arrayContaining(["reporting", "analysis", "official"]),
     );
     expect(confidences.has("single-source")).toBe(true);
     expect(confidences.has("multi-source")).toBe(true);
-
-    expect(
-      edition.stories.some((story) => story.uncertainty !== undefined),
-    ).toBe(true);
-
-    // The updated state. Compared as instants, not as strings: two timestamps
-    // in different offsets are the same moment but sort in the wrong order.
+    expect(edition.stories.some((s) => s.uncertainty !== undefined)).toBe(true);
+    // Compared as instants: two timestamps in different offsets can be the same
+    // moment while sorting in the wrong order as strings.
     expect(
       edition.stories.some(
-        (story) =>
-          Date.parse(story.updatedAt) > Date.parse(story.firstPublishedAt),
+        (s) => Date.parse(s.updatedAt) > Date.parse(s.firstPublishedAt),
       ),
     ).toBe(true);
-  });
-
-  it("keeps its correction visible and attached to a story", () => {
-    const edition = parsedEdition();
-    const storyIds = new Set(edition.stories.map((story) => story.id));
-
     expect(edition.correctionNotes.length).toBeGreaterThanOrEqual(1);
-    for (const note of edition.correctionNotes) {
-      expect(storyIds.has(note.storyId)).toBe(true);
-    }
   });
 });
