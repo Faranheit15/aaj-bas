@@ -53,10 +53,19 @@ jobs:
       - run: bun ci
       - run: bun run --filter @aaj-bas/web build
       - id: deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # The action installs wrangler from the registry on every deploy. v4
+          # changed its default from the exact 3.90.0 to the range "4", which would
+          # resolve at deploy time and silently change the deploy toolchain with no
+          # commit here. wrangler 4 also raises its Node floor (18 -> 20 -> 22 within
+          # the 4.x line) while this workflow pins only Bun and inherits the runner's
+          # Node, so a future 4.x could break production with no change to this repo.
+          # Pinning keeps this bump to the action runtime alone. Moving to wrangler 4
+          # is its own slice.
+          wranglerVersion: "3.90.0"
           command: pages deploy apps/web/dist --project-name=aaj-bas-web --branch=develop --commit-hash=${{ github.sha }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
@@ -79,9 +88,18 @@ jobs:
         env:
           VITE_APP_URL: ${{ env.READER_PRODUCTION_URL }}
       - id: deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # The action installs wrangler from the registry on every deploy. v4
+          # changed its default from the exact 3.90.0 to the range "4", which would
+          # resolve at deploy time and silently change the deploy toolchain with no
+          # commit here. wrangler 4 also raises its Node floor (18 -> 20 -> 22 within
+          # the 4.x line) while this workflow pins only Bun and inherits the runner's
+          # Node, so a future 4.x could break production with no change to this repo.
+          # Pinning keeps this bump to the action runtime alone. Moving to wrangler 4
+          # is its own slice.
+          wranglerVersion: "3.90.0"
           command: pages deploy apps/landing/dist --project-name=aaj-bas-landing --branch=develop --commit-hash=${{ github.sha }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
