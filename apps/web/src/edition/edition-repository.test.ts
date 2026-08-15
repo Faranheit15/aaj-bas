@@ -2,11 +2,16 @@ import type { EditionIndex } from "@aaj-bas/schemas";
 import { invalidEditions, validEdition } from "@aaj-bas/test-fixtures";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
+  CACHE_SOURCE_HEADER,
   type EditionFailureReason,
   editionRepository,
 } from "./edition-repository";
 
 const INDEX_URL = "/content/latest.json";
+
+/** An RFC 7231 date, as a host sends it, and its ISO equivalent. */
+const SENT_AT = "Tue, 21 Jul 2026 01:42:00 GMT";
+const SENT_AT_ISO = "2026-07-21T01:42:00.000Z";
 const EDITION_URL = "/content/editions/2026-08-13.json";
 
 const index: EditionIndex = {
@@ -35,6 +40,29 @@ function textResponse(
     status,
     headers: { "content-type": contentType },
   });
+}
+
+/**
+ * A response as the service worker hands one back out of its cache.
+ *
+ * The tag and the `date` header are what the page has to read it from: the
+ * worker sets the first, and the second is the origin's own, preserved by the
+ * Cache API since the day the copy was stored. Nothing about this response
+ * differs from a live one in any way a page could otherwise detect.
+ */
+function cachedResponse(
+  body: unknown,
+  date: string | null = SENT_AT,
+): Response {
+  const headers = new Headers({
+    "content-type": "application/json",
+    [CACHE_SOURCE_HEADER]: "1",
+  });
+  if (date !== null) {
+    headers.set("date", date);
+  }
+
+  return new Response(JSON.stringify(body), { status: 200, headers });
 }
 
 function stubFetch(
@@ -124,7 +152,12 @@ describe("content that loads", () => {
 
     const result = await editionRepository.getIndex(signal());
 
-    expect(result).toEqual({ ok: true, value: index });
+    expect(result).toEqual({
+      ok: true,
+      value: index,
+      source: "network",
+      copyDate: null,
+    });
   });
 
   it("returns an index that points at nothing", async () => {
@@ -138,7 +171,12 @@ describe("content that loads", () => {
 
     const result = await editionRepository.getIndex(signal());
 
-    expect(result).toEqual({ ok: true, value: empty });
+    expect(result).toEqual({
+      ok: true,
+      value: empty,
+      source: "network",
+      copyDate: null,
+    });
   });
 
   it("returns a validated edition", async () => {
@@ -147,7 +185,12 @@ describe("content that loads", () => {
 
     const result = await editionRepository.getByDate("2026-08-13", signal());
 
-    expect(result).toEqual({ ok: true, value: edition });
+    expect(result).toEqual({
+      ok: true,
+      value: edition,
+      source: "network",
+      copyDate: null,
+    });
   });
 
   it("accepts a JSON content type carrying a charset", async () => {
@@ -155,7 +198,12 @@ describe("content that loads", () => {
 
     const result = await editionRepository.getIndex(signal());
 
-    expect(result).toEqual({ ok: true, value: index });
+    expect(result).toEqual({
+      ok: true,
+      value: index,
+      source: "network",
+      copyDate: null,
+    });
   });
 
   it("accepts a JSON content type whatever its case", async () => {
@@ -166,7 +214,105 @@ describe("content that loads", () => {
 
     const result = await editionRepository.getIndex(signal());
 
-    expect(result).toEqual({ ok: true, value: index });
+    expect(result).toEqual({
+      ok: true,
+      value: index,
+      source: "network",
+      copyDate: null,
+    });
+  });
+});
+
+describe("where the bytes came from", () => {
+  it("reports a response the worker tagged as coming from this device", async () => {
+    stubFetch(cachedResponse(validEdition()));
+
+    const result = await editionRepository.getByDate("2026-08-13", signal());
+
+    expect(result).toMatchObject({ ok: true, source: "cache" });
+  });
+
+  it("reports an ordinary response as network, whatever else it carries", async () => {
+    // Including a `date` header, which every response has. Reading the header
+    // as evidence of a cache would report every live edition as saved.
+    stubFetch(
+      new Response(JSON.stringify(validEdition()), {
+        status: 200,
+        headers: { "content-type": "application/json", date: SENT_AT },
+      }),
+    );
+
+    const result = await editionRepository.getByDate("2026-08-13", signal());
+
+    expect(result).toMatchObject({ ok: true, source: "network" });
+  });
+
+  it("states when the copy was sent, converted from the header's own format", async () => {
+    // PRD section 7.2 asks a returning reader to be told when the cached copy
+    // was downloaded. This is where that fact comes from, and it is read off
+    // the response rather than stored: nothing new is written to the device,
+    // and the instant is deleted with the copy it describes.
+    stubFetch(cachedResponse(validEdition()));
+
+    const result = await editionRepository.getByDate("2026-08-13", signal());
+
+    expect(result).toMatchObject({ ok: true, copyDate: SENT_AT_ISO });
+  });
+
+  it.each([
+    ["carries no date header", null],
+    ["carries a date header nothing can parse", "yesterday afternoon"],
+  ])("says nothing about when a copy arrived that %s", async (_case, date) => {
+    /*
+      THE PRIVACY TEST. `copyDate` must be null, and specifically must not be
+      the current time.
+
+      A `Date.now()` fallback is the obvious repair — it keeps the sentence on
+      the page and looks harmless — and it does two unacceptable things at
+      once. It states a download time that is false, under a copy that may be a
+      week old. And it mints a timestamp of READING on the device, which is the
+      behavioural data ADR-0007 declined to store when it rejected LRU
+      eviction. Asserted against the clock as well as against null, because
+      `toBeNull` alone would pass if the field were later renamed and the
+      fabrication moved one layer up.
+    */
+    const before = new Date().toISOString();
+    stubFetch(cachedResponse(validEdition(), date));
+
+    const result = await editionRepository.getByDate("2026-08-13", signal());
+
+    expect(result).toMatchObject({ ok: true, source: "cache", copyDate: null });
+    if (result.ok) {
+      expect(result.copyDate).not.toBe(before);
+    }
+  });
+
+  it("still refuses a cached response that is not an edition", async () => {
+    /*
+      A cache is not a licence. The single-page shell can be cached exactly as
+      an edition can, and the day a worker stores the wrong response for
+      `/content/editions/...`, this is what stops the reader being told their
+      saved copy is corrupt — or worse, being shown it. Every check the network
+      path applies applies here, in the same order.
+    */
+    const headers = new Headers({
+      "content-type": "text/html; charset=utf-8",
+      [CACHE_SOURCE_HEADER]: "1",
+      date: SENT_AT,
+    });
+    stubFetch(new Response("<!doctype html>", { status: 200, headers }));
+
+    const result = await editionRepository.getByDate("2026-01-01", signal());
+
+    expect(result).toEqual({ ok: false, reason: "unavailable" });
+  });
+
+  it("refuses a cached document that fails validation", async () => {
+    stubFetch(cachedResponse({ ...validEdition(), schemaVersion: 2 }));
+
+    const result = await editionRepository.getByDate("2026-08-13", signal());
+
+    expect(result).toEqual({ ok: false, reason: "invalid" });
   });
 });
 

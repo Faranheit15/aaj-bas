@@ -11,6 +11,7 @@ import {
 import { afterEach, describe, expect, it, vi } from "vitest";
 import editionJson from "../../../../content/editions/2026-07-21.json";
 import type { EditionFreshness } from "../edition/edition-freshness";
+import type { EditionSource } from "../edition/edition-repository";
 import {
   formatEditionDate,
   formatEditionInstant,
@@ -91,6 +92,40 @@ function present<T>(value: T | null | undefined, what: string): T {
   }
   return value;
 }
+
+type RenderOptions = {
+  readonly edition?: Edition;
+  readonly freshness?: EditionFreshness;
+  readonly source?: EditionSource;
+  readonly copyDate?: string | null;
+};
+
+/**
+ * Every render in this file, with the dimensions a given test is not about
+ * left at the ordinary case: today's edition, fetched over the network.
+ *
+ * The component takes four props from AB-206 onwards, and spelling all four at
+ * every call site would reflow each of them into seven lines of JSX saying
+ * nothing — the tests about interest pools, ordinals and focus order are not
+ * arguments about where the bytes came from. Naming only the dimension under
+ * test also makes the cache renders below legible as the exceptions they are.
+ *
+ * Read with `??` rather than spread, so `exactOptionalPropertyTypes` cannot be
+ * satisfied by handing the component `undefined` for a prop it requires.
+ */
+function renderEdition(options: RenderOptions = {}) {
+  return render(
+    <EditionView
+      edition={options.edition ?? edition}
+      freshness={options.freshness ?? "current"}
+      source={options.source ?? "network"}
+      copyDate={options.copyDate ?? null}
+    />,
+  );
+}
+
+/** An instant a copy was downloaded, never the fixture's publication time. */
+const DOWNLOADED = "2026-07-21T07:12:00+05:30";
 
 /** The core eight, resolved from the edition's own ids rather than from the
  * helper the component uses, so the test can disagree with it. */
@@ -342,7 +377,7 @@ function storedIdsFor(editionDate: string): readonly string[] {
 
 describe("a rendered edition", () => {
   it("carries exactly one first-level heading, naming the edition's date", () => {
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     const headings = screen.getAllByRole("heading", { level: 1 });
     expect(headings).toHaveLength(1);
@@ -352,9 +387,7 @@ describe("a rendered edition", () => {
   });
 
   it("machine-reads the edition date from the contract value", () => {
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
 
     expect(container.querySelector("h1 time")).toHaveAttribute(
       "datetime",
@@ -373,7 +406,7 @@ describe("a rendered edition", () => {
       also fails if the component maps `edition.stories` and hands the reader
       the entire pool.
     */
-    render(<EditionView edition={wideEdition} freshness="current" />);
+    renderEdition({ edition: wideEdition });
 
     const cards = storyCards();
     expect(cards).toHaveLength(10);
@@ -387,7 +420,7 @@ describe("a rendered edition", () => {
       reader; interleaving would make the ranking of shared stories depend on a
       preference, which nothing in the product authorises (section 22).
     */
-    render(<EditionView edition={wideEdition} freshness="current" />);
+    renderEdition({ edition: wideEdition });
 
     const headlines = screen
       .getAllByRole("heading", { level: 2 })
@@ -398,7 +431,7 @@ describe("a rendered edition", () => {
   it("gives every story a second-level heading", () => {
     // Still an `h2`, and still exactly the headline: the card puts the
     // disclosure button *inside* the heading, which leaves its text unchanged.
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     const headlines = screen
       .getAllByRole("heading", { level: 2 })
@@ -416,7 +449,7 @@ describe("a rendered edition", () => {
       not tell the difference. Counting the rendered list items means this
       fails the moment the two numbers disagree, whatever they are.
     */
-    render(<EditionView edition={wideEdition} freshness="current" />);
+    renderEdition({ edition: wideEdition });
 
     const cards = storyCards();
     const total = cards.length;
@@ -432,9 +465,7 @@ describe("a rendered edition", () => {
   });
 
   it("shows the publication instant with its contract timestamp", () => {
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
 
     const published = container.querySelector(".edition-freshness time");
     expect(published).toHaveAttribute("datetime", "2026-07-21T06:00:00+05:30");
@@ -450,9 +481,7 @@ describe("a rendered edition", () => {
       edition changed after it was published, the other says this story did.
       An unscoped `/Updated/` would let either satisfy the other's test.
     */
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
 
     const freshness = editionFreshnessLine(container);
     expect(within(freshness).getByText(/Updated/)).toBeInTheDocument();
@@ -463,26 +492,21 @@ describe("a rendered edition", () => {
   });
 
   it("shows no update time when the edition has not been updated", () => {
-    const { container } = render(
-      <EditionView
-        edition={{ ...edition, updatedAt: edition.publishedAt }}
-        freshness="current"
-      />,
-    );
+    const { container } = renderEdition({
+      edition: { ...edition, updatedAt: edition.publishedAt },
+    });
 
     expect(editionFreshnessLine(container)).not.toHaveTextContent(/Updated/);
   });
 
   it("says nothing about freshness when the edition is today's", () => {
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
 
     expect(container.querySelector(".edition-notice")).toBeNull();
   });
 
   it("says today's edition is not published yet when it is not", () => {
-    render(<EditionView edition={edition} freshness="stale" />);
+    renderEdition({ freshness: "stale" });
 
     expect(
       screen.getByText(
@@ -495,9 +519,148 @@ describe("a rendered edition", () => {
   });
 
   it("says an edition read by date is a past edition", () => {
-    render(<EditionView edition={edition} freshness="archived" />);
+    renderEdition({ freshness: "archived" });
 
     expect(screen.getByText("This is a past edition.")).toBeInTheDocument();
+  });
+
+  it("says a saved copy of today's edition is today's edition", () => {
+    renderEdition({ source: "cache", copyDate: DOWNLOADED });
+
+    expect(
+      screen.getByText(/This is today's edition, saved on this device\./),
+    ).toBeInTheDocument();
+  });
+
+  it("carries exactly one notice, whichever combination it is handed", () => {
+    /*
+      Two dimensions meet in this paragraph now, and the failure they invite is
+      two notices stacked on one page — the freshness sentence and a separate
+      cache banner, saying overlapping things in different words. Every
+      combination is rendered, and each is allowed exactly the one paragraph
+      the table says it has.
+
+      Written as a literal table rather than by calling `editionNotice` for the
+      expectation, which would pass no matter what either side did as long as
+      they agreed.
+    */
+    const expected: readonly {
+      readonly freshness: EditionFreshness;
+      readonly source: EditionSource;
+      readonly notices: number;
+    }[] = [
+      { freshness: "current", source: "network", notices: 0 },
+      { freshness: "stale", source: "network", notices: 1 },
+      { freshness: "archived", source: "network", notices: 1 },
+      { freshness: "current", source: "cache", notices: 1 },
+      { freshness: "stale", source: "cache", notices: 1 },
+      { freshness: "archived", source: "cache", notices: 1 },
+    ];
+
+    for (const { freshness, source, notices } of expected) {
+      const { container } = renderEdition({
+        freshness,
+        source,
+        copyDate: DOWNLOADED,
+      });
+
+      expect([
+        freshness,
+        source,
+        container.querySelectorAll(".edition-notice").length,
+      ]).toEqual([freshness, source, notices]);
+      cleanup();
+    }
+  });
+
+  it("keeps the download time and the publication time apart", () => {
+    /*
+      THE MOST MISLEADING BUG AVAILABLE HERE is conflating these two instants.
+      One is when the PUBLISHER issued this edition; the other is when THIS
+      DEVICE received the copy being read. A reader checking whether they are
+      looking at current news reads the first, and a single `<time>` carrying
+      whichever value was assembled last would answer that question wrongly
+      while looking entirely correct.
+
+      Asserted as two elements with two different machine values, so neither
+      the visible text nor the `datetime` can be shared between them.
+    */
+    const { container } = renderEdition({
+      source: "cache",
+      copyDate: DOWNLOADED,
+    });
+
+    const notice = present(
+      container.querySelector<HTMLElement>(".edition-notice"),
+      "the edition notice",
+    );
+    const downloaded = present(
+      notice.querySelector("time"),
+      "the download instant",
+    );
+    const published = present(
+      editionFreshnessLine(container).querySelector("time"),
+      "the publication instant",
+    );
+
+    // The whole paragraph, so the download clause is asserted to sit after the
+    // notice's own sentence rather than merely to exist somewhere on the page.
+    expect(notice.textContent).toBe(
+      `This is today's edition, saved on this device. Downloaded ${formatEditionInstant(DOWNLOADED)}.`,
+    );
+    expect(downloaded).toHaveAttribute("datetime", DOWNLOADED);
+    expect(downloaded).toHaveTextContent(formatEditionInstant(DOWNLOADED));
+    expect(published).toHaveAttribute("datetime", edition.publishedAt);
+    expect(downloaded.getAttribute("datetime")).not.toBe(
+      published.getAttribute("datetime"),
+    );
+  });
+
+  it("drops the download sentence when the instant is not known", () => {
+    // Never "Downloaded Invalid Date", and never the current time standing in
+    // for one: the notice keeps its text and says less. `edition-notice.test`
+    // argues why at the layer that decides it.
+    const { container } = renderEdition({ source: "cache", copyDate: null });
+
+    const notice = present(
+      container.querySelector<HTMLElement>(".edition-notice"),
+      "the edition notice",
+    );
+
+    expect(notice).toHaveTextContent("saved on this device");
+    expect(notice.querySelector("time")).toBeNull();
+    expect(notice).not.toHaveTextContent(/Downloaded|Invalid Date/);
+  });
+
+  it("offers nothing to press on a saved copy that it does not offer otherwise", () => {
+    /*
+      No refresh, no "try again", no "check for a newer edition". PRD section 8
+      excludes user-triggered fetching from v1, and a control offered only to a
+      reader on a saved copy is offered exactly to the reader least able to use
+      it.
+
+      Compared against the network render rather than asserted as an absolute
+      count: the claim is that the cache adds nothing, and a count would drift
+      with every control the edition legitimately grows.
+      `EditionUnavailable` keeps "Try again", where there is no edition on the
+      screen to lose.
+    */
+    const names = (): string[] =>
+      [
+        ...screen.queryAllByRole("button"),
+        ...screen.queryAllByRole("link"),
+      ].map((control) => control.textContent ?? "");
+
+    renderEdition();
+    const online = names();
+    cleanup();
+
+    renderEdition({ source: "cache", copyDate: DOWNLOADED });
+
+    expect(names()).toEqual(online);
+    expect(
+      screen.queryByRole("button", { name: /refresh|try again|update/i }),
+    ).toBeNull();
   });
 
   it("offers no link out of the edition while every card is collapsed", () => {
@@ -507,7 +670,7 @@ describe("a rendered edition", () => {
       card the reader deliberately opened, so the default state still offers
       no exit — and nothing here, in either state, continues the edition.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     for (const card of storyCards()) {
       expect(toggleIn(card)).toHaveAttribute("aria-expanded", "false");
@@ -518,7 +681,7 @@ describe("a rendered edition", () => {
 
 describe("expanding a story", () => {
   it("reveals that story's sources and leaves the other cards shut", () => {
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     const cards = storyCards();
     const first = present(cards[0], "the first card");
@@ -545,7 +708,7 @@ describe("expanding a story", () => {
   it("leaves an already open card open when a second is opened", () => {
     // Not an accordion. Opening one story must not close another the reader
     // is still reading, and expansion state belongs to each card alone.
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     const toggles = screen.getAllByRole("button");
     const first = present(toggles[0], "the first card's toggle");
@@ -572,7 +735,7 @@ describe("what an expanded card leaves on the device", () => {
       "now, and exactly this" is the seam closing correctly. `EditionView` is
       unchanged either way — the hook's signature did not move.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     const toggles = screen.getAllByRole("button");
     fireEvent.click(present(toggles[0], "the first card's toggle"));
@@ -603,7 +766,7 @@ describe("what an expanded card leaves on the device", () => {
       it showed on the way — the one AB-203's counter would render before
       correcting itself.
     */
-    const first = render(<EditionView edition={edition} freshness="current" />);
+    const first = renderEdition();
     fireEvent.click(
       present(screen.getAllByRole("button")[0], "the first card's toggle"),
     );
@@ -612,7 +775,7 @@ describe("what an expanded card leaves on the device", () => {
     // So that `results[0]` is the remount's first render rather than the
     // original mount's, which was legitimately empty.
     vi.mocked(useViewedStories).mockClear();
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(viewedIdsOnFirstRender()).toEqual([coreStoryAt(0).id]);
     expect(viewedIds()).toEqual([coreStoryAt(0).id]);
@@ -638,9 +801,7 @@ describe("what an expanded card leaves on the device", () => {
     const warn = vi.spyOn(console, "warn").mockImplementation(() => undefined);
 
     try {
-      const { container } = render(
-        <EditionView edition={edition} freshness="current" />,
-      );
+      const { container } = renderEdition();
       const toggle = present(
         screen.getAllByRole("button")[0],
         "the first card's toggle",
@@ -671,7 +832,7 @@ describe("recording which stories were viewed", () => {
       handed the card a callback that did nothing — which is the acceptance
       criterion for this slice, silently unmet.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
     expect(viewedIds()).toEqual([]);
 
     const cards = storyCards();
@@ -684,7 +845,7 @@ describe("recording which stories were viewed", () => {
   it("keeps the viewed set to this edition's date", () => {
     // What stops one edition's viewed stories from ever being counted as
     // another's, whichever way the reader navigates between them.
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(useViewedStories).toHaveBeenCalledWith(edition.date);
     expect(viewedNow().viewed.editionDate).toBe(edition.date);
@@ -694,7 +855,7 @@ describe("recording which stories were viewed", () => {
     // Viewed is monotonic: collapsing a card says nothing about whether it was
     // read, and un-marking it would make the record one of how the reader
     // browsed rather than of what they opened.
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     const first = present(storyCards()[0], "the first card");
     // Held rather than re-queried: an expanded card has a second button in it,
@@ -708,7 +869,7 @@ describe("recording which stories were viewed", () => {
   });
 
   it("marks nothing while every card is still collapsed", () => {
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(viewedIds()).toEqual([]);
   });
@@ -727,7 +888,7 @@ describe("how much of the edition has been opened", () => {
       own constant cannot tell "0 of 8 viewed" over eight cards from the same
       sentence over ten.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(screen.getByText(`0 of ${cardCount()} viewed`)).toBeInTheDocument();
   });
@@ -737,9 +898,7 @@ describe("how much of the edition has been opened", () => {
     // last card says "8 of 8" tells them two stories exist somewhere they
     // cannot reach, which is the hidden backlog constitution 1 forbids — and
     // two independently derived denominators are two chances to say it.
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
 
     const cards = storyCards();
     const total = cards.length;
@@ -756,9 +915,7 @@ describe("how much of the edition has been opened", () => {
   });
 
   it("counts each story the reader expands, once", () => {
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
     const total = cardCount();
 
     const cards = storyCards();
@@ -780,9 +937,7 @@ describe("how much of the edition has been opened", () => {
     rememberViewed(wideEdition.date, coreStoryAt(0).id);
     rememberViewed(wideEdition.date, unseenPoolStory.id);
 
-    const { container } = render(
-      <EditionView edition={wideEdition} freshness="current" />,
-    );
+    const { container } = renderEdition({ edition: wideEdition });
 
     const total = cardCount();
     expect(progressLine(container)).toHaveTextContent(`1 of ${total} viewed`);
@@ -811,9 +966,7 @@ describe("how much of the edition has been opened", () => {
       the mechanic section 3.2 rules out. The sentence is a fact the reader
       could check by counting the cards.
     */
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
     const counter = progressLine(container);
 
     expect(counter.textContent).toBe(`0 of ${cardCount()} viewed`);
@@ -832,9 +985,7 @@ describe("how much of the edition has been opened", () => {
     // spoke every time the reader opened a story would turn expanding a card
     // into a scored event, which is the mechanic section 3.2 rules out — and
     // the shell's status region is the obvious place a later edit would put it.
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
     // Read while every card is shut: an expanded card contributes its own
     // source list, so list items stop being the count of stories once one is
     // open.
@@ -860,7 +1011,7 @@ describe("ending the edition", () => {
       commenting on how little they read, and PRD section 5.1 is explicit that
       ending early must not tell the reader they failed.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
     const total = cardCount();
 
     pressEnd();
@@ -878,7 +1029,7 @@ describe("ending the edition", () => {
       reader opened, or lock anything. A reader who ends and keeps reading is
       doing something the product allows, so there is nothing to undo.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     const cards = storyCards();
     const first = toggleIn(present(cards[0], "the first card"));
@@ -906,7 +1057,7 @@ describe("ending the edition", () => {
     // no archive, no related reading, no share (section 3.1). Counted against
     // the links an expanded card legitimately contributes, so this is about
     // what ending adds rather than about the page being empty.
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
     fireEvent.click(toggleIn(present(storyCards()[0], "the first card")));
     const linksBefore = screen.getAllByRole("link").length;
     expect(linksBefore).toBeGreaterThan(0);
@@ -919,7 +1070,7 @@ describe("ending the edition", () => {
   it("marks no story viewed", () => {
     // Ending is not reading. The count the reader is shown has to be what they
     // actually opened, or the sentence about it is untrue.
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     pressEnd();
 
@@ -935,7 +1086,12 @@ describe("ending the edition", () => {
     // outside `main` entirely.
     render(
       <main>
-        <EditionView edition={edition} freshness="current" />
+        <EditionView
+          edition={edition}
+          freshness="current"
+          source="network"
+          copyDate={null}
+        />
       </main>,
     );
 
@@ -991,14 +1147,14 @@ describe("ending the edition", () => {
       claim that can fail: there must be no render in which a reader who already
       ended is offered the control again before it disappears.
     */
-    const first = render(<EditionView edition={edition} freshness="current" />);
+    const first = renderEdition();
     pressEnd();
     first.unmount();
 
     // So that `results[0]` is the remount's first render rather than the
     // original mount's, which was legitimately not ended.
     vi.mocked(useEditionEnded).mockClear();
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(endedOnFirstRender()).toBe(true);
     expect(endControl()).toBeNull();
@@ -1057,9 +1213,7 @@ describe("ending the edition", () => {
     ];
 
     for (const { freshness, label, ended } of endings) {
-      const { container } = render(
-        <EditionView edition={edition} freshness={freshness} />,
-      );
+      const { container } = renderEdition({ freshness });
       const total = cardCount();
 
       expect(screen.getByRole("button", { name: label })).toBeInTheDocument();
@@ -1087,12 +1241,12 @@ describe("ending the edition", () => {
     */
     const other: Edition = { ...edition, date: "2026-07-20" };
 
-    const today = render(<EditionView edition={edition} freshness="current" />);
+    const today = renderEdition();
     pressEnd();
     expect(endControl()).toBeNull();
     today.unmount();
 
-    render(<EditionView edition={other} freshness="archived" />);
+    renderEdition({ edition: other, freshness: "archived" });
 
     expect(useEditionEnded).toHaveBeenCalledWith(other.date);
     // Untouched: the edition the reader has not ended still offers its ending,
@@ -1122,9 +1276,7 @@ describe("ending the edition", () => {
       later slice put beside them. Excluding one named block keeps the rest of
       the page counted, so a control added anywhere outside it still fails.
     */
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
     const cards = cardCount();
     const outsideThePicker = (): HTMLElement[] =>
       screen
@@ -1160,14 +1312,14 @@ describe("ending the edition", () => {
       the session and comes back un-ended, with the control offered again on an
       edition the reader has already finished with.
     */
-    const first = render(<EditionView edition={edition} freshness="current" />);
+    const first = renderEdition();
     pressEnd();
     fireEvent.click(toggleIn(present(storyCards()[0], "the first card")));
     expect(endControl()).toBeNull();
     first.unmount();
 
     vi.mocked(useEditionEnded).mockClear();
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(endedOnFirstRender()).toBe(true);
     expect(endControl()).toBeNull();
@@ -1196,9 +1348,7 @@ describe("ending the edition", () => {
       and no focus move for it in `EditionEnding` — so the sentence is simply
       different when the reader next looks at it.
     */
-    const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
-    );
+    const { container } = renderEdition();
     const cards = storyCards();
     const total = cards.length;
 
@@ -1253,7 +1403,7 @@ describe("choosing interest boosts", () => {
   it("does not ask before the reader has expanded two stories", () => {
     // PRD section 7.1 forbids blocking the first edition with topic selection,
     // and one expand is not yet evidence the reader is using the product.
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
     expect(invitation()).toBeNull();
 
     expand(0);
@@ -1261,7 +1411,7 @@ describe("choosing interest boosts", () => {
   });
 
   it("asks after the second expanded story", () => {
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expand(0);
     expand(1);
@@ -1275,7 +1425,7 @@ describe("choosing interest boosts", () => {
   it("asks at the end of the edition even if the reader expanded nothing", () => {
     // Section 7.1's second trigger. A reader who ends early is still a reader
     // who reached the end, and it is the only other moment the product has.
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
     expect(invitation()).toBeNull();
 
     pressEnd();
@@ -1290,7 +1440,7 @@ describe("choosing interest boosts", () => {
       question about future editions there is a nudge to come back rather than
       an answer to what they asked for.
     */
-    render(<EditionView edition={edition} freshness="archived" />);
+    renderEdition({ freshness: "archived" });
     pressEnd();
 
     expect(invitation()).toBeNull();
@@ -1303,14 +1453,14 @@ describe("choosing interest boosts", () => {
       swap two of them, which is a content shift under the reader's thumb —
       worse than AB-203's counter blinking, because the LIST changes.
     */
-    render(<EditionView edition={twoPoolEdition} freshness="current" />);
+    renderEdition({ edition: twoPoolEdition });
     const withoutInterests = renderedHeadlines();
 
     cleanup();
     localStorage.clear();
     rememberInterests(["sports"]);
 
-    render(<EditionView edition={twoPoolEdition} freshness="current" />);
+    renderEdition({ edition: twoPoolEdition });
     const withSports = renderedHeadlines();
 
     expect(withSports).toHaveLength(10);
@@ -1328,7 +1478,7 @@ describe("choosing interest boosts", () => {
       payoff is more content — an engagement reward (section 3.2). Interests
       change WHICH two, never HOW MANY.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(cardCount()).toBe(10);
   });
@@ -1338,7 +1488,7 @@ describe("choosing interest boosts", () => {
     // screen: the reader gets the same ten a fresh device gets.
     localStorage.setItem(LOCAL_STATE_KEY, "{ this is not json");
 
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(cardCount()).toBe(10);
     expect(renderedHeadlines().slice(0, 8)).toEqual(coreHeadlines);
@@ -1355,9 +1505,7 @@ describe("choosing interest boosts", () => {
       it. The picker's own words promise the choice applies to the next edition
       opened, and this is the assertion that makes the sentence true.
     */
-    const { container } = render(
-      <EditionView edition={twoPoolEdition} freshness="current" />,
-    );
+    const { container } = renderEdition({ edition: twoPoolEdition });
     expand(0);
     expand(1);
     const before = renderedHeadlines();
@@ -1371,19 +1519,19 @@ describe("choosing interest boosts", () => {
 
   it("applies the choice to the next edition the reader opens", () => {
     // The other half of the promise: deferred is not discarded.
-    render(<EditionView edition={twoPoolEdition} freshness="current" />);
+    renderEdition({ edition: twoPoolEdition });
     const before = renderedHeadlines();
     pressEnd();
     chooseSports();
 
     cleanup();
-    render(<EditionView edition={twoPoolEdition} freshness="current" />);
+    renderEdition({ edition: twoPoolEdition });
 
     expect(renderedHeadlines()).not.toEqual(before);
   });
 
   it("stores the choice and nothing else about the reader", () => {
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
     pressEnd();
     chooseSports();
 
@@ -1410,7 +1558,7 @@ describe("choosing interest boosts", () => {
       array means asked and answered. Anything else would either re-ask on every
       load or keep a record of a refusal.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
     pressEnd();
     fireEvent.click(screen.getByRole("button", { name: "No thanks" }));
 
@@ -1418,7 +1566,7 @@ describe("choosing interest boosts", () => {
     // the device, so the trigger is met on the first render. If declining had
     // stored nothing, this is exactly where the question would come back.
     cleanup();
-    render(<EditionView edition={edition} freshness="current" />);
+    renderEdition();
 
     expect(endControl()).toBeNull();
     expect(

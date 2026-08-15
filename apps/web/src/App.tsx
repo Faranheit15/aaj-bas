@@ -61,7 +61,12 @@ function view(
       return <h1 id={EDITION_HEADING_ID}>Loading the edition.</h1>;
     case "ready":
       return (
-        <EditionView edition={state.edition} freshness={state.freshness} />
+        <EditionView
+          edition={state.edition}
+          freshness={state.freshness}
+          source={state.source}
+          copyDate={state.copyDate}
+        />
       );
     case "none":
       // Not an error. Before the first edition is published there is genuinely
@@ -116,13 +121,26 @@ function sampleDataBanner(state: EditionLoadState): ReactNode {
  *
  * Short on purpose: it exists so a reader who cannot see the page knows the
  * load finished, not so the edition can be read twice.
+ *
+ * A saved copy is one appended clause on the message that already exists, not a
+ * second announcement and not a second copy table. Two announcements would
+ * interrupt the same reader twice for one load, and the clause is here rather
+ * than only in the notice because a reader who cannot see the notice is exactly
+ * the reader who would otherwise never learn it.
+ *
+ * NOTHING HERE SUBSCRIBES TO CONNECTIVITY. The reader registers no `online` or
+ * `offline` listener anywhere: flaky mobile data fires those repeatedly, and a
+ * live region wired to them would announce over a reader every few seconds
+ * while they read. What is announced is the load that just resolved, once.
  */
 function statusMessageFor(state: EditionLoadState): string {
   switch (state.status) {
     case "loading":
       return "Loading the edition.";
     case "ready":
-      return `The edition for ${formatEditionDate(state.edition.date)} is ready.`;
+      return state.source === "cache"
+        ? `The edition for ${formatEditionDate(state.edition.date)} is ready. It is the copy saved on this device.`
+        : `The edition for ${formatEditionDate(state.edition.date)} is ready.`;
     case "none":
       return "No edition has been published yet.";
     case "failed":

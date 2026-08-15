@@ -18,6 +18,12 @@
       content="#181b18"
     />
     <title>Aaj, Bas.</title>
+    <!-- The manifest carries one `theme_color` where the metas above carry
+         two, and it ships no icons at all. JSON has no comments, so the whole
+         argument for both — including why the missing icons are the mechanism
+         that keeps this slice free of an install prompt — is in
+         `src/manifest.test.ts`, which is also where it is asserted. -->
+    <link rel="manifest" href="/manifest.webmanifest" />
     <!-- The reader's stored appearance, applied before the first paint.
 
          MUST stay a classic, synchronous script. `type="module"`, `defer` or

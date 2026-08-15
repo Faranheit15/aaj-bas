@@ -11,6 +11,12 @@
  * copies bytes and deletes files, while deciding which validated editions a
  * build may carry, what pointer to write for them, and which already-staged
  * files must go first, belongs here.
+ *
+ * AB-206 adds the third, and it is the same split once more:
+ * `scripts/build-service-worker.ts` scans a built directory and writes one
+ * file, while deciding which of those files a service worker may install --
+ * never published content, which corrections rewrite in place -- and what to
+ * call the build they came from, belongs here.
  */
 
 export type {
@@ -26,6 +32,8 @@ export {
   planStaging,
   validateStagedIndex,
 } from "./content-staging";
+export type { PrecachePlan } from "./service-worker";
+export { buildIdFor, planPrecache } from "./service-worker";
 export type {
   EditionSource,
   EditionValidation,

@@ -195,7 +195,8 @@ Use:
 - Zod;
 - Vitest;
 - React Testing Library where needed;
-- Playwright (end-to-end) and axe-core (accessibility) — neither is installed; adding either requires an ADR;
+- Playwright, for end-to-end checks a browser is required to make (ADR-0010);
+- axe-core (accessibility) — not installed; adding it requires an ADR;
 - Biome for formatting and linting;
 - GitHub Actions;
 - plain CSS and CSS custom properties.
@@ -949,6 +950,9 @@ bun run check
 ```
 
 when it represents the complete blocking suite.
+
+`bun run e2e` is also merge-blocking, and is deliberately outside `check`: it
+needs a browser and a Node runtime, which `check` must not require.
 
 For dependency installation verification, CI uses:
 

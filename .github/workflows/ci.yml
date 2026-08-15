@@ -35,9 +35,55 @@ jobs:
       - run: bun ci
       - run: bun run check
 
+  # The end-to-end suite, which is merge-blocking and deliberately not part of
+  # `bun run check`: AGENTS.md section 30 and ADR-0010 both record why. `check`
+  # is every slice's local inner loop and a fresh clone must not need a browser
+  # download and a second language runtime to run it. So the two run as
+  # separate jobs, in parallel, and both gate the deploy below.
+  #
+  # It needs no secrets and asks for nothing but read access, which is what
+  # makes it safe to run on a pull request from a fork (section 44).
+  e2e:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      # Node is pinned, and this is the one job in this workflow where that is
+      # not optional. Playwright's CLI carries a Node shebang and is documented
+      # as hanging under Bun, so this job runs on Node whether it says so or
+      # not; the comment on wranglerVersion below already warns that this
+      # workflow "pins only Bun and inherits the runner's Node", and that
+      # hazard now applies to a check that blocks a merge.
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22.x
+      - run: bun ci
+      # Keyed on the lockfile, because the lockfile is what pins
+      # `@playwright/test`, and the browser revision is a property of that
+      # version. A key on the OS alone would restore a binary the installed
+      # Playwright refuses to drive.
+      - name: Cache the browser binary
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+      # `bunx`, never the npm runner. `scripts/check-package-manager.sh` fails
+      # the build on that runner's name anywhere in a tracked file, and every
+      # upstream Playwright document uses it (AGENTS.md section 8, ADR-0010).
+      #
+      # `--only-shell` fetches the headless shell rather than full Chromium,
+      # which is what `playwright.config.ts` names as its channel. The suite
+      # renders nothing and reads no screenshot.
+      - run: bunx playwright install chromium --only-shell
+      - run: bun run e2e
+
   deploy-web:
     if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
-    needs: check
+    needs: [check, e2e]
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -55,6 +101,23 @@ jobs:
       # `bun run check` runs `bun run content:validate`, so a blocking finding in
       # any edition stops the deploy before it starts.
       - run: bun run --filter @aaj-bas/web build
+      # Two invariants arrived with the service worker that no other check
+      # covers, and both are unrecoverable in production rather than merely
+      # wrong: every deployment must contain a valid `/sw.js`, and the worker
+      # must never intercept its own script.
+      #
+      # The first is unrecoverable because Cloudflare Pages answers a missing
+      # path with 200 and `text/html`, the update algorithm requires a
+      # JavaScript media type, and a failed update does not remove the
+      # registration -- so a deploy without a worker leaves the previous worker
+      # installed and in control permanently. The second is unrecoverable
+      # because a worker that answers for its own script is served its own
+      # bytes by every update check it will ever make.
+      #
+      # `docs/runbooks/cloudflare-pages-deployment.md` has the incident
+      # procedure. This step is what keeps it from being needed.
+      - name: Refuse to deploy a build without a replaceable service worker
+        run: bun scripts/build-service-worker.ts --verify apps/web/dist
       # The build stages only publishable editions, so this re-checks the bytes
       # that are about to be uploaded rather than the archive they came from. It
       # is the gate AB-103 built and left unwired until content reached a build:
