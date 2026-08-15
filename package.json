@@ -16,10 +16,11 @@
     "format": "bunx @biomejs/biome format --write .",
     "format:check": "bunx @biomejs/biome format .",
     "lint": "bunx @biomejs/biome lint .",
-    "typecheck": "bun run --filter @aaj-bas/* typecheck && bunx tsc --noEmit -p scripts/tsconfig.json",
+    "typecheck": "bun run --filter @aaj-bas/* typecheck && bunx tsc --noEmit -p scripts/tsconfig.json && bunx tsc --noEmit -p apps/web/e2e/tsconfig.json",
     "content:validate": "bun scripts/validate-edition.ts",
     "content:stage": "bun scripts/stage-content.ts",
     "test": "bun run --filter @aaj-bas/* test",
+    "e2e": "bun run --filter @aaj-bas/web e2e",
     "build": "bun run --filter @aaj-bas/landing build && bun run --filter @aaj-bas/web build",
     "check": "bun run check:agents && bun run check:pm && bun run format:check && bun run lint && bun run typecheck && bun run content:validate && bun run test && bun run build"
   },

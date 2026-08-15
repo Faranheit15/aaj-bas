@@ -39,6 +39,9 @@ let load: EditionLoadState = { status: "loading" };
 /** The real published edition, parsed rather than cast; see EditionView.test. */
 const edition: Edition = editionSchema.parse(editionJson as unknown);
 
+/** When a saved copy was downloaded, per the response it was stored with. */
+const DOWNLOADED = "2026-07-21T07:12:00+05:30";
+
 function readyState(
   overrides: Partial<Extract<EditionLoadState, { status: "ready" }>> = {},
 ): EditionLoadState {
@@ -46,10 +49,19 @@ function readyState(
     status: "ready",
     edition,
     freshness: "current",
+    source: "network",
+    copyDate: null,
     contentSet: "published",
     editorialToday: edition.date,
     ...overrides,
   };
+}
+
+/** The same load, resolved from the copy this device already held. */
+function cachedState(
+  overrides: Partial<Extract<EditionLoadState, { status: "ready" }>> = {},
+): EditionLoadState {
+  return readyState({ source: "cache", copyDate: DOWNLOADED, ...overrides });
 }
 
 function renderState(state: EditionLoadState): void {
@@ -314,6 +326,100 @@ describe("the reader application", () => {
     // And the document as a whole still offers exactly those two, so a third
     // route out cannot hide behind the scoping above.
     expect(screen.getAllByRole("link")).toHaveLength(2);
+  });
+});
+
+describe("an edition read from the copy on this device", () => {
+  it("announces it once, as a clause on the message that already exists", () => {
+    /*
+      One announcement per load, not two. A second live message — a banner
+      appearing, a separate "you are offline" signal — interrupts the same
+      reader twice for one event, and a screen-reader user cannot skim past the
+      second the way a sighted reader skips a line.
+
+      The exact string, so the clause is asserted to be appended to the
+      existing sentence rather than to have replaced it.
+    */
+    renderState(cachedState());
+
+    const status = screen.getByRole("status");
+    expect(status).toHaveTextContent(
+      `The edition for ${formatEditionDate(edition.date)} is ready. It is the copy saved on this device.`,
+    );
+    expect(screen.getAllByRole("status")).toHaveLength(1);
+  });
+
+  it("says nothing about the reader's connection, in any state", () => {
+    /*
+      The live region describes the LOAD, never the device. "You are offline"
+      is a claim `navigator.onLine` gets wrong on a captive portal, and it is
+      also the wrong sentence beside an edition that is on the screen. It
+      survives on `EditionUnavailable`, where nothing was cached and the
+      connection genuinely is the reason there is nothing to show — which is
+      why this sweep reads the status region rather than the page.
+    */
+    const states: EditionLoadState[] = [
+      { status: "loading" },
+      readyState(),
+      cachedState(),
+      cachedState({ freshness: "stale" }),
+      { status: "none", contentSet: "published" },
+      { status: "failed", reason: "network", priorDate: null },
+    ];
+
+    for (const state of states) {
+      renderState(state);
+      expect(screen.getByRole("status").textContent ?? "").not.toMatch(
+        /offline|online|connection/i,
+      );
+      cleanup();
+    }
+  });
+
+  it("subscribes to no connectivity event at all", () => {
+    /*
+      Not for the live region, not for a banner, not for a refetch.
+      `online` and `offline` fire repeatedly on flaky mobile data — a polite
+      live region wired to them would interrupt a reader every few seconds, and
+      a refetch would re-request the edition they are already reading.
+
+      Spied across the whole render rather than checked afterwards: a listener
+      added and removed inside an effect would leave nothing to find later.
+    */
+    const listen = vi.spyOn(window, "addEventListener");
+
+    renderState(cachedState());
+
+    expect(
+      listen.mock.calls
+        .map(([type]) => type)
+        .filter((type) => type === "online" || type === "offline"),
+    ).toEqual([]);
+  });
+
+  it("offers a saved copy exactly the controls a fetched one offers", () => {
+    /*
+      The resting inventory, unchanged. Thirteen is what the keyboard walk
+      below counts on a network render — the skip link, the theme toggle, one
+      toggle per story, and the end-edition control — and a saved copy adds no
+      refresh, no retry, and no dismissable banner with a close button. PRD
+      section 8 excludes user-triggered fetching from v1.
+    */
+    const inventory = (): string[] =>
+      [
+        ...screen.queryAllByRole("button"),
+        ...screen.queryAllByRole("link"),
+        ...screen.queryAllByRole("radio"),
+      ].map((control) => control.textContent ?? "");
+
+    renderState(readyState());
+    const online = inventory();
+    expect(online).toHaveLength(13);
+    cleanup();
+
+    renderState(cachedState());
+
+    expect(inventory()).toEqual(online);
   });
 });
 

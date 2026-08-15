@@ -4,10 +4,15 @@ import { act, cleanup, renderHook, waitFor } from "@testing-library/react";
 import { StrictMode } from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { Route } from "../routing/route";
+import { CACHE_SOURCE_HEADER } from "./edition-repository";
 import { editorialDay } from "./editorial-day";
 import { useEdition } from "./use-edition";
 
 const INDEX_URL = "/content/latest.json";
+
+/** The origin's own `date` on a stored response, and its ISO equivalent. */
+const SENT_AT = "Tue, 21 Jul 2026 01:42:00 GMT";
+const SENT_AT_ISO = "2026-07-21T01:42:00.000Z";
 
 const DAY = 24 * 60 * 60 * 1000;
 const today = editorialDay(new Date());
@@ -34,6 +39,18 @@ function jsonResponse(body: unknown): Response {
   return new Response(JSON.stringify(body), {
     status: 200,
     headers: { "content-type": "application/json" },
+  });
+}
+
+/** The same document, as the service worker hands it back out of its cache. */
+function cachedResponse(body: unknown): Response {
+  return new Response(JSON.stringify(body), {
+    status: 200,
+    headers: {
+      "content-type": "application/json",
+      [CACHE_SOURCE_HEADER]: "1",
+      date: SENT_AT,
+    },
   });
 }
 
@@ -284,6 +301,109 @@ describe("failures a reader can act on", () => {
     const state = result.current.state;
     if (state.status !== "failed") throw new Error("expected a failed state");
     expect(state.reason).toBe("invalid");
+  });
+});
+
+describe("a load answered out of this device's cache", () => {
+  /*
+    Acceptance criterion 2, as the reader meets it: a failed update must not
+    cost them the edition they already had.
+
+    The page cannot see the failed update, and that is the design rather than a
+    limitation of the test. The service worker is what tries the network and
+    falls back, so from here a refresh that failed and a refresh that was never
+    attempted look identical — a resolved response carrying the worker's tag.
+    What this layer owes the reader is to carry that tag through instead of
+    reporting an error over an edition that is right there.
+  */
+
+  it("resolves ready from the saved copy rather than failing", async () => {
+    stubFetch((url) =>
+      url === INDEX_URL
+        ? cachedResponse(indexNaming(today))
+        : cachedResponse(editionDated(today)),
+    );
+
+    const { result } = renderHook(() => useEdition({ kind: "latest" }));
+    await waitFor(() => expect(result.current.state.status).toBe("ready"));
+
+    const state = result.current.state;
+    if (state.status !== "ready") throw new Error("expected a ready state");
+    expect(state.source).toBe("cache");
+    expect(state.copyDate).toBe(SENT_AT_ISO);
+    // Today's date, from the device's own calendar, which needs no network.
+    // A saved copy of today's edition is today's edition.
+    expect(state.freshness).toBe("current");
+  });
+
+  it("still fails when there is no saved copy to fall back to", async () => {
+    /*
+      The paired negative, and without it the assertion above is satisfied by a
+      reader that never reports a failure at all. `failed` now means one thing
+      only: there is no copy of this edition anywhere, on the network or on
+      this device.
+    */
+    stubFetch(() => {
+      throw new TypeError("Failed to fetch");
+    });
+
+    const { result } = renderHook(() => useEdition({ kind: "latest" }));
+    await waitFor(() => expect(result.current.state.status).toBe("failed"));
+
+    expect(result.current.state).toEqual({
+      status: "failed",
+      reason: "network",
+      priorDate: null,
+    });
+  });
+
+  it("reports the edition's source, never the pointer's", async () => {
+    /*
+      The two genuinely differ. A worker revalidating the pointer while serving
+      a day it already holds produces the reverse of this case, and this one —
+      a cached pointer naming a date fetched fresh from the network — is what a
+      reader gets moments after coming back online. Reading the index's source
+      would tell them the edition they are looking at was saved on this device
+      when it was downloaded a second ago.
+    */
+    stubFetch((url) =>
+      url === INDEX_URL
+        ? cachedResponse(indexNaming(today))
+        : jsonResponse(editionDated(today)),
+    );
+
+    const { result } = renderHook(() => useEdition({ kind: "latest" }));
+    await waitFor(() => expect(result.current.state.status).toBe("ready"));
+
+    const state = result.current.state;
+    if (state.status !== "ready") throw new Error("expected a ready state");
+    expect(state.source).toBe("network");
+    expect(state.copyDate).toBeNull();
+  });
+
+  it("subscribes to no connectivity event while it loads", async () => {
+    /*
+      Not a listener anywhere in the load path. `online` and `offline` fire
+      repeatedly on flaky mobile data, and anything wired to them here would
+      refetch — or announce — over a reader every few seconds. Asserted in this
+      file as well as in `App.test.tsx` because the hook is where a refetch
+      would be the natural thing to attach.
+    */
+    const listen = vi.spyOn(window, "addEventListener");
+    stubFetch((url) =>
+      url === INDEX_URL
+        ? jsonResponse(indexNaming(today))
+        : jsonResponse(editionDated(today)),
+    );
+
+    const { result } = renderHook(() => useEdition({ kind: "latest" }));
+    await waitFor(() => expect(result.current.state.status).toBe("ready"));
+
+    expect(
+      listen.mock.calls
+        .map(([type]) => type)
+        .filter((type) => type === "online" || type === "offline"),
+    ).toEqual([]);
   });
 });
 

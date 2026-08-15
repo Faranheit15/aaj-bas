@@ -17,6 +17,8 @@ import type { Edition } from "@aaj-bas/schemas";
 import type { JSX } from "react";
 import { editionStories } from "../edition/edition-stories";
 import type { EditionFreshness } from "../edition/edition-freshness";
+import { editionNotice } from "../edition/edition-notice";
+import type { EditionSource } from "../edition/edition-repository";
 import {
   formatEditionDate,
   formatEditionInstant,
@@ -45,13 +47,29 @@ const INVITATION_AFTER_VIEWED = 2;
 type EditionViewProps = {
   readonly edition: Edition;
   readonly freshness: EditionFreshness;
+  /**
+   * Where the bytes on screen came from.
+   *
+   * Required rather than defaulted to `"network"`, and the two new props are
+   * spelled at every call site for that reason: a default would mean a caller
+   * that forgot them shows a saved copy with no notice at all, which is the
+   * one failure section 26 names — cached content presented as if it were
+   * known to be current — arriving silently and passing every test.
+   */
+  readonly source: EditionSource;
+  /** When that copy was downloaded, or null when the response did not say. */
+  readonly copyDate: string | null;
 };
 
 export function EditionView({
   edition,
   freshness,
+  source,
+  copyDate,
 }: EditionViewProps): JSX.Element {
-  const notice = noticeFor(freshness);
+  // Composed in one pure function so that the six combinations of freshness and
+  // source can be read as a table rather than reconstructed from this JSX.
+  const notice = editionNotice(freshness, source, copyDate);
 
   /*
     The viewed store sits above the list, and only `markViewed` goes down.
@@ -143,7 +161,26 @@ export function EditionView({
         <time dateTime={edition.date}>{formatEditionDate(edition.date)}</time>
       </h1>
 
-      {notice === null ? null : <p className="edition-notice">{notice}</p>}
+      {notice === null ? null : (
+        <p className="edition-notice">
+          {notice.text}
+          {notice.copyDate === null ? null : (
+            <>
+              {" "}
+              {/* A second, separate instant from the publication line below,
+                  and the two must never be conflated: one is when the
+                  PUBLISHER issued this edition, the other is when THIS DEVICE
+                  received the copy being read. Each carries its own machine
+                  value. */}
+              Downloaded{" "}
+              <time dateTime={notice.copyDate}>
+                {formatEditionInstant(notice.copyDate)}
+              </time>
+              .
+            </>
+          )}
+        </p>
+      )}
 
       <p className="edition-freshness">
         Published{" "}
@@ -246,16 +283,4 @@ export function EditionView({
       />
     </>
   );
-}
-
-/** The one sentence that tells a reader this is not today's edition. */
-function noticeFor(freshness: EditionFreshness): string | null {
-  switch (freshness) {
-    case "current":
-      return null;
-    case "stale":
-      return "Today's edition is not published yet. This is the most recent edition.";
-    case "archived":
-      return "This is a past edition.";
-  }
 }

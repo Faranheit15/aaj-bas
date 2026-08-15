@@ -17,6 +17,15 @@
  * `editorialToday` is captured once, when a load resolves, and carried in the
  * state. Components stay pure functions of it, freshness never changes under a
  * reader mid-render, and no test needs fake timers.
+ *
+ * From AB-206 a ready state also carries where the edition came from. That is
+ * the acceptance criterion "a failed update does not delete the last good
+ * edition" as the reader experiences it: when the network is gone and the
+ * service worker answers out of its cache, this resolves READY with
+ * `source: "cache"` and one added sentence, not `failed`. `failed` is reached
+ * only when there is no copy to show — the request failed and nothing was
+ * cached — so an error screen now means an absence of content rather than an
+ * absence of signal.
  */
 import {
   type ContentSet,
@@ -30,6 +39,7 @@ import { type EditionFreshness, editionFreshness } from "./edition-freshness";
 import {
   type EditionFailureReason,
   editionRepository,
+  type EditionSource,
 } from "./edition-repository";
 import { editorialDay } from "./editorial-day";
 
@@ -39,6 +49,10 @@ export type EditionLoadState =
       readonly status: "ready";
       readonly edition: Edition;
       readonly freshness: EditionFreshness;
+      /** Where the EDITION on screen came from. Never where the index came from. */
+      readonly source: EditionSource;
+      /** When that copy was downloaded, or null when the response did not say. */
+      readonly copyDate: string | null;
       readonly contentSet: ContentSet;
       readonly editorialToday: string;
     }
@@ -143,6 +157,19 @@ async function loadEdition(
     // The edition's own date, not the requested one: a file served for a date
     // it does not carry is a mismatch the reader should see, not one to hide.
     freshness: editionFreshness(kind, edition.value.date, editorialToday),
+    /*
+      The EDITION's source, and `index.source` is deliberately unused.
+
+      The notice built from this is a sentence about the document on the
+      screen. The two can genuinely differ — a worker may answer a revalidating
+      pointer from its cache while the edition itself comes down the wire, and
+      the reverse happens the moment a new pointer names a day this device
+      already holds. Reading the index's source would then tell a reader their
+      freshly fetched edition was saved on this device, or hide that the
+      edition they are reading was.
+    */
+    source: edition.source,
+    copyDate: edition.copyDate,
     contentSet: index.value.contentSet,
     editorialToday,
   };

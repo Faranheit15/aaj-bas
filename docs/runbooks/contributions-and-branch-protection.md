@@ -67,7 +67,7 @@ On `refs/heads/develop`, for everyone except the bypass actor:
 | Rule | Effect |
 | --- | --- |
 | `pull_request` | No direct pushes. One approving review, and it must come from a code owner. |
-| `required_status_checks` | The `check` job must pass. |
+| `required_status_checks` | The `check` and `e2e` jobs must both pass. |
 | `deletion` | `develop` cannot be deleted. |
 | `non_fast_forward` | `develop` cannot be force-pushed. |
 
@@ -82,9 +82,17 @@ refers to the code that merges.
 merge preview of the branch into `develop`, so also requiring the branch be up to date would add
 rebases without adding real signal.
 
-The required check is named `check`, which is the job name in `.github/workflows/ci.yml`. **Renaming
-that job silently breaks this rule** — the ruleset would wait for a status that never arrives, and
-every pull request would be unmergeable. Update both together.
+The required checks are named `check` and `e2e`, which are the job names in
+`.github/workflows/ci.yml`. **Renaming either job silently breaks this rule** — the ruleset would
+wait for a status that never arrives, and every pull request would be unmergeable. Update both
+together.
+
+`e2e` is required separately rather than folded into `check` because it is a separate job by
+design. AGENTS.md section 30 and ADR-0010 keep `bun run e2e` out of `bun run check`: `check` is the
+local inner loop of every slice and must not need a browser download and a second language runtime.
+That makes it two jobs, so it has to be two required contexts — listing only `check` would leave
+the end-to-end suite running on every pull request and blocking none of them, which is the failure
+mode where a gate exists and enforces nothing.
 
 ## The bypass
 
@@ -114,7 +122,7 @@ If a push is rejected, either:
    ```bash
    gh api --method PUT /repos/Faranheit15/aaj-bas/branches/develop/protection --input - <<'JSON'
    {
-     "required_status_checks": { "strict": false, "contexts": ["check"] },
+     "required_status_checks": { "strict": false, "contexts": ["check", "e2e"] },
      "enforce_admins": false,
      "required_pull_request_reviews": {
        "required_approving_review_count": 1,

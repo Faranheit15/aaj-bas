@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "bun ../../scripts/stage-content.ts --include-sample-data && vite",
-    "build": "bun ../../scripts/stage-content.ts && tsc --noEmit && vite build",
+    "build": "bun ../../scripts/stage-content.ts && tsc --noEmit && vite build && bun ../../scripts/build-service-worker.ts",
     "test": "vitest run",
+    "e2e": "playwright test",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@aaj-bas/test-fixtures": "workspace:*",
+    "@playwright/test": "^1.62.1",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.0.0",
     "@types/react": "^19.0.0",

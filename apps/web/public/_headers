@@ -1,0 +1,21 @@
+# Response headers Cloudflare Pages adds to the static build.
+#
+# NEVER ADD A `Cache-Control` RULE FOR `/content/*`.
+#
+# ADR-0006 decided that a correction rewrites a dated edition file in place and
+# bumps `editionVersion`. An `immutable` or long `max-age` header on that path
+# would therefore hide a published correction from every reader who already
+# holds the earlier copy — a caching choice that silently suppresses the
+# correction record section 46 requires be visible. Pages already answers
+# `/content/*` with `max-age=0, must-revalidate` and an ETag, which revalidates
+# cheaply and still serves a 304, so there is nothing to gain here and a
+# correction to lose.
+#
+# `/assets/*` needs no rule either. Vite fingerprints those filenames by content
+# and the service worker precaches them by that name, so a changed asset is a
+# changed URL and the HTTP envelope never has to express the difference.
+#
+# One rule, for one file whose media type is worth stating rather than
+# inferring.
+/manifest.webmanifest
+  Content-Type: application/manifest+json

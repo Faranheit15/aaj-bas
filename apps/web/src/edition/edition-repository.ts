@@ -26,6 +26,9 @@
  * exactly like a successful fetch. Without the content-type check below, every
  * missing archive date would be reported to the reader as corrupt content. The
  * body is therefore only trusted as JSON when the response says it is JSON.
+ * That predicate is `json-content-type.ts` rather than a function here, because
+ * the service worker needs the same one on the write side: a copy that drifted
+ * would let the worker save an HTML document over a good cached edition.
  *
  * And the body is read as text and parsed here rather than through
  * `response.json()`, because that method collapses a connection dropped
@@ -37,6 +40,12 @@
  * there is nothing there; a 500, a 502 or a 429 is the host saying nothing
  * about the content at all. Collapsing them would let a CDN outage tell every
  * reader that the edition they are waiting for was never published.
+ *
+ * A successful result also says WHERE the bytes came from and WHEN they were
+ * sent. Both are read off the response and neither is inferred, because the
+ * alternatives are guesses: comparing `date` against the device clock would
+ * call a correct response cached whenever a reader's clock is skewed, and
+ * `navigator.onLine` describes a network adapter rather than a document.
  */
 
 import { createLogger } from "@aaj-bas/logger";
@@ -46,6 +55,32 @@ import {
   editionIndexSchema,
   editionSchema,
 } from "@aaj-bas/schemas";
+import { CACHE_SOURCE_HEADER } from "../service-worker/cache-names";
+import { isJson } from "./json-content-type";
+
+/**
+ * Where the bytes in hand came from.
+ *
+ * Named `source` rather than `offline` deliberately. Which of the two produced
+ * this document is knowable — the worker says so — while the reader's
+ * connectivity is not: `navigator.onLine` is false reliably and true
+ * meaninglessly, and a captive portal answers every request without reaching
+ * this origin. Everything the reader is told about a saved copy is therefore
+ * phrased as a fact about the copy.
+ */
+export type EditionSource = "network" | "cache";
+
+/**
+ * The header the service worker sets on a response it served from its cache.
+ *
+ * Declared in `service-worker/cache-names.ts` and re-exported here, rather than
+ * the other way round: this module imports Zod and reads `import.meta.env`, so
+ * a service worker cannot import from it at all, and the shared name has to
+ * live where both sides can reach it. Two copies of a string that must match,
+ * in files that are never edited together, would fail by silently reporting
+ * every cached edition as freshly fetched.
+ */
+export { CACHE_SOURCE_HEADER };
 
 export type EditionFailureReason =
   | "network"
@@ -55,7 +90,23 @@ export type EditionFailureReason =
   | "invalid";
 
 export type EditionResult<T> =
-  | { readonly ok: true; readonly value: T }
+  | {
+      readonly ok: true;
+      readonly value: T;
+      readonly source: EditionSource;
+      /**
+       * When the origin says it sent these bytes, as an ISO instant, or null
+       * when it did not say or said something unparseable.
+       *
+       * Null is a supported answer and not a defect to paper over. The one
+       * thing this field must never hold is a time this device invented:
+       * `Date.now()` here would put "Downloaded just now" under a copy saved
+       * last week, and it would also be the first reading timestamp this
+       * product has ever stored — the exact thing ADR-0007 rejected LRU
+       * eviction to avoid.
+       */
+      readonly copyDate: string | null;
+    }
   | { readonly ok: false; readonly reason: EditionFailureReason };
 
 export type EditionRepository = {
@@ -85,7 +136,12 @@ export const editionRepository: EditionRepository = {
       return { ok: false, reason: "invalid" };
     }
 
-    return { ok: true, value: parsed.data };
+    return {
+      ok: true,
+      value: parsed.data,
+      source: body.source,
+      copyDate: body.copyDate,
+    };
   },
 
   getByDate: async (date, signal) => {
@@ -105,7 +161,12 @@ export const editionRepository: EditionRepository = {
       return { ok: false, reason: "invalid" };
     }
 
-    return { ok: true, value: parsed.data };
+    return {
+      ok: true,
+      value: parsed.data,
+      source: body.source,
+      copyDate: body.copyDate,
+    };
   },
 };
 
@@ -159,25 +220,56 @@ async function fetchJson(
   }
 
   try {
-    return { ok: true, value: JSON.parse(text) as unknown };
+    return {
+      ok: true,
+      value: JSON.parse(text) as unknown,
+      source: sourceOf(response),
+      copyDate: copyDateOf(response),
+    };
   } catch {
     return { ok: false, reason: "malformed" };
   }
 }
 
+/**
+ * Whether the worker answered this request out of its cache.
+ *
+ * Presence of the header, not its value: the worker owns what it puts there,
+ * and a reader that also required a particular value would report a cached
+ * edition as freshly fetched the day the worker's wording changed.
+ */
+function sourceOf(response: Response): EditionSource {
+  return response.headers.get(CACHE_SOURCE_HEADER) === null
+    ? "network"
+    : "cache";
+}
+
+/**
+ * The `date` header, converted from RFC 7231 to ISO.
+ *
+ * Nothing new is stored to produce this. The header is already on the response
+ * the Cache API kept, so the download time travels with the copy it describes
+ * and is deleted with it — which is why this is the timestamp PRD section 7.2
+ * asks for and ADR-0007's privacy argument still permits.
+ *
+ * An absent or unparseable header yields null, and the sentence built from it
+ * disappears. Every alternative fabricates: the device clock is not when the
+ * copy arrived, and a rendered "Invalid Date" is worse than saying nothing.
+ */
+function copyDateOf(response: Response): string | null {
+  const header = response.headers.get("date");
+  if (header === null) {
+    return null;
+  }
+
+  const sent = new Date(header);
+
+  return Number.isNaN(sent.getTime()) ? null : sent.toISOString();
+}
+
 /** Whether a status is the host reporting that the document is not there. */
 function isMissing(status: number): boolean {
   return status === 404 || status === 410;
-}
-
-function isJson(contentType: string | null): boolean {
-  if (contentType === null) {
-    return false;
-  }
-
-  const mediaType = contentType.split(";")[0]?.trim().toLowerCase() ?? "";
-
-  return mediaType === "application/json" || mediaType.endsWith("+json");
 }
 
 /**

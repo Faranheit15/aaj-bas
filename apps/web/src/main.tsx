@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createLogger } from "@aaj-bas/logger";
 import { App } from "./App";
+import { registerServiceWorker } from "./register-service-worker";
 import "./styles.css";
 
 // The entry point owns the environment read: shared packages carry no
@@ -23,3 +24,10 @@ createRoot(rootElement).render(
     <App />
   </StrictMode>,
 );
+
+// After the render call, and the module itself waits for `load` before doing
+// anything: installing the worker fetches the whole shell, and the first
+// edition must not queue behind it (section 27). It is called unconditionally
+// here because every condition worth stating -- production, and a browser that
+// has the API -- is stated in one place, inside.
+registerServiceWorker();
