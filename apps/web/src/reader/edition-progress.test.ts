@@ -7,6 +7,7 @@ import {
   type EndingCopy,
   editionProgress,
   endingCopy,
+  isEditionOver,
   progressText,
 } from "./edition-progress";
 
@@ -80,6 +81,53 @@ describe("progressText", () => {
     expect(progressText(progress(6, 10))).toBe("6 of 10 viewed");
     expect(progressText(progress(0, 8))).toBe("0 of 8 viewed");
     expect(progressText(progress(8, 8))).toBe("8 of 8 viewed");
+  });
+});
+
+describe("isEditionOver", () => {
+  it("is true once every story on screen has been expanded", () => {
+    expect(isEditionOver(progress(8, 8), false)).toBe(true);
+  });
+
+  it("is true once the reader has ended it, however little they read", () => {
+    expect(isEditionOver(progress(3, 8), true)).toBe(true);
+    expect(isEditionOver(progress(0, 8), true)).toBe(true);
+  });
+
+  it("is false while the reader is still reading", () => {
+    expect(isEditionOver(progress(0, 8), false)).toBe(false);
+    expect(isEditionOver(progress(7, 8), false)).toBe(false);
+  });
+
+  it("does not call an empty list a finished edition", () => {
+    // The same guard `endingCopy` relies on: an edition that rendered nothing
+    // has not been read to the end, it has failed to appear.
+    expect(isEditionOver(progress(0, 0), false)).toBe(false);
+    expect(isEditionOver(progress(0, 0), true)).toBe(true);
+  });
+
+  it("is the same predicate that withdraws the end-edition control", () => {
+    /*
+      The reason this is exported rather than left inline in `endingCopy`.
+      AB-204's interest invitation appears at the end of the edition, which
+      means two places now have to agree on when that is; a second copy of the
+      expression would drift, and the drift would show as an invitation sitting
+      under a control still offering to end an edition that is already over.
+    */
+    for (const freshness of FRESHNESS_VALUES) {
+      for (const state of [
+        progress(0, 0),
+        progress(0, 8),
+        progress(3, 8),
+        progress(8, 8),
+      ]) {
+        for (const hasEnded of [false, true]) {
+          expect(endingCopy(freshness, state, hasEnded).endLabel === null).toBe(
+            isEditionOver(state, hasEnded),
+          );
+        }
+      }
+    }
   });
 });
 

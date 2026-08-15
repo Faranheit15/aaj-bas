@@ -1,3 +1,4 @@
+import { INTEREST_SLUGS, type InterestSlug } from "@aaj-bas/schemas";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { localStateV1Schema } from "./local-state";
 
@@ -16,6 +17,28 @@ type Store = typeof import("./local-state-store");
 
 const KEY = "aaj-bas.local-state";
 const EDITION = "2026-07-21";
+
+/**
+ * Every interest slug, alternated into one pattern.
+ *
+ * Built FROM the published vocabulary rather than typed out here, so that a
+ * slug a later slice adds is swept from the moment it exists. A hand-written
+ * list would be correct on the day it was written and silently short by one
+ * afterwards, which is the failure mode a privacy assertion can least afford.
+ */
+const anyInterestSlug = new RegExp(INTEREST_SLUGS.join("|"));
+
+/**
+ * A selection the type system would refuse, cast at one boundary on purpose.
+ *
+ * `rememberInterests` takes `InterestSlug`, so a well-typed caller cannot reach
+ * its entry gate at all — and the gate exists precisely for the caller that got
+ * it wrong, which in this application means our own selection UI carrying a
+ * bug. The cast is confined here so that no assertion below has to hide one.
+ */
+function selection(slugs: readonly string[]): readonly InterestSlug[] {
+  return slugs as readonly InterestSlug[];
+}
 
 async function freshStore(): Promise<Store> {
   vi.resetModules();
@@ -66,6 +89,43 @@ function spyOnWarn() {
 }
 
 /**
+ * The whole field vocabulary the store is allowed to report.
+ *
+ * Copied from the store's own comment, which calls the vocabulary closed. That
+ * sentence is what holds out the two things no pattern can catch — the COUNT
+ * of interests, and the bare fact that this reader has chosen at all — because
+ * neither can be written down without a field to carry it, and a field
+ * carrying one would have to appear here first. Without this list the sentence
+ * is a promise; with it, adding `interestCount` to a report fails the suite.
+ */
+const REPORTED_FIELDS = new Set([
+  "reason",
+  "storedVersion",
+  "issueCount",
+  "paths",
+]);
+
+/**
+ * The keys of one warning's fields object.
+ *
+ * The logger passes `("%s", line, fields)`, so the third argument is where
+ * every reportable fact has to live; anything interpolated into the line
+ * itself is caught by the value sweep below instead.
+ */
+function reportedFields(call: readonly unknown[]): string[] {
+  const fields = call[2];
+  if (fields === undefined) {
+    return [];
+  }
+
+  if (typeof fields !== "object" || fields === null) {
+    throw new Error("a warning carried fields that were not an object");
+  }
+
+  return Object.keys(fields);
+}
+
+/**
  * Every warning this file provokes, from the first line of every test.
  *
  * One spy, installed once and never re-created. `vi.spyOn` on an
@@ -103,6 +163,31 @@ afterEach(() => {
   */
   for (const call of warn.mock.calls) {
     expect(JSON.stringify(call)).not.toMatch(/story-|\d{4}-\d{2}-\d{2}/);
+    /*
+      And an interest, which is the strongest case of the three. A story id and
+      an edition date are things this product OBSERVED about a reader; an
+      interest is something the reader STATED, so it is more sensitive than
+      either, not less — a console line naming one is a stated preference
+      written down next to whatever else is on that console.
+
+      A count, and the bare fact that a reader has chosen at all, are equally
+      out and cannot be caught by a pattern. What holds them out is the field
+      closure asserted immediately below: a count needs a field to travel in,
+      and the vocabulary has no room for one.
+    */
+    expect(JSON.stringify(call)).not.toMatch(anyInterestSlug);
+    /*
+      And the closure itself, which is the half of the rule a value sweep
+      cannot reach. `{ interestCount: 2 }` names no slug and matches no
+      pattern, and neither does `{ hasChosen: true }`; both are preference
+      signals with no diagnostic value, and both are ruled out by there being
+      no field to put them in. Asserted over every call rather than inside the
+      tests that happen to check one, so a report added by a later slice is
+      covered from the moment it is emitted.
+    */
+    expect(
+      reportedFields(call).filter((field) => !REPORTED_FIELDS.has(field)),
+    ).toEqual([]);
   }
 
   if (realStorageAccess !== undefined) {
@@ -476,4 +561,166 @@ describe("a write the browser refuses", () => {
       expect(warn.mock.calls[0]?.[2]).toEqual({ reason: "write-refused" });
     },
   );
+});
+
+describe("remembering the interests the reader chose", () => {
+  it("survives a reload", async () => {
+    const store = await freshStore();
+
+    expect(store.rememberInterests(["sports", "technology-ai"])).toBe(true);
+
+    // A second module instance can only see this through the device.
+    const afterReload = await freshStore();
+
+    expect(afterReload.readInterests()).toEqual({
+      status: "answered",
+      interests: ["sports", "technology-ai"],
+    });
+  });
+
+  it("records an empty choice as an answer rather than as silence", async () => {
+    /*
+      Declining is an answer. Stored as an absent key it would read as "never
+      asked", and the reader who said no would be asked again on every load —
+      the nagging section 3.2 rules out, arriving through a storage decision
+      rather than through a product one.
+    */
+    const store = await freshStore();
+    expect(store.readInterests()).toEqual({ status: "unanswered" });
+
+    expect(store.rememberInterests([])).toBe(true);
+
+    const afterReload = await freshStore();
+    expect(afterReload.readInterests()).toEqual({
+      status: "answered",
+      interests: [],
+    });
+    expect(localStateV1Schema.parse(storedDocument()).interests).toEqual([]);
+  });
+
+  it("writes exactly one key, and it is the documented one", async () => {
+    const store = await freshStore();
+    store.rememberInterests(["sports"]);
+
+    expect(localStorage.length).toBe(1);
+    expect(localStorage.key(0)).toBe(KEY);
+  });
+
+  it("keeps the viewed sets and ended editions, because it reads before it writes", async () => {
+    // Three fields in one document, so a blind write from any side drops the
+    // other two. This is that, from the interests side.
+    const store = await freshStore();
+    store.rememberViewed(EDITION, "story-a");
+    store.rememberEnded(EDITION);
+
+    expect(store.rememberInterests(["sports"])).toBe(true);
+
+    expect(store.readViewedStoryIds(EDITION)).toEqual(new Set(["story-a"]));
+    expect(store.readEditionEnded(EDITION)).toBe(true);
+
+    const document = localStateV1Schema.parse(storedDocument());
+    expect(document.interests).toEqual(["sports"]);
+    expect(document.viewedByEdition[EDITION]).toEqual(["story-a"]);
+    expect(document.endedEditions).toEqual([EDITION]);
+  });
+
+  const rejectedSelections = [
+    { label: "a slug from no vocabulary at all", chosen: ["not-an-interest"] },
+    // `india` is a topic every reader gets and nobody opts into (PRD section
+    // 5.3), so the gate must check the INTEREST vocabulary and not the topic
+    // one. Written as its own case because the two schemas differ by exactly
+    // two slugs, and a gate using the wrong one passes every other test here.
+    { label: "a core topic that is not an interest", chosen: ["india"] },
+    {
+      label: "more interests than the cap allows",
+      chosen: ["sports", "technology-ai", "business-economy"],
+    },
+    { label: "the same interest twice", chosen: ["sports", "sports"] },
+    { label: "a slug that is not lowercase", chosen: ["Sports"] },
+    { label: "an empty slug", chosen: [""] },
+  ];
+
+  it.each(rejectedSelections)("refuses $label", async ({ chosen }) => {
+    /*
+      Refused whole, never trimmed to fit. The only caller is our own selection
+      UI, so any of these is a bug in this application, and storing the first
+      two of three would bury it under a document that reads as correct. The
+      reader keeps whatever they had, and the developer gets one line.
+    */
+    const store = await freshStore();
+    store.rememberViewed(EDITION, "story-a");
+    const before = localStorage.getItem(KEY);
+
+    expect(store.rememberInterests(selection(chosen))).toBe(false);
+
+    // Byte-identical: nothing was written, not even a document that happens to
+    // be equivalent.
+    expect(localStorage.getItem(KEY)).toBe(before);
+    expect(store.readViewedStoryIds(EDITION)).toEqual(new Set(["story-a"]));
+    expect(store.readInterests()).toEqual({ status: "unanswered" });
+    expect(warn).toHaveBeenCalledTimes(1);
+    // The reason, and nothing else: not the slugs, not how many there were.
+    // `afterEach` sweeps this call for every slug in the vocabulary.
+    expect(warn.mock.calls[0]?.[2]).toEqual({ reason: "unwritable-values" });
+  });
+
+  it("is neither read from nor written over when a newer build wrote the document", async () => {
+    const foreign = JSON.stringify({
+      schemaVersion: 2,
+      interests: ["sports"],
+      somethingThisBuildHasNeverHeardOf: true,
+    });
+    localStorage.setItem(KEY, foreign);
+
+    const store = await freshStore();
+
+    // Not `unanswered`: this reader may well have answered, in a document this
+    // build cannot read. Inviting them again would ask a question whose answer
+    // it is also about to refuse to store.
+    expect(store.readInterests()).toEqual({ status: "unknown" });
+
+    expect(store.rememberInterests(["technology-ai"])).toBe(false);
+
+    expect(localStorage.getItem(KEY)).toBe(foreign);
+  });
+
+  it("reads unknown and writes nothing when storage cannot be read", async () => {
+    const store = await freshStore();
+    vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => {
+      throw new DOMException("storage is blocked", "SecurityError");
+    });
+
+    expect(store.readInterests()).toEqual({ status: "unknown" });
+    // A read that failed says nothing about what is under the key, so a write
+    // could be overwriting a newer build's document. It does not happen.
+    expect(store.rememberInterests(["sports"])).toBe(false);
+    expect(localStorage.length).toBe(0);
+  });
+
+  it("says the write did not happen when the browser refuses it", async () => {
+    /*
+      The reason this one function returns a boolean where `rememberViewed` and
+      `rememberEnded` return nothing. Those record something the reader can see
+      on screen either way; this records a choice the product told them would
+      apply. Returning silently here would leave the interface asserting
+      something the store knows to be untrue (section 37).
+    */
+    const store = await freshStore();
+    store.rememberViewed(EDITION, "story-a");
+    const before = localStorage.getItem(KEY);
+
+    // The file-wide spy, deliberately not a fresh one; see the comment on the
+    // refused-write test above.
+    vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+      throw new DOMException("refused", "QuotaExceededError");
+    });
+
+    expect(store.rememberInterests(["sports"])).toBe(false);
+    expect(store.rememberInterests(["technology-ai"])).toBe(false);
+
+    expect(localStorage.getItem(KEY)).toBe(before);
+    // Once for the whole page load, however many times the reader retries.
+    expect(warn).toHaveBeenCalledTimes(1);
+    expect(warn.mock.calls[0]?.[2]).toEqual({ reason: "write-refused" });
+  });
 });

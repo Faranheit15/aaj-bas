@@ -1,14 +1,19 @@
 import { describe, expect, it } from "vitest";
 import {
+  canonicalInterests,
+  chosenInterests,
   EMPTY_LOCAL_STATE,
+  hasChosenInterests,
   hasEndedEdition,
   LOCAL_STATE_VERSION,
   type LocalStateV1,
+  MAX_INTERESTS,
   MAX_REMEMBERED_EDITIONS,
   readLocalState,
   toCurrentVersion,
   viewedStoryIds,
   withEndedEdition,
+  withInterests,
   withViewedStory,
 } from "./local-state";
 
@@ -148,6 +153,35 @@ describe("reading a stored document", () => {
     {
       label: "endedEditions that is not an array",
       raw: '{"schemaVersion":1,"viewedByEdition":{},"endedEditions":"2026-07-21"}',
+    },
+    /*
+      The bound on the interests field's deliberate leniency. It accepts a slug
+      this build has never heard of, because the vocabulary is a product
+      decision that may change under a device that cannot be migrated — but
+      that is leniency about the VOCABULARY, not about the shape. A value no
+      build of this application could have written is still corruption, and
+      answering `usable` for one would hand the accessors something they were
+      never typed to receive.
+    */
+    {
+      label: "interests as a bare string",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"interests":"sports"}',
+    },
+    {
+      label: "interests as null",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"interests":null}',
+    },
+    {
+      label: "interests as a number",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"interests":42}',
+    },
+    {
+      label: "interests holding a number",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"interests":[42]}',
+    },
+    {
+      label: "interests holding something that is not an identifier",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"interests":["Sports"]}',
     },
   ];
 
@@ -525,4 +559,263 @@ describe("bounding how many ended editions are remembered", () => {
       JSON.stringify(endingOnTheNewest),
     );
   });
+});
+
+describe("choosing interests", () => {
+  /** A stored document holding exactly this selection, as bytes off a device. */
+  function interestsDocument(interests: readonly unknown[]): string {
+    return JSON.stringify({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: { [EDITION]: ["story-a"] },
+      interests,
+    });
+  }
+
+  it("reads a document written before the field existed", () => {
+    /*
+      The compatibility assertion ADR-0007 asks of every additive field, and
+      the reason this one is optional. Every document already on a reader's
+      device looks like this; required, it would read as `replaceable` and the
+      next write would take the viewed sets with it — a month of archive
+      browsing spent on adding a two-element array.
+    */
+    const stored = JSON.stringify({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: { [EDITION]: ["story-a"] },
+    });
+
+    expect(readLocalState(stored).kind).toBe("usable");
+    expect(hasChosenInterests(usable(stored))).toBe(false);
+    expect(chosenInterests(usable(stored))).toEqual([]);
+    expect(viewedStoryIds(usable(stored), EDITION)).toEqual(
+      new Set(["story-a"]),
+    );
+    // An additive optional field does not bump the version (ADR-0007).
+    expect(LOCAL_STATE_VERSION).toBe(1);
+  });
+
+  it("tells a reader who chose none apart from one who was never asked", () => {
+    /*
+      The load-bearing distinction of the whole field, and the reason
+      `hasChosenInterests` reads the key rather than the length. Read as a
+      count, "I was asked and chose none" becomes "I have not been asked", and
+      the invitation returns on every load for the one reader who has already
+      declined it.
+    */
+    const answered = usable(interestsDocument([]));
+    const neverAsked = usable(
+      JSON.stringify({
+        schemaVersion: LOCAL_STATE_VERSION,
+        viewedByEdition: {},
+      }),
+    );
+
+    expect(hasChosenInterests(answered)).toBe(true);
+    expect(chosenInterests(answered)).toEqual([]);
+    expect(hasChosenInterests(neverAsked)).toBe(false);
+    expect(chosenInterests(neverAsked)).toEqual([]);
+  });
+
+  it("writes the key for an empty choice, so declining is recorded", () => {
+    // Asserted through the serialised form: a writer that elided the empty
+    // array would satisfy an in-memory check and still store silence.
+    const written = withInterests(EMPTY_LOCAL_STATE, []);
+
+    expect(JSON.parse(JSON.stringify(written))).toHaveProperty("interests", []);
+    expect(hasChosenInterests(usable(JSON.stringify(written)))).toBe(true);
+  });
+
+  it("stays usable when the device holds a slug this build does not know", () => {
+    /*
+      The leniency the schema argues for, from the reader's side. A slice that
+      renames or retires an interest must not turn every device holding the old
+      slug into a document the next write destroys — `slugs.ts` calls a rename
+      "a content migration across the archive", and nothing migrates a device.
+    */
+    const stored = interestsDocument(["sports", "space-exploration"]);
+
+    expect(readLocalState(stored).kind).toBe("usable");
+    expect(hasChosenInterests(usable(stored))).toBe(true);
+    expect(chosenInterests(usable(stored))).toEqual(["sports"]);
+    expect(viewedStoryIds(usable(stored), EDITION)).toEqual(
+      new Set(["story-a"]),
+    );
+  });
+
+  it("hands an unknown slug back untouched when a story is expanded", () => {
+    /*
+      Why the filtering lives in the accessor and never in the schema. A
+      `.transform` there would strip the slug on this read-modify-write, so a
+      reader served this bundle from a stale edge would lose the preference
+      their newer bundle wrote — silently, on the next card they opened.
+    */
+    const stored = interestsDocument(["space-exploration"]);
+
+    const written = JSON.stringify(
+      withViewedStory(usable(stored), EDITION, "story-b"),
+    );
+
+    expect(JSON.parse(written)).toHaveProperty("interests", [
+      "space-exploration",
+    ]);
+  });
+
+  it("reads two of three stored slugs, and rewrites none of them", () => {
+    /*
+      A third slug can only have come from a build whose cap was higher, so
+      this build reads within its own cap and leaves the array alone. Narrowing
+      it on the way past would be an older bundle truncating a newer bundle's
+      choice — the version rule, arrived at from inside a field.
+    */
+    const stored = interestsDocument([
+      "technology-ai",
+      "sports",
+      "business-economy",
+    ]);
+    const state = usable(stored);
+
+    expect(chosenInterests(state)).toEqual(["business-economy", "sports"]);
+    expect(chosenInterests(state)).toHaveLength(MAX_INTERESTS);
+
+    const written = JSON.stringify(withEndedEdition(state, EDITION));
+
+    expect(JSON.parse(written)).toHaveProperty("interests", [
+      "technology-ai",
+      "sports",
+      "business-economy",
+    ]);
+  });
+
+  it("reads a duplicated slug once", () => {
+    // Nothing in JSON stops a device holding the same slug twice, and a
+    // duplicate would spend one of the two slots the reader is entitled to.
+    const stored = interestsDocument(["sports", "sports"]);
+
+    expect(chosenInterests(usable(stored))).toEqual(["sports"]);
+  });
+
+  it("reads nothing out of a document written by a newer build", () => {
+    // The version probe runs first, and the field's leniency never gets a
+    // chance to apply to someone else's document.
+    const newer = JSON.stringify({
+      schemaVersion: 2,
+      viewedByEdition: {},
+      interests: ["sports"],
+    });
+
+    expect(readLocalState(newer)).toEqual({ kind: "foreign" });
+  });
+
+  it("keeps the viewed sets, ended editions and unknown top-level keys", () => {
+    const stored = JSON.stringify({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: { [EDITION]: ["story-a"] },
+      endedEditions: [EDITION],
+      preferredTheme: "dark",
+    });
+
+    const written = JSON.stringify(withInterests(usable(stored), ["sports"]));
+
+    // Through the serialised form, because that is what the device keeps.
+    expect(JSON.parse(written)).toMatchObject({
+      preferredTheme: "dark",
+      endedEditions: [EDITION],
+      viewedByEdition: { [EDITION]: ["story-a"] },
+      interests: ["sports"],
+    });
+  });
+
+  it("survives a story being expanded", () => {
+    // Both writes rebuild the document from a spread, so either can drop the
+    // other's field. This is the mirror the `endedEditions` tests already keep.
+    const chosen = withInterests(EMPTY_LOCAL_STATE, ["sports"]);
+
+    const written = withViewedStory(chosen, EDITION, "story-a");
+
+    expect(chosenInterests(written)).toEqual(["sports"]);
+    expect(JSON.parse(JSON.stringify(written))).toHaveProperty("interests", [
+      "sports",
+    ]);
+  });
+
+  it("survives an edition being ended", () => {
+    const chosen = withInterests(EMPTY_LOCAL_STATE, ["sports"]);
+
+    const written = withEndedEdition(chosen, EDITION);
+
+    expect(chosenInterests(written)).toEqual(["sports"]);
+    expect(hasEndedEdition(written, EDITION)).toBe(true);
+    expect(JSON.parse(JSON.stringify(written))).toHaveProperty("interests", [
+      "sports",
+    ]);
+  });
+
+  it("replaces the selection rather than adding to it", () => {
+    /*
+      The one place this write differs from the other two, and the reason it
+      cannot be copied from them: appending would put the cap out of reach and
+      turn "change my preferences" into "accumulate preferences".
+    */
+    const first = withInterests(EMPTY_LOCAL_STATE, ["sports", "technology-ai"]);
+
+    const changed = withInterests(first, ["culture-entertainment"]);
+
+    expect(chosenInterests(changed)).toEqual(["culture-entertainment"]);
+    expect(JSON.parse(JSON.stringify(changed))).toHaveProperty("interests", [
+      "culture-entertainment",
+    ]);
+  });
+
+  it("is idempotent", () => {
+    const once = withInterests(EMPTY_LOCAL_STATE, ["sports"]);
+    const twice = withInterests(once, ["sports"]);
+
+    expect(twice).toEqual(once);
+    expect(JSON.stringify(twice)).toBe(JSON.stringify(once));
+  });
+
+  it("sorts the slugs, so the same choice is the same bytes", () => {
+    const ticked = withInterests(EMPTY_LOCAL_STATE, [
+      "technology-ai",
+      "sports",
+    ]);
+    const tickedInReverse = withInterests(EMPTY_LOCAL_STATE, [
+      "sports",
+      "technology-ai",
+    ]);
+
+    expect(JSON.stringify(ticked)).toBe(JSON.stringify(tickedInReverse));
+    // Sorted, so the document does not record which box was ticked first.
+    expect(ticked.interests).toEqual(["sports", "technology-ai"]);
+  });
+
+  it("writes no such key for a reader who has not been asked", () => {
+    // `EMPTY_LOCAL_STATE` carrying `interests: []` would tell every device its
+    // reader answered an invitation they were never shown.
+    expect(JSON.parse(JSON.stringify(EMPTY_LOCAL_STATE))).not.toHaveProperty(
+      "interests",
+    );
+    expect(hasChosenInterests(EMPTY_LOCAL_STATE)).toBe(false);
+
+    const written = JSON.parse(
+      JSON.stringify(withViewedStory(EMPTY_LOCAL_STATE, EDITION, "story-a")),
+    );
+
+    expect(written).not.toHaveProperty("interests");
+  });
+
+  it.each(["__proto__", "constructor", "toString", "valueOf"])(
+    "discards %s stored as an interest without throwing",
+    (name) => {
+      /*
+        Exercised through the accessor rather than through a stored document,
+        because such a document never validates — none of these names is a
+        well-formed identifier. What is asserted is that the filtering itself
+        compares values and looks nothing up, so a name from `Object.prototype`
+        cannot become a slug the ranking is handed.
+      */
+      expect(() => canonicalInterests([name])).not.toThrow();
+      expect(canonicalInterests([name])).toEqual([]);
+    },
+  );
 });

@@ -25,6 +25,15 @@
  *   control "persistent", and that word is exactly the one a later reader could
  *   mistake for "pinned to the viewport".
  *
+ * AB-204's interest picker joins the same two arguments rather than adding new
+ * ones, which is why it needs no test of its own here beyond being present in
+ * the positive pair below. It makes both sharper. The invitation APPEARS,
+ * mid-edition, so it is the one block in the reader that looks like it should
+ * fade or slide in — and a block that animates itself into view has announced
+ * its arrival, which is exactly what the component is arranged not to do. A
+ * fieldset pinned to the viewport would be a standing prompt to answer,
+ * travelling down the page with the reader.
+ *
  * Motion is asserted absent rather than gated. `prefers-reduced-motion`
  * compliance (section 25) follows from there being no motion at all: with no
  * `animation` and no `transition` anywhere there is nothing for the query to
@@ -65,6 +74,8 @@ describe("the reader stylesheet", () => {
     expect(declarations).toContain(".edition-ending {");
     expect(declarations).toContain(".edition-ending-message {");
     expect(declarations).toContain(".edition-progress {");
+    expect(declarations).toContain(".interest-boosts {");
+    expect(declarations).toContain(".interest-choices {");
   });
 
   it("animates nothing, so there is no motion to reduce", () => {

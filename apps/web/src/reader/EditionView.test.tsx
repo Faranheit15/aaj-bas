@@ -18,6 +18,7 @@ import {
 import { localStateV1Schema } from "../local-state/local-state";
 import {
   LOCAL_STATE_KEY,
+  rememberInterests,
   rememberViewed,
 } from "../local-state/local-state-store";
 import { EditionView } from "./EditionView";
@@ -194,21 +195,120 @@ function progressLine(container: HTMLElement): HTMLElement {
   );
 }
 
-/** How many cards the page actually rendered. Never a literal. */
+/**
+ * How many cards the page actually rendered. Never a literal.
+ *
+ * Scoped to the story list rather than to every `listitem` on the page: the
+ * interest picker renders its six options as a list too, so an unscoped count
+ * would silently add them to the edition's size and print "0 of 16" the moment
+ * the invitation appeared.
+ */
 function cardCount(): number {
-  return screen.getAllByRole("listitem").length;
+  return storyCards().length;
 }
 
 /**
- * A story in the file that this render deliberately does not show.
+ * The story cards, and nothing else that happens to be a list item.
  *
- * The interest pool AB-204 will select from. Used to seed the device with a
- * viewed id the reader cannot see on the page, which is the real shape of the
- * bug it guards against rather than an invented identifier.
+ * Two things on this page render list items that are not cards, and both would
+ * silently inflate a bare `getAllByRole("listitem")`: the interest picker's six
+ * options, and the source list an expanded card unfolds inside itself. Matching
+ * the card element directly is immune to both, so a count taken after the
+ * reader has opened something still means what it says.
  */
+function storyCards(): HTMLElement[] {
+  const list = present(
+    document.querySelector<HTMLElement>(".edition-stories"),
+    "the story list",
+  );
+  return [...list.querySelectorAll<HTMLElement>(":scope > .edition-story")];
+}
+
+/** The first pooled story, which the published edition is small enough to show. */
 const poolStory: Story = present(
   edition.stories.find((story) => !edition.coreStoryIds.includes(story.id)),
   "an interest-pool story",
+);
+
+/**
+ * The same edition with a deeper pool than a reader can be shown.
+ *
+ * The published sample carries exactly two pooled stories, so every reader sees
+ * all of them and "a story this render does not show" does not exist in it.
+ * That is a property of one file, not of the product: an edition may offer any
+ * number of candidates, and the tests that matter most here — the denominator
+ * counts the page rather than the file, and the counter ignores a stored id
+ * that is not on screen — are exactly the ones that need a pool bigger than the
+ * two slots it fills.
+ *
+ * Built by cloning a real pooled story rather than inventing one, so the topic
+ * still matches its pool and the sources still resolve, and parsed through
+ * `editionSchema` so a fixture that drifted out of contract fails here.
+ */
+const wideEdition: Edition = editionSchema.parse({
+  ...edition,
+  stories: [
+    ...edition.stories,
+    { ...poolStory, id: `${poolStory.id}-second` },
+    { ...poolStory, id: `${poolStory.id}-third` },
+  ],
+  interestPools: {
+    ...edition.interestPools,
+    [poolStory.topic]: [
+      ...(edition.interestPools[
+        poolStory.topic as keyof typeof edition.interestPools
+      ] ?? []),
+      `${poolStory.id}-second`,
+      `${poolStory.id}-third`,
+    ],
+  },
+} as unknown);
+
+/**
+ * An edition whose two pools can each supply both slots.
+ *
+ * `wideEdition` deepens one pool, which is enough to prove that the page shows
+ * fewer stories than the file holds. It cannot show that a CHOICE changes the
+ * selection, because with one deep pool the same two stories win either way.
+ * This fixture gives both pools two candidates, so a reader who boosts one
+ * topic receives both of that topic's stories and a reader who boosts nothing
+ * receives one from each — a difference the reader can see.
+ */
+const twoPoolEdition: Edition = editionSchema.parse({
+  ...edition,
+  stories: [
+    ...edition.stories,
+    ...edition.stories
+      .filter((story) => !edition.coreStoryIds.includes(story.id))
+      .map((story) => ({ ...story, id: `${story.id}-extra` })),
+  ],
+  interestPools: Object.fromEntries(
+    Object.entries(edition.interestPools).map(([interest, ids]) => [
+      interest,
+      [...(ids ?? []), ...(ids ?? []).map((id) => `${id}-extra`)],
+    ]),
+  ),
+} as unknown);
+
+/** The headlines the page is showing, in order, cards only. */
+function renderedHeadlines(): string[] {
+  return storyCards().map(
+    (card) => within(card).getByRole("heading", { level: 2 }).textContent ?? "",
+  );
+}
+
+/**
+ * A pooled story that a render of `wideEdition` leaves out.
+ *
+ * Resolved by rendering nothing and reasoning from the contract: only two
+ * pooled stories reach the page, so with four candidates at least one is
+ * always absent. Used to seed the device with a viewed id the reader cannot
+ * see, which is the real shape of the bug it guards rather than an invented
+ * identifier.
+ */
+const unseenPoolStory: Story = present(
+  wideEdition.stories.find((story) => story.id === `${poolStory.id}-third`),
+  "a pooled story left off the page",
 );
 
 /** The block at the end of the edition, in whichever state it is in. */
@@ -262,14 +362,37 @@ describe("a rendered edition", () => {
     );
   });
 
-  it("renders the eight core stories, not the ten reachable ones", () => {
-    // The file holds the core eight plus the interest pools. Rendering
-    // `edition.stories` would hand every reader the pool as well, which is the
-    // selection AB-204 owns.
-    render(<EditionView edition={edition} freshness="current" />);
+  it("renders ten stories: the shared eight, then two from the pools", () => {
+    /*
+      The whole edition, and the same size for every reader. Interests decide
+      WHICH two pooled stories arrive, never how many — a reader who has chosen
+      nothing still gets ten. Eight-until-you-choose would make the invitation
+      below the list a prompt whose payoff is more content (section 3.2).
 
-    expect(edition.stories.length).toBeGreaterThan(8);
-    expect(screen.getAllByRole("listitem")).toHaveLength(8);
+      Rendered against `wideEdition`, whose pool holds four candidates, so this
+      also fails if the component maps `edition.stories` and hands the reader
+      the entire pool.
+    */
+    render(<EditionView edition={wideEdition} freshness="current" />);
+
+    const cards = storyCards();
+    expect(cards).toHaveLength(10);
+    expect(wideEdition.stories.length).toBeGreaterThan(10);
+  });
+
+  it("puts the shared core first, in the order the edition ranked it", () => {
+    /*
+      `coreStoryIds` order IS the editorial ranking. Appending the pooled
+      stories keeps positions one to eight naming the same stories for every
+      reader; interleaving would make the ranking of shared stories depend on a
+      preference, which nothing in the product authorises (section 22).
+    */
+    render(<EditionView edition={wideEdition} freshness="current" />);
+
+    const headlines = screen
+      .getAllByRole("heading", { level: 2 })
+      .map((heading) => heading.textContent);
+    expect(headlines.slice(0, 8)).toEqual(coreHeadlines);
   });
 
   it("gives every story a second-level heading", () => {
@@ -280,7 +403,8 @@ describe("a rendered edition", () => {
     const headlines = screen
       .getAllByRole("heading", { level: 2 })
       .map((heading) => heading.textContent);
-    expect(headlines).toEqual(coreHeadlines);
+    expect(headlines).toHaveLength(cardCount());
+    expect(headlines.slice(0, 8)).toEqual(coreHeadlines);
   });
 
   it("numbers each card against the cards actually on the page", () => {
@@ -292,11 +416,13 @@ describe("a rendered edition", () => {
       not tell the difference. Counting the rendered list items means this
       fails the moment the two numbers disagree, whatever they are.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    render(<EditionView edition={wideEdition} freshness="current" />);
 
-    const cards = screen.getAllByRole("listitem");
+    const cards = storyCards();
     const total = cards.length;
-    expect(total).toBeLessThan(edition.stories.length);
+    // Rendered from `wideEdition`, whose pool is deeper than the two slots it
+    // fills, so the file genuinely holds more stories than the page shows.
+    expect(total).toBeLessThan(wideEdition.stories.length);
 
     cards.forEach((card, index) => {
       expect(
@@ -383,7 +509,7 @@ describe("a rendered edition", () => {
     */
     render(<EditionView edition={edition} freshness="current" />);
 
-    for (const card of screen.getAllByRole("listitem")) {
+    for (const card of storyCards()) {
       expect(toggleIn(card)).toHaveAttribute("aria-expanded", "false");
     }
     expect(screen.queryAllByRole("link")).toHaveLength(0);
@@ -394,7 +520,7 @@ describe("expanding a story", () => {
   it("reveals that story's sources and leaves the other cards shut", () => {
     render(<EditionView edition={edition} freshness="current" />);
 
-    const cards = screen.getAllByRole("listitem");
+    const cards = storyCards();
     const first = present(cards[0], "the first card");
     fireEvent.click(toggleIn(first));
 
@@ -494,7 +620,7 @@ describe("what an expanded card leaves on the device", () => {
     // what was opened, not the shape of the page the reader left behind.
     // Scoped to the cards: the end-edition control is a button on this page too,
     // and it is not a disclosure.
-    for (const card of screen.getAllByRole("listitem")) {
+    for (const card of storyCards()) {
       expect(toggleIn(card)).toHaveAttribute("aria-expanded", "false");
     }
   });
@@ -527,7 +653,7 @@ describe("what an expanded card leaves on the device", () => {
       // storage. Counted by headline rather than by list item: an expanded
       // card contributes its own source list, so list items are no longer the
       // count of stories once one is open.
-      expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(8);
+      expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(10);
       expect(container).not.toHaveTextContent(/storage|saved|offline/i);
     } finally {
       setItem.mockRestore();
@@ -548,7 +674,7 @@ describe("recording which stories were viewed", () => {
     render(<EditionView edition={edition} freshness="current" />);
     expect(viewedIds()).toEqual([]);
 
-    const cards = screen.getAllByRole("listitem");
+    const cards = storyCards();
     fireEvent.click(toggleIn(present(cards[1], "the second card")));
     fireEvent.click(toggleIn(present(cards[4], "the fifth card")));
 
@@ -570,7 +696,7 @@ describe("recording which stories were viewed", () => {
     // browsed rather than of what they opened.
     render(<EditionView edition={edition} freshness="current" />);
 
-    const first = present(screen.getAllByRole("listitem")[0], "the first card");
+    const first = present(storyCards()[0], "the first card");
     // Held rather than re-queried: an expanded card has a second button in it,
     // and React keeps this node across the re-render either way.
     const toggle = toggleIn(first);
@@ -615,7 +741,7 @@ describe("how much of the edition has been opened", () => {
       <EditionView edition={edition} freshness="current" />,
     );
 
-    const cards = screen.getAllByRole("listitem");
+    const cards = storyCards();
     const total = cards.length;
     cards.forEach((card, index) => {
       expect(
@@ -635,7 +761,7 @@ describe("how much of the edition has been opened", () => {
     );
     const total = cardCount();
 
-    const cards = screen.getAllByRole("listitem");
+    const cards = storyCards();
     fireEvent.click(toggleIn(present(cards[0], "the first card")));
     fireEvent.click(toggleIn(present(cards[3], "the fourth card")));
 
@@ -651,11 +777,11 @@ describe("how much of the edition has been opened", () => {
       a numerator the reader cannot reconcile with anything in front of them,
       and in the worst case one larger than the denominator.
     */
-    rememberViewed(edition.date, coreStoryAt(0).id);
-    rememberViewed(edition.date, poolStory.id);
+    rememberViewed(wideEdition.date, coreStoryAt(0).id);
+    rememberViewed(wideEdition.date, unseenPoolStory.id);
 
     const { container } = render(
-      <EditionView edition={edition} freshness="current" />,
+      <EditionView edition={wideEdition} freshness="current" />,
     );
 
     const total = cardCount();
@@ -714,7 +840,7 @@ describe("how much of the edition has been opened", () => {
     // open.
     const total = cardCount();
 
-    const cards = screen.getAllByRole("listitem");
+    const cards = storyCards();
     fireEvent.click(toggleIn(present(cards[0], "the first card")));
     fireEvent.click(toggleIn(present(cards[1], "the second card")));
 
@@ -753,13 +879,18 @@ describe("ending the edition", () => {
       doing something the product allows, so there is nothing to undo.
     */
     render(<EditionView edition={edition} freshness="current" />);
-    const headlinesBefore = screen.getAllByRole("heading", { level: 2 }).length;
 
-    const cards = screen.getAllByRole("listitem");
+    const cards = storyCards();
     const first = toggleIn(present(cards[0], "the first card"));
     const third = toggleIn(present(cards[2], "the third card"));
     fireEvent.click(first);
     fireEvent.click(third);
+
+    // Counted after the expands and before the ending, so the comparison is
+    // about what ENDING changed. Taking it before would also fold in the
+    // interest invitation, which the second expand legitimately brings onto the
+    // page and which has nothing to do with the claim under test.
+    const headlinesBefore = screen.getAllByRole("heading", { level: 2 }).length;
 
     pressEnd();
 
@@ -776,9 +907,7 @@ describe("ending the edition", () => {
     // the links an expanded card legitimately contributes, so this is about
     // what ending adds rather than about the page being empty.
     render(<EditionView edition={edition} freshness="current" />);
-    fireEvent.click(
-      toggleIn(present(screen.getAllByRole("listitem")[0], "the first card")),
-    );
+    fireEvent.click(toggleIn(present(storyCards()[0], "the first card")));
     const linksBefore = screen.getAllByRole("link").length;
     expect(linksBefore).toBeGreaterThan(0);
 
@@ -811,10 +940,42 @@ describe("ending the edition", () => {
     );
 
     const main = screen.getByRole("main");
+    const sequence = (): string[] =>
+      [...main.children].map((child) => child.className || child.tagName);
+
+    /*
+      The whole sequence, not just the ending's neighbour.
+
+      A `previousElementSibling` check says only what is directly above the
+      ending, so anything inserted higher up — a second list, a recommendation
+      strip, a prompt between the counter and the stories — passes it. Listing
+      the children names every position instead, which is what makes "nothing
+      continues the edition" an assertion about the page rather than about one
+      gap in it.
+    */
+    expect(sequence()).toEqual([
+      "H1",
+      "edition-freshness",
+      "edition-progress",
+      "edition-stories",
+      "edition-ending",
+    ]);
+
+    // And again once the interest invitation is on the page: it takes the one
+    // slot between the list and the ending, and the ending is still last.
+    const cards = storyCards();
+    fireEvent.click(toggleIn(present(cards[0], "the first card")));
+    fireEvent.click(toggleIn(present(cards[1], "the second card")));
+
+    expect(sequence()).toEqual([
+      "H1",
+      "edition-freshness",
+      "edition-progress",
+      "edition-stories",
+      "interest-boosts",
+      "edition-ending",
+    ]);
     expect(main.lastElementChild).toHaveClass("edition-ending");
-    expect(main.lastElementChild?.previousElementSibling).toBe(
-      screen.getByRole("list"),
-    );
   });
 
   it("stays ended on the first render after a remount", () => {
@@ -953,19 +1114,37 @@ describe("ending the edition", () => {
       not that one particular string is absent. Every button left on the page is
       a card's disclosure, which is what makes the count an argument rather than
       a number that happens to match.
+
+      The interest picker is excluded by NAME rather than by count, and the
+      distinction matters. Ending the edition is one of PRD section 7.1's two
+      triggers for the invitation, so its controls appear here legitimately and
+      an unscoped count would simply absorb them — along with anything else a
+      later slice put beside them. Excluding one named block keeps the rest of
+      the page counted, so a control added anywhere outside it still fails.
     */
-    render(<EditionView edition={edition} freshness="current" />);
+    const { container } = render(
+      <EditionView edition={edition} freshness="current" />,
+    );
     const cards = cardCount();
+    const outsideThePicker = (): HTMLElement[] =>
+      screen
+        .getAllByRole("button")
+        .filter((button) => button.closest(".interest-boosts") === null);
+
     // The cards' toggles, plus the one control that ends the edition.
-    expect(screen.getAllByRole("button")).toHaveLength(cards + 1);
+    expect(outsideThePicker()).toHaveLength(cards + 1);
 
     pressEnd();
 
-    const remaining = screen.getAllByRole("button");
+    const remaining = outsideThePicker();
     expect(remaining).toHaveLength(cards);
     for (const button of remaining) {
       expect(button).toHaveAttribute("aria-expanded");
     }
+
+    // And the picker really is the only other thing on the page, so the filter
+    // above cannot be hiding a control that was smuggled in beside it.
+    expect(container.querySelectorAll(".interest-boosts").length).toBe(1);
   });
 
   it("stays ended when the reader keeps reading afterwards", () => {
@@ -983,9 +1162,7 @@ describe("ending the edition", () => {
     */
     const first = render(<EditionView edition={edition} freshness="current" />);
     pressEnd();
-    fireEvent.click(
-      toggleIn(present(screen.getAllByRole("listitem")[0], "the first card")),
-    );
+    fireEvent.click(toggleIn(present(storyCards()[0], "the first card")));
     expect(endControl()).toBeNull();
     first.unmount();
 
@@ -1022,7 +1199,7 @@ describe("ending the edition", () => {
     const { container } = render(
       <EditionView edition={edition} freshness="current" />,
     );
-    const cards = screen.getAllByRole("listitem");
+    const cards = storyCards();
     const total = cards.length;
 
     fireEvent.click(toggleIn(present(cards[0], "the first card")));
@@ -1045,5 +1222,210 @@ describe("ending the edition", () => {
     expect(progressLine(container)).toHaveTextContent(
       `${total} of ${total} viewed`,
     );
+  });
+});
+
+describe("choosing interest boosts", () => {
+  /*
+    The wiring, at the level the acceptance criteria are written at. The picker
+    itself is proved in `InterestBoosts.test.tsx` against props; what can only
+    be proved here is that the reader's answer reaches the story list, and that
+    it reaches it at the right MOMENT.
+  */
+
+  function invitation(): HTMLElement | null {
+    return document.querySelector<HTMLElement>(".interest-boosts");
+  }
+
+  function chooseSports(): void {
+    fireEvent.click(screen.getByRole("checkbox", { name: "Sports" }));
+    fireEvent.click(
+      screen.getByRole("button", { name: "Save interest boosts" }),
+    );
+  }
+
+  function expand(index: number): void {
+    fireEvent.click(
+      toggleIn(present(storyCards()[index], `card ${index + 1}`)),
+    );
+  }
+
+  it("does not ask before the reader has expanded two stories", () => {
+    // PRD section 7.1 forbids blocking the first edition with topic selection,
+    // and one expand is not yet evidence the reader is using the product.
+    render(<EditionView edition={edition} freshness="current" />);
+    expect(invitation()).toBeNull();
+
+    expand(0);
+    expect(invitation()).toBeNull();
+  });
+
+  it("asks after the second expanded story", () => {
+    render(<EditionView edition={edition} freshness="current" />);
+
+    expand(0);
+    expand(1);
+
+    expect(invitation()).not.toBeNull();
+    expect(
+      screen.getByRole("group", { name: "Choose up to two" }),
+    ).toBeInTheDocument();
+  });
+
+  it("asks at the end of the edition even if the reader expanded nothing", () => {
+    // Section 7.1's second trigger. A reader who ends early is still a reader
+    // who reached the end, and it is the only other moment the product has.
+    render(<EditionView edition={edition} freshness="current" />);
+    expect(invitation()).toBeNull();
+
+    pressEnd();
+
+    expect(invitation()).not.toBeNull();
+  });
+
+  it("never asks on a past edition", () => {
+    /*
+      The same silence `endingCopy` keeps about tomorrow on an archived date.
+      A reader who deliberately opened an old edition came for that date, and a
+      question about future editions there is a nudge to come back rather than
+      an answer to what they asked for.
+    */
+    render(<EditionView edition={edition} freshness="archived" />);
+    pressEnd();
+
+    expect(invitation()).toBeNull();
+  });
+
+  it("composes the edition from a choice already on the device, on the first render", () => {
+    /*
+      Acceptance criterion: the choice has to be in effect before anything is
+      painted. An effect-loaded read would render the unboosted ten and then
+      swap two of them, which is a content shift under the reader's thumb —
+      worse than AB-203's counter blinking, because the LIST changes.
+    */
+    render(<EditionView edition={twoPoolEdition} freshness="current" />);
+    const withoutInterests = renderedHeadlines();
+
+    cleanup();
+    localStorage.clear();
+    rememberInterests(["sports"]);
+
+    render(<EditionView edition={twoPoolEdition} freshness="current" />);
+    const withSports = renderedHeadlines();
+
+    expect(withSports).toHaveLength(10);
+    expect(withSports).not.toEqual(withoutInterests);
+    // The shared core is untouched: a preference may change which pooled
+    // stories arrive, never the ranking of the eight everyone sees.
+    expect(withSports.slice(0, 8)).toEqual(withoutInterests.slice(0, 8));
+  });
+
+  it("still renders ten stories for a reader who has chosen nothing", () => {
+    /*
+      The criterion "first edition is usable without choosing interests", and
+      the constitutional half of it. If a reader without interests saw eight,
+      choosing would take them to ten and the invitation would be a prompt whose
+      payoff is more content — an engagement reward (section 3.2). Interests
+      change WHICH two, never HOW MANY.
+    */
+    render(<EditionView edition={edition} freshness="current" />);
+
+    expect(cardCount()).toBe(10);
+  });
+
+  it("falls back to the shared core when the device holds a document it cannot read", () => {
+    // The third acceptance criterion. A corrupt document is not a broken
+    // screen: the reader gets the same ten a fresh device gets.
+    localStorage.setItem(LOCAL_STATE_KEY, "{ this is not json");
+
+    render(<EditionView edition={edition} freshness="current" />);
+
+    expect(cardCount()).toBe(10);
+    expect(renderedHeadlines().slice(0, 8)).toEqual(coreHeadlines);
+  });
+
+  it("does not recompose the edition the reader is already reading", () => {
+    /*
+      THE test of this slice.
+
+      If saving re-selected the pooled stories in place, the list would change
+      under a reader who has already read part of it, the denominator would
+      move, and the ending message could flip back to unfinished. That is "two
+      more stories unlocked" delivered as a mechanic, whatever the copy calls
+      it. The picker's own words promise the choice applies to the next edition
+      opened, and this is the assertion that makes the sentence true.
+    */
+    const { container } = render(
+      <EditionView edition={twoPoolEdition} freshness="current" />,
+    );
+    expand(0);
+    expand(1);
+    const before = renderedHeadlines();
+    const counterBefore = progressLine(container).textContent;
+
+    chooseSports();
+
+    expect(renderedHeadlines()).toEqual(before);
+    expect(progressLine(container).textContent).toBe(counterBefore);
+  });
+
+  it("applies the choice to the next edition the reader opens", () => {
+    // The other half of the promise: deferred is not discarded.
+    render(<EditionView edition={twoPoolEdition} freshness="current" />);
+    const before = renderedHeadlines();
+    pressEnd();
+    chooseSports();
+
+    cleanup();
+    render(<EditionView edition={twoPoolEdition} freshness="current" />);
+
+    expect(renderedHeadlines()).not.toEqual(before);
+  });
+
+  it("stores the choice and nothing else about the reader", () => {
+    render(<EditionView edition={edition} freshness="current" />);
+    pressEnd();
+    chooseSports();
+
+    const stored = localStateV1Schema.parse(
+      JSON.parse(
+        present(localStorage.getItem(LOCAL_STATE_KEY), "the document"),
+      ),
+    );
+
+    expect(stored.interests).toEqual(["sports"]);
+    // No timestamp, no dismissal flag, no count of how many times we asked.
+    expect(Object.keys(stored).sort()).toEqual([
+      "endedEditions",
+      "interests",
+      "schemaVersion",
+      "viewedByEdition",
+    ]);
+  });
+
+  it("stops asking a reader who declined, without storing that they refused", () => {
+    /*
+      "No thanks" is stored as choosing nothing, which is why there is no
+      dismissal flag in this slice: an absent field means never asked, an empty
+      array means asked and answered. Anything else would either re-ask on every
+      load or keep a record of a refusal.
+    */
+    render(<EditionView edition={edition} freshness="current" />);
+    pressEnd();
+    fireEvent.click(screen.getByRole("button", { name: "No thanks" }));
+
+    // Re-rendered without pressing anything: the edition is already ended on
+    // the device, so the trigger is met on the first render. If declining had
+    // stored nothing, this is exactly where the question would come back.
+    cleanup();
+    render(<EditionView edition={edition} freshness="current" />);
+
+    expect(endControl()).toBeNull();
+    expect(
+      screen.queryByRole("group", { name: "Choose up to two" }),
+    ).toBeNull();
+    expect(
+      screen.getByRole("button", { name: "Change interest boosts" }),
+    ).toBeInTheDocument();
   });
 });
