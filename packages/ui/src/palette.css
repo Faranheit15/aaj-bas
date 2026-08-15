@@ -1,9 +1,52 @@
-/* The Aaj, Bas. palette, shared by apps/landing and apps/web. Dark values live
-   here and nowhere else: a new colour needs an entry in both blocks below.
+/* The Aaj, Bas. palette, shared by apps/landing and apps/web.
    Colours only. Spacing, type, and component styles stay in the applications,
-   because packages/ui must not become a design system (AGENTS.md section 10). */
+   because packages/ui must not become a design system (AGENTS.md section 10).
+
+   The three blocks below ARE the theme mechanism, and a colour that differs
+   between appearances needs an entry in every one of them. `palette.test.ts`
+   in the reader enforces that, along with the contrast ratios each pair of
+   these values has to clear.
+
+   `data-theme` on the document element carries the reader's stored choice, and
+   "system" is the ABSENCE of the attribute rather than a value of it. That is
+   what lets the operating system keep deciding with nothing subscribed to it:
+   no `matchMedia` listener, no re-render when the OS theme changes at dusk, and
+   no copy of the OS preference in this application to fall out of step with it.
+
+   The dark media query is scoped `:not([data-theme="light"]):not([data-theme="dark"])`
+   rather than the shorter `:not([data-theme])`, deliberately. Any OTHER value —
+   a typo, an attribute left behind by an older build, a value some future build
+   of this markup writes — must still mean "the OS decides", because that is the
+   product default and the only safe reading of a value nothing here recognises.
+   `:not([data-theme])` would instead pin every such document to light.
+
+   There is deliberately NO `[data-theme="light"]` block. The base `:root`
+   already holds the light values, and the media query cannot reach a document
+   pinned to light, so light needs nothing said about it twice. Completing the
+   set would look tidier and would break this fall-through the first time the
+   two copies drifted; the reader's test asserts the block's absence for that
+   reason rather than as a style preference.
+
+   The dark values ARE stated twice, which `light-dark()` would state once.
+   Considered and rejected: it is Baseline only since 2024, and in a browser
+   without it the declaration is invalid at computed-value time, so
+   `var(--surface)` resolves to nothing and the page loses its background AND
+   its text colour in the same moment — the one failure a palette must not have.
+   Re-open this when the repository states a browser-support floor that excludes
+   those browsers; until then the duplication is pinned by a test that requires
+   the two dark blocks to declare identical values.
+
+   `color-scheme` in a colours-only file is a judgement call under section 10,
+   and it is made here on purpose. It is not spacing, type, or a component
+   style: its entire effect is which colours the user agent paints for the
+   things no stylesheet can reach — native form controls, the caret, scrollbars,
+   and the canvas behind the page. The reader ships six native checkboxes, so
+   without it a reader who pins dark on a light operating system gets light
+   checkboxes, a light caret and light scrollbars on a #181b18 page. It belongs
+   beside the values it has to agree with, and nowhere else. */
 
 :root {
+  color-scheme: light dark;
   --surface: #f7f4ef;
   --ink: #1f2520;
   --rule: #8b918a;
@@ -17,9 +60,17 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
     --surface: #181b18;
     --ink: #f3f0e9;
     --rule: #9ba39a;
   }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface: #181b18;
+  --ink: #f3f0e9;
+  --rule: #9ba39a;
 }

@@ -1,6 +1,6 @@
 import { INTEREST_SLUGS, type InterestSlug } from "@aaj-bas/schemas";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { localStateV1Schema } from "./local-state";
+import { localStateV1Schema, THEMES, type Theme } from "./local-state";
 
 /**
  * The device half: one key, and the four ways a browser can refuse.
@@ -29,6 +29,17 @@ const EDITION = "2026-07-21";
 const anyInterestSlug = new RegExp(INTEREST_SLUGS.join("|"));
 
 /**
+ * Every theme, alternated into one pattern.
+ *
+ * Built FROM the vocabulary for the same reason as the slugs above: a fourth
+ * theme is a plausible thing for a later slice to add, and a hand-written list
+ * would be correct on the day it was written and silently short by one
+ * afterwards. A theme is the mildest thing this document holds and it is still
+ * something the reader stated, so it is swept rather than excused.
+ */
+const anyTheme = new RegExp(THEMES.join("|"));
+
+/**
  * A selection the type system would refuse, cast at one boundary on purpose.
  *
  * `rememberInterests` takes `InterestSlug`, so a well-typed caller cannot reach
@@ -38,6 +49,11 @@ const anyInterestSlug = new RegExp(INTEREST_SLUGS.join("|"));
  */
 function selection(slugs: readonly string[]): readonly InterestSlug[] {
   return slugs as readonly InterestSlug[];
+}
+
+/** A theme the type system would refuse, cast at one boundary for the same reason. */
+function theme(name: string): Theme {
+  return name as Theme;
 }
 
 async function freshStore(): Promise<Store> {
@@ -176,6 +192,10 @@ afterEach(() => {
       and the vocabulary has no room for one.
     */
     expect(JSON.stringify(call)).not.toMatch(anyInterestSlug);
+    // And a theme, which is the same kind of fact one size smaller: stated by
+    // the reader, of no diagnostic use to anyone, and therefore not something
+    // a console line gets to carry either.
+    expect(JSON.stringify(call)).not.toMatch(anyTheme);
     /*
       And the closure itself, which is the half of the rule a value sweep
       cannot reach. `{ interestCount: 2 }` names no slug and matches no
@@ -722,5 +742,101 @@ describe("remembering the interests the reader chose", () => {
     // Once for the whole page load, however many times the reader retries.
     expect(warn).toHaveBeenCalledTimes(1);
     expect(warn.mock.calls[0]?.[2]).toEqual({ reason: "write-refused" });
+  });
+});
+
+describe("remembering the theme the reader chose", () => {
+  it("survives a reload", async () => {
+    const store = await freshStore();
+    store.rememberTheme("dark");
+
+    // A second module instance can only see this through the device.
+    const afterReload = await freshStore();
+
+    expect(afterReload.readTheme()).toBe("dark");
+  });
+
+  it("writes exactly one key, and it is the documented one", async () => {
+    const store = await freshStore();
+    store.rememberViewed(EDITION, "story-a");
+
+    store.rememberTheme("dark");
+
+    expect(localStorage.length).toBe(1);
+    expect(localStorage.key(0)).toBe(KEY);
+    // Four fields, one document. A theme kept under a key of its own would
+    // need its own version, its own corruption handling and its own eviction
+    // (ADR-0007), and a partial write would leave the two inconsistent with
+    // nothing able to detect it.
+    expect(store.readViewedStoryIds(EDITION)).toEqual(new Set(["story-a"]));
+  });
+
+  const rejectedThemes = [
+    { label: "a theme from no vocabulary at all", chosen: "midnight" },
+    // The value the accessor RESOLVES to, which is the one a coercing gate
+    // would happily store in place of the caller's mistake.
+    { label: "a theme in the wrong case", chosen: "Dark" },
+    { label: "an empty theme", chosen: "" },
+    {
+      label: "a theme naming a property of Object.prototype",
+      chosen: "toString",
+    },
+  ];
+
+  it.each(rejectedThemes)("refuses $label", async ({ chosen }) => {
+    /*
+      Refused, never coerced to something writable. The only caller is this
+      application's own theme control, so anything outside the vocabulary is a
+      bug here; storing "system" over it would bury that bug under a document
+      that reads as correct forever, and the reader would silently lose the
+      appearance they had.
+    */
+    const store = await freshStore();
+    store.rememberTheme("dark");
+    const before = localStorage.getItem(KEY);
+
+    expect(() => store.rememberTheme(theme(chosen))).not.toThrow();
+
+    // Byte-identical: nothing was written, not even a document that happens to
+    // be equivalent.
+    expect(localStorage.getItem(KEY)).toBe(before);
+    expect(store.readTheme()).toBe("dark");
+    expect(warn).toHaveBeenCalledTimes(1);
+    // The reason, and not the value: `afterEach` sweeps this call for every
+    // theme in the vocabulary.
+    expect(warn.mock.calls[0]?.[2]).toEqual({ reason: "unwritable-values" });
+  });
+
+  it("is neither read from nor written over when a newer build wrote the document", async () => {
+    const foreign = JSON.stringify({
+      schemaVersion: 2,
+      theme: "dark",
+      somethingThisBuildHasNeverHeardOf: true,
+    });
+    localStorage.setItem(KEY, foreign);
+
+    const store = await freshStore();
+
+    // The reader may well have chosen dark, in a document this build must not
+    // read. It renders the system appearance rather than guessing, and the
+    // newer bundle finds their answer intact.
+    expect(store.readTheme()).toBe("system");
+
+    store.rememberTheme("light");
+
+    expect(localStorage.getItem(KEY)).toBe(foreign);
+  });
+
+  it("reads the system appearance and writes nothing when storage cannot be read", async () => {
+    const store = await freshStore();
+    vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => {
+      throw new DOMException("storage is blocked", "SecurityError");
+    });
+
+    expect(store.readTheme()).toBe("system");
+    // A read that failed says nothing about what is under the key, so a write
+    // could be overwriting a newer build's document. It does not happen.
+    expect(() => store.rememberTheme("dark")).not.toThrow();
+    expect(localStorage.length).toBe(0);
   });
 });

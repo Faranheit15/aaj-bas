@@ -6,8 +6,10 @@
  * one block, in the same place, and the second is deliberately not a
  * `/settings` route: a route serves none of the acceptance criteria and it
  * needs an affordance the shell has tested away — there is no navigation
- * landmark, there are no footer links, and the ready page carries zero links by
- * assertion. ADR-0006 also records that no route may be reachable from the end
+ * landmark, there are no footer links, and the ready page carries exactly one
+ * link by assertion, and it is a same-document skip link to `main`. The
+ * argument is unchanged by it: nothing on the page has a destination that is
+ * another page. ADR-0006 also records that no route may be reachable from the end
  * of an edition, and a preferences page reached from exactly there is the shape
  * that rule exists to keep out.
  *

@@ -3,8 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f7f4ef" />
+    <!-- Two, because the browser chrome must agree with the page under it; a
+         single value painted cream chrome above a dark page. They follow the
+         OS, not `data-theme` — see ADR-0009. Asserted equal to the palette's
+         two `--surface` values, so a palette change cannot leave them behind. -->
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#f7f4ef"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#181b18"
+    />
     <title>Aaj, Bas.</title>
+    <!-- The reader's stored appearance, applied before the first paint.
+
+         MUST stay a classic, synchronous script. `type="module"`, `defer` or
+         `async` each move it after the paint and reintroduce the flash
+         invisibly, so its shape is asserted as well as its behaviour.
+         `schemaVersion === 1` is not optional: ADR-0007 forbids reading a
+         document a newer build wrote. Only "light" and "dark" are ever
+         applied, so every other input leaves the OS deciding. A future CSP
+         (AB-903) must carry this script's sha256 hash rather than reaching for
+         'unsafe-inline'. The full argument is in ADR-0009. -->
+    <script>
+      try {
+        const stored = JSON.parse(localStorage.getItem("aaj-bas.local-state"));
+        const theme = stored.schemaVersion === 1 ? stored.theme : null;
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {}
+    </script>
     <!-- With scripting off the placeholder below is never replaced, so leaving
          it visible would say the edition is loading directly above the notice
          explaining that it cannot. Exactly one of the two is shown. -->

@@ -1,11 +1,12 @@
 /**
  * The device-backed store: one key, a read-modify-write, and the logging.
  *
- * This is the seam the reader hooks sit on. Everything above it asks six
+ * This is the seam the reader hooks sit on. Everything above it asks eight
  * questions — which stories were already expanded in this edition, please
  * remember this one, was this edition ended, please remember that it was, what
- * did this reader choose to be interested in, please remember that too — and
- * nothing above it knows that localStorage exists (section 15). The rules for
+ * did this reader choose to be interested in, please remember that too, which
+ * appearance did they choose, please remember that as well — and nothing above
+ * it knows that localStorage exists (section 15). The rules for
  * what a stored document means are in `local-state.ts`; the browser access is
  * in `device-storage.ts`; what is left here is the key, the order of
  * operations, and what a developer gets told.
@@ -14,22 +15,27 @@
 import { createLogger } from "@aaj-bas/logger";
 import {
   editionDateSchema,
-  identifierSchema,
   type InterestSlug,
+  identifierSchema,
   interestSlugSchema,
 } from "@aaj-bas/schemas";
 import { readRaw, writeRaw } from "./device-storage";
 import {
   chosenInterests,
+  chosenTheme,
+  DEFAULT_THEME,
   EMPTY_LOCAL_STATE,
   hasChosenInterests,
   hasEndedEdition,
   type LocalStateV1,
   MAX_INTERESTS,
   readLocalState,
+  THEMES,
+  type Theme,
   viewedStoryIds,
   withEndedEdition,
   withInterests,
+  withTheme,
   withViewedStory,
 } from "./local-state";
 
@@ -314,6 +320,76 @@ export function rememberInterests(interests: readonly InterestSlug[]): boolean {
   return true;
 }
 
+/**
+ * The appearance to render with on this device.
+ *
+ * `DEFAULT_THEME` — "system" — for every read this build could not make sense
+ * of, which is the same answer a fresh device gives and is the only honest one:
+ * a document we cannot read tells us nothing about what the reader chose, and
+ * their operating system still knows what they asked it for. Falling back to a
+ * fixed light or dark here would override a preference stated outside this
+ * product because a preference stated inside it was unreadable.
+ */
+export function readTheme(): Theme {
+  const read = load();
+
+  return read.kind === "usable" ? chosenTheme(read.state) : DEFAULT_THEME;
+}
+
+/**
+ * Records the appearance the reader chose.
+ *
+ * `void`, like `rememberViewed` and `rememberEnded`, and NOT the boolean
+ * `rememberInterests` returns. That looks like an inconsistency between two
+ * neighbouring writers, so the rule behind it: return nothing when a refused
+ * write must not become a rendering decision, and return a boolean when the
+ * effect is invisible now and entirely in the future.
+ *
+ * An interest choice changes nothing the reader can see — its only effect is
+ * the next edition they open — so a write that did not land is the whole of it,
+ * and saying so is the difference between reporting and swallowing (section
+ * 37). A theme is the opposite: the page has ALREADY changed colour by the time
+ * this runs. A boolean here would invite a caller to put it back when the
+ * device refuses the write, taking dark away from a reader who just asked for
+ * it because their storage is full. ADR-0007 settles the reader-facing half —
+ * nothing is said to the reader — so the honest reporting happens on the
+ * console, once, and the reader keeps the appearance they chose for the
+ * session.
+ */
+export function rememberTheme(theme: Theme): void {
+  /*
+    Checked at the entry, as in the three writers above, and REFUSED rather
+    than coerced to a value we could store. The only caller is this
+    application's own theme control, so anything outside the vocabulary is a
+    bug in our code, and quietly writing "system" over it would bury that bug
+    under a document that reads as correct forever.
+
+    Reported with the reason alone. The value never reaches a console line
+    (section 38): it is a small thing to know about a reader, but it is still
+    something they stated rather than something anyone needs, and the field
+    vocabulary in `report` is closed precisely so that this stays a decision
+    rather than an omission.
+  */
+  if (!THEMES.includes(theme)) {
+    report("unwritable-values");
+    return;
+  }
+
+  const read = load();
+  if (read.kind === "foreign" || read.kind === "unavailable") {
+    // Never write over a document this build could not read. See the version
+    // rule in `local-state.ts`; `load` has already reported the reason.
+    return;
+  }
+
+  const base = read.kind === "usable" ? read.state : EMPTY_LOCAL_STATE;
+  const next = withTheme(base, theme);
+
+  if (!writeRaw(LOCAL_STATE_KEY, JSON.stringify(next))) {
+    report("write-refused");
+  }
+}
+
 function load(): StoreRead {
   const raw = readRaw(LOCAL_STATE_KEY);
   if (!raw.ok) {
@@ -363,14 +439,17 @@ function storedVersion(raw: string): number | undefined {
  * Reports one condition, at most once per page load.
  *
  * The fields are a closed vocabulary — `reason`, `storedVersion`, `issueCount`,
- * `paths` — and never the stored string, a story id, an edition date, or an
- * interest slug. Section 38 rules those out: which stories a named reader
- * opened, and on which day, is precisely the record this product does not keep,
- * and putting it in a console line is still keeping it. An interest is stronger
- * still, being something the reader stated rather than something observed, so
- * neither a slug nor a count of them nor the bare fact that a reader has chosen
- * belongs here. The vocabulary being CLOSED is what enforces that: a field
- * carrying one would have to be added to this list first.
+ * `paths` — and never the stored string, a story id, an edition date, an
+ * interest slug, or a theme. Section 38 rules those out: which stories a named
+ * reader opened, and on which day, is precisely the record this product does
+ * not keep, and putting it in a console line is still keeping it. An interest
+ * is stronger still, being something the reader stated rather than something
+ * observed, so neither a slug nor a count of them nor the bare fact that a
+ * reader has chosen belongs here. A theme is the mildest of them and is out
+ * for the same reason rather than a weaker one: it is still a thing the reader
+ * stated, and a console line naming it buys a developer nothing the reason has
+ * not already told them. The vocabulary being CLOSED is what enforces all of
+ * it: a field carrying any of these would have to be added to this list first.
  *
  * `paths` is in the vocabulary and is deliberately NOT emitted here, which is
  * the one place this differs from `edition-repository.ts`. A validation path in

@@ -1,7 +1,6 @@
 @import "@aaj-bas/ui/palette.css";
 
 :root {
-  color-scheme: light dark;
   font-family: Georgia, "Times New Roman", serif;
   background: var(--surface);
   color: var(--ink);
@@ -16,6 +15,32 @@ body {
   min-width: 320px;
   background: inherit;
   color: inherit;
+}
+
+/* One focus ring for everything focusable, rather than a list of class names.
+   The landing page has exactly one control today, so the rule it replaced was
+   complete — and it was complete only because there is one. The next control
+   added here would have had the user agent's default and nothing else, and a
+   base rule cannot be forgotten by a control that has not been written yet. The
+   declarations are the ones `.primary-link:focus-visible` carried, so nothing
+   on the page today renders differently. The reader's stylesheet carries the
+   same rule, so the two applications cannot drift apart on focus.
+
+   `outline-offset` must stay positive: hovering inverts the link's fill to
+   --ink, and the gap keeps the page background, rather than that fill, next to
+   the ring — which is what the palette's contrast note measures against.
+
+   `:where()` contributes no specificity, so a component that genuinely needs a
+   different treatment can still override this with a single class.
+
+   `[tabindex="-1"]` is excluded deliberately: an element made programmatically
+   focusable is not a control, and a ring around a region of the page says one
+   is there when none is. Such elements keep the browser's own outline, which
+   nothing here removes — removing it without replacement is what section 25
+   forbids. */
+:where(a[href], button, input, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .landing-page {
@@ -80,13 +105,6 @@ h2 {
 .primary-link:hover {
   background: var(--ink);
   color: var(--surface);
-}
-
-/* outline-offset must stay positive: hovering inverts the link's fill to --ink,
-   and the gap keeps the ring's contrast measured against --surface either way. */
-.primary-link:focus-visible {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: 3px;
 }
 
 .principles {

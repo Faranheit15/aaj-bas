@@ -13,6 +13,7 @@
 import { useEffect, useRef } from "react";
 import type { JSX, ReactNode } from "react";
 import { BrandMark } from "@aaj-bas/ui";
+import { ThemeChoice } from "./ThemeChoice";
 
 /**
  * The id every view's `h1` must carry.
@@ -22,6 +23,15 @@ import { BrandMark } from "@aaj-bas/ui";
  * nothing but a screen reader would notice.
  */
 export const EDITION_HEADING_ID = "edition-heading";
+
+/**
+ * The id the main landmark carries, and the fragment the skip link targets.
+ *
+ * Exported for the reason `EDITION_HEADING_ID` is: the `href` and the `id` are
+ * written in two places, and a skip link pointing at a fragment no element
+ * carries is a control that silently does nothing.
+ */
+export const EDITION_MAIN_ID = "edition";
 
 type ReaderShellProps = {
   /**
@@ -58,15 +68,51 @@ export function ReaderShell({
   return (
     <div className="reader-shell">
       <header className="reader-banner">
+        {/*
+          The first child of the banner, and therefore the first tab stop on
+          the page. Anything placed above it would offer a keyboard reader
+          something other than the edition as their first choice.
+
+          It is not a way out of the edition. It moves focus to `main` — the
+          landmark the edition is already inside — so it shortens the path to
+          today's stories rather than leading away from them, which is why it
+          does not contradict the footer's no-links rule (section 3.1).
+
+          Not wrapped in `nav`. One same-document link is not a navigation
+          region, and a `nav` here would advertise a set of destinations that
+          does not exist. Inside the banner rather than above it, so every
+          element on the page sits within a landmark and the placement needs no
+          exception.
+        */}
+        <a className="skip-link edition-action" href={`#${EDITION_MAIN_ID}`}>
+          Skip to the edition
+        </a>
+
         <p className="brand-line">
           <BrandMark />
         </p>
+
+        {/*
+          The theme control belongs at the top, not at the end of the edition
+          beside the interest picker. A reader needs a readable page on arrival
+          rather than after ten stories, a reader who never reaches the end
+          would never find it, and `InterestBoosts` lives inside `EditionView`,
+          which renders only on `ready` — so a control placed there would be
+          missing from the three load states where an unreadable page is most
+          likely to be what sent the reader looking for it.
+
+          Section 3.1 constrains content that continues the edition. A
+          preference control is chrome: it changes colours and adds nothing to
+          read. It sits after the skip link so the skip link stays the first
+          tab stop.
+        */}
+        <ThemeChoice />
       </header>
 
       {/* tabIndex -1 makes the landmark a focus target on route change without
           putting it in the tab order. */}
       <main
-        id="edition"
+        id={EDITION_MAIN_ID}
         className="reader-main"
         tabIndex={-1}
         aria-labelledby={EDITION_HEADING_ID}
