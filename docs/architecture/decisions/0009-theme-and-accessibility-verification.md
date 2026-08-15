@@ -133,7 +133,7 @@ The theme is a preference, and it is the least sensitive thing this document hol
 
 The pre-paint script **reads and never writes**. It touches one key, applies one attribute, and swallows every failure into the state a first-time reader is in. It sends nothing, mints no identifier, and reads no clock. Its refusal to parse a document from a newer build is a privacy-adjacent property as well as a correctness one: it is the same never-read-a-foreign-document rule the store obeys, extended to the one piece of code that runs outside the store's reach.
 
-No network path is added anywhere in this slice, and the existing assertion covering that continues to hold.
+No network path is added anywhere in this slice. The claim originally made here — that "the existing assertion covering that continues to hold" — overstated its own coverage: the assertion it pointed at named four files by hand, and this slice's own modules were not among them, so the property was true of the code and unasserted by the test it cited. ADR-0011 closes that gap with a sweep over the whole reader, and the property is now checked rather than reviewed.
 
 ## Product-constitution impact
 
