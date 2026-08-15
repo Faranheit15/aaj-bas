@@ -204,6 +204,17 @@
 
 ### AB-302 — Add privacy-respecting event adapter
 
+> **Partially delivered and still open.** ADR-0011 delivers the documented event
+> vocabulary and the prohibitions, and enforces "no third-party SDK" with a
+> repository-wide transport guard. The no-op adapter and the configurable
+> endpoint are deferred to the slice where an endpoint exists: three of the four
+> permitted event families are already answerable without client code, and
+> section 47 makes any transport a decision a human takes deliberately. ADR-0011
+> records the preconditions, the refused installation identifier, and an open
+> conflict with ADR-0010 over source-link measurement.
+>
+> This item also belongs in section 8 beside AB-802, not in local state.
+
 **Deliverables**
 
 - no-op default adapter;
