@@ -65,6 +65,34 @@ export function progressText(progress: EditionProgress): string {
 }
 
 /**
+ * Whether the edition is over, by either of the two ways it can be.
+ *
+ * One definition, exported, because more than one thing has to agree about it:
+ * `endingCopy` drops the end-edition control when it is true, and AB-204's
+ * interest invitation appears on the same moment. Two copies of
+ * `isComplete || hasEnded` would eventually disagree, and the reader would see
+ * the disagreement as an invitation sitting under a control that is still
+ * offering to end an edition already over.
+ */
+export function isEditionOver(
+  progress: EditionProgress,
+  hasEnded: boolean,
+): boolean {
+  return isEditionComplete(progress) || hasEnded;
+}
+
+/**
+ * Every story on screen expanded.
+ *
+ * The `total > 0` guard is what stops an edition with no stories in it
+ * announcing "That's today's edition." to a reader who was shown nothing. An
+ * empty list is a failure to render an edition, not a completed one.
+ */
+function isEditionComplete(progress: EditionProgress): boolean {
+  return progress.total > 0 && progress.viewedCount === progress.total;
+}
+
+/**
  * The words at the end of the edition.
  *
  * Three independent slots rather than one paragraph, because they appear and
@@ -125,12 +153,10 @@ export function endingCopy(
 ): EndingCopy {
   const isToday = freshness === "current";
 
-  // The `total > 0` guard is what stops an edition with no stories in it
-  // announcing "That's today's edition." to a reader who was shown nothing.
-  // An empty list is a failure to render an edition, not a completed one.
-  const isComplete =
-    progress.total > 0 && progress.viewedCount === progress.total;
-  const isOver = isComplete || hasEnded;
+  // Completion is still needed on its own below: it selects the message, and
+  // `isOver` cannot, because a reader who ended early is over but not complete.
+  const isComplete = isEditionComplete(progress);
+  const isOver = isEditionOver(progress, hasEnded);
 
   return {
     endLabel: isOver

@@ -121,7 +121,23 @@ describe("the reader application", () => {
     const main = screen.getByRole("main");
     const ending = main.lastElementChild;
     expect(ending).toHaveClass("edition-ending");
-    expect(ending?.previousElementSibling).toBe(screen.getByRole("list"));
+    /*
+      The full sequence rather than the ending's neighbour alone. A sibling
+      check only guards the one gap directly above the ending, so a block
+      inserted anywhere higher would satisfy it; naming every position is what
+      makes this an assertion about the whole landmark. AB-204's interest
+      invitation is absent here because nothing has been expanded, and
+      `EditionView`'s own test asserts the sequence again with it present.
+    */
+    expect(
+      [...main.children].map((child) => child.className || child.tagName),
+    ).toEqual([
+      "H1",
+      "edition-freshness",
+      "edition-progress",
+      "edition-stories",
+      "edition-ending",
+    ]);
     expect(main.nextElementSibling?.tagName).toBe("FOOTER");
   });
 

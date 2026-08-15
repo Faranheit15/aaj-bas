@@ -14,12 +14,25 @@
  * those four properties are decided.
  *
  * The document deliberately holds only which stories were expanded, per
- * edition, and which editions the reader ended. It records no timestamps and no
- * ordering, so it cannot become a reading-behaviour record (section 23), and it
- * never leaves the device (section 17).
+ * edition, which editions the reader ended, and which interests the reader
+ * explicitly chose. It records no timestamps and no ordering, so it cannot
+ * become a reading-behaviour record (section 23), and it never leaves the
+ * device (section 17).
+ *
+ * Interests are the first field here that a reader stated rather than one this
+ * code observed, which makes them the most sensitive thing in the document even
+ * though they are the smallest. Section 3.3 permits them for exactly that
+ * reason — a boost the reader selected is not a behavioural profile — and the
+ * permission ends where the statement does: nothing may infer an interest from
+ * what was read.
  */
 
-import { editionDateSchema, identifierSchema } from "@aaj-bas/schemas";
+import {
+  editionDateSchema,
+  identifierSchema,
+  type InterestSlug,
+  interestSlugSchema,
+} from "@aaj-bas/schemas";
 import { z } from "zod";
 
 /** The version this build writes, and the only one it can read. */
@@ -39,6 +52,24 @@ export const LOCAL_STATE_VERSION = 1;
  * without limit, which is exactly what ADR-0007 promised it would not have.
  */
 export const MAX_REMEMBERED_EDITIONS = 30;
+
+/**
+ * How many interest boosts a reader may hold at once (PRD section 5.3).
+ *
+ * A product parameter, and deliberately NOT a schema constraint. A `.max(2)` on
+ * the field below would quietly convert it into a compatibility parameter: if a
+ * later build allowed three, this build would read that reader's document as
+ * corrupt-and-replaceable and destroy every viewed set in it over a preference
+ * it merely disagreed with. The cap is applied where the choice is made instead
+ * — refused on the way in by the store, sliced on the way out by
+ * `canonicalInterests`.
+ *
+ * This field takes no eviction rule, unlike the bound above, and the difference
+ * is the growth mode rather than an omission. Nothing appends to it and it is
+ * not keyed per edition: `withInterests` replaces the array wholesale, so there
+ * is no oldest entry to drop and no way for it to grow without limit.
+ */
+export const MAX_INTERESTS = 2;
 
 /**
  * Flat `schemaVersion`, matching the published-content contracts.
@@ -77,6 +108,47 @@ export const localStateV1Schema = z.looseObject({
     per edition would have cost readers a month of state to add.
   */
   endedEditions: z.array(editionDateSchema).optional(),
+  /*
+    The interest boosts the reader chose, from the published slug vocabulary.
+
+    ABSENT and EMPTY are DIFFERENT ANSWERS, and the invitation depends on the
+    difference: absent means the reader has never been asked, `[]` means they
+    were asked and chose none. Collapsing the two re-offers the invitation on
+    every load to a reader who already declined it, which is the nagging
+    section 3.2 rules out. So `withInterests` writes the key even for an empty
+    choice, `hasChosenInterests` tests the key's presence rather than the
+    array's length, and `EMPTY_LOCAL_STATE` must never gain `interests: []` —
+    that would tell every device its reader answered an invitation they were
+    never shown.
+
+    OPTIONAL, and `schemaVersion` stays 1, for the reason `endedEditions`
+    gives above and that ADR-0007 settles: required would invalidate every
+    document already on a reader's device.
+
+    `identifierSchema`, NOT `interestSlugSchema`, and the leniency is the
+    decision this field turns on. Strictness is right where the vocabulary is
+    fixed by nature: a calendar date is not a product decision, so
+    `editionDateSchema` can reject "2026-02-30" and be certain it is wrong.
+    Leniency is right where the vocabulary is a product decision the product
+    has already said it may change — `slugs.ts` calls renaming a slug "a
+    content migration across the archive", and nothing migrates a device.
+    Validated strictly here, a later slice that added, removed or renamed one
+    interest would make every document holding the old slug `replaceable`, and
+    the next write would take a month of viewed sets with it, over a word.
+
+    An unrecognised slug is therefore filtered at the ACCESSOR and never by a
+    `.transform` here. A transform would strip it on every read-modify-write,
+    so a reader served this bundle from a stale edge would have the preference
+    their newer bundle just wrote silently deleted by the next story they
+    expanded. `withViewedStory` and `withEndedEdition` spread `...state`, so
+    the stored array survives byte-identically; keep it that way.
+
+    The leniency is bounded by SHAPE, not abandoned: an entry that is not a
+    well-formed identifier, or a field that is not an array, still fails, so a
+    document that could not have been written by any build of this application
+    is still recognised as corrupt.
+  */
+  interests: z.array(identifierSchema).optional(),
 });
 
 export type LocalStateV1 = z.infer<typeof localStateV1Schema>;
@@ -198,10 +270,27 @@ export function readLocalState(raw: string | null): StoredStateRead {
  * is one recoverable count on one edition — they can expand them again, and
  * nothing else in the product depends on it.
  *
- * That acceptability is a property of THIS payload, not a policy. When AB-204
- * adds explicitly chosen interests, discarding the document would throw away
- * something the reader typed in rather than something they can re-derive by
- * looking, and that slice has to make the argument again for its own payload.
+ * That acceptability is a property of THIS payload, not a policy, and the
+ * payload has since grown the interests a reader explicitly chose — something
+ * they stated rather than something they can re-derive by looking. ADR-0007
+ * requires the argument to be made again for them, so: it still holds, for
+ * three reasons that are about this field rather than about discarding in
+ * general. Returning `null` is reachable only for a version at or below ours,
+ * never for a newer document — those are `foreign` and are not touched at all.
+ * The loss is at most two slugs, and it is self-repairing rather than silent:
+ * a document without the key reads as never-asked, so the reader is offered
+ * the invitation again on the next load instead of quietly losing the boost.
+ * And the fallback while it is gone is the edition a reader who has chosen
+ * nothing sees, which is what AB-204's acceptance criteria name as the correct
+ * behaviour for invalid local state. That edition is TEN stories — the shared
+ * core plus the default pooled pair — and not the eight-story core alone: the
+ * criterion's phrase "falls back to the shared core" names the core's ordering
+ * surviving a preference, and ADR-0008 decided that every reader gets ten
+ * however they answered. A fallback that dropped to eight would make a
+ * discarded document visible as a shorter edition.
+ *
+ * If a later field ever holds something a reader cannot restate in one gesture,
+ * that field must re-argue this in turn, or migrate rather than discard.
  */
 export function toCurrentVersion(stored: object): object | null {
   const probed = versionProbeSchema.safeParse(stored);
@@ -303,6 +392,94 @@ export function hasEndedEdition(
   editionDate: string,
 ): boolean {
   return (state.endedEditions ?? []).includes(editionDate);
+}
+
+/**
+ * The interests this build will act on, out of whatever the device holds.
+ *
+ * Four steps, each of which is a hazard rather than tidying:
+ *
+ * - FILTER to slugs this build knows, because the schema is deliberately
+ *   lenient about the vocabulary (see its comment). This is the other half of
+ *   that decision: an unknown slug is kept on the device and ignored while
+ *   reading, so a build that has never heard of it neither destroys it nor
+ *   boosts by it.
+ *
+ * - DE-DUPLICATE, because an array read off a device can hold the same slug
+ *   twice — nothing in JSON prevents it — and a duplicate would spend one of
+ *   the two slots the reader is entitled to.
+ *
+ * - SORT. Safe to do because the selection this feeds is order-independent by
+ *   construction: it asks whether a story's topic is in the chosen set, and
+ *   never which position a slug held. What sorting buys is that the tick order
+ *   is discarded at the point it would otherwise be written to the device.
+ *   "Sports first, then technology" is a statement about the reader that
+ *   nothing asks for, and section 23 says not to collect what nothing asks
+ *   for. Byte-stability comes with it: the same choice is the same document
+ *   whichever order the boxes were ticked in.
+ *
+ * - SLICE to the cap, which is the only place a stored over-long array is
+ *   narrowed. Narrowing on READ and never on write is deliberate: a stored
+ *   third slug can only have come from a build whose cap was higher, and an
+ *   older bundle must not truncate a newer bundle's choice on its way past.
+ */
+export function canonicalInterests(
+  interests: readonly string[],
+): readonly InterestSlug[] {
+  const known = interests.filter(
+    (slug): slug is InterestSlug => interestSlugSchema.safeParse(slug).success,
+  );
+
+  return [...new Set(known)].sort().slice(0, MAX_INTERESTS);
+}
+
+/**
+ * The document that results from the reader choosing their interests.
+ *
+ * REPLACES the array, where `withViewedStory` and `withEndedEdition` add to
+ * theirs. Copying either of those bodies would be the natural thing to do and
+ * would be wrong twice over: it would put the cap out of reach — a reader can
+ * only ever add — and it would turn "change my preferences" into "accumulate
+ * preferences", so a reader swapping sports for technology would silently hold
+ * both, and then three, and then the whole vocabulary.
+ *
+ * An empty choice writes the key rather than omitting it; see the schema
+ * comment, where absent and empty are different answers.
+ *
+ * Canonical on the way in, so the device never holds an order the reader's
+ * clicks happened to produce. Unknown top-level keys, the viewed sets and the
+ * ended editions are carried through untouched by the spread.
+ */
+export function withInterests(
+  state: LocalStateV1,
+  interests: readonly InterestSlug[],
+): LocalStateV1 {
+  return { ...state, interests: [...canonicalInterests(interests)] };
+}
+
+/**
+ * The interests to boost by, empty when there are none to boost by.
+ *
+ * Empty for a reader who chose none AND for a reader who was never asked, which
+ * is correct for ranking — both get the shared core — and is exactly why the
+ * question "has this reader been asked?" is answered by the function below
+ * instead of by this one's length.
+ */
+export function chosenInterests(state: LocalStateV1): readonly InterestSlug[] {
+  return canonicalInterests(state.interests ?? []);
+}
+
+/**
+ * Whether the reader has answered the invitation on this device.
+ *
+ * The key's PRESENCE, never the array's length. `chosenInterests(state).length
+ * > 0` type-checks, reads naturally, and is the bug this field's shape exists
+ * to prevent: it reports "I was asked and chose none" as "I have not been
+ * asked", so the invitation returns on every load for the one reader who has
+ * already said no to it.
+ */
+export function hasChosenInterests(state: LocalStateV1): boolean {
+  return state.interests !== undefined;
 }
 
 /**

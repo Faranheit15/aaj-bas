@@ -6,15 +6,16 @@
  * handed the answer as `freshness` so that every freshness case can be
  * rendered in a test without moving a clock.
  *
- * The two pieces of state it holds are which stories the reader has expanded
- * and whether they have ended the edition. Both live here rather than in the
- * cards because both are edition-wide: the counter above the list and the
- * ending block below it are where they become visible.
+ * The state it holds is edition-wide, which is why it lives here rather than in
+ * the cards: which stories the reader has expanded, whether they have ended the
+ * edition, and which interest boosts they have chosen. The first two become
+ * visible in the counter above the list and the ending block below it; the
+ * third decides which two of the ten stories the list is built from.
  */
 
 import type { Edition } from "@aaj-bas/schemas";
 import type { JSX } from "react";
-import { coreStories } from "../edition/core-stories";
+import { editionStories } from "../edition/edition-stories";
 import type { EditionFreshness } from "../edition/edition-freshness";
 import {
   formatEditionDate,
@@ -23,10 +24,23 @@ import {
 import { storySources } from "../edition/story-sources";
 import { EditionEnding } from "./EditionEnding";
 import { useEditionEnded } from "./edition-ended";
-import { editionProgress, progressText } from "./edition-progress";
+import {
+  editionProgress,
+  isEditionOver,
+  progressText,
+} from "./edition-progress";
+import { InterestBoosts } from "./InterestBoosts";
+import { useInterests, useInterestSnapshot } from "./interests";
 import { EDITION_HEADING_ID } from "./ReaderShell";
 import { StoryCard } from "./StoryCard";
 import { useViewedStories } from "./viewed-stories";
+
+/**
+ * PRD section 7.1: invite "after the reader expands two stories or reaches the
+ * end". Two, not one: a single expand is not yet evidence the reader is using
+ * the product, and asking on arrival is what section 7.1 explicitly forbids.
+ */
+const INVITATION_AFTER_VIEWED = 2;
 
 type EditionViewProps = {
   readonly edition: Edition;
@@ -59,19 +73,46 @@ export function EditionView({
   const ended = useEditionEnded(edition.date);
 
   /*
-    `coreStories`, not `edition.stories`. The file holds the eight shared core
-    stories plus the interest pools, so mapping `edition.stories` would hand
-    every reader all ten — silently making the pool selection AB-204 owns, and
-    doing it by ignoring the reader's interests rather than by applying them.
-    Eight is the whole edition until AB-204 lands.
+    The reader's stored answer, in two forms, and they are deliberately not the
+    same value.
+
+    `interests.read` is live: the picker below must show what the reader just
+    chose. `composition` is a SNAPSHOT taken when this edition was opened, and
+    it is what the story list is built from. Saving a choice therefore changes
+    the picker and nothing else on the page.
+
+    That separation is the whole defence against the worst version of this
+    feature. If a save recomposed the edition in view, the list would change
+    under a reader who has already read part of it, the counter's denominator
+    would move, and the ending message could flip from "That's today's edition."
+    back to unfinished — which is "two more stories unlocked" delivered as a
+    mechanic, whatever the copy called it (section 3.2). The picker's own words
+    promise the choice applies to the next edition opened, and this is what
+    makes that sentence true rather than merely written.
+  */
+  const interests = useInterests();
+  const composition = useInterestSnapshot(edition.date);
+
+  /*
+    `editionStories`, not `edition.stories`. The file holds the eight shared
+    core stories plus the interest pools, so mapping `edition.stories` would
+    hand every reader the whole pool — a longer edition than the product
+    promises, assembled by accident.
+
+    Ten for everyone. Interests decide WHICH two pooled stories arrive, never
+    HOW MANY: a reader who has chosen nothing gets the same ten, picked by the
+    same function with an empty set. Eight-until-you-choose would make the
+    invitation below a prompt whose payoff is more content, which is an
+    engagement reward (section 3.2) and would make its copy impossible to write
+    honestly. ADR-0008 records the argument.
 
     Resolved once, and its length is what the cards count against. Neither a
     hardcoded ten nor `edition.stories.length` would do: the first prints an
-    ordinal that contradicts the list the reader can see, and the second is ten
-    today only because the pools happen to hold two, so an edition shipping a
-    larger pool would start numbering the eighth card "8 of 14".
+    ordinal that contradicts the list the reader can see, and the second counts
+    the entire pool, so an edition shipping a larger pool would start numbering
+    the eighth card "8 of 14".
   */
-  const stories = coreStories(edition);
+  const stories = editionStories(edition, composition);
 
   /*
     One binding, read by the cards' ordinals and by the counter alike. The
@@ -158,6 +199,37 @@ export function EditionView({
           </li>
         ))}
       </ol>
+
+      {/*
+        The interest picker sits BETWEEN the list and the ending, and the
+        position is argued rather than convenient.
+
+        Not inside the ending block: that block's contract is "the edition is
+        over", so anything placed there is post-completion content, and a
+        solicitation beside "See you tomorrow." is a return hook. Not after it
+        either — that is section 3.1 in the plainest possible terms, and the
+        ending must stay the last thing in `main`. Not above the list, which
+        would put a form between the reader and the news.
+
+        Here, it is out of sight while the reader is reading. The trigger fires
+        around the second card; the block renders below the tenth. Nothing above
+        the reader's position changes and nothing reflows into view — the reader
+        meets the question when they arrive at it, at their own pace, or never.
+
+        `freshness !== "archived"` for the same reason `endingCopy` says nothing
+        about tomorrow on a past edition: a reader who deliberately opened an
+        old date came for that date, and a prompt about future editions there is
+        a nudge to come back rather than an answer to what they asked for.
+      */}
+      <InterestBoosts
+        read={interests.read}
+        canInvite={
+          freshness !== "archived" &&
+          (progress.viewedCount >= INVITATION_AFTER_VIEWED ||
+            isEditionOver(progress, ended.hasEnded))
+        }
+        onChoose={interests.chooseInterests}
+      />
 
       {/*
         The end of the edition, after the list and inside `main`. It is the last

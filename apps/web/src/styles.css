@@ -360,7 +360,8 @@ p {
 .story-toggle:focus-visible,
 .story-background-toggle:focus-visible,
 .story-source-link:focus-visible,
-.story-report:focus-visible {
+.story-report:focus-visible,
+.interest-choice input:focus-visible {
   outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
 }
@@ -449,6 +450,114 @@ p {
    into a gap twice the size it is meant to be. */
 .edition-ending > .edition-actions:first-child {
   margin-top: 0;
+}
+
+/* The interest picker. Separated from what precedes it by the same hairline
+   rule the stories and the ending use, so it reads as one more thing in the
+   edition rather than as a panel bolted underneath it.
+
+   Static position, and no motion, for the reasons argued on `.edition-ending`
+   above and enforced by `styles.test.ts` for the whole file. It matters
+   twice over here: the invitation APPEARS, mid-edition, which is exactly the
+   thing that looks like it should slide or fade in — and a block that animates
+   itself into view has announced itself, which is what this component is
+   arranged not to do. Nothing reveals. The block is simply there when the
+   reader reaches it. With no motion at all there is nothing for
+   `prefers-reduced-motion` to gate, and no way to add motion that forgets it.
+
+   No colour of its own. Every rule below reuses the existing tokens, so the
+   picker cannot become the one loud thing on a page of type (section 28), and
+   `packages/ui/src/palette.css` stays what section 10 says it is. */
+.interest-boosts {
+  margin-top: clamp(2rem, 6vw, 3rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+/* The same quiet uppercase label as the card panels' `h3`: it is a heading in
+   the edition's outline, at the same level as a story headline, and it must not
+   compete with one for attention. */
+.interest-heading {
+  margin: 0 0 0.75rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.interest-explainer {
+  margin: 0 0 0.5rem;
+}
+
+/* Metadata about the choice, in the same small sans as the freshness line and
+   the counter: a fact about when the choice takes effect, not a second
+   message competing with the sentence above it. */
+.interest-scope,
+.interest-summary {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+.interest-form {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* The form's own gap spaces the button row, so `.edition-actions`'s top margin
+   would stack with it into twice the gap it is meant to be. */
+.interest-form > .edition-actions {
+  margin-top: 0;
+}
+
+/* The one declaration in this file that exists purely to undo a default: the
+   UA's fieldset border and inline padding are the only thing here that looks
+   wrong untouched. The group stays a real `fieldset` — the border is decoration
+   and the grouping is semantics, and only one of the two is being removed. */
+.interest-choices {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.interest-choices > legend {
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+.interest-options {
+  margin: 0.35rem 0 0;
+  padding: 0;
+}
+
+/* Empties the marker rather than setting `list-style: none`, for the reason
+   given on `.edition-stories`: that is what drops list semantics from VoiceOver
+   in Safari, and "list, 6 items" is how a screen-reader user knows how many
+   topics there are to consider before they start. */
+.interest-options > li::marker {
+  content: "";
+}
+
+/* The whole row is the target, so it clears 44x44 by width and by height and
+   the reader aims at the words rather than at the box (section 25).
+
+   The unavailable state carries no styling of its own. A checkbox at the limit
+   is disabled, which the browser draws and which assistive technology
+   announces; dimming the label as well would say the same thing a second time
+   in the one currency — contrast — that section 25 spends carefully. */
+.interest-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 0.25rem 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  cursor: pointer;
 }
 
 .reader-footer {
