@@ -1,7 +1,6 @@
 @import "@aaj-bas/ui/palette.css";
 
 :root {
-  color-scheme: light dark;
   font-family: Georgia, "Times New Roman", serif;
   background: var(--surface);
   color: var(--ink);
@@ -16,6 +15,32 @@ body {
   min-width: 320px;
   background: inherit;
   color: inherit;
+}
+
+/* One focus ring for everything focusable, rather than a list of class names.
+   The list this replaced was correct for the seven controls someone remembered
+   to add to it, and the eighth — the banner's theme toggle — would have had the
+   user agent's default and nothing else. A base rule cannot be forgotten by a
+   control that has not been written yet. The declarations are the ones the
+   enumerations carried, so no control that exists today renders differently.
+
+   `outline-offset` must stay positive: `.edition-action` and the landing page's
+   link both invert their fill to --ink on hover, and the gap is what keeps the
+   page background, rather than that fill, next to the ring — which is what the
+   palette's contrast note measures against.
+
+   `:where()` contributes no specificity, so a component that genuinely needs a
+   different treatment can still override this with a single class.
+
+   `[tabindex="-1"]` is excluded deliberately. `main` and `.edition-ending` take
+   focus programmatically on a route change and at the end of an edition; they
+   are landmarks and blocks of text, not controls, and a ring drawn around a
+   whole page region says a control is there when none is. They keep the
+   browser's own outline, which nothing here removes — removing it without
+   replacement is what section 25 forbids. */
+:where(a[href], button, input, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .reader-shell {
@@ -34,6 +59,84 @@ body {
 
 .reader-banner {
   margin-bottom: clamp(2.5rem, 8vw, 4rem);
+}
+
+/* The theme control. Quiet on purpose: the small sans the rest of the reader's
+   metadata uses, at the smallest size on the page. It is chrome a reader looks
+   for once and then forgets, and section 28 asks the page at rest to stay a
+   page of type.
+
+   Bordered, and NOT underlined, which is a correction rather than a
+   preference. `ThemeChoice.tsx` argues at length that this must be a button and
+   never a link, and a test enforces it — while an underlined word in a page
+   whose only underlines are controls read as the one thing the component
+   insists it is not. On the three load states that carry no edition it was the
+   only underlined thing on the page at all. The border is the affordance
+   `.edition-action` and the revealed `.skip-link` already use, so the reader
+   meets one button idiom rather than two, and the appearance now agrees with
+   the semantics instead of contradicting them.
+
+   `currentColor`, as on `.edition-action`, rather than `--rule`: the divider
+   token is 2.94:1 on the light page and a control's boundary is non-text
+   contrast under WCAG 2.2 SC 1.4.11, which `palette.test.ts` records as the
+   exact moment `--rule`'s exemption ends. `styles.test.ts` asserts that.
+
+   Nothing changes on hover. `.edition-action` inverts because it is the page's
+   primary action; a hover state here would be a second thing happening in the
+   banner, it reaches no touch reader at all, and the border already says
+   "button" before anything is pointed at it.
+
+   No colour swatches and no preview tiles. The choice is three words, the
+   result is the page the reader is already looking at, and a swatch would be
+   the one saturated thing in the banner. */
+.theme-choice {
+  margin-top: 0.75rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid currentColor;
+  background: none;
+  color: inherit;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* The same one declaration that exists to undo a default as on
+   `.interest-choices`: the UA's fieldset border and inline padding are the only
+   thing here that looks wrong untouched. The group stays a real `fieldset` —
+   the border is decoration and the grouping is semantics, and only one of the
+   two is being removed. */
+.theme-options {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.theme-options > legend {
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+/* The whole row is the target, so it clears 44x44 by width and by height and
+   the reader aims at the word rather than at the circle (section 25). */
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 0.25rem 0;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  cursor: pointer;
 }
 
 h1 {
@@ -354,18 +457,6 @@ p {
   line-height: 1.5;
 }
 
-/* The one focus treatment in the reader, matching `.edition-action` exactly:
-   a 3px ring offset by 3px, so it is the page background and not a fill that
-   sits next to the ring where the palette's contrast note assumes it. */
-.story-toggle:focus-visible,
-.story-background-toggle:focus-visible,
-.story-source-link:focus-visible,
-.story-report:focus-visible,
-.interest-choice input:focus-visible {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: 3px;
-}
-
 .edition-message {
   margin: 0 0 1.5rem;
 }
@@ -398,12 +489,59 @@ p {
   color: var(--surface);
 }
 
-/* Matches the landing page: the offset keeps the page background, rather than
-   the inverted hover fill, next to the ring, which is what the palette's
-   contrast note assumes. */
-.edition-action:focus-visible {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: 3px;
+/* The skip link, hidden until it has focus.
+
+   It carries `.edition-action` as well, so the revealed link is the button
+   idiom already on the page rather than a second one, and this block must stay
+   BELOW `.edition-action` for that: the two selectors have equal specificity,
+   so the later one is what undoes the padding and the border while the link is
+   clipped.
+
+   The clipping idiom is written out again here rather than composed from
+   `.visually-hidden`. It has to be: `.visually-hidden` has no `:focus` escape,
+   because it dresses the live region, an element that must NEVER become
+   visible. A skip link wearing it would stay a clipped 1px box while focused —
+   reachable, activatable, invisible — and jsdom applies no author CSS, so not
+   one test in this suite would notice. The reveal below undoes exactly the
+   declarations that hide it, which only works while both lists are here to be
+   read against each other.
+
+   `:focus`, not `:focus-visible`. The reveal must happen for anyone who lands
+   on this link, including through assistive technology and including a
+   pointer-driven focus that `:focus-visible`'s heuristic decides not to draw. A
+   focused-but-invisible skip link is the exact failure this control exists to
+   prevent.
+
+   `position: static` on reveal, so the link enters the flow and pushes the
+   brand line down rather than covering anything. A link that overlaid the
+   banner would obscure the content next to it while focused, which is WCAG 2.2
+   success criterion 2.4.11 — and `position: fixed` and `position: sticky` are
+   forbidden for this whole file anyway. */
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  min-height: 0;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  display: inline-flex;
+  position: static;
+  width: auto;
+  height: auto;
+  min-height: 44px;
+  margin: 0 0 1rem;
+  padding: 0.65rem 1rem;
+  overflow: visible;
+  clip-path: none;
+  white-space: normal;
+  border: 1px solid currentColor;
 }
 
 /* The end of the edition. Separated from the last story by the same hairline

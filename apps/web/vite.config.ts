@@ -18,10 +18,18 @@ export default defineConfig({
       source text to assert what it does NOT declare, and an empty string
       satisfies every one of those absences vacuously.
 
-      Scoped to this one file rather than switched on globally: no test imports
-      a stylesheet for its effect, and processing CSS everywhere would inject
-      author styles into jsdom for no assertion's benefit.
+      `palette.css` is here for a sharper form of the same hazard. Every
+      contrast ratio `palette.test.ts` checks is discovered from that file's
+      own declaration blocks, so a blanked import yields no blocks, no tokens,
+      and a suite that passes by having nothing to measure -- an accessibility
+      check that reports success precisely when it has failed to run. Both
+      files carry a positive assertion against that, and this entry is what
+      keeps the positive assertion satisfiable.
+
+      Scoped to these two files rather than switched on globally: no test
+      imports a stylesheet for its effect, and processing CSS everywhere would
+      inject author styles into jsdom for no assertion's benefit.
     */
-    css: { include: [/styles\.css/] },
+    css: { include: [/styles\.css/, /palette\.css/] },
   },
 });

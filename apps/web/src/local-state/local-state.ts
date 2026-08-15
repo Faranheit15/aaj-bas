@@ -14,10 +14,10 @@
  * those four properties are decided.
  *
  * The document deliberately holds only which stories were expanded, per
- * edition, which editions the reader ended, and which interests the reader
- * explicitly chose. It records no timestamps and no ordering, so it cannot
- * become a reading-behaviour record (section 23), and it never leaves the
- * device (section 17).
+ * edition, which editions the reader ended, which interests the reader
+ * explicitly chose, and which theme they chose to read in. It records no
+ * timestamps and no ordering, so it cannot become a reading-behaviour record
+ * (section 23), and it never leaves the device (section 17).
  *
  * Interests are the first field here that a reader stated rather than one this
  * code observed, which makes them the most sensitive thing in the document even
@@ -25,12 +25,20 @@
  * reason — a boost the reader selected is not a behavioural profile — and the
  * permission ends where the statement does: nothing may infer an interest from
  * what was read.
+ *
+ * The theme is stated too, and is the one field here that is not about the news
+ * at all: it says how the reader wants a page to look, never what they read or
+ * when. It is kept in the same document rather than under a key of its own for
+ * ADR-0007's reason — a second key would need its own version, its own
+ * corruption handling, and its own eviction — and it is resolved into an
+ * appearance in `theme/document-theme.ts`, which is the only module that
+ * touches the document element.
  */
 
 import {
   editionDateSchema,
-  identifierSchema,
   type InterestSlug,
+  identifierSchema,
   interestSlugSchema,
 } from "@aaj-bas/schemas";
 import { z } from "zod";
@@ -70,6 +78,39 @@ export const MAX_REMEMBERED_EDITIONS = 30;
  * is no oldest entry to drop and no way for it to grow without limit.
  */
 export const MAX_INTERESTS = 2;
+
+/**
+ * The three appearances a reader may choose between.
+ *
+ * "system" is one of the three rather than the absence of an answer, and it is
+ * the one that is never resolved here: it means "follow whatever this device
+ * says", which the stylesheet answers live through a media query. Nothing in
+ * this repository computes what the operating system currently prefers, so
+ * there is no moment at which this build's idea of the reader's system
+ * appearance can be stale.
+ *
+ * There is deliberately no `hasChosenTheme` beside these, where `interests` has
+ * `hasChosenInterests`. That presence bit exists because an invitation must
+ * never re-appear in front of a reader who answered it; the theme control is on
+ * screen whenever the reader looks for it, so there is no question left for a
+ * stored fact to answer. What such a field would actually record is whether
+ * this reader has opened the settings, which is a fact about how they use the
+ * product that nothing asks for (section 23).
+ */
+export const THEMES = ["light", "dark", "system"] as const;
+
+export type Theme = (typeof THEMES)[number];
+
+/**
+ * What a device with no usable answer reads as.
+ *
+ * "system" rather than "light", so that a reader whose document this build
+ * cannot make sense of still gets the appearance their device already asks for.
+ * A "light" default would show a reader in dark mode a white page and call it
+ * the absence of a preference, when their preference was stated to their
+ * operating system and is sitting there to be honoured.
+ */
+export const DEFAULT_THEME: Theme = "system";
 
 /**
  * Flat `schemaVersion`, matching the published-content contracts.
@@ -149,6 +190,39 @@ export const localStateV1Schema = z.looseObject({
     is still recognised as corrupt.
   */
   interests: z.array(identifierSchema).optional(),
+  /*
+    The appearance the reader chose.
+
+    OPTIONAL, and `schemaVersion` stays 1, for the reason `endedEditions` and
+    `interests` give above and that ADR-0007 settles: required would invalidate
+    every document already on a reader's device.
+
+    `z.string()`, NOT `z.enum(THEMES)`, and the criterion is the one ADR-0008
+    wrote down for `interests`: strictness is right where the vocabulary is
+    fixed by nature, leniency where it is a product decision the product may
+    change. A calendar date is not ours to change, so `editionDateSchema` can
+    reject "2026-02-30" and be certain. `light | dark | system` is entirely
+    ours, and a fourth value — a high-contrast theme, sepia — is a plausible
+    thing for a later slice to add.
+
+    Validated strictly here, that fourth value would be a state wipe. A reader
+    picks it, a stale CDN edge or AB-206's service worker serves an older
+    bundle, and that bundle sees `schemaVersion: 1` — so the never-clobber rule
+    does NOT engage — fails validation, reads the whole document as
+    `replaceable`, and destroys a month of viewed sets, the ended editions and
+    the interests on the next story the reader expands. Over a colour.
+
+    The leniency is bounded by SHAPE rather than abandoned, exactly as for
+    `interests`: `theme: 42`, `null`, or an object is something no build of this
+    application could have written, so it is still corruption and still makes
+    the document replaceable. Only an unrecognised STRING is tolerated.
+
+    Resolved at the ACCESSOR (`canonicalTheme`) and never by a `.transform` or a
+    `.catch` here. Either would rewrite the field on every read-modify-write, so
+    an older bundle would delete the answer a newer bundle had just written —
+    silently, on the next card the reader opened.
+  */
+  theme: z.string().optional(),
 });
 
 export type LocalStateV1 = z.infer<typeof localStateV1Schema>;
@@ -480,6 +554,52 @@ export function chosenInterests(state: LocalStateV1): readonly InterestSlug[] {
  */
 export function hasChosenInterests(state: LocalStateV1): boolean {
   return state.interests !== undefined;
+}
+
+/**
+ * The theme this build will render with, out of whatever the device holds.
+ *
+ * The other half of the schema's leniency, and the same shape as
+ * `canonicalInterests`: a string this build does not recognise is kept on the
+ * device and ignored while reading, so a build that has never heard of it
+ * neither destroys it nor tries to render by it. A reader who chose a theme a
+ * newer bundle introduced reads as "system" here for the session and finds
+ * their answer intact when the newer bundle loads again.
+ *
+ * An ABSENT field and an UNRECOGNISED one give the same answer, which is
+ * correct here and would not have been for `interests`: nothing depends on
+ * telling a reader who has chosen from one who has not (see `THEMES`).
+ */
+export function canonicalTheme(stored: string | undefined): Theme {
+  return THEMES.find((theme) => theme === stored) ?? DEFAULT_THEME;
+}
+
+/**
+ * The document that results from the reader choosing a theme.
+ *
+ * REPLACES, like `withInterests` and unlike the two writers that add to a list.
+ * A reader has one appearance, so there is nothing to accumulate.
+ *
+ * "system" is written as a VALUE rather than by deleting the key. Deleting
+ * would render identically — `canonicalTheme` answers "system" for an absent
+ * field too — and it would throw away the one thing the two forms do not share:
+ * an absent field is what every document written before this slice looks like,
+ * so erasing the key turns "this reader asked to follow their device" back into
+ * "this reader has never been asked". The two are the same to the stylesheet
+ * and not the same fact, and keeping the one that says more costs a spread
+ * either way.
+ *
+ * Unknown top-level keys, the viewed sets, the ended editions and the interests
+ * are carried through untouched by the spread, so a reader changing theme on a
+ * stale bundle keeps everything a newer bundle wrote.
+ */
+export function withTheme(state: LocalStateV1, theme: Theme): LocalStateV1 {
+  return { ...state, theme };
+}
+
+/** The appearance to render, for a document this build could read. */
+export function chosenTheme(state: LocalStateV1): Theme {
+  return canonicalTheme(state.theme);
 }
 
 /**

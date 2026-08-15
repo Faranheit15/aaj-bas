@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
   canonicalInterests,
+  canonicalTheme,
   chosenInterests,
+  chosenTheme,
   EMPTY_LOCAL_STATE,
   hasChosenInterests,
   hasEndedEdition,
@@ -14,6 +16,7 @@ import {
   viewedStoryIds,
   withEndedEdition,
   withInterests,
+  withTheme,
   withViewedStory,
 } from "./local-state";
 
@@ -82,8 +85,11 @@ describe("reading a stored document", () => {
 
   it("carries an unrecognised top-level key through a write untouched", () => {
     // The case this protects: a newer build wrote a field this one has never
-    // heard of — AB-205's theme, now that `endedEditions` is ours — and this
-    // build, served from a stale edge, must hand it back rather than strip it.
+    // heard of, and this build, served from a stale edge, must hand it back
+    // rather than strip it. The key is deliberately one no build has ever
+    // written — `endedEditions`, `interests` and `theme` are all ours now — so
+    // the assertion stays about UNKNOWN keys rather than about a field that
+    // happens not to have shipped yet.
     const stored = JSON.stringify({
       schemaVersion: LOCAL_STATE_VERSION,
       viewedByEdition: { [EDITION]: ["story-a"] },
@@ -182,6 +188,32 @@ describe("reading a stored document", () => {
     {
       label: "interests holding something that is not an identifier",
       raw: '{"schemaVersion":1,"viewedByEdition":{},"interests":["Sports"]}',
+    },
+    /*
+      And the same bound on the theme field's leniency, which is the other
+      field validated loosely on purpose. It accepts a theme this build has
+      never heard of, because `light | dark | system` is a vocabulary this
+      product owns and may extend — but that is leniency about the VOCABULARY,
+      not about the shape. A value of the wrong type could not have been
+      written by any build of this application, so it is corruption, and
+      answering `usable` for one would hand `canonicalTheme` something it was
+      never typed to receive.
+    */
+    {
+      label: "theme as a number",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"theme":42}',
+    },
+    {
+      label: "theme as null",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"theme":null}',
+    },
+    {
+      label: "theme as an object",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"theme":{"name":"dark"}}',
+    },
+    {
+      label: "theme as an array of themes",
+      raw: '{"schemaVersion":1,"viewedByEdition":{},"theme":["dark"]}',
     },
   ];
 
@@ -818,4 +850,212 @@ describe("choosing interests", () => {
       expect(canonicalInterests([name])).toEqual([]);
     },
   );
+});
+
+describe("choosing a theme", () => {
+  /** A stored document holding exactly this theme, as bytes off a device. */
+  function themeDocument(theme: unknown): string {
+    return JSON.stringify({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: { [EDITION]: ["story-a"] },
+      theme,
+    });
+  }
+
+  it("reads a document written before the field existed", () => {
+    /*
+      The compatibility assertion ADR-0007 asks of every additive field, and
+      the reason this one is optional. Every document already on a reader's
+      device looks like this; required, it would read as `replaceable`, and the
+      next write would take the viewed sets, the ended editions and the
+      interests with it.
+    */
+    const stored = JSON.stringify({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: { [EDITION]: ["story-a"] },
+    });
+
+    expect(readLocalState(stored).kind).toBe("usable");
+    expect(chosenTheme(usable(stored))).toBe("system");
+    expect(viewedStoryIds(usable(stored), EDITION)).toEqual(
+      new Set(["story-a"]),
+    );
+    // An additive optional field does not bump the version (ADR-0007).
+    expect(LOCAL_STATE_VERSION).toBe(1);
+  });
+
+  it("stays usable when the device holds a theme this build does not know", () => {
+    /*
+      The most valuable assertion in this block, and the whole reason the field
+      is `z.string()` rather than `z.enum(THEMES)`.
+
+      Under an enum, the day a later slice ships a fourth theme — high
+      contrast, sepia — every device whose reader picked it becomes a document
+      an older bundle reads as corrupt. `schemaVersion` is still 1, so the
+      never-clobber rule does not engage, and the next story that reader
+      expands destroys a month of viewed sets, their ended editions and their
+      interests. Over a colour.
+    */
+    const stored = themeDocument("high-contrast");
+
+    expect(readLocalState(stored).kind).toBe("usable");
+    expect(viewedStoryIds(usable(stored), EDITION)).toEqual(
+      new Set(["story-a"]),
+    );
+  });
+
+  it("bounds that leniency by shape alone, never by length", () => {
+    /*
+      The bound the field's own comment states — "bounded by SHAPE... Only an
+      unrecognised STRING is tolerated" — read strictly. A `.max()` or a
+      `.min()` on the field sounds like defensive hygiene and is the same state
+      wipe the test above exists to prevent, only narrower: a fourth theme with
+      a long enough name, or a build that wrote an empty string, fails
+      validation, the document reads as `replaceable`, and the next story the
+      reader expands takes their viewed sets, ended editions and interests with
+      it. `canonicalTheme` already answers "system" for both of these, so
+      nothing downstream is protected by rejecting them here.
+
+      A length bound is not a shape bound. Nothing accumulates in this field —
+      `withTheme` replaces rather than appends — so there is no growth to cap,
+      and the document as a whole is bounded where storage actually needs it.
+    */
+    for (const theme of [
+      "",
+      "a-theme-nobody-has-shipped-yet-with-a-long-name",
+    ]) {
+      const stored = themeDocument(theme);
+
+      expect([theme, readLocalState(stored).kind]).toStrictEqual([
+        theme,
+        "usable",
+      ]);
+      expect(viewedStoryIds(usable(stored), EDITION)).toEqual(
+        new Set(["story-a"]),
+      );
+      expect(chosenTheme(usable(stored))).toBe("system");
+    }
+  });
+
+  it("renders a theme it does not know as the system appearance", () => {
+    // The other half of the leniency: kept on the device, ignored while
+    // reading. This build cannot render a palette it has no rules for, and the
+    // reader's own device knows what they asked it for.
+    expect(chosenTheme(usable(themeDocument("high-contrast")))).toBe("system");
+    expect(canonicalTheme("high-contrast")).toBe("system");
+  });
+
+  it("reads a device that has chosen nothing as the system appearance", () => {
+    /*
+      "system", never "light". A light default would show a reader whose
+      operating system is in dark mode a white page and call it the absence of
+      a preference, when their preference was stated to their device and is
+      sitting there to be honoured.
+    */
+    expect(canonicalTheme(undefined)).toBe("system");
+    expect(chosenTheme(EMPTY_LOCAL_STATE)).toBe("system");
+  });
+
+  it("hands an unknown theme back untouched when a story is expanded", () => {
+    /*
+      Why the resolving lives in the accessor and never in the schema. A
+      `.transform` or a `.catch` there would rewrite the field on this
+      read-modify-write, so a reader served this bundle from a stale edge would
+      lose the appearance their newer bundle just wrote — silently, on the next
+      card they opened.
+    */
+    const stored = themeDocument("high-contrast");
+
+    const written = JSON.stringify(
+      withViewedStory(usable(stored), EDITION, "story-b"),
+    );
+
+    expect(JSON.parse(written)).toHaveProperty("theme", "high-contrast");
+  });
+
+  it("replaces the theme rather than accumulating themes", () => {
+    // A reader has one appearance. Copying `withViewedStory`'s body here would
+    // turn "change my theme" into a list of every theme ever chosen.
+    const dark = withTheme(EMPTY_LOCAL_STATE, "dark");
+
+    const light = withTheme(dark, "light");
+
+    expect(chosenTheme(light)).toBe("light");
+    expect(JSON.parse(JSON.stringify(light))).toHaveProperty("theme", "light");
+  });
+
+  it("writes the system choice as a value rather than deleting the key", () => {
+    /*
+      Deleting would render identically — an absent field reads as "system" too
+      — and it would throw away the one thing the two forms do not share. An
+      absent field is what every document written before this slice looks like,
+      so erasing the key turns "this reader asked to follow their device" back
+      into "this reader has never chosen".
+    */
+    const following = withTheme(withTheme(EMPTY_LOCAL_STATE, "dark"), "system");
+
+    expect(JSON.parse(JSON.stringify(following))).toHaveProperty(
+      "theme",
+      "system",
+    );
+    expect(chosenTheme(following)).toBe("system");
+  });
+
+  it("keeps the viewed sets, ended editions, interests and unknown keys", () => {
+    const stored = JSON.stringify({
+      schemaVersion: LOCAL_STATE_VERSION,
+      viewedByEdition: { [EDITION]: ["story-a"] },
+      endedEditions: [EDITION],
+      interests: ["sports"],
+      preferredContrast: "more",
+    });
+
+    const written = JSON.stringify(withTheme(usable(stored), "dark"));
+
+    // Through the serialised form, because that is what the device keeps.
+    expect(JSON.parse(written)).toMatchObject({
+      preferredContrast: "more",
+      endedEditions: [EDITION],
+      interests: ["sports"],
+      viewedByEdition: { [EDITION]: ["story-a"] },
+      theme: "dark",
+    });
+  });
+
+  it("survives a story being expanded, an ending, and a choice of interests", () => {
+    // Every writer rebuilds the document from a spread, so every one of them
+    // can drop this field. This is the mirror the other three fields keep.
+    const dark = withTheme(EMPTY_LOCAL_STATE, "dark");
+
+    const written = withInterests(
+      withEndedEdition(withViewedStory(dark, EDITION, "story-a"), EDITION),
+      ["sports"],
+    );
+
+    expect(chosenTheme(written)).toBe("dark");
+    expect(JSON.parse(JSON.stringify(written))).toHaveProperty("theme", "dark");
+  });
+
+  it("is idempotent", () => {
+    const once = withTheme(EMPTY_LOCAL_STATE, "dark");
+    const twice = withTheme(once, "dark");
+
+    expect(twice).toEqual(once);
+    expect(JSON.stringify(twice)).toBe(JSON.stringify(once));
+  });
+
+  it("writes no such key for a reader who has not chosen", () => {
+    // `EMPTY_LOCAL_STATE` carrying `theme: "system"` would put an answer on
+    // every device whose reader never gave one, and every write below rebuilds
+    // the document from it.
+    expect(JSON.parse(JSON.stringify(EMPTY_LOCAL_STATE))).not.toHaveProperty(
+      "theme",
+    );
+
+    const written = JSON.parse(
+      JSON.stringify(withViewedStory(EMPTY_LOCAL_STATE, EDITION, "story-a")),
+    );
+
+    expect(written).not.toHaveProperty("theme");
+  });
 });
