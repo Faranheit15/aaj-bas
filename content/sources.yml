@@ -1,0 +1,75 @@
+# The source registry — development sample data
+#
+# This file is the list of feeds the content pipeline is permitted to fetch. It
+# is the last point before anything reaches the network at which a human reads
+# that permission in a diff, so it is validated on every run of `bun run check`
+# by `bun run sources:validate`, and the contract it must satisfy lives in
+# `packages/domain/src/source-registry/`. ADR-0012 records why.
+#
+# EVERY ENTRY BELOW IS DEVELOPMENT SAMPLE DATA AND CANNOT RESOLVE.
+#
+# The publishers named here are invented. They are the same invented publishers
+# as the sample edition in `content/editions/2026-07-21.json`, so the two sample
+# artefacts are one coherent fiction under one disclaimer. Every feed host uses
+# the RFC 2606 reserved `.invalid` top-level domain and can never resolve to
+# anything; `.test` and `.example` are equally acceptable reserved names, and
+# `.localhost` is not — it names the machine running the build. No real
+# organisation is named, described, or represented in this file, and none may
+# be added without the procedure below.
+#
+# Adding a real source is a human procedure, not an edit.
+# `docs/runbooks/adding-a-source.md` is that procedure. It requires reading the
+# publisher's terms page, recording which day it was read and who read it, and
+# writing down in your own words what those terms permit. A source is not
+# fetched until `active: true`, and the schema refuses `active: true` without
+# all of those fields present together.
+#
+# AN AI CODING AGENT MUST NEVER AUTHOR `termsUrl`, `termsReviewedOn`,
+# `termsReviewedBy`, `permittedUse`, `permittedUses`, OR `attribution`.
+#
+# Not for a real publisher and not for a sample. Writing a plausible
+# permitted-use note beside a feed URL asserts that a legal review happened, in
+# the file whose entire purpose is to record that it happened, and the next
+# slice reads it as authorisation. Section 18 says an RSS feed grants nothing by
+# existing; section 20 says do not fabricate. A sample entry has nowhere to put
+# those fields at all — they are not in its shape and the schema rejects them —
+# which is the mechanism that makes the fabrication impossible rather than
+# merely discouraged.
+#
+# Adding the first real source means deleting these samples in the same pull
+# request. A registry that mixes reserved hosts with real ones is a blocking
+# finding, so this is enforced rather than remembered: the diff that registers a
+# real publisher is a whole-file, deliberate, reviewed change.
+
+schemaVersion: 1
+
+sources:
+  - id: sample-vetrapur-chronicle
+    publisher: Vetrapur Morning Chronicle
+    siteUrl: https://vetrapur-chronicle.invalid/
+    feedUrl: https://vetrapur-chronicle.invalid/feeds/city.xml
+    sourceType: publisher
+    region: india
+    language: en
+    active: false
+    sample: true
+
+  - id: sample-estuary-ledger
+    publisher: The Estuary Ledger
+    siteUrl: https://estuary-ledger.invalid/
+    feedUrl: https://estuary-ledger.invalid/feeds/business.xml
+    sourceType: publisher
+    region: south-asia
+    language: en
+    active: false
+    sample: true
+
+  - id: sample-meridian-newswire
+    publisher: Meridian Newswire
+    siteUrl: https://meridian-newswire.invalid/
+    feedUrl: https://meridian-newswire.invalid/feeds/world.xml
+    sourceType: publisher
+    region: world
+    language: en
+    active: false
+    sample: true

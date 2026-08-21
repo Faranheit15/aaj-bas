@@ -13,6 +13,7 @@ export {
   CORE_STORY_COUNT,
   EDITION_STATUSES,
   INTEREST_STORY_COUNT,
+  duplicatesIn,
   editionSchema,
   editionStatusSchema,
 } from "./edition";

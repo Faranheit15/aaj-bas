@@ -19,6 +19,7 @@
  * which rule it is or quietly downgrade itself.
  */
 import type { Edition, SourceReference, Story } from "@aaj-bas/schemas";
+import { classifyHostname } from "../public-address";
 import { HARD_NEWS_TERMS } from "./hard-news-terms";
 import type { FindingSeverity } from "./report";
 
@@ -136,24 +137,6 @@ const MARKUP_PATTERNS: readonly RegExp[] = [
   /&[a-zA-Z][a-zA-Z0-9]{1,31};/,
   /&#(?:\d+|[xX][0-9a-fA-F]+);/,
 ];
-
-/** Hosts a real edition may not use, from RFC 2606 and RFC 6761. */
-const RESERVED_TLDS: readonly string[] = ["invalid", "test", "example"];
-const RESERVED_DOMAINS: readonly string[] = [
-  "example.com",
-  "example.net",
-  "example.org",
-];
-
-/** Hostnames that resolve inside the network running the build. */
-const PRIVATE_HOST_SUFFIXES: readonly string[] = [
-  ".localhost",
-  ".local",
-  ".internal",
-  ".home.arpa",
-];
-
-const IPV4_PATTERN = /^\d{1,3}(?:\.\d{1,3}){3}$/;
 
 export const EDITION_RULES: readonly EditionRule[] = [
   {
@@ -1100,44 +1083,25 @@ function sourceUrls(
   });
 }
 
-function isIpLiteral(hostname: string): boolean {
-  // The URL parser wraps an IPv6 host in brackets, which no named host carries.
-  // It also strips the trailing dot from an IPv4 literal, so `192.0.2.10.` is
-  // already `192.0.2.10` by the time a rule sees it.
-  return hostname.startsWith("[") || IPV4_PATTERN.test(hostname);
-}
-
 /**
- * The hostname with the DNS root's optional trailing dot removed.
+ * How a host is classified, which these rules no longer decide for themselves.
  *
- * `https://example.com./x` and `https://example.com/x` address the same host and
- * the schema accepts both, so every classification below has to agree about
- * them. Without this, one character on the end of a hostname walks past every
- * reserved-domain and private-network rule: the last label of `example.com.` is
- * the empty string, and `intranet.internal.` ends with no suffix in the list.
+ * `../public-address` owns the ranges, the name lists, and the trailing-dot and
+ * case handling all three of these depend on. AB-401's source registry needs
+ * the same predicate, so the choice was to extract it or to copy it, and two
+ * copies of a section 19 control are two controls that drift -- quietly, and in
+ * the direction of letting something through.
  */
-function canonicalHostname(hostname: string): string {
-  return hostname.endsWith(".") ? hostname.slice(0, -1) : hostname;
+function isIpLiteral(hostname: string): boolean {
+  return classifyHostname(hostname).kind === "address";
 }
 
-function isPrivateHost(rawHostname: string): boolean {
-  const hostname = canonicalHostname(rawHostname);
-  return (
-    hostname === "localhost" ||
-    PRIVATE_HOST_SUFFIXES.some((suffix) => hostname.endsWith(suffix))
-  );
+function isPrivateHost(hostname: string): boolean {
+  return classifyHostname(hostname).kind === "private-name";
 }
 
-function isReservedHost(rawHostname: string): boolean {
-  const hostname = canonicalHostname(rawHostname);
-  const labels = hostname.split(".");
-  const tld = labels[labels.length - 1];
-  if (tld !== undefined && RESERVED_TLDS.includes(tld)) {
-    return true;
-  }
-  return RESERVED_DOMAINS.some(
-    (domain) => hostname === domain || hostname.endsWith(`.${domain}`),
-  );
+function isReservedHost(hostname: string): boolean {
+  return classifyHostname(hostname).kind === "reserved-name";
 }
 
 /** Map entries sorted by key, so a rule's output never depends on insertion

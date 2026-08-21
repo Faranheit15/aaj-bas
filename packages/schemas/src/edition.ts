@@ -255,8 +255,14 @@ export const editionSchema = z
 
 export type Edition = z.infer<typeof editionSchema>;
 
-/** Every value appearing more than once, each reported once. */
-function duplicatesIn(values: readonly string[]): string[] {
+/**
+ * Every value appearing more than once, each reported once.
+ *
+ * Exported because the source registry runs the same check over its own ids and
+ * feed URLs. A second copy of four lines would look harmless and would be the
+ * thing that eventually disagrees with this one about what "duplicate" means.
+ */
+export function duplicatesIn(values: readonly string[]): string[] {
   const seen = new Set<string>();
   const repeated = new Set<string>();
   for (const value of values) {
