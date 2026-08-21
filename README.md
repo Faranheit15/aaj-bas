@@ -71,6 +71,7 @@ bun run format:check
 bun run lint
 bun run typecheck
 bun run content:validate
+bun run sources:validate
 bun run test
 bun run build
 bun run check
@@ -80,9 +81,11 @@ bun run check
 
 `bun run content:validate` checks every edition in `content/editions/` against `editionSchema` and the editorial rules in `packages/domain` — structural, diversity, duplicate, length, URL, and correction — exiting non-zero on a blocking finding and printing advisory warnings otherwise; it takes explicit paths instead of the default directory, `--json` for a machine-readable report, and `--publish`, which additionally treats a not-publishable edition as fatal. CI runs the `--publish` mode over the staged bytes before uploading the reader.
 
+`bun run sources:validate` checks `content/sources.yml`, the list of feeds the content pipeline is permitted to fetch, against the registry contract and rules in `packages/domain` — an https-only feed URL, no address literal or private-network name in any spelling, reserved sample hosts kept apart from real ones, and the terms review an active source cannot be missing — exiting non-zero on a blocking finding, and exiting 3 rather than 0 when it found no registry or no entries to check. `--json` writes a machine-readable report to stdout. There is no flag that mutes a rule: adding a real source is a human procedure documented in the [adding a source runbook](docs/runbooks/adding-a-source.md), and every entry today is invented sample data on reserved `.invalid` hosts that can never resolve.
+
 `bun run format` rewrites files rather than checking them, so it is a fix-up command rather than a validation step.
 
-`bun run check` runs every merge-blocking formatting, linting, type-checking, content-validation, test, and production-build check.
+`bun run check` runs every merge-blocking formatting, linting, type-checking, content-validation, source-registry-validation, test, and production-build check.
 
 ## Deployment
 

@@ -939,6 +939,7 @@ bun run format:check
 bun run lint
 bun run typecheck
 bun run content:validate
+bun run sources:validate
 bun run test
 bun run build
 ```

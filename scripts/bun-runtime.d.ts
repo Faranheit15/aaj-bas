@@ -125,6 +125,26 @@ declare namespace Bun {
     fetch(request: Request): Promise<Response> | Response;
   }): Server;
 
+  /**
+   * Bun's own YAML parser, which is why `content/sources.yml` needs no
+   * dependency: section 11 asks that a package not be added for a capability
+   * the runtime already has.
+   *
+   * `parse` throws on malformed input rather than returning a failure, so every
+   * caller has to catch -- an unparseable registry is a real failure and must
+   * never be reported as a file that simply held nothing. The result is
+   * `unknown` because a parsed document is not a registry until a schema says
+   * so, and that judgement lives in `@aaj-bas/domain`.
+   *
+   * `Bun` is undefined under Vitest, which is why the parse happens in this
+   * directory at all: `validateSourceRegistry` takes a parsed value rather than
+   * text so that the package holding the rules stays runnable under the test
+   * runner.
+   */
+  namespace YAML {
+    function parse(text: string): unknown;
+  }
+
   class Glob {
     constructor(pattern: string);
     /**
