@@ -58,7 +58,7 @@ jobs:
       # not; the comment on wranglerVersion below already warns that this
       # workflow "pins only Bun and inherits the runner's Node", and that
       # hazard now applies to a check that blocks a merge.
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 22.x
       - run: bun ci
