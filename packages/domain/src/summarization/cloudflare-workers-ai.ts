@@ -6,8 +6,12 @@
  * and automatic fallback degradation.
  */
 
-import { type Story, storySchema } from "@aaj-bas/schemas";
 import { DeterministicFallbackSummarizer } from "./fallback";
+import {
+  compileSummarizePrompt,
+  convertPromptResultToStory,
+  parsePromptSummaryResult,
+} from "./prompt";
 import {
   type StorySummarizer,
   type StorySummarizerInput,
@@ -23,16 +27,6 @@ interface WorkersAiResponse {
   };
   success?: boolean;
   errors?: Array<{ message: string }>;
-}
-
-function cleanOptional(
-  val: unknown,
-  minLen = 20,
-  maxLen = 800,
-): string | undefined {
-  if (typeof val !== "string") return undefined;
-  const trimmed = val.trim();
-  return trimmed.length >= minLen ? trimmed.slice(0, maxLen) : undefined;
 }
 
 export class CloudflareWorkersAiSummarizer implements StorySummarizer {
@@ -73,28 +67,25 @@ export class CloudflareWorkersAiSummarizer implements StorySummarizer {
 
     const endpoint = `https://api.cloudflare.com/client/v4/accounts/${this.accountId}/ai/run/${this.model}`;
 
+    const compiledPrompt = compileSummarizePrompt(input);
     const promptMessages = [
       {
         role: "system",
-        content:
-          "You are a factual, calm news summarizer for Aaj, Bas. Generate concise news summaries in valid JSON conforming to the schema with: headline (10-160 chars), deck (10-240 chars), whatChanged (1-4 paragraphs, 20-800 chars each), whyItMatters (20-800 chars), and reportingType ('reporting' | 'analysis' | 'opinion' | 'official' | 'research'). Never invent facts or unsupported context.",
+        content: compiledPrompt.system,
       },
       {
         role: "user",
-        content: JSON.stringify({
-          topic: input.topic,
-          clusterId: input.cluster.id,
-          representativeTitle: input.cluster.representativeTitle,
-          sources: input.cluster.sources,
-          items: input.cluster.items.map((i) => ({
-            sourceId: i.sourceId,
-            title: i.title,
-            description: i.description,
-            publishedAt: i.publishedAt,
-          })),
-        }),
+        content: compiledPrompt.user,
       },
     ];
+
+    const allowedSources = Array.from(
+      new Set(
+        input.cluster.sources.length > 0
+          ? input.cluster.sources
+          : input.cluster.items.map((i) => i.sourceId),
+      ),
+    ).filter(Boolean);
 
     let lastErrorReason: string | undefined;
 
@@ -150,86 +141,17 @@ export class CloudflareWorkersAiSummarizer implements StorySummarizer {
           continue;
         }
 
-        const cleanedJson = textContent
-          .trim()
-          .replace(/^```json/i, "")
-          .replace(/^```/i, "")
-          .replace(/```$/i, "")
-          .trim();
+        const parseRes = parsePromptSummaryResult(textContent, allowedSources);
+        if (!parseRes.ok) {
+          lastErrorReason = parseRes.error;
+          break; // do not retry deterministic payload error
+        }
 
-        const parsed = JSON.parse(cleanedJson);
-
-        const distinctSources = Array.from(
-          new Set(
-            input.cluster.sources.length > 0
-              ? input.cluster.sources
-              : input.cluster.items.map((i) => i.sourceId),
-          ),
-        ).filter(Boolean);
-        const sourceIds = (
-          distinctSources.length > 0
-            ? distinctSources
-            : [input.cluster.primaryItem.sourceId]
-        ).slice(0, 20);
-        const sourceCount = sourceIds.length;
-        const confidence =
-          sourceCount > 1
-            ? ("multi-source" as const)
-            : ("single-source" as const);
-
-        const nowIso = new Date().toISOString();
-        const firstPublishedAt =
-          input.cluster.firstPublishedAt ||
-          input.cluster.primaryItem.publishedAt ||
-          nowIso;
-        const lastPublishedAt =
-          input.cluster.lastPublishedAt ||
-          input.cluster.primaryItem.publishedAt ||
-          firstPublishedAt;
-
-        const firstPubMs = Date.parse(firstPublishedAt);
-        const lastPubMs = Date.parse(lastPublishedAt);
-        const updatedAt =
-          Number.isFinite(firstPubMs) &&
-          Number.isFinite(lastPubMs) &&
-          lastPubMs >= firstPubMs
-            ? lastPublishedAt
-            : firstPublishedAt;
-
-        const sanitizedId = input.cluster.id
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, "-")
-          .replace(/^-+|-+$/g, "");
-        const baseId = sanitizedId.startsWith("s-")
-          ? sanitizedId
-          : `s-${sanitizedId}`;
-        const storyId = baseId.slice(0, 64).replace(/-+$/, "");
-        const rawSlug = `${input.topic}-${storyId}`;
-        const slug = rawSlug.slice(0, 60).replace(/-+$/, "");
-
-        const rawStory: Story = {
-          id: storyId,
-          slug,
-          topic: input.topic,
-          reportingType: parsed.reportingType ?? "reporting",
-          headline: parsed.headline,
-          deck: parsed.deck,
-          whatChanged: Array.isArray(parsed.whatChanged)
-            ? parsed.whatChanged
-            : [parsed.whatChanged],
-          whyItMatters: parsed.whyItMatters,
-          background: cleanOptional(parsed.background, 20, 1500),
-          uncertainty: cleanOptional(parsed.uncertainty, 20, 800),
-          sourceIds,
-          sourceCount,
-          confidence,
-          firstPublishedAt,
-          updatedAt,
-          generatedBy: this.model,
-          reviewed: false,
-        };
-
-        const validatedStory = storySchema.parse(rawStory);
+        const validatedStory = convertPromptResultToStory(
+          parseRes.result,
+          input,
+          this.model,
+        );
 
         return {
           story: validatedStory,

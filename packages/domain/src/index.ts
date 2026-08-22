@@ -215,6 +215,9 @@ export {
   rankAndComposeCandidates,
 } from "./candidate-ranking";
 export type {
+  PromptExtractedFacts,
+  PromptSummaryResult,
+  SentenceWithSources,
   StorySummarizer,
   StorySummarizerInput,
   StorySummarizerOutput,
@@ -223,7 +226,12 @@ export type {
 } from "./summarization";
 export {
   CloudflareWorkersAiSummarizer,
+  compileSummarizePrompt,
+  convertPromptResultToStory,
   createSummarizer,
   DeterministicFallbackSummarizer,
+  parsePromptSummaryResult,
+  promptSummaryResultSchema,
+  SUMMARIZE_PROMPT_VERSION,
   SUMMARIZER_DEFAULTS,
 } from "./summarization";

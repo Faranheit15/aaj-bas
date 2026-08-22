@@ -6,41 +6,40 @@ import { CloudflareWorkersAiSummarizer } from "./cloudflare-workers-ai";
 describe("CloudflareWorkersAiSummarizer", () => {
   function makeMockCluster(): StoryCluster {
     return {
-      id: "c-isro",
+      id: "c-isro-launch",
       primaryItem: {
         sourceId: "pti",
-        guid: "g-1",
-        title:
-          "ISRO launches navigation satellite NVS-02 successfully into orbit",
+        guid: "item-1",
+        title: "ISRO launches navigation satellite NVS-02 successfully",
         description:
-          "Indian Space Research Organisation successfully launched the second-generation navigation satellite.",
-        url: "https://example.com/isro",
+          "The Indian Space Research Organisation launched the satellite from Sriharikota.",
+        url: "https://example.com/isro-1",
         publishedAt: "2026-08-22T10:00:00.000Z",
         updatedAt: null,
-        contentHash: "hash-isro",
+        contentHash: "hash-1",
       },
       items: [
         {
           sourceId: "pti",
-          guid: "g-1",
-          title:
-            "ISRO launches navigation satellite NVS-02 successfully into orbit",
+          guid: "item-1",
+          title: "ISRO launches navigation satellite NVS-02 successfully",
           description:
-            "Indian Space Research Organisation successfully launched the second-generation navigation satellite.",
-          url: "https://example.com/isro/pti",
+            "The Indian Space Research Organisation launched the satellite from Sriharikota.",
+          url: "https://example.com/isro-1",
           publishedAt: "2026-08-22T10:00:00.000Z",
           updatedAt: null,
-          contentHash: "hash-isro-1",
+          contentHash: "hash-1",
         },
         {
           sourceId: "the-hindu",
-          guid: "g-2",
-          title: "ISRO places navigation satellite in orbit",
-          description: "Second generation satellite launched from Sriharikota.",
-          url: "https://example.com/isro/hindu",
+          guid: "item-2",
+          title: "NVS-02 navigation satellite placed into orbit by ISRO",
+          description:
+            "New generation navigation satellite successfully placed into orbit.",
+          url: "https://example.com/isro-2",
           publishedAt: "2026-08-22T10:30:00.000Z",
           updatedAt: null,
-          contentHash: "hash-isro-2",
+          contentHash: "hash-2",
         },
       ],
       sourceCount: 2,
@@ -56,18 +55,27 @@ describe("CloudflareWorkersAiSummarizer", () => {
     };
   }
 
-  it("successfully parses valid LLM JSON response and creates Story", async () => {
+  it("successfully parses valid LLM JSON response and creates Story with promptVersion", async () => {
     const mockResponse = {
       result: {
         response: JSON.stringify({
           headline: "ISRO launches navigation satellite NVS-02 into orbit",
           deck: "New generation satellite expands India's regional positioning system.",
           whatChanged: [
-            "ISRO successfully placed the 2,232-kilogram navigation satellite into geosynchronous transfer orbit from Sriharikota.",
+            {
+              sentence:
+                "ISRO successfully placed the 2,232-kilogram navigation satellite into geosynchronous transfer orbit from Sriharikota.",
+              sourceIds: ["pti", "the-hindu"],
+            },
           ],
           whyItMatters:
             "The launch strengthens India's NavIC constellation with indigenous atomic clock technology.",
           reportingType: "reporting",
+          extractedFacts: {
+            namedEntities: ["ISRO", "NVS-02", "NavIC"],
+            dates: ["2026-08-22"],
+            numbers: ["2,232"],
+          },
         }),
       },
       success: true,
@@ -101,6 +109,8 @@ describe("CloudflareWorkersAiSummarizer", () => {
     );
     expect(result.story.sourceCount).toBe(2);
     expect(result.story.confidence).toBe("multi-source");
+    expect(result.story.promptVersion).toBe("summarize-v1");
+    expect(result.story.generatedBy).toBe("@cf/meta/llama-3.1-8b-instruct");
     expect(() => storySchema.parse(result.story)).not.toThrow();
 
     // Verify auth header sent correctly
@@ -120,7 +130,12 @@ describe("CloudflareWorkersAiSummarizer", () => {
         response: JSON.stringify({
           headline: "ISRO launches navigation satellite NVS-02 into orbit",
           deck: "New generation satellite expands regional navigation.",
-          whatChanged: ["Satellite successfully placed into transfer orbit."],
+          whatChanged: [
+            {
+              sentence: "Satellite successfully placed into transfer orbit.",
+              sourceIds: ["pti"],
+            },
+          ],
           whyItMatters: "Upgrades NavIC regional positioning network.",
           reportingType: "reporting",
         }),
@@ -196,7 +211,11 @@ describe("CloudflareWorkersAiSummarizer", () => {
           headline: "ISRO launches navigation satellite NVS-02 into orbit",
           deck: "New generation satellite expands regional navigation.",
           whatChanged: [
-            "Satellite successfully placed into transfer orbit from Sriharikota.",
+            {
+              sentence:
+                "Satellite successfully placed into transfer orbit from Sriharikota.",
+              sourceIds: ["pti"],
+            },
           ],
           whyItMatters: "Upgrades NavIC regional positioning network.",
           reportingType: "reporting",
@@ -232,6 +251,52 @@ describe("CloudflareWorkersAiSummarizer", () => {
     expect(result.usedFallback).toBe(false);
     expect(result.story.background).toBeUndefined();
     expect(result.story.uncertainty).toBeUndefined();
+    expect(() => storySchema.parse(result.story)).not.toThrow();
+  });
+
+  it("degrades gracefully to fallback when model cites unknown source ID", async () => {
+    const mockResponse = {
+      result: {
+        response: JSON.stringify({
+          headline: "ISRO launches navigation satellite NVS-02 into orbit",
+          deck: "New generation satellite expands regional navigation.",
+          whatChanged: [
+            {
+              sentence: "Satellite placed into transfer orbit.",
+              sourceIds: ["unknown-source-id"], // Not in cluster
+            },
+          ],
+          whyItMatters: "Upgrades NavIC network.",
+          reportingType: "reporting",
+        }),
+      },
+      success: true,
+    };
+
+    const mockFetch = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => mockResponse,
+    } as Response);
+
+    const summarizer = new CloudflareWorkersAiSummarizer(
+      "test-account",
+      "test-token",
+      "@cf/meta/llama-3.1-8b-instruct",
+      {
+        fetch: mockFetch as unknown as typeof fetch,
+        sleep: async () => {},
+      },
+    );
+
+    const result = await summarizer.summarize({
+      cluster: makeMockCluster(),
+      topic: "science-health-climate",
+      editionDate: "2026-08-22",
+    });
+
+    expect(result.usedFallback).toBe(true);
+    expect(result.fallbackReason).toContain("Unknown source ID cited");
     expect(() => storySchema.parse(result.story)).not.toThrow();
   });
 
