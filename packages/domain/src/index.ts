@@ -214,3 +214,16 @@ export {
   RANKING_DEFAULTS,
   rankAndComposeCandidates,
 } from "./candidate-ranking";
+export type {
+  StorySummarizer,
+  StorySummarizerInput,
+  StorySummarizerOutput,
+  SummarizerConfig,
+  SummarizerOptions,
+} from "./summarization";
+export {
+  CloudflareWorkersAiSummarizer,
+  createSummarizer,
+  DeterministicFallbackSummarizer,
+  SUMMARIZER_DEFAULTS,
+} from "./summarization";
