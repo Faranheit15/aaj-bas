@@ -5,6 +5,7 @@
 import type { Story } from "@aaj-bas/schemas";
 import type { StoryCluster } from "../clustering";
 import { hasNumericConflict, tokenizeTitle } from "../deduplication";
+import type { PromptExtractedFacts } from "../summarization";
 import {
   COMMON_INITIAL_WORDS,
   extractDates,
@@ -12,16 +13,12 @@ import {
   extractNumbers,
   normalizeNumberToken,
 } from "./extractors";
-import type {
-  FactualFinding,
-  FactualValidationOptions,
-  PromptExtractedFacts,
-} from "./types";
+import type { FactualFinding, FactualValidationOptions } from "./types";
 
 /**
  * Combines all textual content of a story into a single concatenated string.
  */
-function getStoryFullText(story: Story): string {
+export function getStoryFullText(story: Story): string {
   return [
     story.headline,
     story.deck,
@@ -35,7 +32,7 @@ function getStoryFullText(story: Story): string {
 /**
  * Combines all textual content of a cluster's feed items into a single string.
  */
-function getClusterFullText(cluster: StoryCluster): string {
+export function getClusterFullText(cluster: StoryCluster): string {
   return cluster.items
     .map((item) => `${item.title} ${item.description ?? ""}`)
     .join(" ");
@@ -161,14 +158,17 @@ export function checkDateContainment(
   const storyDates = extractDates(storyText);
   const clusterDates = extractDates(clusterText);
 
-  // Also include cluster publication timestamps in allowed date references
+  // Also include cluster publication timestamps in allowed date references with explicit timezone
   for (const item of cluster.items) {
     if (item.publishedAt) {
       const isoDate = item.publishedAt.slice(0, 10);
       clusterDates.add(isoDate);
-      // Day of week
+      // Day of week in Asia/Kolkata timezone
       const dayName = new Date(item.publishedAt)
-        .toLocaleDateString("en-US", { weekday: "long" })
+        .toLocaleDateString("en-US", {
+          timeZone: "Asia/Kolkata",
+          weekday: "long",
+        })
         .toLowerCase();
       if (dayName) clusterDates.add(dayName);
     }

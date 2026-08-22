@@ -1,158 +1,146 @@
-/**
- * Pure product behavior for Aaj, Bas.
- *
- * AB-103 is the scoped backlog item this package was waiting for: edition
- * validation is the first concrete domain contract, deterministic and free of
- * network, filesystem, and UI dependencies as section 10 requires. Reading and
- * writing files belongs to `scripts/validate-edition.ts`; deciding what is wrong
- * with an edition belongs here.
- *
- * AB-201 adds the second contract on the same split: `scripts/stage-content.ts`
- * copies bytes and deletes files, while deciding which validated editions a
- * build may carry, what pointer to write for them, and which already-staged
- * files must go first, belongs here.
- *
- * AB-401 adds `public-address`, which is not that split but the other kind of
- * shared contract: one place that decides whether a host is on the public
- * internet, because the URL rules and the source registry both have to ask, and
- * a security check with two implementations has two answers.
- *
- * AB-206 adds the third, and it is the same split once more:
- * `scripts/build-service-worker.ts` scans a built directory and writes one
- * file, while deciding which of those files a service worker may install --
- * never published content, which corrections rewrite in place -- and what to
- * call the build they came from, belongs here.
- *
- * AB-403 adds the normalization boundary for source metadata. Feed parsing
- * and fetching remain runtime concerns; this package turns parsed item fields
- * into bounded plain text, canonical links, stable dates, and identities that
- * later pipeline stages can compare without seeing raw markup.
- */
-
 export type {
-  SkippedEdition,
-  StagedEdition,
-  StagedIndexValidation,
-  StagingMode,
-  StagingPlan,
-  StagingRemoval,
-} from "./content-staging";
+  AddressValidationResult,
+  ResolvedAddress,
+} from "./public-address/index";
 export {
-  planRemoval,
-  planStaging,
-  validateStagedIndex,
-} from "./content-staging";
+  isResolvedAddressPublic,
+  validateHttpPublicAddress,
+} from "./public-address/index";
 export type {
-  AddressReach,
-  HostReach,
-  IpAddress,
-} from "./public-address";
-export {
-  canonicalHostname,
-  classifyAddress,
-  classifyHostname,
-  isPubliclyRoutable,
-  parseIpAddress,
-} from "./public-address";
-export type { PrecachePlan } from "./service-worker";
-export { buildIdFor, planPrecache } from "./service-worker";
-export type {
-  EditionSource,
-  EditionValidation,
-  FindingSeverity,
-  ValidationEditionJson,
-  ValidationFinding,
-  ValidationFindingJson,
-  ValidationPolicy,
-  ValidationReport,
-  ValidationReportJson,
+  EditionValidationMetric,
+  EditionValidationOptions,
+  EditionValidationReport,
+  Severity,
+  ValidationIssue,
+  ValidationRule,
 } from "./edition-validation";
 export {
-  exitCodeFor,
+  EDITION_VALIDATION_DEFAULTS,
+  formatValidationJson,
   formatValidationText,
-  toValidationReportJson,
-  VALIDATION_EXIT_CODES,
+  VALIDATION_RULES,
   validateEdition,
-  validateEditions,
+  validateEditionArtifacts,
 } from "./edition-validation";
-
 export type {
-  ActiveSourceEntry,
-  PermittedUse,
-  RegistryFinding,
-  RegistryFindingJson,
-  RegistryFindingSeverity,
-  RegistryReport,
-  RegistryReportJson,
-  RegistrySource,
-  RegistrySourceJson,
-  RegistryValidation,
-  SourceEntry,
-  SourceLanguage,
-  SourceRegion,
+  ContentStagingOptions,
+  ContentStagingPlan,
+  ContentStagingReport,
+  StagedContentIndex,
+  StagedContentIndexArtifact,
+  StagedContentIndexManifest,
+  StagedEditionArtifact,
+  StagingArtifact,
+} from "./content-staging";
+export {
+  buildStagedContentIndexManifest,
+  CONTENT_STAGING_DEFAULTS,
+  planContentStaging,
+  planWithheldSampleRemovals,
+} from "./content-staging";
+export type {
+  ActiveSource,
+  ActiveSourceId,
+  FeedFetchMeasurement,
+  FeedFetchReport,
+  FeedFetchResult,
+  FeedFormat,
+  FetchFeedOptions,
+  HttpFetcher,
+  LanguageCode,
+  NetworkAddressResolver,
+  ParsedFeed,
+  ParsedFeedItem,
+  PoliticalBias,
+  RawRssItem,
+  SourceFrequency,
+  SourceRecord,
   SourceRegistry,
-  SourceStatus,
+  SourceRegistryEntry,
+  SourceRegistryReport,
+  SourceRegistryValidationIssue,
+  SourceScope,
+  SourceTier,
+  SourceType,
 } from "./source-registry";
 export {
-  formatRegistryText,
-  PERMITTED_USES,
-  permittedUseSchema,
-  REGISTRY_EXIT_CODES,
-  registryExitCodeFor,
-  SOURCE_LANGUAGES,
-  SOURCE_REGIONS,
-  sourceEntrySchema,
-  sourceLanguageSchema,
-  sourceRegionSchema,
-  sourceRegistrySchema,
-  toRegistryReportJson,
-  validateSourceRegistries,
+  buildSourceRegistryReport,
+  DEFAULT_MAX_REDIRECTS,
+  DEFAULT_MAX_RESPONSE_BYTES,
+  DEFAULT_REQUEST_TIMEOUT_MS,
+  FEED_FETCH_REPORT_VERSION,
+  fetchFeedSource,
+  formatSourceRegistryJson,
+  formatSourceRegistryText,
+  parseSourceRegistry,
+  parseSourceRegistryYaml,
+  SOURCE_REGISTRY_CLI_EXIT_CODES,
+  SOURCE_REGISTRY_REPORT_VERSION,
+  SOURCE_REGISTRY_SCHEMA_VERSION,
+  validateActiveSources,
   validateSourceRegistry,
 } from "./source-registry";
-export type { SourcesCommand } from "./source-registry/command";
-export { parseSourcesCommand } from "./source-registry/command";
 export type {
-  FeedCacheValidators,
-  FeedFetchEnvironment,
-  FeedFetchFailure,
-  FeedFetchFailureCode,
-  FeedFetchNotModified,
-  FeedFetchOptions,
-  FeedFetchResult,
-  FeedFetchSuccess,
-  FeedResolver,
-  FeedTransport,
-  FeedTransportFailure,
-  FeedTransportFailureCode,
-  FeedTransportRequest,
-  FeedTransportResponse,
-  FeedTransportResult,
-  FetchableSource,
-  FetchableSourceStatus,
-  ResolvedFeedAddress,
+  AllowedHostValidationOptions,
+  FeedFetcherOptions,
+  FeedFetcherReport,
+  FeedFetcherSummary,
+  FetchFeedItemsResult,
+  SourceFeedItem,
+  SourceFetchOptions,
+  SourceFetchReport,
+  SourceFetchResult,
+  SourceItemsFetchReport,
+  SourceItemsFetchSummary,
+  ValidatedFeedItem,
+  ValidatedFeedResult,
 } from "./source-fetching";
 export {
-  FEED_FETCH_DEFAULTS,
-  fetchableSourceOf,
-  fetchableSourcesOf,
+  DEFAULT_FEED_FETCHER_OPTIONS,
+  DEFAULT_SOURCE_FETCH_OPTIONS,
+  extractFeedItems,
   fetchFeed,
-  fetchFeeds,
+  fetchSources,
+  isAllowedSourceUrl,
+  isFeedItemInPublicationWindow,
+  parseRssXml,
+  validateFeedItem,
 } from "./source-fetching";
 export type {
   FeedItemNormalizationOptions,
   NormalizedFeedItem,
-  RawFeedItem,
 } from "./feed-normalization";
 export {
-  canonicalizeUrl,
-  contentHashFor,
-  deduplicateFeedItems,
+  canonicalizeStoryUrl,
+  createContentHash,
   FEED_ITEM_NORMALIZATION_DEFAULTS,
   normalizeFeedDate,
   normalizeFeedItem,
   normalizeFeedItems,
   sanitizeHtmlToText,
 } from "./feed-normalization";
+export type {
+  EvaluateSourceHealthOptions,
+  FetchSourcesCommand,
+  FetchSourcesCommandError,
+  FetchSourcesCommandResult,
+  SourceFetchMeasurement,
+  SourceFetchResultInput,
+  SourceHealthRecord,
+  SourceHealthReport,
+  SourceHealthStatus,
+  SourceHealthThresholds,
+  SourceHealthWarning,
+  SourceHealthWarningRule,
+} from "./source-health";
+export {
+  evaluateSourceHealth,
+  formatSourceHealthJson,
+  formatSourceHealthMarkdown,
+  formatSourceHealthText,
+  parseFetchSourcesCommand,
+  SOURCE_HEALTH_DEFAULTS,
+} from "./source-health";
 export type {
   DeduplicationOptions,
   DuplicateMatchResult,
@@ -261,6 +249,7 @@ export {
   FACTUAL_VALIDATION_DEFAULTS,
   formatFactualValidationMarkdown,
   formatFactualValidationText,
+  getStoryFullText,
   normalizeNumberToken,
   toFactualValidationReportJson,
   validateFactualSupport,

@@ -4,6 +4,7 @@
 
 import type { Story } from "@aaj-bas/schemas";
 import type { StoryCluster } from "../clustering";
+import type { PromptExtractedFacts } from "../summarization";
 import {
   checkDateContainment,
   checkEditorialAlignment,
@@ -11,6 +12,7 @@ import {
   checkNumberContainment,
   checkSourceAttribution,
   checkUncertaintyOnConflict,
+  getStoryFullText,
 } from "./containment";
 import { extractNamedEntities, extractNumbers } from "./extractors";
 import {
@@ -18,7 +20,6 @@ import {
   type FactualFinding,
   type FactualValidationOptions,
   type FactualValidationReport,
-  type PromptExtractedFacts,
   type StoryFactualValidation,
 } from "./types";
 
@@ -65,13 +66,7 @@ export function validateStoryFactualSupport(
   const passed = blockingCount === 0;
   const publishable = passed;
 
-  const fullText = [
-    story.headline,
-    story.deck,
-    ...story.whatChanged,
-    story.whyItMatters,
-  ].join(" ");
-
+  const fullText = getStoryFullText(story);
   const storyNumbers = extractNumbers(fullText);
   const storyEntities = extractNamedEntities(fullText);
 
