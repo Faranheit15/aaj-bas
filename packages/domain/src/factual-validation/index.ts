@@ -5,8 +5,11 @@ export {
   checkNumberContainment,
   checkSourceAttribution,
   checkUncertaintyOnConflict,
+  getClusterFullText,
+  getStoryFullText,
 } from "./containment";
 export {
+  COMMON_INITIAL_WORDS,
   extractDates,
   extractFactTokens,
   extractNamedEntities,
