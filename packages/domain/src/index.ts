@@ -106,3 +106,30 @@ export {
 } from "./source-registry";
 export type { SourcesCommand } from "./source-registry/command";
 export { parseSourcesCommand } from "./source-registry/command";
+export type {
+  FeedCacheValidators,
+  FeedFetchEnvironment,
+  FeedFetchFailure,
+  FeedFetchFailureCode,
+  FeedFetchNotModified,
+  FeedFetchOptions,
+  FeedFetchResult,
+  FeedFetchSuccess,
+  FeedResolver,
+  FeedTransport,
+  FeedTransportFailure,
+  FeedTransportFailureCode,
+  FeedTransportRequest,
+  FeedTransportResponse,
+  FeedTransportResult,
+  FetchableSource,
+  FetchableSourceStatus,
+  ResolvedFeedAddress,
+} from "./source-fetching";
+export {
+  FEED_FETCH_DEFAULTS,
+  fetchableSourceOf,
+  fetchableSourcesOf,
+  fetchFeed,
+  fetchFeeds,
+} from "./source-fetching";

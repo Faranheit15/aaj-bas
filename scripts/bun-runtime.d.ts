@@ -184,3 +184,74 @@ interface ImportMeta {
   /** Absolute directory of this module, so behaviour does not depend on cwd. */
   readonly dir: string;
 }
+
+declare module "node:dns/promises" {
+  interface LookupAddress {
+    readonly address: string;
+    readonly family: 4 | 6;
+  }
+
+  function lookup(
+    hostname: string,
+    options: { readonly all: true; readonly verbatim: true },
+  ): Promise<readonly LookupAddress[]>;
+
+  export { lookup };
+}
+
+declare module "node:https" {
+  interface IncomingMessage {
+    readonly statusCode?: number;
+    readonly headers: Readonly<
+      Record<string, string | readonly string[] | undefined>
+    >;
+    on(event: "data", listener: (chunk: Uint8Array | string) => void): this;
+    on(event: "end" | "aborted" | "close", listener: () => void): this;
+    on(event: "error", listener: (error: Error) => void): this;
+    destroy(error?: Error): this;
+  }
+
+  interface LookupResultAddress {
+    readonly address: string;
+    readonly family: 4 | 6;
+  }
+
+  interface LookupOptions {
+    readonly all?: boolean;
+  }
+
+  type LookupCallback = (
+    error: Error | null,
+    address?: string | readonly LookupResultAddress[],
+    family?: 4 | 6,
+  ) => void;
+
+  type LookupFunction = (
+    hostname: string,
+    options: LookupOptions,
+    callback: LookupCallback,
+  ) => void;
+
+  interface ClientRequest {
+    on(event: "error", listener: (error: Error) => void): this;
+    setTimeout(milliseconds: number, listener: () => void): this;
+    end(): void;
+    destroy(error?: Error): this;
+  }
+
+  function request(
+    options: {
+      readonly hostname: string;
+      readonly path: string;
+      readonly method: "GET";
+      readonly headers: Record<string, string>;
+      readonly servername: string;
+      readonly agent: false;
+      readonly rejectUnauthorized: true;
+      readonly lookup: LookupFunction;
+    },
+    callback: (response: IncomingMessage) => void,
+  ): ClientRequest;
+
+  export { request };
+}
