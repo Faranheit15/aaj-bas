@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@aaj-bas/domain": "workspace:*",
-    "@biomejs/biome": "^2.3.0",
+    "@biomejs/biome": "^2.5.8",
     "typescript": "^7.0.2"
   }
 }
