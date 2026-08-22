@@ -5,8 +5,19 @@
  * without calling any external network or LLM API.
  */
 
-import { type Story, storySchema } from "@aaj-bas/schemas";
-import { cleanTitle } from "../deduplication";
+import {
+  type Confidence,
+  type ReportingType,
+  type Story,
+  type TopicSlug,
+  storySchema,
+} from "@aaj-bas/schemas";
+import { classifyStoryTopic } from "../candidate-ranking";
+import {
+  cleanTitle,
+  hasNumericConflict,
+  tokenizeTitle,
+} from "../deduplication";
 import type {
   StorySummarizer,
   StorySummarizerInput,
@@ -15,7 +26,8 @@ import type {
 
 function sanitizeText(raw: string): string {
   return raw
-    .replace(/<[^>]*>/g, " ") // strip any lingering html
+    .normalize("NFKC")
+    .replace(/<[^>]*>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -49,6 +61,11 @@ export class DeterministicFallbackSummarizer implements StorySummarizer {
   async summarize(input: StorySummarizerInput): Promise<StorySummarizerOutput> {
     const startTime = Date.now();
     const { cluster, topic, editionDate } = input;
+
+    const resolvedTopic: TopicSlug =
+      topic ??
+      (input.candidate?.topic as TopicSlug | undefined) ??
+      classifyStoryTopic(cluster);
 
     const baseTitle =
       cluster.cleanedTitle ||
@@ -107,8 +124,49 @@ export class DeterministicFallbackSummarizer implements StorySummarizer {
         : [cluster.primaryItem.sourceId]
     ).slice(0, 20);
     const sourceCount = sourceIds.length;
-    const confidence =
-      sourceCount > 1 ? ("multi-source" as const) : ("single-source" as const);
+
+    const isOpinionCluster =
+      cluster.items.length > 0 &&
+      cluster.items.every((i) =>
+        /\b(opinion|editorial|column|view|analysis|perspective)\b/i.test(
+          i.title,
+        ),
+      );
+    const reportingType: ReportingType = isOpinionCluster
+      ? "opinion"
+      : "reporting";
+
+    let hasNumericConflictDetected = false;
+    if (cluster.items.length >= 2) {
+      for (let i = 0; i < cluster.items.length; i += 1) {
+        for (let j = i + 1; j < cluster.items.length; j += 1) {
+          const itemA = cluster.items[i];
+          const itemB = cluster.items[j];
+          if (
+            itemA &&
+            itemB &&
+            hasNumericConflict(
+              tokenizeTitle(itemA.title),
+              tokenizeTitle(itemB.title),
+            )
+          ) {
+            hasNumericConflictDetected = true;
+            break;
+          }
+        }
+        if (hasNumericConflictDetected) break;
+      }
+    }
+
+    const confidence: Confidence = hasNumericConflictDetected
+      ? "disputed"
+      : sourceCount > 1
+        ? "multi-source"
+        : "single-source";
+
+    const uncertainty = hasNumericConflictDetected
+      ? "Figures and specific details differ across initial source reporting."
+      : undefined;
 
     const nowIso = new Date().toISOString();
     const firstPublishedAt =
@@ -135,19 +193,20 @@ export class DeterministicFallbackSummarizer implements StorySummarizer {
       ? sanitizedId
       : `s-${sanitizedId}`;
     const storyId = baseId.slice(0, 64).replace(/-+$/, "");
-    const rawSlug = `${topic}-${storyId}`;
+    const rawSlug = `${resolvedTopic}-${storyId}`;
     const slug = rawSlug.slice(0, 60).replace(/-+$/, "");
 
     const storyCandidate: Story = {
       id: storyId,
       slug,
-      topic,
-      reportingType: "reporting",
+      topic: resolvedTopic,
+      reportingType,
       headline,
       deck,
       whatChanged: paragraphs,
       whyItMatters:
         "Context and implications are being monitored as reporting develops.",
+      uncertainty,
       sourceIds,
       sourceCount,
       confidence,

@@ -33,9 +33,16 @@ export function getStoryFullText(story: Story): string {
  * Combines all textual content of a cluster's feed items into a single string.
  */
 export function getClusterFullText(cluster: StoryCluster): string {
-  return cluster.items
-    .map((item) => `${item.title} ${item.description ?? ""}`)
+  const sourcesText = cluster.sources
+    .map((s) => `${s} ${s.replace(/-/g, " ")}`)
     .join(" ");
+  const itemsText = cluster.items
+    .map(
+      (item) =>
+        `${item.sourceId} ${item.sourceId.replace(/-/g, " ")} ${item.title} ${item.description ?? ""}`,
+    )
+    .join(" ");
+  return `${sourcesText} ${itemsText}`;
 }
 
 /**

@@ -6,12 +6,14 @@
  */
 
 import type { Story, TopicSlug } from "@aaj-bas/schemas";
+import type { RankedStoryCandidate } from "../candidate-ranking";
 import type { StoryCluster } from "../clustering";
 
 export interface StorySummarizerInput {
   readonly cluster: StoryCluster;
-  readonly topic: TopicSlug;
-  readonly editionDate: string;
+  readonly topic?: TopicSlug | undefined;
+  readonly editionDate?: string | undefined;
+  readonly candidate?: RankedStoryCandidate | undefined;
 }
 
 export interface StorySummarizerOutput {

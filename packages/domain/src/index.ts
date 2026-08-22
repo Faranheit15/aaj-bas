@@ -204,6 +204,13 @@ export {
   rankAndComposeCandidates,
 } from "./candidate-ranking";
 export type {
+  GoldenClusterTestCase,
+  GoldenEvaluationMetrics,
+  GoldenEvaluationOptions,
+  GoldenEvaluationReport,
+  GoldenEvaluationReportJson,
+  GoldenNegativeSample,
+  GoldenTestCaseEvaluation,
   PromptExtractedFacts,
   PromptSummaryResult,
   SentenceWithSources,
@@ -219,10 +226,18 @@ export {
   convertPromptResultToStory,
   createSummarizer,
   DeterministicFallbackSummarizer,
+  evaluateGoldenDataset,
+  formatGoldenEvaluationMarkdown,
+  formatGoldenEvaluationText,
+  GOLDEN_EXIT_CODES,
+  GOLDEN_PROMPT_DATASET,
+  GOLDEN_PROMPT_DATASET_FULL,
+  goldenExitCodeFor,
   parsePromptSummaryResult,
   promptSummaryResultSchema,
   SUMMARIZE_PROMPT_VERSION,
   SUMMARIZER_DEFAULTS,
+  toGoldenEvaluationJson,
 } from "./summarization";
 export type {
   FactualExtractedTokens,

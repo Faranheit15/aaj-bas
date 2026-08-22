@@ -2,6 +2,27 @@ export { CloudflareWorkersAiSummarizer } from "./cloudflare-workers-ai";
 export { DeterministicFallbackSummarizer } from "./fallback";
 export { createSummarizer } from "./factory";
 export {
+  GOLDEN_PROMPT_DATASET,
+  GOLDEN_PROMPT_DATASET_FULL,
+} from "./golden-dataset";
+export {
+  evaluateGoldenDataset,
+  formatGoldenEvaluationMarkdown,
+  formatGoldenEvaluationText,
+  goldenExitCodeFor,
+  toGoldenEvaluationJson,
+} from "./golden-evaluator";
+export {
+  GOLDEN_EXIT_CODES,
+  type GoldenClusterTestCase,
+  type GoldenEvaluationMetrics,
+  type GoldenEvaluationOptions,
+  type GoldenEvaluationReport,
+  type GoldenEvaluationReportJson,
+  type GoldenNegativeSample,
+  type GoldenTestCaseEvaluation,
+} from "./golden-types";
+export {
   compileSummarizePrompt,
   convertPromptResultToStory,
   parsePromptSummaryResult,

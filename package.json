@@ -21,6 +21,8 @@
     "content:stage": "bun scripts/stage-content.ts",
     "sources:validate": "bun scripts/validate-sources.ts",
     "sources:fetch": "bun scripts/fetch-sources.ts",
+    "golden:evaluate": "bun scripts/evaluate-golden-dataset.ts",
+    "test:golden": "bun scripts/evaluate-golden-dataset.ts",
     "test": "bun run --filter @aaj-bas/* test",
     "e2e": "bun run --filter @aaj-bas/web e2e",
     "build": "bun run --filter @aaj-bas/landing build && bun run --filter @aaj-bas/web build",

@@ -6,6 +6,7 @@
 import {
   type ReportingType,
   type Story,
+  type TopicSlug,
   reportingTypeSchema,
   storySchema,
 } from "@aaj-bas/schemas";
@@ -276,15 +277,26 @@ export function convertPromptResultToStory(
   const rawSlug = `${input.topic}-${storyId}`;
   const slug = rawSlug.slice(0, 60).replace(/-+$/, "");
 
+  const topic: TopicSlug =
+    input.topic ?? (input.candidate?.topic as TopicSlug | undefined) ?? "india";
+
+  const whyItMattersText =
+    typeof result.whyItMatters === "string"
+      ? result.whyItMatters
+      : String(
+          (result.whyItMatters as { text?: string } | undefined)?.text ??
+            result.deck,
+        );
+
   const storyCandidate: Story = {
     id: storyId,
     slug,
-    topic: input.topic,
+    topic,
     reportingType: result.reportingType,
     headline: result.headline,
     deck: result.deck,
     whatChanged: boundedParagraphs,
-    whyItMatters: result.whyItMatters,
+    whyItMatters: whyItMattersText,
     background: result.background,
     uncertainty: result.uncertainty,
     sourceIds,
