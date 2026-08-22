@@ -13,3 +13,9 @@
 # This is not a licence to grow the file. `bun run check:agents` still fails the
 # build above the 32 KiB default, because an untrusted clone gets the default.
 project_doc_max_bytes = 131072
+approval_policy = "never"
+sandbox_mode = "workspace-write"
+
+web_search = "live"
+[sandbox_workspace_write]
+network_access = true
