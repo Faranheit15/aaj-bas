@@ -153,3 +153,25 @@ export {
   normalizeFeedItems,
   sanitizeHtmlToText,
 } from "./feed-normalization";
+export type {
+  DeduplicationOptions,
+  DuplicateMatchResult,
+  ExactDuplicateReason,
+  GoldenDuplicateTestCase,
+  TitleTokens,
+} from "./deduplication";
+export {
+  calculateDiceCoefficient,
+  calculateTimeDeltaHours,
+  calculateTitleSimilarity,
+  classifyDuplicate,
+  cleanTitle,
+  DEDUPLICATION_DEFAULTS,
+  findCommonTokens,
+  getExactDuplicateReason,
+  GOLDEN_DUPLICATE_DATASET,
+  hasNumericConflict,
+  isExactDuplicate,
+  isNearDuplicate,
+  tokenizeTitle,
+} from "./deduplication";
