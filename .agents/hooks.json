@@ -1,0 +1,30 @@
+{
+  "command-policy": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun scripts/agent-hook.ts --mode antigravity --event pre-tool",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "format-edited-file": {
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun scripts/agent-hook.ts --mode antigravity --event post-tool",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

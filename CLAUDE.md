@@ -31,8 +31,13 @@ These notes describe how the rules in `AGENTS.md` map onto Claude Code. They add
 - `/check` — run the merge-blocking suite.
 - `/slice` — carry out one backlog item as a single vertical slice, following section 32.
 - `/adr` — draft an architecture decision record from the ADR template.
+- `/review` — perform the read-only self-review described by the shared `review` skill.
 
-Each is a thin pointer to a shared procedure in `docs/workflows/`. The same three procedures are also published as skills in `.agents/skills/`, which Codex reads as `$check`, `$slice`, and `$adr` and Claude Code also picks up. Every entry point resolves to the same file. Change a procedure in `docs/workflows/`, never in the wrapper, so the two tools cannot drift apart.
+Each is a thin pointer to a shared procedure in `docs/workflows/`. The same
+three procedures are also published as skills in `.agents/skills/`, which Codex,
+Gemini CLI, and Antigravity can discover. Every entry point resolves to the same
+file. Change a procedure in `docs/workflows/`, never in the wrapper, so the
+harnesses cannot drift apart.
 
 ### Permissions
 
@@ -47,6 +52,10 @@ Permission rules are a safety net, not the rule set. They match the command a se
 
 Keep personal overrides in `.claude/settings.local.json`, which is git-ignored.
 
+Gemini CLI and Antigravity have their own native project registrations under
+`.gemini/` and `.agents/`. They call the same shared skills, workflows, and hook
+adapter; do not duplicate repository rules in those files.
+
 ### Hooks
 
 `.claude/settings.json` defines three local hooks. They shell out to tools already in the repo, reach no network, and write nothing into the working tree beyond formatting the file just edited:
@@ -57,6 +66,6 @@ Keep personal overrides in `.claude/settings.local.json`, which is git-ignored.
 
 The hooks require `jq`. Without it they exit quietly and enforce nothing, so treat them as fast feedback rather than as the guarantee.
 
-The guarantee is `bun run check`, which both tools and CI run. `check:agents` measures the instruction files against the Codex budget, and `check:pm` enforces section 8 across every tracked and untracked file — the second hook is only the immediate-feedback copy of that check. Hooks are Claude Code only; `AGENTS.md`, `.codex/rules/team.rules`, and the check suite are what hold a Codex session to the same rules.
+The guarantee is `bun run check`, which every harness and CI can run. `check:agents` measures the instruction files against the Codex budget, and `check:pm` enforces section 8 across every tracked and untracked file — the second hook is only the immediate-feedback copy of that check. Claude Code keeps its existing jq-based hooks; Codex, Gemini CLI, and Antigravity use the shared Bun adapter registered in their native project hook files. Read [the harness map](docs/agent-harnesses.md) for the compatibility contract.
 
 <!-- check-package-manager:allow-names -->

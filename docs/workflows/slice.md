@@ -1,6 +1,8 @@
 # Workflow: implement one vertical slice
 
-This procedure is shared. Claude Code reaches it through `/slice`, Codex through `$slice`. Neither tool restates it.
+This procedure is shared. Claude Code reaches it through `/slice`, Codex through
+`$slice`, and Gemini CLI through `/slice`. Antigravity can run the same procedure
+from its `slice` workflow. No harness-specific entry point restates it.
 
 Implement the requested backlog item as one vertical slice, following the work sequence in `AGENTS.md` section 32 exactly.
 

@@ -1,8 +1,7 @@
-description = "Run the repository's merge-blocking check suite."
+description = "Run the repository's merge-blocking validation suite."
 
 prompt = """
 Use the shared `check` skill at `.agents/skills/check/SKILL.md`, then follow
-`docs/workflows/check.md`.
-
-Run the repository checks through the project's Bun-based command surface.
+`docs/workflows/check.md`. Run the complete check suite and report only commands
+that actually ran: {{args}}
 """

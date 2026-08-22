@@ -5,5 +5,37 @@
   },
   "skills": {
     "enabled": true
+  },
+  "hooks": {
+    "BeforeTool": [
+      {
+        "matcher": "run_shell_command|write_file|replace_file_content|multi_replace_file_content|apply_patch",
+        "sequential": true,
+        "hooks": [
+          {
+            "name": "aaj-bas-command-policy",
+            "type": "command",
+            "command": "bun scripts/agent-hook.ts --mode gemini --event pre-tool",
+            "timeout": 10000,
+            "description": "Apply the repository's package-manager, lockfile, deployment, and secret policy."
+          }
+        ]
+      }
+    ],
+    "AfterTool": [
+      {
+        "matcher": "write_file|replace_file_content|multi_replace_file_content|apply_patch",
+        "sequential": true,
+        "hooks": [
+          {
+            "name": "aaj-bas-format-edited-file",
+            "type": "command",
+            "command": "bun scripts/agent-hook.ts --mode gemini --event post-tool",
+            "timeout": 15000,
+            "description": "Format a changed Biome-supported file when its path is available."
+          }
+        ]
+      }
+    ]
   }
 }

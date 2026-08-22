@@ -53,6 +53,21 @@ declare namespace Bun {
     input: string | BunFile,
   ): Promise<number>;
 
+  /** The small subprocess surface used by the agent hook adapter. */
+  interface Subprocess {
+    readonly exited: Promise<number>;
+    readonly stdout: ReadableStream<Uint8Array> | null;
+  }
+
+  function spawn(
+    command: readonly string[],
+    options?: {
+      readonly cwd?: string;
+      readonly stderr?: "ignore" | "pipe";
+      readonly stdout?: "ignore" | "pipe";
+    },
+  ): Subprocess;
+
   /**
    * The process's own streams, as files `Bun.write` can be pointed at.
    *
@@ -65,6 +80,7 @@ declare namespace Bun {
    */
   const stdout: BunFile;
   const stderr: BunFile;
+  const stdin: BunFile;
 
   /**
    * One bundled file, produced in memory. `text()` is the only member called:
@@ -197,6 +213,20 @@ declare module "node:dns/promises" {
   ): Promise<readonly LookupAddress[]>;
 
   export { lookup };
+}
+
+declare module "node:fs/promises" {
+  function realpath(path: string): Promise<string>;
+
+  export { realpath };
+}
+
+declare module "node:path" {
+  function isAbsolute(path: string): boolean;
+  function relative(from: string, to: string): string;
+  function resolve(...paths: string[]): string;
+
+  export { isAbsolute, relative, resolve };
 }
 
 declare module "node:https" {

@@ -1,0 +1,46 @@
+{
+  "description": "Repository policy, single-file formatting, and stop reminder hooks.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun \"$(git rev-parse --show-toplevel)/scripts/agent-hook.ts\" --mode codex --event pre-tool",
+            "command_windows": "powershell -NoProfile -NonInteractive -Command \"$root = (git rev-parse --show-toplevel).Trim(); & bun (Join-Path $root 'scripts/agent-hook.ts') --mode codex --event pre-tool\"",
+            "timeout": 10,
+            "statusMessage": "Checking repository command policy"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^(Bash|apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun \"$(git rev-parse --show-toplevel)/scripts/agent-hook.ts\" --mode codex --event post-tool",
+            "command_windows": "powershell -NoProfile -NonInteractive -Command \"$root = (git rev-parse --show-toplevel).Trim(); & bun (Join-Path $root 'scripts/agent-hook.ts') --mode codex --event post-tool\"",
+            "timeout": 15,
+            "statusMessage": "Formatting the edited repository file"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun \"$(git rev-parse --show-toplevel)/scripts/agent-hook.ts\" --mode codex --event stop",
+            "command_windows": "powershell -NoProfile -NonInteractive -Command \"$root = (git rev-parse --show-toplevel).Trim(); & bun (Join-Path $root 'scripts/agent-hook.ts') --mode codex --event stop\"",
+            "timeout": 10,
+            "statusMessage": "Checking repository validation reminder"
+          }
+        ]
+      }
+    ]
+  }
+}

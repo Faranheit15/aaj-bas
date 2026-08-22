@@ -26,10 +26,11 @@ content/          Versioned editions, drafts, and corrections; a build stages th
 prompts/          Future versioned editorial prompts
 scripts/          Repository check scripts, edition validation, and content staging; future content automation
 docs/             Product, editorial, runbook, and architecture documentation
-docs/workflows/   Shared procedures both agent tools follow
+docs/workflows/   Shared procedures every agent harness follows
 .claude/          Claude Code permissions, hooks, and repository commands
-.codex/           Codex project configuration and command policy
-.agents/skills/   Codex skills for the repository workflows
+.codex/           Codex project configuration, hooks, and command policy
+.gemini/          Gemini CLI settings, hooks, and repository commands
+.agents/          Shared skills plus Antigravity rules, workflows, hooks, and agents
 .github/          CI/CD workflow, dependency updates, issue and pull-request templates, code owners
 ```
 
@@ -107,18 +108,18 @@ The code is MIT licensed; see [`LICENSE`](LICENSE). Editorial content, generated
 
 ## AI coding agents
 
-[`AGENTS.md`](AGENTS.md) holds the binding engineering and product rules, and is the single source of truth for every agent tool. Codex reads it directly. Claude Code reads [`CLAUDE.md`](CLAUDE.md), which imports `AGENTS.md` and adds only tool-specific notes.
+[`AGENTS.md`](AGENTS.md) holds the binding engineering and product rules, and is the single source of truth for every agent tool. Codex and Antigravity read it directly. Claude Code reads [`CLAUDE.md`](CLAUDE.md), and Gemini CLI reads [`GEMINI.md`](GEMINI.md); both entry points import it and add only tool-specific routing notes.
 
-The three repository workflows live once in `docs/workflows/`. Claude Code invokes them as `/check`, `/slice`, and `/adr` through `.claude/commands/`; Codex invokes the same procedures as `$check`, `$slice`, and `$adr` through `.agents/skills/`. Both sides are thin pointers, so a procedure is changed in one place.
+The repository workflows live once in `docs/workflows/`. Claude Code invokes them as `/check`, `/slice`, and `/adr` through `.claude/commands/`; Codex discovers them through `.agents/skills/`; Gemini CLI exposes thin `/check`, `/slice`, `/adr`, and `/review` commands in `.gemini/commands/`; Antigravity exposes the same procedures through `.agents/workflows/`. The review skill is shared too, so a procedure is changed in one place.
 
-`.claude/settings.json` carries permission rules and local hooks; `.codex/rules/team.rules` carries the equivalent command policy for Codex. Both encode the `AGENTS.md` rules a command policy can enforce: Bun-only package management, and no deployment or secret commands from an agent session. The Claude Code file additionally blocks reading local environment files, which a command policy cannot express. Personal Claude Code overrides belong in the git-ignored `.claude/settings.local.json`.
+`.claude/settings.json` carries Claude Code permission rules and local hooks; `.codex/rules/team.rules`, `.codex/hooks.json`, `.gemini/settings.json`, and `.agents/hooks.json` provide the corresponding native adapters for the other harnesses. The shared `scripts/agent-hook.ts` applies the command policy and safe formatting behavior where the harness exposes the relevant payload. Personal Claude Code overrides belong in the git-ignored `.claude/settings.local.json`.
 
 Two Codex-specific things are worth knowing:
 
 - **Trust the project on first run in a fresh clone.** Codex loads `.codex/` — its configuration and command policy — only after you accept the trust prompt. Until then it runs without the repository's guardrails.
 - **Never create a root `AGENTS.override.md`.** Codex reads it *instead of* `AGENTS.md`, which silently disables every rule in this repository. It is git-ignored to make that harder to do by accident.
 
-Codex also caps how much of `AGENTS.md` it reads (32 KiB by default) and truncates the file mid-way with only a log warning, dropping whatever falls past the cutoff — the end of the file, working backwards from the closing rules. `.codex/config.toml` raises that budget for anyone who has trusted the project, and `bun run check:agents` fails the build if the file outgrows the default, so the problem cannot arrive unnoticed.
+Codex also caps how much of `AGENTS.md` it reads (32 KiB by default) and truncates the file mid-way with only a log warning, dropping whatever falls past the cutoff — the end of the file, working backwards from the closing rules. `.codex/config.toml` raises that budget for anyone who has trusted the project, and `bun run check:agents` fails the build if the file outgrows the default, so the problem cannot arrive unnoticed. The full compatibility map and first-run notes live in [`docs/agent-harnesses.md`](docs/agent-harnesses.md).
 
 Change rules in `AGENTS.md`; do not restate them in tool-specific files.
 
@@ -128,6 +129,8 @@ Change rules in `AGENTS.md`; do not restate them in tool-specific files.
 - [Security policy](SECURITY.md)
 - [Repository instructions](AGENTS.md)
 - [Claude Code entry point](CLAUDE.md)
+- [Gemini CLI entry point](GEMINI.md)
+- [Agent harness compatibility](docs/agent-harnesses.md)
 - [Shared agent workflows](docs/workflows/)
 - [Product requirements document](docs/PRD.md)
 - [Build backlog](docs/BACKLOG.md)
