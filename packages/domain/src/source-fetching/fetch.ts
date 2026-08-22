@@ -434,7 +434,7 @@ async function performAttempt(
   const response = result.response;
   const contentLength = headerValue(response.headers, "content-length");
   if (contentLength !== undefined) {
-    if (!/^\\d+$/.test(contentLength)) {
+    if (!/^[0-9]+$/.test(contentLength)) {
       return {
         kind: "failure",
         code: "invalid-response",

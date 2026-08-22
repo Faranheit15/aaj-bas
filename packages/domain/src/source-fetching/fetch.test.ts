@@ -343,7 +343,7 @@ describe("fetchFeed", () => {
     });
 
     const html = environment(undefined, [
-      successfulResponse(200, { "Content-Type": "text/html" }, "<html/>"),
+      successfulResponse(200, { "content-type": "text/html" }, "<html/>"),
     ]);
     const htmlResult = await fetchFeed(source(), html.environment, {}, NO_WAIT);
     expect(htmlResult).toMatchObject({
