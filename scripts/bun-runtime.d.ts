@@ -185,6 +185,8 @@ declare const process: {
   exit(code: number): never;
   /** `[bun, script, ...args]`, so the CLI's own arguments start at index 2. */
   argv: string[];
+  /** Environment variables, e.g. for GitHub Actions CI integration. */
+  readonly env: Readonly<Record<string, string | undefined>>;
   /** Only for resolving a user-supplied relative path back to a repo-relative one. */
   cwd(): string;
   /**

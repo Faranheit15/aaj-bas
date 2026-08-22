@@ -153,3 +153,25 @@ export {
   normalizeFeedItems,
   sanitizeHtmlToText,
 } from "./feed-normalization";
+export type {
+  EvaluateSourceHealthOptions,
+  FetchSourcesCommand,
+  FetchSourcesCommandError,
+  FetchSourcesCommandResult,
+  SourceFetchMeasurement,
+  SourceFetchResultInput,
+  SourceHealthRecord,
+  SourceHealthReport,
+  SourceHealthStatus,
+  SourceHealthThresholds,
+  SourceHealthWarning,
+  SourceHealthWarningRule,
+} from "./source-health";
+export {
+  evaluateSourceHealth,
+  formatSourceHealthJson,
+  formatSourceHealthMarkdown,
+  formatSourceHealthText,
+  parseFetchSourcesCommand,
+  SOURCE_HEALTH_DEFAULTS,
+} from "./source-health";
