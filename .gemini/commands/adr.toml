@@ -1,0 +1,9 @@
+description = "Draft an architecture decision record from the repository template."
+
+prompt = """
+Use the shared `adr` skill at `.agents/skills/adr/SKILL.md`, then follow
+`docs/workflows/adr.md` for this decision: {{args}}
+
+Keep any package or repository checks on the project's Bun-based command
+surface.
+"""
