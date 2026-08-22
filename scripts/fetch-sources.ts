@@ -16,10 +16,6 @@ import { lookup } from "node:dns/promises";
 import { request } from "node:https";
 import type {
   FeedFetchEnvironment,
-  FeedFetchFailure,
-  FeedFetchNotModified,
-  FeedFetchResult,
-  FeedFetchSuccess,
   FeedTransportFailure,
   FeedTransportRequest,
   FeedTransportResult,
@@ -29,19 +25,24 @@ import type {
   SourceRegistry,
 } from "@aaj-bas/domain";
 import {
-  fetchFeeds,
+  evaluateSourceHealth,
+  fetchFeed,
   fetchableSourcesOf,
   formatRegistryText,
-  parseSourcesCommand,
+  formatSourceHealthJson,
+  formatSourceHealthMarkdown,
+  formatSourceHealthText,
+  parseFetchSourcesCommand,
   registryExitCodeFor,
   REGISTRY_EXIT_CODES,
+  type SourceFetchResultInput,
   sourceRegistrySchema,
   toRegistryReportJson,
   validateSourceRegistries,
 } from "@aaj-bas/domain";
 
-const REPOSITORY_ROOT = collapse(import.meta.dir + "/..");
-const DEFAULT_REGISTRY = REPOSITORY_ROOT + "/content/sources.yml";
+const REPOSITORY_ROOT = collapse(`${import.meta.dir}/..`);
+const DEFAULT_REGISTRY = `${REPOSITORY_ROOT}/content/sources.yml`;
 
 const PRODUCTION_ENVIRONMENT: FeedFetchEnvironment = {
   resolver: {
@@ -58,41 +59,13 @@ const USAGE = [
   "  bun run sources:fetch <path> [<path>...] fetch exactly these files",
   "",
   "Options:",
-  "  --json      write fetch summaries to stdout as JSON",
+  "  --json       write health report to stdout as JSON",
+  "  --markdown   write health report to stdout as Markdown",
+  "  --summary    write summary Markdown to $GITHUB_STEP_SUMMARY or path",
 ].join("\n");
 
-type FetchSummary =
-  | {
-      readonly kind: "success";
-      readonly sourceId: string;
-      readonly status: number;
-      readonly finalUrl: string;
-      readonly contentType: string;
-      readonly bytes: number;
-      readonly validators: FeedFetchSuccess["validators"];
-      readonly attempts: number;
-      readonly redirects: number;
-    }
-  | {
-      readonly kind: "not-modified";
-      readonly sourceId: string;
-      readonly finalUrl: string;
-      readonly validators: FeedFetchNotModified["validators"];
-      readonly attempts: number;
-      readonly redirects: number;
-    }
-  | {
-      readonly kind: "failure";
-      readonly sourceId: string;
-      readonly code: FeedFetchFailure["code"];
-      readonly message: string;
-      readonly url: string;
-      readonly attempts: number;
-      readonly redirects: number;
-    };
-
 async function run(): Promise<number> {
-  const parsed = parseSourcesCommand(process.argv.slice(2));
+  const parsed = parseFetchSourcesCommand(process.argv.slice(2));
   if (!parsed.ok) {
     console.error(parsed.message);
     console.error(USAGE);
@@ -133,13 +106,62 @@ async function run(): Promise<number> {
     }
   }
 
-  if (report.warningCount > 0 && !parsed.json) {
+  if (report.warningCount > 0 && !parsed.json && !parsed.markdown) {
     console.error(formatRegistryText(report));
   }
 
-  const results = await fetchFeeds(approved, PRODUCTION_ENVIRONMENT, new Map());
-  printFetchResults(results, parsed.json);
-  return results.some((result) => result.kind === "failure")
+  const measuredResults: SourceFetchResultInput[] = [];
+  for (const source of approved) {
+    const start = performance.now();
+    const result = await fetchFeed(
+      source,
+      PRODUCTION_ENVIRONMENT,
+      new Map().get(source.entry.id) ?? {},
+    );
+    const durationMs = Math.round(performance.now() - start);
+    measuredResults.push({
+      ...result,
+      durationMs,
+    });
+  }
+
+  const healthReport = evaluateSourceHealth(measuredResults, undefined);
+
+  if (parsed.json) {
+    console.log(formatSourceHealthJson(healthReport));
+  } else if (parsed.markdown) {
+    console.log(formatSourceHealthMarkdown(healthReport));
+  } else {
+    console.log(formatSourceHealthText(healthReport));
+  }
+
+  const stepSummaryTarget =
+    parsed.summaryPath !== null && parsed.summaryPath !== ""
+      ? parsed.summaryPath
+      : process.env.GITHUB_STEP_SUMMARY;
+
+  if (
+    stepSummaryTarget &&
+    (parsed.summaryPath !== null || process.env.GITHUB_STEP_SUMMARY)
+  ) {
+    try {
+      const existing = await Bun.file(stepSummaryTarget)
+        .text()
+        .catch(() => "");
+      const separator =
+        existing.length > 0 && !existing.endsWith("\n") ? "\n" : "";
+      await Bun.write(
+        stepSummaryTarget,
+        `${existing}${separator}${formatSourceHealthMarkdown(healthReport)}\n`,
+      );
+    } catch (error) {
+      console.error(
+        `WARN: failed to write step summary to ${stepSummaryTarget}: ${describe(error)}`,
+      );
+    }
+  }
+
+  return healthReport.failingCount > 0
     ? REGISTRY_EXIT_CODES.blocking
     : REGISTRY_EXIT_CODES.ok;
 }
@@ -227,101 +249,6 @@ function printValidation(
       ? JSON.stringify(toRegistryReportJson(report), null, 2)
       : formatRegistryText(report),
   );
-}
-
-function printFetchResults(
-  results: readonly FeedFetchResult[],
-  json: boolean,
-): void {
-  const summaries = results.map(toFetchSummary);
-  if (json) {
-    console.log(
-      JSON.stringify(
-        {
-          results: summaries,
-          sourceCount: summaries.length,
-        },
-        null,
-        2,
-      ),
-    );
-    return;
-  }
-
-  if (summaries.length === 0) {
-    console.log("OK: no validated fetchable sources.");
-    return;
-  }
-
-  for (const summary of summaries) {
-    if (summary.kind === "success") {
-      console.log(
-        "OK: " +
-          summary.sourceId +
-          " HTTP " +
-          summary.status +
-          ", " +
-          summary.bytes +
-          " bytes, " +
-          summary.attempts +
-          " attempt(s).",
-      );
-    } else if (summary.kind === "not-modified") {
-      console.log(
-        "OK: " +
-          summary.sourceId +
-          " not modified after " +
-          summary.attempts +
-          " attempt(s).",
-      );
-    } else {
-      console.log(
-        "FAIL: " +
-          summary.sourceId +
-          " " +
-          summary.code +
-          " after " +
-          summary.attempts +
-          " attempt(s): " +
-          summary.message,
-      );
-    }
-  }
-}
-
-function toFetchSummary(result: FeedFetchResult): FetchSummary {
-  if (result.kind === "success") {
-    return {
-      kind: result.kind,
-      sourceId: result.sourceId,
-      status: result.status,
-      finalUrl: result.finalUrl,
-      contentType: result.contentType,
-      bytes: result.body.byteLength,
-      validators: result.validators,
-      attempts: result.attempts,
-      redirects: result.redirects,
-    };
-  }
-  if (result.kind === "not-modified") {
-    return {
-      kind: result.kind,
-      sourceId: result.sourceId,
-      finalUrl: result.finalUrl,
-      validators: result.validators,
-      attempts: result.attempts,
-      redirects: result.redirects,
-    };
-  }
-  return {
-    kind: result.kind,
-    sourceId: result.sourceId,
-    code: result.code,
-    message: result.message,
-    url: result.url,
-    attempts: result.attempts,
-    redirects: result.redirects,
-  };
 }
 
 async function resolveFeedAddresses(
