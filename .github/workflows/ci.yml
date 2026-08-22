@@ -67,7 +67,7 @@ jobs:
       # version. A key on the OS alone would restore a binary the installed
       # Playwright refuses to drive.
       - name: Cache the browser binary
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('bun.lock') }}
