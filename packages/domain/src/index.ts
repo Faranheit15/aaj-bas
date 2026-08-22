@@ -22,6 +22,11 @@
  * file, while deciding which of those files a service worker may install --
  * never published content, which corrections rewrite in place -- and what to
  * call the build they came from, belongs here.
+ *
+ * AB-403 adds the normalization boundary for source metadata. Feed parsing
+ * and fetching remain runtime concerns; this package turns parsed item fields
+ * into bounded plain text, canonical links, stable dates, and identities that
+ * later pipeline stages can compare without seeing raw markup.
  */
 
 export type {
@@ -133,3 +138,18 @@ export {
   fetchFeed,
   fetchFeeds,
 } from "./source-fetching";
+export type {
+  FeedItemNormalizationOptions,
+  NormalizedFeedItem,
+  RawFeedItem,
+} from "./feed-normalization";
+export {
+  canonicalizeUrl,
+  contentHashFor,
+  deduplicateFeedItems,
+  FEED_ITEM_NORMALIZATION_DEFAULTS,
+  normalizeFeedDate,
+  normalizeFeedItem,
+  normalizeFeedItems,
+  sanitizeHtmlToText,
+} from "./feed-normalization";
