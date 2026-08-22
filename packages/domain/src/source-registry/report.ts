@@ -46,10 +46,9 @@ export interface RegistryFinding {
  * and a second definition of "may we fetch this" is how a source nobody
  * approved ends up being fetched.
  */
-export interface SourceStatus {
-  readonly sourceId: string;
-  readonly fetchable: boolean;
-}
+export type SourceStatus =
+  | { readonly sourceId: string; readonly fetchable: true }
+  | { readonly sourceId: string; readonly fetchable: false };
 
 export interface RegistryValidation {
   /** Repository-relative, forward slashes, so output is identical everywhere. */
