@@ -1,0 +1,7 @@
+description = "Review the current diff against repository and product rules."
+
+prompt = """
+Use the shared `review` skill at `.agents/skills/review/SKILL.md`. Review the
+current diff and relevant surrounding files without editing them, then report
+findings by severity: {{args}}
+"""

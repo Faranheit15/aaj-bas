@@ -1,0 +1,6 @@
+description = "Implement one backlog item as a single vertical slice."
+
+prompt = """
+Use the shared `slice` skill at `.agents/skills/slice/SKILL.md`, then follow
+`docs/workflows/slice.md` for this backlog item: {{args}}
+"""

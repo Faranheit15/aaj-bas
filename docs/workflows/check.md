@@ -1,6 +1,8 @@
 # Workflow: run the merge-blocking checks
 
-This procedure is shared. Claude Code reaches it through `/check`, Codex through `$check`. Neither tool restates it.
+This procedure is shared. Claude Code reaches it through `/check`, Codex through
+`$check`, and Gemini CLI through `/check`. Antigravity can run the same procedure
+from its `check` workflow. No harness-specific entry point restates it.
 
 Run the merge-blocking suite defined in `AGENTS.md` section 30:
 

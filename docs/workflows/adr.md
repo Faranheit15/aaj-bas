@@ -1,6 +1,8 @@
 # Workflow: draft an architecture decision record
 
-This procedure is shared. Claude Code reaches it through `/adr`, Codex through `$adr`. Neither tool restates it.
+This procedure is shared. Claude Code reaches it through `/adr`, Codex through
+`$adr`, and Gemini CLI through `/adr`. Antigravity can run the same procedure
+from its `adr` workflow. No harness-specific entry point restates it.
 
 1. Read `docs/architecture/decisions/README.md`, `docs/architecture/decisions/TEMPLATE.md`, and the existing ADRs so the new record is consistent with accepted decisions and does not silently contradict one.
 2. Create the next numbered file in `docs/architecture/decisions/`, named `NNNN-kebab-case-title.md` to match the existing records, using every section of the template.
