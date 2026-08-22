@@ -175,3 +175,19 @@ export {
   isNearDuplicate,
   tokenizeTitle,
 } from "./deduplication";
+export type {
+  ClusteringOptions,
+  ClusterMergeReason,
+  ClusterMergeReasonType,
+  RepresentativeTitleResult,
+  SemanticClusteringProvider,
+  SemanticMergeDecision,
+  StoryCluster,
+} from "./clustering";
+export {
+  clusterFeedItems,
+  clusterFeedItemsAsync,
+  CLUSTERING_DEFAULTS,
+  NoopSemanticClusteringProvider,
+  selectRepresentativeTitle,
+} from "./clustering";
