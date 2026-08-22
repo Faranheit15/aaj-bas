@@ -191,3 +191,26 @@ export {
   NoopSemanticClusteringProvider,
   selectRepresentativeTitle,
 } from "./clustering";
+export type {
+  CandidateFeatureScores,
+  CandidateRankingResult,
+  FeatureWeights,
+  RankedStoryCandidate,
+  RankingOptions,
+  SelectionDecisionReason,
+  SelectionDecisionType,
+  SelectionReasonCode,
+} from "./candidate-ranking";
+export {
+  calculateCompositeScore,
+  calculateCorroborationScore,
+  calculateIndiaRelevanceScore,
+  calculateRecencyScore,
+  calculateRepetitionPenalty,
+  calculateSourceTierScore,
+  calculateTopicWeight,
+  classifyStoryTopic,
+  composeEditionCandidates,
+  RANKING_DEFAULTS,
+  rankAndComposeCandidates,
+} from "./candidate-ranking";
