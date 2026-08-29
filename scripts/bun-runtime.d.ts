@@ -53,10 +53,18 @@ declare namespace Bun {
     input: string | BunFile,
   ): Promise<number>;
 
+  function gzipSync(input: Uint8Array): Uint8Array;
+
   /** The small subprocess surface used by the agent hook adapter. */
   interface Subprocess {
     readonly exited: Promise<number>;
     readonly stdout: ReadableStream<Uint8Array> | null;
+  }
+
+  interface SpawnSyncResult {
+    readonly exitCode: number;
+    readonly stdout: Uint8Array | null;
+    readonly stderr: Uint8Array | null;
   }
 
   function spawn(
@@ -67,6 +75,15 @@ declare namespace Bun {
       readonly stdout?: "ignore" | "pipe";
     },
   ): Subprocess;
+
+  function spawnSync(
+    command: readonly string[],
+    options?: {
+      readonly cwd?: string;
+      readonly stderr?: "ignore" | "pipe" | "inherit";
+      readonly stdout?: "ignore" | "pipe" | "inherit";
+    },
+  ): SpawnSyncResult;
 
   /**
    * The process's own streams, as files `Bun.write` can be pointed at.

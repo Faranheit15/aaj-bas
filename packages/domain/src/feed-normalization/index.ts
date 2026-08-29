@@ -14,3 +14,4 @@ export {
   normalizeFeedItems,
   sanitizeHtmlToText,
 } from "./normalize";
+export { parseRawFeed } from "./parse-feed";

@@ -16,6 +16,31 @@ import type { NormalizedFeedItem, RawFeedItem } from "../feed-normalization";
 import type { SourceRegistry } from "../source-registry";
 import type { StorySummarizer } from "../summarization";
 
+export type IngestionSourceStatus =
+  | "success"
+  | "not-modified"
+  | "fetch-failure"
+  | "parse-failure";
+
+export interface SourceIngestionDiagnostic {
+  readonly sourceId: string;
+  readonly status: IngestionSourceStatus;
+  readonly httpStatus?: number | undefined;
+  readonly itemCount: number;
+  readonly durationMs?: number | undefined;
+  readonly error?: string | undefined;
+}
+
+export interface IngestionDiagnostics {
+  readonly fixtureMode: boolean;
+  readonly totalActiveSources: number;
+  readonly successfulSources: number;
+  readonly notModifiedSources: number;
+  readonly failedSources: number;
+  readonly totalParsedItems: number;
+  readonly sources: readonly SourceIngestionDiagnostic[];
+}
+
 export interface EditionPipelineInput {
   /** Target edition date in YYYY-MM-DD format. Defaults to current date. */
   readonly date?: string | undefined;
@@ -27,6 +52,8 @@ export interface EditionPipelineInput {
   readonly normalizedItems?: readonly NormalizedFeedItem[] | undefined;
   /** Source registry for metadata resolution. */
   readonly sourceRegistry?: SourceRegistry | undefined;
+  /** Ingestion diagnostics metadata. */
+  readonly ingestionDiagnostics?: IngestionDiagnostics | undefined;
   /** Story summarizer provider. Defaults to DeterministicFallbackSummarizer. */
   readonly summarizer?: StorySummarizer | undefined;
   /** Ranking and candidate composition options. */
@@ -48,6 +75,8 @@ export interface DraftEditionPipelineResult {
   readonly factualReport: FactualValidationReport;
   /** Structural and editorial edition validation report. */
   readonly editionValidation: EditionValidation;
+  /** Ingestion diagnostics metadata. */
+  readonly ingestionDiagnostics?: IngestionDiagnostics | undefined;
   /** Whether the draft edition is valid and free of blocking findings. */
   readonly isPublishable: boolean;
   /** Whether any blocking factual support or schema findings exist. */

@@ -6,7 +6,7 @@ This is a handoff ledger for decisions and actions that require a human. The aut
 
 - Status: human-only
 - Needed from: human reviewer / repository maintainer
-- Exact decision or action: Review and merge the current cumulative PR when satisfied with the code, CI, editorial safeguards, and product fit. Current baseline PR: [PR #32](https://github.com/Faranheit15/aaj-bas/pull/32).
+- Exact decision or action: Review and merge the current cumulative PR when satisfied with the code, CI, editorial safeguards, and product fit. Current cumulative PR: [PR #40](https://github.com/Faranheit15/aaj-bas/pull/40).
 - Why it matters: Agents may prepare and update a PR but must not approve or merge production-bound changes autonomously.
 - Safe default: Leave the PR open and ready or draft according to its actual verification state.
 - What can continue now: Implementation and verification of remaining unlocked work can continue on the authorized cumulative branch and PR.
@@ -71,3 +71,13 @@ This is a handoff ledger for decisions and actions that require a human. The aut
 - Safe default: Keep the prior published edition available and leave a failed or questionable draft unmerged.
 - What can continue now: Draft generation, validation, blocker reporting, source-support checks, and PR automation that never merges or publishes.
 - What remains blocked: Publication of any individual draft that has not passed human review.
+
+## UI-008 — Configure dependency vulnerability scanner plugin (Bun pm scan)
+
+- Status: non-blocking
+- Needed from: repository maintainer / security operator
+- Exact decision or action: Decide whether to configure a third-party vulnerability scanner plugin in `bunfig.toml` to enable `bun pm scan` for automated CVE checking, or maintain dependency auditing via periodic out-of-band reviews.
+- Why it matters: In Bun 1.3.14, `bun pm audit` is not a built-in command, and `bun pm scan` requires an external plugin in `bunfig.toml`. To ensure AB-903 audit claims remain strictly truthful, `scripts/audit-security.ts` verifies lockfile presence (`bun.lock`), the absence of foreign lockfiles (npm/yarn/pnpm), and frozen CI installation (`bun ci`), but does not query an external CVE database.
+- Safe default: Rely on canonical `bun.lock`, frozen `bun ci` verification, zero unapproved dependencies, and maintainer dependency version updates. Do not add unvetted third-party scanner plugins without an approved ADR.
+- What can continue now: Security audit script (`bun run check:security`), lockfile integrity checks, secret hygiene, CSP enforcement, and all standard repository validation checks.
+- What remains blocked: Automated CVE database querying during `bun run check:security` until a scanner plugin is evaluated and approved.

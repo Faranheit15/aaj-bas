@@ -19,7 +19,7 @@ export function App(): JSX.Element {
         <p className="intro">
           10 important stories. Context, not clickbait. A clear end.
         </p>
-        <a className="primary-link" href={readerUrl}>
+        <a className="primary-link" href={readerUrl} rel="noopener">
           Read today&apos;s edition
         </a>
         <ul className="principles" aria-label="What Aaj, Bas. avoids">

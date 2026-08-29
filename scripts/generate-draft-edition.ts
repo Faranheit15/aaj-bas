@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 /**
- * CLI script to generate draft daily edition artifacts.
+ * CLI script to generate draft daily edition artifacts (AB-701, AB-702).
  *
  * Runs the end-to-end editorial pipeline: ingestion, deduplication, clustering,
  * candidate ranking, summarization, and factual support validation.
@@ -12,14 +12,25 @@
 
 import {
   type EditionPipelineInput,
+  type IngestionDiagnostics,
+  type NormalizedFeedItem,
+  type SourceIngestionDiagnostic,
   GOLDEN_PROMPT_DATASET_FULL,
   PIPELINE_EXIT_CODES,
   type SourceRegistry,
   createSummarizer,
   editorialDateInIndia,
+  fetchFeed,
+  fetchableSourcesOf,
+  getFixtureModeUsageError,
   generateDraftEditionPipeline,
+  normalizeFeedItems,
+  parseRawFeed,
   sourceRegistrySchema,
+  validateEditionDateInput,
+  validateSourceRegistries,
 } from "@aaj-bas/domain";
+import { PRODUCTION_ENVIRONMENT } from "./fetch-environment";
 
 interface CliOptions {
   date: string;
@@ -29,6 +40,7 @@ interface CliOptions {
   printJson: boolean;
   printSummary: boolean;
   useAi: boolean;
+  useFixture: boolean;
   writeStepSummary: boolean;
 }
 
@@ -42,6 +54,7 @@ function parseCliArgs(args: string[]): CliOptions {
     printJson: false,
     printSummary: false,
     useAi: false,
+    useFixture: false,
     writeStepSummary: false,
   };
 
@@ -49,10 +62,10 @@ function parseCliArgs(args: string[]): CliOptions {
     const arg = args[i];
     const nextArg = args[i + 1];
     if (arg === "--date" && nextArg !== undefined) {
-      options.date = nextArg;
+      options.date = validateEditionDateInput(nextArg);
       i += 1;
     } else if (arg?.startsWith("--date=")) {
-      options.date = arg.slice("--date=".length);
+      options.date = validateEditionDateInput(arg.slice("--date=".length));
     } else if (arg === "--sources" && nextArg !== undefined) {
       options.sourcesPath = nextArg;
       i += 1;
@@ -71,6 +84,8 @@ function parseCliArgs(args: string[]): CliOptions {
       options.printSummary = true;
     } else if (arg === "--use-ai") {
       options.useAi = true;
+    } else if (arg === "--fixture") {
+      options.useFixture = true;
     } else if (arg === "--step-summary") {
       options.writeStepSummary = true;
     } else if (arg === "--help" || arg === "-h") {
@@ -88,13 +103,14 @@ Usage: bun scripts/generate-draft-edition.ts [options]
 Generates draft edition artifacts and companion diagnostic PR summaries.
 
 Options:
-  --date <YYYY-MM-DD>   Target edition date (default: today)
+  --date <YYYY-MM-DD>   Target edition date (default: today in India)
   --sources <path>      Path to sources.yml registry (default: content/sources.yml)
   --out-dir <path>      Output directory (default: content/drafts)
   --dry-run             Run pipeline without writing files to disk
   --json                Print generated edition JSON to stdout
   --summary             Print diagnostic Markdown summary to stdout
   --use-ai              Enable Cloudflare Workers AI (if credentials present in env)
+  --fixture             Use offline golden dataset fixture (requires --dry-run; no --use-ai or --step-summary)
   --step-summary        Write markdown summary to GITHUB_STEP_SUMMARY if present
   --help, -h            Show this help message
 `);
@@ -113,27 +129,166 @@ async function fileExists(path: string): Promise<boolean> {
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const options = parseCliArgs(args);
+  const fixtureModeUsageError = getFixtureModeUsageError(options);
+
+  if (fixtureModeUsageError) {
+    console.error(`Usage error: ${fixtureModeUsageError}`);
+    process.exit(PIPELINE_EXIT_CODES.usage);
+  }
 
   try {
-    // 1. Load source registry if present
+    // 1. Load and validate source registry if present
     let sourceRegistry: SourceRegistry | undefined;
-    try {
-      if (await fileExists(options.sourcesPath)) {
-        const file = Bun.file(options.sourcesPath);
-        const fileContent = await file.text();
-        if (Bun.YAML?.parse) {
-          const parsed: unknown = Bun.YAML.parse(fileContent);
-          sourceRegistry = sourceRegistrySchema.parse(parsed);
-        }
+    let normalizedItems: NormalizedFeedItem[] = [];
+
+    let parsedYaml: unknown;
+    if (!options.useFixture && (await fileExists(options.sourcesPath))) {
+      const file = Bun.file(options.sourcesPath);
+      const fileContent = await file.text();
+      if (Bun.YAML?.parse) {
+        parsedYaml = Bun.YAML.parse(fileContent);
+        sourceRegistry = sourceRegistrySchema.parse(parsedYaml);
       }
-    } catch {
-      // Offline fallback if registry file is not present or in dry-run
     }
 
-    // 2. Prepare feed items (combining items from golden dataset for robust offline staging)
-    const normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
-      (tc) => tc.cluster.items,
-    );
+    // 2. Determine feed items and collect diagnostics
+    let ingestionDiagnostics: IngestionDiagnostics;
+
+    if (options.useFixture) {
+      console.log(
+        "ℹ️ Ingesting stories from golden dataset fixtures (--fixture).",
+      );
+      normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
+        (tc) => tc.cluster.items,
+      );
+      ingestionDiagnostics = {
+        fixtureMode: true,
+        totalActiveSources: 0,
+        successfulSources: 0,
+        notModifiedSources: 0,
+        failedSources: 0,
+        totalParsedItems: normalizedItems.length,
+        sources: [],
+      };
+    } else if (!sourceRegistry || parsedYaml === undefined) {
+      console.log("⚠️ No valid source registry found in content/sources.yml.");
+      normalizedItems = [];
+      ingestionDiagnostics = {
+        fixtureMode: false,
+        totalActiveSources: 0,
+        successfulSources: 0,
+        notModifiedSources: 0,
+        failedSources: 0,
+        totalParsedItems: 0,
+        sources: [],
+      };
+    } else {
+      const validationReport = validateSourceRegistries([
+        { file: options.sourcesPath, value: parsedYaml },
+      ]);
+      const validatedRegistry = validationReport.registries[0];
+      const fetchable = validatedRegistry
+        ? fetchableSourcesOf(sourceRegistry, validatedRegistry.sources)
+        : [];
+
+      if (fetchable.length === 0) {
+        console.log(
+          "⚠️ No active production sources configured in registry (0 fetchable sources).",
+        );
+        normalizedItems = [];
+        ingestionDiagnostics = {
+          fixtureMode: false,
+          totalActiveSources: 0,
+          successfulSources: 0,
+          notModifiedSources: 0,
+          failedSources: 0,
+          totalParsedItems: 0,
+          sources: [],
+        };
+      } else {
+        console.log(
+          `📡 Ingesting from ${fetchable.length} active registry source(s)...`,
+        );
+        const sourceDiagnostics: SourceIngestionDiagnostic[] = [];
+        const items: NormalizedFeedItem[] = [];
+        let successfulCount = 0;
+        let notModifiedCount = 0;
+        let failedCount = 0;
+
+        for (const source of fetchable) {
+          const startTime = performance.now();
+          const res = await fetchFeed(source, PRODUCTION_ENVIRONMENT);
+          const durationMs = Math.round(performance.now() - startTime);
+
+          if (res.kind === "success") {
+            try {
+              const rawItems = parseRawFeed(res.body, res.contentType);
+              const normalized = normalizeFeedItems(res.sourceId, rawItems);
+              items.push(...normalized);
+              successfulCount += 1;
+              sourceDiagnostics.push({
+                sourceId: res.sourceId,
+                status: "success",
+                httpStatus: res.status,
+                itemCount: normalized.length,
+                durationMs,
+              });
+              console.log(
+                `   ✓ Source ${res.sourceId}: fetched & parsed ${normalized.length} item(s)`,
+              );
+            } catch (parseErr) {
+              failedCount += 1;
+              const msg =
+                parseErr instanceof Error ? parseErr.message : String(parseErr);
+              sourceDiagnostics.push({
+                sourceId: res.sourceId,
+                status: "parse-failure",
+                httpStatus: res.status,
+                itemCount: 0,
+                durationMs,
+                error: `Feed parse error: ${msg.slice(0, 200)}`,
+              });
+              console.warn(
+                `   ✗ Source ${res.sourceId}: feed parsing failed: ${msg}`,
+              );
+            }
+          } else if (res.kind === "not-modified") {
+            notModifiedCount += 1;
+            sourceDiagnostics.push({
+              sourceId: res.sourceId,
+              status: "not-modified",
+              httpStatus: 304,
+              itemCount: 0,
+              durationMs,
+            });
+            console.log(`   - Source ${res.sourceId}: 304 Not Modified`);
+          } else {
+            failedCount += 1;
+            sourceDiagnostics.push({
+              sourceId: res.sourceId,
+              status: "fetch-failure",
+              itemCount: 0,
+              durationMs,
+              error: `${res.code}: ${res.message.slice(0, 200)}`,
+            });
+            console.warn(
+              `   ✗ Source ${res.sourceId}: fetch failure (${res.code}): ${res.message}`,
+            );
+          }
+        }
+
+        normalizedItems = items;
+        ingestionDiagnostics = {
+          fixtureMode: false,
+          totalActiveSources: fetchable.length,
+          successfulSources: successfulCount,
+          notModifiedSources: notModifiedCount,
+          failedSources: failedCount,
+          totalParsedItems: items.length,
+          sources: sourceDiagnostics,
+        };
+      }
+    }
 
     // 3. Configure Summarizer
     const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
@@ -153,6 +308,7 @@ async function main(): Promise<void> {
       date: options.date,
       normalizedItems,
       sourceRegistry,
+      ingestionDiagnostics,
       summarizer,
     };
 
@@ -206,7 +362,7 @@ async function main(): Promise<void> {
     }
 
     if (result.hasBlockingIssues) {
-      console.error(
+      console.warn(
         "\n⚠️ Warning: Generated draft edition contains blocking factual or validation findings.",
       );
       process.exit(PIPELINE_EXIT_CODES.blockingFindings);

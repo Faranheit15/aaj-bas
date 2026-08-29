@@ -118,6 +118,7 @@ export {
   normalizeFeedDate,
   normalizeFeedItem,
   normalizeFeedItems,
+  parseRawFeed,
   sanitizeHtmlToText,
 } from "./feed-normalization";
 export type {
@@ -274,12 +275,31 @@ export {
   validateStoryFactualSupport,
 } from "./factual-validation";
 export type {
+  ConvertDraftOptions,
+  CreateCorrectionInput,
+  DailyDraftPrOptions,
   DraftEditionPipelineResult,
   EditionPipelineInput,
+  IngestionDiagnostics,
+  IngestionSourceStatus,
+  RollbackEditionSummary,
+  RollbackPlan,
+  RollbackPlanOptions,
+  RollbackPlanResult,
+  SourceIngestionDiagnostic,
 } from "./edition-pipeline";
 export {
+  applyEditionCorrection,
+  composePrBody,
+  convertDraftToPublished,
   editorialDateInIndia,
   formatDraftEditionSummaryMarkdown,
+  formatPrBranchName,
+  formatPrTitle,
+  getFixtureModeUsageError,
   generateDraftEditionPipeline,
+  parseDailyDraftPrArgs,
+  planRollback,
+  validateEditionDateInput,
   PIPELINE_EXIT_CODES,
 } from "./edition-pipeline";

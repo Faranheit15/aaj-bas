@@ -401,4 +401,93 @@ describe("fetchFeeds", () => {
     });
     expect(fake.requests).toHaveLength(1);
   });
+
+  it("isolates network timeout and connection reset failures across diverse sources", async () => {
+    const sourceTimeout = source({
+      id: "source-timeout",
+      publisher: "Timeout Daily",
+      feedUrl: "https://timeout.publisher.co.in/feed.xml",
+      siteUrl: "https://timeout.publisher.co.in",
+      termsUrl: "https://timeout.publisher.co.in/terms",
+      attribution: "Timeout Daily",
+    });
+    const sourceSuccessRss = source({
+      id: "source-rss",
+      publisher: "Good RSS News",
+      feedUrl: "https://rss.publisher.co.in/feed.xml",
+      siteUrl: "https://rss.publisher.co.in",
+      termsUrl: "https://rss.publisher.co.in/terms",
+      attribution: "Good RSS News",
+    });
+    const sourceNetworkError = source({
+      id: "source-neterr",
+      publisher: "Broken Socket News",
+      feedUrl: "https://neterr.publisher.co.in/feed.xml",
+      siteUrl: "https://neterr.publisher.co.in",
+      termsUrl: "https://neterr.publisher.co.in/terms",
+      attribution: "Broken Socket News",
+    });
+
+    const rssBody = `<rss version="2.0"><channel><item><title>RSS Story 1</title><link>https://rss.publisher.co.in/1</link><pubDate>2026-08-29T06:00:00Z</pubDate><description>RSS Description</description></item></channel></rss>`;
+
+    const mockEnvironment: FeedFetchEnvironment = {
+      resolver: {
+        resolve: async () => [{ address: "93.184.216.34", family: 4 }],
+      },
+      transport: {
+        request: async (req) => {
+          if (req.url.hostname === "timeout.publisher.co.in") {
+            return {
+              ok: false,
+              error: {
+                code: "timeout",
+                message: "socket timeout after 10000ms",
+              },
+            };
+          }
+          if (req.url.hostname === "neterr.publisher.co.in") {
+            return {
+              ok: false,
+              error: { code: "network", message: "ECONNRESET" },
+            };
+          }
+          if (req.url.hostname === "rss.publisher.co.in") {
+            return {
+              ok: true,
+              response: {
+                status: 200,
+                headers: { "content-type": "application/rss+xml" },
+                body: new TextEncoder().encode(rssBody),
+              },
+            };
+          }
+          throw new Error("unexpected request");
+        },
+      },
+    };
+
+    const results = await fetchFeeds(
+      [sourceTimeout, sourceSuccessRss, sourceNetworkError],
+      mockEnvironment,
+      new Map(),
+      NO_WAIT,
+    );
+
+    expect(results).toHaveLength(3);
+    expect(results[0]).toMatchObject({
+      kind: "failure",
+      sourceId: "source-timeout",
+      code: "timeout",
+    });
+    expect(results[1]).toMatchObject({
+      kind: "success",
+      sourceId: "source-rss",
+      status: 200,
+    });
+    expect(results[2]).toMatchObject({
+      kind: "failure",
+      sourceId: "source-neterr",
+      code: "network-error",
+    });
+  });
 });

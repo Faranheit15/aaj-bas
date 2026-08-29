@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-29T16:55:32.479Z",
+  "status": "offline",
+  "latestEditionDate": null,
+  "publishedEditionsCount": 0,
+  "sources": {
+    "total": 3,
+    "active": 0
+  },
+  "checks": [
+    {
+      "name": "source_registry",
+      "passed": false,
+      "detail": "Source registry contains 0 active sources; editorial pipeline cannot fetch news"
+    },
+    {
+      "name": "published_editions",
+      "passed": true,
+      "detail": "0 published editions found (1 sample/unpublishable edition withheld)"
+    },
+    {
+      "name": "latest_pointer",
+      "passed": true,
+      "detail": "No editions published yet (valid initial state)"
+    }
+  ]
+}
