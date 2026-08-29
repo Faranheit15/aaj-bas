@@ -7,9 +7,12 @@
  * - Zero tracking/telemetry code in client applications (section 23)
  * - Zero gamification/streak tokens in client state (section 3.2)
  * - Secret hygiene (no committed secrets or private API keys)
+ * - Content Security Policy (CSP) presence in HTML shells
+ * - Zero raw HTML injection (no dangerouslySetInnerHTML or innerHTML)
+ * - Least-privilege permissions in GitHub Actions workflows
  */
 
-interface SecurityFinding {
+export interface SecurityFinding {
   check: string;
   file: string;
   message: string;
@@ -58,7 +61,7 @@ async function scanFiles(
       onlyFiles: true,
     })) {
       const fullPath = `${dir}/${file}`;
-      // Skip test files, build outputs, node_modules
+      // Skip test files, build outputs, node_modules, git
       if (
         file.includes("node_modules") ||
         file.includes("dist/") ||
@@ -123,9 +126,14 @@ export async function runSecurityAudit(): Promise<{
         const tag = match[1] ?? "";
         const isExternal =
           /href=["'](https?:|\/\/)/i.test(tag) ||
-          /href=\{reportIssueHref/i.test(tag);
+          /href=\{[a-zA-Z0-9_.]*(?:url|link|readerUrl|reportIssue)/i.test(tag);
+        const isInternalAnchor =
+          /href=["'](#[^"']*|\/content\/[^"']*)["']/i.test(tag) ||
+          /href=\{priorEdition\.href\}/i.test(tag);
+
         if (
           isExternal &&
+          !isInternalAnchor &&
           !/rel=["'][^"']*noopener[^"']*["']/i.test(tag) &&
           !/rel=\{/i.test(tag)
         ) {
@@ -140,7 +148,69 @@ export async function runSecurityAudit(): Promise<{
     }
   }
 
-  // 4. Secret hygiene
+  // 4. Raw HTML injection audit (no dangerouslySetInnerHTML or innerHTML)
+  for (const file of clientFiles) {
+    if (
+      file.content.includes("dangerouslySetInnerHTML") ||
+      /\.innerHTML\s*=/.test(file.content)
+    ) {
+      findings.push({
+        check: "Security: Zero Unsanitized HTML",
+        file: file.path,
+        message: "Prohibited raw HTML injection signature detected",
+        passed: false,
+      });
+    }
+  }
+
+  // 5. CSP Shell Configuration
+  const htmlShells = ["apps/web/index.html", "apps/landing/index.html"];
+  for (const htmlPath of htmlShells) {
+    try {
+      const htmlText = await Bun.file(htmlPath).text();
+      if (
+        !htmlText.includes('http-equiv="Content-Security-Policy"') ||
+        !htmlText.includes("default-src 'self'")
+      ) {
+        findings.push({
+          check: "Security: Content Security Policy",
+          file: htmlPath,
+          message: "Missing strict Content-Security-Policy meta tag",
+          passed: false,
+        });
+      }
+    } catch {
+      findings.push({
+        check: "Security: Content Security Policy",
+        file: htmlPath,
+        message: "HTML shell not found",
+        passed: false,
+      });
+    }
+  }
+
+  // 6. GitHub Actions Permissions Audit
+  const workflowFiles = await scanFiles(".github/workflows", "*.{yml,yaml}");
+  for (const wf of workflowFiles) {
+    if (!wf.content.includes("permissions:")) {
+      findings.push({
+        check: "Security: Workflow Least-Privilege",
+        file: wf.path,
+        message: "Workflow missing explicit top-level or job permissions block",
+        passed: false,
+      });
+    }
+    if (wf.content.includes("write-all")) {
+      findings.push({
+        check: "Security: Workflow Least-Privilege",
+        file: wf.path,
+        message: "Prohibited write-all wildcard permission detected",
+        passed: false,
+      });
+    }
+  }
+
+  // 7. Secret hygiene
   const allRepoFiles = [
     ...(await scanFiles("apps", "**/*.{ts,tsx,json}")),
     ...(await scanFiles("packages", "**/*.{ts,tsx,json}")),
@@ -148,15 +218,14 @@ export async function runSecurityAudit(): Promise<{
   ];
 
   for (const file of allRepoFiles) {
-    // Avoid checking test fixtures that mock token strings or test data
     if (file.path.includes("test") || file.path.includes("fixtures")) {
       continue;
     }
 
     if (
-      /AIzaSy[A-Za-z0-9_-]{33}/.test(file.content) || // Google API key
-      /ghp_[A-Za-z0-9]{36}/.test(file.content) || // GitHub PAT
-      /sk-[A-Za-z0-9]{48}/.test(file.content) // OpenAI key
+      /AIzaSy[A-Za-z0-9_-]{33}/.test(file.content) ||
+      /ghp_[A-Za-z0-9]{36}/.test(file.content) ||
+      /sk-[A-Za-z0-9]{48}/.test(file.content)
     ) {
       findings.push({
         check: "Security: No Hardcoded Secrets",
@@ -188,6 +257,11 @@ async function main(): Promise<void> {
 
   console.log("✅ Privacy Audit: Zero tracking or analytics SDKs detected.");
   console.log('✅ Security Audit: All external links enforce rel="noopener".');
+  console.log("✅ Security Audit: Strict Content-Security-Policy in place.");
+  console.log("✅ Security Audit: Zero dangerouslySetInnerHTML or innerHTML.");
+  console.log(
+    "✅ Security Audit: GitHub Action permissions verified least-privilege.",
+  );
   console.log(
     "✅ Constitution Audit: Zero dark patterns or gamification mechanics.",
   );
@@ -198,4 +272,7 @@ async function main(): Promise<void> {
   process.exit(0);
 }
 
-void main();
+// Execute main only when run directly as CLI
+if (import.meta.main) {
+  void main();
+}

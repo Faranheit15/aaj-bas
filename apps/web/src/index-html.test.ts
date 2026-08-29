@@ -204,4 +204,19 @@ describe("the appearance the document carries before the bundle runs", () => {
     expect(inlineAt).toBeGreaterThanOrEqual(0);
     expect(bundleAt).toBeGreaterThan(inlineAt);
   });
+
+  it("carries a strict Content-Security-Policy matching the inline script (AB-903)", () => {
+    const meta = document.querySelector(
+      'meta[http-equiv="Content-Security-Policy"]',
+    );
+    expect(meta).not.toBeNull();
+    const content = meta?.getAttribute("content") ?? "";
+    expect(content).toContain("default-src 'self'");
+    expect(content).toContain("connect-src 'self'");
+    expect(content).toContain("img-src 'none'");
+    expect(content).toContain("font-src 'none'");
+    expect(content).toContain(
+      "sha256-qaNcimh8zWgGg7uPkR5jUSqiClq1ztSH+myPsxgGUU0=",
+    );
+  });
 });

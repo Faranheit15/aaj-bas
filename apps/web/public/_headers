@@ -14,8 +14,13 @@
 # `/assets/*` needs no rule either. Vite fingerprints those filenames by content
 # and the service worker precaches them by that name, so a changed asset is a
 # changed URL and the HTTP envelope never has to express the difference.
-#
-# One rule, for one file whose media type is worth stating rather than
-# inferring.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=(), camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-qaNcimh8zWgGg7uPkR5jUSqiClq1ztSH+myPsxgGUU0='; style-src 'self' 'unsafe-inline'; img-src 'none'; font-src 'none'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
+
 /manifest.webmanifest
   Content-Type: application/manifest+json

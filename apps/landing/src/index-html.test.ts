@@ -123,4 +123,16 @@ describe("the appearance the landing document carries", () => {
     expect(inline).not.toMatch(/\btransition[a-z-]*\s*:/i);
     expect(inline).not.toMatch(/scroll-behavior\s*:\s*smooth/i);
   });
+
+  it("carries a strict Content-Security-Policy (AB-903)", () => {
+    const meta = document.querySelector(
+      'meta[http-equiv="Content-Security-Policy"]',
+    );
+    expect(meta).not.toBeNull();
+    const content = meta?.getAttribute("content") ?? "";
+    expect(content).toContain("default-src 'self'");
+    expect(content).toContain("connect-src 'self'");
+    expect(content).toContain("img-src 'none'");
+    expect(content).toContain("font-src 'none'");
+  });
 });

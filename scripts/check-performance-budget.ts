@@ -3,8 +3,8 @@
  * CLI script to enforce application performance budgets (AB-902).
  *
  * Checks:
- * - apps/landing client JS gzip size <= 80 kB (PRD total budget 200 kB)
- * - apps/web client JS gzip size <= 150 kB (PRD total budget 200 kB)
+ * - apps/landing aggregate client JS gzip size <= 80 kB (PRD total budget 200 kB)
+ * - apps/web aggregate client JS gzip size <= 150 kB (PRD total budget 200 kB)
  * - apps/web client CSS gzip size <= 25 kB
  * - content/editions/*.json uncompressed size <= 150 kB (PRD section 17)
  * - content/editions/*.json gzip size <= 50 kB
@@ -26,7 +26,7 @@ const BUDGETS: BudgetConfig = {
   editionJsonGzipMaxBytes: 50 * 1024, // 50 kB
 };
 
-interface BudgetFinding {
+export interface BudgetFinding {
   target: string;
   metric: string;
   actualBytes: number;
@@ -72,37 +72,62 @@ export async function checkPerformanceBudgets(): Promise<{
 
   // 1. Landing JS bundles
   const landingJs = await inspectDirFiles("apps/landing/dist/assets", "*.js");
-  for (const item of landingJs) {
+  if (landingJs.length === 0) {
     findings.push({
-      target: item.path,
-      metric: "JS gzip size",
-      actualBytes: item.gzipBytes,
+      target: "apps/landing/dist/assets",
+      metric: "Build artifacts present",
+      actualBytes: 0,
+      maxBytes: 1,
+      passed: false,
+    });
+  } else {
+    const totalLandingJsGzip = landingJs.reduce(
+      (sum, item) => sum + item.gzipBytes,
+      0,
+    );
+    findings.push({
+      target: "apps/landing (aggregate JS)",
+      metric: "Total launch JS gzip size",
+      actualBytes: totalLandingJsGzip,
       maxBytes: BUDGETS.landingJsGzipMaxBytes,
-      passed: item.gzipBytes <= BUDGETS.landingJsGzipMaxBytes,
+      passed: totalLandingJsGzip <= BUDGETS.landingJsGzipMaxBytes,
     });
   }
 
   // 2. Web JS bundles
   const webJs = await inspectDirFiles("apps/web/dist/assets", "*.js");
-  for (const item of webJs) {
+  if (webJs.length === 0) {
     findings.push({
-      target: item.path,
-      metric: "JS gzip size",
-      actualBytes: item.gzipBytes,
+      target: "apps/web/dist/assets",
+      metric: "Build artifacts present",
+      actualBytes: 0,
+      maxBytes: 1,
+      passed: false,
+    });
+  } else {
+    const totalWebJsGzip = webJs.reduce((sum, item) => sum + item.gzipBytes, 0);
+    findings.push({
+      target: "apps/web (aggregate JS)",
+      metric: "Total launch JS gzip size",
+      actualBytes: totalWebJsGzip,
       maxBytes: BUDGETS.webJsGzipMaxBytes,
-      passed: item.gzipBytes <= BUDGETS.webJsGzipMaxBytes,
+      passed: totalWebJsGzip <= BUDGETS.webJsGzipMaxBytes,
     });
   }
 
   // 3. Web CSS bundles
   const webCss = await inspectDirFiles("apps/web/dist/assets", "*.css");
-  for (const item of webCss) {
+  if (webCss.length > 0) {
+    const totalWebCssGzip = webCss.reduce(
+      (sum, item) => sum + item.gzipBytes,
+      0,
+    );
     findings.push({
-      target: item.path,
-      metric: "CSS gzip size",
-      actualBytes: item.gzipBytes,
+      target: "apps/web (aggregate CSS)",
+      metric: "Total CSS gzip size",
+      actualBytes: totalWebCssGzip,
       maxBytes: BUDGETS.webCssGzipMaxBytes,
-      passed: item.gzipBytes <= BUDGETS.webCssGzipMaxBytes,
+      passed: totalWebCssGzip <= BUDGETS.webCssGzipMaxBytes,
     });
   }
 
@@ -157,4 +182,7 @@ async function main(): Promise<void> {
   process.exit(0);
 }
 
-void main();
+// Execute main only when run directly as CLI
+if (import.meta.main) {
+  void main();
+}
