@@ -6,7 +6,7 @@ This is a handoff ledger for decisions and actions that require a human. The aut
 
 - Status: human-only
 - Needed from: human reviewer / repository maintainer
-- Exact decision or action: Review and merge the current cumulative PR when satisfied with the code, CI, editorial safeguards, and product fit. Current baseline PR: [PR #32](https://github.com/Faranheit15/aaj-bas/pull/32).
+- Exact decision or action: Review and merge the current cumulative PR when satisfied with the code, CI, editorial safeguards, and product fit. Current cumulative PR: [PR #40](https://github.com/Faranheit15/aaj-bas/pull/40).
 - Why it matters: Agents may prepare and update a PR but must not approve or merge production-bound changes autonomously.
 - Safe default: Leave the PR open and ready or draft according to its actual verification state.
 - What can continue now: Implementation and verification of remaining unlocked work can continue on the authorized cumulative branch and PR.
