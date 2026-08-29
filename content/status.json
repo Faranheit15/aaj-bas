@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T16:22:13.615Z",
+  "generatedAt": "2026-08-29T16:39:10.391Z",
   "status": "offline",
   "latestEditionDate": "2026-07-21",
   "publishedEditionsCount": 1,
@@ -12,7 +12,7 @@
     {
       "name": "source_registry",
       "passed": false,
-      "detail": "Zero active sources in registry (3 declared)"
+      "detail": "Source registry contains 0 active sources; editorial pipeline cannot fetch news"
     },
     {
       "name": "published_editions",
@@ -22,7 +22,7 @@
     {
       "name": "latest_pointer",
       "passed": false,
-      "detail": "Missing latest.json pointer file: content/latest.json"
+      "detail": "latest pointer is null despite 1 published editions"
     }
   ]
 }

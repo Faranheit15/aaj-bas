@@ -39,6 +39,21 @@ function parseCliArgs(args: string[]): StatusCliOptions {
       i += 1;
     } else if (arg?.startsWith("--out=")) {
       options.outFile = arg.slice("--out=".length);
+    } else if (arg === "--editions" && nextArg !== undefined) {
+      options.editionsDir = nextArg;
+      i += 1;
+    } else if (arg?.startsWith("--editions=")) {
+      options.editionsDir = arg.slice("--editions=".length);
+    } else if (arg === "--sources" && nextArg !== undefined) {
+      options.sourcesFile = nextArg;
+      i += 1;
+    } else if (arg?.startsWith("--sources=")) {
+      options.sourcesFile = arg.slice("--sources=".length);
+    } else if (arg === "--index" && nextArg !== undefined) {
+      options.indexFile = nextArg;
+      i += 1;
+    } else if (arg?.startsWith("--index=")) {
+      options.indexFile = arg.slice("--index=".length);
     } else if (arg === "--dry-run") {
       options.dryRun = true;
     }
@@ -59,57 +74,69 @@ async function fileExists(path: string): Promise<boolean> {
 export async function generateStatusArtifact(
   options: StatusCliOptions,
 ): Promise<StatusArtifact> {
+  const generatedAt = new Date().toISOString();
   const checks: { name: string; passed: boolean; detail?: string }[] = [];
 
-  // 1. Check sources registry
-  let totalSources = 0;
-  let activeSources = 0;
+  // 1. Validate source registry
+  let totalSourcesCount = 0;
+  let activeSourceCount = 0;
   try {
     if (await fileExists(options.sourcesFile)) {
-      const yamlText = await Bun.file(options.sourcesFile).text();
-      const parsedYaml = Bun.YAML.parse(yamlText);
-      const registryResult = validateSourceRegistry({
-        file: options.sourcesFile,
-        value: parsedYaml,
-      });
-
-      const blockingFindings = registryResult.findings.filter(
-        (f) => f.severity === "blocking",
-      );
-      totalSources = registryResult.declaredSources ?? 0;
-      activeSources = registryResult.sources.filter((s) => s.fetchable).length;
-
-      if (blockingFindings.length > 0) {
-        checks.push({
-          name: "source_registry",
-          passed: false,
-          detail: `Registry has ${blockingFindings.length} blocking findings`,
+      const text = await Bun.file(options.sourcesFile).text();
+      if (Bun.YAML?.parse) {
+        const parsed = Bun.YAML.parse(text);
+        const report = validateSourceRegistry({
+          file: options.sourcesFile,
+          value: parsed,
         });
-      } else if (activeSources === 0) {
-        checks.push({
-          name: "source_registry",
-          passed: false,
-          detail: `Zero active sources in registry (${totalSources} declared)`,
-        });
+        totalSourcesCount = report.declaredSources ?? 0;
+        const hasBlocking = report.findings.some(
+          (f) => f.severity === "blocking",
+        );
+        if (!hasBlocking) {
+          activeSourceCount = report.sources.filter(
+            (s) => s.fetchable === true,
+          ).length;
+          if (activeSourceCount === 0) {
+            checks.push({
+              name: "source_registry",
+              passed: false,
+              detail:
+                "Source registry contains 0 active sources; editorial pipeline cannot fetch news",
+            });
+          } else {
+            checks.push({
+              name: "source_registry",
+              passed: true,
+              detail: `Source registry is valid with ${activeSourceCount} active sources`,
+            });
+          }
+        } else {
+          checks.push({
+            name: "source_registry",
+            passed: false,
+            detail: `Source registry validation failed: ${report.findings.length} findings`,
+          });
+        }
       } else {
         checks.push({
           name: "source_registry",
-          passed: true,
-          detail: `${activeSources}/${totalSources} sources active`,
+          passed: false,
+          detail: "YAML parser unavailable in runtime environment",
         });
       }
     } else {
       checks.push({
         name: "source_registry",
         passed: false,
-        detail: `Missing sources file: ${options.sourcesFile}`,
+        detail: `Source registry file missing: ${options.sourcesFile}`,
       });
     }
   } catch (err) {
     checks.push({
       name: "source_registry",
       passed: false,
-      detail: err instanceof Error ? err.message : "Error reading sources",
+      detail: `Failed reading source registry: ${String(err)}`,
     });
   }
 
@@ -148,11 +175,20 @@ export async function generateStatusArtifact(
     detail: `${publishedCount} published editions found`,
   });
 
-  // 3. Verify latest pointer
+  // 3. Verify latest pointer (checking options.indexFile, fallback to staged index if default)
+  let resolvedIndexFile = options.indexFile;
+  if (!(await fileExists(resolvedIndexFile))) {
+    if (await fileExists("apps/web/public/content/latest.json")) {
+      resolvedIndexFile = "apps/web/public/content/latest.json";
+    } else if (await fileExists("apps/web/dist/content/latest.json")) {
+      resolvedIndexFile = "apps/web/dist/content/latest.json";
+    }
+  }
+
   let indexLatest: string | null = null;
   try {
-    if (await fileExists(options.indexFile)) {
-      const indexText = await Bun.file(options.indexFile).text();
+    if (await fileExists(resolvedIndexFile)) {
+      const indexText = await Bun.file(resolvedIndexFile).text();
       const parsedIndex = editionIndexSchema.parse(JSON.parse(indexText));
       indexLatest = parsedIndex.latest;
 
@@ -200,69 +236,89 @@ export async function generateStatusArtifact(
         }
       }
     } else {
-      checks.push({
-        name: "latest_pointer",
-        passed: false,
-        detail: `Missing latest.json pointer file: ${options.indexFile}`,
-      });
+      if (publishedCount === 0) {
+        checks.push({
+          name: "latest_pointer",
+          passed: true,
+          detail: "No editions published yet (valid initial state)",
+        });
+      } else {
+        checks.push({
+          name: "latest_pointer",
+          passed: false,
+          detail: `Missing latest.json pointer file: ${options.indexFile}`,
+        });
+      }
     }
   } catch (err) {
     checks.push({
       name: "latest_pointer",
       passed: false,
-      detail: err instanceof Error ? err.message : "Invalid index pointer",
+      detail: `Failed parsing latest.json index: ${String(err)}`,
     });
   }
 
-  // Determine overall status
-  const allChecksPassed = checks.every((c) => c.passed);
+  // 4. Derive overall status
+  const allPassed = checks.every((c) => c.passed);
   let status: SystemHealthStatus = "healthy";
 
-  if (activeSources === 0) {
-    status = "offline";
-  } else if (!allChecksPassed) {
-    status = "offline";
-  } else if (publishedCount === 0) {
-    status = "warning";
-  } else if (activeSources < totalSources) {
-    status = "degraded";
+  if (!allPassed) {
+    const failedChecks = checks.filter((c) => !c.passed);
+    const sourceRegistryFailed = failedChecks.some(
+      (c) => c.name === "source_registry",
+    );
+    const pointerFailed = failedChecks.some((c) => c.name === "latest_pointer");
+
+    if (sourceRegistryFailed && pointerFailed) {
+      status = "offline";
+    } else if (sourceRegistryFailed || activeSourceCount === 0) {
+      status = "offline";
+    } else if (pointerFailed) {
+      status = "degraded";
+    } else {
+      status = "warning";
+    }
   }
 
-  const artifact: StatusArtifact = {
-    schemaVersion: 1,
-    generatedAt: new Date().toISOString(),
+  const rawArtifact = {
+    schemaVersion: 1 as const,
+    generatedAt,
     status,
     latestEditionDate: indexLatest ?? latestDiscoveredDate,
     publishedEditionsCount: publishedCount,
     sources: {
-      total: totalSources,
-      active: activeSources,
+      total: totalSourcesCount,
+      active: activeSourceCount,
     },
     checks,
   };
 
-  return statusArtifactSchema.parse(artifact);
+  const artifact = statusArtifactSchema.parse(rawArtifact);
+
+  if (!options.dryRun) {
+    await Bun.write(options.outFile, `${JSON.stringify(artifact, null, 2)}\n`);
+    console.log(`✅ Status artifact written to ${options.outFile}`);
+  }
+
+  return artifact;
 }
 
 async function main(): Promise<void> {
-  const options = parseCliArgs(process.argv.slice(2));
+  const args = process.argv.slice(2);
+  const options = parseCliArgs(args);
 
   try {
     const artifact = await generateStatusArtifact(options);
-    const jsonOutput = `${JSON.stringify(artifact, null, 2)}\n`;
-
-    if (!options.dryRun) {
-      await Bun.write(options.outFile, jsonOutput);
-      console.log(`✅ Health status artifact written to ${options.outFile}`);
-    } else {
+    console.log(
+      `📊 System Status: ${artifact.status.toUpperCase()} (latest: ${artifact.latestEditionDate ?? "none"})`,
+    );
+    for (const check of artifact.checks) {
       console.log(
-        `[DRY RUN] Would write status artifact to ${options.outFile}:`,
+        `   ${check.passed ? "✓" : "✗"} ${check.name}: ${check.detail ?? ""}`,
       );
     }
-    console.log(jsonOutput);
-    process.exit(0);
-  } catch (err) {
-    console.error("Fatal error generating status artifact:", err);
+  } catch (error) {
+    console.error("Fatal error generating status artifact:", error);
     process.exit(1);
   }
 }
