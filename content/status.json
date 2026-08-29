@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T15:56:42.812Z",
-  "status": "healthy",
+  "generatedAt": "2026-08-29T16:22:13.615Z",
+  "status": "offline",
   "latestEditionDate": "2026-07-21",
   "publishedEditionsCount": 1,
   "sources": {
@@ -11,13 +11,18 @@
   "checks": [
     {
       "name": "source_registry",
-      "passed": true,
-      "detail": "0/3 sources active"
+      "passed": false,
+      "detail": "Zero active sources in registry (3 declared)"
     },
     {
       "name": "published_editions",
       "passed": true,
       "detail": "1 published editions found"
+    },
+    {
+      "name": "latest_pointer",
+      "passed": false,
+      "detail": "Missing latest.json pointer file: content/latest.json"
     }
   ]
 }

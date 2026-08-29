@@ -14,7 +14,7 @@ import {
 } from "@aaj-bas/schemas";
 import { validateSourceRegistry } from "@aaj-bas/domain";
 
-interface StatusCliOptions {
+export interface StatusCliOptions {
   editionsDir: string;
   sourcesFile: string;
   indexFile: string;
@@ -79,17 +79,23 @@ export async function generateStatusArtifact(
       totalSources = registryResult.declaredSources ?? 0;
       activeSources = registryResult.sources.filter((s) => s.fetchable).length;
 
-      if (blockingFindings.length === 0) {
-        checks.push({
-          name: "source_registry",
-          passed: true,
-          detail: `${activeSources}/${totalSources} sources active`,
-        });
-      } else {
+      if (blockingFindings.length > 0) {
         checks.push({
           name: "source_registry",
           passed: false,
           detail: `Registry has ${blockingFindings.length} blocking findings`,
+        });
+      } else if (activeSources === 0) {
+        checks.push({
+          name: "source_registry",
+          passed: false,
+          detail: `Zero active sources in registry (${totalSources} declared)`,
+        });
+      } else {
+        checks.push({
+          name: "source_registry",
+          passed: true,
+          detail: `${activeSources}/${totalSources} sources active`,
         });
       }
     } else {
@@ -138,7 +144,7 @@ export async function generateStatusArtifact(
 
   checks.push({
     name: "published_editions",
-    passed: publishedCount > 0,
+    passed: true,
     detail: `${publishedCount} published editions found`,
   });
 
@@ -149,10 +155,55 @@ export async function generateStatusArtifact(
       const indexText = await Bun.file(options.indexFile).text();
       const parsedIndex = editionIndexSchema.parse(JSON.parse(indexText));
       indexLatest = parsedIndex.latest;
+
+      if (indexLatest === null) {
+        if (publishedCount === 0) {
+          checks.push({
+            name: "latest_pointer",
+            passed: true,
+            detail: "No editions published yet (valid initial state)",
+          });
+        } else {
+          checks.push({
+            name: "latest_pointer",
+            passed: false,
+            detail: `latest pointer is null despite ${publishedCount} published editions`,
+          });
+        }
+      } else {
+        const targetPath = `${options.editionsDir}/${indexLatest}.json`;
+        if (!(await fileExists(targetPath))) {
+          checks.push({
+            name: "latest_pointer",
+            passed: false,
+            detail: `latest.json targets missing file: ${targetPath}`,
+          });
+        } else {
+          const targetText = await Bun.file(targetPath).text();
+          const targetParsed = editionSchema.parse(JSON.parse(targetText));
+          if (
+            targetParsed.status !== "published" &&
+            targetParsed.status !== "corrected"
+          ) {
+            checks.push({
+              name: "latest_pointer",
+              passed: false,
+              detail: `target edition has invalid status '${targetParsed.status}', expected 'published' or 'corrected'`,
+            });
+          } else {
+            checks.push({
+              name: "latest_pointer",
+              passed: true,
+              detail: `Pointer targets valid edition: ${indexLatest} (${targetParsed.status}, v${targetParsed.editionVersion})`,
+            });
+          }
+        }
+      }
+    } else {
       checks.push({
         name: "latest_pointer",
-        passed: true,
-        detail: `Pointer targets: ${indexLatest ?? "none"}`,
+        passed: false,
+        detail: `Missing latest.json pointer file: ${options.indexFile}`,
       });
     }
   } catch (err) {
@@ -167,10 +218,14 @@ export async function generateStatusArtifact(
   const allChecksPassed = checks.every((c) => c.passed);
   let status: SystemHealthStatus = "healthy";
 
-  if (!allChecksPassed) {
-    status = activeSources === 0 ? "offline" : "degraded";
+  if (activeSources === 0) {
+    status = "offline";
+  } else if (!allChecksPassed) {
+    status = "offline";
   } else if (publishedCount === 0) {
     status = "warning";
+  } else if (activeSources < totalSources) {
+    status = "degraded";
   }
 
   const artifact: StatusArtifact = {
@@ -212,4 +267,7 @@ async function main(): Promise<void> {
   }
 }
 
-void main();
+// Execute main only when run directly as CLI
+if (import.meta.main) {
+  void main();
+}

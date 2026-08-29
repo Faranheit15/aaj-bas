@@ -18,13 +18,13 @@ describe("statusArtifactSchema (AB-803)", () => {
     },
     checks: [
       {
-        name: "index_pointer",
+        name: "latest_pointer",
         passed: true,
       },
       {
-        name: "sources_registry",
+        name: "source_registry",
         passed: true,
-        detail: "All 10 sources active",
+        detail: "10/10 sources active",
       },
     ],
   };
@@ -38,12 +38,20 @@ describe("statusArtifactSchema (AB-803)", () => {
   it("validates a status artifact with null latestEditionDate", () => {
     const initialStatus = {
       ...validStatus,
-      status: "degraded" as const,
+      status: "warning" as const,
       latestEditionDate: null,
       publishedEditionsCount: 0,
     };
     const parsed = statusArtifactSchema.parse(initialStatus);
     expect(parsed.latestEditionDate).toBeNull();
+    expect(parsed.status).toBe("warning");
+  });
+
+  it("validates all 4 system health statuses", () => {
+    expect(systemHealthStatusSchema.parse("healthy")).toBe("healthy");
+    expect(systemHealthStatusSchema.parse("warning")).toBe("warning");
+    expect(systemHealthStatusSchema.parse("degraded")).toBe("degraded");
+    expect(systemHealthStatusSchema.parse("offline")).toBe("offline");
   });
 
   it("rejects invalid status enum values", () => {
