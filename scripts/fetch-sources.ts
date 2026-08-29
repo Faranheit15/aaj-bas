@@ -12,16 +12,10 @@
  * would leave a DNS-rebinding gap.
  */
 
-import { lookup } from "node:dns/promises";
-import { request } from "node:https";
+import { PRODUCTION_ENVIRONMENT } from "./fetch-environment";
 import type {
-  FeedFetchEnvironment,
-  FeedTransportFailure,
-  FeedTransportRequest,
-  FeedTransportResult,
   FetchableSource,
   RegistrySource,
-  ResolvedFeedAddress,
   SourceRegistry,
 } from "@aaj-bas/domain";
 import {
@@ -43,15 +37,6 @@ import {
 
 const REPOSITORY_ROOT = collapse(`${import.meta.dir}/..`);
 const DEFAULT_REGISTRY = `${REPOSITORY_ROOT}/content/sources.yml`;
-
-const PRODUCTION_ENVIRONMENT: FeedFetchEnvironment = {
-  resolver: {
-    resolve: resolveFeedAddresses,
-  },
-  transport: {
-    request: requestFeed,
-  },
-};
 
 const USAGE = [
   "Usage:",
@@ -251,224 +236,6 @@ function printValidation(
   );
 }
 
-async function resolveFeedAddresses(
-  hostname: string,
-  timeoutMs: number,
-): Promise<readonly ResolvedFeedAddress[]> {
-  const addresses = await withTimeout(
-    lookup(hostname, { all: true, verbatim: true }),
-    timeoutMs,
-  );
-  return addresses.map((address) => ({
-    address: address.address,
-    family: address.family,
-  }));
-}
-
-function requestFeed(
-  input: FeedTransportRequest,
-): Promise<FeedTransportResult> {
-  return new Promise((resolve) => {
-    let finished = false;
-    let requestHandle: ReturnType<typeof request> | undefined;
-
-    const finish = (result: FeedTransportResult): void => {
-      if (finished) {
-        return;
-      }
-      finished = true;
-      resolve(result);
-    };
-
-    const fail = (error: unknown): void => {
-      finish({
-        ok: false,
-        error: {
-          code: "network",
-          message: "HTTPS request failed: " + describe(error),
-        },
-      });
-    };
-
-    try {
-      requestHandle = request(
-        {
-          hostname: input.url.hostname,
-          path: (input.url.pathname || "/") + input.url.search,
-          method: "GET",
-          headers: { ...input.headers },
-          servername: input.url.hostname,
-          agent: false,
-          rejectUnauthorized: true,
-          lookup: (_hostname, options, callback) => {
-            const addresses = input.addresses.map((address) => ({
-              address: address.address,
-              family: address.family,
-            }));
-            if (addresses.length === 0) {
-              callback(new Error("the checked address list was empty"));
-            } else if (options.all) {
-              callback(null, addresses);
-            } else {
-              const first = addresses[0];
-              if (first === undefined) {
-                callback(new Error("the checked address list was empty"));
-              } else {
-                callback(null, first.address, first.family);
-              }
-            }
-          },
-        },
-        (response) => {
-          let ended = false;
-          let byteLength = 0;
-          const chunks: Uint8Array[] = [];
-          const headers = normalizeHeaders(response.headers);
-          const declaredLength = headers["content-length"];
-
-          if (
-            declaredLength !== undefined &&
-            /^\d+$/.test(declaredLength) &&
-            Number(declaredLength) > input.maxResponseBytes
-          ) {
-            response.destroy();
-            requestHandle?.destroy();
-            finish(responseTooLarge(input.maxResponseBytes));
-            return;
-          }
-
-          response.on("data", (chunk) => {
-            if (finished) {
-              return;
-            }
-            const bytes = toBytes(chunk);
-            if (byteLength + bytes.byteLength > input.maxResponseBytes) {
-              response.destroy();
-              requestHandle?.destroy();
-              finish(responseTooLarge(input.maxResponseBytes));
-              return;
-            }
-            chunks.push(bytes);
-            byteLength += bytes.byteLength;
-          });
-          response.on("error", fail);
-          response.on("aborted", () => fail(new Error("response aborted")));
-          response.on("close", () => {
-            if (!ended && !finished) {
-              fail(new Error("response closed before it ended"));
-            }
-          });
-          response.on("end", () => {
-            ended = true;
-            if (response.statusCode === undefined) {
-              fail(new Error("response did not include a status code"));
-              return;
-            }
-            finish({
-              ok: true,
-              response: {
-                status: response.statusCode,
-                headers,
-                body: joinBytes(chunks, byteLength),
-              },
-            });
-          });
-        },
-      );
-      requestHandle.on("error", fail);
-      requestHandle.setTimeout(input.timeoutMs, () => {
-        if (finished) {
-          return;
-        }
-        requestHandle?.destroy();
-        finish({
-          ok: false,
-          error: {
-            code: "timeout",
-            message: "HTTPS request exceeded the timeout",
-          },
-        });
-      });
-      requestHandle.end();
-    } catch (error) {
-      fail(error);
-    }
-  });
-}
-
-function responseTooLarge(maxResponseBytes: number): {
-  readonly ok: false;
-  readonly error: FeedTransportFailure;
-} {
-  return {
-    ok: false,
-    error: {
-      code: "response-too-large",
-      message: "response exceeds the " + maxResponseBytes + "-byte limit",
-    },
-  };
-}
-
-function normalizeHeaders(
-  headers: Readonly<Record<string, string | readonly string[] | undefined>>,
-): Record<string, string> {
-  const normalized: Record<string, string> = {};
-  for (const [name, value] of Object.entries(headers)) {
-    if (typeof value === "string") {
-      normalized[name.toLowerCase()] = value;
-    } else if (value !== undefined) {
-      normalized[name.toLowerCase()] = value.join(", ");
-    }
-  }
-  return normalized;
-}
-
-function toBytes(chunk: Uint8Array | string): Uint8Array {
-  return typeof chunk === "string" ? new TextEncoder().encode(chunk) : chunk;
-}
-
-function joinBytes(
-  chunks: readonly Uint8Array[],
-  byteLength: number,
-): Uint8Array {
-  const body = new Uint8Array(byteLength);
-  let offset = 0;
-  for (const chunk of chunks) {
-    body.set(chunk, offset);
-    offset += chunk.byteLength;
-  }
-  return body;
-}
-
-async function withTimeout<T>(
-  promise: Promise<T>,
-  timeoutMs: number,
-): Promise<T> {
-  let timer: ReturnType<typeof setTimeout> | undefined;
-  try {
-    return await Promise.race([
-      promise,
-      new Promise<T>((_, reject) => {
-        timer = setTimeout(
-          () => reject(new TimeoutError("DNS resolution exceeded the timeout")),
-          timeoutMs,
-        );
-      }),
-    ]);
-  } finally {
-    if (timer !== undefined) {
-      clearTimeout(timer);
-    }
-  }
-}
-
-class TimeoutError extends Error {
-  public constructor(message: string) {
-    super(message);
-    this.name = "TimeoutError";
-  }
-}
-
 function toAbsolute(path: string): string {
   const normalised = path.replace(/\\/g, "/");
   const isWindowsAbsolute =
@@ -509,6 +276,6 @@ let code: number = REGISTRY_EXIT_CODES.internal;
 try {
   code = await run();
 } catch (error) {
-  console.error("INTERNAL: " + describe(error));
+  console.error(`INTERNAL: ${describe(error)}`);
 }
 process.exit(code);

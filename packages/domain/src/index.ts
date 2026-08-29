@@ -280,10 +280,13 @@ export type {
   DailyDraftPrOptions,
   DraftEditionPipelineResult,
   EditionPipelineInput,
+  IngestionDiagnostics,
+  IngestionSourceStatus,
   RollbackEditionSummary,
   RollbackPlan,
   RollbackPlanOptions,
   RollbackPlanResult,
+  SourceIngestionDiagnostic,
 } from "./edition-pipeline";
 export {
   applyEditionCorrection,

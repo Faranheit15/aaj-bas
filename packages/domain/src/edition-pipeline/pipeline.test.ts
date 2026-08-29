@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import type { RawFeedItem } from "../feed-normalization";
 import { GOLDEN_PROMPT_DATASET_FULL } from "../summarization";
 import { editorialDateInIndia, generateDraftEditionPipeline } from "./pipeline";
 
@@ -124,11 +125,100 @@ describe("Draft edition generation pipeline (AB-701)", () => {
     const result = await generateDraftEditionPipeline({
       date: "2026-08-22",
       normalizedItems: [],
+      ingestionDiagnostics: {
+        fixtureMode: false,
+        totalActiveSources: 0,
+        successfulSources: 0,
+        notModifiedSources: 0,
+        failedSources: 0,
+        totalParsedItems: 0,
+        sources: [],
+      },
     });
 
     expect(result.hasBlockingIssues).toBe(true);
     expect(result.isPublishable).toBe(false);
     expect(result.edition.coreStoryIds).toHaveLength(0);
     expect(result.summaryMarkdown).toContain("⚠️ REQUIRES EDITORIAL ATTENTION");
+    expect(result.summaryMarkdown).toContain(
+      "## 📡 Source Ingestion Diagnostics",
+    );
+    expect(result.summaryMarkdown).toContain(
+      "0 active production sources configured in registry",
+    );
+    expect(result.summaryMarkdown).toContain(
+      "## 🚨 Edition Validation & Integrity Findings",
+    );
+  });
+
+  it("ingests distinct active source items across beats into candidate clustering, ranking, and draft generation", async () => {
+    const beats = [
+      {
+        title: "Parliament Passes Clean Air Standards Bill 2026",
+      },
+      {
+        title: "RBI Monetary Policy Committee Holds Benchmark Repo Rate",
+      },
+      {
+        title: "Global Climate Summit Concludes with Loss and Damage Treaty",
+      },
+      {
+        title: "ISRO Space Mission Completes Pre-Launch Satellite Tests",
+      },
+      {
+        title: "Universal Immunization Health Program Expands Vaccine Drive",
+      },
+      {
+        title: "National Quantum Mission Telecom Hub Inaugurated",
+      },
+      {
+        title: "Supreme Court Guidelines Clarify Digital Evidence Rules",
+      },
+      {
+        title: "National Athletics Championship Sports Meet Concludes",
+      },
+      {
+        title: "Direct Tax Collections and GDP Revenue Grow Strongly",
+      },
+      {
+        title: "Semiconductor Silicon Hardware Fab Construction Commences",
+      },
+      {
+        title: "United Nations Security Council World Peace Resolution Passed",
+      },
+    ];
+
+    const rawItemsBySource = new Map<string, RawFeedItem[]>();
+
+    beats.forEach((b, idx) => {
+      const sourceId = `src-publisher-${idx + 1}`;
+      rawItemsBySource.set(sourceId, [
+        {
+          guid: `story-guid-${idx + 1}`,
+          title: b.title,
+          description: `Detailed reporting on ${b.title.toLowerCase()} from accredited correspondents.`,
+          link: `https://publisher-${idx + 1}.example.in/story-${idx + 1}`,
+          publishedAt: "2026-08-29T06:00:00Z",
+        },
+      ]);
+    });
+
+    const result = await generateDraftEditionPipeline({
+      date: "2026-08-29",
+      rawItemsBySource,
+      rankingOptions: {
+        maxCoreStoriesPerTopic: 8,
+      },
+    });
+
+    expect(result.diagnostics.totalRawItems).toBe(11);
+    expect(result.diagnostics.totalNormalizedItems).toBe(11);
+    expect(result.edition.coreStoryIds).toHaveLength(8);
+    expect(result.diagnostics.coreStoriesCount).toBe(8);
+    expect(result.diagnostics.distinctPublishersCount).toBeGreaterThanOrEqual(
+      6,
+    );
+    expect(result.factualReport.passed).toBe(true);
+    expect(result.isPublishable).toBe(true);
   });
 });

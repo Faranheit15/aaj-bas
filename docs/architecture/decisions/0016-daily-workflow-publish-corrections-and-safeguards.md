@@ -53,7 +53,8 @@ To complete the operational and quality lifecycle (Milestones 7, 8, 9), the repo
 6. **Quality Safeguards, Performance Budgets, & Security Audits (AB-901, AB-902, AB-903)**:
    - Playwright end-to-end tests (`apps/web/e2e/critical-journeys.spec.ts`) cover the 6 critical user journeys (core read, interest boosts, offline caching, date navigation, theme persistence, and issue reporting).
    - Automated performance budget script (`scripts/check-performance-budget.ts` / `bun run check:perf`) enforces client bundle sizes (Landing < 80 kB gzip, Web < 150 kB gzip, CSS < 25 kB gzip, Edition JSON < 150 kB uncompressed / < 50 kB gzip).
-   - Automated security and privacy audit script (`scripts/audit-security.ts` / `bun run check:security`) enforces `rel="noopener"`, zero tracking SDKs, zero gamification, and secret hygiene.
+   - Automated security and privacy audit script (`scripts/audit-security.ts` / `bun run check:security`) enforces strict CSP headers, `rel="noopener"`, zero tracking SDKs, zero gamification, zero raw HTML injection, workflow least-privilege permissions, secret hygiene, and canonical `bun.lock` hygiene.
+   - Note on dependency audit: Bun 1.3.14 does not include a built-in `bun pm audit` command, and `bun pm scan` requires a custom third-party scanner plugin in `bunfig.toml`. The repository enforces strict lockfile hygiene, frozen installation (`bun ci`), and single-package-manager rules, with external vulnerability scanning tracked in `user-input-needed.md` (UI-008).
 
 ## Consequences
 
@@ -66,3 +67,4 @@ To complete the operational and quality lifecycle (Milestones 7, 8, 9), the repo
 
 ### Negative / Trade-offs
 - Manual editorial review remains required before publishing each edition (a deliberate product invariant).
+- Automated CVE vulnerability database scanning is bounded by Bun 1.3.14 tooling capabilities (requiring an external plugin for `bun pm scan` rather than a built-in zero-dependency command).

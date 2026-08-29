@@ -1,83 +1,153 @@
 import { describe, expect, it } from "vitest";
+import { normalizeFeedItems } from "./normalize";
 import { parseRawFeed } from "./parse-feed";
 
-describe("parseRawFeed (AB-402, AB-403)", () => {
-  it("parses standard RSS 2.0 feed with CDATA", () => {
-    const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+describe("parseRawFeed deterministic ingestion coverage (AB-402, AB-403)", () => {
+  describe("RSS 2.0 Ingestion", () => {
+    it("parses RSS 2.0 feed with multiple items, CDATA, encoded content, and entity references", () => {
+      const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Sample Publisher</title>
-    <link>https://example.com</link>
+    <title>National Tribune &amp; Gazette</title>
+    <link>https://tribune.example.in</link>
     <item>
-      <title><![CDATA[Headline with &amp; entity]]></title>
-      <link>https://example.com/story-1</link>
-      <guid isPermaLink="false">custom-guid-1</guid>
-      <pubDate>Mon, 29 Aug 2026 06:00:00 GMT</pubDate>
-      <description><![CDATA[<p>Paragraph text description &lt;here&gt;</p>]]></description>
+      <title><![CDATA[Cabinet Approves &quot;Green Energy&quot; Corridor &#x2014; Phase II]]></title>
+      <link>https://tribune.example.in/news/green-energy-2026?utm_source=rss</link>
+      <guid isPermaLink="false">tribune-ge-2026</guid>
+      <pubDate>Sat, 29 Aug 2026 06:30:00 GMT</pubDate>
+      <description><![CDATA[<p>The Union Cabinet on Friday approved Phase II with a &#8377;12,000 crore outlay.</p>]]></description>
+      <content:encoded><![CDATA[<p>Full text details with &lt;b&gt;markup&lt;/b&gt;.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Monsoon Rainfall Deficit Narrows to 3%</title>
+      <link>https://tribune.example.in/news/monsoon-update</link>
+      <!-- Missing explicit guid: should fall back to link -->
+      <pubDate>Sat, 29 Aug 2026 07:00:00 GMT</pubDate>
+      <description>Heavy rains across central and northwest regions reduced the seasonal rainfall deficit.</description>
     </item>
   </channel>
 </rss>`;
 
-    const items = parseRawFeed(rssXml, "application/rss+xml");
-    expect(items).toHaveLength(1);
-    expect(items[0]?.title).toBe("Headline with & entity");
-    expect(items[0]?.link).toBe("https://example.com/story-1");
-    expect(items[0]?.guid).toBe("custom-guid-1");
-    expect(items[0]?.publishedAt).toBe("Mon, 29 Aug 2026 06:00:00 GMT");
-    expect(items[0]?.description).toBe(
-      "<p>Paragraph text description <here></p>",
-    );
+      const items = parseRawFeed(rssXml, "application/rss+xml");
+      expect(items).toHaveLength(2);
+
+      expect(items[0]).toEqual({
+        guid: "tribune-ge-2026",
+        title: 'Cabinet Approves "Green Energy" Corridor &#x2014; Phase II',
+        description:
+          "<p>The Union Cabinet on Friday approved Phase II with a &#8377;12,000 crore outlay.</p>",
+        link: "https://tribune.example.in/news/green-energy-2026?utm_source=rss",
+        publishedAt: "Sat, 29 Aug 2026 06:30:00 GMT",
+      });
+
+      expect(items[1]?.guid).toBe(
+        "https://tribune.example.in/news/monsoon-update",
+      );
+      expect(items[1]?.title).toBe("Monsoon Rainfall Deficit Narrows to 3%");
+
+      // Verify normalization of parsed items
+      const normalized = normalizeFeedItems("desk-daily", items);
+      expect(normalized).toHaveLength(2);
+      expect(normalized[0]?.title).toBe(
+        'Cabinet Approves "Green Energy" Corridor — Phase II',
+      );
+      expect(normalized[0]?.url).toBe(
+        "https://tribune.example.in/news/green-energy-2026",
+      );
+      expect(normalized[0]?.publishedAt).toBe("2026-08-29T06:30:00.000Z");
+    });
   });
 
-  it("parses Atom XML feed with link href", () => {
-    const atomXml = `<?xml version="1.0" encoding="utf-8"?>
+  describe("Atom XML Ingestion", () => {
+    it("parses Atom XML feed with link variations, updated timestamps, and content elements", () => {
+      const atomXml = `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Atom Feed</title>
+  <title>Economic Gazette Atom</title>
   <entry>
-    <title>Atom Entry Title</title>
-    <id>urn:uuid:12345</id>
-    <link rel="alternate" href="https://example.com/atom-1" />
-    <published>2026-08-29T06:30:00Z</published>
-    <summary>Atom entry summary text.</summary>
+    <title type="html"><![CDATA[RBI Holds Repo Rate at 6.5% for Ninth Meeting]]></title>
+    <id>tag:gazette.example.in,2026:rbi-policy-aug</id>
+    <link rel="alternate" type="text/html" href="https://gazette.example.in/rbi-rate" />
+    <published>2026-08-29T05:00:00Z</published>
+    <updated>2026-08-29T05:15:00Z</updated>
+    <summary type="text">Monetary Policy Committee voted 4:2 to maintain the benchmark lending rate.</summary>
+  </entry>
+  <entry>
+    <title>Direct Link Tag Entry</title>
+    <id>tag:gazette.example.in,2026:direct-link</id>
+    <link href="https://gazette.example.in/direct-story" />
+    <updated>2026-08-29T06:00:00Z</updated>
+    <content type="html"><![CDATA[<p>Content without explicit published tag.</p>]]></content>
   </entry>
 </feed>`;
 
-    const items = parseRawFeed(atomXml, "application/atom+xml");
-    expect(items).toHaveLength(1);
-    expect(items[0]?.title).toBe("Atom Entry Title");
-    expect(items[0]?.link).toBe("https://example.com/atom-1");
-    expect(items[0]?.guid).toBe("urn:uuid:12345");
-    expect(items[0]?.publishedAt).toBe("2026-08-29T06:30:00Z");
-    expect(items[0]?.description).toBe("Atom entry summary text.");
+      const items = parseRawFeed(atomXml, "application/atom+xml");
+      expect(items).toHaveLength(2);
+
+      expect(items[0]?.title).toBe(
+        "RBI Holds Repo Rate at 6.5% for Ninth Meeting",
+      );
+      expect(items[0]?.link).toBe("https://gazette.example.in/rbi-rate");
+      expect(items[0]?.guid).toBe("tag:gazette.example.in,2026:rbi-policy-aug");
+      expect(items[0]?.publishedAt).toBe("2026-08-29T05:00:00Z");
+      expect(items[0]?.updatedAt).toBe("2026-08-29T05:15:00Z");
+
+      expect(items[1]?.link).toBe("https://gazette.example.in/direct-story");
+      expect(items[1]?.publishedAt).toBe("2026-08-29T06:00:00Z"); // fallback from updated
+      expect(items[1]?.description).toBe(
+        "<p>Content without explicit published tag.</p>",
+      );
+    });
   });
 
-  it("parses JSON Feed format", () => {
-    const jsonFeed = JSON.stringify({
-      version: "https://jsonfeed.org/version/1.1",
-      title: "My JSON Feed",
-      items: [
-        {
-          id: "json-item-1",
-          url: "https://example.com/json-1",
-          title: "JSON Story",
-          summary: "Summary in JSON feed",
-          date_published: "2026-08-29T07:00:00Z",
-        },
-      ],
+  describe("JSON Feed 1.1 Ingestion", () => {
+    it("parses JSON Feed 1.1 with summary/content fallback and missing IDs", () => {
+      const jsonFeed = JSON.stringify({
+        version: "https://jsonfeed.org/version/1.1",
+        title: "Tech Wire India",
+        items: [
+          {
+            id: "tech-101",
+            url: "https://techwire.example.in/stories/101",
+            title: "Semiconductor Fab Breaks Ground in Gujarat",
+            summary:
+              "Construction commenced on India's first commercial silicon fab facility.",
+            date_published: "2026-08-29T04:00:00Z",
+            date_modified: "2026-08-29T04:30:00Z",
+          },
+          {
+            // Missing id: should fall back to url
+            url: "https://techwire.example.in/stories/102",
+            title: "Telecom Sector Achieves 95% 5G Population Coverage",
+            content_text:
+              "Indigenous telecom stack deployed across 600 districts.",
+            date_published: "2026-08-29T05:00:00Z",
+          },
+        ],
+      });
+
+      const items = parseRawFeed(jsonFeed, "application/feed+json");
+      expect(items).toHaveLength(2);
+
+      expect(items[0]?.guid).toBe("tech-101");
+      expect(items[0]?.title).toBe(
+        "Semiconductor Fab Breaks Ground in Gujarat",
+      );
+      expect(items[0]?.description).toBe(
+        "Construction commenced on India's first commercial silicon fab facility.",
+      );
+
+      expect(items[1]?.guid).toBe("https://techwire.example.in/stories/102");
+      expect(items[1]?.description).toBe(
+        "Indigenous telecom stack deployed across 600 districts.",
+      );
     });
 
-    const items = parseRawFeed(jsonFeed, "application/json");
-    expect(items).toHaveLength(1);
-    expect(items[0]?.title).toBe("JSON Story");
-    expect(items[0]?.link).toBe("https://example.com/json-1");
-    expect(items[0]?.guid).toBe("json-item-1");
-    expect(items[0]?.description).toBe("Summary in JSON feed");
-    expect(items[0]?.publishedAt).toBe("2026-08-29T07:00:00Z");
-  });
-
-  it("handles empty or invalid inputs gracefully", () => {
-    expect(parseRawFeed("")).toEqual([]);
-    expect(parseRawFeed("   ")).toEqual([]);
-    expect(parseRawFeed("not valid xml or json")).toEqual([]);
+    it("isolates malformed JSON or unparseable input safely", () => {
+      expect(parseRawFeed("{{invalid-json", "application/json")).toEqual([]);
+      expect(parseRawFeed(JSON.stringify({ title: "No items array" }))).toEqual(
+        [],
+      );
+      expect(parseRawFeed(new Uint8Array([0x00, 0xff, 0xfe]))).toEqual([]);
+    });
   });
 });

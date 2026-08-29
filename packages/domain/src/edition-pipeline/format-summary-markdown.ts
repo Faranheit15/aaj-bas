@@ -7,12 +7,14 @@ import type { CandidateRankingResult } from "../candidate-ranking";
 import type { EditionValidation } from "../edition-validation";
 import type { FactualValidationReport } from "../factual-validation";
 import { formatFactualValidationMarkdown } from "../factual-validation";
+import type { IngestionDiagnostics } from "./types";
 
 export interface FormatSummaryMarkdownOptions {
   readonly edition: Edition;
   readonly rankingResult: CandidateRankingResult;
   readonly factualReport: FactualValidationReport;
   readonly editionValidation: EditionValidation;
+  readonly ingestionDiagnostics?: IngestionDiagnostics | undefined;
   readonly diagnostics: {
     readonly editionDate: string;
     readonly totalRawItems: number;
@@ -33,6 +35,7 @@ export function formatDraftEditionSummaryMarkdown(
     rankingResult,
     factualReport,
     editionValidation,
+    ingestionDiagnostics,
     diagnostics,
   } = options;
 
@@ -59,6 +62,76 @@ export function formatDraftEditionSummaryMarkdown(
     "",
     "---",
     "",
+  ];
+
+  if (ingestionDiagnostics) {
+    const modeStr = ingestionDiagnostics.fixtureMode
+      ? "Offline Fixture (--fixture)"
+      : "Live Feed Ingestion";
+    lines.push(
+      "## 📡 Source Ingestion Diagnostics",
+      "",
+      `> **Mode**: \`${modeStr}\` | **Active Sources**: \`${ingestionDiagnostics.totalActiveSources}\` | **Fetched Items**: \`${ingestionDiagnostics.totalParsedItems}\``,
+      "",
+    );
+
+    if (
+      ingestionDiagnostics.totalActiveSources === 0 &&
+      !ingestionDiagnostics.fixtureMode
+    ) {
+      lines.push(
+        "> ⚠️ **0 active production sources configured in registry** (`content/sources.yml`). No feeds were fetched.",
+        "",
+      );
+    } else if (ingestionDiagnostics.sources.length > 0) {
+      lines.push(
+        "| Source ID | Status | HTTP | Items Parsed | Latency | Issues / Errors |",
+        "| :--- | :---: | :---: | :---: | :---: | :--- |",
+      );
+      for (const src of ingestionDiagnostics.sources) {
+        const httpStr =
+          src.httpStatus !== undefined ? `\`${src.httpStatus}\`` : "-";
+        const latencyStr =
+          src.durationMs !== undefined ? `${src.durationMs}ms` : "-";
+        const statusIcon =
+          src.status === "success"
+            ? "✅ Success"
+            : src.status === "not-modified"
+              ? "ℹ️ 304 Not Modified"
+              : src.status === "parse-failure"
+                ? "❌ Parse Error"
+                : "❌ Fetch Failure";
+        const errStr = src.error ? escapePipes(src.error) : "None";
+        lines.push(
+          `| \`${src.sourceId}\` | ${statusIcon} | ${httpStr} | ${src.itemCount} | ${latencyStr} | ${errStr} |`,
+        );
+      }
+      lines.push("");
+    }
+    lines.push("---", "");
+  }
+
+  if (editionValidation.findings.length > 0) {
+    lines.push(
+      "## 🚨 Edition Validation & Integrity Findings",
+      "",
+      "| Severity | Rule ID | Path / Story | Message |",
+      "| :---: | :--- | :--- | :--- |",
+    );
+    for (const f of editionValidation.findings) {
+      const sevBadge =
+        f.severity === "blocking" ? "🔴 **BLOCKING**" : "⚠️ **WARNING**";
+      const loc = f.storyId
+        ? `\`${f.storyId}\` (${f.path ?? ""})`
+        : `\`${f.path ?? "root"}\``;
+      lines.push(
+        `| ${sevBadge} | \`${f.ruleId}\` | ${loc} | ${escapePipes(f.message)} |`,
+      );
+    }
+    lines.push("", "---", "");
+  }
+
+  lines.push(
     "## 📊 Edition Composition & Diversity Overview",
     "",
     "| Metric | Target | Actual | Status |",
@@ -76,7 +149,7 @@ export function formatDraftEditionSummaryMarkdown(
     "",
     "| # | Headline | Beat / Topic | Type | Sources | Confidence |",
     "| :-: | :--- | :--- | :---: | :--- | :---: |",
-  ];
+  );
 
   coreStories.forEach((story, idx) => {
     const sourcesList = story.sourceIds.map((s) => `\`${s}\``).join(", ");

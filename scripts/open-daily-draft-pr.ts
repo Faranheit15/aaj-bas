@@ -12,14 +12,16 @@
 import {
   type DailyDraftPrOptions,
   type EditionPipelineInput,
+  type IngestionDiagnostics,
   type NormalizedFeedItem,
+  type SourceIngestionDiagnostic,
   GOLDEN_PROMPT_DATASET_FULL,
   PIPELINE_EXIT_CODES,
   type SourceRegistry,
   composePrBody,
   createSummarizer,
+  fetchFeed,
   fetchableSourcesOf,
-  fetchFeeds,
   formatPrBranchName,
   formatPrTitle,
   generateDraftEditionPipeline,
@@ -83,7 +85,9 @@ export async function runDailyDraftWorkflow(
     }
   }
 
-  // 2. Determine feed items
+  // 2. Determine feed items and collect diagnostics
+  let ingestionDiagnostics: IngestionDiagnostics;
+
   if (options.useFixture) {
     console.log(
       "ℹ️ Ingesting stories from golden dataset fixtures (--fixture).",
@@ -91,13 +95,27 @@ export async function runDailyDraftWorkflow(
     normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
       (tc) => tc.cluster.items,
     );
+    ingestionDiagnostics = {
+      fixtureMode: true,
+      totalActiveSources: 0,
+      successfulSources: 0,
+      notModifiedSources: 0,
+      failedSources: 0,
+      totalParsedItems: normalizedItems.length,
+      sources: [],
+    };
   } else if (!sourceRegistry || parsedYaml === undefined) {
-    console.log(
-      "ℹ️ No source registry found. Using fixtures for local development.",
-    );
-    normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
-      (tc) => tc.cluster.items,
-    );
+    console.log("⚠️ No valid source registry found in content/sources.yml.");
+    normalizedItems = [];
+    ingestionDiagnostics = {
+      fixtureMode: false,
+      totalActiveSources: 0,
+      successfulSources: 0,
+      notModifiedSources: 0,
+      failedSources: 0,
+      totalParsedItems: 0,
+      sources: [],
+    };
   } else {
     const validationReport = validateSourceRegistries([
       { file: options.sourcesPath, value: parsedYaml },
@@ -109,35 +127,84 @@ export async function runDailyDraftWorkflow(
 
     if (fetchable.length === 0) {
       console.log(
-        "ℹ️ No active production sources configured in registry. Using staging fixtures for local development.",
+        "⚠️ No active production sources configured in registry (0 fetchable sources).",
       );
-      normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
-        (tc) => tc.cluster.items,
-      );
+      normalizedItems = [];
+      ingestionDiagnostics = {
+        fixtureMode: false,
+        totalActiveSources: 0,
+        successfulSources: 0,
+        notModifiedSources: 0,
+        failedSources: 0,
+        totalParsedItems: 0,
+        sources: [],
+      };
     } else {
       console.log(
         `📡 Ingesting from ${fetchable.length} active registry source(s)...`,
       );
-      const fetchResults = await fetchFeeds(fetchable, PRODUCTION_ENVIRONMENT);
+      const sourceDiagnostics: SourceIngestionDiagnostic[] = [];
       const items: NormalizedFeedItem[] = [];
+      let successfulCount = 0;
+      let notModifiedCount = 0;
+      let failedCount = 0;
 
-      for (const res of fetchResults) {
+      for (const source of fetchable) {
+        const startTime = performance.now();
+        const res = await fetchFeed(source, PRODUCTION_ENVIRONMENT);
+        const durationMs = Math.round(performance.now() - startTime);
+
         if (res.kind === "success") {
           try {
             const rawItems = parseRawFeed(res.body, res.contentType);
             const normalized = normalizeFeedItems(res.sourceId, rawItems);
             items.push(...normalized);
+            successfulCount += 1;
+            sourceDiagnostics.push({
+              sourceId: res.sourceId,
+              status: "success",
+              httpStatus: res.status,
+              itemCount: normalized.length,
+              durationMs,
+            });
             console.log(
               `   ✓ Source ${res.sourceId}: fetched & parsed ${normalized.length} item(s)`,
             );
           } catch (parseErr) {
+            failedCount += 1;
+            const msg =
+              parseErr instanceof Error ? parseErr.message : String(parseErr);
+            sourceDiagnostics.push({
+              sourceId: res.sourceId,
+              status: "parse-failure",
+              httpStatus: res.status,
+              itemCount: 0,
+              durationMs,
+              error: `Feed parse error: ${msg.slice(0, 200)}`,
+            });
             console.warn(
-              `   ✗ Source ${res.sourceId}: feed parsing failed: ${parseErr instanceof Error ? parseErr.message : String(parseErr)}`,
+              `   ✗ Source ${res.sourceId}: feed parsing failed: ${msg}`,
             );
           }
         } else if (res.kind === "not-modified") {
+          notModifiedCount += 1;
+          sourceDiagnostics.push({
+            sourceId: res.sourceId,
+            status: "not-modified",
+            httpStatus: 304,
+            itemCount: 0,
+            durationMs,
+          });
           console.log(`   - Source ${res.sourceId}: 304 Not Modified`);
         } else {
+          failedCount += 1;
+          sourceDiagnostics.push({
+            sourceId: res.sourceId,
+            status: "fetch-failure",
+            itemCount: 0,
+            durationMs,
+            error: `${res.code}: ${res.message.slice(0, 200)}`,
+          });
           console.warn(
             `   ✗ Source ${res.sourceId}: fetch failure (${res.code}): ${res.message}`,
           );
@@ -145,6 +212,15 @@ export async function runDailyDraftWorkflow(
       }
 
       normalizedItems = items;
+      ingestionDiagnostics = {
+        fixtureMode: false,
+        totalActiveSources: fetchable.length,
+        successfulSources: successfulCount,
+        notModifiedSources: notModifiedCount,
+        failedSources: failedCount,
+        totalParsedItems: items.length,
+        sources: sourceDiagnostics,
+      };
     }
   }
 
@@ -166,6 +242,7 @@ export async function runDailyDraftWorkflow(
     date: options.date,
     normalizedItems,
     sourceRegistry,
+    ingestionDiagnostics,
     summarizer,
   };
 

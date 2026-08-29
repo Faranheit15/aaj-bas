@@ -288,6 +288,7 @@ export async function generateDraftEditionPipeline(
     rankingResult,
     factualReport,
     editionValidation,
+    ingestionDiagnostics: input.ingestionDiagnostics,
     diagnostics,
   });
 
@@ -298,6 +299,7 @@ export async function generateDraftEditionPipeline(
     rankingResult,
     factualReport,
     editionValidation,
+    ingestionDiagnostics: input.ingestionDiagnostics,
     isPublishable,
     hasBlockingIssues,
     diagnostics,

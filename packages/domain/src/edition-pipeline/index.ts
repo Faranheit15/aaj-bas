@@ -31,4 +31,7 @@ export {
   PIPELINE_EXIT_CODES,
   type DraftEditionPipelineResult,
   type EditionPipelineInput,
+  type IngestionDiagnostics,
+  type IngestionSourceStatus,
+  type SourceIngestionDiagnostic,
 } from "./types";
