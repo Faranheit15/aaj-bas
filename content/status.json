@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-29T15:56:42.812Z",
+  "status": "healthy",
+  "latestEditionDate": "2026-07-21",
+  "publishedEditionsCount": 1,
+  "sources": {
+    "total": 3,
+    "active": 0
+  },
+  "checks": [
+    {
+      "name": "source_registry",
+      "passed": true,
+      "detail": "0/3 sources active"
+    },
+    {
+      "name": "published_editions",
+      "passed": true,
+      "detail": "1 published editions found"
+    }
+  ]
+}

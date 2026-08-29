@@ -20,6 +20,7 @@
     "content:validate": "bun scripts/validate-edition.ts",
     "content:stage": "bun scripts/stage-content.ts",
     "content:correct": "bun scripts/create-correction.ts",
+    "status:generate": "bun scripts/generate-status-artifact.ts",
     "sources:validate": "bun scripts/validate-sources.ts",
     "sources:fetch": "bun scripts/fetch-sources.ts",
     "draft:generate": "bun scripts/generate-draft-edition.ts",

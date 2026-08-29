@@ -60,3 +60,9 @@ export {
   storySchema,
 } from "./story";
 export type { Confidence, ReportingType, Story } from "./story";
+
+export {
+  statusArtifactSchema,
+  systemHealthStatusSchema,
+} from "./status";
+export type { StatusArtifact, SystemHealthStatus } from "./status";
