@@ -40,7 +40,7 @@
   "devDependencies": {
     "@aaj-bas/domain": "workspace:*",
     "@aaj-bas/schemas": "workspace:*",
-    "@biomejs/biome": "^2.5.8",
+    "@biomejs/biome": "^2.5.10",
     "typescript": "^7.0.2"
   }
 }
