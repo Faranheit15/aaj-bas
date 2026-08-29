@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T16:39:10.391Z",
+  "generatedAt": "2026-08-29T16:55:32.479Z",
   "status": "offline",
-  "latestEditionDate": "2026-07-21",
-  "publishedEditionsCount": 1,
+  "latestEditionDate": null,
+  "publishedEditionsCount": 0,
   "sources": {
     "total": 3,
     "active": 0
@@ -17,12 +17,12 @@
     {
       "name": "published_editions",
       "passed": true,
-      "detail": "1 published editions found"
+      "detail": "0 published editions found (1 sample/unpublishable edition withheld)"
     },
     {
       "name": "latest_pointer",
-      "passed": false,
-      "detail": "latest pointer is null despite 1 published editions"
+      "passed": true,
+      "detail": "No editions published yet (valid initial state)"
     }
   ]
 }

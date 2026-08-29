@@ -96,4 +96,39 @@ describe("Draft edition generation pipeline (AB-701)", () => {
     expect(result.edition.date).toBe("2026-09-01");
     expect(result.edition.status).toBe("draft");
   });
+
+  it("ingests from rawItemsBySource with HTML sanitization", async () => {
+    const rawRssItems = [
+      {
+        guid: "rss-1",
+        title: "Test Headline with <b>HTML</b> &amp; Entities",
+        description:
+          "<p>The council passed a <strong>new policy</strong> on Tuesday.</p><script>alert(1)</script>",
+        link: "https://example.com/story-1?utm_source=rss",
+        publishedAt: "2026-08-22T08:00:00.000Z",
+      },
+    ];
+
+    const rawMap = new Map([["src-custom-news", rawRssItems]]);
+
+    const result = await generateDraftEditionPipeline({
+      date: "2026-08-22",
+      rawItemsBySource: rawMap,
+    });
+
+    expect(result.diagnostics.totalRawItems).toBe(1);
+    expect(result.hasBlockingIssues).toBe(true); // only 1 story, so fewer than 8 core stories
+  });
+
+  it("reports blocking issues cleanly when insufficient stories are provided without crashing", async () => {
+    const result = await generateDraftEditionPipeline({
+      date: "2026-08-22",
+      normalizedItems: [],
+    });
+
+    expect(result.hasBlockingIssues).toBe(true);
+    expect(result.isPublishable).toBe(false);
+    expect(result.edition.coreStoryIds).toHaveLength(0);
+    expect(result.summaryMarkdown).toContain("⚠️ REQUIRES EDITORIAL ATTENTION");
+  });
 });

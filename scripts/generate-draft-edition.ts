@@ -19,11 +19,15 @@ import {
   createSummarizer,
   editorialDateInIndia,
   fetchableSourcesOf,
+  fetchFeeds,
   generateDraftEditionPipeline,
+  normalizeFeedItems,
+  parseRawFeed,
   sourceRegistrySchema,
   validateEditionDateInput,
   validateSourceRegistries,
 } from "@aaj-bas/domain";
+import { PRODUCTION_ENVIRONMENT } from "./fetch-environment";
 
 interface CliOptions {
   date: string;
@@ -139,8 +143,17 @@ async function main(): Promise<void> {
     }
 
     // 2. Determine feed items
-    if (options.useFixture || !sourceRegistry || parsedYaml === undefined) {
-      console.log("ℹ️ Ingesting stories from golden dataset fixtures.");
+    if (options.useFixture) {
+      console.log(
+        "ℹ️ Ingesting stories from golden dataset fixtures (--fixture).",
+      );
+      normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
+        (tc) => tc.cluster.items,
+      );
+    } else if (!sourceRegistry || parsedYaml === undefined) {
+      console.log(
+        "ℹ️ No source registry found. Using fixtures for local development.",
+      );
       normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
         (tc) => tc.cluster.items,
       );
@@ -155,7 +168,7 @@ async function main(): Promise<void> {
 
       if (fetchable.length === 0) {
         console.log(
-          "ℹ️ No active production sources configured in registry. Falling back to staging fixtures.",
+          "ℹ️ No active production sources configured in registry. Using staging fixtures for local development.",
         );
         normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
           (tc) => tc.cluster.items,
@@ -164,10 +177,36 @@ async function main(): Promise<void> {
         console.log(
           `📡 Ingesting from ${fetchable.length} active registry source(s)...`,
         );
-        // Note: Live network fetch can be enabled when approved production sources exist
-        normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
-          (tc) => tc.cluster.items,
+        const fetchResults = await fetchFeeds(
+          fetchable,
+          PRODUCTION_ENVIRONMENT,
         );
+        const items: NormalizedFeedItem[] = [];
+
+        for (const res of fetchResults) {
+          if (res.kind === "success") {
+            try {
+              const rawItems = parseRawFeed(res.body, res.contentType);
+              const normalized = normalizeFeedItems(res.sourceId, rawItems);
+              items.push(...normalized);
+              console.log(
+                `   ✓ Source ${res.sourceId}: fetched & parsed ${normalized.length} item(s)`,
+              );
+            } catch (parseErr) {
+              console.warn(
+                `   ✗ Source ${res.sourceId}: feed parsing failed: ${parseErr instanceof Error ? parseErr.message : String(parseErr)}`,
+              );
+            }
+          } else if (res.kind === "not-modified") {
+            console.log(`   - Source ${res.sourceId}: 304 Not Modified`);
+          } else {
+            console.warn(
+              `   ✗ Source ${res.sourceId}: fetch failure (${res.code}): ${res.message}`,
+            );
+          }
+        }
+
+        normalizedItems = items;
       }
     }
 

@@ -8,11 +8,15 @@
 import {
   type StatusArtifact,
   type SystemHealthStatus,
-  editionIndexSchema,
-  editionSchema,
   statusArtifactSchema,
 } from "@aaj-bas/schemas";
-import { validateSourceRegistry } from "@aaj-bas/domain";
+import {
+  type EditionSource,
+  planStaging,
+  validateEditions,
+  validateSourceRegistry,
+  validateStagedIndex,
+} from "@aaj-bas/domain";
 
 export interface StatusCliOptions {
   editionsDir: string;
@@ -140,39 +144,39 @@ export async function generateStatusArtifact(
     });
   }
 
-  // 2. Discover published editions
-  let publishedCount = 0;
-  const publishedDates: string[] = [];
-
-  for await (const file of new Bun.Glob("*.json").scan({
-    cwd: options.editionsDir,
-    onlyFiles: true,
-  })) {
-    const dateMatch = /^(\d{4}-\d{2}-\d{2})\.json$/.exec(file);
-    if (dateMatch?.[1]) {
+  // 2. Discover and evaluate publishable editions using domain staging rules
+  const editionSources: EditionSource[] = [];
+  try {
+    for await (const file of new Bun.Glob("*.json").scan({
+      cwd: options.editionsDir,
+      onlyFiles: true,
+    })) {
       try {
-        const text = await Bun.file(`${options.editionsDir}/${file}`).text();
-        const parsed = editionSchema.parse(JSON.parse(text));
-        if (parsed.status === "published" || parsed.status === "corrected") {
-          publishedCount += 1;
-          publishedDates.push(dateMatch[1]);
-        }
+        const filePath = `${options.editionsDir}/${file}`;
+        const text = await Bun.file(filePath).text();
+        editionSources.push({ file: filePath, text });
       } catch {
-        // Skip unparseable
+        // Skip unreadable files
       }
     }
+  } catch {
+    // Editions dir missing or empty
   }
 
-  publishedDates.sort();
-  const latestDiscoveredDate =
-    publishedDates.length > 0
-      ? (publishedDates[publishedDates.length - 1] ?? null)
-      : null;
+  const validationReport = validateEditions(editionSources);
+  const stagingPlan = planStaging(validationReport, "published");
+  const publishedCount = stagingPlan.staged.length;
+  const withheldCount = stagingPlan.skipped.length;
+  const latestPublishableDate = stagingPlan.index.latest;
+  const publishableDates = stagingPlan.staged.map((e) => e.date);
 
   checks.push({
     name: "published_editions",
     passed: true,
-    detail: `${publishedCount} published editions found`,
+    detail:
+      publishedCount === 0
+        ? `0 published editions found (${withheldCount} sample/unpublishable edition${withheldCount === 1 ? "" : "s"} withheld)`
+        : `${publishedCount} published editions found`,
   });
 
   // 3. Verify latest pointer (checking options.indexFile, fallback to staged index if default)
@@ -189,48 +193,56 @@ export async function generateStatusArtifact(
   try {
     if (await fileExists(resolvedIndexFile)) {
       const indexText = await Bun.file(resolvedIndexFile).text();
-      const parsedIndex = editionIndexSchema.parse(JSON.parse(indexText));
-      indexLatest = parsedIndex.latest;
+      const indexValidation = validateStagedIndex(indexText);
 
-      if (indexLatest === null) {
-        if (publishedCount === 0) {
-          checks.push({
-            name: "latest_pointer",
-            passed: true,
-            detail: "No editions published yet (valid initial state)",
-          });
-        } else {
-          checks.push({
-            name: "latest_pointer",
-            passed: false,
-            detail: `latest pointer is null despite ${publishedCount} published editions`,
-          });
-        }
+      if (!indexValidation.ok) {
+        checks.push({
+          name: "latest_pointer",
+          passed: false,
+          detail: `Failed parsing latest.json index: ${indexValidation.problems.join("; ")}`,
+        });
       } else {
-        const targetPath = `${options.editionsDir}/${indexLatest}.json`;
-        if (!(await fileExists(targetPath))) {
-          checks.push({
-            name: "latest_pointer",
-            passed: false,
-            detail: `latest.json targets missing file: ${targetPath}`,
-          });
-        } else {
-          const targetText = await Bun.file(targetPath).text();
-          const targetParsed = editionSchema.parse(JSON.parse(targetText));
-          if (
-            targetParsed.status !== "published" &&
-            targetParsed.status !== "corrected"
-          ) {
+        const parsedIndex = indexValidation.index;
+        indexLatest = parsedIndex.latest;
+
+        if (indexLatest === null) {
+          if (publishedCount === 0) {
+            checks.push({
+              name: "latest_pointer",
+              passed: true,
+              detail: "No editions published yet (valid initial state)",
+            });
+          } else {
             checks.push({
               name: "latest_pointer",
               passed: false,
-              detail: `target edition has invalid status '${targetParsed.status}', expected 'published' or 'corrected'`,
+              detail: `latest pointer is null despite ${publishedCount} published editions`,
+            });
+          }
+        } else {
+          if (publishedCount === 0) {
+            checks.push({
+              name: "latest_pointer",
+              passed: false,
+              detail: `latest pointer targets '${indexLatest}' but 0 publishable editions exist`,
+            });
+          } else if (!publishableDates.includes(indexLatest)) {
+            checks.push({
+              name: "latest_pointer",
+              passed: false,
+              detail: `latest pointer targets unpublishable or missing edition: '${indexLatest}'`,
+            });
+          } else if (indexLatest !== latestPublishableDate) {
+            checks.push({
+              name: "latest_pointer",
+              passed: false,
+              detail: `latest pointer targets '${indexLatest}', which is not the newest publishable edition ('${latestPublishableDate}')`,
             });
           } else {
             checks.push({
               name: "latest_pointer",
               passed: true,
-              detail: `Pointer targets valid edition: ${indexLatest} (${targetParsed.status}, v${targetParsed.editionVersion})`,
+              detail: `Pointer targets valid edition: ${indexLatest}`,
             });
           }
         }
@@ -246,7 +258,7 @@ export async function generateStatusArtifact(
         checks.push({
           name: "latest_pointer",
           passed: false,
-          detail: `Missing latest.json pointer file: ${options.indexFile}`,
+          detail: `Missing latest.json pointer file: ${resolvedIndexFile}`,
         });
       }
     }
@@ -278,13 +290,21 @@ export async function generateStatusArtifact(
     } else {
       status = "warning";
     }
+  } else {
+    if (activeSourceCount === 0) {
+      status = "offline";
+    } else if (publishedCount === 0) {
+      status = "warning";
+    } else {
+      status = "healthy";
+    }
   }
 
   const rawArtifact = {
     schemaVersion: 1 as const,
     generatedAt,
     status,
-    latestEditionDate: indexLatest ?? latestDiscoveredDate,
+    latestEditionDate: indexLatest ?? latestPublishableDate,
     publishedEditionsCount: publishedCount,
     sources: {
       total: totalSourcesCount,

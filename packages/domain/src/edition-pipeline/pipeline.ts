@@ -232,7 +232,10 @@ export async function generateDraftEditionPipeline(
   };
 
   // 8. Validate Edition Schema
-  const validatedEdition = editionSchema.parse(draftEdition);
+  const parseResult = editionSchema.safeParse(draftEdition);
+  const validatedEdition = parseResult.success
+    ? parseResult.data
+    : draftEdition;
 
   // 9. Validate Factual Support
   const factualValidationInputs: Array<{

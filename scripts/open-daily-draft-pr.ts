@@ -19,13 +19,17 @@ import {
   composePrBody,
   createSummarizer,
   fetchableSourcesOf,
+  fetchFeeds,
   formatPrBranchName,
   formatPrTitle,
   generateDraftEditionPipeline,
+  normalizeFeedItems,
   parseDailyDraftPrArgs,
+  parseRawFeed,
   sourceRegistrySchema,
   validateSourceRegistries,
 } from "@aaj-bas/domain";
+import { PRODUCTION_ENVIRONMENT } from "./fetch-environment";
 
 async function fileExists(path: string): Promise<boolean> {
   try {
@@ -80,8 +84,17 @@ export async function runDailyDraftWorkflow(
   }
 
   // 2. Determine feed items
-  if (options.useFixture || !sourceRegistry || parsedYaml === undefined) {
-    console.log("ℹ️ Ingesting stories from golden dataset fixtures.");
+  if (options.useFixture) {
+    console.log(
+      "ℹ️ Ingesting stories from golden dataset fixtures (--fixture).",
+    );
+    normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
+      (tc) => tc.cluster.items,
+    );
+  } else if (!sourceRegistry || parsedYaml === undefined) {
+    console.log(
+      "ℹ️ No source registry found. Using fixtures for local development.",
+    );
     normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
       (tc) => tc.cluster.items,
     );
@@ -96,7 +109,7 @@ export async function runDailyDraftWorkflow(
 
     if (fetchable.length === 0) {
       console.log(
-        "ℹ️ No active production sources configured in registry. Using staging fixtures.",
+        "ℹ️ No active production sources configured in registry. Using staging fixtures for local development.",
       );
       normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
         (tc) => tc.cluster.items,
@@ -105,9 +118,33 @@ export async function runDailyDraftWorkflow(
       console.log(
         `📡 Ingesting from ${fetchable.length} active registry source(s)...`,
       );
-      normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
-        (tc) => tc.cluster.items,
-      );
+      const fetchResults = await fetchFeeds(fetchable, PRODUCTION_ENVIRONMENT);
+      const items: NormalizedFeedItem[] = [];
+
+      for (const res of fetchResults) {
+        if (res.kind === "success") {
+          try {
+            const rawItems = parseRawFeed(res.body, res.contentType);
+            const normalized = normalizeFeedItems(res.sourceId, rawItems);
+            items.push(...normalized);
+            console.log(
+              `   ✓ Source ${res.sourceId}: fetched & parsed ${normalized.length} item(s)`,
+            );
+          } catch (parseErr) {
+            console.warn(
+              `   ✗ Source ${res.sourceId}: feed parsing failed: ${parseErr instanceof Error ? parseErr.message : String(parseErr)}`,
+            );
+          }
+        } else if (res.kind === "not-modified") {
+          console.log(`   - Source ${res.sourceId}: 304 Not Modified`);
+        } else {
+          console.warn(
+            `   ✗ Source ${res.sourceId}: fetch failure (${res.code}): ${res.message}`,
+          );
+        }
+      }
+
+      normalizedItems = items;
     }
   }
 

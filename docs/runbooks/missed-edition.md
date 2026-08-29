@@ -29,10 +29,12 @@ Check the GitHub Actions run logs for `.github/workflows/daily-draft.yml`:
 
 ```bash
 # 1. Manually trigger local draft generation to inspect errors
-bun run draft:generate --date $(date +%Y-%m-%d) --verbose
+bun run draft:generate --date $(date +%Y-%m-%d)
+# Or for offline testing/staging without live network:
+bun run draft:generate --date $(date +%Y-%m-%d) --fixture
 
 # 2. Check source fetcher status
-bun run sources:fetch --live --dry-run
+bun run sources:fetch
 
 # 3. Check source registry validity
 bun run sources:validate
@@ -41,8 +43,8 @@ bun run sources:validate
 ### Step 2: Remediate Root Causes
 
 - **If RSS / Source Outage**: If insufficient active sources were reachable, follow `docs/runbooks/source-outage.md`.
-- **If Factual Validation Failure**: If LLM draft summarization triggered factual trap warnings or number mismatches, inspect the generated findings in `content/drafts/<date>.json` and adjust prompt/inputs or use human editorial summarization.
-- **If Secret / API Key Expiry**: Verify `GEMINI_API_KEY` in GitHub repository secrets.
+- **If Factual Validation Failure**: If LLM draft summarization triggered factual trap warnings or number mismatches, inspect the generated findings in `content/drafts/<date>-summary.md` and adjust prompt/inputs or use human editorial summarization.
+- **If Secret / API Key Expiry**: Verify `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in GitHub repository secrets if using Cloudflare Workers AI.
 
 ### Step 3: Manual Draft Generation & Publication
 
@@ -58,21 +60,21 @@ bun run content:validate --file content/drafts/<YYYY-MM-DD>.json
 # 3. Publish the approved draft
 bun run edition:publish --date <YYYY-MM-DD>
 
-# 4. Stage and verify index
-bun run content:stage
-bun run content:stage --verify-index apps/web/public/content/latest.json
+# 4. Update the system health status artifact
+bun run status:generate
 
-# 5. Run merge-blocking suite
+# 5. Stage and run merge-blocking suite
 bun run check
+bun run edition:smoke
 
 # 6. Commit and push to develop
 git add content/
-git commit -m "feat(content): publish delayed daily edition for <YYYY-MM-DD>"
+git commit -m "feat(content): publish daily edition for <YYYY-MM-DD>"
 git push origin develop
 ```
 
 ### Step 4: Verify Live Reader
 
 ```bash
-bun run edition:smoke --url https://aaj-bas-web.pages.dev
+bun run edition:smoke
 ```

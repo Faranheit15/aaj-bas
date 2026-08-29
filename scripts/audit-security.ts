@@ -78,6 +78,15 @@ async function scanFiles(
   return files;
 }
 
+async function fileExists(path: string): Promise<boolean> {
+  try {
+    const stat = await Bun.file(path).stat();
+    return !stat.isDirectory();
+  } catch {
+    return false;
+  }
+}
+
 export async function runSecurityAudit(): Promise<{
   passed: boolean;
   findings: SecurityFinding[];
@@ -163,7 +172,7 @@ export async function runSecurityAudit(): Promise<{
     }
   }
 
-  // 5. CSP Shell Configuration
+  // 5. CSP Shell Configuration (HTML meta tags and Cloudflare Pages _headers)
   const htmlShells = ["apps/web/index.html", "apps/landing/index.html"];
   for (const htmlPath of htmlShells) {
     try {
@@ -184,6 +193,36 @@ export async function runSecurityAudit(): Promise<{
         check: "Security: Content Security Policy",
         file: htmlPath,
         message: "HTML shell not found",
+        passed: false,
+      });
+    }
+  }
+
+  const headerFiles = [
+    "apps/web/public/_headers",
+    "apps/landing/public/_headers",
+  ];
+  for (const headerPath of headerFiles) {
+    try {
+      const headerText = await Bun.file(headerPath).text();
+      if (
+        !headerText.includes("Content-Security-Policy:") ||
+        !headerText.includes("X-Frame-Options: DENY") ||
+        !headerText.includes("X-Content-Type-Options: nosniff")
+      ) {
+        findings.push({
+          check: "Security: Deployable _headers Policy",
+          file: headerPath,
+          message:
+            "Missing Content-Security-Policy or required security headers in _headers file",
+          passed: false,
+        });
+      }
+    } catch {
+      findings.push({
+        check: "Security: Deployable _headers Policy",
+        file: headerPath,
+        message: "_headers file not found",
         passed: false,
       });
     }
@@ -234,6 +273,52 @@ export async function runSecurityAudit(): Promise<{
         passed: false,
       });
     }
+  }
+
+  // 8. Feedback abuse controls audit (client-side character limit and zero backend)
+  const feedbackDialog = await Bun.file(
+    "apps/web/src/reader/StoryFeedbackDialog.tsx",
+  )
+    .text()
+    .catch(() => "");
+  if (
+    feedbackDialog &&
+    (!feedbackDialog.includes("MAX_DETAIL_LENGTH") ||
+      !feedbackDialog.includes("maxLength="))
+  ) {
+    findings.push({
+      check: "Security: Feedback Abuse Controls",
+      file: "apps/web/src/reader/StoryFeedbackDialog.tsx",
+      message:
+        "Feedback dialog missing bounded character limit on detail input",
+      passed: false,
+    });
+  }
+
+  // 9. Dependency and lockfile hygiene audit
+  const prohibitedLockfiles = [
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "yarn.lock",
+  ];
+  for (const lockfile of prohibitedLockfiles) {
+    if (await fileExists(lockfile)) {
+      findings.push({
+        check: "Security: Package Manager Lockfile Hygiene",
+        file: lockfile,
+        message: `Prohibited non-Bun lockfile detected: ${lockfile}. Bun is the single allowed package manager.`,
+        passed: false,
+      });
+    }
+  }
+
+  if (!(await fileExists("bun.lock"))) {
+    findings.push({
+      check: "Security: Package Manager Lockfile Hygiene",
+      file: "bun.lock",
+      message: "Required canonical bun.lock is missing from repository root",
+      passed: false,
+    });
   }
 
   const passed = findings.length === 0;
