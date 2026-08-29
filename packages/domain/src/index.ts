@@ -274,12 +274,17 @@ export {
   validateStoryFactualSupport,
 } from "./factual-validation";
 export type {
+  DailyDraftPrOptions,
   DraftEditionPipelineResult,
   EditionPipelineInput,
 } from "./edition-pipeline";
 export {
+  composePrBody,
   editorialDateInIndia,
   formatDraftEditionSummaryMarkdown,
+  formatPrBranchName,
+  formatPrTitle,
   generateDraftEditionPipeline,
+  parseDailyDraftPrArgs,
   PIPELINE_EXIT_CODES,
 } from "./edition-pipeline";
