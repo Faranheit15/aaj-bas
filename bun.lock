@@ -6,6 +6,7 @@
       "name": "aaj-bas",
       "devDependencies": {
         "@aaj-bas/domain": "workspace:*",
+        "@aaj-bas/schemas": "workspace:*",
         "@biomejs/biome": "^2.5.8",
         "typescript": "^7.0.2",
       },

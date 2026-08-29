@@ -280,6 +280,7 @@ export type {
 } from "./edition-pipeline";
 export {
   composePrBody,
+  convertDraftToPublished,
   editorialDateInIndia,
   formatDraftEditionSummaryMarkdown,
   formatPrBranchName,

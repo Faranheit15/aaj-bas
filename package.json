@@ -23,6 +23,9 @@
     "sources:fetch": "bun scripts/fetch-sources.ts",
     "draft:generate": "bun scripts/generate-draft-edition.ts",
     "draft:pr": "bun scripts/open-daily-draft-pr.ts",
+    "edition:publish": "bun scripts/publish-edition.ts",
+    "edition:smoke": "bun scripts/smoke-test-edition.ts",
+    "edition:rollback": "bun scripts/rollback-edition.ts",
     "golden:evaluate": "bun scripts/evaluate-golden-dataset.ts",
     "test:golden": "bun scripts/evaluate-golden-dataset.ts",
     "test": "bun run --filter @aaj-bas/* test",
@@ -32,6 +35,7 @@
   },
   "devDependencies": {
     "@aaj-bas/domain": "workspace:*",
+    "@aaj-bas/schemas": "workspace:*",
     "@biomejs/biome": "^2.5.8",
     "typescript": "^7.0.2"
   }
