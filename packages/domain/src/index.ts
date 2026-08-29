@@ -274,11 +274,13 @@ export {
   validateStoryFactualSupport,
 } from "./factual-validation";
 export type {
+  CreateCorrectionInput,
   DailyDraftPrOptions,
   DraftEditionPipelineResult,
   EditionPipelineInput,
 } from "./edition-pipeline";
 export {
+  applyEditionCorrection,
   composePrBody,
   convertDraftToPublished,
   editorialDateInIndia,

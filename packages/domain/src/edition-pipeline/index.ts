@@ -16,6 +16,10 @@ export {
 } from "./daily-draft-pr";
 export { convertDraftToPublished } from "./publish";
 export {
+  applyEditionCorrection,
+  type CreateCorrectionInput,
+} from "./correction";
+export {
   PIPELINE_EXIT_CODES,
   type DraftEditionPipelineResult,
   type EditionPipelineInput,

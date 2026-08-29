@@ -19,6 +19,7 @@
     "typecheck": "bun run --filter @aaj-bas/* typecheck && bunx tsc --noEmit -p scripts/tsconfig.json && bunx tsc --noEmit -p apps/web/e2e/tsconfig.json",
     "content:validate": "bun scripts/validate-edition.ts",
     "content:stage": "bun scripts/stage-content.ts",
+    "content:correct": "bun scripts/create-correction.ts",
     "sources:validate": "bun scripts/validate-sources.ts",
     "sources:fetch": "bun scripts/fetch-sources.ts",
     "draft:generate": "bun scripts/generate-draft-edition.ts",
