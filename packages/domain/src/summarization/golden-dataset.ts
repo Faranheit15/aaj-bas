@@ -915,6 +915,19 @@ function generateFull50GoldenDataset(): GoldenClusterTestCase[] {
     },
   ];
 
+  const sourcePool: readonly [string, ...string[]] = [
+    "pti",
+    "the-hindu",
+    "ani",
+    "indian-express",
+    "livemint",
+    "business-standard",
+    "pib",
+    "dd-news",
+    "moneycontrol",
+    "isro",
+  ];
+
   for (let i = 0; i < beats.length; i += 1) {
     const item = beats[i];
     if (!item) continue;
@@ -923,13 +936,16 @@ function generateFull50GoldenDataset(): GoldenClusterTestCase[] {
     const caseId = `case-${item.topic.slice(0, 4)}-${String(caseNum).padStart(2, "0")}`;
     const clusterId = `c-gen-${String(caseNum).padStart(2, "0")}`;
 
+    const primarySourceId = sourcePool[i % sourcePool.length];
+    if (primarySourceId === undefined) continue;
+
     const title = `${item.titlePrefix} with ${item.number} milestone`;
     const desc = `${item.entity} announced new developments on ${item.date}.`;
 
     const cluster = {
       id: clusterId,
       primaryItem: {
-        sourceId: "pti",
+        sourceId: primarySourceId,
         guid: `g-gen-${caseNum}-1`,
         title,
         description: desc,
@@ -940,7 +956,7 @@ function generateFull50GoldenDataset(): GoldenClusterTestCase[] {
       },
       items: [
         {
-          sourceId: "pti",
+          sourceId: primarySourceId,
           guid: `g-gen-${caseNum}-1`,
           title,
           description: desc,
@@ -949,25 +965,15 @@ function generateFull50GoldenDataset(): GoldenClusterTestCase[] {
           updatedAt: null,
           contentHash: `h-gen-${caseNum}-1`,
         },
-        {
-          sourceId: "the-hindu",
-          guid: `g-gen-${caseNum}-2`,
-          title: `${item.titlePrefix} details released`,
-          description: `${item.entity} confirmed the ${item.number} figures on Saturday.`,
-          url: `https://example.com/item/${caseNum}/2`,
-          publishedAt: `${item.date}T10:30:00.000Z`,
-          updatedAt: null,
-          contentHash: `h-gen-${caseNum}-2`,
-        },
       ],
-      sourceCount: 2,
-      sources: ["pti", "the-hindu"],
+      sourceCount: 1,
+      sources: [primarySourceId],
       representativeTitle: title,
       cleanedTitle: item.titlePrefix,
       confidenceScore: 1.0,
       mergeReasons: [],
       firstPublishedAt: `${item.date}T10:00:00.000Z`,
-      lastPublishedAt: `${item.date}T10:30:00.000Z`,
+      lastPublishedAt: `${item.date}T10:00:00.000Z`,
     };
 
     const goldenResult = {
@@ -976,7 +982,7 @@ function generateFull50GoldenDataset(): GoldenClusterTestCase[] {
       whatChanged: [
         {
           sentence: `${item.entity} announced ${item.number} milestone parameters during the ${item.date} briefing.`,
-          sourceIds: ["pti", "the-hindu"],
+          sourceIds: [primarySourceId],
         },
       ],
       whyItMatters: `Sets national operational direction under ${item.entity} guidelines.`,

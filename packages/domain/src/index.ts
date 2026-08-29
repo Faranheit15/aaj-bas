@@ -273,3 +273,13 @@ export {
   validateFactualSupport,
   validateStoryFactualSupport,
 } from "./factual-validation";
+export type {
+  DraftEditionPipelineResult,
+  EditionPipelineInput,
+} from "./edition-pipeline";
+export {
+  editorialDateInIndia,
+  formatDraftEditionSummaryMarkdown,
+  generateDraftEditionPipeline,
+  PIPELINE_EXIT_CODES,
+} from "./edition-pipeline";
