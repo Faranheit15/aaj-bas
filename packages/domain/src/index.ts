@@ -296,6 +296,7 @@ export {
   formatDraftEditionSummaryMarkdown,
   formatPrBranchName,
   formatPrTitle,
+  getFixtureModeUsageError,
   generateDraftEditionPipeline,
   parseDailyDraftPrArgs,
   planRollback,

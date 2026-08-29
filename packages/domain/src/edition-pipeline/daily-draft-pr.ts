@@ -17,6 +17,31 @@ export interface DailyDraftPrOptions {
   printSummary?: boolean;
 }
 
+export function getFixtureModeUsageError(
+  options: Pick<
+    DailyDraftPrOptions,
+    "dryRun" | "useAi" | "useFixture" | "writeStepSummary"
+  >,
+): string | undefined {
+  if (!options.useFixture) {
+    return undefined;
+  }
+
+  if (!options.dryRun) {
+    return "--fixture requires --dry-run; remove --fixture for production source ingestion or add --dry-run for deterministic offline fixture tests.";
+  }
+
+  if (options.useAi) {
+    return "--fixture cannot be combined with --use-ai; fixture runs must remain offline and deterministic.";
+  }
+
+  if (options.writeStepSummary) {
+    return "--fixture cannot be combined with --step-summary; fixture runs must not write workflow artifacts.";
+  }
+
+  return undefined;
+}
+
 export function validateEditionDateInput(dateString: string): string {
   const result = editionDateSchema.safeParse(dateString);
   if (!result.success) {

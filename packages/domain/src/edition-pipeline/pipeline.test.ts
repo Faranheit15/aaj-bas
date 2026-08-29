@@ -98,6 +98,33 @@ describe("Draft edition generation pipeline (AB-701)", () => {
     expect(result.edition.status).toBe("draft");
   });
 
+  it("keeps fixture pipeline output deterministic", async () => {
+    const normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
+      (tc) => tc.cluster.items,
+    );
+    const input = {
+      date: "2026-08-22",
+      normalizedItems,
+      ingestionDiagnostics: {
+        fixtureMode: true,
+        totalActiveSources: 0,
+        successfulSources: 0,
+        notModifiedSources: 0,
+        failedSources: 0,
+        totalParsedItems: normalizedItems.length,
+        sources: [],
+      },
+    } as const;
+
+    const first = await generateDraftEditionPipeline(input);
+    const second = await generateDraftEditionPipeline(input);
+
+    expect(second.editionJson).toBe(first.editionJson);
+    expect(second.summaryMarkdown).toBe(first.summaryMarkdown);
+    expect(first.edition.publishedAt).toBe("2026-08-22T00:00:00.000Z");
+    expect(first.diagnostics.durationMs).toBe(0);
+  });
+
   it("ingests from rawItemsBySource with HTML sanitization", async () => {
     const rawRssItems = [
       {

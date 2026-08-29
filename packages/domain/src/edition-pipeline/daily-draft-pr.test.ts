@@ -3,6 +3,7 @@ import {
   composePrBody,
   formatPrBranchName,
   formatPrTitle,
+  getFixtureModeUsageError,
   parseDailyDraftPrArgs,
   validateEditionDateInput,
 } from "./daily-draft-pr";
@@ -43,6 +44,38 @@ describe("Daily draft PR domain helpers (AB-702)", () => {
     expect(options.dryRun).toBe(true);
     expect(options.useFixture).toBe(true);
     expect(options.useAi).toBe(true);
+  });
+
+  it("allows fixtures only for offline, non-writing dry runs", () => {
+    const fixtureDryRun = parseDailyDraftPrArgs(["--fixture", "--dry-run"]);
+    expect(getFixtureModeUsageError(fixtureDryRun)).toBeUndefined();
+
+    const fixtureWrite = parseDailyDraftPrArgs(["--fixture"]);
+    expect(getFixtureModeUsageError(fixtureWrite)).toMatch(
+      /--fixture requires --dry-run/,
+    );
+
+    const fixtureAi = parseDailyDraftPrArgs([
+      "--fixture",
+      "--dry-run",
+      "--use-ai",
+    ]);
+    expect(getFixtureModeUsageError(fixtureAi)).toMatch(
+      /cannot be combined with --use-ai/,
+    );
+
+    const fixtureStepSummary = parseDailyDraftPrArgs([
+      "--fixture",
+      "--dry-run",
+      "--step-summary",
+    ]);
+    expect(getFixtureModeUsageError(fixtureStepSummary)).toMatch(
+      /cannot be combined with --step-summary/,
+    );
+
+    const production = parseDailyDraftPrArgs([]);
+    expect(production.useFixture).toBe(false);
+    expect(getFixtureModeUsageError(production)).toBeUndefined();
   });
 
   it("composes PR body with blocking notice when issues exist", () => {

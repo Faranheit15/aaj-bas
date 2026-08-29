@@ -24,6 +24,7 @@ import {
   fetchableSourcesOf,
   formatPrBranchName,
   formatPrTitle,
+  getFixtureModeUsageError,
   generateDraftEditionPipeline,
   normalizeFeedItems,
   parseDailyDraftPrArgs,
@@ -66,6 +67,11 @@ export async function runDailyDraftWorkflow(
   editionPath: string;
   summaryPath: string;
 }> {
+  const fixtureModeUsageError = getFixtureModeUsageError(options);
+  if (fixtureModeUsageError) {
+    throw new Error(fixtureModeUsageError);
+  }
+
   const branchName = formatPrBranchName(options.date);
   const prTitle = formatPrTitle(options.date);
   const editionPath = `${options.outDir}/${options.date}.json`;
@@ -76,7 +82,7 @@ export async function runDailyDraftWorkflow(
   let normalizedItems: NormalizedFeedItem[] = [];
 
   let parsedYaml: unknown;
-  if (await fileExists(options.sourcesPath)) {
+  if (!options.useFixture && (await fileExists(options.sourcesPath))) {
     const file = Bun.file(options.sourcesPath);
     const fileContent = await file.text();
     if (Bun.YAML?.parse) {
@@ -405,6 +411,12 @@ export async function runDailyDraftWorkflow(
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const options = parseDailyDraftPrArgs(args);
+  const fixtureModeUsageError = getFixtureModeUsageError(options);
+
+  if (fixtureModeUsageError) {
+    console.error(`Usage error: ${fixtureModeUsageError}`);
+    process.exit(PIPELINE_EXIT_CODES.usage);
+  }
 
   try {
     const outcome = await runDailyDraftWorkflow(options);

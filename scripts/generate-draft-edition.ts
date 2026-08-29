@@ -22,6 +22,7 @@ import {
   editorialDateInIndia,
   fetchFeed,
   fetchableSourcesOf,
+  getFixtureModeUsageError,
   generateDraftEditionPipeline,
   normalizeFeedItems,
   parseRawFeed,
@@ -109,7 +110,7 @@ Options:
   --json                Print generated edition JSON to stdout
   --summary             Print diagnostic Markdown summary to stdout
   --use-ai              Enable Cloudflare Workers AI (if credentials present in env)
-  --fixture             Force using offline golden dataset fixture
+  --fixture             Use offline golden dataset fixture (requires --dry-run; no --use-ai or --step-summary)
   --step-summary        Write markdown summary to GITHUB_STEP_SUMMARY if present
   --help, -h            Show this help message
 `);
@@ -128,6 +129,12 @@ async function fileExists(path: string): Promise<boolean> {
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const options = parseCliArgs(args);
+  const fixtureModeUsageError = getFixtureModeUsageError(options);
+
+  if (fixtureModeUsageError) {
+    console.error(`Usage error: ${fixtureModeUsageError}`);
+    process.exit(PIPELINE_EXIT_CODES.usage);
+  }
 
   try {
     // 1. Load and validate source registry if present
@@ -135,7 +142,7 @@ async function main(): Promise<void> {
     let normalizedItems: NormalizedFeedItem[] = [];
 
     let parsedYaml: unknown;
-    if (await fileExists(options.sourcesPath)) {
+    if (!options.useFixture && (await fileExists(options.sourcesPath))) {
       const file = Bun.file(options.sourcesPath);
       const fileContent = await file.text();
       if (Bun.YAML?.parse) {

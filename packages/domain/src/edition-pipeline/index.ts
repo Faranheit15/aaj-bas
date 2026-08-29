@@ -11,6 +11,7 @@ export {
   composePrBody,
   formatPrBranchName,
   formatPrTitle,
+  getFixtureModeUsageError,
   parseDailyDraftPrArgs,
   validateEditionDateInput,
   type DailyDraftPrOptions,
