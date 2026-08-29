@@ -122,13 +122,13 @@ export async function runSmokeTest(options: SmokeCliOptions): Promise<{
 
   checks.push(`✅ Edition schema validated for ${index.latest}`);
 
-  // 3. Status invariant
-  if (edition.status !== "published") {
+  // 3. Status invariant (published or corrected)
+  if (edition.status !== "published" && edition.status !== "corrected") {
     throw new Error(
-      `Expected edition status to be 'published', received '${edition.status}'`,
+      `Expected edition status to be 'published' or 'corrected', received '${edition.status}'`,
     );
   }
-  checks.push("✅ Edition status is 'published'");
+  checks.push(`✅ Edition status is '${edition.status}'`);
 
   // 4. Core stories invariant (exactly 8 core stories)
   if (edition.coreStoryIds.length !== 8) {

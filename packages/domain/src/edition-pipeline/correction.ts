@@ -41,6 +41,12 @@ export function applyEditionCorrection(input: CreateCorrectionInput): {
   edition: Edition;
   correctionNote: CorrectionNote;
 } {
+  if (input.edition.status === "draft") {
+    throw new Error(
+      "Cannot apply correction to draft edition: corrections are only permitted on published or already-corrected editions.",
+    );
+  }
+
   const targetStory = input.edition.stories.find((s) => s.id === input.storyId);
   if (!targetStory) {
     throw new Error(

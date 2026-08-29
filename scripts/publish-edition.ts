@@ -1,15 +1,14 @@
 #!/usr/bin/env bun
 /**
- * CLI script to publish an approved daily edition draft (AB-703).
+ * CLI script to promote an approved draft edition to a published edition (AB-703).
  *
- * 1. Reads approved draft JSON from `content/drafts/<date>.json`.
- * 2. Sets status to "published" and reviewed to true.
- * 3. Validates against `editionSchema` and strict publishing validation rules.
- * 4. Writes to `content/editions/<date>.json`.
+ * 1. Loads approved draft from content/drafts/<date>.json (or --draft-file).
+ * 2. Enforces preconditions (status: "draft", version 1, 0 corrections).
+ * 3. Derives correct date and output target path content/editions/<date>.json.
+ * 4. Converts draft status to "published" and marks stories reviewed: true.
  * 5. Runs validation check to ensure readiness for deployment.
  */
 
-import { editionSchema } from "@aaj-bas/schemas";
 import {
   type ValidationPolicy,
   VALIDATION_EXIT_CODES,
@@ -17,6 +16,7 @@ import {
   formatValidationText,
   validateEdition,
 } from "@aaj-bas/domain";
+import { editionSchema } from "@aaj-bas/schemas";
 
 interface PublishCliOptions {
   date?: string;
@@ -34,6 +34,7 @@ function parseCliArgs(args: string[]): PublishCliOptions {
   for (let i = 0; i < args.length; i += 1) {
     const arg = args[i];
     const nextArg = args[i + 1];
+
     if (arg === "--date" && nextArg !== undefined) {
       options.date = nextArg;
       i += 1;
@@ -47,6 +48,8 @@ function parseCliArgs(args: string[]): PublishCliOptions {
     } else if (arg === "--out-dir" && nextArg !== undefined) {
       options.outDir = nextArg;
       i += 1;
+    } else if (arg?.startsWith("--out-dir=")) {
+      options.outDir = arg.slice("--out-dir=".length);
     } else if (arg === "--dry-run") {
       options.dryRun = true;
     } else if (arg === "--help" || arg === "-h") {
@@ -61,11 +64,11 @@ function printUsageAndExit(): never {
   console.log(`
 Usage: bun scripts/publish-edition.ts [options]
 
-Publishes an approved draft edition to content/editions/<date>.json.
+Promotes an approved draft edition to published status for deployment.
 
 Options:
-  --date <YYYY-MM-DD>       Target edition date
-  --draft-file <path>       Path to draft JSON (default: content/drafts/<date>.json)
+  --date <YYYY-MM-DD>       Target date of draft to publish
+  --draft-file <path>       Direct path to draft JSON file
   --out-dir <path>          Output directory (default: content/editions)
   --dry-run                 Validate without writing to disk
   --help, -h                Show this help message
@@ -90,20 +93,39 @@ async function main(): Promise<void> {
     process.exit(VALIDATION_EXIT_CODES.usage);
   }
 
-  const date = options.date ?? "custom";
-  const draftPath = options.draftFile ?? `content/drafts/${date}.json`;
-  const targetPath = `${options.outDir}/${date}.json`;
+  const draftPath =
+    options.draftFile ??
+    (options.date ? `content/drafts/${options.date}.json` : undefined);
+
+  if (!draftPath || !(await fileExists(draftPath))) {
+    console.error(
+      `Error: Draft edition file does not exist: ${draftPath ?? "unspecified"}`,
+    );
+    process.exit(VALIDATION_EXIT_CODES.usage);
+  }
 
   try {
-    if (!(await fileExists(draftPath))) {
-      console.error(`Error: Draft edition file does not exist: ${draftPath}`);
-      process.exit(VALIDATION_EXIT_CODES.usage);
-    }
-
     const file = Bun.file(draftPath);
     const draftText = await file.text();
     const rawParsed: unknown = JSON.parse(draftText);
     const draftEdition = editionSchema.parse(rawParsed);
+
+    if (draftEdition.status !== "draft") {
+      console.error(
+        `Error: Edition at ${draftPath} has status '${draftEdition.status}', expected 'draft'.`,
+      );
+      process.exit(VALIDATION_EXIT_CODES.usage);
+    }
+
+    if (options.date && options.date !== draftEdition.date) {
+      console.error(
+        `Error: Provided --date (${options.date}) does not match draft edition date (${draftEdition.date}).`,
+      );
+      process.exit(VALIDATION_EXIT_CODES.usage);
+    }
+
+    const targetDate = draftEdition.date;
+    const targetPath = `${options.outDir}/${targetDate}.json`;
 
     // Convert draft to published edition
     const publishedEdition = convertDraftToPublished(draftEdition);
@@ -141,12 +163,14 @@ async function main(): Promise<void> {
 
     if (!options.dryRun) {
       await Bun.write(targetPath, publishedJson);
-      console.log(`\n🎉 Edition published successfully to ${targetPath}`);
+      console.log(`\n🎉 Edition successfully published to ${targetPath}`);
     } else {
-      console.log(`\n[DRY RUN] Would write published edition to ${targetPath}`);
+      console.log(
+        `\n[DRY RUN] Edition validated. Would write to ${targetPath}`,
+      );
     }
 
-    process.exit(VALIDATION_EXIT_CODES.ok);
+    process.exit(VALIDATION_EXIT_CODES.pass);
   } catch (error) {
     console.error("Fatal error publishing edition:", error);
     process.exit(VALIDATION_EXIT_CODES.internal);

@@ -274,10 +274,15 @@ export {
   validateStoryFactualSupport,
 } from "./factual-validation";
 export type {
+  ConvertDraftOptions,
   CreateCorrectionInput,
   DailyDraftPrOptions,
   DraftEditionPipelineResult,
   EditionPipelineInput,
+  RollbackEditionSummary,
+  RollbackPlan,
+  RollbackPlanOptions,
+  RollbackPlanResult,
 } from "./edition-pipeline";
 export {
   applyEditionCorrection,
@@ -289,5 +294,7 @@ export {
   formatPrTitle,
   generateDraftEditionPipeline,
   parseDailyDraftPrArgs,
+  planRollback,
+  validateEditionDateInput,
   PIPELINE_EXIT_CODES,
 } from "./edition-pipeline";

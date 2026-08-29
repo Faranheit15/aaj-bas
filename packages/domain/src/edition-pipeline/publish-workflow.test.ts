@@ -54,10 +54,51 @@ describe("Edition publish workflow (AB-703)", () => {
   };
 
   it("converts draft edition to published with human review status", () => {
-    const published = convertDraftToPublished(sampleDraft);
+    const customTimestamp = "2026-08-29T07:00:00.000Z";
+    const published = convertDraftToPublished(sampleDraft, {
+      timestamp: customTimestamp,
+    });
 
     expect(published.status).toBe("published");
     expect(published.stories[0]?.reviewed).toBe(true);
-    expect(new Date(published.updatedAt).getTime()).toBeGreaterThan(0);
+    expect(published.updatedAt).toBe(customTimestamp);
+    expect(published.stories[0]?.updatedAt).toBe(customTimestamp);
+  });
+
+  it("rejects non-draft edition inputs", () => {
+    const alreadyPublished: Edition = {
+      ...sampleDraft,
+      status: "published",
+    };
+    expect(() => convertDraftToPublished(alreadyPublished)).toThrow(
+      /Cannot publish edition: expected status to be 'draft'/,
+    );
+  });
+
+  it("rejects drafts carrying correction notes", () => {
+    const draftWithCorrections: Edition = {
+      ...sampleDraft,
+      correctionNotes: [
+        {
+          id: "corr-1",
+          storyId: "story-1",
+          correctedAt: "2026-08-29T07:00:00.000Z",
+          summary: "Fixed typo",
+        },
+      ],
+    };
+    expect(() => convertDraftToPublished(draftWithCorrections)).toThrow(
+      /draft cannot carry correction notes/,
+    );
+  });
+
+  it("rejects drafts with editionVersion !== 1", () => {
+    const draftV2: Edition = {
+      ...sampleDraft,
+      editionVersion: 2,
+    };
+    expect(() => convertDraftToPublished(draftV2)).toThrow(
+      /draft must be editionVersion 1/,
+    );
   });
 });

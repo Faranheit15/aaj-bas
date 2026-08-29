@@ -82,6 +82,21 @@ describe("Correction workflow domain logic (AB-704)", () => {
     expect(second.edition.updatedAt).toBe(time2);
   });
 
+  it("throws when attempting to correct a draft edition", () => {
+    const baseEdition = getBaseEdition();
+    const draftEdition = {
+      ...baseEdition,
+      status: "draft" as const,
+    };
+    expect(() =>
+      applyEditionCorrection({
+        edition: draftEdition,
+        storyId: draftEdition.stories[0]!.id,
+        summary: "Attempting to correct a draft.",
+      }),
+    ).toThrow(/Cannot apply correction to draft edition/);
+  });
+
   it("throws when storyId does not exist", () => {
     const baseEdition = getBaseEdition();
     expect(() =>

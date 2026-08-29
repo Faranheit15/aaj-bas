@@ -12,9 +12,17 @@ export {
   formatPrBranchName,
   formatPrTitle,
   parseDailyDraftPrArgs,
+  validateEditionDateInput,
   type DailyDraftPrOptions,
 } from "./daily-draft-pr";
-export { convertDraftToPublished } from "./publish";
+export { convertDraftToPublished, type ConvertDraftOptions } from "./publish";
+export {
+  planRollback,
+  type RollbackEditionSummary,
+  type RollbackPlan,
+  type RollbackPlanOptions,
+  type RollbackPlanResult,
+} from "./rollback";
 export {
   applyEditionCorrection,
   type CreateCorrectionInput,
