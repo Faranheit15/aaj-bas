@@ -53,6 +53,8 @@ declare namespace Bun {
     input: string | BunFile,
   ): Promise<number>;
 
+  function gzipSync(input: Uint8Array): Uint8Array;
+
   /** The small subprocess surface used by the agent hook adapter. */
   interface Subprocess {
     readonly exited: Promise<number>;

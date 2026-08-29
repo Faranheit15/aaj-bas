@@ -16,7 +16,7 @@ import {
   formatValidationText,
   validateEdition,
 } from "@aaj-bas/domain";
-import { type Edition, editionSchema } from "@aaj-bas/schemas";
+import { editionSchema } from "@aaj-bas/schemas";
 
 interface CorrectionCliOptions {
   date?: string;

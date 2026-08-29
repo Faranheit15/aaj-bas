@@ -9,7 +9,7 @@
  * 5. Runs validation check to ensure readiness for deployment.
  */
 
-import { type Edition, editionSchema } from "@aaj-bas/schemas";
+import { editionSchema } from "@aaj-bas/schemas";
 import {
   type ValidationPolicy,
   VALIDATION_EXIT_CODES,

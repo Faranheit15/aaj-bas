@@ -33,7 +33,9 @@
     "test": "bun run --filter @aaj-bas/* test",
     "e2e": "bun run --filter @aaj-bas/web e2e",
     "build": "bun run --filter @aaj-bas/landing build && bun run --filter @aaj-bas/web build",
-    "check": "bun run check:agents && bun run check:pm && bun run format:check && bun run lint && bun run typecheck && bun run content:validate && bun run sources:validate && bun run test && bun run build"
+    "check:security": "bun scripts/audit-security.ts",
+    "check:perf": "bun scripts/check-performance-budget.ts",
+    "check": "bun run check:agents && bun run check:pm && bun run check:security && bun run format:check && bun run lint && bun run typecheck && bun run content:validate && bun run sources:validate && bun run test && bun run build && bun run check:perf"
   },
   "devDependencies": {
     "@aaj-bas/domain": "workspace:*",

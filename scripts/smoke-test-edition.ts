@@ -80,7 +80,7 @@ export async function fetchOrReadFile(
     if (stat.isDirectory()) {
       throw new Error(`Path is a directory: ${localPath}`);
     }
-  } catch (error) {
+  } catch (_error) {
     throw new Error(`File does not exist: ${localPath}`);
   }
   return await Bun.file(localPath).text();
