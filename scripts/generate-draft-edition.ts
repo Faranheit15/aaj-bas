@@ -20,8 +20,6 @@ import {
   editorialDateInIndia,
   fetchableSourcesOf,
   generateDraftEditionPipeline,
-  normalizeFeedItems,
-  parseRawFeed,
   sourceRegistrySchema,
   validateEditionDateInput,
   validateSourceRegistries,
@@ -130,24 +128,25 @@ async function main(): Promise<void> {
     let sourceRegistry: SourceRegistry | undefined;
     let normalizedItems: NormalizedFeedItem[] = [];
 
+    let parsedYaml: unknown;
     if (await fileExists(options.sourcesPath)) {
       const file = Bun.file(options.sourcesPath);
       const fileContent = await file.text();
       if (Bun.YAML?.parse) {
-        const parsed: unknown = Bun.YAML.parse(fileContent);
-        sourceRegistry = sourceRegistrySchema.parse(parsed);
+        parsedYaml = Bun.YAML.parse(fileContent);
+        sourceRegistry = sourceRegistrySchema.parse(parsedYaml);
       }
     }
 
     // 2. Determine feed items
-    if (options.useFixture || !sourceRegistry) {
+    if (options.useFixture || !sourceRegistry || parsedYaml === undefined) {
       console.log("ℹ️ Ingesting stories from golden dataset fixtures.");
       normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
         (tc) => tc.cluster.items,
       );
     } else {
       const validationReport = validateSourceRegistries([
-        { file: options.sourcesPath, registry: sourceRegistry },
+        { file: options.sourcesPath, value: parsedYaml },
       ]);
       const validatedRegistry = validationReport.registries[0];
       const fetchable = validatedRegistry

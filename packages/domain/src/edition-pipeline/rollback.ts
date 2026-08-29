@@ -49,20 +49,27 @@ export function planRollback(
     };
   }
 
-  const currentLatestEdition = eligible[eligible.length - 1]!;
+  const currentLatestEdition = eligible[eligible.length - 1];
+  if (!currentLatestEdition) {
+    return {
+      ok: false,
+      error: "No published or corrected editions exist to rollback.",
+    };
+  }
   const currentLatest = currentLatestEdition.date;
 
   let targetDate: string;
 
   if (options.toPrevious) {
-    if (eligible.length < 2) {
+    const previousEdition = eligible[eligible.length - 2];
+    if (!previousEdition || eligible.length < 2) {
       return {
         ok: false,
         error:
           "Cannot rollback to previous edition: only 1 published edition exists.",
       };
     }
-    targetDate = eligible[eligible.length - 2]!.date;
+    targetDate = previousEdition.date;
   } else if (options.targetDate) {
     targetDate = options.targetDate;
   } else {

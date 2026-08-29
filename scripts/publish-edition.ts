@@ -170,7 +170,7 @@ async function main(): Promise<void> {
       );
     }
 
-    process.exit(VALIDATION_EXIT_CODES.pass);
+    process.exit(VALIDATION_EXIT_CODES.ok);
   } catch (error) {
     console.error("Fatal error publishing edition:", error);
     process.exit(VALIDATION_EXIT_CODES.internal);

@@ -61,6 +61,12 @@ declare namespace Bun {
     readonly stdout: ReadableStream<Uint8Array> | null;
   }
 
+  interface SpawnSyncResult {
+    readonly exitCode: number;
+    readonly stdout: Uint8Array | null;
+    readonly stderr: Uint8Array | null;
+  }
+
   function spawn(
     command: readonly string[],
     options?: {
@@ -69,6 +75,15 @@ declare namespace Bun {
       readonly stdout?: "ignore" | "pipe";
     },
   ): Subprocess;
+
+  function spawnSync(
+    command: readonly string[],
+    options?: {
+      readonly cwd?: string;
+      readonly stderr?: "ignore" | "pipe" | "inherit";
+      readonly stdout?: "ignore" | "pipe" | "inherit";
+    },
+  ): SpawnSyncResult;
 
   /**
    * The process's own streams, as files `Bun.write` can be pointed at.

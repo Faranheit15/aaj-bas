@@ -83,6 +83,7 @@ describe("Edition publish workflow (AB-703)", () => {
           id: "corr-1",
           storyId: "story-1",
           correctedAt: "2026-08-29T07:00:00.000Z",
+          editionVersion: 2,
           summary: "Fixed typo",
         },
       ],

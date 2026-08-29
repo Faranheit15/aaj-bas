@@ -182,7 +182,4 @@ async function main(): Promise<void> {
   process.exit(0);
 }
 
-// Execute main only when run directly as CLI
-if (import.meta.main) {
-  void main();
-}
+void main();

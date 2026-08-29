@@ -88,10 +88,13 @@ describe("Correction workflow domain logic (AB-704)", () => {
       ...baseEdition,
       status: "draft" as const,
     };
+    const firstStoryId = draftEdition.stories[0]?.id;
+    if (!firstStoryId)
+      throw new Error("Expected at least one story in base edition");
     expect(() =>
       applyEditionCorrection({
         edition: draftEdition,
-        storyId: draftEdition.stories[0]!.id,
+        storyId: firstStoryId,
         summary: "Attempting to correct a draft.",
       }),
     ).toThrow(/Cannot apply correction to draft edition/);

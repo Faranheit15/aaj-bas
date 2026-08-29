@@ -76,7 +76,7 @@ describe("Rollback planning domain logic (AB-703)", () => {
   });
 
   it("rejects rollback when only 1 edition exists and toPrevious is requested", () => {
-    const singleEdition = [editions[0]!];
+    const singleEdition = editions.slice(0, 1);
     const result = planRollback(singleEdition, { toPrevious: true });
     expect(result.ok).toBe(false);
     if (result.ok) return;

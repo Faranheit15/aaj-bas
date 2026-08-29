@@ -9,7 +9,6 @@
  * 5. Handles diagnostic draft generation when blocking findings exist.
  */
 
-import { execFileSync } from "node:child_process";
 import {
   type DailyDraftPrOptions,
   type EditionPipelineInput,
@@ -38,18 +37,17 @@ async function fileExists(path: string): Promise<boolean> {
 }
 
 function runCommand(command: string, args: string[]): string {
-  try {
-    return execFileSync(command, args, {
-      encoding: "utf-8",
-      stdio: ["ignore", "pipe", "pipe"],
-    }).trim();
-  } catch (error: unknown) {
-    const stderr =
-      error && typeof error === "object" && "stderr" in error
-        ? String(error.stderr)
-        : "";
+  const result = Bun.spawnSync([command, ...args], {
+    stdout: "pipe",
+    stderr: "pipe",
+  });
+
+  if (result.exitCode !== 0) {
+    const stderr = result.stderr ? new TextDecoder().decode(result.stderr) : "";
     throw new Error(`Command failed: ${command} ${args.join(" ")}\n${stderr}`);
   }
+
+  return result.stdout ? new TextDecoder().decode(result.stdout).trim() : "";
 }
 
 export async function runDailyDraftWorkflow(
@@ -71,24 +69,25 @@ export async function runDailyDraftWorkflow(
   let sourceRegistry: SourceRegistry | undefined;
   let normalizedItems: NormalizedFeedItem[] = [];
 
+  let parsedYaml: unknown;
   if (await fileExists(options.sourcesPath)) {
     const file = Bun.file(options.sourcesPath);
     const fileContent = await file.text();
     if (Bun.YAML?.parse) {
-      const parsed: unknown = Bun.YAML.parse(fileContent);
-      sourceRegistry = sourceRegistrySchema.parse(parsed);
+      parsedYaml = Bun.YAML.parse(fileContent);
+      sourceRegistry = sourceRegistrySchema.parse(parsedYaml);
     }
   }
 
   // 2. Determine feed items
-  if (options.useFixture || !sourceRegistry) {
+  if (options.useFixture || !sourceRegistry || parsedYaml === undefined) {
     console.log("ℹ️ Ingesting stories from golden dataset fixtures.");
     normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
       (tc) => tc.cluster.items,
     );
   } else {
     const validationReport = validateSourceRegistries([
-      { file: options.sourcesPath, registry: sourceRegistry },
+      { file: options.sourcesPath, value: parsedYaml },
     ]);
     const validatedRegistry = validationReport.registries[0];
     const fetchable = validatedRegistry
