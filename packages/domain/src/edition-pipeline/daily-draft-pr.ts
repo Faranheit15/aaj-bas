@@ -14,6 +14,7 @@ export interface DailyDraftPrOptions {
   useFixture: boolean;
   baseBranch: string;
   writeStepSummary?: boolean;
+  printSummary?: boolean;
 }
 
 export function validateEditionDateInput(dateString: string): string {
@@ -37,6 +38,7 @@ export function parseDailyDraftPrArgs(args: string[]): DailyDraftPrOptions {
     useFixture: false,
     baseBranch: "develop",
     writeStepSummary: false,
+    printSummary: false,
   };
 
   for (let i = 0; i < args.length; i += 1) {
@@ -70,6 +72,8 @@ export function parseDailyDraftPrArgs(args: string[]): DailyDraftPrOptions {
       options.useFixture = true;
     } else if (arg === "--step-summary") {
       options.writeStepSummary = true;
+    } else if (arg === "--summary") {
+      options.printSummary = true;
     }
   }
 

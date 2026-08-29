@@ -277,6 +277,10 @@ export async function runDailyDraftWorkflow(
   );
   console.log(`   - Artifacts: ${editionPath}, ${summaryPath}`);
 
+  if (options.printSummary) {
+    console.log(`\n${prBody}`);
+  }
+
   if (options.dryRun) {
     console.log("\n[DRY RUN] Completed without git/PR modifications.");
     return {

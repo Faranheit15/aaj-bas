@@ -19,12 +19,14 @@ describe("Daily draft PR workflow helpers (AB-702)", () => {
       "--dry-run",
       "--out-dir",
       "content/custom-drafts",
+      "--summary",
     ]);
 
     expect(options.date).toBe("2026-08-30");
     expect(options.dryRun).toBe(true);
     expect(options.outDir).toBe("content/custom-drafts");
     expect(options.baseBranch).toBe("develop");
+    expect(options.printSummary).toBe(true);
   });
 
   it("composes PR body with ready notice when no blocking issues exist", () => {

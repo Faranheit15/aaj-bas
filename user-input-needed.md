@@ -81,4 +81,3 @@ This is a handoff ledger for decisions and actions that require a human. The aut
 - Safe default: Rely on canonical `bun.lock`, frozen `bun ci` verification, zero unapproved dependencies, and maintainer dependency version updates. Do not add unvetted third-party scanner plugins without an approved ADR.
 - What can continue now: Security audit script (`bun run check:security`), lockfile integrity checks, secret hygiene, CSP enforcement, and all standard repository validation checks.
 - What remains blocked: Automated CVE database querying during `bun run check:security` until a scanner plugin is evaluated and approved.
-

@@ -30,8 +30,8 @@ Check the GitHub Actions run logs for `.github/workflows/daily-draft.yml`:
 ```bash
 # 1. Manually trigger local draft generation to inspect errors
 bun run draft:generate --date $(date +%Y-%m-%d)
-# Or for offline testing/staging without live network:
-bun run draft:generate --date $(date +%Y-%m-%d) --fixture
+# Or to run an explicit offline fixture test with synthetic golden data (never production ingestion):
+bun run draft:generate --date $(date +%Y-%m-%d) --fixture --dry-run
 
 # 2. Check source fetcher status
 bun run sources:fetch
