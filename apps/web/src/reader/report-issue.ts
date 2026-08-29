@@ -18,34 +18,27 @@ const NEW_ISSUE_URL = "https://github.com/Faranheit15/aaj-bas/issues/new";
 /**
  * PRD section 6.2 item 7's four categories, as a checklist the reporter ticks.
  */
-const CATEGORIES = [
+export const FEEDBACK_CATEGORIES = [
   "Factual error",
   "Misleading wording",
   "Broken source",
   "Other",
 ] as const;
 
-export function reportIssueHref(editionDate: string, story: Story): string {
-  const url = new URL(NEW_ISSUE_URL);
+export type FeedbackCategory = (typeof FEEDBACK_CATEGORIES)[number];
 
-  // Built through URLSearchParams so a headline or slug carrying an ampersand
-  // cannot split the query into extra parameters.
-  url.searchParams.set("title", `Story report: ${story.slug}`);
-  url.searchParams.set("body", issueBody(editionDate, story));
+export function composeFeedbackReportText(
+  editionDate: string,
+  story: Story,
+  selectedCategory?: FeedbackCategory,
+  detail?: string,
+): string {
+  const checklist = FEEDBACK_CATEGORIES.map((category) => {
+    const isChecked = selectedCategory === category;
+    return `- [${isChecked ? "x" : " "}] ${category}`;
+  }).join("\n");
 
-  // Deliberately no `labels` parameter. GitHub answers a prefilled label that
-  // does not exist on the repository with a 404, and `content-report` does not
-  // exist here, so a convenience parameter would break the whole link.
-
-  return url.toString();
-}
-
-function issueBody(editionDate: string, story: Story): string {
-  const checklist = CATEGORIES.map((category) => `- [ ] ${category}`).join(
-    "\n",
-  );
-
-  return [
+  const lines = [
     `Edition: ${editionDate}`,
     `Story: ${story.id}`,
     "",
@@ -54,6 +47,36 @@ function issueBody(editionDate: string, story: Story): string {
     checklist,
     "",
     "What is wrong? Please quote the wording you are reporting, if you can.",
-    "",
-  ].join("\n");
+  ];
+
+  if (detail && detail.trim().length > 0) {
+    lines.push("", detail.trim());
+  } else {
+    lines.push("");
+  }
+
+  return lines.join("\n");
+}
+
+export function reportIssueHref(
+  editionDate: string,
+  story: Story,
+  selectedCategory?: FeedbackCategory,
+  detail?: string,
+): string {
+  const url = new URL(NEW_ISSUE_URL);
+
+  // Built through URLSearchParams so a headline or slug carrying an ampersand
+  // cannot split the query into extra parameters.
+  url.searchParams.set("title", `Story report: ${story.slug}`);
+  url.searchParams.set(
+    "body",
+    composeFeedbackReportText(editionDate, story, selectedCategory, detail),
+  );
+
+  // Deliberately no `labels` parameter. GitHub answers a prefilled label that
+  // does not exist on the repository with a 404, and `content-report` does not
+  // exist here, so a convenience parameter would break the whole link.
+
+  return url.toString();
 }
