@@ -1,13 +1,13 @@
 /**
  * End-to-end critical journey test suite (AB-901).
  *
- * Covers the 6 critical reader journeys under a real browser via Playwright:
- * 1. Fresh reader core journey (reads stories, reaches ending, zero infinite scroll)
- * 2. Interest boosts journey (selects 2 topics, interacts with interest picker)
- * 3. Offline reading journey (loads edition, stops server, reloads from ServiceWorker cache)
- * 4. Date navigation journey (navigates to historical edition, observes date heading)
- * 5. Theme toggle journey (switches light / dark / system with localStorage persistence)
- * 6. Issue reporting journey (expands story, inspects privacy-respecting report link)
+ * Implements the exact 6 critical reader acceptance scenarios from docs/BACKLOG.md:
+ * 1. first open → expand two stories → choose interests → finish
+ * 2. returning reader → viewed state restored
+ * 3. end early → respectful end message
+ * 4. offline open after prior load
+ * 5. corrected edition displays a visible correction note
+ * 6. broken latest edition falls back safely
  */
 
 import { spawn, spawnSync } from "node:child_process";
@@ -134,7 +134,7 @@ test.afterEach(async () => {
 
 test.afterAll(() => {
   test.setTimeout(300_000);
-  // Rebuild standard production dist without sample data
+  // Rebuild standard production dist
   run("bun", [`${REPOSITORY_ROOT}/scripts/stage-content.ts`], REPOSITORY_ROOT);
   run("bunx", ["vite", "build"], WEB_ROOT);
   run(
@@ -145,148 +145,193 @@ test.afterAll(() => {
 });
 
 test.describe("Critical Reader Journeys (AB-901)", () => {
-  test("Journey 1: Fresh reader reads stories and reaches finite ending without pagination loops", async ({
+  test("Scenario 1: first open → expand two stories → choose interests → finish", async ({
     page,
   }) => {
     const server = await startServer();
     await openEdition(page, server.origin);
 
-    // Verify stories are rendered in the list
+    // 1. Initial 10 stories loaded
     await expect(storyList(page)).toHaveCount(10);
 
-    // Expand the first story card
-    const firstStoryButton = page.locator(".story-toggle").first();
-    await firstStoryButton.click();
+    // Interest form is not yet visible before expanding 2 stories
+    await expect(page.locator(".interest-form")).not.toBeVisible();
+
+    // 2. Expand first story
+    const story1Toggle = page.locator(".story-toggle").first();
+    await story1Toggle.click();
     await expect(page.locator(".story-what-changed").first()).toBeVisible();
+    await expect(page.locator(".interest-form")).not.toBeVisible();
 
-    // Verify finite ending button
-    const endButton = page.locator("button.edition-action");
-    if ((await endButton.count()) > 0) {
-      await endButton.click();
-      await expect(page.locator(".edition-ending-message")).toBeVisible();
-      await expect(page.locator(".edition-ending-message")).toHaveText(
-        /That can be enough for today|That's/,
-      );
-    }
+    // 3. Expand second story -> triggers interest invitation
+    const story2Toggle = page.locator(".story-toggle").nth(1);
+    await story2Toggle.click();
+    await expect(page.locator(".interest-form")).toBeVisible();
 
-    // Assert that infinite scroll / auto pagination does not exist
+    // 4. Select up to 2 interest topics
+    const checkbox1 = page.locator(
+      'input[type="checkbox"][value="business-economy"]',
+    );
+    const checkbox2 = page.locator(
+      'input[type="checkbox"][value="technology-ai"]',
+    );
+    await checkbox1.check();
+    await checkbox2.check();
+    await expect(checkbox1).toBeChecked();
+    await expect(checkbox2).toBeChecked();
+
+    // Submit interests
+    const saveButton = page.locator('.interest-form button[type="submit"]');
+    await saveButton.click();
+
+    // Interest form closes and chosen topics are summarized
+    await expect(page.locator(".interest-form")).not.toBeVisible();
+    await expect(page.locator(".interest-boosts")).toContainText("Chosen:");
+
+    // 5. Finish edition
+    const endButton = page.locator(".edition-ending button.edition-action");
+    await expect(endButton).toBeVisible();
+    await endButton.click();
+
+    await expect(page.locator(".edition-ending-message")).toBeVisible();
+    await expect(page.locator(".edition-ending-message")).toHaveText(
+      "You read 2 of 10. That can be enough for today.",
+    );
+
+    // Verify finite design: no infinite scroll adds more stories
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(200);
     await expect(storyList(page)).toHaveCount(10);
   });
 
-  test("Journey 2: Interest boost selection interacts with interest options and persists", async ({
+  test("Scenario 2: returning reader → viewed state restored", async ({
     page,
   }) => {
     const server = await startServer();
     await openEdition(page, server.origin);
 
-    // Verify initial edition loads
-    await expect(storyList(page)).toHaveCount(10);
+    // Expand Story 1 and Story 2
+    await page.locator(".story-toggle").first().click();
+    await page.locator(".story-toggle").nth(1).click();
 
-    // Open interest boosts disclosure if present
-    const interestToggle = page.locator(".interest-toggle");
-    if ((await interestToggle.count()) > 0) {
-      await interestToggle.click();
+    await expect(page.locator(".edition-progress")).toHaveText(
+      "2 of 10 viewed",
+    );
 
-      const techCheckbox = page.locator(
-        'input[type="checkbox"][value="technology-ai"]',
-      );
-      if ((await techCheckbox.count()) > 0) {
-        await techCheckbox.check();
-        await expect(techCheckbox).toBeChecked();
-
-        // Reload page to verify on-device persistence
-        await page.reload();
-        await page.locator(".interest-toggle").click();
-        await expect(
-          page.locator('input[type="checkbox"][value="technology-ai"]'),
-        ).toBeChecked();
-      }
-    }
-  });
-
-  test("Journey 3: Offline cached reading allows full edition access when network is unavailable", async ({
-    page,
-  }) => {
-    const server = await startServer();
-    await openEdition(page, server.origin);
-
-    // Ensure initial edition is loaded and cached
-    await expect(storyList(page)).toHaveCount(10);
-
-    // Stop server completely
-    await server.stop();
-
-    // Reload page in offline state
+    // Reload page to simulate returning reader
     await page.reload();
 
-    // Verify content still renders cleanly from cache
-    await expect(storyList(page)).toHaveCount(10);
-    await expect(page.locator(".edition-ending")).toBeVisible();
+    // Verify progress indicator is restored on mount from local state
+    await expect(page.locator(".edition-progress")).toHaveText(
+      "2 of 10 viewed",
+    );
+
+    // Expand Story 3 and verify increment
+    await page.locator(".story-toggle").nth(2).click();
+    await expect(page.locator(".edition-progress")).toHaveText(
+      "3 of 10 viewed",
+    );
   });
 
-  test("Journey 4: Date navigation to historical edition displays date banner", async ({
+  test("Scenario 3: end early → respectful end message", async ({ page }) => {
+    const server = await startServer();
+    await openEdition(page, server.origin);
+
+    // Expand 1 story
+    await page.locator(".story-toggle").first().click();
+
+    const endButton = page.locator(".edition-ending button.edition-action");
+    await expect(endButton).toBeVisible();
+    await endButton.click();
+
+    // Assert button is removed and respectful message is shown
+    await expect(endButton).not.toBeVisible();
+    await expect(page.locator(".edition-ending-message")).toHaveText(
+      "You read 1 of 10. That can be enough for today.",
+    );
+    await expect(page.locator(".edition-next")).toHaveText(
+      "The next edition will appear here when it is published.",
+    );
+
+    // Verify zero guilt or streak mechanics
+    const bodyText = await page.innerText("body");
+    expect(bodyText).not.toMatch(/streak/i);
+    expect(bodyText).not.toMatch(/badge/i);
+    expect(bodyText).not.toMatch(/point/i);
+  });
+
+  test("Scenario 4: offline open after prior load", async ({ page }) => {
+    const server = await startServer();
+    await openEdition(page, server.origin);
+
+    await expect(storyList(page)).toHaveCount(10);
+
+    // Stop the web server completely
+    await server.stop();
+
+    // Reload in offline state
+    await page.reload();
+
+    // Verify all stories still render from service worker cache
+    await expect(storyList(page)).toHaveCount(10);
+    await expect(page.locator(".edition-ending")).toBeVisible();
+
+    // Verify saved copy notice is displayed
+    const notice = page.locator("p.edition-notice");
+    await expect(notice).toBeVisible();
+    await expect(notice).toContainText("saved on this device");
+    await expect(notice).toContainText("Downloaded");
+  });
+
+  test("Scenario 5: corrected edition displays a visible correction note", async ({
     page,
   }) => {
     const server = await startServer();
     await page.goto(`${server.origin}/edition/2026-07-21`);
+    await page.evaluate(() =>
+      navigator.serviceWorker.ready.then(() => undefined),
+    );
 
-    // Verify historical edition loads
-    await expect(storyList(page)).toHaveCount(10);
+    // Locate the story item carrying the "Corrected" marker
+    const correctedItem = page.locator("li.edition-story").filter({
+      has: page.locator(".story-marker", { hasText: "Corrected" }),
+    });
+    await expect(correctedItem).toBeVisible();
 
-    // Verify heading displays the edition date
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-      /^Edition of /,
+    // Assert the story kicker / provenance carries the "Corrected" marker
+    await expect(correctedItem.locator(".story-marker")).toHaveText(
+      "Corrected",
+    );
+
+    // Expand the story card to view the correction note
+    await correctedItem.locator(".story-toggle").click();
+
+    const correctionBlock = correctedItem.locator(".story-correction");
+    await expect(correctionBlock).toBeVisible();
+    await expect(correctionBlock).toContainText(
+      "An earlier version of this story said the consultation received 1,240 written submissions. The correct figure, from the secretariat's published tally, is 240.",
     );
   });
 
-  test("Journey 5: Theme switching between light, dark, and system persists across page reloads", async ({
+  test("Scenario 6: broken latest edition falls back safely", async ({
     page,
   }) => {
     const server = await startServer();
-    await openEdition(page, server.origin);
+    // Navigate to an invalid or missing edition route
+    await page.goto(`${server.origin}/edition/1999-01-01`);
 
-    // Open theme disclosure
-    const themeToggle = page.locator(".theme-toggle");
-    await expect(themeToggle).toBeVisible();
-    await themeToggle.click();
+    // Assert error fallback heading
+    const heading = page.locator("#edition-heading");
+    await expect(heading).toBeVisible();
+    await expect(heading).toHaveText("There is no edition for that date.");
 
-    // Select Dark
-    const darkRadio = page.locator('input[type="radio"][value="dark"]');
-    await expect(darkRadio).toBeVisible();
-    await darkRadio.check();
+    // Assert fallback link is visible and navigable
+    const fallbackLink = page.getByRole("link", {
+      name: "Open the latest edition",
+    });
+    await expect(fallbackLink).toBeVisible();
 
-    const themeAttr = await page.evaluate(() =>
-      document.documentElement.getAttribute("data-theme"),
-    );
-    expect(themeAttr).toBe("dark");
-
-    // Reload and verify persistence
-    await page.reload();
-    const reloadedTheme = await page.evaluate(() =>
-      document.documentElement.getAttribute("data-theme"),
-    );
-    expect(reloadedTheme).toBe("dark");
-  });
-
-  test("Journey 6: Story feedback opens prefilled report link with proper security attributes", async ({
-    page,
-  }) => {
-    const server = await startServer();
-    await openEdition(page, server.origin);
-
-    // Expand the first story
-    const firstStoryButton = page.locator(".story-toggle").first();
-    await firstStoryButton.click();
-
-    // Find the report link
-    const reportLink = page.locator(".story-report").first();
-    await expect(reportLink).toBeVisible();
-    await expect(reportLink).toHaveAttribute("rel", "noopener");
-
-    const href = await reportLink.getAttribute("href");
-    expect(href).toContain("https://github.com/Faranheit15/aaj-bas/issues/new");
-    expect(href).toContain("title=Story+report");
+    await fallbackLink.click();
+    await expect(page).toHaveURL(`${server.origin}/`);
   });
 });
