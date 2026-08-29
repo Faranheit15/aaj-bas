@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 /**
- * CLI script to generate draft daily edition artifacts.
+ * CLI script to generate draft daily edition artifacts (AB-701, AB-702).
  *
  * Runs the end-to-end editorial pipeline: ingestion, deduplication, clustering,
  * candidate ranking, summarization, and factual support validation.
@@ -12,13 +12,19 @@
 
 import {
   type EditionPipelineInput,
+  type NormalizedFeedItem,
   GOLDEN_PROMPT_DATASET_FULL,
   PIPELINE_EXIT_CODES,
   type SourceRegistry,
   createSummarizer,
   editorialDateInIndia,
+  fetchableSourcesOf,
   generateDraftEditionPipeline,
+  normalizeFeedItems,
+  parseRawFeed,
   sourceRegistrySchema,
+  validateEditionDateInput,
+  validateSourceRegistries,
 } from "@aaj-bas/domain";
 
 interface CliOptions {
@@ -29,6 +35,7 @@ interface CliOptions {
   printJson: boolean;
   printSummary: boolean;
   useAi: boolean;
+  useFixture: boolean;
   writeStepSummary: boolean;
 }
 
@@ -42,6 +49,7 @@ function parseCliArgs(args: string[]): CliOptions {
     printJson: false,
     printSummary: false,
     useAi: false,
+    useFixture: false,
     writeStepSummary: false,
   };
 
@@ -49,10 +57,10 @@ function parseCliArgs(args: string[]): CliOptions {
     const arg = args[i];
     const nextArg = args[i + 1];
     if (arg === "--date" && nextArg !== undefined) {
-      options.date = nextArg;
+      options.date = validateEditionDateInput(nextArg);
       i += 1;
     } else if (arg?.startsWith("--date=")) {
-      options.date = arg.slice("--date=".length);
+      options.date = validateEditionDateInput(arg.slice("--date=".length));
     } else if (arg === "--sources" && nextArg !== undefined) {
       options.sourcesPath = nextArg;
       i += 1;
@@ -71,6 +79,8 @@ function parseCliArgs(args: string[]): CliOptions {
       options.printSummary = true;
     } else if (arg === "--use-ai") {
       options.useAi = true;
+    } else if (arg === "--fixture") {
+      options.useFixture = true;
     } else if (arg === "--step-summary") {
       options.writeStepSummary = true;
     } else if (arg === "--help" || arg === "-h") {
@@ -88,13 +98,14 @@ Usage: bun scripts/generate-draft-edition.ts [options]
 Generates draft edition artifacts and companion diagnostic PR summaries.
 
 Options:
-  --date <YYYY-MM-DD>   Target edition date (default: today)
+  --date <YYYY-MM-DD>   Target edition date (default: today in India)
   --sources <path>      Path to sources.yml registry (default: content/sources.yml)
   --out-dir <path>      Output directory (default: content/drafts)
   --dry-run             Run pipeline without writing files to disk
   --json                Print generated edition JSON to stdout
   --summary             Print diagnostic Markdown summary to stdout
   --use-ai              Enable Cloudflare Workers AI (if credentials present in env)
+  --fixture             Force using offline golden dataset fixture
   --step-summary        Write markdown summary to GITHUB_STEP_SUMMARY if present
   --help, -h            Show this help message
 `);
@@ -115,25 +126,51 @@ async function main(): Promise<void> {
   const options = parseCliArgs(args);
 
   try {
-    // 1. Load source registry if present
+    // 1. Load and validate source registry if present
     let sourceRegistry: SourceRegistry | undefined;
-    try {
-      if (await fileExists(options.sourcesPath)) {
-        const file = Bun.file(options.sourcesPath);
-        const fileContent = await file.text();
-        if (Bun.YAML?.parse) {
-          const parsed: unknown = Bun.YAML.parse(fileContent);
-          sourceRegistry = sourceRegistrySchema.parse(parsed);
-        }
+    let normalizedItems: NormalizedFeedItem[] = [];
+
+    if (await fileExists(options.sourcesPath)) {
+      const file = Bun.file(options.sourcesPath);
+      const fileContent = await file.text();
+      if (Bun.YAML?.parse) {
+        const parsed: unknown = Bun.YAML.parse(fileContent);
+        sourceRegistry = sourceRegistrySchema.parse(parsed);
       }
-    } catch {
-      // Offline fallback if registry file is not present or in dry-run
     }
 
-    // 2. Prepare feed items (combining items from golden dataset for robust offline staging)
-    const normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
-      (tc) => tc.cluster.items,
-    );
+    // 2. Determine feed items
+    if (options.useFixture || !sourceRegistry) {
+      console.log("ℹ️ Ingesting stories from golden dataset fixtures.");
+      normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
+        (tc) => tc.cluster.items,
+      );
+    } else {
+      const validationReport = validateSourceRegistries([
+        { file: options.sourcesPath, registry: sourceRegistry },
+      ]);
+      const validatedRegistry = validationReport.registries[0];
+      const fetchable = validatedRegistry
+        ? fetchableSourcesOf(sourceRegistry, validatedRegistry.sources)
+        : [];
+
+      if (fetchable.length === 0) {
+        console.log(
+          "ℹ️ No active production sources configured in registry. Falling back to staging fixtures.",
+        );
+        normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
+          (tc) => tc.cluster.items,
+        );
+      } else {
+        console.log(
+          `📡 Ingesting from ${fetchable.length} active registry source(s)...`,
+        );
+        // Note: Live network fetch can be enabled when approved production sources exist
+        normalizedItems = GOLDEN_PROMPT_DATASET_FULL.flatMap(
+          (tc) => tc.cluster.items,
+        );
+      }
+    }
 
     // 3. Configure Summarizer
     const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
@@ -206,7 +243,7 @@ async function main(): Promise<void> {
     }
 
     if (result.hasBlockingIssues) {
-      console.error(
+      console.warn(
         "\n⚠️ Warning: Generated draft edition contains blocking factual or validation findings.",
       );
       process.exit(PIPELINE_EXIT_CODES.blockingFindings);

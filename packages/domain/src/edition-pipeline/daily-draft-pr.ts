@@ -2,6 +2,7 @@
  * Domain functions for daily draft PR formatting and workflow conventions (AB-702).
  */
 
+import { editionDateSchema } from "@aaj-bas/schemas";
 import { editorialDateInIndia } from "./pipeline";
 
 export interface DailyDraftPrOptions {
@@ -10,7 +11,19 @@ export interface DailyDraftPrOptions {
   outDir: string;
   dryRun: boolean;
   useAi: boolean;
+  useFixture: boolean;
   baseBranch: string;
+  writeStepSummary?: boolean;
+}
+
+export function validateEditionDateInput(dateString: string): string {
+  const result = editionDateSchema.safeParse(dateString);
+  if (!result.success) {
+    throw new Error(
+      `Invalid edition date "${dateString}". Must be a valid calendar date in YYYY-MM-DD format.`,
+    );
+  }
+  return result.data;
 }
 
 export function parseDailyDraftPrArgs(args: string[]): DailyDraftPrOptions {
@@ -21,17 +34,19 @@ export function parseDailyDraftPrArgs(args: string[]): DailyDraftPrOptions {
     outDir: "content/drafts",
     dryRun: false,
     useAi: false,
+    useFixture: false,
     baseBranch: "develop",
+    writeStepSummary: false,
   };
 
   for (let i = 0; i < args.length; i += 1) {
     const arg = args[i];
     const nextArg = args[i + 1];
     if (arg === "--date" && nextArg !== undefined) {
-      options.date = nextArg;
+      options.date = validateEditionDateInput(nextArg);
       i += 1;
     } else if (arg?.startsWith("--date=")) {
-      options.date = arg.slice("--date=".length);
+      options.date = validateEditionDateInput(arg.slice("--date=".length));
     } else if (arg === "--sources" && nextArg !== undefined) {
       options.sourcesPath = nextArg;
       i += 1;
@@ -51,6 +66,10 @@ export function parseDailyDraftPrArgs(args: string[]): DailyDraftPrOptions {
       options.dryRun = true;
     } else if (arg === "--use-ai") {
       options.useAi = true;
+    } else if (arg === "--fixture") {
+      options.useFixture = true;
+    } else if (arg === "--step-summary") {
+      options.writeStepSummary = true;
     }
   }
 

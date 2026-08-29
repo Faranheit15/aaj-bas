@@ -118,6 +118,7 @@ export {
   normalizeFeedDate,
   normalizeFeedItem,
   normalizeFeedItems,
+  parseRawFeed,
   sanitizeHtmlToText,
 } from "./feed-normalization";
 export type {
