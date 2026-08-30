@@ -388,8 +388,6 @@ export async function runDailyDraftWorkflow(
         prTitle,
         "--body-file",
         summaryPath,
-        "--label",
-        "draft-edition",
       ]);
     }
 
