@@ -126,6 +126,18 @@ async function fileExists(path: string): Promise<boolean> {
   }
 }
 
+function runCommand(command: string, args: string[]): void {
+  const result = Bun.spawnSync([command, ...args], {
+    stdout: "pipe",
+    stderr: "pipe",
+  });
+
+  if (result.exitCode !== 0) {
+    const stderr = result.stderr ? new TextDecoder().decode(result.stderr) : "";
+    throw new Error(`Command failed: ${command} ${args.join(" ")}\n${stderr}`);
+  }
+}
+
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const options = parseCliArgs(args);
@@ -345,6 +357,7 @@ async function main(): Promise<void> {
       const summaryPath = `${options.outDir}/${options.date}-summary.md`;
 
       await Bun.write(editionPath, `${result.editionJson}\n`);
+      runCommand("bunx", ["@biomejs/biome", "format", "--write", editionPath]);
       await Bun.write(summaryPath, `${result.summaryMarkdown}\n`);
 
       console.log(`\n📄 Artifacts written to:`);

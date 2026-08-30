@@ -254,17 +254,14 @@ export async function runDailyDraftWorkflow(
 
   const result = await generateDraftEditionPipeline(pipelineInput);
 
-  // 5. Write artifacts
+  // 5. Build the PR body. Keep generated artifacts in memory until the dated
+  // branch is checked out below; writing them first would block checkout when
+  // that branch already contains the same paths.
   const prBody = composePrBody(
     result.summaryMarkdown,
     result.hasBlockingIssues,
     options.date,
   );
-
-  if (!options.dryRun) {
-    await Bun.write(editionPath, `${result.editionJson}\n`);
-    await Bun.write(summaryPath, `${prBody}\n`);
-  }
 
   // 6. GitHub Step Summary if requested
   if (options.writeStepSummary && process.env.GITHUB_STEP_SUMMARY) {
@@ -324,6 +321,13 @@ export async function runDailyDraftWorkflow(
       console.log(`Creating new draft branch ${branchName}...`);
       runCommand("git", ["checkout", "-b", branchName]);
     }
+
+    // The checkout must happen before these files exist in the working tree.
+    // Otherwise an existing remote draft branch cannot be checked out because
+    // Git quite correctly refuses to overwrite untracked artifacts.
+    await Bun.write(editionPath, `${result.editionJson}\n`);
+    await Bun.write(summaryPath, `${prBody}\n`);
+    runCommand("bunx", ["@biomejs/biome", "format", "--write", editionPath]);
 
     runCommand("git", ["add", editionPath, summaryPath]);
 
@@ -385,8 +389,6 @@ export async function runDailyDraftWorkflow(
         prTitle,
         "--body-file",
         summaryPath,
-        "--label",
-        "draft-edition",
       ]);
     }
 
