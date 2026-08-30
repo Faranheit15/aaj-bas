@@ -3,8 +3,8 @@
   "date": "2026-08-30",
   "editionVersion": 1,
   "status": "draft",
-  "publishedAt": "2026-08-30T08:06:09.741Z",
-  "updatedAt": "2026-08-30T08:06:09.741Z",
+  "publishedAt": "2026-08-30T08:15:15.813Z",
+  "updatedAt": "2026-08-30T08:15:15.813Z",
   "estimatedMinutes": 3,
   "coreStoryIds": [
     "s-cluster-5ed27a3b991afbbb",
@@ -37,13 +37,8 @@
       "s-cluster-0dbeb6940f37badd",
       "s-cluster-0f37ae2ac216caf6"
     ],
-    "sports": [
-      "s-cluster-fbebe1a3c6bdabe7",
-      "s-cluster-1fd48a366a879683"
-    ],
-    "culture-entertainment": [
-      "s-cluster-0dbea9940f37a4c6"
-    ]
+    "sports": ["s-cluster-fbebe1a3c6bdabe7", "s-cluster-1fd48a366a879683"],
+    "culture-entertainment": ["s-cluster-0dbea9940f37a4c6"]
   },
   "stories": [
     {
@@ -57,9 +52,7 @@
         "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-29T15:02:46.000Z",
@@ -77,9 +70,7 @@
         "FCDO travel advice for Niger. Includes safety and security, insurance, entry requirements and legal differences."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "fcdo"
-      ],
+      "sourceIds": ["fcdo"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-29T14:30:01.000Z",
@@ -97,9 +88,7 @@
         "Get paid to manage land sustainably to benefit the environment and support food production: find out if your land is eligible, select and apply for SFI26 actions."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-28T22:59:03.000Z",
@@ -113,14 +102,9 @@
       "reportingType": "official",
       "headline": "Transparency data: DSIT: workforce management information, July 2026",
       "deck": "Reports on departmental staff numbers and costs.",
-      "whatChanged": [
-        "Reports on departmental staff numbers and costs."
-      ],
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-dhsc",
-        "uk-dsit"
-      ],
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
       "sourceCount": 2,
       "confidence": "multi-source",
       "firstPublishedAt": "2026-08-25T10:55:53.000Z",
@@ -138,9 +122,7 @@
         "The impact assessment considers the potential impacts of the Terminally Ill Adults (End of Life) Bill 2026."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-dhsc"
-      ],
+      "sourceIds": ["uk-dhsc"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-28T16:49:52.000Z",
@@ -158,9 +140,7 @@
         "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Haiti."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "fcdo"
-      ],
+      "sourceIds": ["fcdo"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-28T20:23:00.000Z",
@@ -178,9 +158,7 @@
         "European Commission Daily news Brussels, 27 Aug 2026 Commission endorses Greece's €4.8 billion Social Climate Plan to support vulnerable households, transport users and micro-enterprises in the clean transition To..."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "european-commission-press-corner"
-      ],
+      "sourceIds": ["european-commission-press-corner"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-27T09:00:50.000Z",
@@ -198,9 +176,7 @@
         "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "global-voices-india"
-      ],
+      "sourceIds": ["global-voices-india"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-07-25T00:00:00.000Z",
@@ -218,9 +194,7 @@
         "Apply for grants and other funding to increase productivity, manage your land to benefit the environment and support your agricultural business."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-28T22:59:03.000Z",
@@ -238,9 +212,7 @@
         "Add your business to the Animal and Plant Health Agency list of authorised distance plant sellers."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-28T09:19:21.000Z",
@@ -258,9 +230,7 @@
         "Information on a precision breeding marketing notice submitted for a tomato plant and its precision bred status."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-27T14:53:41.000Z",
@@ -278,9 +248,7 @@
         "The team will work alongside British Embassy staff and local authorities to provide additional consular support, as part of response efforts."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "fcdo"
-      ],
+      "sourceIds": ["fcdo"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-28T18:20:39.000Z",
@@ -298,9 +266,7 @@
         "FCDO travel advice for the Democratic Republic of the Congo. Includes safety and security, insurance, entry requirements and legal differences."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "fcdo"
-      ],
+      "sourceIds": ["fcdo"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-26T09:19:27.000Z",
@@ -318,9 +284,7 @@
         "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "fcdo"
-      ],
+      "sourceIds": ["fcdo"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-28T13:57:37.000Z",
@@ -338,9 +302,7 @@
         "Current issues relating to imports and exports of animals and animal products."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-28T13:22:10.000Z",
@@ -358,9 +320,7 @@
         "Steps businesses must take to make sure their products meet the EU regulation on deforestation-free products (EUDR) if they market them in, move them to or export them from Northern Ireland."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-27T15:29:53.000Z",
@@ -378,9 +338,7 @@
         "The release shows UK trade in Food, Feed and Drink in current prices and real terms."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-27T13:54:30.000Z",
@@ -398,9 +356,7 @@
         "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-dsit"
-      ],
+      "sourceIds": ["uk-dsit"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-13T16:12:25.000Z",
@@ -418,9 +374,7 @@
         "European Commission Press release Brussels, 31 Jul 2026 From 2 August 2026, the European Commission's AI Office, together with national authorities, will begin enforcing the Artificial Intelligence (AI) Act. On the same date, new transparency rules will start to apply."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "european-commission-press-corner"
-      ],
+      "sourceIds": ["european-commission-press-corner"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-07-31T06:04:12.000Z",
@@ -438,9 +392,7 @@
         "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "global-voices-india"
-      ],
+      "sourceIds": ["global-voices-india"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-06-30T17:33:41.000Z",
@@ -458,9 +410,7 @@
         "How to take samples and choose an appropriate diagnostic test for common clinical presentations in livestock and wildlife."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "uk-defra"
-      ],
+      "sourceIds": ["uk-defra"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-27T13:59:15.000Z",
@@ -478,9 +428,7 @@
         "European Commission Speech Brussels, 04 Aug 2026 Good afternoon, everyone. These past few days were a test of our European resilience and of the security of our external borders. We have just concluded our inf..."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "european-commission-press-corner"
-      ],
+      "sourceIds": ["european-commission-press-corner"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-04T21:04:40.000Z",
@@ -498,9 +446,7 @@
         "European Commission Press release Brussels, 04 Aug 2026 The European Commission has opened an in-depth investigation to assess whether an arbitration award ordering Spain to pay compensation to JGC Holdings Corporation (‘JGC') for changes to a renewable electricity support measure is in line with EU State aid rules."
       ],
       "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
-      "sourceIds": [
-        "european-commission-press-corner"
-      ],
+      "sourceIds": ["european-commission-press-corner"],
       "sourceCount": 1,
       "confidence": "single-source",
       "firstPublishedAt": "2026-08-04T08:02:27.000Z",
