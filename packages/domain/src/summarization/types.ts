@@ -8,9 +8,12 @@
 import type { Story, TopicSlug } from "@aaj-bas/schemas";
 import type { RankedStoryCandidate } from "../candidate-ranking";
 import type { StoryCluster } from "../clustering";
+import type { SourceRegistry } from "../source-registry";
 
 export interface StorySummarizerInput {
   readonly cluster: StoryCluster;
+  /** Validated registry used to enforce source-specific permitted uses. */
+  readonly sourceRegistry?: SourceRegistry | undefined;
   readonly topic?: TopicSlug | undefined;
   readonly editionDate?: string | undefined;
   readonly candidate?: RankedStoryCandidate | undefined;

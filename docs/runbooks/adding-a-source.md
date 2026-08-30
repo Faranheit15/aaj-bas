@@ -105,20 +105,17 @@ about is a takedown request and a correction the product cannot defend.
   A pair differing only by a trailing slash or a leading `www.` is usually one
   feed entered twice, so it is put in front of you rather than folded silently.
 
-## Adding the first real source deletes the samples
+## Do not mix sample and real entries
 
-`content/sources.yml` currently holds three invented publishers on `.invalid`
-hosts. The mixed-host rule is blocking, so the pull request that registers the
-first real publisher must remove all three in the same diff. That is the
-intended cost: a whole-file, deliberate, reviewed change rather than a real
-entry appearing quietly beside the fixtures.
-
-Until then the samples are what keeps the validator meaningful — a run that
-checks nothing exits 3 rather than reporting success.
+The mixed-host rule is blocking, so a registry that still contains reserved
+sample hosts must remove every sample entry in the same reviewed change that
+adds the first real publisher. The current repository registry already
+contains real sources, so new entries must be real entries too and must not
+reintroduce the reserved `.invalid` fixtures.
 
 ## The procedure
 
-1. Gather the nine items above.
+1. Gather the ten items above.
 2. Edit `content/sources.yml`. Add the entry with `active: false` and
    `sample: false`, carrying the review fields you gathered.
 3. Run `bun run sources:validate`. Fix what it reports. Blocking findings fail

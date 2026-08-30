@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { storySchema } from "@aaj-bas/schemas";
 import type { StoryCluster } from "../clustering";
+import { sourceRegistrySchema } from "../source-registry";
 import {
   SUMMARIZE_PROMPT_VERSION,
   compileSummarizePrompt,
@@ -51,6 +52,54 @@ describe("Prompt compilation, output schema, and sentence source mappings", () =
     };
   }
 
+  function policyRegistry() {
+    return sourceRegistrySchema.parse({
+      schemaVersion: 1,
+      sources: [
+        {
+          id: "headline-only",
+          publisher: "Headline Only",
+          siteUrl: "https://headline-only.example/",
+          feedUrl: "https://headline-only.example/feed.xml",
+          sourceType: "publisher",
+          region: "india",
+          language: "en",
+          active: true,
+          sample: false,
+          termsUrl: "https://headline-only.example/terms",
+          termsReviewedOn: "2026-08-22",
+          termsReviewedBy: "faran",
+          permittedUse:
+            "Only the source headline may be reused; descriptions and generated summaries are not permitted.",
+          permittedUses: ["headline"],
+          attribution: "Headline Only",
+        },
+        {
+          id: "summary-source",
+          publisher: "Summary Source",
+          siteUrl: "https://summary-source.example/",
+          feedUrl: "https://summary-source.example/feed.xml",
+          sourceType: "publisher",
+          region: "india",
+          language: "en",
+          active: true,
+          sample: false,
+          termsUrl: "https://summary-source.example/terms",
+          termsReviewedOn: "2026-08-22",
+          termsReviewedBy: "faran",
+          permittedUse:
+            "The headline and supplied description may be used for a generated summary with attribution.",
+          permittedUses: [
+            "headline",
+            "supplied-description",
+            "generated-summary",
+          ],
+          attribution: "Summary Source",
+        },
+      ],
+    });
+  }
+
   it("compiles valid system and user prompt with allowed source IDs", () => {
     const input = makeMockInput(["pti", "the-hindu"]);
     const prompt = compileSummarizePrompt(input);
@@ -61,6 +110,21 @@ describe("Prompt compilation, output schema, and sentence source mappings", () =
     expect(prompt.user).toContain("ISRO launches navigation satellite NVS-02");
     expect(prompt.user).toContain(
       `promptVersion "${SUMMARIZE_PROMPT_VERSION}"`,
+    );
+  });
+
+  it("omits descriptions and source IDs that the registry does not permit", () => {
+    const input = {
+      ...makeMockInput(["headline-only", "summary-source"]),
+      sourceRegistry: policyRegistry(),
+    };
+    const prompt = compileSummarizePrompt(input);
+
+    expect(prompt.user).toContain("VALID_SOURCE_IDS: [summary-source]");
+    expect(prompt.user).not.toContain("Description from headline-only");
+    expect(prompt.user).not.toContain("[SOURCE: headline-only");
+    expect(prompt.user).toContain(
+      "Description from summary-source covering the launch details.",
     );
   });
 
@@ -225,5 +289,37 @@ describe("Prompt compilation, output schema, and sentence source mappings", () =
     expect(story.sourceCount).toBe(2);
     expect(story.sourceIds).toEqual(["pti", "the-hindu"]);
     expect(() => storySchema.parse(story)).not.toThrow();
+  });
+
+  it("drops unauthorized source citations before building a generated Story", () => {
+    const input = {
+      ...makeMockInput(["headline-only", "summary-source"]),
+      sourceRegistry: policyRegistry(),
+    };
+    const story = convertPromptResultToStory(
+      {
+        headline: "Councils prepare for a policy change",
+        deck: "The permitted source describes preparation for a policy change.",
+        whatChanged: [
+          {
+            sentence:
+              "Councils are preparing for the policy change described by the source.",
+            sourceIds: ["headline-only", "summary-source"],
+          },
+        ],
+        whyItMatters:
+          "The change may affect how councils plan their upcoming work.",
+        reportingType: "reporting",
+        extractedFacts: {
+          namedEntities: ["Councils"],
+          dates: [],
+          numbers: [],
+        },
+      },
+      input,
+      "model-v1",
+    );
+
+    expect(story.sourceIds).toEqual(["summary-source"]);
   });
 });

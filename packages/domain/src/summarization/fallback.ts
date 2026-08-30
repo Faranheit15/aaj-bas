@@ -23,6 +23,11 @@ import type {
   StorySummarizerInput,
   StorySummarizerOutput,
 } from "./types";
+import {
+  applyReviewedReportingType,
+  clusterForGeneratedSummary,
+  sourcePermitsUse,
+} from "./source-policy";
 
 function sanitizeText(raw: string): string {
   return raw
@@ -60,7 +65,18 @@ export class DeterministicFallbackSummarizer implements StorySummarizer {
 
   async summarize(input: StorySummarizerInput): Promise<StorySummarizerOutput> {
     const startTime = Date.now();
-    const { cluster, topic, editionDate } = input;
+    const permittedCluster = clusterForGeneratedSummary(
+      input.cluster,
+      input.sourceRegistry,
+    );
+    if (permittedCluster === undefined) {
+      throw new Error(
+        `source cluster ${input.cluster.id} has no source permitted for generated summaries`,
+      );
+    }
+
+    const { topic } = input;
+    const cluster = permittedCluster;
 
     const resolvedTopic: TopicSlug =
       topic ??
@@ -80,7 +96,14 @@ export class DeterministicFallbackSummarizer implements StorySummarizer {
 
     const firstDesc =
       cluster.items.find(
-        (i) => i.description && i.description.trim().length >= 20,
+        (i) =>
+          sourcePermitsUse(
+            i.sourceId,
+            "supplied-description",
+            input.sourceRegistry,
+          ) &&
+          i.description &&
+          i.description.trim().length >= 20,
       )?.description || "";
     const deck = ensureLength(
       firstDesc || baseTitle,
@@ -103,10 +126,10 @@ export class DeterministicFallbackSummarizer implements StorySummarizer {
     } else {
       paragraphs.push(
         ensureLength(
-          `Reporting published by ${cluster.primaryItem.sourceId} details developments regarding ${headline}.`,
+          `The source headline reports: ${headline}.`,
           20,
           800,
-          "Full reporting details are being monitored from primary sources.",
+          "The source provided no permitted description for this draft.",
         ),
       );
     }
@@ -205,7 +228,7 @@ export class DeterministicFallbackSummarizer implements StorySummarizer {
       deck,
       whatChanged: paragraphs,
       whyItMatters:
-        "Context and implications are being monitored as reporting develops.",
+        "No additional context is included because the reviewed source provided no permitted description material.",
       uncertainty,
       sourceIds,
       sourceCount,
@@ -215,8 +238,10 @@ export class DeterministicFallbackSummarizer implements StorySummarizer {
       reviewed: false,
     };
 
-    // Validate draft story with shared Zod schema
-    const story = storySchema.parse(storyCandidate);
+    // Apply registry policy before validating the draft story.
+    const story = storySchema.parse(
+      applyReviewedReportingType(storyCandidate, input.sourceRegistry),
+    );
 
     return {
       story,

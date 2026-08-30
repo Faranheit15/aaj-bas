@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { StoryCluster } from "../clustering";
+import { sourceRegistrySchema } from "../source-registry";
 import { classifyStoryTopic } from "./topic";
 
 describe("Deterministic topic classification", () => {
@@ -95,5 +96,38 @@ describe("Deterministic topic classification", () => {
         makeCluster("Parliament passes digital governance bill in Lok Sabha"),
       ),
     ).toBe("india");
+  });
+
+  it("does not classify from a description the registry does not permit", () => {
+    const cluster = makeCluster(
+      "Government announces a new city measure",
+      "The RBI repo rate changed after an inflation decision.",
+    );
+    const sourceRegistry = sourceRegistrySchema.parse({
+      schemaVersion: 1,
+      sources: [
+        {
+          id: "source-1",
+          publisher: "Headline Only",
+          siteUrl: "https://headline-only.example/",
+          feedUrl: "https://headline-only.example/feed.xml",
+          sourceType: "publisher",
+          region: "india",
+          language: "en",
+          active: true,
+          sample: false,
+          termsUrl: "https://headline-only.example/terms",
+          termsReviewedOn: "2026-08-22",
+          termsReviewedBy: "faran",
+          permittedUse:
+            "Only the source headline may be reused; descriptions and generated summaries are not permitted.",
+          permittedUses: ["headline"],
+          attribution: "Headline Only",
+        },
+      ],
+    });
+
+    expect(classifyStoryTopic(cluster)).toBe("business-economy");
+    expect(classifyStoryTopic(cluster, sourceRegistry)).toBe("india");
   });
 });

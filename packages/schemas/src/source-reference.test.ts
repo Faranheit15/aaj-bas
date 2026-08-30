@@ -22,6 +22,22 @@ describe("sourceReferenceSchema", () => {
     expect(sourceReferenceSchema.safeParse(validSource()).success).toBe(true);
   });
 
+  it("accepts optional reviewed provenance without breaking old editions", () => {
+    expect(
+      sourceReferenceSchema.safeParse(
+        validSource({
+          attribution:
+            "Global Voices; adapted from the linked original under CC BY 3.0.",
+          authors: ["Subhashish Panigrahi"],
+          termsUrl:
+            "https://globalvoices.org/about/global-voices-attribution-policy/",
+          licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
+        }),
+      ).success,
+    ).toBe(true);
+    expect(sourceReferenceSchema.safeParse(validSource()).success).toBe(true);
+  });
+
   it("accepts every declared source type", () => {
     for (const sourceType of ["publisher", "primary", "research", "official"]) {
       expect(

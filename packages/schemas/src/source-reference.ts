@@ -51,6 +51,14 @@ export const sourceUrlSchema = z
 export const sourceReferenceSchema = z.object({
   id: identifierSchema,
   publisher: boundedText(1, 120),
+  /** The exact credit line required by the reviewed source terms, when any. */
+  attribution: boundedText(2, 200).optional(),
+  /** Feed-provided authors for the cited source item(s), when available. */
+  authors: z.array(boundedText(1, 120)).max(10).optional(),
+  /** The reviewed terms or licence page a reader can inspect. */
+  termsUrl: sourceUrlSchema.optional(),
+  /** A direct licence page when the terms review identifies one. */
+  licenseUrl: sourceUrlSchema.optional(),
   title: boundedText(1, 300),
   url: sourceUrlSchema,
   sourceType: sourceTypeSchema,

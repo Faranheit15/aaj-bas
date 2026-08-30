@@ -47,7 +47,7 @@ export function rankAndComposeCandidates(
   const scoredCandidates: RankedStoryCandidate[] = [];
 
   for (const cluster of clusters) {
-    const topic = classifyStoryTopic(cluster);
+    const topic = classifyStoryTopic(cluster, options?.sourceRegistry);
     const recency = calculateRecencyScore(
       cluster.lastPublishedAt,
       referenceDate,

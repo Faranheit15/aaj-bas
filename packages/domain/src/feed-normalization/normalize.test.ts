@@ -84,6 +84,7 @@ describe("normalizeFeedItem", () => {
       "desk-daily",
       {
         title: "<b>Markets</b>",
+        author: "<em>Desk Author</em>",
         description: "<p>123456789😀extra</p>",
         link: "https://example.com/story?utm_medium=rss&id=7",
         publishedAt: "2026-08-19T08:00:00+05:30",
@@ -95,6 +96,7 @@ describe("normalizeFeedItem", () => {
       sourceId: "desk-daily",
       guid: "https://example.com/story?id=7",
       title: "Markets",
+      author: "Desk Author",
       description: "123456789😀",
       url: "https://example.com/story?id=7",
       publishedAt: "2026-08-19T02:30:00.000Z",

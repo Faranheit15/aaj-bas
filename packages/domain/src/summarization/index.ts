@@ -2,6 +2,12 @@ export { CloudflareWorkersAiSummarizer } from "./cloudflare-workers-ai";
 export { DeterministicFallbackSummarizer } from "./fallback";
 export { createSummarizer } from "./factory";
 export {
+  applyReviewedReportingType,
+  clusterForGeneratedSummary,
+  sourceIdsPermittingUse,
+  sourcePermitsUse,
+} from "./source-policy";
+export {
   GOLDEN_PROMPT_DATASET,
   GOLDEN_PROMPT_DATASET_FULL,
 } from "./golden-dataset";

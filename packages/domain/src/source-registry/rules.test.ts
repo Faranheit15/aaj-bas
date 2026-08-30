@@ -257,6 +257,20 @@ describe("the hosts an entry names besides its feed", () => {
     }
   });
 
+  it("classifies licenseUrl, so a published licence link cannot point at a private host", () => {
+    for (const [licenseUrl, ruleId] of [
+      ["http://127.0.0.1/licence", "url/no-address-literal"],
+      ["https://wiki.internal/licence", "url/no-private-host"],
+      ["https://desk-daily.invalid/licence", "sample/reserved-host-only"],
+    ] as const) {
+      const found = findingsOf(registryOf([realEntry({ licenseUrl })]), ruleId);
+
+      expect(found, licenseUrl).toHaveLength(1);
+      expect(found[0]?.path, licenseUrl).toBe("sources[0].licenseUrl");
+      expect(found[0]?.message, licenseUrl).toContain("licence URL");
+    }
+  });
+
   it("leaves http alone on the two URLs where it is legitimate", () => {
     // `feedUrl` is https-only and the schema enforces it. A terms page and a
     // publisher's home page are pages a human opens, not documents this product

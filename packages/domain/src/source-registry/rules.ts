@@ -12,7 +12,7 @@
  * a hostname reaches the network, which is a classification rather than a
  * shape, and the cross-entry patterns that show a review was not really done.
  *
- * The host rules read all three URLs an entry carries, not only the one a
+ * The host rules read all URLs an entry carries, not only the one a
  * fetcher will request. See `CLASSIFIED_URL_FIELDS`.
  *
  * Every rule is a pure function of one parsed registry. No filesystem, no
@@ -237,24 +237,30 @@ export const SOURCE_REGISTRY_RULES: readonly SourceRegistryRule[] = [
 ];
 
 /**
- * The three URLs whose host is classified, and why each one is.
+ * The URLs whose host is classified, and why each one is.
  *
  * `feedUrl` is the document something will fetch, so its host is the SSRF
- * surface section 19 names. The other two are read for a different reason, and
+ * surface section 19 names. The other links are read for a different reason.
  * `termsUrl` is the sharper of them: it records the terms page a human says
  * they read, so a terms page on a loopback, private, or reserved host is close
  * to a proof that nobody outside the build machine could have read it. That is
  * a fabrication tell, which is what section 20 asks this file to be watching
- * for, and the classifier already answers it for free. `siteUrl` is the same
- * argument one step weaker: a publisher whose home page is an address literal
- * is not a publisher a reader could ever verify.
+ * for, and the classifier already answers it for free. `licenseUrl` is checked
+ * for the same reason. `siteUrl` is the same argument one step weaker: a
+ * publisher whose home page is an address literal is not a publisher a reader
+ * could ever verify.
  *
- * Only the host is classified. Unlike `feedUrl`, these two may legitimately be
- * `http:` -- a terms page is a page a human opened, not a document this product
- * fetches and turns into news -- so the feed's https rule deliberately does not
- * reach them.
+ * Only the host is classified. Unlike `feedUrl`, these other links may
+ * legitimately be `http:` -- a terms page or licence page is something a
+ * human opened, not a document this product fetches and turns into news -- so
+ * the feed's https rule deliberately does not reach them.
  */
-const CLASSIFIED_URL_FIELDS = ["feedUrl", "siteUrl", "termsUrl"] as const;
+const CLASSIFIED_URL_FIELDS = [
+  "feedUrl",
+  "siteUrl",
+  "termsUrl",
+  "licenseUrl",
+] as const;
 
 type ClassifiedUrlField = (typeof CLASSIFIED_URL_FIELDS)[number];
 
@@ -263,6 +269,7 @@ const URL_LABELS: Record<ClassifiedUrlField, string> = {
   feedUrl: "feed URL",
   siteUrl: "site URL",
   termsUrl: "terms URL",
+  licenseUrl: "licence URL",
 };
 
 interface ClassifiedHost {
@@ -285,11 +292,11 @@ interface ClassifiedHost {
  * `feedUrl` is `https:` by the time a rule runs, which is what keeps its
  * classification meaningful: a `javascript:` URL parses with an empty hostname,
  * and every host rule would pass it without objection. `siteUrl` and `termsUrl`
- * are restricted to http and https by `sourceUrlSchema`, which is the same
- * guarantee for the same reason.
+ * `siteUrl`, `termsUrl`, and `licenseUrl` are restricted to http and https by
+ * `sourceUrlSchema`, which is the same guarantee for the same reason.
  *
- * A missing `termsUrl` is an absence rather than a violation: an inactive entry
- * may omit it, and a sample entry has no such key at all.
+ * Missing `termsUrl` or `licenseUrl` is an absence rather than a violation: an
+ * inactive entry may omit them, and a sample entry has no such keys at all.
  */
 function classifiedHosts(registry: SourceRegistry): ClassifiedHost[] {
   return registry.sources.flatMap((source, index) =>
@@ -328,6 +335,8 @@ function urlValueOf(
       return source.siteUrl;
     case "termsUrl":
       return "termsUrl" in source ? source.termsUrl : undefined;
+    case "licenseUrl":
+      return "licenseUrl" in source ? source.licenseUrl : undefined;
   }
 }
 
