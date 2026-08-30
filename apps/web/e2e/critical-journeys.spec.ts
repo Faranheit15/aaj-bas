@@ -10,12 +10,16 @@
  * 6. broken latest edition falls back safely
  */
 
+import { readdir, unlink, writeFile } from "node:fs/promises";
 import { spawn, spawnSync } from "node:child_process";
 import { expect, type Page, test } from "@playwright/test";
 
 const WEB_ROOT = `${import.meta.dirname}/..`;
 const REPOSITORY_ROOT = `${WEB_ROOT}/../..`;
 const DIST = `${WEB_ROOT}/dist`;
+const PUBLIC_CONTENT = `${WEB_ROOT}/public/content`;
+const STAGED_EDITIONS = `${PUBLIC_CONTENT}/editions`;
+const FIXTURE_EDITION_DATE = "2026-07-21";
 
 interface Served {
   readonly origin: string;
@@ -39,12 +43,36 @@ function run(command: string, args: readonly string[], cwd: string): void {
   }
 }
 
-function buildSampleFixture(): void {
+async function buildSampleFixture(): Promise<void> {
   run(
     "bun",
     [`${REPOSITORY_ROOT}/scripts/stage-content.ts`, "--include-sample-data"],
     REPOSITORY_ROOT,
   );
+
+  // The repository may now contain a real edition dated today. Keep the
+  // browser fixture's pointer on the historical sample so these journeys test
+  // the same stale-latest behaviour regardless of the calendar or publication
+  // state in the checkout.
+  for (const name of await readdir(STAGED_EDITIONS)) {
+    if (name !== `${FIXTURE_EDITION_DATE}.json`) {
+      await unlink(`${STAGED_EDITIONS}/${name}`);
+    }
+  }
+  await writeFile(
+    `${PUBLIC_CONTENT}/latest.json`,
+    `${JSON.stringify(
+      {
+        schemaVersion: 1,
+        contentSet: "sample",
+        latest: FIXTURE_EDITION_DATE,
+        editions: [FIXTURE_EDITION_DATE],
+      },
+      null,
+      2,
+    )}\n`,
+  );
+
   run("bunx", ["vite", "build"], WEB_ROOT);
   run(
     "bun",
@@ -120,9 +148,9 @@ function storyList(page: Page) {
   return page.locator("ol.edition-stories > li.edition-story");
 }
 
-test.beforeAll(() => {
+test.beforeAll(async () => {
   test.setTimeout(300_000);
-  buildSampleFixture();
+  await buildSampleFixture();
 });
 
 test.afterEach(async () => {
