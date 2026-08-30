@@ -327,6 +327,7 @@ export async function runDailyDraftWorkflow(
     // Git quite correctly refuses to overwrite untracked artifacts.
     await Bun.write(editionPath, `${result.editionJson}\n`);
     await Bun.write(summaryPath, `${prBody}\n`);
+    runCommand("bunx", ["@biomejs/biome", "format", "--write", editionPath]);
 
     runCommand("git", ["add", editionPath, summaryPath]);
 
