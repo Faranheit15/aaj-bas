@@ -11,6 +11,8 @@
 export interface RawFeedItem {
   readonly guid?: string | null;
   readonly title?: string | null;
+  /** Feed-provided byline when the source exposes one. */
+  readonly author?: string | null;
   readonly description?: string | null;
   readonly link?: string | null;
   readonly publishedAt?: string | null;
@@ -27,6 +29,8 @@ export interface NormalizedFeedItem {
   /** The source GUID, or a content-derived GUID when the source supplied none. */
   readonly guid: string;
   readonly title: string;
+  /** A bounded, plain-text feed byline when one was supplied. */
+  readonly author?: string;
   readonly description: string;
   readonly url: string | null;
   readonly publishedAt: string | null;
@@ -245,6 +249,7 @@ export function normalizeFeedItem(
     sanitizeHtmlToText(input.title),
     settings.maxTitleCharacters,
   );
+  const normalizedAuthor = sanitizeHtmlToText(input.author);
   const description = truncate(
     sanitizeHtmlToText(input.description),
     settings.maxDescriptionCharacters,
@@ -259,6 +264,9 @@ export function normalizeFeedItem(
     sourceId,
     guid: suppliedGuid ?? url ?? `content-${contentHash}`,
     title,
+    ...(normalizedAuthor === ""
+      ? {}
+      : { author: truncate(normalizedAuthor, 200) }),
     description,
     url,
     publishedAt: normalizeFeedDate(input.publishedAt),

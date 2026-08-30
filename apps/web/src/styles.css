@@ -414,6 +414,27 @@ p {
   text-decoration: underline;
 }
 
+.story-source-attribution {
+  margin: 0.35rem 0 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.story-source-authors,
+.story-source-policy {
+  margin: 0.35rem 0 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.story-source-policy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .story-metadata {
   padding-top: 0.85rem;
   border-top: 1px solid var(--rule);

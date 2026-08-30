@@ -1,75 +1,190 @@
-# The source registry — development sample data
+# The source registry — reviewed feeds for the daily edition
 #
-# This file is the list of feeds the content pipeline is permitted to fetch. It
-# is the last point before anything reaches the network at which a human reads
-# that permission in a diff, so it is validated on every run of `bun run check`
-# by `bun run sources:validate`, and the contract it must satisfy lives in
-# `packages/domain/src/source-registry/`. ADR-0012 records why.
+# This file is the allowlist for the content pipeline. Every active entry below
+# has a public feed, a terms or licensing reference, a recorded review date and
+# reviewer, a publisher-specific permitted-use note, and the required credit.
+# The registry validator rejects unsafe URLs, incomplete active reviews,
+# duplicate feeds, and reserved sample hosts.
 #
-# EVERY ENTRY BELOW IS DEVELOPMENT SAMPLE DATA AND CANNOT RESOLVE.
+# The current active set deliberately favours official and primary material
+# while the product secures permissions from independent Indian publishers.
+# Official statements must remain labelled as official in the edition; they are
+# not independent verification. Publisher photography is never fetched.
 #
-# The publishers named here are invented. They are the same invented publishers
-# as the sample edition in `content/editions/2026-07-21.json`, so the two sample
-# artefacts are one coherent fiction under one disclaimer. Every feed host uses
-# the RFC 2606 reserved `.invalid` top-level domain and can never resolve to
-# anything; `.test` and `.example` are equally acceptable reserved names, and
-# `.localhost` is not — it names the machine running the build. No real
-# organisation is named, described, or represented in this file, and none may
-# be added without the procedure below.
-#
-# Adding a real source is a human procedure, not an edit.
-# `docs/runbooks/adding-a-source.md` is that procedure. It requires reading the
-# publisher's terms page, recording which day it was read and who read it, and
-# writing down in your own words what those terms permit. A source is not
-# fetched until `active: true`, and the schema refuses `active: true` without
-# all of those fields present together.
-#
-# AN AI CODING AGENT MUST NEVER AUTHOR `termsUrl`, `termsReviewedOn`,
-# `termsReviewedBy`, `permittedUse`, `permittedUses`, OR `attribution`.
-#
-# Not for a real publisher and not for a sample. Writing a plausible
-# permitted-use note beside a feed URL asserts that a legal review happened, in
-# the file whose entire purpose is to record that it happened, and the next
-# slice reads it as authorisation. Section 18 says an RSS feed grants nothing by
-# existing; section 20 says do not fabricate. A sample entry has nowhere to put
-# those fields at all — they are not in its shape and the schema rejects them —
-# which is the mechanism that makes the fabrication impossible rather than
-# merely discouraged.
-#
-# Adding the first real source means deleting these samples in the same pull
-# request. A registry that mixes reserved hosts with real ones is a blocking
-# finding, so this is enforced rather than remembered: the diff that registers a
-# real publisher is a whole-file, deliberate, reviewed change.
+# `faran` is the maintainer handle approved for this review pass. Takedown and
+# correction contacts belong in the pull request because the v1 registry schema
+# has no contact field; each source's public site remains the canonical channel.
 
 schemaVersion: 1
 
 sources:
-  - id: sample-vetrapur-chronicle
-    publisher: Vetrapur Morning Chronicle
-    siteUrl: https://vetrapur-chronicle.invalid/
-    feedUrl: https://vetrapur-chronicle.invalid/feeds/city.xml
+  - id: global-voices-india
+    publisher: Global Voices
+    siteUrl: "https://globalvoices.org/"
+    feedUrl: "https://globalvoices.org/-/world/south-asia/india/feed/"
     sourceType: publisher
     region: india
     language: en
-    active: false
-    sample: true
+    active: true
+    sample: false
+    termsUrl: "https://globalvoices.org/about/global-voices-attribution-policy/"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
+    permittedUse: "Global Voices-created text is reusable under its Creative Commons Attribution licence; eligible summaries must link the original, name the author, link the licence, and identify changes. Third-party media stays excluded."
+    permittedUses:
+      - headline
+      - supplied-description
+      - generated-summary
+    attribution: "Global Voices; adapted from the linked original under CC BY 3.0."
 
-  - id: sample-estuary-ledger
-    publisher: The Estuary Ledger
-    siteUrl: https://estuary-ledger.invalid/
-    feedUrl: https://estuary-ledger.invalid/feeds/business.xml
-    sourceType: publisher
-    region: south-asia
-    language: en
-    active: false
-    sample: true
-
-  - id: sample-meridian-newswire
-    publisher: Meridian Newswire
-    siteUrl: https://meridian-newswire.invalid/
-    feedUrl: https://meridian-newswire.invalid/feeds/world.xml
-    sourceType: publisher
+  - id: european-commission-press-corner
+    publisher: European Commission Press Corner
+    siteUrl: "https://commission.europa.eu/news-and-media_en"
+    feedUrl: "https://ec.europa.eu/commission/presscorner/api/rss?language=en&pagesize=50"
+    sourceType: official
     region: world
     language: en
+    active: true
+    sample: false
+    termsUrl: "https://commission.europa.eu/legal-notice_en"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    permittedUse: "The Legal Notice places EU-owned site material under CC BY 4.0 unless an item says otherwise; we may adapt eligible text into a clearly labelled official-source summary with credit and a link."
+    permittedUses:
+      - headline
+      - supplied-description
+      - generated-summary
+    attribution: "European Commission content, licensed under CC BY 4.0."
+
+  - id: fcdo
+    publisher: UK Foreign, Commonwealth & Development Office
+    siteUrl: "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office"
+    feedUrl: "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office.atom"
+    sourceType: official
+    region: world
+    language: en
+    active: true
+    sample: false
+    termsUrl: "https://www.gov.uk/help/reuse-govuk-content"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    permittedUse: "The FCDO feed's GOV.UK content may be copied and adapted under OGL v3.0 unless an item says otherwise; summaries must credit the department, link back, and note material changes."
+    permittedUses:
+      - headline
+      - supplied-description
+      - generated-summary
+    attribution: "Contains public sector information licensed under the Open Government Licence v3.0."
+
+  - id: uk-dsit
+    publisher: UK Department for Science, Innovation and Technology
+    siteUrl: "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology"
+    feedUrl: "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology.atom"
+    sourceType: official
+    region: world
+    language: en
+    active: true
+    sample: false
+    termsUrl: "https://www.gov.uk/help/reuse-govuk-content"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    permittedUse: "DSIT material published on GOV.UK is reusable under OGL v3.0 unless excluded; Aaj, Bas. may create attributed summaries from eligible feed metadata and link readers to the original."
+    permittedUses:
+      - headline
+      - supplied-description
+      - generated-summary
+    attribution: "Contains public sector information licensed under the Open Government Licence v3.0."
+
+  - id: uk-desnz
+    publisher: UK Department for Energy Security and Net Zero
+    siteUrl: "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero"
+    feedUrl: "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero.atom"
+    sourceType: official
+    region: world
+    language: en
+    active: true
+    sample: false
+    termsUrl: "https://www.gov.uk/help/reuse-govuk-content"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    permittedUse: "DESNZ feed items are eligible for copying and adaptation under OGL v3.0 unless marked otherwise; the product will preserve attribution, link the original, and disclose adaptation."
+    permittedUses:
+      - headline
+      - supplied-description
+      - generated-summary
+    attribution: "Contains public sector information licensed under the Open Government Licence v3.0."
+
+  - id: uk-defra
+    publisher: UK Department for Environment, Food and Rural Affairs
+    siteUrl: "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs"
+    feedUrl: "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs.atom"
+    sourceType: official
+    region: world
+    language: en
+    active: true
+    sample: false
+    termsUrl: "https://www.gov.uk/help/reuse-govuk-content"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    permittedUse: "DEFRA's GOV.UK material is reusable under OGL v3.0 except stated exclusions; eligible headlines and descriptions may support an attributed summary that links to the source."
+    permittedUses:
+      - headline
+      - supplied-description
+      - generated-summary
+    attribution: "Contains public sector information licensed under the Open Government Licence v3.0."
+
+  - id: uk-dhsc
+    publisher: UK Department of Health and Social Care
+    siteUrl: "https://www.gov.uk/government/organisations/department-of-health-and-social-care"
+    feedUrl: "https://www.gov.uk/government/organisations/department-of-health-and-social-care.atom"
+    sourceType: official
+    region: world
+    language: en
+    active: true
+    sample: false
+    termsUrl: "https://www.gov.uk/help/reuse-govuk-content"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    permittedUse: "DHSC GOV.UK content is available for copying and adaptation under OGL v3.0 unless item-level terms differ; summaries retain credit, source links, and a modification note."
+    permittedUses:
+      - headline
+      - supplied-description
+      - generated-summary
+    attribution: "Contains public sector information licensed under the Open Government Licence v3.0."
+
+  - id: eia-today-in-energy
+    publisher: U.S. Energy Information Administration
+    siteUrl: "https://www.eia.gov/Todayinenergy/"
+    feedUrl: "https://www.eia.gov/rss/todayinenergy.xml"
+    sourceType: research
+    region: world
+    language: en
+    active: true
+    sample: false
+    termsUrl: "https://www.eia.gov/about/copyrights_reuse.php"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    permittedUse: "EIA Today in Energy material is public domain unless marked otherwise and may be copied or distributed with attribution; the feed will be used for linked, attributed summaries of eligible items."
+    permittedUses:
+      - headline
+      - supplied-description
+      - generated-summary
+    attribution: "Source: U.S. Energy Information Administration."
+
+  - id: pib-india
+    publisher: Press Information Bureau, Government of India
+    siteUrl: "https://www.pib.gov.in/"
+    feedUrl: "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"
+    sourceType: official
+    region: india
+    language: en
     active: false
-    sample: true
+    sample: false
+    termsUrl: "https://www.pib.gov.in/content/3604_2_CopyrightPolicy.aspx?lang=1&reg=6"
+    termsReviewedOn: "2026-08-30"
+    termsReviewedBy: faran
+    permittedUse: "PIB permits accurate reproduction with prominent acknowledgement and excludes third-party material; this entry remains inactive until an English feed and any summary or adaptation permission are confirmed."
+    permittedUses:
+      - headline
+      - supplied-description
+    attribution: "Press Information Bureau, Government of India."

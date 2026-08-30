@@ -11,6 +11,11 @@ import {
   storySchema,
 } from "@aaj-bas/schemas";
 import { z } from "zod";
+import {
+  applyReviewedReportingType,
+  sourceIdsPermittingUse,
+  sourcePermitsUse,
+} from "./source-policy";
 import type { StorySummarizerInput } from "./types";
 
 export const SUMMARIZE_PROMPT_VERSION = "summarize-v1" as const;
@@ -79,13 +84,15 @@ export function compileSummarizePrompt(input: StorySummarizerInput): {
   system: string;
   user: string;
 } {
-  const allowedSources = Array.from(
-    new Set(
-      input.cluster.sources.length > 0
-        ? input.cluster.sources
-        : input.cluster.items.map((i) => i.sourceId),
-    ),
-  ).filter(Boolean);
+  const clusterSourceIds =
+    input.cluster.sources.length > 0
+      ? input.cluster.sources
+      : input.cluster.items.map((i) => i.sourceId);
+  const allowedSources = sourceIdsPermittingUse(
+    clusterSourceIds,
+    "generated-summary",
+    input.sourceRegistry,
+  );
 
   const system = [
     "You are a factual, calm, and neutral news summarizer for Aaj, Bas., a finite daily news product.",
@@ -97,8 +104,9 @@ export function compileSummarizePrompt(input: StorySummarizerInput): {
     "3. NEVER present opinion, commentary, or official statements as independently verified facts.",
     "4. When sources disagree, preserve uncertainty rather than choosing one side. State disagreements in 'uncertainty'.",
     "5. Every sentence in 'whatChanged' MUST cite at least one source ID from the provided list of valid source IDs.",
-    "6. Extract named entities, numbers, and dates mentioned in the summary.",
-    "7. Return ONLY valid JSON matching the specified output schema. No markdown formatting, code fences, or preamble.",
+    "6. Use only source descriptions explicitly provided below; a missing description is not evidence.",
+    "7. Extract named entities, numbers, and dates mentioned in the summary.",
+    "8. Return ONLY valid JSON matching the specified output schema. No markdown formatting, code fences, or preamble.",
     "",
     "JSON OUTPUT SCHEMA:",
     "{",
@@ -118,12 +126,25 @@ export function compileSummarizePrompt(input: StorySummarizerInput): {
   ].join("\n");
 
   const itemsFormatted = input.cluster.items
+    .filter((item) =>
+      sourcePermitsUse(
+        item.sourceId,
+        "generated-summary",
+        input.sourceRegistry,
+      ),
+    )
     .map((item, idx) => {
       const parts = [
         `[SOURCE: ${item.sourceId} | ITEM: ${idx + 1}]`,
         `Title: ${item.title}`,
         item.publishedAt ? `Published: ${item.publishedAt}` : null,
-        item.description ? `Description: ${item.description}` : null,
+        sourcePermitsUse(
+          item.sourceId,
+          "supplied-description",
+          input.sourceRegistry,
+        ) && item.description
+          ? `Description: ${item.description}`
+          : null,
       ].filter(Boolean);
       return parts.join("\n");
     })
@@ -218,7 +239,11 @@ export function convertPromptResultToStory(
     }
   }
 
-  const sourceIds = Array.from(citedSources).slice(0, 20);
+  const sourceIds = sourceIdsPermittingUse(
+    Array.from(citedSources),
+    "generated-summary",
+    input.sourceRegistry,
+  ).slice(0, 20);
   const sourceCount = sourceIds.length;
   const confidence =
     sourceCount > 1 ? ("multi-source" as const) : ("single-source" as const);
@@ -309,5 +334,7 @@ export function convertPromptResultToStory(
     reviewed: false,
   };
 
-  return storySchema.parse(storyCandidate);
+  return storySchema.parse(
+    applyReviewedReportingType(storyCandidate, input.sourceRegistry),
+  );
 }

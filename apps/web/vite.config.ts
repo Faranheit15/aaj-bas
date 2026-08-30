@@ -1,6 +1,20 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
 
+// Bun's VM test workers do not apply Vitest's `test.env` map to the process
+// timezone before Intl is initialized. Set the same explicit test timezone at
+// config load so the editorial-day regression cannot pass by inheriting the
+// developer machine's zone.
+const runtimeProcess = (
+  globalThis as typeof globalThis & {
+    process?: { env: Record<string, string | undefined> };
+  }
+).process;
+
+if (runtimeProcess?.env.VITEST === "true") {
+  runtimeProcess.env.TZ = "America/Los_Angeles";
+}
+
 export default defineConfig({
   plugins: [react()],
   test: {

@@ -22,7 +22,11 @@ import {
   deduplicateFeedItems,
   normalizeFeedItems,
 } from "../feed-normalization";
-import { DeterministicFallbackSummarizer } from "../summarization";
+import {
+  applyReviewedReportingType,
+  clusterForGeneratedSummary,
+  DeterministicFallbackSummarizer,
+} from "../summarization";
 import { formatDraftEditionSummaryMarkdown } from "./format-summary-markdown";
 import type { DraftEditionPipelineResult, EditionPipelineInput } from "./types";
 
@@ -83,6 +87,7 @@ export async function generateDraftEditionPipeline(
   const rankingResult = rankAndComposeCandidates(clusters, {
     referenceDate: editionDate,
     ...input.rankingOptions,
+    sourceRegistry: input.sourceRegistry,
   });
 
   // 5. Story Summarization
@@ -92,14 +97,28 @@ export async function generateDraftEditionPipeline(
   const coreStories: Story[] = [];
 
   for (const candidate of rankingResult.coreCandidates) {
+    const summaryCluster = clusterForGeneratedSummary(
+      candidate.cluster,
+      input.sourceRegistry,
+    );
+    if (summaryCluster === undefined) {
+      continue;
+    }
+
     const summaryOutput = await summarizer.summarize({
-      cluster: candidate.cluster,
+      cluster: summaryCluster,
+      sourceRegistry: input.sourceRegistry,
       topic: candidate.topic,
       editionDate,
       candidate,
     });
-    coreStories.push(summaryOutput.story);
-    clusterByStoryId.set(summaryOutput.story.id, candidate.cluster);
+    const story = applyReviewedReportingType(
+      summaryOutput.story,
+      input.sourceRegistry,
+    );
+    assertStorySourcesArePermitted(story, summaryCluster);
+    coreStories.push(story);
+    clusterByStoryId.set(story.id, summaryCluster);
   }
 
   const poolStories: Story[] = [];
@@ -112,15 +131,29 @@ export async function generateDraftEditionPipeline(
     const interest = topic as InterestSlug;
     interestPools[interest] = [];
     for (const candidate of poolCandidates.slice(0, 3)) {
+      const summaryCluster = clusterForGeneratedSummary(
+        candidate.cluster,
+        input.sourceRegistry,
+      );
+      if (summaryCluster === undefined) {
+        continue;
+      }
+
       const summaryOutput = await summarizer.summarize({
-        cluster: candidate.cluster,
+        cluster: summaryCluster,
+        sourceRegistry: input.sourceRegistry,
         topic: candidate.topic,
         editionDate,
         candidate,
       });
-      poolStories.push(summaryOutput.story);
-      interestPools[interest]?.push(summaryOutput.story.id);
-      clusterByStoryId.set(summaryOutput.story.id, candidate.cluster);
+      const story = applyReviewedReportingType(
+        summaryOutput.story,
+        input.sourceRegistry,
+      );
+      assertStorySourcesArePermitted(story, summaryCluster);
+      poolStories.push(story);
+      interestPools[interest]?.push(story.id);
+      clusterByStoryId.set(story.id, summaryCluster);
     }
   }
 
@@ -183,6 +216,31 @@ export async function generateDraftEditionPipeline(
         ? registrySource.sourceType
         : ("publisher" as const);
 
+    const resolvedAttribution =
+      registrySource !== undefined && "attribution" in registrySource
+        ? registrySource.attribution
+        : undefined;
+    const resolvedTermsUrl =
+      registrySource !== undefined && "termsUrl" in registrySource
+        ? registrySource.termsUrl
+        : undefined;
+    const resolvedLicenseUrl =
+      registrySource !== undefined && "licenseUrl" in registrySource
+        ? registrySource.licenseUrl
+        : undefined;
+    const citedItems = [...clusterByStoryId.values()]
+      .flatMap((cluster) => cluster.items)
+      .filter((item) => item.sourceId === sourceId);
+    const resolvedAuthors = [
+      ...new Set(
+        citedItems.flatMap((item) =>
+          item.author === undefined || item.author.trim() === ""
+            ? []
+            : [item.author],
+        ),
+      ),
+    ].slice(0, 10);
+
     sourceReferences.push({
       id: sourceId,
       publisher: resolvedPublisher,
@@ -190,6 +248,14 @@ export async function generateDraftEditionPipeline(
       url: resolvedUrl,
       sourceType: resolvedSourceType,
       publishedAt: resolvedPublishedAt,
+      ...(resolvedAttribution === undefined
+        ? {}
+        : { attribution: resolvedAttribution }),
+      ...(resolvedAuthors.length === 0 ? {} : { authors: resolvedAuthors }),
+      ...(resolvedTermsUrl === undefined ? {} : { termsUrl: resolvedTermsUrl }),
+      ...(resolvedLicenseUrl === undefined
+        ? {}
+        : { licenseUrl: resolvedLicenseUrl }),
     });
   }
 
@@ -314,4 +380,20 @@ function formatSourceIdToName(sourceId: string): string {
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
+}
+
+/** Fail closed if a provider returns a citation outside its reviewed input. */
+function assertStorySourcesArePermitted(
+  story: Story,
+  summaryCluster: StoryCluster,
+): void {
+  const permitted = new Set(summaryCluster.sources);
+  const unauthorized = story.sourceIds.filter(
+    (sourceId) => !permitted.has(sourceId),
+  );
+  if (unauthorized.length > 0) {
+    throw new Error(
+      `story ${story.id} cites source(s) outside the permitted summary input: ${unauthorized.join(", ")}`,
+    );
+  }
 }

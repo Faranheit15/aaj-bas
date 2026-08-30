@@ -26,6 +26,8 @@ import {
   formatSourceHealthJson,
   formatSourceHealthMarkdown,
   formatSourceHealthText,
+  normalizeFeedItems,
+  parseRawFeed,
   parseFetchSourcesCommand,
   registryExitCodeFor,
   REGISTRY_EXIT_CODES,
@@ -96,6 +98,10 @@ async function run(): Promise<number> {
   }
 
   const measuredResults: SourceFetchResultInput[] = [];
+  const normalizedItemsBySource = new Map<
+    string,
+    ReturnType<typeof normalizeFeedItems>
+  >();
   for (const source of approved) {
     const start = performance.now();
     const result = await fetchFeed(
@@ -108,9 +114,30 @@ async function run(): Promise<number> {
       ...result,
       durationMs,
     });
+
+    if (result.kind === "success") {
+      try {
+        const rawItems = parseRawFeed(result.body, result.contentType);
+        normalizedItemsBySource.set(
+          result.sourceId,
+          normalizeFeedItems(result.sourceId, rawItems),
+        );
+      } catch (error) {
+        // Keep the transport result intact, but leave the source with no
+        // usable items so the health report exposes the parse failure as an
+        // empty-feed warning rather than calling the source healthy.
+        normalizedItemsBySource.set(result.sourceId, []);
+        console.error(
+          `WARN: ${result.sourceId} feed parsing failed: ${describe(error)}`,
+        );
+      }
+    }
   }
 
-  const healthReport = evaluateSourceHealth(measuredResults, undefined);
+  const healthReport = evaluateSourceHealth(
+    measuredResults,
+    normalizedItemsBySource,
+  );
 
   if (parsed.json) {
     console.log(formatSourceHealthJson(healthReport));

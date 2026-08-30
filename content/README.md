@@ -18,12 +18,14 @@ the https-only feed URL, the address and reserved-host classification, the terms
 cannot be missing, and the duplicate checks. That command is part of `bun run check`, so a broken registry
 fails the merge-blocking suite exactly as a broken edition does.
 
-Every entry in it today is development sample data on reserved `.invalid` hosts that can never resolve, and
-nothing fetches anything yet. Adding a real source is a human procedure: `docs/runbooks/adding-a-source.md`
-describes it, and it requires a person to read the publisher's terms page and record what they found. An AI
-coding agent must never author `termsUrl`, `termsReviewedOn`, `termsReviewedBy`, `permittedUse`,
-`permittedUses`, or `attribution` — writing a plausible permitted-use note asserts a legal review that did
-not happen, in the file whose purpose is to record that it did. ADR-0012 records the design and what it cannot promise.
+The registry contains reviewed active sources and may also contain inactive real-source candidates. Active entries
+are fetched; inactive entries are retained for review or operational history and are not fetched. Adding or changing
+a source is a human procedure: `docs/runbooks/adding-a-source.md` describes it, and it requires a person to read
+the publisher's terms page and record what they found. A direct licence page may be recorded as `licenseUrl` when
+one exists. An AI coding agent must never author `termsUrl`,
+`termsReviewedOn`, `termsReviewedBy`, `permittedUse`, `permittedUses`, or `attribution` — writing a plausible
+permitted-use note asserts a legal review that did not happen, in the file whose purpose is to record that it did.
+ADR-0012 records the design and what it cannot promise.
 
 A build stages editions from here into the reader: `bun run content:stage` copies only the publishable ones
 into `apps/web/public/content/`, and the `deploy-web` job re-checks those staged bytes with

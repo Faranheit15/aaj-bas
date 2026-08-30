@@ -54,6 +54,20 @@ function extractAtomLinkHref(entryXml: string): string | null {
   return extractTagContent(entryXml, "link");
 }
 
+function extractAtomAuthor(entryXml: string): string | null {
+  const authorMatch = /<author(?:\s+[^>]*)?>([\s\S]*?)<\/author>/i.exec(
+    entryXml,
+  );
+  if (!authorMatch?.[1]) {
+    return null;
+  }
+
+  return (
+    extractTagContent(authorMatch[1], "name") ??
+    extractTagContent(authorMatch[1], "email")
+  );
+}
+
 function parseRssXml(xml: string): RawFeedItem[] {
   const items: RawFeedItem[] = [];
   const itemRegex = /<item(?:\s+[^>]*)?>([\s\S]*?)<\/item>/gi;
@@ -62,6 +76,9 @@ function parseRssXml(xml: string): RawFeedItem[] {
   while (match !== null) {
     const itemXml = match[1] ?? "";
     const title = extractTagContent(itemXml, "title");
+    const author =
+      extractTagContent(itemXml, "author") ??
+      extractTagContent(itemXml, "creator");
     const link = extractTagContent(itemXml, "link");
     const guid = extractTagContent(itemXml, "guid") ?? link;
     const description =
@@ -74,6 +91,7 @@ function parseRssXml(xml: string): RawFeedItem[] {
     items.push({
       guid,
       title,
+      ...(author === null ? {} : { author }),
       description,
       link,
       publishedAt,
@@ -93,6 +111,7 @@ function parseAtomXml(xml: string): RawFeedItem[] {
   while (match !== null) {
     const entryXml = match[1] ?? "";
     const title = extractTagContent(entryXml, "title");
+    const author = extractAtomAuthor(entryXml);
     const link = extractAtomLinkHref(entryXml);
     const guid = extractTagContent(entryXml, "id") ?? link;
     const description =
@@ -106,6 +125,7 @@ function parseAtomXml(xml: string): RawFeedItem[] {
     items.push({
       guid,
       title,
+      ...(author === null ? {} : { author }),
       description,
       link,
       publishedAt,
@@ -127,6 +147,7 @@ function parseJsonFeed(jsonString: string): RawFeedItem[] {
         summary?: string;
         content_text?: string;
         content_html?: string;
+        author?: { name?: string } | null;
         url?: string;
         date_published?: string;
         date_modified?: string;
@@ -140,6 +161,7 @@ function parseJsonFeed(jsonString: string): RawFeedItem[] {
     return parsed.items.map((item) => ({
       guid: item.id ?? item.url ?? null,
       title: item.title ?? null,
+      ...(item.author?.name === undefined ? {} : { author: item.author.name }),
       description:
         item.summary ?? item.content_text ?? item.content_html ?? null,
       link: item.url ?? null,

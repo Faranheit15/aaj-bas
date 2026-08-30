@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 import type { RawFeedItem } from "../feed-normalization";
-import { GOLDEN_PROMPT_DATASET_FULL } from "../summarization";
+import { sourceRegistrySchema } from "../source-registry";
+import {
+  DeterministicFallbackSummarizer,
+  GOLDEN_PROMPT_DATASET_FULL,
+  type StorySummarizer,
+} from "../summarization";
 import { editorialDateInIndia, generateDraftEditionPipeline } from "./pipeline";
 
 describe("editorialDateInIndia", () => {
@@ -247,5 +252,173 @@ describe("Draft edition generation pipeline (AB-701)", () => {
     );
     expect(result.factualReport.passed).toBe(true);
     expect(result.isPublishable).toBe(true);
+  });
+
+  it("passes only generated-summary-permitted source items to summarizers", async () => {
+    const sourceRegistry = sourceRegistrySchema.parse({
+      schemaVersion: 1,
+      sources: [
+        {
+          id: "headline-only",
+          publisher: "Headline Only",
+          siteUrl: "https://headline-only.example/",
+          feedUrl: "https://headline-only.example/feed.xml",
+          sourceType: "publisher",
+          region: "india",
+          language: "en",
+          active: true,
+          sample: false,
+          termsUrl: "https://headline-only.example/terms",
+          termsReviewedOn: "2026-08-22",
+          termsReviewedBy: "faran",
+          permittedUse:
+            "Only the source headline may be reused; descriptions and generated summaries are not permitted.",
+          permittedUses: ["headline"],
+          attribution: "Headline Only",
+        },
+        {
+          id: "summary-source",
+          publisher: "Summary Source",
+          siteUrl: "https://summary-source.example/",
+          feedUrl: "https://summary-source.example/feed.xml",
+          sourceType: "publisher",
+          region: "india",
+          language: "en",
+          active: true,
+          sample: false,
+          termsUrl: "https://summary-source.example/terms",
+          licenseUrl: "https://summary-source.example/licence",
+          termsReviewedOn: "2026-08-22",
+          termsReviewedBy: "faran",
+          permittedUse:
+            "The headline and supplied description may be used for a generated summary with attribution.",
+          permittedUses: [
+            "headline",
+            "supplied-description",
+            "generated-summary",
+          ],
+          attribution: "Summary Source",
+        },
+      ],
+    });
+
+    let observedSourceIds: readonly string[] = [];
+    const fallback = new DeterministicFallbackSummarizer();
+    const summarizer: StorySummarizer = {
+      name: "capturing-summarizer",
+      summarize: async (input) => {
+        observedSourceIds = input.cluster.sources;
+        return fallback.summarize(input);
+      },
+    };
+
+    const result = await generateDraftEditionPipeline({
+      date: "2026-08-22",
+      sourceRegistry,
+      rawItemsBySource: new Map<string, RawFeedItem[]>([
+        [
+          "headline-only",
+          [
+            {
+              guid: "headline-guid",
+              title: "Councils prepare for a policy change",
+              description:
+                "This description must never be used in generated output.",
+              link: "https://headline-only.example/story",
+              publishedAt: "2026-08-22T08:00:00.000Z",
+            },
+          ],
+        ],
+        [
+          "summary-source",
+          [
+            {
+              guid: "summary-guid",
+              title: "Councils prepare for a policy change",
+              author: "Summary Author",
+              description:
+                "This permitted description explains the policy change for councils.",
+              link: "https://summary-source.example/story",
+              publishedAt: "2026-08-22T09:00:00.000Z",
+            },
+          ],
+        ],
+      ]),
+      summarizer,
+    });
+
+    expect(observedSourceIds).toEqual(["summary-source"]);
+    const storyText = result.edition.stories
+      .flatMap((story) => [story.headline, story.deck, ...story.whatChanged])
+      .join(" ");
+    expect(storyText).not.toContain("must never be used");
+    expect(storyText).toContain("permitted description");
+    const summarySource = result.edition.sources.find(
+      (source) => source.id === "summary-source",
+    );
+    expect(summarySource?.attribution).toBe("Summary Source");
+    expect(summarySource?.authors).toEqual(["Summary Author"]);
+    expect(summarySource?.termsUrl).toBe(
+      "https://summary-source.example/terms",
+    );
+    expect(summarySource?.licenseUrl).toBe(
+      "https://summary-source.example/licence",
+    );
+  });
+
+  it("does not invoke a summarizer when no source permits generated summaries", async () => {
+    const sourceRegistry = sourceRegistrySchema.parse({
+      schemaVersion: 1,
+      sources: [
+        {
+          id: "headline-only",
+          publisher: "Headline Only",
+          siteUrl: "https://headline-only.example/",
+          feedUrl: "https://headline-only.example/feed.xml",
+          sourceType: "publisher",
+          region: "india",
+          language: "en",
+          active: true,
+          sample: false,
+          termsUrl: "https://headline-only.example/terms",
+          termsReviewedOn: "2026-08-22",
+          termsReviewedBy: "faran",
+          permittedUse:
+            "Only the source headline may be reused; descriptions and generated summaries are not permitted.",
+          permittedUses: ["headline"],
+          attribution: "Headline Only",
+        },
+      ],
+    });
+    let calls = 0;
+    const summarizer: StorySummarizer = {
+      name: "must-not-run",
+      summarize: async () => {
+        calls += 1;
+        throw new Error("summarizer should not be called");
+      },
+    };
+
+    const result = await generateDraftEditionPipeline({
+      date: "2026-08-22",
+      sourceRegistry,
+      normalizedItems: [
+        {
+          sourceId: "headline-only",
+          guid: "headline-guid",
+          title: "A headline-only source reports a change",
+          description: "A source description that cannot be reused.",
+          url: "https://headline-only.example/story",
+          publishedAt: "2026-08-22T08:00:00.000Z",
+          updatedAt: null,
+          contentHash: "headline-hash",
+        },
+      ],
+      summarizer,
+    });
+
+    expect(calls).toBe(0);
+    expect(result.edition.stories).toEqual([]);
+    expect(result.hasBlockingIssues).toBe(true);
   });
 });

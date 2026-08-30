@@ -30,10 +30,12 @@ export {
   SOURCE_LANGUAGES,
   SOURCE_REGIONS,
   permittedUseSchema,
+  reportingTypeForReviewedSources,
   sourceEntrySchema,
   sourceLanguageSchema,
   sourceRegionSchema,
   sourceRegistrySchema,
+  sourcePermitsUse,
 } from "./registry";
 export type {
   RegistryFinding,

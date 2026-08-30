@@ -1,10 +1,59 @@
 import { describe, expect, it } from "vitest";
 import { storySchema } from "@aaj-bas/schemas";
 import type { StoryCluster } from "../clustering";
+import { sourceRegistrySchema } from "../source-registry";
 import { DeterministicFallbackSummarizer } from "./fallback";
 
 describe("DeterministicFallbackSummarizer", () => {
   const summarizer = new DeterministicFallbackSummarizer();
+
+  function policyRegistry() {
+    return sourceRegistrySchema.parse({
+      schemaVersion: 1,
+      sources: [
+        {
+          id: "headline-only",
+          publisher: "Headline Only",
+          siteUrl: "https://headline-only.example/",
+          feedUrl: "https://headline-only.example/feed.xml",
+          sourceType: "publisher",
+          region: "india",
+          language: "en",
+          active: true,
+          sample: false,
+          termsUrl: "https://headline-only.example/terms",
+          termsReviewedOn: "2026-08-22",
+          termsReviewedBy: "faran",
+          permittedUse:
+            "Only the source headline may be reused; descriptions and generated summaries are not permitted.",
+          permittedUses: ["headline"],
+          attribution: "Headline Only",
+        },
+        {
+          id: "summary-source",
+          publisher: "Summary Source",
+          siteUrl: "https://summary-source.example/",
+          feedUrl: "https://summary-source.example/feed.xml",
+          sourceType: "publisher",
+          region: "india",
+          language: "en",
+          active: true,
+          sample: false,
+          termsUrl: "https://summary-source.example/terms",
+          termsReviewedOn: "2026-08-22",
+          termsReviewedBy: "faran",
+          permittedUse:
+            "The headline and supplied description may be used for a generated summary with attribution.",
+          permittedUses: [
+            "headline",
+            "supplied-description",
+            "generated-summary",
+          ],
+          attribution: "Summary Source",
+        },
+      ],
+    });
+  }
 
   function makeMockCluster(
     id: string,
@@ -97,7 +146,7 @@ describe("DeterministicFallbackSummarizer", () => {
     expect(() => storySchema.parse(result.story)).not.toThrow();
   });
 
-  it("handles missing/short descriptions safely by padding context", async () => {
+  it("handles missing/short descriptions with an honest headline-only fallback", async () => {
     const cluster = makeMockCluster(
       "c-short",
       "Supreme Court passes environmental order",
@@ -113,6 +162,12 @@ describe("DeterministicFallbackSummarizer", () => {
 
     expect(result.story.whatChanged.length).toBeGreaterThanOrEqual(1);
     expect(result.story.whatChanged[0]?.length).toBeGreaterThanOrEqual(20);
+    expect(result.story.whatChanged[0]).toContain(
+      "The source headline reports:",
+    );
+    expect(result.story.whyItMatters).toContain(
+      "provided no permitted description material",
+    );
     expect(() => storySchema.parse(result.story)).not.toThrow();
   });
 
@@ -134,5 +189,58 @@ describe("DeterministicFallbackSummarizer", () => {
     expect(result.story.slug.length).toBeLessThanOrEqual(60);
     expect(result.story.slug).not.toMatch(/-$/);
     expect(() => storySchema.parse(result.story)).not.toThrow();
+  });
+
+  it("does not use a supplied description when that source lacks permission", async () => {
+    const original = makeMockCluster(
+      "c-policy",
+      "Councils prepare for a policy change",
+      "This description must never appear in generated output.",
+      ["headline-only", "summary-source"],
+    );
+    const cluster: StoryCluster = {
+      ...original,
+      items: original.items.map((item, index) => ({
+        ...item,
+        description:
+          index === 0
+            ? "This description must never appear in generated output."
+            : "This permitted description explains the policy change for councils.",
+      })),
+    };
+
+    const result = await summarizer.summarize({
+      cluster,
+      sourceRegistry: policyRegistry(),
+      topic: "india",
+      editionDate: "2026-08-22",
+    });
+
+    const storyText = [
+      result.story.headline,
+      result.story.deck,
+      ...result.story.whatChanged,
+    ].join(" ");
+    expect(storyText).not.toContain("must never appear");
+    expect(storyText).toContain("permitted description");
+    expect(result.story.sourceIds).toEqual(["summary-source"]);
+  });
+
+  it("fails closed when no source permits generated summaries", async () => {
+    const cluster = makeMockCluster(
+      "c-headline-only",
+      "A headline-only source reports a change",
+      "A source description that cannot be reused.",
+      ["headline-only"],
+    );
+
+    await expect(
+      summarizer.summarize({
+        cluster,
+        sourceRegistry: policyRegistry(),
+        topic: "india",
+        editionDate: "2026-08-22",
+      }),
+    ).rejects.toThrow("no source permitted for generated summaries");
   });
 });

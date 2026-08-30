@@ -581,6 +581,38 @@ describe("the source list", () => {
     );
     expect(firstTime).toHaveTextContent("20 July 2026, 9:15 pm IST");
   });
+
+  it("renders the exact reviewed attribution when a source requires one", () => {
+    const attribution =
+      "Global Voices; adapted from the linked original under CC BY 3.0.";
+    const source = {
+      ...present(sourcesFor(reportingStory)[0], "the first source"),
+      attribution,
+      authors: ["Subhashish Panigrahi"],
+      termsUrl:
+        "https://globalvoices.org/about/global-voices-attribution-policy/",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
+    };
+    const { container } = renderCard(reportingStory, { sources: [source] });
+    expand(reportingStory);
+
+    expect(
+      container.querySelector(".story-source-attribution"),
+    ).toHaveTextContent(attribution);
+    expect(container.querySelector(".story-source-authors")).toHaveTextContent(
+      "By Subhashish Panigrahi",
+    );
+    expect(
+      container.querySelector(
+        "a[href='https://globalvoices.org/about/global-voices-attribution-policy/']",
+      ),
+    ).toHaveTextContent("Reuse terms");
+    expect(
+      container.querySelector(
+        "a[href='https://creativecommons.org/licenses/by/3.0/']",
+      ),
+    ).toHaveTextContent("Licence");
+  });
 });
 
 describe("the story metadata", () => {

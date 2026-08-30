@@ -8,6 +8,7 @@
 import type { TopicSlug } from "@aaj-bas/schemas";
 import type { StoryCluster } from "../clustering";
 import { tokenizeTitle } from "../deduplication";
+import { sourcePermitsUse, type SourceRegistry } from "../source-registry";
 
 const TOPIC_KEYWORDS: Record<TopicSlug, readonly string[]> = {
   "business-economy": [
@@ -184,11 +185,17 @@ const TOPIC_KEYWORDS: Record<TopicSlug, readonly string[]> = {
   ],
 };
 
-export function classifyStoryTopic(cluster: StoryCluster): TopicSlug {
+export function classifyStoryTopic(
+  cluster: StoryCluster,
+  sourceRegistry?: SourceRegistry,
+): TopicSlug {
   const titleTokens = tokenizeTitle(cluster.representativeTitle);
 
   // Tokenize descriptions as additional context
   const descriptionText = cluster.items
+    .filter((item) =>
+      sourcePermitsUse(item.sourceId, "supplied-description", sourceRegistry),
+    )
     .map((i) => i.description)
     .filter(Boolean)
     .join(" ");

@@ -122,7 +122,25 @@ describe("formatDraftEditionSummaryMarkdown & composePrBody diagnostic rendering
         reviewed: true,
       },
     ],
-    sources: [],
+    sources: [
+      {
+        id: "source-desk-daily",
+        publisher: "Desk Daily",
+        title: "Major Policy Announcement",
+        url: "https://example.com/1",
+        sourceType: "publisher",
+        publishedAt: "2026-08-29T06:00:00Z",
+        attribution: "Desk Daily",
+      },
+      {
+        id: "source-tech-gazette",
+        publisher: "Tech Gazette",
+        title: "Major Policy Announcement",
+        url: "https://example.com/2",
+        sourceType: "publisher",
+        publishedAt: "2026-08-29T06:00:00Z",
+      },
+    ],
     correctionNotes: [],
   };
 
@@ -188,6 +206,9 @@ describe("formatDraftEditionSummaryMarkdown & composePrBody diagnostic rendering
     expect(markdown).toContain(
       "| **Evaluated Feed Items** | — | 42 | ℹ️ INFO |",
     );
+    expect(markdown).toContain(
+      "* **Attributed Sources**: `source-desk-daily` — Desk Daily, `source-tech-gazette`",
+    );
 
     // Core stories table with source IDs
     expect(markdown).toContain("## 📑 Core Edition Stories (Top 8)");
@@ -196,7 +217,7 @@ describe("formatDraftEditionSummaryMarkdown & composePrBody diagnostic rendering
     // Story Previews
     expect(markdown).toContain("### Story 1: National Quantum Hub Launch");
     expect(markdown).toContain(
-      "* **Attributed Sources**: `source-desk-daily`, `source-tech-gazette`",
+      "* **Attributed Sources**: `source-desk-daily` — Desk Daily, `source-tech-gazette`",
     );
   });
 

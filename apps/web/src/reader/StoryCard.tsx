@@ -217,6 +217,32 @@ export function StoryCard({
                     {formatEditionInstant(source.publishedAt)}
                   </time>
                 </p>
+                {source.authors === undefined ||
+                source.authors.length === 0 ? null : (
+                  <p className="story-source-authors">
+                    By {source.authors.join(", ")}
+                  </p>
+                )}
+                {source.attribution === undefined ? null : (
+                  <p className="story-source-attribution">
+                    {source.attribution}
+                  </p>
+                )}
+                {source.termsUrl === undefined &&
+                source.licenseUrl === undefined ? null : (
+                  <p className="story-source-policy">
+                    {source.termsUrl === undefined ? null : (
+                      <a href={source.termsUrl} rel="noopener">
+                        Reuse terms
+                      </a>
+                    )}
+                    {source.licenseUrl === undefined ? null : (
+                      <a href={source.licenseUrl} rel="noopener">
+                        Licence
+                      </a>
+                    )}
+                  </p>
+                )}
               </li>
             ))}
           </ul>

@@ -19,6 +19,7 @@ import {
   SUMMARIZER_DEFAULTS,
   type SummarizerOptions,
 } from "./types";
+import { sourceIdsPermittingUse } from "./source-policy";
 
 interface WorkersAiResponse {
   result?: {
@@ -79,13 +80,13 @@ export class CloudflareWorkersAiSummarizer implements StorySummarizer {
       },
     ];
 
-    const allowedSources = Array.from(
-      new Set(
-        input.cluster.sources.length > 0
-          ? input.cluster.sources
-          : input.cluster.items.map((i) => i.sourceId),
-      ),
-    ).filter(Boolean);
+    const allowedSources = sourceIdsPermittingUse(
+      input.cluster.sources.length > 0
+        ? input.cluster.sources
+        : input.cluster.items.map((i) => i.sourceId),
+      "generated-summary",
+      input.sourceRegistry,
+    );
 
     let lastErrorReason: string | undefined;
 
@@ -160,7 +161,7 @@ export class CloudflareWorkersAiSummarizer implements StorySummarizer {
           model: this.model,
           latencyMs: Date.now() - startTime,
         };
-      } catch (parseErr: unknown) {
+      } catch (_parseErr: unknown) {
         lastErrorReason = "invalid model response format";
         break; // do not retry deterministic payload failure
       }

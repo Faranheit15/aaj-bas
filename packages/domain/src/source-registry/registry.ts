@@ -23,6 +23,7 @@ import {
   sourceTypeSchema,
   sourceUrlSchema,
 } from "@aaj-bas/schemas";
+import type { ReportingType, Story } from "@aaj-bas/schemas";
 import { z } from "zod";
 
 /**
@@ -161,6 +162,8 @@ const sourceEntryBase = {
 /** The terms review, required together or not at all. See the union below. */
 const termsReview = {
   termsUrl: sourceUrlSchema,
+  /** Direct licence URL when the terms page points to a distinct licence. */
+  licenseUrl: sourceUrlSchema.optional(),
   /**
    * The calendar day the terms were read, not an instant. Section 41 keeps the
    * two apart, and the `-On` suffix is the visible half of that rule: every
@@ -234,6 +237,7 @@ const inactiveSourceEntrySchema = z.strictObject({
   permittedUse: termsReview.permittedUse.optional(),
   permittedUses: termsReview.permittedUses.optional(),
   attribution: termsReview.attribution.optional(),
+  licenseUrl: termsReview.licenseUrl,
 });
 
 /**
@@ -322,4 +326,44 @@ export function feedUrlKey(source: SourceEntry): string {
 /** The review note, for the entry shapes that have somewhere to put one. */
 export function permittedUseNoteOf(source: SourceEntry): string | undefined {
   return "permittedUse" in source ? source.permittedUse : undefined;
+}
+
+/** Whether a source in a validated registry permits one downstream use. */
+export function sourcePermitsUse(
+  sourceId: string,
+  use: PermittedUse,
+  registry: SourceRegistry | undefined,
+): boolean {
+  if (registry === undefined) {
+    return true;
+  }
+
+  const source = registry.sources.find((entry) => entry.id === sourceId);
+  return source?.active === true && source.permittedUses.includes(use);
+}
+
+/**
+ * Keep official statements from being presented as independently reported.
+ * A provider may return any valid reporting type, so this deterministic
+ * post-condition belongs at the registry boundary as well as in validation.
+ */
+export function reportingTypeForReviewedSources(
+  story: Story,
+  registry: SourceRegistry | undefined,
+): ReportingType {
+  if (registry === undefined || story.sourceIds.length === 0) {
+    return story.reportingType;
+  }
+
+  const citedSources = story.sourceIds.map((sourceId) =>
+    registry.sources.find((source) => source.id === sourceId),
+  );
+  if (
+    citedSources.some((source) => source === undefined) ||
+    !citedSources.every((source) => source?.sourceType === "official")
+  ) {
+    return story.reportingType;
+  }
+
+  return "official";
 }

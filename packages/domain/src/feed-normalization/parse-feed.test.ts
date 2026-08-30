@@ -14,6 +14,7 @@ describe("parseRawFeed deterministic ingestion coverage (AB-402, AB-403)", () =>
       <title><![CDATA[Cabinet Approves &quot;Green Energy&quot; Corridor &#x2014; Phase II]]></title>
       <link>https://tribune.example.in/news/green-energy-2026?utm_source=rss</link>
       <guid isPermaLink="false">tribune-ge-2026</guid>
+      <dc:creator><![CDATA[RSS Author]]></dc:creator>
       <pubDate>Sat, 29 Aug 2026 06:30:00 GMT</pubDate>
       <description><![CDATA[<p>The Union Cabinet on Friday approved Phase II with a &#8377;12,000 crore outlay.</p>]]></description>
       <content:encoded><![CDATA[<p>Full text details with &lt;b&gt;markup&lt;/b&gt;.</p>]]></content:encoded>
@@ -34,6 +35,7 @@ describe("parseRawFeed deterministic ingestion coverage (AB-402, AB-403)", () =>
       expect(items[0]).toEqual({
         guid: "tribune-ge-2026",
         title: 'Cabinet Approves "Green Energy" Corridor &#x2014; Phase II',
+        author: "RSS Author",
         description:
           "<p>The Union Cabinet on Friday approved Phase II with a &#8377;12,000 crore outlay.</p>",
         link: "https://tribune.example.in/news/green-energy-2026?utm_source=rss",
@@ -66,6 +68,7 @@ describe("parseRawFeed deterministic ingestion coverage (AB-402, AB-403)", () =>
   <entry>
     <title type="html"><![CDATA[RBI Holds Repo Rate at 6.5% for Ninth Meeting]]></title>
     <id>tag:gazette.example.in,2026:rbi-policy-aug</id>
+    <author><name>Atom Author</name></author>
     <link rel="alternate" type="text/html" href="https://gazette.example.in/rbi-rate" />
     <published>2026-08-29T05:00:00Z</published>
     <updated>2026-08-29T05:15:00Z</updated>
@@ -86,6 +89,7 @@ describe("parseRawFeed deterministic ingestion coverage (AB-402, AB-403)", () =>
       expect(items[0]?.title).toBe(
         "RBI Holds Repo Rate at 6.5% for Ninth Meeting",
       );
+      expect(items[0]?.author).toBe("Atom Author");
       expect(items[0]?.link).toBe("https://gazette.example.in/rbi-rate");
       expect(items[0]?.guid).toBe("tag:gazette.example.in,2026:rbi-policy-aug");
       expect(items[0]?.publishedAt).toBe("2026-08-29T05:00:00Z");
@@ -111,6 +115,7 @@ describe("parseRawFeed deterministic ingestion coverage (AB-402, AB-403)", () =>
             title: "Semiconductor Fab Breaks Ground in Gujarat",
             summary:
               "Construction commenced on India's first commercial silicon fab facility.",
+            author: { name: "JSON Author" },
             date_published: "2026-08-29T04:00:00Z",
             date_modified: "2026-08-29T04:30:00Z",
           },
@@ -135,6 +140,7 @@ describe("parseRawFeed deterministic ingestion coverage (AB-402, AB-403)", () =>
       expect(items[0]?.description).toBe(
         "Construction commenced on India's first commercial silicon fab facility.",
       );
+      expect(items[0]?.author).toBe("JSON Author");
 
       expect(items[1]?.guid).toBe("https://techwire.example.in/stories/102");
       expect(items[1]?.description).toBe(

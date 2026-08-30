@@ -7,7 +7,7 @@
 
 import type { InterestSlug, SourceType, TopicSlug } from "@aaj-bas/schemas";
 import type { StoryCluster } from "../clustering";
-import type { SourceRegion } from "../source-registry";
+import type { SourceRegion, SourceRegistry } from "../source-registry";
 
 export type SelectionDecisionType =
   | "selected_core"
@@ -96,6 +96,8 @@ export interface RankingOptions {
   readonly getSourceRegion?:
     | ((sourceId: string) => SourceRegion | undefined)
     | undefined;
+  /** Validated registry used to guard source-supplied descriptions in topic classification. */
+  readonly sourceRegistry?: SourceRegistry | undefined;
   /** Feature weight overrides. */
   readonly featureWeights?: FeatureWeights | undefined;
   /** Repetition penalty deduction multiplier. Defaults to 0.5. */

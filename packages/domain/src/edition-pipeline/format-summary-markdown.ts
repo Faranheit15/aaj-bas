@@ -200,7 +200,16 @@ export function formatDraftEditionSummaryMarkdown(
       "",
       `* **Deck**: *${story.deck}*`,
       `* **Topic**: \`${story.topic}\` | **Reporting Type**: \`${story.reportingType}\` | **Confidence**: \`${story.confidence}\``,
-      `* **Attributed Sources**: ${story.sourceIds.map((s) => `\`${s}\``).join(", ")}`,
+      `* **Attributed Sources**: ${story.sourceIds
+        .map((sourceId) => {
+          const source = edition.sources.find(
+            (candidate) => candidate.id === sourceId,
+          );
+          return source?.attribution === undefined
+            ? `\`${sourceId}\``
+            : `\`${sourceId}\` — ${escapePipes(source.attribution)}`;
+        })
+        .join(", ")}`,
       "",
       "**What Changed:**",
     );
