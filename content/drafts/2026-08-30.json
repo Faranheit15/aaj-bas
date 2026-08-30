@@ -3,12 +3,577 @@
   "date": "2026-08-30",
   "editionVersion": 1,
   "status": "draft",
-  "publishedAt": "2026-08-30T05:35:49.599Z",
-  "updatedAt": "2026-08-30T05:35:49.599Z",
-  "estimatedMinutes": 1,
-  "coreStoryIds": [],
-  "interestPools": {},
-  "stories": [],
-  "sources": [],
+  "publishedAt": "2026-08-30T08:02:22.858Z",
+  "updatedAt": "2026-08-30T08:02:22.858Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-2af0b6390200c832",
+    "s-cluster-102717d88735ecbb",
+    "s-cluster-5f6d451d89851239",
+    "s-cluster-82ebbaa8df9fb07c",
+    "s-cluster-9ab233cb3b6d826c",
+    "s-cluster-0fa4dab175ad697c",
+    "s-cluster-d37f9b2aa085b5fa"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-be65d2cee2cdb6e8",
+      "s-cluster-00946db7ac4f6de5",
+      "s-cluster-0ebb3d84ccb3578c"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-7ea6a23156c06f60",
+      "s-cluster-cd96b81359816b49",
+      "s-cluster-3c00788e2c700616"
+    ],
+    "business-economy": [
+      "s-cluster-8fa361b123be9c26",
+      "s-cluster-bdccd9f5c6b61b3c",
+      "s-cluster-b408c402c5ce0dc8"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0dbeb6940f37badd",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "sports": [
+      "s-cluster-fbebe1a3c6bdabe7",
+      "s-cluster-1fd48a366a879683"
+    ],
+    "culture-entertainment": [
+      "s-cluster-0dbea9940f37a4c6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-29T15:02:46.000Z",
+      "updatedAt": "2026-08-29T15:02:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2af0b6390200c832",
+      "slug": "policy-geopolitics-s-cluster-2af0b6390200c832",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Niger travel advice",
+      "deck": "FCDO travel advice for Niger. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Niger. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "fcdo"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-29T14:30:01.000Z",
+      "updatedAt": "2026-08-29T14:30:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-102717d88735ecbb",
+      "slug": "india-s-cluster-102717d88735ecbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Sustainable Farming Incentive 2026 (SFI26): scheme information",
+      "deck": "Get paid to manage land sustainably to benefit the environment and support food production: find out if your land is eligible, select and apply for SFI26 actions.",
+      "whatChanged": [
+        "Get paid to manage land sustainably to benefit the environment and support food production: find out if your land is eligible, select and apply for SFI26 actions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T22:59:03.000Z",
+      "updatedAt": "2026-08-28T22:59:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f6d451d89851239",
+      "slug": "science-health-climate-s-cluster-5f6d451d89851239",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, July 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": [
+        "Reports on departmental staff numbers and costs."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-dhsc",
+        "uk-dsit"
+      ],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-08-25T10:55:53.000Z",
+      "updatedAt": "2026-08-27T13:48:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-82ebbaa8df9fb07c",
+      "slug": "india-s-cluster-82ebbaa8df9fb07c",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Impact assessment: Terminally Ill Adults (End of Life) Bill 2026: impact assessment",
+      "deck": "The impact assessment considers the potential impacts of the Terminally Ill Adults (End of Life) Bill 2026.",
+      "whatChanged": [
+        "The impact assessment considers the potential impacts of the Terminally Ill Adults (End of Life) Bill 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-dhsc"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T16:49:52.000Z",
+      "updatedAt": "2026-08-28T16:50:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9ab233cb3b6d826c",
+      "slug": "policy-geopolitics-s-cluster-9ab233cb3b6d826c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The violence directed against the commune of Kenscoff in Haiti, is horrific and unacceptable: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Haiti.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Haiti."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "fcdo"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T20:23:00.000Z",
+      "updatedAt": "2026-08-28T20:23:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0fa4dab175ad697c",
+      "slug": "science-health-climate-s-cluster-0fa4dab175ad697c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Daily News 27 / 08 / 2026",
+      "deck": "European Commission Daily news Brussels, 27 Aug 2026 Commission endorses Greece's €4.8 billion Social Climate Plan to support vulnerable households, transport users and micro-enterprises in the clean transition To...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 27 Aug 2026 Commission endorses Greece's €4.8 billion Social Climate Plan to support vulnerable households, transport users and micro-enterprises in the clean transition To..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "european-commission-press-corner"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-27T09:00:50.000Z",
+      "updatedAt": "2026-08-28T10:04:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "global-voices-india"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-be65d2cee2cdb6e8",
+      "slug": "science-health-climate-s-cluster-be65d2cee2cdb6e8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Funding for farmers, growers and land managers",
+      "deck": "Apply for grants and other funding to increase productivity, manage your land to benefit the environment and support your agricultural business.",
+      "whatChanged": [
+        "Apply for grants and other funding to increase productivity, manage your land to benefit the environment and support your agricultural business."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T22:59:03.000Z",
+      "updatedAt": "2026-08-28T22:59:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-00946db7ac4f6de5",
+      "slug": "science-health-climate-s-cluster-00946db7ac4f6de5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Join the list of authorised distance plant sellers",
+      "deck": "Add your business to the Animal and Plant Health Agency list of authorised distance plant sellers.",
+      "whatChanged": [
+        "Add your business to the Animal and Plant Health Agency list of authorised distance plant sellers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T09:19:21.000Z",
+      "updatedAt": "2026-08-28T09:19:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0ebb3d84ccb3578c",
+      "slug": "science-health-climate-s-cluster-0ebb3d84ccb3578c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Precision bred organism marketing notice (reference: PBM/26/SOLY/001)",
+      "deck": "Information on a precision breeding marketing notice submitted for a tomato plant and its precision bred status.",
+      "whatChanged": [
+        "Information on a precision breeding marketing notice submitted for a tomato plant and its precision bred status."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-27T14:53:41.000Z",
+      "updatedAt": "2026-08-27T14:53:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7ea6a23156c06f60",
+      "slug": "policy-geopolitics-s-cluster-7ea6a23156c06f60",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK deploys rapid response team to Nepal to support British nationals affected by floods",
+      "deck": "The team will work alongside British Embassy staff and local authorities to provide additional consular support, as part of response efforts.",
+      "whatChanged": [
+        "The team will work alongside British Embassy staff and local authorities to provide additional consular support, as part of response efforts."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "fcdo"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T18:20:39.000Z",
+      "updatedAt": "2026-08-28T18:20:39.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-cd96b81359816b49",
+      "slug": "policy-geopolitics-s-cluster-cd96b81359816b49",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Democratic Republic of the Congo travel advice",
+      "deck": "FCDO travel advice for the Democratic Republic of the Congo. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for the Democratic Republic of the Congo. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "fcdo"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-26T09:19:27.000Z",
+      "updatedAt": "2026-08-28T15:22:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3c00788e2c700616",
+      "slug": "policy-geopolitics-s-cluster-3c00788e2c700616",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Foreign embassies in the UK",
+      "deck": "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission.",
+      "whatChanged": [
+        "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "fcdo"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T13:57:37.000Z",
+      "updatedAt": "2026-08-28T13:57:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T13:22:10.000Z",
+      "updatedAt": "2026-08-28T13:22:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bdccd9f5c6b61b3c",
+      "slug": "business-economy-s-cluster-bdccd9f5c6b61b3c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Moving, exporting or placing deforestation-free products on the market in Northern Ireland",
+      "deck": "Steps businesses must take to make sure their products meet the EU regulation on deforestation-free products (EUDR) if they market them in, move them to or export them from Northern Ireland.",
+      "whatChanged": [
+        "Steps businesses must take to make sure their products meet the EU regulation on deforestation-free products (EUDR) if they market them in, move them to or export them from Northern Ireland."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-27T15:29:53.000Z",
+      "updatedAt": "2026-08-27T15:29:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b408c402c5ce0dc8",
+      "slug": "business-economy-s-cluster-b408c402c5ce0dc8",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK trade in Food, Feed and Drink, 2025 updated",
+      "deck": "The release shows UK trade in Food, Feed and Drink in current prices and real terms.",
+      "whatChanged": [
+        "The release shows UK trade in Food, Feed and Drink in current prices and real terms."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-27T13:54:30.000Z",
+      "updatedAt": "2026-08-27T13:54:30.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-dsit"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-13T16:12:25.000Z",
+      "updatedAt": "2026-08-13T16:12:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0dbeb6940f37badd",
+      "slug": "technology-ai-s-cluster-0dbeb6940f37badd",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
+      "deck": "European Commission Press release Brussels, 31 Jul 2026 From 2 August 2026, the European Commission's AI Office, together with national authorities, will begin enforcing the Artificial Intelligence (AI) Act. On the same date, new transpa...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 31 Jul 2026 From 2 August 2026, the European Commission's AI Office, together with national authorities, will begin enforcing the Artificial Intelligence (AI) Act. On the same date, new transparency rules will start to apply."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "european-commission-press-corner"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-31T06:04:12.000Z",
+      "updatedAt": "2026-07-31T06:04:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "global-voices-india"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fbebe1a3c6bdabe7",
+      "slug": "sports-s-cluster-fbebe1a3c6bdabe7",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Guidance: APHA guidance on sample and test selection",
+      "deck": "How to take samples and choose an appropriate diagnostic test for common clinical presentations in livestock and wildlife.",
+      "whatChanged": [
+        "How to take samples and choose an appropriate diagnostic test for common clinical presentations in livestock and wildlife."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "uk-defra"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-27T13:59:15.000Z",
+      "updatedAt": "2026-08-27T13:59:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1fd48a366a879683",
+      "slug": "sports-s-cluster-1fd48a366a879683",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Brunner on the situation in Ceuta",
+      "deck": "European Commission Speech Brussels, 04 Aug 2026 Good afternoon, everyone. These past few days were a test of our European resilience and of the security of our external borders. We have just concluded our inf...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 04 Aug 2026 Good afternoon, everyone. These past few days were a test of our European resilience and of the security of our external borders. We have just concluded our inf..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "european-commission-press-corner"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-04T21:04:40.000Z",
+      "updatedAt": "2026-08-04T21:04:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0dbea9940f37a4c6",
+      "slug": "culture-entertainment-s-cluster-0dbea9940f37a4c6",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission opens in-depth State aid investigation into arbitration award ordering Spain to pay compensation to JGC Holdings Corporation",
+      "deck": "European Commission Press release Brussels, 04 Aug 2026 The European Commission has opened an in-depth investigation to assess whether an arbitration award ordering Spain to pay compensation to JGC Holdings Corporation (‘JGC') for change...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 04 Aug 2026 The European Commission has opened an in-depth investigation to assess whether an arbitration award ordering Spain to pay compensation to JGC Holdings Corporation (‘JGC') for changes to a renewable electricity support measure is in line with EU State aid rules."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": [
+        "european-commission-press-corner"
+      ],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-04T08:02:27.000Z",
+      "updatedAt": "2026-08-04T08:02:27.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-08-27T12:47:31.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Niger travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/niger",
+      "sourceType": "official",
+      "publishedAt": "2026-08-26T09:19:27.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Impact assessment: Terminally Ill Adults (End of Life) Bill 2026: ECHR memorandum",
+      "url": "https://www.gov.uk/government/publications/terminally-ill-adults-end-of-life-bill-2026-echr-memorandum",
+      "sourceType": "official",
+      "publishedAt": "2026-08-13T08:30:08.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Project Gigabit network build contract - Teesdale",
+      "url": "https://www.gov.uk/guidance/project-gigabit-network-build-contract-teesdale",
+      "sourceType": "official",
+      "publishedAt": "2026-07-29T13:26:52.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Daily News 28 / 08 / 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1768",
+      "sourceType": "official",
+      "publishedAt": "2026-07-30T22:00:00.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    }
+  ],
   "correctionNotes": []
 }
