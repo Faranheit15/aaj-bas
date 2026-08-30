@@ -30,11 +30,11 @@
  * bundler, and it is there for the same reason: a check that reports success
  * precisely when it failed to run is worse than no check.
  *
- * The fixture is built here rather than assumed, and it is built WITH SAMPLE
- * DATA, because `bun run build` publishes no edition today and an offline spec
- * needs an edition to open. `bun run dev` stages the same content the same
- * way. `test.afterAll` puts the published build back.
+ * The fixture is built here rather than assumed, and it is pinned to the
+ * historical sample as the latest entry even when the repository contains a
+ * real edition. `test.afterAll` puts the published build back.
  */
+import { readdir, unlink, writeFile } from "node:fs/promises";
 import { spawn, spawnSync } from "node:child_process";
 import { expect, type Page, test } from "@playwright/test";
 import { CACHE_PREFIX, CONTENT_CACHE } from "../src/service-worker/cache-names";
@@ -43,6 +43,9 @@ import { CACHE_PREFIX, CONTENT_CACHE } from "../src/service-worker/cache-names";
 const WEB_ROOT = `${import.meta.dirname}/..`;
 const REPOSITORY_ROOT = `${WEB_ROOT}/../..`;
 const DIST = `${WEB_ROOT}/dist`;
+const PUBLIC_CONTENT = `${WEB_ROOT}/public/content`;
+const STAGED_EDITIONS = `${PUBLIC_CONTENT}/editions`;
+const FIXTURE_EDITION_DATE = "2026-07-21";
 
 /**
  * The notice `edition-notice.ts` owns for a saved copy of an edition that is
@@ -121,6 +124,42 @@ function run(command: string, args: readonly string[], cwd: string): void {
  * the build id from it. A fixture that skipped the third step would serve a
  * `sw.js` describing a build that no longer exists.
  */
+async function pinSampleAsLatest(): Promise<void> {
+  for (const name of await readdir(STAGED_EDITIONS)) {
+    if (name !== `${FIXTURE_EDITION_DATE}.json`) {
+      await unlink(`${STAGED_EDITIONS}/${name}`);
+    }
+  }
+  await writeFile(
+    `${PUBLIC_CONTENT}/latest.json`,
+    `${JSON.stringify(
+      {
+        schemaVersion: 1,
+        contentSet: "sample",
+        latest: FIXTURE_EDITION_DATE,
+        editions: [FIXTURE_EDITION_DATE],
+      },
+      null,
+      2,
+    )}\n`,
+  );
+}
+
+async function buildSampleFixture(): Promise<void> {
+  run(
+    "bun",
+    [`${REPOSITORY_ROOT}/scripts/stage-content.ts`, "--include-sample-data"],
+    REPOSITORY_ROOT,
+  );
+  await pinSampleAsLatest();
+  run("bunx", ["vite", "build"], WEB_ROOT);
+  run(
+    "bun",
+    [`${REPOSITORY_ROOT}/scripts/build-service-worker.ts`],
+    REPOSITORY_ROOT,
+  );
+}
+
 function build(options: {
   readonly sample: boolean;
   readonly vary: boolean;
@@ -242,7 +281,7 @@ async function startServer(
   };
 }
 
-/** Load `/` and wait until a worker is installed, activated and controlling. */
+/** Load `/` and wait for an active, controlling worker. */
 async function openEdition(page: Page, origin: string): Promise<void> {
   await page.goto(`${origin}/`);
 
@@ -325,9 +364,9 @@ function storyList(page: Page) {
   return page.locator("ol.edition-stories > li.edition-story");
 }
 
-test.beforeAll(() => {
+test.beforeAll(async () => {
   test.setTimeout(300_000);
-  build({ sample: true, vary: false });
+  await buildSampleFixture();
 });
 
 test.afterEach(async () => {

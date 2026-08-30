@@ -85,6 +85,18 @@ async function fileExists(path: string): Promise<boolean> {
   }
 }
 
+function runCommand(command: string, args: string[]): void {
+  const result = Bun.spawnSync([command, ...args], {
+    stdout: "pipe",
+    stderr: "pipe",
+  });
+
+  if (result.exitCode !== 0) {
+    const stderr = result.stderr ? new TextDecoder().decode(result.stderr) : "";
+    throw new Error(`Command failed: ${command} ${args.join(" ")}\n${stderr}`);
+  }
+}
+
 async function main(): Promise<void> {
   const options = parseCliArgs(process.argv.slice(2));
 
@@ -163,6 +175,10 @@ async function main(): Promise<void> {
 
     if (!options.dryRun) {
       await Bun.write(targetPath, publishedJson);
+      // The source draft is generated JSON, while repository CI formats all
+      // checked-in JSON. Validate first, then format the exact output that is
+      // written for publication.
+      runCommand("bunx", ["@biomejs/biome", "format", "--write", targetPath]);
       console.log(`\n🎉 Edition successfully published to ${targetPath}`);
     } else {
       console.log(

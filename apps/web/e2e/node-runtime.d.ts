@@ -72,6 +72,18 @@ declare module "node:child_process" {
   ): SpawnSyncResult;
 }
 
+declare module "node:fs/promises" {
+  /**
+   * The fixture builder only needs to list and remove staged edition files,
+   * then write the deterministic latest pointer used by the browser tests.
+   */
+  function readdir(path: string): Promise<readonly string[]>;
+  function unlink(path: string): Promise<void>;
+  function writeFile(path: string, data: string): Promise<void>;
+
+  export { readdir, unlink, writeFile };
+}
+
 interface ImportMeta {
   /**
    * Absolute directory of this module, so the paths below do not depend on the
