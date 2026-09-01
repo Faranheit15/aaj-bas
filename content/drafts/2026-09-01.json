@@ -1,0 +1,526 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-01",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-01T05:23:36.718Z",
+  "updatedAt": "2026-09-01T05:23:36.718Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-217967bbce0ff1f7",
+    "s-cluster-075db862df2bcdab",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-1ff687366aa477d0",
+    "s-cluster-b242de1de5347040",
+    "s-cluster-fa8b3fb895597a40",
+    "s-cluster-5f6d451d89851239",
+    "s-cluster-d37f9b2aa085b5fa"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-77b11a0ff197567f",
+      "s-cluster-0dc232940f3ac368",
+      "s-cluster-3c00788e2c700616"
+    ],
+    "science-health-climate": [
+      "s-cluster-00946db7ac4f6de5",
+      "s-cluster-00d02215d97040bc",
+      "s-cluster-02601f3beeff5d45"
+    ],
+    "business-economy": [
+      "s-cluster-0dc239940f3acf4d",
+      "s-cluster-0dc8a3940f3fef19",
+      "s-cluster-13e943c9c1143926"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-17fb6d0d585ab611"
+    ],
+    "sports": ["s-cluster-1fd48a366a879683", "s-cluster-fbebe1a3c6bdabe7"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-217967bbce0ff1f7",
+      "slug": "india-s-cluster-217967bbce0ff1f7",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Upfront help cuts placement costs for healthcare students",
+      "deck": "From 2026/27, eligible healthcare students can get travel and accommodation costs upfront, easing financial pressure and supporting rural placements.",
+      "whatChanged": [
+        "From 2026/27, eligible healthcare students can get travel and accommodation costs upfront, easing financial pressure and supporting rural placements."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T23:05:00.000Z",
+      "updatedAt": "2026-08-31T23:05:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-075db862df2bcdab",
+      "slug": "india-s-cluster-075db862df2bcdab",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "When someone dies in Nepal",
+      "deck": "Information to help the family and friends of British nationals who have died in Nepal.",
+      "whatChanged": [
+        "Information to help the family and friends of British nationals who have died in Nepal."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T15:54:32.000Z",
+      "updatedAt": "2026-08-31T15:54:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T11:27:43.000Z",
+      "updatedAt": "2026-08-31T11:27:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1ff687366aa477d0",
+      "slug": "world-s-cluster-1ff687366aa477d0",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Hoekstra at the Opening of the Academic Year in Delft: 'Europe's Industrial and Technological Renaissance'",
+      "deck": "European Commission Speech Amsterdam, 31 Aug 2026 Dames en heren beste professoren, beste studenten en andere genodigden, Het is me een groot genoegen om hier vandaag bij u allen te zijn voor opening de van h...",
+      "whatChanged": [
+        "European Commission Speech Amsterdam, 31 Aug 2026 Dames en heren beste professoren, beste studenten en andere genodigden, Het is me een groot genoegen om hier vandaag bij u allen te zijn voor opening de van h..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T16:20:12.000Z",
+      "updatedAt": "2026-08-31T16:20:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b242de1de5347040",
+      "slug": "policy-geopolitics-s-cluster-b242de1de5347040",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Nepal-China floods: what you can do to help",
+      "deck": "Information on how you can support people affected by the floods and mudslide on the Nepal-China border.",
+      "whatChanged": [
+        "Information on how you can support people affected by the floods and mudslide on the Nepal-China border."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T11:41:00.000Z",
+      "updatedAt": "2026-08-31T11:41:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fa8b3fb895597a40",
+      "slug": "business-economy-s-cluster-fa8b3fb895597a40",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Statement in context of G20 Finance Ministers and Central Bank Governors meetings on 31 August and 1 September, in Asheville, US",
+      "deck": "European Commission Statement Brussels, 31 Aug 2026 The European Union has consistently urged Iran to curb its nuclear programme, and its ballistic missile programme, refrain from destabilising activities in the ...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 31 Aug 2026 The European Union has consistently urged Iran to curb its nuclear programme, and its ballistic missile programme, refrain from destabilising activities in the ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T10:01:15.000Z",
+      "updatedAt": "2026-08-31T10:01:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f6d451d89851239",
+      "slug": "science-health-climate-s-cluster-5f6d451d89851239",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, July 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-08-25T10:55:53.000Z",
+      "updatedAt": "2026-08-27T13:48:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-77b11a0ff197567f",
+      "slug": "policy-geopolitics-s-cluster-77b11a0ff197567f",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Kenya travel advice",
+      "deck": "FCDO travel advice for Kenya. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Kenya. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T10:42:11.000Z",
+      "updatedAt": "2026-08-31T10:42:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0dc232940f3ac368",
+      "slug": "policy-geopolitics-s-cluster-0dc232940f3ac368",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Commission accelerates IRIS2 deployment with enhanced security and expanded satellites network",
+      "deck": "European Commission Press release Brussels, 07 Aug 2026 Today, the European Commission and the SpaceRISE consortium concluded negotiations and signed an implementation agreement to roll out IRIS2, the European Union's new flagship satell...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 07 Aug 2026 Today, the European Commission and the SpaceRISE consortium concluded negotiations and signed an implementation agreement to roll out IRIS2, the European Union's new flagship satellite constellation. The agreement, among other things, adds 66 satellites into low Earth orbit to the programme, bringing the main constellation to 348 satellites, and moving it from planning to full-scale deployment."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-06T22:00:00.000Z",
+      "updatedAt": "2026-08-06T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3c00788e2c700616",
+      "slug": "policy-geopolitics-s-cluster-3c00788e2c700616",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Foreign embassies in the UK",
+      "deck": "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission.",
+      "whatChanged": [
+        "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T13:57:37.000Z",
+      "updatedAt": "2026-08-28T13:57:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-00946db7ac4f6de5",
+      "slug": "science-health-climate-s-cluster-00946db7ac4f6de5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Join the list of authorised distance plant sellers",
+      "deck": "Add your business to the Animal and Plant Health Agency list of authorised distance plant sellers.",
+      "whatChanged": [
+        "Add your business to the Animal and Plant Health Agency list of authorised distance plant sellers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T09:19:21.000Z",
+      "updatedAt": "2026-08-28T09:19:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-00d02215d97040bc",
+      "slug": "science-health-climate-s-cluster-00d02215d97040bc",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Social Housing Decarbonisation Fund Wave 1: impact evaluation",
+      "deck": "Impact evaluation of Wave 1 of the Social Housing Decarbonisation Fund (SHDF), assessing the extent to which the scheme met its objectives.",
+      "whatChanged": [
+        "Impact evaluation of Wave 1 of the Social Housing Decarbonisation Fund (SHDF), assessing the extent to which the scheme met its objectives."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-27T09:00:24.000Z",
+      "updatedAt": "2026-08-27T09:00:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-02601f3beeff5d45",
+      "slug": "science-health-climate-s-cluster-02601f3beeff5d45",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: Department of Health and Social Care record of processing activity (RoPA)",
+      "deck": "The record of processing activity lists the personal data being held and processed by the Department of Health and Social Care (DHSC) in the UK.",
+      "whatChanged": [
+        "The record of processing activity lists the personal data being held and processed by the Department of Health and Social Care (DHSC) in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-21T15:33:35.000Z",
+      "updatedAt": "2026-08-21T15:33:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0dc239940f3acf4d",
+      "slug": "business-economy-s-cluster-0dc239940f3acf4d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "EU receives €1.4 billion in revenue from immobilised Russian assets to be used for supporting Ukraine",
+      "deck": "European Commission Press release Brussels, 05 Aug 2026 On 3rd of August, the European Union received €1.4 billion in windfall profits generated by the interest on the cash balances originating from immobilised assets of the Central Bank...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 05 Aug 2026 On 3rd of August, the European Union received €1.4 billion in windfall profits generated by the interest on the cash balances originating from immobilised assets of the Central Bank of Russia (CBR) held by Central Securities Depositories (CSDs)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-04T22:00:00.000Z",
+      "updatedAt": "2026-08-04T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0dc8a3940f3fef19",
+      "slug": "business-economy-s-cluster-0dc8a3940f3fef19",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission sends Statement of Objections over proposed joint venture between UPM and Sappi",
+      "deck": "European Commission Press release Brussels, 26 Aug 2026 The European Commission has informed UPM-Kymmene Corporation ('UPM') and Sappi Limited ('Sappi') of its preliminary view that its proposed joint venture may restrict competition in...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 26 Aug 2026 The European Commission has informed UPM-Kymmene Corporation ('UPM') and Sappi Limited ('Sappi') of its preliminary view that its proposed joint venture may restrict competition in the markets for different types of communication paper, which is used for printed materials, such as magazines or books."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-25T22:00:00.000Z",
+      "updatedAt": "2026-08-25T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13e943c9c1143926",
+      "slug": "business-economy-s-cluster-13e943c9c1143926",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Waterborne shipments from the U.S. Gulf Coast increased in April and May",
+      "deck": "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel...",
+      "whatChanged": [
+        "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel between U.S. ports. Shipments from the U.S. Gulf Coast to the East Coast (PADD 1) also increased."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-17T14:00:00.000Z",
+      "updatedAt": "2026-08-17T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-13T16:12:25.000Z",
+      "updatedAt": "2026-08-13T16:12:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-17fb6d0d585ab611",
+      "slug": "technology-ai-s-cluster-17fb6d0d585ab611",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Growing up in the online world: a national consultation",
+      "deck": "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions o...",
+      "whatChanged": [
+        "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions on addictive design features and risky functionalities, and better support for parents and families."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-19T16:08:25.000Z",
+      "updatedAt": "2026-08-19T16:08:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1fd48a366a879683",
+      "slug": "sports-s-cluster-1fd48a366a879683",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Brunner on the situation in Ceuta",
+      "deck": "European Commission Speech Brussels, 04 Aug 2026 Good afternoon, everyone. These past few days were a test of our European resilience and of the security of our external borders. We have just concluded our inf...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 04 Aug 2026 Good afternoon, everyone. These past few days were a test of our European resilience and of the security of our external borders. We have just concluded our inf..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-04T21:04:40.000Z",
+      "updatedAt": "2026-08-04T21:04:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fbebe1a3c6bdabe7",
+      "slug": "sports-s-cluster-fbebe1a3c6bdabe7",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Guidance: APHA guidance on sample and test selection",
+      "deck": "How to take samples and choose an appropriate diagnostic test for common clinical presentations in livestock and wildlife.",
+      "whatChanged": [
+        "How to take samples and choose an appropriate diagnostic test for common clinical presentations in livestock and wildlife."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-27T13:59:15.000Z",
+      "updatedAt": "2026-08-27T13:59:15.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Upfront help cuts placement costs for healthcare students",
+      "url": "https://www.gov.uk/government/news/upfront-help-cuts-placement-costs-for-healthcare-students",
+      "sourceType": "official",
+      "publishedAt": "2026-08-17T15:37:02.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "When someone dies in Nepal",
+      "url": "https://www.gov.uk/guidance/information-on-deaths-involving-british-nationals-in-nepal",
+      "sourceType": "official",
+      "publishedAt": "2026-08-26T17:34:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-08-27T12:47:31.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Keynote speech by Commissioner Hoekstra at the Opening of the Academic Year in Delft: 'Europe's Industrial and Technological Renaissance'",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1781",
+      "sourceType": "official",
+      "publishedAt": "2026-08-04T08:20:23.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Project Gigabit network build contract - Teesdale",
+      "url": "https://www.gov.uk/guidance/project-gigabit-network-build-contract-teesdale",
+      "sourceType": "official",
+      "publishedAt": "2026-07-29T13:26:52.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Notice: UK ETS Allocation Table for operators of installations",
+      "url": "https://www.gov.uk/government/publications/uk-ets-allocation-table-for-operators-of-installations",
+      "sourceType": "official",
+      "publishedAt": "2026-08-27T08:30:05.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. uranium production more than tripled in 2025 and was the highest since 2017",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68044",
+      "sourceType": "research",
+      "publishedAt": "2026-07-08T14:00:00.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
