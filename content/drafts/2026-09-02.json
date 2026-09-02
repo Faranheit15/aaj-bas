@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-02",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-02T04:50:02.061Z",
+  "updatedAt": "2026-09-02T04:50:02.061Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-9f1d38ac8932fa1e",
+    "s-cluster-1ff690366aa4871b",
+    "s-cluster-056a23920d92955f",
+    "s-cluster-aee52a10d0ff4224",
+    "s-cluster-79a3d24853b9c6b0",
+    "s-cluster-1ff68c366aa4804f",
+    "s-cluster-5784d8def068978a",
+    "s-cluster-5f6d451d89851239"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-037a6c518e490d2b",
+      "s-cluster-be65d2cee2cdb6e8",
+      "s-cluster-aadbaed30b907700"
+    ],
+    "technology-ai": [
+      "s-cluster-f591853791f5913f",
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-b87dfd89b46d77fd",
+      "s-cluster-3c00788e2c700616",
+      "s-cluster-8d645cd9090e9742"
+    ],
+    "business-economy": [
+      "s-cluster-c695d9acbbcc98c2",
+      "s-cluster-c4ed0c3fc87e9702",
+      "s-cluster-6584ad1dc3ad723c"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-9f1d38ac8932fa1e",
+      "slug": "india-s-cluster-9f1d38ac8932fa1e",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "How to get paid under an Environmental Stewardship agreement",
+      "deck": "Guidance for Environmental Stewardship agreement holders on how to claim an annual or capital payment.",
+      "whatChanged": [
+        "Guidance for Environmental Stewardship agreement holders on how to claim an annual or capital payment."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T23:15:00.000Z",
+      "updatedAt": "2026-09-01T23:15:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1ff690366aa4871b",
+      "slug": "india-s-cluster-1ff690366aa4871b",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the European Parliament on the 2026 Wildfire Season",
+      "deck": "European Commission Speech Brussels, 01 Sep 2026 This summer has tested us. Almost 700,000 hectares have already burned across the EU, more land than the yearly average of the past two decades and the season i...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 01 Sep 2026 This summer has tested us. Almost 700,000 hectares have already burned across the EU, more land than the yearly average of the past two decades and the season i..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T16:09:08.000Z",
+      "updatedAt": "2026-09-01T16:09:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-056a23920d92955f",
+      "slug": "business-economy-s-cluster-056a23920d92955f",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "How to make a capital or revenue claim",
+      "deck": "Read the guidance to help you claim payment for Countryside Stewardship agreements that started before 2025, and for capital items.",
+      "whatChanged": [
+        "Read the guidance to help you claim payment for Countryside Stewardship agreements that started before 2025, and for capital items."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T23:15:00.000Z",
+      "updatedAt": "2026-09-01T23:15:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-aee52a10d0ff4224",
+      "slug": "india-s-cluster-aee52a10d0ff4224",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "UK accelerates support for efforts to stop Ebola outbreak at source",
+      "deck": "Thousands of vulnerable people will be supported by a new package of UK funding",
+      "whatChanged": [
+        "Thousands of vulnerable people will be supported by a new package of UK funding"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T20:21:58.000Z",
+      "updatedAt": "2026-09-01T20:21:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-79a3d24853b9c6b0",
+      "slug": "policy-geopolitics-s-cluster-79a3d24853b9c6b0",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/Costa Rica: Air Service Agreement [CS Costa Rica No.1/2026]",
+      "deck": "This treaty was presented to Parliament in September 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T13:00:10.000Z",
+      "updatedAt": "2026-09-01T13:00:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1ff68c366aa4804f",
+      "slug": "science-health-climate-s-cluster-1ff68c366aa4804f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Jozef Síkela at the Opening of the EU Arctic Forum in Brussels",
+      "deck": "European Commission Speech Brussels, 01 Sep 2026 Thank you, Commissioner Kadis. Distinguished guests,Ladies and gentlemen, We meet after a summer that showed us again how exposed Europe is to climate change. F...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 01 Sep 2026 Thank you, Commissioner Kadis. Distinguished guests,Ladies and gentlemen, We meet after a summer that showed us again how exposed Europe is to climate change. F..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T10:41:08.000Z",
+      "updatedAt": "2026-09-01T10:41:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5784d8def068978a",
+      "slug": "science-health-climate-s-cluster-5784d8def068978a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Communicating the rollout of smart-contingent contracts to non-domestic customers",
+      "deck": "Research findings from qualitative message testing research to understand how the rollout of smart-contingent contracts can be communicated to non-domestic customers.",
+      "whatChanged": [
+        "Research findings from qualitative message testing research to understand how the rollout of smart-contingent contracts can be communicated to non-domestic customers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T08:30:02.000Z",
+      "updatedAt": "2026-09-01T08:30:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f6d451d89851239",
+      "slug": "science-health-climate-s-cluster-5f6d451d89851239",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, July 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-08-25T10:55:53.000Z",
+      "updatedAt": "2026-08-27T13:48:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-037a6c518e490d2b",
+      "slug": "science-health-climate-s-cluster-037a6c518e490d2b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: West Nile virus in Europe",
+      "deck": "Preliminary and updated outbreak assessments for West Nile virus found in Germany and Southern Europe.",
+      "whatChanged": [
+        "Preliminary and updated outbreak assessments for West Nile virus found in Germany and Southern Europe."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T16:01:07.000Z",
+      "updatedAt": "2026-09-01T16:01:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-be65d2cee2cdb6e8",
+      "slug": "science-health-climate-s-cluster-be65d2cee2cdb6e8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Funding for farmers, growers and land managers",
+      "deck": "Apply for grants and other funding to increase productivity, manage your land to benefit the environment and support your agricultural business.",
+      "whatChanged": [
+        "Apply for grants and other funding to increase productivity, manage your land to benefit the environment and support your agricultural business."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T14:17:29.000Z",
+      "updatedAt": "2026-09-01T14:17:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-aadbaed30b907700",
+      "slug": "science-health-climate-s-cluster-aadbaed30b907700",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "£13m to turn cutting-edge research into real-world, farming solutions",
+      "deck": "Funding will help turn cutting-edge research into practical tools for farmers, from vaccines that protect pigs from disease to technology that tackles pests and boosts crop yields",
+      "whatChanged": [
+        "Funding will help turn cutting-edge research into practical tools for farmers, from vaccines that protect pigs from disease to technology that tackles pests and boosts crop yields"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T13:15:45.000Z",
+      "updatedAt": "2026-09-01T13:15:45.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T16:01:42.000Z",
+      "updatedAt": "2026-09-01T16:01:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-13T16:12:25.000Z",
+      "updatedAt": "2026-08-13T16:12:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b87dfd89b46d77fd",
+      "slug": "policy-geopolitics-s-cluster-b87dfd89b46d77fd",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Treaty Action Bulletin: August 2026",
+      "deck": "Updates on UK actions for multilateral treaties, publication and depositary work.",
+      "whatChanged": [
+        "Updates on UK actions for multilateral treaties, publication and depositary work."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T11:51:03.000Z",
+      "updatedAt": "2026-09-01T11:51:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3c00788e2c700616",
+      "slug": "policy-geopolitics-s-cluster-3c00788e2c700616",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Foreign embassies in the UK",
+      "deck": "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission.",
+      "whatChanged": [
+        "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T11:27:17.000Z",
+      "updatedAt": "2026-09-01T11:27:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d645cd9090e9742",
+      "slug": "policy-geopolitics-s-cluster-8d645cd9090e9742",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: FCDO workforce management information: July 2026",
+      "deck": "Information on Foreign, Commonwealth & Development Office (FCDO) staff numbers and costs, for July 2026.",
+      "whatChanged": [
+        "Information on Foreign, Commonwealth & Development Office (FCDO) staff numbers and costs, for July 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T11:21:28.000Z",
+      "updatedAt": "2026-09-01T11:21:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c695d9acbbcc98c2",
+      "slug": "business-economy-s-cluster-c695d9acbbcc98c2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Decision: Fishing opportunities for British fishing boats: determinations published in 2026",
+      "deck": "This sets out fishing opportunities for British fishing boats for certain fish stocks and groups of fish stocks published in 2026.",
+      "whatChanged": [
+        "This sets out fishing opportunities for British fishing boats for certain fish stocks and groups of fish stocks published in 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T13:00:10.000Z",
+      "updatedAt": "2026-09-01T13:00:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c4ed0c3fc87e9702",
+      "slug": "business-economy-s-cluster-c4ed0c3fc87e9702",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 31 / 08 / 2026",
+      "deck": "European Commission Daily news Brussels, 31 Aug 2026 Commission designates ChatGPT, Reddit, Roblox under Digital Services Act Today, the Commission has designated ChatGPT as a Very Large Online Search Engine (VLOS...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 31 Aug 2026 Commission designates ChatGPT, Reddit, Roblox under Digital Services Act Today, the Commission has designated ChatGPT as a Very Large Online Search Engine (VLOS..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T09:30:38.000Z",
+      "updatedAt": "2026-09-01T09:10:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6584ad1dc3ad723c",
+      "slug": "business-economy-s-cluster-6584ad1dc3ad723c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Wholesale fruit and vegetable prices",
+      "deck": "Series of fortnightly average wholesale market prices of selected home grown horticultural produce.",
+      "whatChanged": [
+        "Series of fortnightly average wholesale market prices of selected home grown horticultural produce."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T08:30:04.000Z",
+      "updatedAt": "2026-09-01T08:30:04.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "How to get paid under an Environmental Stewardship agreement",
+      "url": "https://www.gov.uk/guidance/how-to-get-paid-under-an-environmental-stewardship-agreement",
+      "sourceType": "official",
+      "publishedAt": "2026-08-28T22:59:03.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Lahbib at the European Parliament on the 2026 Wildfire Season",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1788",
+      "sourceType": "official",
+      "publishedAt": "2026-08-07T07:37:00.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "UK accelerates support for efforts to stop Ebola outbreak at source",
+      "url": "https://www.gov.uk/government/news/uk-accelerates-support-for-efforts-to-stop-ebola-outbreak-at-source",
+      "sourceType": "official",
+      "publishedAt": "2026-08-28T13:01:26.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Non-domestic National Energy Efficiency Data Framework (ND-NEED), 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/non-domestic-national-energy-efficiency-data-framework-nd-need-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-08-27T08:30:07.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Adult Social Care Learning and Development Support Scheme: a guide for employers",
+      "url": "https://www.gov.uk/government/publications/adult-social-care-learning-and-development-support-scheme",
+      "sourceType": "official",
+      "publishedAt": "2026-08-18T09:03:53.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Supplementary code for digital right to rent checks (1.0)",
+      "url": "https://www.gov.uk/government/publications/supplementary-code-for-digital-right-to-rent-checks-1-0",
+      "sourceType": "official",
+      "publishedAt": "2026-08-05T13:45:47.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
