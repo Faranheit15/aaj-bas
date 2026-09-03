@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-03",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-03T04:48:11.779Z",
+  "updatedAt": "2026-09-03T04:48:11.779Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-3d23fb2cfc8c2e74",
+    "s-cluster-8206092e6060b1dc",
+    "s-cluster-d10ee266ff22ac9a",
+    "s-cluster-9e95f9bb129d78e1",
+    "s-cluster-d15c98ccd161f2b5",
+    "s-cluster-399c47293c3d16fa",
+    "s-cluster-141d19c03b178db2",
+    "s-cluster-df524955aaf09284"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-4334a247725d03ca",
+      "s-cluster-79a3d24853b9c6b0",
+      "s-cluster-b87dfd89b46d77fd"
+    ],
+    "science-health-climate": [
+      "s-cluster-74cb611d3d81b040",
+      "s-cluster-17e71f951a7be908",
+      "s-cluster-5f6d451d89851239"
+    ],
+    "business-economy": [
+      "s-cluster-2115f494b1ea2f6d",
+      "s-cluster-579c5464cd2efd8a",
+      "s-cluster-432476946b0a5f9d"
+    ],
+    "technology-ai": [
+      "s-cluster-f591853791f5913f",
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-3d23fb2cfc8c2e74",
+      "slug": "india-s-cluster-3d23fb2cfc8c2e74",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Independent report: McCloud Remedy project recovery plan: review update",
+      "deck": "Conclusions and recommendations from the independent review of the NHS Business Service Authority’s (NHSBSA) delivery of the McCloud Remedy for the NHS Pension Scheme.",
+      "whatChanged": [
+        "Conclusions and recommendations from the independent review of the NHS Business Service Authority’s (NHSBSA) delivery of the McCloud Remedy for the NHS Pension Scheme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T18:44:41.000Z",
+      "updatedAt": "2026-09-02T18:44:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8206092e6060b1dc",
+      "slug": "india-s-cluster-8206092e6060b1dc",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Gigabit Broadband Voucher Scheme information",
+      "deck": "This page contains information about the scheme, including how it works, eligibility criteria, and the funding the scheme provides.",
+      "whatChanged": [
+        "This page contains information about the scheme, including how it works, eligibility criteria, and the funding the scheme provides."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T15:19:36.000Z",
+      "updatedAt": "2026-09-02T15:19:36.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d10ee266ff22ac9a",
+      "slug": "india-s-cluster-d10ee266ff22ac9a",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: WorkWell",
+      "deck": "Information on WorkWell for local systems partnerships.",
+      "whatChanged": [
+        "Information on WorkWell for local systems partnerships."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T15:15:08.000Z",
+      "updatedAt": "2026-09-02T15:15:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9e95f9bb129d78e1",
+      "slug": "policy-geopolitics-s-cluster-9e95f9bb129d78e1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Nepal travel advice",
+      "deck": "FCDO travel advice for Nepal. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Nepal. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T08:47:59.000Z",
+      "updatedAt": "2026-09-02T15:45:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T11:10:16.000Z",
+      "updatedAt": "2026-09-02T11:10:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-399c47293c3d16fa",
+      "slug": "science-health-climate-s-cluster-399c47293c3d16fa",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Semiconductor Sector Study 2026",
+      "deck": "Research into the scale and economic contribution of the UK semiconductor sector.",
+      "whatChanged": [
+        "Research into the scale and economic contribution of the UK semiconductor sector."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T09:38:42.000Z",
+      "updatedAt": "2026-09-02T09:38:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-141d19c03b178db2",
+      "slug": "science-health-climate-s-cluster-141d19c03b178db2",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Rogue waste gangs exposed as heat maps reveal England's illegal dumping hotspots",
+      "deck": "New Environment Agency heat maps show where suspected waste crime is being reported, helping identify hotspots and target enforcement activity.",
+      "whatChanged": [
+        "New Environment Agency heat maps show where suspected waste crime is being reported, helping identify hotspots and target enforcement activity."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T08:49:47.000Z",
+      "updatedAt": "2026-09-02T08:49:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-df524955aaf09284",
+      "slug": "business-economy-s-cluster-df524955aaf09284",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Capacity Market: changes for Prequalification 2027",
+      "deck": "We are seeking views on proposed changes to the Capacity Market for Prequalification 2027.",
+      "whatChanged": [
+        "We are seeking views on proposed changes to the Capacity Market for Prequalification 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T08:38:17.000Z",
+      "updatedAt": "2026-09-02T08:38:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T11:09:46.000Z",
+      "updatedAt": "2026-09-02T11:09:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-79a3d24853b9c6b0",
+      "slug": "policy-geopolitics-s-cluster-79a3d24853b9c6b0",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/Costa Rica: Air Service Agreement [CS Costa Rica No.1/2026]",
+      "deck": "This treaty was presented to Parliament in September 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T13:00:10.000Z",
+      "updatedAt": "2026-09-01T13:00:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b87dfd89b46d77fd",
+      "slug": "policy-geopolitics-s-cluster-b87dfd89b46d77fd",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Treaty Action Bulletin: August 2026",
+      "deck": "Updates on UK actions for multilateral treaties, publication and depositary work.",
+      "whatChanged": [
+        "Updates on UK actions for multilateral treaties, publication and depositary work."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T11:51:03.000Z",
+      "updatedAt": "2026-09-01T11:51:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-74cb611d3d81b040",
+      "slug": "science-health-climate-s-cluster-74cb611d3d81b040",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Slovakia: doctors",
+      "deck": "List of English-speaking medical facilities in Slovakia.",
+      "whatChanged": [
+        "List of English-speaking medical facilities in Slovakia."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T09:31:09.000Z",
+      "updatedAt": "2026-09-02T09:31:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-17e71f951a7be908",
+      "slug": "science-health-climate-s-cluster-17e71f951a7be908",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in Portugal",
+      "deck": "Information about support for British nationals experiencing mental health difficulties in Portugal.",
+      "whatChanged": [
+        "Information about support for British nationals experiencing mental health difficulties in Portugal."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T06:09:53.000Z",
+      "updatedAt": "2026-09-02T06:09:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f6d451d89851239",
+      "slug": "science-health-climate-s-cluster-5f6d451d89851239",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, July 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-08-25T10:55:53.000Z",
+      "updatedAt": "2026-08-27T13:48:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2115f494b1ea2f6d",
+      "slug": "business-economy-s-cluster-2115f494b1ea2f6d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: Economic Estimates: Employment in the Digital Sector, January 2025 to December 2025",
+      "deck": "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individual...",
+      "whatChanged": [
+        "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individuals, and part-time and full-time employment."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T09:20:54.000Z",
+      "updatedAt": "2026-09-02T09:20:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-579c5464cd2efd8a",
+      "slug": "business-economy-s-cluster-579c5464cd2efd8a",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Capacity Market: new technologies 2026",
+      "deck": "We are seeking views on whether technologies capable of contributing to electricity security of supply could enter future Capacity Market auctions.",
+      "whatChanged": [
+        "We are seeking views on whether technologies capable of contributing to electricity security of supply could enter future Capacity Market auctions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T08:37:42.000Z",
+      "updatedAt": "2026-09-02T08:37:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-432476946b0a5f9d",
+      "slug": "business-economy-s-cluster-432476946b0a5f9d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 31 / 08 / 2026",
+      "deck": "European Commission Daily news Brussels, 31 Aug 2026 Commission designates ChatGPT, Reddit, Roblox under Digital Services Act Today, the Commission has designated ChatGPT as a Very Large Online Search Engine (VLOS...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 31 Aug 2026 Commission designates ChatGPT, Reddit, Roblox under Digital Services Act Today, the Commission has designated ChatGPT as a Very Large Online Search Engine (VLOS..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T09:30:38.000Z",
+      "updatedAt": "2026-09-02T07:22:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T16:01:42.000Z",
+      "updatedAt": "2026-09-01T16:01:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-13T16:12:25.000Z",
+      "updatedAt": "2026-08-13T16:12:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Independent report: McCloud Remedy project recovery plan: review update",
+      "url": "https://www.gov.uk/government/publications/mccloud-remedy-project-recovery-plan-review-update",
+      "sourceType": "official",
+      "publishedAt": "2026-08-18T12:35:26.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Gigabit Broadband Voucher Scheme information",
+      "url": "https://www.gov.uk/government/publications/gigabit-broadband-voucher-scheme-information",
+      "sourceType": "official",
+      "publishedAt": "2026-08-12T23:01:05.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Uganda travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/uganda",
+      "sourceType": "official",
+      "publishedAt": "2026-09-01T08:47:59.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: SFI uptake September 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/sfi-uptake-september-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-01T13:15:45.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Correspondence: Oil and gas: OPRED communications, 2026",
+      "url": "https://www.gov.uk/government/publications/oil-and-gas-opred-communications-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-08-27T09:00:24.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by President von der Leyen with NATO Secretary-General Mark Rutte",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1790",
+      "sourceType": "official",
+      "publishedAt": "2026-08-12T08:08:40.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
