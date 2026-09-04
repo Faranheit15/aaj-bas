@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-04",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-04T04:49:58.024Z",
+  "updatedAt": "2026-09-04T04:49:58.024Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-0ed454e1848e7c7c",
+    "s-cluster-8b8316d29127c4cc",
+    "s-cluster-f5db9a5dd5d461ae",
+    "s-cluster-fe2731c7ca148adb",
+    "s-cluster-3fe09069d66c50b6",
+    "s-cluster-1db86e57305fe5c5",
+    "s-cluster-8fa361b123be9c26",
+    "s-cluster-e98280a7d652eb0d"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-e9dec654482d2dfd",
+      "s-cluster-1ff31c366aa18c28",
+      "s-cluster-57b6f40c29edc290"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-2805c3ff89f5005a",
+      "s-cluster-d15c98ccd161f2b5",
+      "s-cluster-4334a247725d03ca"
+    ],
+    "business-economy": [
+      "s-cluster-a2be843e94dae4a5",
+      "s-cluster-2115f494b1ea2f6d",
+      "s-cluster-df524955aaf09284"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-17fb6d0d585ab611"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-0ed454e1848e7c7c",
+      "slug": "policy-geopolitics-s-cluster-0ed454e1848e7c7c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Azerbaijan travel advice",
+      "deck": "FCDO travel advice for Azerbaijan. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Azerbaijan. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T10:21:51.000Z",
+      "updatedAt": "2026-09-03T23:25:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8b8316d29127c4cc",
+      "slug": "india-s-cluster-8b8316d29127c4cc",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "Weekly average load in ERCOT continues near record high",
+      "deck": "Sustained high temperatures have contributed to persistently high electricity demand in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization for most of the state.",
+      "whatChanged": [
+        "Sustained high temperatures have contributed to persistently high electricity demand in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization for most of the state."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T14:00:00.000Z",
+      "updatedAt": "2026-09-03T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f5db9a5dd5d461ae",
+      "slug": "india-s-cluster-f5db9a5dd5d461ae",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Warm Homes: Social Housing Fund statistics - August 2026",
+      "deck": "Data to monitor the installation of energy efficiency measures in domestic properties via the Warm Homes: Social Housing Fund scheme in England.",
+      "whatChanged": [
+        "Data to monitor the installation of energy efficiency measures in domestic properties via the Warm Homes: Social Housing Fund scheme in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T13:47:51.000Z",
+      "updatedAt": "2026-09-03T13:48:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fe2731c7ca148adb",
+      "slug": "india-s-cluster-fe2731c7ca148adb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: Defra Statistics Policies and Statements",
+      "deck": "The Standards for Official Statistics in the Code of Practice for Statistics edition 3.0 requires a number of organisational policy documents and statements, relating to official statistics production.",
+      "whatChanged": [
+        "The Standards for Official Statistics in the Code of Practice for Statistics edition 3.0 requires a number of organisational policy documents and statements, relating to official statistics production."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T13:47:00.000Z",
+      "updatedAt": "2026-09-03T13:47:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3fe09069d66c50b6",
+      "slug": "policy-geopolitics-s-cluster-3fe09069d66c50b6",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Chemical weapons have no place in Syria, or anywhere in the world: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T15:25:55.000Z",
+      "updatedAt": "2026-09-03T15:25:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1db86e57305fe5c5",
+      "slug": "science-health-climate-s-cluster-1db86e57305fe5c5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Semiconductor sector study 2023",
+      "deck": "The findings of this report will produce a baseline of semiconductor-related economic activity in the UK.",
+      "whatChanged": [
+        "The findings of this report will produce a baseline of semiconductor-related economic activity in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T16:12:50.000Z",
+      "updatedAt": "2026-09-03T16:12:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T14:22:36.000Z",
+      "updatedAt": "2026-09-03T14:22:36.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e98280a7d652eb0d",
+      "slug": "business-economy-s-cluster-e98280a7d652eb0d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Investment boost for climate action and forest protection",
+      "deck": "The UK has announced its intention to invest £400 million into the Tropical Forests Forever Facility (TFFF).",
+      "whatChanged": [
+        "The UK has announced its intention to invest £400 million into the Tropical Forests Forever Facility (TFFF)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T14:00:12.000Z",
+      "updatedAt": "2026-09-03T14:00:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9dec654482d2dfd",
+      "slug": "science-health-climate-s-cluster-e9dec654482d2dfd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Seasonal workers reviews and surveys",
+      "deck": "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025.",
+      "whatChanged": [
+        "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T13:36:27.000Z",
+      "updatedAt": "2026-09-03T13:36:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1ff31c366aa18c28",
+      "slug": "science-health-climate-s-cluster-1ff31c366aa18c28",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's speech at the Environment Ireland Conference 2026",
+      "deck": "European Commission Speech Dublin, 03 Sep 2026 Minister Dooley, ladies and gentlemen, a chairde, I am delighted to be part of Environment Ireland. I cannot think of a more pressing topic than the state of ...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 03 Sep 2026 Minister Dooley, ladies and gentlemen, a chairde, I am delighted to be part of Environment Ireland. I cannot think of a more pressing topic than the state of ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T13:03:58.000Z",
+      "updatedAt": "2026-09-03T13:03:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-57b6f40c29edc290",
+      "slug": "science-health-climate-s-cluster-57b6f40c29edc290",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in Portugal",
+      "deck": "Information about support for British nationals experiencing mental health difficulties in Portugal.",
+      "whatChanged": [
+        "Information about support for British nationals experiencing mental health difficulties in Portugal."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T06:09:53.000Z",
+      "updatedAt": "2026-09-03T11:51:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2805c3ff89f5005a",
+      "slug": "policy-geopolitics-s-cluster-2805c3ff89f5005a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK summons Russian Chargé d'Affaires after reckless attack on Leipzig airport",
+      "deck": "The Foreign, Commonwealth and Development Office has summoned the Russian Charge D'affaires to condemn the recent drone attack in the strongest terms.",
+      "whatChanged": [
+        "The Foreign, Commonwealth and Development Office has summoned the Russian Charge D'affaires to condemn the recent drone attack in the strongest terms."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T11:33:57.000Z",
+      "updatedAt": "2026-09-03T11:33:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T10:45:27.000Z",
+      "updatedAt": "2026-09-03T10:45:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T10:45:10.000Z",
+      "updatedAt": "2026-09-03T10:45:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a2be843e94dae4a5",
+      "slug": "business-economy-s-cluster-a2be843e94dae4a5",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 31 / 08 / 2026",
+      "deck": "European Commission Daily news Brussels, 31 Aug 2026 Commission designates ChatGPT, Reddit, Roblox under Digital Services Act Today, the Commission has designated ChatGPT as a Very Large Online Search Engine (VLOS...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 31 Aug 2026 Commission designates ChatGPT, Reddit, Roblox under Digital Services Act Today, the Commission has designated ChatGPT as a Very Large Online Search Engine (VLOS..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-31T09:30:38.000Z",
+      "updatedAt": "2026-09-03T09:26:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2115f494b1ea2f6d",
+      "slug": "business-economy-s-cluster-2115f494b1ea2f6d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: Economic Estimates: Employment in the Digital Sector, January 2025 to December 2025",
+      "deck": "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individual...",
+      "whatChanged": [
+        "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individuals, and part-time and full-time employment."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T09:20:54.000Z",
+      "updatedAt": "2026-09-02T09:20:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-df524955aaf09284",
+      "slug": "business-economy-s-cluster-df524955aaf09284",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Capacity Market: changes for Prequalification 2027",
+      "deck": "We are seeking views on proposed changes to the Capacity Market for Prequalification 2027.",
+      "whatChanged": [
+        "We are seeking views on proposed changes to the Capacity Market for Prequalification 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T08:38:17.000Z",
+      "updatedAt": "2026-09-02T08:38:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-13T16:12:25.000Z",
+      "updatedAt": "2026-08-13T16:12:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-17fb6d0d585ab611",
+      "slug": "technology-ai-s-cluster-17fb6d0d585ab611",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Growing up in the online world: a national consultation",
+      "deck": "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions o...",
+      "whatChanged": [
+        "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions on addictive design features and risky functionalities, and better support for parents and families."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-19T16:08:25.000Z",
+      "updatedAt": "2026-08-19T16:08:25.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Mexico travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/mexico",
+      "sourceType": "official",
+      "publishedAt": "2026-09-01T13:00:10.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "Weekly average load in ERCOT continues near record high",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68084",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Investment boost for climate action and forest protection",
+      "url": "https://www.gov.uk/government/news/investment-boost-for-climate-action-and-forest-protection",
+      "sourceType": "official",
+      "publishedAt": "2026-08-27T14:47:07.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "url": "https://www.gov.uk/guidance/imports-exports-and-eu-trade-of-animals-and-animal-products-topical-issues",
+      "sourceType": "official",
+      "publishedAt": "2026-09-01T23:15:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Semiconductor sector study 2023",
+      "url": "https://www.gov.uk/government/publications/semiconductor-sector-study",
+      "sourceType": "official",
+      "publishedAt": "2026-08-13T16:12:23.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Commissioner Roswall's speech at the Environment Ireland Conference 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1796",
+      "sourceType": "official",
+      "publishedAt": "2026-08-17T08:46:28.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
