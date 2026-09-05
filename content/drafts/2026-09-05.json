@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-05",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-05T04:44:19.886Z",
+  "updatedAt": "2026-09-05T04:44:19.886Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-7afd4c35f82720ff",
+    "s-cluster-82e451762eb87517",
+    "s-cluster-0ad60221ddc4e3e6",
+    "s-cluster-4b349da763bc1c52",
+    "s-cluster-94b4c1d29683ae9f",
+    "s-cluster-adbf7085bdd43ab1",
+    "s-cluster-95dd13d7f7f960bd",
+    "s-cluster-5f6d451d89851239"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-9b1dcac77a4a8b7e",
+      "s-cluster-3fe09069d66c50b6",
+      "s-cluster-2805c3ff89f5005a"
+    ],
+    "science-health-climate": [
+      "s-cluster-36a73b964f7ae83d",
+      "s-cluster-f73c231a2724d407",
+      "s-cluster-1db86e57305fe5c5"
+    ],
+    "business-economy": [
+      "s-cluster-8fa361b123be9c26",
+      "s-cluster-e98280a7d652eb0d",
+      "s-cluster-2115f494b1ea2f6d"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-17fb6d0d585ab611"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-7afd4c35f82720ff",
+      "slug": "india-s-cluster-7afd4c35f82720ff",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Notice: Country Graduation from the Developing Countries Trading Scheme: India",
+      "deck": "This notice sets out the upcoming exit of India from the Developing Countries Trading Scheme (DCTS).",
+      "whatChanged": [
+        "This notice sets out the upcoming exit of India from the Developing Countries Trading Scheme (DCTS)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T11:09:19.000Z",
+      "updatedAt": "2026-09-04T11:09:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-82e451762eb87517",
+      "slug": "india-s-cluster-82e451762eb87517",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Boiler Upgrade Scheme: September 2026",
+      "deck": "Data monitoring the uptake of low carbon technologies on the Boiler Upgrade Scheme (BUS), including the installation of air source heat pumps, ground source heat pumps and biomass boilers.",
+      "whatChanged": [
+        "Data monitoring the uptake of low carbon technologies on the Boiler Upgrade Scheme (BUS), including the installation of air source heat pumps, ground source heat pumps and biomass boilers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T16:46:57.000Z",
+      "updatedAt": "2026-09-04T16:48:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0ad60221ddc4e3e6",
+      "slug": "india-s-cluster-0ad60221ddc4e3e6",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Pet travel: approved air, sea and rail carriers and routes",
+      "deck": "Check the transport companies and routes you can use to bring your pet cat, dog or ferret to England, Scotland or Wales.",
+      "whatChanged": [
+        "Check the transport companies and routes you can use to bring your pet cat, dog or ferret to England, Scotland or Wales."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T16:13:27.000Z",
+      "updatedAt": "2026-09-04T16:13:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4b349da763bc1c52",
+      "slug": "policy-geopolitics-s-cluster-4b349da763bc1c52",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Colombia travel advice",
+      "deck": "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T14:30:31.000Z",
+      "updatedAt": "2026-09-04T15:08:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94b4c1d29683ae9f",
+      "slug": "business-economy-s-cluster-94b4c1d29683ae9f",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Elevated crack spreads and crude oil prices contribute to higher prices at the pump",
+      "deck": "What are crack spreads and why are they elevated? Crack spreads are indicators of the profitability of refining crude oil into petroleum products such as gasoline and diesel. One common crack spread is calculated by subtracting the spot...",
+      "whatChanged": [
+        "What are crack spreads and why are they elevated? Crack spreads are indicators of the profitability of refining crude oil into petroleum products such as gasoline and diesel. One common crack spread is calculated by subtracting the spot market price of a gallon of crude oil from the wholesale price of a gallon of refined product. Since May, the gasoline crack spread in New York Harbor has averaged about $1 per gallon (gal) higher than in 2025, when the crack spread peaked around 60 cents/gal. Gasoline crack spreads are elevated primarily because of tight gasoline supplies globally."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T14:00:00.000Z",
+      "updatedAt": "2026-09-04T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-adbf7085bdd43ab1",
+      "slug": "science-health-climate-s-cluster-adbf7085bdd43ab1",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Government launches call for evidence on gamebird shooting",
+      "deck": "The government has launched a call for evidence on gamebird shooting",
+      "whatChanged": [
+        "The government has launched a call for evidence on gamebird shooting"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T09:00:08.000Z",
+      "updatedAt": "2026-09-04T11:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-95dd13d7f7f960bd",
+      "slug": "business-economy-s-cluster-95dd13d7f7f960bd",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 01 / 09 / 2026",
+      "deck": "European Commission Daily news Brussels, 01 Sep 2026 Latest data on investment in education sector across Europe highlights ways to boost attractiveness of teaching profession As pupils and teachers return to scho...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 01 Sep 2026 Latest data on investment in education sector across Europe highlights ways to boost attractiveness of teaching profession As pupils and teachers return to scho..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T09:10:31.000Z",
+      "updatedAt": "2026-09-04T07:28:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f6d451d89851239",
+      "slug": "science-health-climate-s-cluster-5f6d451d89851239",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, July 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-08-25T10:55:53.000Z",
+      "updatedAt": "2026-08-27T13:48:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9b1dcac77a4a8b7e",
+      "slug": "policy-geopolitics-s-cluster-9b1dcac77a4a8b7e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Invertebrates, amphibians or reptiles (live or germinal products) - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing live or germinal products of invertebrates, amphibians or reptiles to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing live or germinal products of invertebrates, amphibians or reptiles to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T08:28:53.000Z",
+      "updatedAt": "2026-09-04T08:28:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3fe09069d66c50b6",
+      "slug": "policy-geopolitics-s-cluster-3fe09069d66c50b6",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Chemical weapons have no place in Syria, or anywhere in the world: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T15:25:00.000Z",
+      "updatedAt": "2026-09-03T15:25:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2805c3ff89f5005a",
+      "slug": "policy-geopolitics-s-cluster-2805c3ff89f5005a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK summons Russian Chargé d'Affaires after reckless attack on Leipzig airport",
+      "deck": "The Foreign, Commonwealth and Development Office has summoned the Russian Charge D'affaires to condemn the recent drone attack in the strongest terms.",
+      "whatChanged": [
+        "The Foreign, Commonwealth and Development Office has summoned the Russian Charge D'affaires to condemn the recent drone attack in the strongest terms."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T11:33:00.000Z",
+      "updatedAt": "2026-09-03T11:33:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-36a73b964f7ae83d",
+      "slug": "science-health-climate-s-cluster-36a73b964f7ae83d",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Environment Secretary visits Havant Thicket reservoir as government strengthens water resilience amid ongoing drought",
+      "deck": "Environment Secretary visits Havant Thicket, England's first new reservoir in over 30 years as water resilience is a top government priority",
+      "whatChanged": [
+        "Environment Secretary visits Havant Thicket, England's first new reservoir in over 30 years as water resilience is a top government priority"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T08:00:00.000Z",
+      "updatedAt": "2026-09-04T08:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f73c231a2724d407",
+      "slug": "science-health-climate-s-cluster-f73c231a2724d407",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: Defra Statistics Policies and Statements",
+      "deck": "The Standards for Official Statistics in the Code of Practice for Statistics edition 3.0 requires a number of organisational policy documents and statements, relating to official statistics production.",
+      "whatChanged": [
+        "The Standards for Official Statistics in the Code of Practice for Statistics edition 3.0 requires a number of organisational policy documents and statements, relating to official statistics production."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T13:47:00.000Z",
+      "updatedAt": "2026-09-04T07:02:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1db86e57305fe5c5",
+      "slug": "science-health-climate-s-cluster-1db86e57305fe5c5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Semiconductor sector study 2023",
+      "deck": "The findings of this report will produce a baseline of semiconductor-related economic activity in the UK.",
+      "whatChanged": [
+        "The findings of this report will produce a baseline of semiconductor-related economic activity in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T16:12:50.000Z",
+      "updatedAt": "2026-09-03T16:12:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T14:22:36.000Z",
+      "updatedAt": "2026-09-03T14:22:36.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e98280a7d652eb0d",
+      "slug": "business-economy-s-cluster-e98280a7d652eb0d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Investment boost for climate action and forest protection",
+      "deck": "The UK has announced its intention to invest £400 million into the Tropical Forests Forever Facility (TFFF).",
+      "whatChanged": [
+        "The UK has announced its intention to invest £400 million into the Tropical Forests Forever Facility (TFFF)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T14:00:12.000Z",
+      "updatedAt": "2026-09-03T14:00:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2115f494b1ea2f6d",
+      "slug": "business-economy-s-cluster-2115f494b1ea2f6d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: Economic Estimates: Employment in the Digital Sector, January 2025 to December 2025",
+      "deck": "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individual...",
+      "whatChanged": [
+        "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individuals, and part-time and full-time employment."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T09:20:54.000Z",
+      "updatedAt": "2026-09-02T09:20:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-13T16:12:25.000Z",
+      "updatedAt": "2026-08-13T16:12:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-17fb6d0d585ab611",
+      "slug": "technology-ai-s-cluster-17fb6d0d585ab611",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Growing up in the online world: a national consultation",
+      "deck": "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions o...",
+      "whatChanged": [
+        "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions on addictive design features and risky functionalities, and better support for parents and families."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-19T16:08:25.000Z",
+      "updatedAt": "2026-08-19T16:08:25.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Legalisation: next-day service providers",
+      "url": "https://www.gov.uk/government/publications/legalisation-next-day-service-providers",
+      "sourceType": "official",
+      "publishedAt": "2026-09-03T08:30:00.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Boiler Upgrade Scheme: November 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/boiler-upgrade-scheme-november-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-01T08:30:02.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Pet travel: approved air, sea and rail carriers and routes",
+      "url": "https://www.gov.uk/government/publications/pet-travel-approved-air-sea-and-rail-carriers-and-routes",
+      "sourceType": "official",
+      "publishedAt": "2026-09-03T08:30:09.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "Elevated crack spreads and crude oil prices contribute to higher prices at the pump",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68104",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Daily News 04 / 09 / 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1797",
+      "sourceType": "official",
+      "publishedAt": "2026-08-17T14:45:21.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: NHS injury costs recovery scheme: April 2026 to March 2027",
+      "url": "https://www.gov.uk/government/publications/nhs-injury-costs-recovery-scheme-april-2026-to-march-2027",
+      "sourceType": "official",
+      "publishedAt": "2026-08-20T14:49:04.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Semiconductor sector study 2023",
+      "url": "https://www.gov.uk/government/publications/semiconductor-sector-study",
+      "sourceType": "official",
+      "publishedAt": "2026-08-13T16:12:23.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
