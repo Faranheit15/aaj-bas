@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-07",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-07T04:59:03.907Z",
+  "updatedAt": "2026-09-07T04:59:03.907Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-15c01ed41251709d",
+    "s-cluster-8ca9ea24af5af706",
+    "s-cluster-5f6d451d89851239",
+    "s-cluster-016dd3011d848335",
+    "s-cluster-1ff690366aa4871b",
+    "s-cluster-d37f9b2aa085b5fa",
+    "s-cluster-9b1dcac77a4a8b7e"
+  ],
+  "interestPools": {
+    "business-economy": [
+      "s-cluster-94b4c1d29683ae9f",
+      "s-cluster-95dd13d7f7f960bd",
+      "s-cluster-0dc8a3940f3fef19"
+    ],
+    "science-health-climate": [
+      "s-cluster-adbf7085bdd43ab1",
+      "s-cluster-36a73b964f7ae83d",
+      "s-cluster-f73c231a2724d407"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-0dcfa9940f4617f9",
+      "s-cluster-18dbf0bfb3983619",
+      "s-cluster-2805c3ff89f5005a"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-17fb6d0d585ab611"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-06T15:13:04.000Z",
+      "updatedAt": "2026-09-06T15:13:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-15c01ed41251709d",
+      "slug": "policy-geopolitics-s-cluster-15c01ed41251709d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Nepal travel advice",
+      "deck": "FCDO travel advice for Nepal. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Nepal. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-06T14:39:52.000Z",
+      "updatedAt": "2026-09-06T14:39:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8ca9ea24af5af706",
+      "slug": "policy-geopolitics-s-cluster-8ca9ea24af5af706",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Colombia travel advice",
+      "deck": "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T14:30:31.000Z",
+      "updatedAt": "2026-09-06T05:58:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f6d451d89851239",
+      "slug": "science-health-climate-s-cluster-5f6d451d89851239",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, July 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-08-25T10:55:53.000Z",
+      "updatedAt": "2026-08-27T13:48:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-016dd3011d848335",
+      "slug": "india-s-cluster-016dd3011d848335",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "Can the Great Nicobar Islands survive India’s development aspirations?",
+      "deck": "India’s massive Great Nicobar development project has sparked debate over environmental risks, Indigenous rights, and strategic ambitions as critics warn of irreversible ecological and social consequences on the fragile island.",
+      "whatChanged": [
+        "India’s massive Great Nicobar development project has sparked debate over environmental risks, Indigenous rights, and strategic ambitions as critics warn of irreversible ecological and social consequences on the fragile island."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-05-13T08:00:43.000Z",
+      "updatedAt": "2026-05-13T08:00:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1ff690366aa4871b",
+      "slug": "india-s-cluster-1ff690366aa4871b",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the European Parliament on the 2026 Wildfire Season",
+      "deck": "European Commission Speech Brussels, 01 Sep 2026 This summer has tested us. Almost 700,000 hectares have already burned across the EU, more land than the yearly average of the past two decades and the season i...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 01 Sep 2026 This summer has tested us. Almost 700,000 hectares have already burned across the EU, more land than the yearly average of the past two decades and the season i..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T16:09:08.000Z",
+      "updatedAt": "2026-09-01T16:09:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9b1dcac77a4a8b7e",
+      "slug": "policy-geopolitics-s-cluster-9b1dcac77a4a8b7e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Invertebrates, amphibians or reptiles (live or germinal products) - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing live or germinal products of invertebrates, amphibians or reptiles to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing live or germinal products of invertebrates, amphibians or reptiles to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T08:28:53.000Z",
+      "updatedAt": "2026-09-04T08:28:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94b4c1d29683ae9f",
+      "slug": "business-economy-s-cluster-94b4c1d29683ae9f",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Elevated crack spreads and crude oil prices contribute to higher prices at the pump",
+      "deck": "What are crack spreads and why are they elevated? Crack spreads are indicators of the profitability of refining crude oil into petroleum products such as gasoline and diesel. One common crack spread is calculated by subtracting the spot...",
+      "whatChanged": [
+        "What are crack spreads and why are they elevated? Crack spreads are indicators of the profitability of refining crude oil into petroleum products such as gasoline and diesel. One common crack spread is calculated by subtracting the spot market price of a gallon of crude oil from the wholesale price of a gallon of refined product. Since May, the gasoline crack spread in New York Harbor has averaged about $1 per gallon (gal) higher than in 2025, when the crack spread peaked around 60 cents/gal. Gasoline crack spreads are elevated primarily because of tight gasoline supplies globally."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T14:00:00.000Z",
+      "updatedAt": "2026-09-04T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-95dd13d7f7f960bd",
+      "slug": "business-economy-s-cluster-95dd13d7f7f960bd",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 01 / 09 / 2026",
+      "deck": "European Commission Daily news Brussels, 01 Sep 2026 Latest data on investment in education sector across Europe highlights ways to boost attractiveness of teaching profession As pupils and teachers return to scho...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 01 Sep 2026 Latest data on investment in education sector across Europe highlights ways to boost attractiveness of teaching profession As pupils and teachers return to scho..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-01T09:10:31.000Z",
+      "updatedAt": "2026-09-04T07:28:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0dc8a3940f3fef19",
+      "slug": "business-economy-s-cluster-0dc8a3940f3fef19",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission sends Statement of Objections over proposed joint venture between UPM and Sappi",
+      "deck": "European Commission Press release Brussels, 26 Aug 2026 The European Commission has informed UPM-Kymmene Corporation ('UPM') and Sappi Limited ('Sappi') of its preliminary view that its proposed joint venture may restrict competition in...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 26 Aug 2026 The European Commission has informed UPM-Kymmene Corporation ('UPM') and Sappi Limited ('Sappi') of its preliminary view that its proposed joint venture may restrict competition in the markets for different types of communication paper, which is used for printed materials, such as magazines or books."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-25T22:00:00.000Z",
+      "updatedAt": "2026-08-25T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-adbf7085bdd43ab1",
+      "slug": "science-health-climate-s-cluster-adbf7085bdd43ab1",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Government launches call for evidence on gamebird shooting",
+      "deck": "The government has launched a call for evidence on gamebird shooting",
+      "whatChanged": [
+        "The government has launched a call for evidence on gamebird shooting"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T09:00:08.000Z",
+      "updatedAt": "2026-09-04T11:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-36a73b964f7ae83d",
+      "slug": "science-health-climate-s-cluster-36a73b964f7ae83d",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Environment Secretary visits Havant Thicket reservoir as government strengthens water resilience amid ongoing drought",
+      "deck": "Environment Secretary visits Havant Thicket, England's first new reservoir in over 30 years as water resilience is a top government priority",
+      "whatChanged": [
+        "Environment Secretary visits Havant Thicket, England's first new reservoir in over 30 years as water resilience is a top government priority"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T08:00:00.000Z",
+      "updatedAt": "2026-09-04T08:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f73c231a2724d407",
+      "slug": "science-health-climate-s-cluster-f73c231a2724d407",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: Defra Statistics Policies and Statements",
+      "deck": "The Standards for Official Statistics in the Code of Practice for Statistics edition 3.0 requires a number of organisational policy documents and statements, relating to official statistics production.",
+      "whatChanged": [
+        "The Standards for Official Statistics in the Code of Practice for Statistics edition 3.0 requires a number of organisational policy documents and statements, relating to official statistics production."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T13:47:00.000Z",
+      "updatedAt": "2026-09-04T07:02:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0dcfa9940f4617f9",
+      "slug": "policy-geopolitics-s-cluster-0dcfa9940f4617f9",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Commission adopts EU Guidelines on exclusionary abuses of dominance",
+      "deck": "European Commission Press release Brussels, 03 Sep 2026 The European Commission has today adopted Guidelines on the application of Article 102 of the Treaty on the Functioning of the European Union ('TFEU') to abusive exclusionary conduc...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 03 Sep 2026 The European Commission has today adopted Guidelines on the application of Article 102 of the Treaty on the Functioning of the European Union ('TFEU') to abusive exclusionary conduct by dominant companies. The adoption of the guidelines marks the end of a three-year process in which the Commission consulted extensively with stakeholders."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-02T22:00:00.000Z",
+      "updatedAt": "2026-09-02T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-18dbf0bfb3983619",
+      "slug": "policy-geopolitics-s-cluster-18dbf0bfb3983619",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Daily News 28 / 08 / 2026",
+      "deck": "European Commission Daily news Brussels, 28 Aug 2026 Bulgaria and Latvia receive first payments under SAFE defence instrument Today, Bulgaria and Latvia received their first payments under the Security Action for ...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 28 Aug 2026 Bulgaria and Latvia receive first payments under SAFE defence instrument Today, Bulgaria and Latvia received their first payments under the Security Action for ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-28T10:04:38.000Z",
+      "updatedAt": "2026-08-31T09:30:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2805c3ff89f5005a",
+      "slug": "policy-geopolitics-s-cluster-2805c3ff89f5005a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK summons Russian Chargé d'Affaires after reckless attack on Leipzig airport",
+      "deck": "The Foreign, Commonwealth and Development Office has summoned the Russian Charge D'affaires to condemn the recent drone attack in the strongest terms.",
+      "whatChanged": [
+        "The Foreign, Commonwealth and Development Office has summoned the Russian Charge D'affaires to condemn the recent drone attack in the strongest terms."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-03T11:33:00.000Z",
+      "updatedAt": "2026-09-03T11:33:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-13T16:12:25.000Z",
+      "updatedAt": "2026-08-13T16:12:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-17fb6d0d585ab611",
+      "slug": "technology-ai-s-cluster-17fb6d0d585ab611",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Growing up in the online world: a national consultation",
+      "deck": "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions o...",
+      "whatChanged": [
+        "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions on addictive design features and risky functionalities, and better support for parents and families."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-19T16:08:25.000Z",
+      "updatedAt": "2026-08-19T16:08:25.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-03T08:30:09.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Nepal travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/nepal",
+      "sourceType": "official",
+      "publishedAt": "2026-09-03T08:58:26.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: NHS injury costs recovery scheme: April 2026 to March 2027",
+      "url": "https://www.gov.uk/government/publications/nhs-injury-costs-recovery-scheme-april-2026-to-march-2027",
+      "sourceType": "official",
+      "publishedAt": "2026-08-20T14:49:04.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Semiconductor sector study 2023",
+      "url": "https://www.gov.uk/government/publications/semiconductor-sector-study",
+      "sourceType": "official",
+      "publishedAt": "2026-08-13T16:12:23.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Karuna kumari Kandregula",
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Daily News 04 / 09 / 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1797",
+      "sourceType": "official",
+      "publishedAt": "2026-08-17T14:45:21.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "Elevated crack spreads and crude oil prices contribute to higher prices at the pump",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68104",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
