@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-08",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-08T04:56:08.580Z",
+  "updatedAt": "2026-09-08T04:56:08.580Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-96614b7411873397",
+    "s-cluster-a05a42565209dfbf",
+    "s-cluster-60c462a8e418ed4a",
+    "s-cluster-4334a247725d03ca",
+    "s-cluster-ac91490ee7ca4c56",
+    "s-cluster-9009b036a9f8a785",
+    "s-cluster-8a52b6b855e58b2e"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-fd5b945427a72f92",
+      "s-cluster-db095b6538ac5718",
+      "s-cluster-86947b99017136a3"
+    ],
+    "business-economy": [
+      "s-cluster-2048e0d9e69a4322",
+      "s-cluster-04a5119409f06d1d",
+      "s-cluster-0dc8a3940f3fef19"
+    ],
+    "science-health-climate": [
+      "s-cluster-5f6d451d89851239",
+      "s-cluster-d37f9b2aa085b5fa",
+      "s-cluster-02601f3beeff5d45"
+    ],
+    "technology-ai": [
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-17fb6d0d585ab611",
+      "s-cluster-616a38339b5de780"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T16:33:22.000Z",
+      "updatedAt": "2026-09-07T16:33:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-96614b7411873397",
+      "slug": "india-s-cluster-96614b7411873397",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Correspondence: Oil and gas: OPRED communications, 2026",
+      "deck": "OPRED communications issued to stakeholders in 2026.",
+      "whatChanged": ["OPRED communications issued to stakeholders in 2026."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T16:00:05.000Z",
+      "updatedAt": "2026-09-07T16:00:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a05a42565209dfbf",
+      "slug": "india-s-cluster-a05a42565209dfbf",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Policy paper: UK Emissions Trading Scheme (UK ETS): policy overview",
+      "deck": "The role of the UK Emissions Trading Scheme in UK decarbonisation and how the UK ETS Authority is developing the scheme.",
+      "whatChanged": [
+        "The role of the UK Emissions Trading Scheme in UK decarbonisation and how the UK ETS Authority is developing the scheme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T16:00:00.000Z",
+      "updatedAt": "2026-09-07T16:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-60c462a8e418ed4a",
+      "slug": "policy-geopolitics-s-cluster-60c462a8e418ed4a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "ISIL (Da’esh) and Al-Qaida: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T13:00:24.000Z",
+      "updatedAt": "2026-09-07T13:00:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T13:00:16.000Z",
+      "updatedAt": "2026-09-07T13:00:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ac91490ee7ca4c56",
+      "slug": "technology-ai-s-cluster-ac91490ee7ca4c56",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Research: A study of cybersecurity literature on open-source software and AI",
+      "deck": "A combined evidence report and systematic review of peer-reviewed academic literature and grey literature.",
+      "whatChanged": [
+        "A combined evidence report and systematic review of peer-reviewed academic literature and grey literature."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T14:59:37.000Z",
+      "updatedAt": "2026-09-07T14:59:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9009b036a9f8a785",
+      "slug": "world-s-cluster-9009b036a9f8a785",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Hoekstra at the launch of Europe's largest carbon capture and storage project at Yara Sluiskil, the Netherlands",
+      "deck": "European Commission Speech Sluiskil, 07 Sep 2026 Prime Ministers, Ladies and Gentlemen, Prime Minister Støre, first of all, my sincere condolences on the passing of the late King Harold V. And may I also than...",
+      "whatChanged": [
+        "European Commission Speech Sluiskil, 07 Sep 2026 Prime Ministers, Ladies and Gentlemen, Prime Minister Støre, first of all, my sincere condolences on the passing of the late King Harold V. And may I also than..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T15:25:10.000Z",
+      "updatedAt": "2026-09-07T15:25:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8a52b6b855e58b2e",
+      "slug": "world-s-cluster-8a52b6b855e58b2e",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Statement by President von der Leyen at the signing of the EU-Greenland Joint Declaration",
+      "deck": "European Commission Statement Nuuk, 07 Sep 2026 Premier Nielsen, dear Jens-Frederik, Prime Minister Frederiksen, dear Mette, I also want to thank you for the excellent cooperation and the outstanding hospital...",
+      "whatChanged": [
+        "European Commission Statement Nuuk, 07 Sep 2026 Premier Nielsen, dear Jens-Frederik, Prime Minister Frederiksen, dear Mette, I also want to thank you for the excellent cooperation and the outstanding hospital..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T09:46:49.000Z",
+      "updatedAt": "2026-09-07T09:46:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fd5b945427a72f92",
+      "slug": "policy-geopolitics-s-cluster-fd5b945427a72f92",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: Constitution of the United Nations Industrial Development Organization [MS No.10/2026]",
+      "deck": "This treaty was presented to Parliament in September 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T13:00:07.000Z",
+      "updatedAt": "2026-09-07T13:00:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-db095b6538ac5718",
+      "slug": "policy-geopolitics-s-cluster-db095b6538ac5718",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Italy travel advice",
+      "deck": "FCDO travel advice for Italy. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Italy. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T09:19:38.000Z",
+      "updatedAt": "2026-09-07T09:19:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-86947b99017136a3",
+      "slug": "policy-geopolitics-s-cluster-86947b99017136a3",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Rwanda travel advice",
+      "deck": "FCDO travel advice for Rwanda. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Rwanda. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-04T09:15:14.000Z",
+      "updatedAt": "2026-09-06T14:39:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2048e0d9e69a4322",
+      "slug": "business-economy-s-cluster-2048e0d9e69a4322",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Contracts for Difference (CfD) Allocation Round 8: Clean Industry Bonus framework and guidance",
+      "deck": "The CfD Clean Industry Bonus will allow fixed and floating offshore wind applicants to get extra CfD revenue support if they choose to invest in more sustainable supply chains.",
+      "whatChanged": [
+        "The CfD Clean Industry Bonus will allow fixed and floating offshore wind applicants to get extra CfD revenue support if they choose to invest in more sustainable supply chains."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T10:11:23.000Z",
+      "updatedAt": "2026-09-07T10:11:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-04a5119409f06d1d",
+      "slug": "business-economy-s-cluster-04a5119409f06d1d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "EU and Greenland strengthen partnership and engagement, backed by €200 million in EU investment",
+      "deck": "European Commission Press release Nuuk, 07 Sep 2026 On her visit to Nuuk, the President of the European Commission Ursula von der Leyen announced a €200 million Global Gateway Partnership Package, to be invested in and with Greenland thi...",
+      "whatChanged": [
+        "European Commission Press release Nuuk, 07 Sep 2026 On her visit to Nuuk, the President of the European Commission Ursula von der Leyen announced a €200 million Global Gateway Partnership Package, to be invested in and with Greenland this year and the next. The EU, Greenland and Denmark have also reinforced their partnership with a new Joint Declaration, signed in Nuuk by the President, Premier of Greenland Jens-Frederik Nielsen and Prime Minister of Denmark Mette Frederiksen."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-06T22:00:00.000Z",
+      "updatedAt": "2026-09-06T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0dc8a3940f3fef19",
+      "slug": "business-economy-s-cluster-0dc8a3940f3fef19",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission sends Statement of Objections over proposed joint venture between UPM and Sappi",
+      "deck": "European Commission Press release Brussels, 26 Aug 2026 The European Commission has informed UPM-Kymmene Corporation ('UPM') and Sappi Limited ('Sappi') of its preliminary view that its proposed joint venture may restrict competition in...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 26 Aug 2026 The European Commission has informed UPM-Kymmene Corporation ('UPM') and Sappi Limited ('Sappi') of its preliminary view that its proposed joint venture may restrict competition in the markets for different types of communication paper, which is used for printed materials, such as magazines or books."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-25T22:00:00.000Z",
+      "updatedAt": "2026-08-25T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f6d451d89851239",
+      "slug": "science-health-climate-s-cluster-5f6d451d89851239",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, July 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-08-25T10:55:53.000Z",
+      "updatedAt": "2026-08-27T13:48:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-02601f3beeff5d45",
+      "slug": "science-health-climate-s-cluster-02601f3beeff5d45",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: Department of Health and Social Care record of processing activity (RoPA)",
+      "deck": "The record of processing activity lists the personal data being held and processed by the Department of Health and Social Care (DHSC) in the UK.",
+      "whatChanged": [
+        "The record of processing activity lists the personal data being held and processed by the Department of Health and Social Care (DHSC) in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-21T15:33:35.000Z",
+      "updatedAt": "2026-08-21T15:33:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-17fb6d0d585ab611",
+      "slug": "technology-ai-s-cluster-17fb6d0d585ab611",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Growing up in the online world: a national consultation",
+      "deck": "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions o...",
+      "whatChanged": [
+        "We consulted on further measures to prepare children for the future in an age of rapid technological change. This includes potential age restrictions on social media and other services such as gaming sites and AI chatbots, restrictions on addictive design features and risky functionalities, and better support for parents and families."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-19T16:08:25.000Z",
+      "updatedAt": "2026-08-19T16:08:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "Organisations that have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "Organisations that have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-21T12:08:25.000Z",
+      "updatedAt": "2026-08-21T12:08:25.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-03T13:36:27.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Correspondence: Oil and gas: OPRED communications, 2026",
+      "url": "https://www.gov.uk/government/publications/oil-and-gas-opred-communications-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-04T16:46:57.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "UN Human Rights Council 63: UK Statement for the Enhanced Interactive Dialogue on Myanmar",
+      "url": "https://www.gov.uk/government/speeches/un-human-rights-council-63-uk-statement-for-the-enhanced-interactive-dialogue-on-myanmar",
+      "sourceType": "official",
+      "publishedAt": "2026-09-04T07:56:18.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: A study of cybersecurity literature on open-source software and AI",
+      "url": "https://www.gov.uk/government/publications/a-study-of-cybersecurity-literature-on-open-source-software-and-ai",
+      "sourceType": "official",
+      "publishedAt": "2026-08-17T09:00:08.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Hoekstra at the launch of Europe's largest carbon capture and storage project at Yara Sluiskil, the Netherlands",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1809",
+      "sourceType": "official",
+      "publishedAt": "2026-08-20T22:00:00.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Medicines eligible for Northern Ireland MHRA Authorised Route",
+      "url": "https://www.gov.uk/government/publications/medicines-eligible-for-northern-ireland-mhra-authorised-route",
+      "sourceType": "official",
+      "publishedAt": "2026-08-21T10:00:04.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
