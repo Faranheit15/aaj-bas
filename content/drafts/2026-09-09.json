@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-09",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-09T04:56:11.288Z",
+  "updatedAt": "2026-09-09T04:56:11.288Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-2edec8ba544b0ac2",
+    "s-cluster-482a62a99cd69991",
+    "s-cluster-b051895dba199218",
+    "s-cluster-7e212113c4a6d644",
+    "s-cluster-d801540bd6840fc8",
+    "s-cluster-f926cf9d5b300171",
+    "s-cluster-8a4c26b855e02ad0",
+    "s-cluster-900d2336a9fba0c5"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-3e0deda2e664faf4",
+      "s-cluster-f3fe13933db7d06c",
+      "s-cluster-2f0b9881e260fdd9"
+    ],
+    "science-health-climate": [
+      "s-cluster-b078d2a4a5b1f89f",
+      "s-cluster-26c47c66b72ce0d1",
+      "s-cluster-ee9f67fa0f6e8701"
+    ],
+    "technology-ai": [
+      "s-cluster-0e8394d8ad1b6c7a",
+      "s-cluster-171fcf985d6a7759",
+      "s-cluster-0afcfe39c63893c4"
+    ],
+    "business-economy": [
+      "s-cluster-900d1f36a9fb99f9",
+      "s-cluster-0da3aa940f20dec1",
+      "s-cluster-2048e0d9e69a4322"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-2edec8ba544b0ac2",
+      "slug": "policy-geopolitics-s-cluster-2edec8ba544b0ac2",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Written Ministerial Statement: Iran Sanctions, 8 September 2026",
+      "deck": "The Minister for the Middle East, Stephen Doughty MP, has provided a written update to parliament on Iran Sanctions measures.",
+      "whatChanged": [
+        "The Minister for the Middle East, Stephen Doughty MP, has provided a written update to parliament on Iran Sanctions measures."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T18:23:16.000Z",
+      "updatedAt": "2026-09-08T18:23:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-482a62a99cd69991",
+      "slug": "india-s-cluster-482a62a99cd69991",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Local net zero: support for local authorities and communities",
+      "deck": "Central government provides a range of support to help local authorities and communities to decarbonise.",
+      "whatChanged": [
+        "Central government provides a range of support to help local authorities and communities to decarbonise."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T15:16:06.000Z",
+      "updatedAt": "2026-09-08T15:16:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b051895dba199218",
+      "slug": "india-s-cluster-b051895dba199218",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Farm business income",
+      "deck": "Annual statistics on farm business income in England.",
+      "whatChanged": ["Annual statistics on farm business income in England."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T14:38:03.000Z",
+      "updatedAt": "2026-09-08T14:38:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7e212113c4a6d644",
+      "slug": "business-economy-s-cluster-7e212113c4a6d644",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "UK to bring forward new powers to respond to moral emergency in Palestine, and target illegal settlement activity in the West Bank to protect the viability o...",
+      "deck": "UK to bring forward new powers to respond to moral emergency in Palestine, and target illegal settlement activity in the West Bank to protect the viability of a two-state solution",
+      "whatChanged": [
+        "UK to bring forward new powers to respond to moral emergency in Palestine, and target illegal settlement activity in the West Bank to protect the viability of a two-state solution"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T17:24:49.000Z",
+      "updatedAt": "2026-09-08T17:24:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d801540bd6840fc8",
+      "slug": "science-health-climate-s-cluster-d801540bd6840fc8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Two more men arrested for illegal waste dumping at Kidlington site",
+      "deck": "Further arrests made as part of Environment Agency investigation, supported by Surrey Police and the South East Regional Organised Crime Unit",
+      "whatChanged": [
+        "Further arrests made as part of Environment Agency investigation, supported by Surrey Police and the South East Regional Organised Crime Unit"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T16:28:19.000Z",
+      "updatedAt": "2026-09-08T16:28:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f926cf9d5b300171",
+      "slug": "policy-geopolitics-s-cluster-f926cf9d5b300171",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: DESNZ Main Estimate Memorandum 2024 to 2025",
+      "deck": "Explanatory Memorandum to the Energy Security and Net Zero Committee for the 2024 to 2025 Main Estimate.",
+      "whatChanged": [
+        "Explanatory Memorandum to the Energy Security and Net Zero Committee for the 2024 to 2025 Main Estimate."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T14:31:38.000Z",
+      "updatedAt": "2026-09-08T14:31:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8a4c26b855e02ad0",
+      "slug": "world-s-cluster-8a4c26b855e02ad0",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Statement by Commissioner Lahbib ahead of the International Day to Protect Education from Attack",
+      "deck": "European Commission Statement Brussels, 08 Sep 2026 Imagine a classroom. What do you see? A blackboard. The reassuring smile of a teacher. The first powerful emotions of life: the joy of learning, the sense of ac...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 08 Sep 2026 Imagine a classroom. What do you see? A blackboard. The reassuring smile of a teacher. The first powerful emotions of life: the joy of learning, the sense of ac..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T17:38:52.000Z",
+      "updatedAt": "2026-09-08T17:38:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-900d2336a9fba0c5",
+      "slug": "india-s-cluster-900d2336a9fba0c5",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Šefčovič at BoKoWiTa, the Conference of the Heads of German Missions Abroad Business Forum",
+      "deck": "European Commission Speech Berlin, 08 Sep 2026 Dear Minister, dear Johann, Dear Heads of Mission, Sehr geehrte Damen und Herren. It is a pleasure to be here in Berlin today to discuss with you this important...",
+      "whatChanged": [
+        "European Commission Speech Berlin, 08 Sep 2026 Dear Minister, dear Johann, Dear Heads of Mission, Sehr geehrte Damen und Herren. It is a pleasure to be here in Berlin today to discuss with you this important..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T11:02:55.000Z",
+      "updatedAt": "2026-09-08T11:02:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e0deda2e664faf4",
+      "slug": "policy-geopolitics-s-cluster-3e0deda2e664faf4",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Notice: Notice to exporters 2026/18: Iran sanctions amendments effective from 29 September 2026",
+      "deck": "This Notice to Exporters informs UK businesses of amendments to the Iran sanctions and Iran nuclear sanctions which entered into force on 29 September 2026.",
+      "whatChanged": [
+        "This Notice to Exporters informs UK businesses of amendments to the Iran sanctions and Iran nuclear sanctions which entered into force on 29 September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T15:59:06.000Z",
+      "updatedAt": "2026-09-08T15:59:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f3fe13933db7d06c",
+      "slug": "policy-geopolitics-s-cluster-f3fe13933db7d06c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary Oral Statement on Israel-Palestine",
+      "deck": "Foreign Secretary's oral statement to the House of Commons on Israel-Palestine as delivered.",
+      "whatChanged": [
+        "Foreign Secretary's oral statement to the House of Commons on Israel-Palestine as delivered."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T13:37:00.000Z",
+      "updatedAt": "2026-09-08T13:37:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2f0b9881e260fdd9",
+      "slug": "policy-geopolitics-s-cluster-2f0b9881e260fdd9",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK Summons Serbian Chargé d'Affaires to the United Kingdom",
+      "deck": "The Foreign, Commonwealth and Development Office has today summoned the Serbian Chargé d'Affaires to condemn commemorations surrounding the funeral of convicted war criminal Ratko Mladić.",
+      "whatChanged": [
+        "The Foreign, Commonwealth and Development Office has today summoned the Serbian Chargé d'Affaires to condemn commemorations surrounding the funeral of convicted war criminal Ratko Mladić."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T13:27:23.000Z",
+      "updatedAt": "2026-09-08T13:27:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b078d2a4a5b1f89f",
+      "slug": "science-health-climate-s-cluster-b078d2a4a5b1f89f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Precision bred organism release notice (reference: PBR/26/010)",
+      "deck": "Details of a notification to release a precision bred rapeseed plant in England.",
+      "whatChanged": [
+        "Details of a notification to release a precision bred rapeseed plant in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T15:29:11.000Z",
+      "updatedAt": "2026-09-08T15:29:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-26c47c66b72ce0d1",
+      "slug": "science-health-climate-s-cluster-26c47c66b72ce0d1",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Notice: IPCC Methodology Report on Inventories for Short-lived Climate Forcers: Second Order Draft expert review",
+      "deck": "The Intergovernmental Panel on Climate Change (IPCC) has announced the expert review of the Second Order Draft of its Methodology Report on Inventories for Short-lived Climate Forcers.",
+      "whatChanged": [
+        "The Intergovernmental Panel on Climate Change (IPCC) has announced the expert review of the Second Order Draft of its Methodology Report on Inventories for Short-lived Climate Forcers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T14:36:37.000Z",
+      "updatedAt": "2026-09-08T14:36:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ee9f67fa0f6e8701",
+      "slug": "science-health-climate-s-cluster-ee9f67fa0f6e8701",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Contributing to the IPCC",
+      "deck": "This page contains guidance for UK experts on how they can contribute to the United Nations’ Intergovernmental Panel on Climate Change (IPCC).",
+      "whatChanged": [
+        "This page contains guidance for UK experts on how they can contribute to the United Nations’ Intergovernmental Panel on Climate Change (IPCC)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T14:36:34.000Z",
+      "updatedAt": "2026-09-08T14:36:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0e8394d8ad1b6c7a",
+      "slug": "technology-ai-s-cluster-0e8394d8ad1b6c7a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Vision for an AI-enabled clean energy system",
+      "deck": "We're seeking evidence on how artificial intelligence can transform the energy system, including opportunities, risks, and barriers to adoption.",
+      "whatChanged": [
+        "We're seeking evidence on how artificial intelligence can transform the energy system, including opportunities, risks, and barriers to adoption."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T11:13:58.000Z",
+      "updatedAt": "2026-09-08T12:55:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-171fcf985d6a7759",
+      "slug": "technology-ai-s-cluster-171fcf985d6a7759",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Independent report: AI deployment in electricity networks: independent review",
+      "deck": "Independent review by Lucy Yu looking at artificial intelligence deployment in electricity networks.",
+      "whatChanged": [
+        "Independent review by Lucy Yu looking at artificial intelligence deployment in electricity networks."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T11:13:52.000Z",
+      "updatedAt": "2026-09-08T11:13:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-900d1f36a9fb99f9",
+      "slug": "business-economy-s-cluster-900d1f36a9fb99f9",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's speech at the conference, “World Lake Day in the Lake Balaton Region”",
+      "deck": "European Commission Speech Budapest, 08 Sep 2026 Ladies and Gentlemen, I am delighted to join you today, on the banks of the beautiful Lake Balaton. And I am delighted to celebrate the second World Lake ...",
+      "whatChanged": [
+        "European Commission Speech Budapest, 08 Sep 2026 Ladies and Gentlemen, I am delighted to join you today, on the banks of the beautiful Lake Balaton. And I am delighted to celebrate the second World Lake ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T07:49:40.000Z",
+      "updatedAt": "2026-09-08T07:49:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0da3aa940f20dec1",
+      "slug": "business-economy-s-cluster-0da3aa940f20dec1",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission approves €400 million German State aid to enhance insulin supply resilience",
+      "deck": "European Commission Press release Brussels, 08 Sep 2026 The European Commission has approved, under EU State aid rules, a €400 million German measure in favour of Sanofi-Aventis Deutschland GmbH ('Sanofi') to strengthen the resilience of...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 08 Sep 2026 The European Commission has approved, under EU State aid rules, a €400 million German measure in favour of Sanofi-Aventis Deutschland GmbH ('Sanofi') to strengthen the resilience of the supply of human insulin and insulin analogues ('insulins'). Under the measure, Germany will pay Sanofi a public service compensation to provide a service of general economic interest ('SGEI')."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T22:00:00.000Z",
+      "updatedAt": "2026-09-07T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2048e0d9e69a4322",
+      "slug": "business-economy-s-cluster-2048e0d9e69a4322",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Contracts for Difference (CfD) Allocation Round 8: Clean Industry Bonus framework and guidance",
+      "deck": "The CfD Clean Industry Bonus will allow fixed and floating offshore wind applicants to get extra CfD revenue support if they choose to invest in more sustainable supply chains.",
+      "whatChanged": [
+        "The CfD Clean Industry Bonus will allow fixed and floating offshore wind applicants to get extra CfD revenue support if they choose to invest in more sustainable supply chains."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T10:11:23.000Z",
+      "updatedAt": "2026-09-07T10:11:23.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Written Ministerial Statement: Iran Sanctions, 8 September 2026",
+      "url": "https://www.gov.uk/government/speeches/written-ministerial-statement-iran-sanctions-8-september-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-07T10:55:19.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Local net zero: support for local authorities and communities",
+      "url": "https://www.gov.uk/government/publications/local-net-zero-support-for-local-authorities-and-communities",
+      "sourceType": "official",
+      "publishedAt": "2026-09-07T08:31:46.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Two more men arrested for illegal waste dumping at Kidlington site",
+      "url": "https://www.gov.uk/government/news/two-more-men-arrested-for-illegal-waste-dumping-at-kidlington-site",
+      "sourceType": "official",
+      "publishedAt": "2026-09-04T07:02:16.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by Commissioner Lahbib ahead of the International Day to Protect Education from Attack",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1823",
+      "sourceType": "official",
+      "publishedAt": "2026-08-24T10:00:44.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: AI Risk Management Toolkit",
+      "url": "https://www.gov.uk/government/publications/ai-risk-management-toolkit",
+      "sourceType": "official",
+      "publishedAt": "2026-08-17T11:50:38.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
