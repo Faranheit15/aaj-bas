@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-14",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-14T05:12:23.200Z",
+  "updatedAt": "2026-09-14T05:12:23.200Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-3e0a3053fea23d58",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-272e2b0206daf150",
+    "s-cluster-016dd3011d848335",
+    "s-cluster-0497779409e4dd13",
+    "s-cluster-90173336aa04107a",
+    "s-cluster-d37f9b2aa085b5fa",
+    "s-cluster-6590242ec750b549"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-8a3e291914aea97a",
+      "s-cluster-5057a140433b8de7",
+      "s-cluster-c0a096c76f302c46"
+    ],
+    "science-health-climate": [
+      "s-cluster-14bd9a8751b00249",
+      "s-cluster-48c3a53d360dc116",
+      "s-cluster-7c3a9ab4daad6304"
+    ],
+    "business-economy": [
+      "s-cluster-291bae07dc84676c",
+      "s-cluster-0da3aa940f20dec1",
+      "s-cluster-13e943c9c1143926"
+    ],
+    "technology-ai": [
+      "s-cluster-0afcfe39c63893c4",
+      "s-cluster-0e8394d8ad1b6c7a",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-3e0a3053fea23d58",
+      "slug": "technology-ai-s-cluster-3e0a3053fea23d58",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "UK and US fusion strike partnership to accelerate clean energy",
+      "deck": "UK and US set to sign agreements at the Global Fusion Summit to combine expertise in AI, computing and fusion and to cooperate on regulating fusion energy.",
+      "whatChanged": [
+        "UK and US set to sign agreements at the Global Fusion Summit to combine expertise in AI, computing and fusion and to cooperate on regulating fusion energy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-13T23:01:04.000Z",
+      "updatedAt": "2026-09-13T23:01:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-13T13:51:34.000Z",
+      "updatedAt": "2026-09-13T13:51:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-272e2b0206daf150",
+      "slug": "india-s-cluster-272e2b0206daf150",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Funding secured for excavation to unlock secrets of Bronze Age Flag Fen site",
+      "deck": "The new excavation of a unique Bronze Age site near Peterborough will deepen understanding of its 3,500-year history.",
+      "whatChanged": [
+        "The new excavation of a unique Bronze Age site near Peterborough will deepen understanding of its 3,500-year history."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-12T23:01:01.000Z",
+      "updatedAt": "2026-09-12T23:01:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-016dd3011d848335",
+      "slug": "india-s-cluster-016dd3011d848335",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "Can the Great Nicobar Islands survive India’s development aspirations?",
+      "deck": "India’s massive Great Nicobar development project has sparked debate over environmental risks, Indigenous rights, and strategic ambitions as critics warn of irreversible ecological and social consequences on the fragile island.",
+      "whatChanged": [
+        "India’s massive Great Nicobar development project has sparked debate over environmental risks, Indigenous rights, and strategic ambitions as critics warn of irreversible ecological and social consequences on the fragile island."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-05-13T08:00:43.000Z",
+      "updatedAt": "2026-05-13T08:00:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0497779409e4dd13",
+      "slug": "business-economy-s-cluster-0497779409e4dd13",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission presents landmark India trade deal to Council for signature",
+      "deck": "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has put forward its proposals to the Council for the signature and conclusion of Free Trade Agreement (FTA) between the European Union and India, seek...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has put forward its proposals to the Council for the signature and conclusion of Free Trade Agreement (FTA) between the European Union and India, seeking authorization for its signature and conclusion."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-10T22:00:00.000Z",
+      "updatedAt": "2026-09-10T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-90173336aa04107a",
+      "slug": "science-health-climate-s-cluster-90173336aa04107a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Introductory remarks by Commissioner Hoekstra during an exchange of views with the European Parliament's Committee on the Environment, Climate and Food Safet...",
+      "deck": "European Commission Speech Brussels, 10 Sep 2026 Chair, Honourable Members, I'm delighted to have the opportunity to exchange on this important file. In terms of climate, if anyone needed an additional remind...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 10 Sep 2026 Chair, Honourable Members, I'm delighted to have the opportunity to exchange on this important file. In terms of climate, if anyone needed an additional remind..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-10T15:14:27.000Z",
+      "updatedAt": "2026-09-10T15:14:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6590242ec750b549",
+      "slug": "policy-geopolitics-s-cluster-6590242ec750b549",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom strongly condemns the Houthis’ decision to resume conflict in Yemen and their continued strikes on Saudi Arabia: UK statement at the UN Se...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Yemen.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Yemen."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-10T20:13:00.000Z",
+      "updatedAt": "2026-09-11T21:02:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8a3e291914aea97a",
+      "slug": "policy-geopolitics-s-cluster-8a3e291914aea97a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom has long supported strengthening the UN sanctions regime: UK Explanation of Vote at the UN Security Council",
+      "deck": "UK Explanation of Vote delivered by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, following the UN Security Council vote on the Sudan sanctions regime.",
+      "whatChanged": [
+        "UK Explanation of Vote delivered by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, following the UN Security Council vote on the Sudan sanctions regime."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-11T20:14:22.000Z",
+      "updatedAt": "2026-09-11T20:14:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5057a140433b8de7",
+      "slug": "policy-geopolitics-s-cluster-5057a140433b8de7",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Kosovo travel advice",
+      "deck": "FCDO travel advice for Kosovo. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Kosovo. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-11T10:40:38.000Z",
+      "updatedAt": "2026-09-11T15:29:14.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c0a096c76f302c46",
+      "slug": "policy-geopolitics-s-cluster-c0a096c76f302c46",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Global human rights: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-10T14:00:44.000Z",
+      "updatedAt": "2026-09-11T14:00:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-14bd9a8751b00249",
+      "slug": "science-health-climate-s-cluster-14bd9a8751b00249",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Form: Youth Climate and Nature Panel (closed to applications)",
+      "deck": "We're creating a new Youth Climate and Nature Panel to put the voices of younger people at the heart of climate and nature policies.",
+      "whatChanged": [
+        "We're creating a new Youth Climate and Nature Panel to put the voices of younger people at the heart of climate and nature policies."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-11T22:59:06.000Z",
+      "updatedAt": "2026-09-11T22:59:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-48c3a53d360dc116",
+      "slug": "science-health-climate-s-cluster-48c3a53d360dc116",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Travel with assistance dogs: transport companies and routes",
+      "deck": "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners.",
+      "whatChanged": [
+        "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-11T14:26:09.000Z",
+      "updatedAt": "2026-09-11T14:26:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7c3a9ab4daad6304",
+      "slug": "science-health-climate-s-cluster-7c3a9ab4daad6304",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Rabies quarantine: authorised premises and carriers",
+      "deck": "List of rabies quarantine premises and transporters authorised by the Department for Environment, Food and Rural Affairs.",
+      "whatChanged": [
+        "List of rabies quarantine premises and transporters authorised by the Department for Environment, Food and Rural Affairs."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-11T14:22:11.000Z",
+      "updatedAt": "2026-09-11T14:22:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-291bae07dc84676c",
+      "slug": "business-economy-s-cluster-291bae07dc84676c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Responsible technology and resilience against hybrid threats: UK statement to the 32nd OSCE Economic and Environmental Forum",
+      "deck": "Ambassador Holland highlights responsible governance and multistakeholder cooperation are essential to harness frontier technologies while protecting human rights and public trust. The OSCE must strengthen early warning, address hybrid t...",
+      "whatChanged": [
+        "Ambassador Holland highlights responsible governance and multistakeholder cooperation are essential to harness frontier technologies while protecting human rights and public trust. The OSCE must strengthen early warning, address hybrid threats and support Ukraine’s recovery and resilience in the face of Russia’s illegal war."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-11T11:07:11.000Z",
+      "updatedAt": "2026-09-11T11:07:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0da3aa940f20dec1",
+      "slug": "business-economy-s-cluster-0da3aa940f20dec1",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission approves €400 million German State aid to enhance insulin supply resilience*",
+      "deck": "European Commission Press release Brussels, 08 Sep 2026 The European Commission has approved, under EU State aid rules, a €400 million German measure in favour of Sanofi-Aventis Deutschland GmbH ('Sanofi') to strengthen the resilience of...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 08 Sep 2026 The European Commission has approved, under EU State aid rules, a €400 million German measure in favour of Sanofi-Aventis Deutschland GmbH ('Sanofi') to strengthen the resilience of the supply of human insulin and insulin analogues ('insulins'). Under the measure, Germany will pay Sanofi a public service compensation to provide a service of general economic interest ('SGEI')."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-07T22:00:00.000Z",
+      "updatedAt": "2026-09-07T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13e943c9c1143926",
+      "slug": "business-economy-s-cluster-13e943c9c1143926",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Waterborne shipments from the U.S. Gulf Coast increased in April and May",
+      "deck": "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel...",
+      "whatChanged": [
+        "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel between U.S. ports. Shipments from the U.S. Gulf Coast to the East Coast (PADD 1) also increased."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-17T14:00:00.000Z",
+      "updatedAt": "2026-08-17T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0e8394d8ad1b6c7a",
+      "slug": "technology-ai-s-cluster-0e8394d8ad1b6c7a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Vision for an AI-enabled clean energy system",
+      "deck": "We're seeking evidence on how artificial intelligence can transform the energy system, including opportunities, risks, and barriers to adoption.",
+      "whatChanged": [
+        "We're seeking evidence on how artificial intelligence can transform the energy system, including opportunities, risks, and barriers to adoption."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T11:13:58.000Z",
+      "updatedAt": "2026-09-08T12:55:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "UK and US fusion strike partnership to accelerate clean energy",
+      "url": "https://www.gov.uk/government/news/uk-and-us-fusion-strike-partnership-to-accelerate-clean-energy",
+      "sourceType": "official",
+      "publishedAt": "2026-09-10T14:00:44.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "UK and US fusion strike partnership to accelerate clean energy",
+      "url": "https://www.gov.uk/government/news/uk-and-us-fusion-strike-partnership-to-accelerate-clean-energy",
+      "sourceType": "official",
+      "publishedAt": "2026-09-07T15:28:40.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-10T08:30:07.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Karuna kumari Kandregula",
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "‘Indigenous languages and cultures are surviving, and will continue to survive’: Interview with Juang-language writer Kshetrabasi Juanga",
+      "url": "https://globalvoices.org/2026/08/20/indigenous-languages-and-cultures-are-surviving-and-will-continue-to-survive-interview-with-juang-language-writer-kshetrabasi-juanga/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-04-30T23:00:01.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Press Remarks by Commissioner Lahbib in Moldova",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1862",
+      "sourceType": "official",
+      "publishedAt": "2026-09-07T07:40:33.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "United States on track for record crude oil production in 2026",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68125",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Local Full Fibre Networks Evaluation: work package three report",
+      "url": "https://www.gov.uk/government/publications/local-full-fibre-networks-evaluation-work-package-three-report",
+      "sourceType": "official",
+      "publishedAt": "2026-08-21T15:01:24.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
