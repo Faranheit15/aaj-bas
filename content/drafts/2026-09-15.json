@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-15",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-15T05:06:13.189Z",
+  "updatedAt": "2026-09-15T05:06:13.189Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-9010a236a9feae69",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-804805876ce42d41",
+    "s-cluster-040f173aefb91d61",
+    "s-cluster-db095b6538ac5718",
+    "s-cluster-3b4723ddcb55298b",
+    "s-cluster-53c4e47ee4491cc0",
+    "s-cluster-93f847ec13aede55"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-fd96c39289dc3d39",
+      "s-cluster-babf69c7b6d3f44b",
+      "s-cluster-0da3a9940f20dd0e"
+    ],
+    "science-health-climate": [
+      "s-cluster-ecfc7d5b29bf2564",
+      "s-cluster-580c9c992af3ab65",
+      "s-cluster-801a395f165becd6"
+    ],
+    "technology-ai": [
+      "s-cluster-3e0a3053fea23d58",
+      "s-cluster-f591853791f5913f",
+      "s-cluster-616a38339b5de780"
+    ],
+    "business-economy": [
+      "s-cluster-432b456c92d13321",
+      "s-cluster-6584ad1dc3ad723c",
+      "s-cluster-0497779409e4dd13"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-9010a236a9feae69",
+      "slug": "india-s-cluster-9010a236a9feae69",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Šefčovič at the European Parliament Plenary debate on the Union Customs Code and Customs Authority",
+      "deck": "European Commission Speech Strasbourg, 14 Sep 2026 Madam President, Honourable Members. The Customs Reform has been a collective effort towards a shared objective: upgrading our Customs Union, ensuring it will f...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 14 Sep 2026 Madam President, Honourable Members. The Customs Reform has been a collective effort towards a shared objective: upgrading our Customs Union, ensuring it will f..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T12:58:22.000Z",
+      "updatedAt": "2026-09-14T12:58:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T16:22:16.000Z",
+      "updatedAt": "2026-09-14T16:22:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-804805876ce42d41",
+      "slug": "india-s-cluster-804805876ce42d41",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Protected spirit drinks names: applications",
+      "deck": "List of applications to protect the geographical name of a spirit drink in Great Britain.",
+      "whatChanged": [
+        "List of applications to protect the geographical name of a spirit drink in Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T15:48:09.000Z",
+      "updatedAt": "2026-09-14T15:48:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-040f173aefb91d61",
+      "slug": "world-s-cluster-040f173aefb91d61",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Minister for International Development and Africa speech at the New Economics Foundation",
+      "deck": "Kirsty McNeill, Minister for International Development and Africa speech at the New Economics Foundation",
+      "whatChanged": [
+        "Kirsty McNeill, Minister for International Development and Africa speech at the New Economics Foundation"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T19:44:00.000Z",
+      "updatedAt": "2026-09-14T19:44:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-db095b6538ac5718",
+      "slug": "policy-geopolitics-s-cluster-db095b6538ac5718",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Italy travel advice",
+      "deck": "FCDO travel advice for Italy. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Italy. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T14:40:59.000Z",
+      "updatedAt": "2026-09-14T14:40:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b4723ddcb55298b",
+      "slug": "science-health-climate-s-cluster-3b4723ddcb55298b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: DHSC public appointments: 2026 to 2027",
+      "deck": "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027.",
+      "whatChanged": [
+        "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T15:10:17.000Z",
+      "updatedAt": "2026-09-14T15:10:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-53c4e47ee4491cc0",
+      "slug": "business-economy-s-cluster-53c4e47ee4491cc0",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Statutory guidance: Electricity networks growth: draft social and environmental guidance to GEMA",
+      "deck": "Draft guidance on delivering growth through electricity networks.",
+      "whatChanged": [
+        "Draft guidance on delivering growth through electricity networks."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T13:30:00.000Z",
+      "updatedAt": "2026-09-14T13:30:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-93f847ec13aede55",
+      "slug": "world-s-cluster-93f847ec13aede55",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Policy paper: Global Fusion Policy Summit: joint statement on fusion energy",
+      "deck": "A joint statement following the Global Fusion Policy Summit setting out shared priorities for international cooperation on fusion energy.",
+      "whatChanged": [
+        "A joint statement following the Global Fusion Policy Summit setting out shared priorities for international cooperation on fusion energy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T14:44:17.000Z",
+      "updatedAt": "2026-09-14T14:44:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fd96c39289dc3d39",
+      "slug": "policy-geopolitics-s-cluster-fd96c39289dc3d39",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/Poland: Treaty on Security and Defence Partnership [CS Poland No.1/2026]",
+      "deck": "This treaty was presented to Parliament in June 2026.",
+      "whatChanged": ["This treaty was presented to Parliament in June 2026."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-11T13:59:21.000Z",
+      "updatedAt": "2026-09-14T13:00:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-babf69c7b6d3f44b",
+      "slug": "policy-geopolitics-s-cluster-babf69c7b6d3f44b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Kosovo travel advice",
+      "deck": "FCDO travel advice for Kosovo. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Kosovo. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-11T10:40:38.000Z",
+      "updatedAt": "2026-09-14T10:23:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0da3a9940f20dd0e",
+      "slug": "policy-geopolitics-s-cluster-0da3a9940f20dd0e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Commission grants Spain €114.7 million and provides enhanced operational assistance to manage the situation in Ceuta",
+      "deck": "European Commission Press release Brussels, 09 Sep 2026 Today, the Commission has decided to provide Spain with €114.7 million in emergency assistance to help manage the situation in Ceuta, following the large-scale illegal border crossi...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 09 Sep 2026 Today, the Commission has decided to provide Spain with €114.7 million in emergency assistance to help manage the situation in Ceuta, following the large-scale illegal border crossings on 30-31 July. This financial support builds on the Commission's immediate response from the first day, when it offered Spain both financial and operational assistance. The decision further demonstrates the Commission's full solidarity with Spain in addressing the challenging situation."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T22:00:00.000Z",
+      "updatedAt": "2026-09-08T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ecfc7d5b29bf2564",
+      "slug": "science-health-climate-s-cluster-ecfc7d5b29bf2564",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Local nature recovery strategies",
+      "deck": "Strategies that propose how and where to recover nature and improve the wider environment across England.",
+      "whatChanged": [
+        "Strategies that propose how and where to recover nature and improve the wider environment across England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T14:06:35.000Z",
+      "updatedAt": "2026-09-14T14:06:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-580c9c992af3ab65",
+      "slug": "science-health-climate-s-cluster-580c9c992af3ab65",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Form: Defra annual or interim project report form",
+      "deck": "The annual or interim report form is an optional template for research suppliers to complete for a research contract with Defra.",
+      "whatChanged": [
+        "The annual or interim report form is an optional template for research suppliers to complete for a research contract with Defra."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T13:18:37.000Z",
+      "updatedAt": "2026-09-14T13:19:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-801a395f165becd6",
+      "slug": "science-health-climate-s-cluster-801a395f165becd6",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "UK steps up support for global efforts to prepare for El Niño following devastating extreme weather",
+      "deck": "Hundreds of thousands of people around the world will be helped to prepare for extreme weather conditions next year.",
+      "whatChanged": [
+        "Hundreds of thousands of people around the world will be helped to prepare for extreme weather conditions next year."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T11:41:18.000Z",
+      "updatedAt": "2026-09-14T11:41:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e0a3053fea23d58",
+      "slug": "technology-ai-s-cluster-3e0a3053fea23d58",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "UK and US fusion strike partnership to accelerate clean energy",
+      "deck": "UK and US set to sign agreements at the Global Fusion Summit to combine expertise in AI, computing and fusion and to cooperate on regulating fusion energy.",
+      "whatChanged": [
+        "UK and US set to sign agreements at the Global Fusion Summit to combine expertise in AI, computing and fusion and to cooperate on regulating fusion energy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-13T23:01:04.000Z",
+      "updatedAt": "2026-09-13T23:01:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T12:34:40.000Z",
+      "updatedAt": "2026-09-14T12:34:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T08:26:36.000Z",
+      "updatedAt": "2026-09-14T08:26:36.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-432b456c92d13321",
+      "slug": "business-economy-s-cluster-432b456c92d13321",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Promotional material: UK fusion investment prospectus",
+      "deck": "A practical guide to the UK fusion sector for investors and industry.",
+      "whatChanged": [
+        "A practical guide to the UK fusion sector for investors and industry."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T09:00:00.000Z",
+      "updatedAt": "2026-09-14T09:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6584ad1dc3ad723c",
+      "slug": "business-economy-s-cluster-6584ad1dc3ad723c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Wholesale fruit and vegetable prices",
+      "deck": "Series of fortnightly average wholesale market prices of selected home grown horticultural produce.",
+      "whatChanged": [
+        "Series of fortnightly average wholesale market prices of selected home grown horticultural produce."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T08:30:04.000Z",
+      "updatedAt": "2026-09-14T08:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0497779409e4dd13",
+      "slug": "business-economy-s-cluster-0497779409e4dd13",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission presents landmark India trade deal to Council for signature",
+      "deck": "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has put forward its proposals to the Council for the signature and conclusion of Free Trade Agreement (FTA) between the European Union and India, seek...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has put forward its proposals to the Council for the signature and conclusion of Free Trade Agreement (FTA) between the European Union and India, seeking authorization for its signature and conclusion."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-10T22:00:00.000Z",
+      "updatedAt": "2026-09-10T22:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Remarks by Commissioner Šefčovič at the European Parliament Plenary debate on the Union Customs Code and Customs Authority",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1867",
+      "sourceType": "official",
+      "publishedAt": "2026-09-07T15:25:10.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-11T08:42:43.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Minister for International Development and Africa speech at the New Economics Foundation",
+      "url": "https://www.gov.uk/government/speeches/minister-for-international-development-and-africa-speech-at-the-new-economics-foundation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-11T09:44:02.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: DHSC public appointments: 2026 to 2027",
+      "url": "https://www.gov.uk/government/publications/dhsc-public-appointments-2026-to-2027",
+      "sourceType": "official",
+      "publishedAt": "2026-09-09T15:45:59.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Global Fusion Policy Summit: joint statement on fusion energy",
+      "url": "https://www.gov.uk/government/publications/global-fusion-policy-summit-joint-statement-on-fusion-energy",
+      "sourceType": "official",
+      "publishedAt": "2026-09-08T14:36:37.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: IT Reuse for Good Charter",
+      "url": "https://www.gov.uk/government/publications/it-reuse-for-good-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-08-24T17:00:04.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
