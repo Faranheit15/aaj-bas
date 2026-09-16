@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-16",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-16T05:01:18.535Z",
+  "updatedAt": "2026-09-16T05:01:18.535Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-8feea536a9e1cd1c",
+    "s-cluster-9013b136aa00fdbd",
+    "s-cluster-13f00bcb99986a6e",
+    "s-cluster-2fccf72f9dc192c2",
+    "s-cluster-291206db75531829",
+    "s-cluster-2912d0408c117bc8",
+    "s-cluster-0bccd42bac45e165",
+    "s-cluster-38c236e6bcc30cf0"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-a105d7fdebe94d34",
+      "s-cluster-fd3152c072e58fb6",
+      "s-cluster-db095b6538ac5718"
+    ],
+    "business-economy": [
+      "s-cluster-7572b375a491e2eb",
+      "s-cluster-432b456c92d13321",
+      "s-cluster-0497779409e4dd13"
+    ],
+    "science-health-climate": [
+      "s-cluster-42120e9623c7a073",
+      "s-cluster-ecfc7d5b29bf2564",
+      "s-cluster-801a395f165becd6"
+    ],
+    "technology-ai": [
+      "s-cluster-ecb7265c7c4eecd2",
+      "s-cluster-3e0a3053fea23d58",
+      "s-cluster-0afcfe39c63893c4"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-8feea536a9e1cd1c",
+      "slug": "india-s-cluster-8feea536a9e1cd1c",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Kubilius at the European Parliament plenary session on Defence Readiness Omnibus",
+      "deck": "European Commission Speech Strasbourg, 15 Sep 2026 President, Honourable Members, For our defence readiness we often need more: More money. More production. More weapons. More equipment. But sometimes we need ...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 15 Sep 2026 President, Honourable Members, For our defence readiness we often need more: More money. More production. More weapons. More equipment. But sometimes we need ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T14:42:28.000Z",
+      "updatedAt": "2026-09-15T14:42:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9013b136aa00fdbd",
+      "slug": "india-s-cluster-9013b136aa00fdbd",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Brunner at the European Parliament Plenary debate on the situation in Ceuta and strengthening the EU's external borders",
+      "deck": "European Commission Speech Strasbourg, 15 Sep 2026 The Spanish city of Ceuta has just over 80,000 inhabitants and in the last two days of July almost the same amount of people entered illegally from the other si...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 15 Sep 2026 The Spanish city of Ceuta has just over 80,000 inhabitants and in the last two days of July almost the same amount of people entered illegally from the other si..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T12:52:08.000Z",
+      "updatedAt": "2026-09-15T12:52:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13f00bcb99986a6e",
+      "slug": "policy-geopolitics-s-cluster-13f00bcb99986a6e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The Houthis bear full responsibility for the escalation in Yemen: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Yemen.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Yemen."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T20:07:00.000Z",
+      "updatedAt": "2026-09-15T20:07:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2fccf72f9dc192c2",
+      "slug": "india-s-cluster-2fccf72f9dc192c2",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Policy paper: UK government response to the Covid-19 Inquiry Module 3 report",
+      "deck": "The UK government response to the UK Covid-19 Inquiry Module 3 report on the impact of the pandemic on healthcare systems in the 4 nations of the UK.",
+      "whatChanged": [
+        "The UK government response to the UK Covid-19 Inquiry Module 3 report on the impact of the pandemic on healthcare systems in the 4 nations of the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T14:36:00.000Z",
+      "updatedAt": "2026-09-15T16:29:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-291206db75531829",
+      "slug": "science-health-climate-s-cluster-291206db75531829",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Government response to the Office for Environmental Protection review of Environment Agency inspections of waste operations and installations i...",
+      "deck": "The government's response to the Office for Environmental Protection's review of Environment Agency inspections of waste operations and installations in England.",
+      "whatChanged": [
+        "The government's response to the Office for Environmental Protection's review of Environment Agency inspections of waste operations and installations in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T15:01:37.000Z",
+      "updatedAt": "2026-09-15T15:01:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2912d0408c117bc8",
+      "slug": "policy-geopolitics-s-cluster-2912d0408c117bc8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/Portugal: Agreement on the Protection of Classified Information [TS No.40/2026]",
+      "deck": "This treaty was presented to Parliament in September 2025.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in September 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T13:00:01.000Z",
+      "updatedAt": "2026-09-15T13:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0bccd42bac45e165",
+      "slug": "science-health-climate-s-cluster-0bccd42bac45e165",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Independent report: Thirlwall Inquiry report",
+      "deck": "Report and recommendations of the public inquiry established to examine the events at the Countess of Chester Hospital from 2015 to 2018.",
+      "whatChanged": [
+        "Report and recommendations of the public inquiry established to examine the events at the Countess of Chester Hospital from 2015 to 2018."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T11:36:52.000Z",
+      "updatedAt": "2026-09-15T11:36:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-38c236e6bcc30cf0",
+      "slug": "business-economy-s-cluster-38c236e6bcc30cf0",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Notice: National Energy Efficiency Data-framework statistics - HM Revenue and Customs (HMRC) data: privacy notice",
+      "deck": "This notice sets out how we will use your personal data, and your rights.",
+      "whatChanged": [
+        "This notice sets out how we will use your personal data, and your rights."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T11:08:08.000Z",
+      "updatedAt": "2026-09-15T11:08:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a105d7fdebe94d34",
+      "slug": "policy-geopolitics-s-cluster-a105d7fdebe94d34",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Questions and Answers on Fair Labour Mobility Package",
+      "deck": "European Commission Questions and answers Strasbourg, 15 Sep 2026 How will the package make labour mobility fairer for people moving across EU borders? Documents proving social security and health insurance as well as qualific...",
+      "whatChanged": [
+        "European Commission Questions and answers Strasbourg, 15 Sep 2026 How will the package make labour mobility fairer for people moving across EU borders? Documents proving social security and health insurance as well as qualific..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T22:00:00.000Z",
+      "updatedAt": "2026-09-15T14:22:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fd3152c072e58fb6",
+      "slug": "policy-geopolitics-s-cluster-fd3152c072e58fb6",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Factsheet: A digital European Social Security Pass",
+      "deck": "European Commission Factsheet Strasbourg, 15 Sep 2026 Factsheet: A digital European Social Security Pass Factsheet: A digital European Social Security Pass",
+      "whatChanged": [
+        "European Commission Factsheet Strasbourg, 15 Sep 2026 Factsheet: A digital European Social Security Pass Factsheet: A digital European Social Security Pass"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T22:00:00.000Z",
+      "updatedAt": "2026-09-14T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-db095b6538ac5718",
+      "slug": "policy-geopolitics-s-cluster-db095b6538ac5718",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Italy travel advice",
+      "deck": "FCDO travel advice for Italy. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Italy. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T14:40:59.000Z",
+      "updatedAt": "2026-09-14T14:40:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7572b375a491e2eb",
+      "slug": "business-economy-s-cluster-7572b375a491e2eb",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Doing business with the Falkland Islands",
+      "deck": "Information for companies and individuals conducting economic activity in the Falkland Islands or supplying (directly or indirectly) goods and services to the Islands.",
+      "whatChanged": [
+        "Information for companies and individuals conducting economic activity in the Falkland Islands or supplying (directly or indirectly) goods and services to the Islands."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T12:26:57.000Z",
+      "updatedAt": "2026-09-15T12:26:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-432b456c92d13321",
+      "slug": "business-economy-s-cluster-432b456c92d13321",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Promotional material: UK fusion investment prospectus",
+      "deck": "A practical guide to the UK fusion sector for investors and industry.",
+      "whatChanged": [
+        "A practical guide to the UK fusion sector for investors and industry."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T09:00:00.000Z",
+      "updatedAt": "2026-09-14T09:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0497779409e4dd13",
+      "slug": "business-economy-s-cluster-0497779409e4dd13",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission presents landmark India trade deal to Council for signature",
+      "deck": "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has put forward its proposals to the Council for the signature and conclusion of Free Trade Agreement (FTA) between the European Union and India, seek...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has put forward its proposals to the Council for the signature and conclusion of Free Trade Agreement (FTA) between the European Union and India, seeking authorization for its signature and conclusion."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-10T22:00:00.000Z",
+      "updatedAt": "2026-09-10T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-42120e9623c7a073",
+      "slug": "science-health-climate-s-cluster-42120e9623c7a073",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK Clinical Research Delivery key performance indicators: data to September 2026",
+      "deck": "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme.",
+      "whatChanged": [
+        "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T08:29:48.000Z",
+      "updatedAt": "2026-09-15T09:50:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ecfc7d5b29bf2564",
+      "slug": "science-health-climate-s-cluster-ecfc7d5b29bf2564",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Local nature recovery strategies",
+      "deck": "Strategies that propose how and where to recover nature and improve the wider environment across England.",
+      "whatChanged": [
+        "Strategies that propose how and where to recover nature and improve the wider environment across England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T14:06:35.000Z",
+      "updatedAt": "2026-09-14T14:06:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-801a395f165becd6",
+      "slug": "science-health-climate-s-cluster-801a395f165becd6",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "UK steps up support for global efforts to prepare for El Niño following devastating extreme weather",
+      "deck": "Hundreds of thousands of people around the world will be helped to prepare for extreme weather conditions next year.",
+      "whatChanged": [
+        "Hundreds of thousands of people around the world will be helped to prepare for extreme weather conditions next year."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-14T11:41:18.000Z",
+      "updatedAt": "2026-09-14T11:41:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ecb7265c7c4eecd2",
+      "slug": "technology-ai-s-cluster-ecb7265c7c4eecd2",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: DCMS cyber security newsletter - September 2026",
+      "deck": "The September 2026 edition of the DCMS cyber security newsletter.",
+      "whatChanged": [
+        "The September 2026 edition of the DCMS cyber security newsletter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T06:30:04.000Z",
+      "updatedAt": "2026-09-15T06:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e0a3053fea23d58",
+      "slug": "technology-ai-s-cluster-3e0a3053fea23d58",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "UK and US fusion strike partnership to accelerate clean energy",
+      "deck": "UK and US set to sign agreements at the Global Fusion Policy Summit to combine expertise in AI, computing and fusion and to cooperate on regulating fusion energy.",
+      "whatChanged": [
+        "UK and US set to sign agreements at the Global Fusion Policy Summit to combine expertise in AI, computing and fusion and to cooperate on regulating fusion energy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-13T23:01:00.000Z",
+      "updatedAt": "2026-09-13T23:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Daily News 15 / 09 / 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1883",
+      "sourceType": "official",
+      "publishedAt": "2026-09-08T22:00:00.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "The Houthis bear full responsibility for the escalation in Yemen: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/the-houthis-bear-full-responsibility-for-the-escalation-in-yemen-uk-statement-at-the-un-security-council",
+      "sourceType": "official",
+      "publishedAt": "2026-09-10T20:13:00.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Government response to the Thirlwall Inquiry",
+      "url": "https://www.gov.uk/government/speeches/government-response-to-the-thirlwall-inquiry",
+      "sourceType": "official",
+      "publishedAt": "2026-09-09T11:15:47.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Government response to the Office for Environmental Protection review of Environment Agency inspections of waste operations and installations in England",
+      "url": "https://www.gov.uk/government/publications/government-response-to-the-office-for-environmental-protection-review-of-environment-agency-inspections-of-waste-operations-and-installations-in-engla",
+      "sourceType": "official",
+      "publishedAt": "2026-09-09T12:21:37.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Decision: Norfolk Vanguard Offshore Wind Farm: post-consent condition discharge, Planning Act 2008",
+      "url": "https://www.gov.uk/government/publications/norfolk-vanguard-offshore-wind-farm-post-consent-condition-discharge-planning-act-2008",
+      "sourceType": "official",
+      "publishedAt": "2026-09-08T09:25:04.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: DCMS cyber security newsletter - September 2026",
+      "url": "https://www.gov.uk/government/publications/dcms-cyber-security-newsletter-september-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-08-19T16:08:25.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
