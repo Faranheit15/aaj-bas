@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-17",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-17T05:03:42.507Z",
+  "updatedAt": "2026-09-17T05:03:42.507Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-ef45ab4130d1d0b0",
+    "s-cluster-8a6e2ab855fd1802",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-2df87d65e7c16c21",
+    "s-cluster-84d575659a2d0f65",
+    "s-cluster-2cf2173349907e5f",
+    "s-cluster-75a6f221fd9c5de2",
+    "s-cluster-bf89e03cb0c30c61"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-c8e946135fbcb70c",
+      "s-cluster-8ad92e78c37b8b35",
+      "s-cluster-13f00bcb99986a6e"
+    ],
+    "science-health-climate": [
+      "s-cluster-fe7ad789fde62d79",
+      "s-cluster-331b4b3ef7875889",
+      "s-cluster-fad786edbd3f8483"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-3e0a3053fea23d58",
+      "s-cluster-ecb7265c7c4eecd2"
+    ],
+    "business-economy": [
+      "s-cluster-049afa9409e7f183",
+      "s-cluster-7572b375a491e2eb",
+      "s-cluster-38c236e6bcc30cf0"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-ef45ab4130d1d0b0",
+      "slug": "india-s-cluster-ef45ab4130d1d0b0",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "‘People’s Power’ projects to give more control over local energy",
+      "deck": "Communities across the country will be able to build and control their own clean energy supply.",
+      "whatChanged": [
+        "Communities across the country will be able to build and control their own clean energy supply."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T23:01:04.000Z",
+      "updatedAt": "2026-09-16T23:01:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8a6e2ab855fd1802",
+      "slug": "india-s-cluster-8a6e2ab855fd1802",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Statement by Commissioner Dombrovskis at the European Parliament plenary debate on stopping gold-plating and relieving SMEs",
+      "deck": "European Commission Statement Strasbourg, 16 Sep 2026 Madame Chair, Minister, Honourable Members. Thank you for this opportunity to discuss the issue of gold-plating, right after the 2026 State of the Union Address...",
+      "whatChanged": [
+        "European Commission Statement Strasbourg, 16 Sep 2026 Madame Chair, Minister, Honourable Members. Thank you for this opportunity to discuss the issue of gold-plating, right after the 2026 State of the Union Address..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T10:06:24.000Z",
+      "updatedAt": "2026-09-16T10:06:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T14:45:46.000Z",
+      "updatedAt": "2026-09-16T14:45:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2df87d65e7c16c21",
+      "slug": "policy-geopolitics-s-cluster-2df87d65e7c16c21",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Saudi Arabia travel advice",
+      "deck": "FCDO travel advice for Saudi Arabia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Saudi Arabia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T15:26:53.000Z",
+      "updatedAt": "2026-09-16T16:13:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-84d575659a2d0f65",
+      "slug": "policy-geopolitics-s-cluster-84d575659a2d0f65",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The UK strongly condemns the Taliban’s systematic discrimination against women and girls: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Afghanistan",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Afghanistan"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T16:04:38.000Z",
+      "updatedAt": "2026-09-16T16:04:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2cf2173349907e5f",
+      "slug": "science-health-climate-s-cluster-2cf2173349907e5f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Estates Safety Fund: initial schemes and associated funding allocations, 2026 to 2030",
+      "deck": "A list of funding allocations from the Estates Safety Fund to address critical infrastructure and safety risks in NHS hospital buildings.",
+      "whatChanged": [
+        "A list of funding allocations from the Estates Safety Fund to address critical infrastructure and safety risks in NHS hospital buildings."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T14:42:12.000Z",
+      "updatedAt": "2026-09-16T14:42:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-75a6f221fd9c5de2",
+      "slug": "business-economy-s-cluster-75a6f221fd9c5de2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Transparency data: Specialised Committee on Fisheries",
+      "deck": "This specialised committee monitors the implementation and functioning of the Fisheries Heading in the Trade and Cooperation Agreement.",
+      "whatChanged": [
+        "This specialised committee monitors the implementation and functioning of the Fisheries Heading in the Trade and Cooperation Agreement."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T11:00:01.000Z",
+      "updatedAt": "2026-09-16T11:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bf89e03cb0c30c61",
+      "slug": "science-health-climate-s-cluster-bf89e03cb0c30c61",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Six neighbourhood health trailblazers to transform care",
+      "deck": "New neighbourhood health investment partnership to bring care closer to home and tackle health inequalities",
+      "whatChanged": [
+        "New neighbourhood health investment partnership to bring care closer to home and tackle health inequalities"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T10:41:35.000Z",
+      "updatedAt": "2026-09-16T10:41:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c8e946135fbcb70c",
+      "slug": "policy-geopolitics-s-cluster-c8e946135fbcb70c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Democratic Republic of the Congo travel advice",
+      "deck": "FCDO travel advice for the Democratic Republic of the Congo. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for the Democratic Republic of the Congo. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T15:33:42.000Z",
+      "updatedAt": "2026-09-16T15:33:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8ad92e78c37b8b35",
+      "slug": "policy-geopolitics-s-cluster-8ad92e78c37b8b35",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Joint Statement of the Multilateral Sanctions Monitoring Team (MSMT) on the Report Covering the DPRK's Overseas Labour Program",
+      "deck": "Several countries gave a joint statement following the publication of the latest report of the Multilateral Sanctions Monitoring Team (MSMT).",
+      "whatChanged": [
+        "Several countries gave a joint statement following the publication of the latest report of the Multilateral Sanctions Monitoring Team (MSMT)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T12:15:07.000Z",
+      "updatedAt": "2026-09-16T12:15:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13f00bcb99986a6e",
+      "slug": "policy-geopolitics-s-cluster-13f00bcb99986a6e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The Houthis bear full responsibility for the escalation in Yemen: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Yemen.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Yemen."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T20:07:00.000Z",
+      "updatedAt": "2026-09-15T20:07:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fe7ad789fde62d79",
+      "slug": "science-health-climate-s-cluster-fe7ad789fde62d79",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Turkmenistan: list of medical facilities",
+      "deck": "List of medical facilities and practitioners for British nationals in Turkmenistan.",
+      "whatChanged": [
+        "List of medical facilities and practitioners for British nationals in Turkmenistan."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T12:13:07.000Z",
+      "updatedAt": "2026-09-16T12:13:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-331b4b3ef7875889",
+      "slug": "science-health-climate-s-cluster-331b4b3ef7875889",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Government, Environment Agency, and water companies step up efforts to prevent England remaining in drought by next spring",
+      "deck": "Water bosses updated National Drought Group on winter plans, as research shows above-average rainfall needed to end drought by April 2027.",
+      "whatChanged": [
+        "Water bosses updated National Drought Group on winter plans, as research shows above-average rainfall needed to end drought by April 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T09:56:41.000Z",
+      "updatedAt": "2026-09-16T09:56:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fad786edbd3f8483",
+      "slug": "science-health-climate-s-cluster-fad786edbd3f8483",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Partnering for Health, Equality and Rights (P4HER)",
+      "deck": "The FCDO invites expressions of interest by 27 September for grants to strengthen co-ordinated civil society action on gender equality, health rights, sexual reproductive health and rights and LGBTQIA+ rights in South Africa.",
+      "whatChanged": [
+        "The FCDO invites expressions of interest by 27 September for grants to strengthen co-ordinated civil society action on gender equality, health rights, sexual reproductive health and rights and LGBTQIA+ rights in South Africa."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T09:02:02.000Z",
+      "updatedAt": "2026-09-16T09:02:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T08:41:48.000Z",
+      "updatedAt": "2026-09-16T08:41:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e0a3053fea23d58",
+      "slug": "technology-ai-s-cluster-3e0a3053fea23d58",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "UK and US fusion strike partnership to accelerate clean energy",
+      "deck": "UK and US set to sign agreements at the Global Fusion Policy Summit to combine expertise in AI, computing and fusion and to cooperate on regulating fusion energy.",
+      "whatChanged": [
+        "UK and US set to sign agreements at the Global Fusion Policy Summit to combine expertise in AI, computing and fusion and to cooperate on regulating fusion energy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-13T23:01:00.000Z",
+      "updatedAt": "2026-09-13T23:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ecb7265c7c4eecd2",
+      "slug": "technology-ai-s-cluster-ecb7265c7c4eecd2",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: DCMS cyber security newsletter - September 2026",
+      "deck": "The September 2026 edition of the DCMS cyber security newsletter.",
+      "whatChanged": [
+        "The September 2026 edition of the DCMS cyber security newsletter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T06:30:04.000Z",
+      "updatedAt": "2026-09-15T06:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-049afa9409e7f183",
+      "slug": "business-economy-s-cluster-049afa9409e7f183",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission sends Statement of Objections over the proposed acquisition of Anglo American's nickel business by MMG",
+      "deck": "European Commission Press release Brussels, 16 Sep 2026 The European Commission has informed MMG Limited ('MMG') of its preliminary view that its proposed acquisition of Anglo American's nickel business ('the target') may restrict compet...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 16 Sep 2026 The European Commission has informed MMG Limited ('MMG') of its preliminary view that its proposed acquisition of Anglo American's nickel business ('the target') may restrict competition in the market for low-carbon ferronickel, a key alloying material in stainless steel production."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T22:00:00.000Z",
+      "updatedAt": "2026-09-15T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7572b375a491e2eb",
+      "slug": "business-economy-s-cluster-7572b375a491e2eb",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Doing business with the Falkland Islands",
+      "deck": "Information for companies and individuals conducting economic activity in the Falkland Islands or supplying (directly or indirectly) goods and services to the Islands.",
+      "whatChanged": [
+        "Information for companies and individuals conducting economic activity in the Falkland Islands or supplying (directly or indirectly) goods and services to the Islands."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T12:26:57.000Z",
+      "updatedAt": "2026-09-15T12:26:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-38c236e6bcc30cf0",
+      "slug": "business-economy-s-cluster-38c236e6bcc30cf0",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Notice: National Energy Efficiency Data-framework statistics - HM Revenue and Customs (HMRC) data: privacy notice",
+      "deck": "This notice sets out how we will use your personal data, and your rights.",
+      "whatChanged": [
+        "This notice sets out how we will use your personal data, and your rights."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T11:08:08.000Z",
+      "updatedAt": "2026-09-15T11:08:08.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "‘People’s Power’ projects to give more control over local energy",
+      "url": "https://www.gov.uk/government/news/peoples-power-projects-to-give-more-control-over-local-energy",
+      "sourceType": "official",
+      "publishedAt": "2026-09-10T08:30:05.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Discours du Commissaire Hansen au forum économique de rentrée de la Chambre de Commerce du Luxembourg \"Réformer l'Europe\"",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/fr/speech_26_1888",
+      "sourceType": "official",
+      "publishedAt": "2026-09-08T22:00:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-12T23:01:01.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Ecuador travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/ecuador",
+      "sourceType": "official",
+      "publishedAt": "2026-09-11T20:14:22.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Estates Safety Fund: initial schemes and associated funding allocations, 2026 to 2030",
+      "url": "https://www.gov.uk/government/publications/estates-safety-fund-initial-schemes-and-associated-funding-allocations-2026-to-2030",
+      "sourceType": "official",
+      "publishedAt": "2026-09-09T12:26:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Cyber Essentials management information",
+      "url": "https://www.gov.uk/government/statistical-data-sets/cyber-essentials-management-information",
+      "sourceType": "official",
+      "publishedAt": "2026-08-20T15:35:53.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
