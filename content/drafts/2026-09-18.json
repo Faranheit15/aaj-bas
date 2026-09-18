@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-18",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-18T04:56:29.132Z",
+  "updatedAt": "2026-09-18T04:56:29.132Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-447d88ab6b3c6909",
+    "s-cluster-6f88d0bc9932cf0e",
+    "s-cluster-8ff1a536a9e402f3",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-821454a9e80b8420",
+    "s-cluster-3a0c865d77b9f5d2",
+    "s-cluster-00cda0b04498270d",
+    "s-cluster-e81894998a39b6d4"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-c32027cc9d078395",
+      "s-cluster-9e58a3afcd36c903",
+      "s-cluster-2f91ff3003077af9"
+    ],
+    "science-health-climate": [
+      "s-cluster-e9dec654482d2dfd",
+      "s-cluster-9fc6d6732591d0d6",
+      "s-cluster-e1ad26ad22c5e1dd"
+    ],
+    "business-economy": [
+      "s-cluster-742d8709a016ed62",
+      "s-cluster-8feeb036a9e1dfcd",
+      "s-cluster-75a6f221fd9c5de2"
+    ],
+    "sports": ["s-cluster-729babe37b4ade95"],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-ecb7265c7c4eecd2",
+      "s-cluster-0afcfe39c63893c4"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-447d88ab6b3c6909",
+      "slug": "policy-geopolitics-s-cluster-447d88ab6b3c6909",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The UK stands ready to support efforts in the destruction of Assad-era chemical weapons for Syria to emerge as a sovereign, stable state: UK statement at the...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T18:52:55.000Z",
+      "updatedAt": "2026-09-17T18:52:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6f88d0bc9932cf0e",
+      "slug": "policy-geopolitics-s-cluster-6f88d0bc9932cf0e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "We deeply regret today’s veto of the Iran Panel of Experts mandate renewal: UK Explanation of Vote at the UN Security Council",
+      "deck": "UK Explanation of Vote delivered by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, following the UN Security Council vote on the Iran Panel of Experts.",
+      "whatChanged": [
+        "UK Explanation of Vote delivered by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, following the UN Security Council vote on the Iran Panel of Experts."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T18:46:53.000Z",
+      "updatedAt": "2026-09-17T18:46:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8ff1a536a9e402f3",
+      "slug": "india-s-cluster-8ff1a536a9e402f3",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Speech by Executive Vice-President Teresa Ribera at Fordham's 53rd Annual Conference “Building a democratic, competitive and sustainable future for artificia...",
+      "deck": "European Commission Speech Brussels, 17 Sep 2026 Thank you, James for the introduction. It is good to be back in New York and at Fordham for the annual conference, one of the first major antitrust events of th...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 17 Sep 2026 Thank you, James for the introduction. It is good to be back in New York and at Fordham for the annual conference, one of the first major antitrust events of th..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T14:13:26.000Z",
+      "updatedAt": "2026-09-17T14:13:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T14:00:16.000Z",
+      "updatedAt": "2026-09-17T14:00:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-821454a9e80b8420",
+      "slug": "india-s-cluster-821454a9e80b8420",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Statutory guidance: General licence to move germinal product from a bluetongue restricted zone to Scotland (EXD656(EW))",
+      "deck": "Use this licence to move germinal product from a bluetongue restricted zone to Scotland.",
+      "whatChanged": [
+        "Use this licence to move germinal product from a bluetongue restricted zone to Scotland."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T13:56:32.000Z",
+      "updatedAt": "2026-09-17T13:56:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3a0c865d77b9f5d2",
+      "slug": "world-s-cluster-3a0c865d77b9f5d2",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Read-out by President von der Leyen following her call with President Zelenskyy",
+      "deck": "European Commission Read-out Brussels, 17 Sep 2026 I just had a phone call with President Zelenskyy. Russia is relentlessly targeting Kyiv, trying to make daily life impossible for its inhabitants. We stand with...",
+      "whatChanged": [
+        "European Commission Read-out Brussels, 17 Sep 2026 I just had a phone call with President Zelenskyy. Russia is relentlessly targeting Kyiv, trying to make daily life impossible for its inhabitants. We stand with..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T17:55:33.000Z",
+      "updatedAt": "2026-09-17T17:55:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-00cda0b04498270d",
+      "slug": "science-health-climate-s-cluster-00cda0b04498270d",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Minister of State for Social Care and Mental Health speech on dementia",
+      "deck": "Minister Alison McGovern delivered the keynote speech at the Alzheimer's Society Conference 2026 in London, highlighting the government's action on dementia",
+      "whatChanged": [
+        "Minister Alison McGovern delivered the keynote speech at the Alzheimer's Society Conference 2026 in London, highlighting the government's action on dementia"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T14:01:58.000Z",
+      "updatedAt": "2026-09-17T14:01:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e81894998a39b6d4",
+      "slug": "science-health-climate-s-cluster-e81894998a39b6d4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Chair appointed to lead Tees, Esk and Wear Valleys Trust inquiry",
+      "deck": "Chair to the public inquiry into mental health care at Tees, Esk and Wear Valleys NHS Foundation Trust (TEWV) appointed",
+      "whatChanged": [
+        "Chair to the public inquiry into mental health care at Tees, Esk and Wear Valleys NHS Foundation Trust (TEWV) appointed"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T13:04:23.000Z",
+      "updatedAt": "2026-09-17T13:04:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c32027cc9d078395",
+      "slug": "policy-geopolitics-s-cluster-c32027cc9d078395",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Ecuador travel advice",
+      "deck": "FCDO travel advice for Ecuador. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Ecuador. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T16:13:24.000Z",
+      "updatedAt": "2026-09-17T15:32:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9e58a3afcd36c903",
+      "slug": "policy-geopolitics-s-cluster-9e58a3afcd36c903",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Strengthening European security: UK statement to the OSCE",
+      "deck": "Minister for Europe, Lord Wood of Anfield, sets out the UK’s priorities as Chair of the OSCE Forum for Security Co-operation, focusing on Ukraine, dialogue and managing security risks.",
+      "whatChanged": [
+        "Minister for Europe, Lord Wood of Anfield, sets out the UK’s priorities as Chair of the OSCE Forum for Security Co-operation, focusing on Ukraine, dialogue and managing security risks."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T12:05:01.000Z",
+      "updatedAt": "2026-09-17T15:17:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2f91ff3003077af9",
+      "slug": "policy-geopolitics-s-cluster-2f91ff3003077af9",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "OSCE Annual Progress Report on Gender Equality: UK statement, September 2026",
+      "deck": "Ambassador Holland recognises the OSCE continued work to promote gender equality and ensure women’s participation in politics, peace processes and conflict resolution.",
+      "whatChanged": [
+        "Ambassador Holland recognises the OSCE continued work to promote gender equality and ensure women’s participation in politics, peace processes and conflict resolution."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T12:04:51.000Z",
+      "updatedAt": "2026-09-17T12:04:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9dec654482d2dfd",
+      "slug": "science-health-climate-s-cluster-e9dec654482d2dfd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Seasonal workers reviews and surveys",
+      "deck": "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025.",
+      "whatChanged": [
+        "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T15:29:34.000Z",
+      "updatedAt": "2026-09-17T15:29:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9fc6d6732591d0d6",
+      "slug": "science-health-climate-s-cluster-9fc6d6732591d0d6",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: Children’s public health nursing: workforce and activity, 2025",
+      "deck": "Official statistics in development on healthy child programme activity, school nursing services and associated workforces in England in 2025.",
+      "whatChanged": [
+        "Official statistics in development on healthy child programme activity, school nursing services and associated workforces in England in 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T10:26:17.000Z",
+      "updatedAt": "2026-09-17T10:26:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e1ad26ad22c5e1dd",
+      "slug": "science-health-climate-s-cluster-e1ad26ad22c5e1dd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Planning for later life as a British person in Thailand",
+      "deck": "Information on planning your future medical and social care, estate and finances in Thailand.",
+      "whatChanged": [
+        "Information on planning your future medical and social care, estate and finances in Thailand."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T09:16:00.000Z",
+      "updatedAt": "2026-09-17T09:16:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-742d8709a016ed62",
+      "slug": "business-economy-s-cluster-742d8709a016ed62",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Transparency data: May 2026 OMR and premises in BDUK plans (England and Wales)",
+      "deck": "May 2026 Open Market Review (OMR) and premises in Building Digital UK (BDUK) plans (England and Wales)",
+      "whatChanged": [
+        "May 2026 Open Market Review (OMR) and premises in Building Digital UK (BDUK) plans (England and Wales)"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T08:30:09.000Z",
+      "updatedAt": "2026-09-17T08:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8feeb036a9e1dfcd",
+      "slug": "business-economy-s-cluster-8feeb036a9e1dfcd",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis at Eurofi “Strengthening our economic fabric: a competitive financial system for a sovereign Europe”",
+      "deck": "European Commission Speech Dublin, 17 Sep 2026 Good afternoon, ladies and gentlemen. It is a pleasure to be back in Dublin. And to return to Eurofi, which remains a crucial forum for exchanging views on the ...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 17 Sep 2026 Good afternoon, ladies and gentlemen. It is a pleasure to be back in Dublin. And to return to Eurofi, which remains a crucial forum for exchanging views on the ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T22:00:00.000Z",
+      "updatedAt": "2026-09-16T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-75a6f221fd9c5de2",
+      "slug": "business-economy-s-cluster-75a6f221fd9c5de2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Transparency data: Specialised Committee on Fisheries",
+      "deck": "This specialised committee monitors the implementation and functioning of the Fisheries Heading in the Trade and Cooperation Agreement.",
+      "whatChanged": [
+        "This specialised committee monitors the implementation and functioning of the Fisheries Heading in the Trade and Cooperation Agreement."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T11:00:01.000Z",
+      "updatedAt": "2026-09-16T11:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-729babe37b4ade95",
+      "slug": "sports-s-cluster-729babe37b4ade95",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Statutory guidance: The overall improvement test for the Nature Restoration Fund",
+      "deck": "Guidance on the interpretation of the overall improvement test, set out in the Planning and Infrastructure Act 2025.",
+      "whatChanged": [
+        "Guidance on the interpretation of the overall improvement test, set out in the Planning and Infrastructure Act 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T08:30:00.000Z",
+      "updatedAt": "2026-09-17T08:30:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T08:41:48.000Z",
+      "updatedAt": "2026-09-16T08:41:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ecb7265c7c4eecd2",
+      "slug": "technology-ai-s-cluster-ecb7265c7c4eecd2",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: DCMS cyber security newsletter - September 2026",
+      "deck": "The September 2026 edition of the DCMS cyber security newsletter.",
+      "whatChanged": [
+        "The September 2026 edition of the DCMS cyber security newsletter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T06:30:04.000Z",
+      "updatedAt": "2026-09-15T06:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "The UK stands ready to support efforts in the destruction of Assad-era chemical weapons for Syria to emerge as a sovereign, stable state: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/the-uk-stands-ready-to-support-efforts-in-the-destruction-of-assad-era-chemical-weapons-for-syria-to-emerge-as-a-sovereign-stable-state-uk-statement-a",
+      "sourceType": "official",
+      "publishedAt": "2026-09-16T16:04:38.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Read-out by President von der Leyen following her call with President Zelenskyy",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/read_26_1899",
+      "sourceType": "official",
+      "publishedAt": "2026-09-10T08:40:43.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Seasonal workers reviews and surveys",
+      "url": "https://www.gov.uk/government/publications/seasonal-workers-pilot-review",
+      "sourceType": "official",
+      "publishedAt": "2026-09-16T11:00:01.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Minister of State for Social Care and Mental Health speech on dementia",
+      "url": "https://www.gov.uk/government/speeches/minister-of-state-for-social-care-and-mental-health-speech-on-dementia",
+      "sourceType": "official",
+      "publishedAt": "2026-09-09T15:46:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: May 2026 OMR and premises in BDUK plans (England and Wales)",
+      "url": "https://www.gov.uk/government/publications/may-2026-omr-and-premises-in-bduk-plans-england-and-wales",
+      "sourceType": "official",
+      "publishedAt": "2026-08-24T09:46:31.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
