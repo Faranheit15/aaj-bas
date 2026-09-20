@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-20T05:06:09.233Z",
+  "updatedAt": "2026-09-20T05:06:09.233Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-0891c6286b094666",
+    "s-cluster-e8a9df4efdc49f14",
+    "s-cluster-5a6556b384bc5e0a",
+    "s-cluster-b0f2251735ac6696",
+    "s-cluster-991fd936af3cecba",
+    "s-cluster-94bb45d29688fa99",
+    "s-cluster-878b3c9e7582f3f0"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-dd697e5613893546",
+      "s-cluster-447d88ab6b3c6909",
+      "s-cluster-6f88d0bc9932cf0e"
+    ],
+    "business-economy": [
+      "s-cluster-14bf73fda9871d4a",
+      "s-cluster-0497779409e4dd13",
+      "s-cluster-742d8709a016ed62"
+    ],
+    "science-health-climate": [
+      "s-cluster-2bd3936b3669a322",
+      "s-cluster-d37f9b2aa085b5fa",
+      "s-cluster-bb5b394017629923"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0afcfe39c63893c4",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-19T16:39:15.000Z",
+      "updatedAt": "2026-09-19T16:39:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0891c6286b094666",
+      "slug": "india-s-cluster-0891c6286b094666",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Confined establishments approved to export captive-bred birds to the EU",
+      "deck": "Lists of confined establishments in Great Britain, Jersey and the Isle of Man approved to export or move captive-bred birds to the EU or Northern Ireland.",
+      "whatChanged": [
+        "Lists of confined establishments in Great Britain, Jersey and the Isle of Man approved to export or move captive-bred birds to the EU or Northern Ireland."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T09:56:49.000Z",
+      "updatedAt": "2026-09-18T16:26:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e8a9df4efdc49f14",
+      "slug": "policy-geopolitics-s-cluster-e8a9df4efdc49f14",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom stands ready to work with the UN to ensure UN peace operations remain adaptable, effective, and fit for the challenges ahead: UK statement...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on UN Peacekeeping Operations.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on UN Peacekeeping Operations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T21:04:48.000Z",
+      "updatedAt": "2026-09-18T21:04:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5a6556b384bc5e0a",
+      "slug": "india-s-cluster-5a6556b384bc5e0a",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Minister for Overseas Territories statement on the Falkland Islands: 18 September",
+      "deck": "Statement from Parliamentary Under-Secretary of State for Overseas Territories Uma Kumaran on doing business with the Falkland Islands",
+      "whatChanged": [
+        "Statement from Parliamentary Under-Secretary of State for Overseas Territories Uma Kumaran on doing business with the Falkland Islands"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T15:21:00.000Z",
+      "updatedAt": "2026-09-18T15:21:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b0f2251735ac6696",
+      "slug": "business-economy-s-cluster-b0f2251735ac6696",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis at Eurogroup press conference",
+      "deck": "European Commission Statement Dublin, 18 Sep 2026 Thank you, Kyriakos. Good morning, everyone. It's good to be back in Dublin. This week is well suited to taking stock, looking ahead, and preparing for a busy e...",
+      "whatChanged": [
+        "European Commission Statement Dublin, 18 Sep 2026 Thank you, Kyriakos. Good morning, everyone. It's good to be back in Dublin. This week is well suited to taking stock, looking ahead, and preparing for a busy e..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T10:53:32.000Z",
+      "updatedAt": "2026-09-18T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-991fd936af3cecba",
+      "slug": "policy-geopolitics-s-cluster-991fd936af3cecba",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's speech at the Clean Growth Summit – Road to COP31",
+      "deck": "European Commission Speech Lisbon, 18 Sep 2026 Ladies and gentlemen, distinguished guests, Mayor Araújo, Professor Arezes, dear Lidia – thank you for the invitation. I am delighted to be here in beautif...",
+      "whatChanged": [
+        "European Commission Speech Lisbon, 18 Sep 2026 Ladies and gentlemen, distinguished guests, Mayor Araújo, Professor Arezes, dear Lidia – thank you for the invitation. I am delighted to be here in beautif..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T11:42:54.000Z",
+      "updatedAt": "2026-09-18T11:42:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94bb45d29688fa99",
+      "slug": "business-economy-s-cluster-94bb45d29688fa99",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "What goes into diesel prices?",
+      "deck": "The price of distillate fuel oil, often sold as diesel, is driven by the price of crude oil, retail margins, distribution costs, taxes, and crack spreads, the indicator we use for refining margins. Tight global supplies of distillate fue...",
+      "whatChanged": [
+        "The price of distillate fuel oil, often sold as diesel, is driven by the price of crude oil, retail margins, distribution costs, taxes, and crack spreads, the indicator we use for refining margins. Tight global supplies of distillate fuel oil and elevated crude oil prices have driven prices higher in recent months."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T14:00:00.000Z",
+      "updatedAt": "2026-09-18T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-878b3c9e7582f3f0",
+      "slug": "science-health-climate-s-cluster-878b3c9e7582f3f0",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Ambient gamma radiation dose rates across the UK",
+      "deck": "Data received from fixed and mobile monitors measuring the ambient (background) gamma radiation dose rate across the UK.",
+      "whatChanged": [
+        "Data received from fixed and mobile monitors measuring the ambient (background) gamma radiation dose rate across the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T13:02:33.000Z",
+      "updatedAt": "2026-09-18T13:02:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dd697e5613893546",
+      "slug": "policy-geopolitics-s-cluster-dd697e5613893546",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Kosovo travel advice",
+      "deck": "FCDO travel advice for Kosovo. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Kosovo. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T15:32:21.000Z",
+      "updatedAt": "2026-09-18T15:31:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-447d88ab6b3c6909",
+      "slug": "policy-geopolitics-s-cluster-447d88ab6b3c6909",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The UK stands ready to support efforts in the destruction of Assad-era chemical weapons for Syria to emerge as a sovereign, stable state: UK statement at the...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T18:52:55.000Z",
+      "updatedAt": "2026-09-17T18:52:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6f88d0bc9932cf0e",
+      "slug": "policy-geopolitics-s-cluster-6f88d0bc9932cf0e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "We deeply regret today’s veto of the Iran Panel of Experts mandate renewal: UK Explanation of Vote at the UN Security Council",
+      "deck": "UK Explanation of Vote delivered by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, following the UN Security Council vote on the Iran Panel of Experts.",
+      "whatChanged": [
+        "UK Explanation of Vote delivered by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, following the UN Security Council vote on the Iran Panel of Experts."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T18:46:53.000Z",
+      "updatedAt": "2026-09-17T18:46:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-14bf73fda9871d4a",
+      "slug": "business-economy-s-cluster-14bf73fda9871d4a",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Cereal stocks held on farms in England and Wales to June 2027",
+      "deck": "The tonnage of wheat, barley and oats held on farms in England and Wales",
+      "whatChanged": [
+        "The tonnage of wheat, barley and oats held on farms in England and Wales"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T14:02:40.000Z",
+      "updatedAt": "2026-09-18T14:02:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0497779409e4dd13",
+      "slug": "business-economy-s-cluster-0497779409e4dd13",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission presents landmark India trade deal to Council for signature",
+      "deck": "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has put forward its proposals to the Council for the signature and conclusion of Free Trade Agreement (FTA) between the European Union and India, seek...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has put forward its proposals to the Council for the signature and conclusion of Free Trade Agreement (FTA) between the European Union and India, seeking authorization for its signature and conclusion."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-10T22:00:00.000Z",
+      "updatedAt": "2026-09-10T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-742d8709a016ed62",
+      "slug": "business-economy-s-cluster-742d8709a016ed62",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Transparency data: May 2026 OMR and premises in BDUK plans (England and Wales)",
+      "deck": "May 2026 Open Market Review (OMR) and premises in Building Digital UK (BDUK) plans (England and Wales)",
+      "whatChanged": [
+        "May 2026 Open Market Review (OMR) and premises in Building Digital UK (BDUK) plans (England and Wales)"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-17T08:30:09.000Z",
+      "updatedAt": "2026-09-17T08:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2bd3936b3669a322",
+      "slug": "science-health-climate-s-cluster-2bd3936b3669a322",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Promotional material: Animal diseases: plan, prevent and protect webinars",
+      "deck": "Webinars about what you can do to protect the health and welfare of animals you keep or work with from notifiable and reportable animal diseases.",
+      "whatChanged": [
+        "Webinars about what you can do to protect the health and welfare of animals you keep or work with from notifiable and reportable animal diseases."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T13:09:08.000Z",
+      "updatedAt": "2026-09-18T13:09:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bb5b394017629923",
+      "slug": "science-health-climate-s-cluster-bb5b394017629923",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in Cuba",
+      "deck": "Information about support for British nationals experiencing mental health difficulties in Cuba",
+      "whatChanged": [
+        "Information about support for British nationals experiencing mental health difficulties in Cuba"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-18T06:38:03.000Z",
+      "updatedAt": "2026-09-18T06:38:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T08:41:48.000Z",
+      "updatedAt": "2026-09-16T08:41:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-17T09:00:02.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "The United Kingdom stands ready to work with the UN to ensure UN peace operations remain adaptable, effective, and fit for the challenges ahead: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/the-united-kingdom-stands-ready-to-work-with-the-un-to-ensure-un-peace-operations-remain-adaptable-effective-and-fit-for-the-challenges-ahead-uk-state",
+      "sourceType": "official",
+      "publishedAt": "2026-09-17T12:05:01.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Remarks by Commissioner Dombrovskis at the informal ECOFIN press conference",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1906",
+      "sourceType": "official",
+      "publishedAt": "2026-09-10T16:31:18.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "What goes into diesel prices?",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68164",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Ambient gamma radiation dose rates across the UK",
+      "url": "https://www.gov.uk/government/publications/ambient-gamma-radiation-dose-rates-across-the-uk",
+      "sourceType": "official",
+      "publishedAt": "2026-09-13T23:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Fact sheet: New rules to protect children online",
+      "url": "https://www.gov.uk/government/publications/fact-sheet-new-rules-to-protect-children-online",
+      "sourceType": "official",
+      "publishedAt": "2026-08-24T17:00:04.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "What India’s ‘Cockroach’ protests reveal about digital authoritarianism",
+      "url": "https://globalvoices.org/2026/09/15/what-indias-cockroach-protests-reveal-about-digital-authoritarianism/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-13T08:00:43.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
