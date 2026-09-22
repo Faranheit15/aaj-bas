@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-22",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-22T05:12:22.197Z",
+  "updatedAt": "2026-09-22T05:12:22.197Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-56f42f0c17240097",
+    "s-cluster-77488ee8c1f8f0b3",
+    "s-cluster-c7103069af53fa9f",
+    "s-cluster-9926dc36af431081",
+    "s-cluster-814384b850a7555c",
+    "s-cluster-a567170867caeae1",
+    "s-cluster-eb4622201adc2457",
+    "s-cluster-3b4723ddcb55298b"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-c09ec5cff4a82d77",
+      "s-cluster-f29f998a8ff7c58e",
+      "s-cluster-d15c98ccd161f2b5"
+    ],
+    "science-health-climate": [
+      "s-cluster-4f768a553d9c2e1c",
+      "s-cluster-ac1899b68ddaf55b",
+      "s-cluster-d37f9b2aa085b5fa"
+    ],
+    "business-economy": [
+      "s-cluster-4681104b18e31bc5",
+      "s-cluster-049afa9409e7f183",
+      "s-cluster-13e943c9c1143926"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0afcfe39c63893c4",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-56f42f0c17240097",
+      "slug": "india-s-cluster-56f42f0c17240097",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Family Food FYE 2025",
+      "deck": "Annual report on household purchases of food and drink.",
+      "whatChanged": [
+        "Annual report on household purchases of food and drink."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-18T16:25:12.000Z",
+      "updatedAt": "2026-09-21T13:34:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-77488ee8c1f8f0b3",
+      "slug": "policy-geopolitics-s-cluster-77488ee8c1f8f0b3",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary speech on Sudan at the UN General Assembly as part of High Level Week",
+      "deck": "Foreign Secretary pushes for urgent action on three pillars: diplomatic, humanitarian and civilian protection",
+      "whatChanged": [
+        "Foreign Secretary pushes for urgent action on three pillars: diplomatic, humanitarian and civilian protection"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T23:42:51.000Z",
+      "updatedAt": "2026-09-21T23:42:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c7103069af53fa9f",
+      "slug": "policy-geopolitics-s-cluster-c7103069af53fa9f",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary speech at Accra Reset Event",
+      "deck": "Foreign Secretary speech at the Accra Reset event as part of UN General Assembly High Level week",
+      "whatChanged": [
+        "Foreign Secretary speech at the Accra Reset event as part of UN General Assembly High Level week"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T23:28:49.000Z",
+      "updatedAt": "2026-09-21T23:28:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9926dc36af431081",
+      "slug": "policy-geopolitics-s-cluster-9926dc36af431081",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Speech by President von der Leyen at the Summit in Support of Multilateralism",
+      "deck": "European Commission Speech New York, 22 Sep 2026 President Costa, President Ruto, thank you for bringing us together today. Excellencies, Much has already been said on the need for multilateralism. I can fully...",
+      "whatChanged": [
+        "European Commission Speech New York, 22 Sep 2026 President Costa, President Ruto, thank you for bringing us together today. Excellencies, Much has already been said on the need for multilateralism. I can fully..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T22:00:00.000Z",
+      "updatedAt": "2026-09-21T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-814384b850a7555c",
+      "slug": "business-economy-s-cluster-814384b850a7555c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Joint press statement by Secretary Roque and Commissioner Šefčovič",
+      "deck": "European Commission Statement Brussels, 22 Sep 2026 The European Union and the Philippines reached substantial agreement on a Free Trade Agreement (FTA), marking a significant milestone for both sides. European C...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 22 Sep 2026 The European Union and the Philippines reached substantial agreement on a Free Trade Agreement (FTA), marking a significant milestone for both sides. European C..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T22:00:00.000Z",
+      "updatedAt": "2026-09-21T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a567170867caeae1",
+      "slug": "india-s-cluster-a567170867caeae1",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Understand the UK requirements for marine genetic resources under the Biodiversity Beyond National Jurisdiction Act 2026",
+      "deck": "Find out how Part 2 of the Biodiversity Beyond National Jurisdiction Act 2026 applies to the collection and utilisation of marine genetic resources (MGR) and digital sequence information (DSI) of areas beyond national jurisdiction.",
+      "whatChanged": [
+        "Find out how Part 2 of the Biodiversity Beyond National Jurisdiction Act 2026 applies to the collection and utilisation of marine genetic resources (MGR) and digital sequence information (DSI) of areas beyond national jurisdiction."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-21T05:50:58.000Z",
+      "updatedAt": "2026-09-21T05:52:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-eb4622201adc2457",
+      "slug": "india-s-cluster-eb4622201adc2457",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Certification scheme for the UK digital verification services trust framework",
+      "deck": "Conformity assessment bodies must follow these processes and requirements when certifying services against the UK digital verification services trust framework.",
+      "whatChanged": [
+        "Conformity assessment bodies must follow these processes and requirements when certifying services against the UK digital verification services trust framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T15:48:45.000Z",
+      "updatedAt": "2026-09-21T15:48:45.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b4723ddcb55298b",
+      "slug": "science-health-climate-s-cluster-3b4723ddcb55298b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: DHSC public appointments: 2026 to 2027",
+      "deck": "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027.",
+      "whatChanged": [
+        "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T12:59:43.000Z",
+      "updatedAt": "2026-09-21T12:59:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c09ec5cff4a82d77",
+      "slug": "policy-geopolitics-s-cluster-c09ec5cff4a82d77",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Turkey travel advice",
+      "deck": "Latest FCDO travel advice for Turkey including on entry requirements, safety and security and local laws and customs.",
+      "whatChanged": [
+        "Latest FCDO travel advice for Turkey including on entry requirements, safety and security and local laws and customs."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T13:00:49.000Z",
+      "updatedAt": "2026-09-21T15:13:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f29f998a8ff7c58e",
+      "slug": "policy-geopolitics-s-cluster-f29f998a8ff7c58e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "'What climate security means now' - Foreign Secretary at New York Climate Week",
+      "deck": "Foreign Secretary address at New York Climate Week's Opening Ceremony, speaking on: 'What climate security means now'",
+      "whatChanged": [
+        "Foreign Secretary address at New York Climate Week's Opening Ceremony, speaking on: 'What climate security means now'"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T14:34:32.000Z",
+      "updatedAt": "2026-09-21T14:34:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T12:53:29.000Z",
+      "updatedAt": "2026-09-21T12:53:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4f768a553d9c2e1c",
+      "slug": "science-health-climate-s-cluster-4f768a553d9c2e1c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Historical editions of the farming evidence pack",
+      "deck": "Previous editions of the farming evidence pack, presenting key agricultural statistics on the state of the agriculture industry.",
+      "whatChanged": [
+        "Previous editions of the farming evidence pack, presenting key agricultural statistics on the state of the agriculture industry."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T09:54:35.000Z",
+      "updatedAt": "2026-09-21T09:56:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ac1899b68ddaf55b",
+      "slug": "science-health-climate-s-cluster-ac1899b68ddaf55b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Expert team to drive improvements in cancer care",
+      "deck": "Government announces new National Cancer Board, whose first meeting is today (21 September 2026).",
+      "whatChanged": [
+        "Government announces new National Cancer Board, whose first meeting is today (21 September 2026)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T23:01:00.000Z",
+      "updatedAt": "2026-09-20T23:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4681104b18e31bc5",
+      "slug": "business-economy-s-cluster-4681104b18e31bc5",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Economic Estimates: Digital Sector Regional Gross Value Added (2023)",
+      "deck": "Accredited Official Statistics estimating the contribution of the Digital Sector to each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA).",
+      "whatChanged": [
+        "Accredited Official Statistics estimating the contribution of the Digital Sector to each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T09:46:13.000Z",
+      "updatedAt": "2026-09-21T09:46:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-049afa9409e7f183",
+      "slug": "business-economy-s-cluster-049afa9409e7f183",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission sends Statement of Objections over the proposed acquisition of Anglo American's nickel business by MMG",
+      "deck": "European Commission Press release Brussels, 16 Sep 2026 The European Commission has informed MMG Limited ('MMG') of its preliminary view that its proposed acquisition of Anglo American's nickel business ('the target') may restrict compet...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 16 Sep 2026 The European Commission has informed MMG Limited ('MMG') of its preliminary view that its proposed acquisition of Anglo American's nickel business ('the target') may restrict competition in the market for low-carbon ferronickel, a key alloying material in stainless steel production."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T22:00:00.000Z",
+      "updatedAt": "2026-09-15T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13e943c9c1143926",
+      "slug": "business-economy-s-cluster-13e943c9c1143926",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Waterborne shipments from the U.S. Gulf Coast increased in April and May",
+      "deck": "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel...",
+      "whatChanged": [
+        "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel between U.S. ports. Shipments from the U.S. Gulf Coast to the East Coast (PADD 1) also increased."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-17T14:00:00.000Z",
+      "updatedAt": "2026-08-17T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T08:41:48.000Z",
+      "updatedAt": "2026-09-16T08:41:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-18T10:13:14.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Boiler Upgrade Scheme: August 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/boiler-upgrade-scheme-august-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-14T10:15:59.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Foreign Secretary speech on Sudan at the UN General Assembly as part of High Level Week",
+      "url": "https://www.gov.uk/government/speeches/foreign-secretary-speech-on-sudan-at-the-un-general-assembly-as-part-of-high-level-week",
+      "sourceType": "official",
+      "publishedAt": "2026-09-21T05:51:54.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Ceremonial Signature event of the Global Green Bond Initiative launch (GGBI)",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1931",
+      "sourceType": "official",
+      "publishedAt": "2026-09-14T12:58:22.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Certification scheme for the UK digital verification services trust framework",
+      "url": "https://www.gov.uk/guidance/certification-scheme-for-the-uk-digital-identity-and-attributes-trust-framework",
+      "sourceType": "official",
+      "publishedAt": "2026-08-28T15:22:26.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: DHSC public appointments: 2026 to 2027",
+      "url": "https://www.gov.uk/government/publications/dhsc-public-appointments-2026-to-2027",
+      "sourceType": "official",
+      "publishedAt": "2026-09-14T08:29:48.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "What goes into diesel prices?",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68164",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
