@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-24",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-24T05:06:56.174Z",
+  "updatedAt": "2026-09-24T05:06:56.174Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-d0cf9c2911e3f51c",
+    "s-cluster-e827235c49ada5d1",
+    "s-cluster-8150ffb850b2b0b9",
+    "s-cluster-b0c046bbc54c34fc",
+    "s-cluster-7689e98bf8407579",
+    "s-cluster-58a3aa2d1b3f0849",
+    "s-cluster-99194636af378743",
+    "s-cluster-0fd8fe146aac7a3b"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-991e81410af274f9",
+      "s-cluster-64f6819b4c2656f9",
+      "s-cluster-5d8e3740dcd8d216"
+    ],
+    "business-economy": [
+      "s-cluster-814d96b850afc877",
+      "s-cluster-3b3090387236d8eb",
+      "s-cluster-055af3fe0ea8baf2"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-99125b36af318c44",
+      "s-cluster-ee6e7046940be2b0",
+      "s-cluster-3e83961b7691735b"
+    ],
+    "sports": ["s-cluster-215852e475cc9c28"],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0afcfe39c63893c4",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-d0cf9c2911e3f51c",
+      "slug": "india-s-cluster-d0cf9c2911e3f51c",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: DESNZ workforce management information, August 2026",
+      "deck": "Report on departmental staff numbers and costs.",
+      "whatChanged": ["Report on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-desnz", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 4,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-21T08:39:17.000Z",
+      "updatedAt": "2026-09-23T12:58:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e827235c49ada5d1",
+      "slug": "policy-geopolitics-s-cluster-e827235c49ada5d1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Pakistan travel advice",
+      "deck": "FCDO travel advice for Pakistan. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Pakistan. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-22T10:07:03.000Z",
+      "updatedAt": "2026-09-23T23:19:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8150ffb850b2b0b9",
+      "slug": "india-s-cluster-8150ffb850b2b0b9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Statement by Commissioner Lahbib on behalf of EU Member States on the 75th Anniversary of the 1951 Convention on the Status of Refugees",
+      "deck": "European Commission Statement New York, 23 Sep 2026 Seventy-five years on, the Refugee Convention continues to safeguard millions of lives, ensuring people escaping persecution can access protection and rights. A...",
+      "whatChanged": [
+        "European Commission Statement New York, 23 Sep 2026 Seventy-five years on, the Refugee Convention continues to safeguard millions of lives, ensuring people escaping persecution can access protection and rights. A..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T21:05:39.000Z",
+      "updatedAt": "2026-09-23T21:05:39.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b0c046bbc54c34fc",
+      "slug": "policy-geopolitics-s-cluster-b0c046bbc54c34fc",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary address to the UNSC on Ukraine",
+      "deck": "Foreign Secretary address on the maintenance of the peace and security of Ukraine – United Nations Security Council",
+      "whatChanged": [
+        "Foreign Secretary address on the maintenance of the peace and security of Ukraine – United Nations Security Council"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T16:29:15.000Z",
+      "updatedAt": "2026-09-23T22:33:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7689e98bf8407579",
+      "slug": "science-health-climate-s-cluster-7689e98bf8407579",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Animal use in veterinary vaccines quality control falls to lowest levels in a decade",
+      "deck": "Average number of animals needed to release a single used to release a batch of veterinary vaccine has fallen fell by 41% from 29 in 2013 to 17 in 2024",
+      "whatChanged": [
+        "Average number of animals needed to release a single used to release a batch of veterinary vaccine has fallen fell by 41% from 29 in 2013 to 17 in 2024"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T23:01:00.000Z",
+      "updatedAt": "2026-09-23T23:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-58a3aa2d1b3f0849",
+      "slug": "india-s-cluster-58a3aa2d1b3f0849",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Energy Consumption in the UK – 2025",
+      "deck": "Energy Consumption statistics presented in four key themes covering overall energy consumption in the UK, energy intensity by sector, primary energy consumption and end uses.",
+      "whatChanged": [
+        "Energy Consumption statistics presented in four key themes covering overall energy consumption in the UK, energy intensity by sector, primary energy consumption and end uses."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-21T13:34:15.000Z",
+      "updatedAt": "2026-09-23T08:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-99194636af378743",
+      "slug": "business-economy-s-cluster-99194636af378743",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the Call to Action for the Children of Gaza and the West Bank",
+      "deck": "European Commission Speech New York, 23 Sep 2026 A kite. A piece of fabric on a string, held in a child's hand, dancing in the wind. The simplest toy. The simplest joy of an ordinary childhood. But in Gaza tod...",
+      "whatChanged": [
+        "European Commission Speech New York, 23 Sep 2026 A kite. A piece of fabric on a string, held in a child's hand, dancing in the wind. The simplest toy. The simplest joy of an ordinary childhood. But in Gaza tod..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T21:02:53.000Z",
+      "updatedAt": "2026-09-23T21:02:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0fd8fe146aac7a3b",
+      "slug": "science-health-climate-s-cluster-0fd8fe146aac7a3b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Abortion statistics user engagement plan",
+      "deck": "How the Department of Health and Social Care (DHSC) will gather and respond to feedback from users to ensure abortion statistics meet their needs.",
+      "whatChanged": [
+        "How the Department of Health and Social Care (DHSC) will gather and respond to feedback from users to ensure abortion statistics meet their needs."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T10:00:04.000Z",
+      "updatedAt": "2026-09-23T10:00:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-991e81410af274f9",
+      "slug": "science-health-climate-s-cluster-991e81410af274f9",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Speech by President von der Leyen at the Summit in Support of Multilateralism",
+      "deck": "European Commission Speech New York, 22 Sep 2026 President Costa, President Ruto, thank you for bringing us together today. Excellencies, Much has already been said on the need for multilateralism. I can fully...",
+      "whatChanged": [
+        "European Commission Speech New York, 22 Sep 2026 President Costa, President Ruto, thank you for bringing us together today. Excellencies, Much has already been said on the need for multilateralism. I can fully..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-21T22:00:00.000Z",
+      "updatedAt": "2026-09-23T15:17:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-64f6819b4c2656f9",
+      "slug": "science-health-climate-s-cluster-64f6819b4c2656f9",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Welsh communities given support to build local energy projects to tackle climate change",
+      "deck": "Communities across Wales will receive a funding boost to build and control their own clean energy supply",
+      "whatChanged": [
+        "Communities across Wales will receive a funding boost to build and control their own clean energy supply"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T14:43:37.000Z",
+      "updatedAt": "2026-09-23T14:43:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5d8e3740dcd8d216",
+      "slug": "science-health-climate-s-cluster-5d8e3740dcd8d216",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Extreme weather and natural hazards",
+      "deck": "How to prepare and what to do if you’re affected by extreme weather and natural hazards while travelling or living abroad.",
+      "whatChanged": [
+        "How to prepare and what to do if you’re affected by extreme weather and natural hazards while travelling or living abroad."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T10:58:43.000Z",
+      "updatedAt": "2026-09-23T10:58:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-814d96b850afc877",
+      "slug": "business-economy-s-cluster-814d96b850afc877",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis on Better Regulation at plenary session of the European Economic and Social Committee",
+      "deck": "European Commission Statement Brussels, 23 Sep 2026 President Boland, Honourable Members of the European Economic and Social Committee. Thank you for the opportunity to join you today to discuss the European Comm...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 23 Sep 2026 President Boland, Honourable Members of the European Economic and Social Committee. Thank you for the opportunity to join you today to discuss the European Comm..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T11:45:23.000Z",
+      "updatedAt": "2026-09-23T11:45:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b3090387236d8eb",
+      "slug": "business-economy-s-cluster-3b3090387236d8eb",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Correspondence: Keep Britain Working review update: a national growth opportunity, September 2026",
+      "deck": "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth.",
+      "whatChanged": [
+        "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-22T23:01:04.000Z",
+      "updatedAt": "2026-09-22T23:01:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-055af3fe0ea8baf2",
+      "slug": "business-economy-s-cluster-055af3fe0ea8baf2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Families set to save money through new and upgraded heat networks",
+      "deck": "Hundreds of thousands of people will save money on their energy bills through £90 million investment into clean, cheaper heating.",
+      "whatChanged": [
+        "Hundreds of thousands of people will save money on their energy bills through £90 million investment into clean, cheaper heating."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-22T23:01:00.000Z",
+      "updatedAt": "2026-09-22T23:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-99125b36af318c44",
+      "slug": "policy-geopolitics-s-cluster-99125b36af318c44",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Kubilius in the Business Europe event “Security, Resilience and Competitiveness: Europe's Industrial Agenda for a New Geopolit...",
+      "deck": "European Commission Speech Brussels, 23 Sep 2026 Good afternoon, First a big thank-you to Business Europe for organising this important event. Thank you for putting the defence of Europe on your agenda today a...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 23 Sep 2026 Good afternoon, First a big thank-you to Business Europe for organising this important event. Thank you for putting the defence of Europe on your agenda today a..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T07:32:58.000Z",
+      "updatedAt": "2026-09-23T07:32:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ee6e7046940be2b0",
+      "slug": "policy-geopolitics-s-cluster-ee6e7046940be2b0",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "G7 Statement on Bab al-Mandab and Navigational Rights and Freedoms",
+      "deck": "Foreign Ministers of Canada, France, Germany, Italy, Japan, the United Kingdom and the United States of America, and the High Representative of the European Union condemn continued strikes carried out by the Houthis in Yemen and against...",
+      "whatChanged": [
+        "Foreign Ministers of Canada, France, Germany, Italy, Japan, the United Kingdom and the United States of America, and the High Representative of the European Union condemn continued strikes carried out by the Houthis in Yemen and against the Kingdom of Saudi Arabia."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-22T08:27:00.000Z",
+      "updatedAt": "2026-09-22T08:27:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-215852e475cc9c28",
+      "slug": "sports-s-cluster-215852e475cc9c28",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Form: Rabies antibody tests: pet travel schemes (VLARAB1)",
+      "deck": "Use this form to submit samples to test pets for rabies antibodies for international pet travel schemes.",
+      "whatChanged": [
+        "Use this form to submit samples to test pets for rabies antibodies for international pet travel schemes."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T09:47:51.000Z",
+      "updatedAt": "2026-09-23T09:47:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T08:41:48.000Z",
+      "updatedAt": "2026-09-16T08:41:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Animal use in veterinary vaccines quality control falls to lowest levels in a decade",
+      "url": "https://www.gov.uk/government/news/animal-use-in-veterinary-vaccines-quality-control-falls-to-lowest-levels-in-a-decade",
+      "sourceType": "official",
+      "publishedAt": "2026-09-22T13:48:48.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Notice: Contacting the Warm Home Discount helpline privacy notice",
+      "url": "https://www.gov.uk/government/publications/contacting-the-warm-home-discount-helpline-privacy-notice",
+      "sourceType": "official",
+      "publishedAt": "2026-09-16T23:01:04.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Abortion statistics user engagement plan",
+      "url": "https://www.gov.uk/government/publications/abortion-statistics-user-engagement-plan",
+      "sourceType": "official",
+      "publishedAt": "2026-09-15T16:20:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DSIT: workforce management information, August 2026",
+      "url": "https://www.gov.uk/government/publications/dsit-workforce-management-information-august-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-08-28T15:22:56.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Ethiopia travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/ethiopia",
+      "sourceType": "official",
+      "publishedAt": "2026-09-22T07:21:34.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by Commissioner Lahbib on behalf of EU Member States on the 75th Anniversary of the 1951 Convention on the Status of Refugees",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1961",
+      "sourceType": "official",
+      "publishedAt": "2026-09-18T07:30:35.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Zulker Naeen", "Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
