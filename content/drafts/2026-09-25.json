@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-25",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-25T05:09:34.577Z",
+  "updatedAt": "2026-09-25T05:09:34.577Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-fedf9a0505b804a9",
+    "s-cluster-b740c741de1ae91b",
+    "s-cluster-1484620bd02621e7",
+    "s-cluster-9f07ba8e646cdb48",
+    "s-cluster-ed1f693adab0eb91",
+    "s-cluster-a2f09de932871ece",
+    "s-cluster-1449c5c143f3218f",
+    "s-cluster-f3a0867e7d73a378"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-3b0d9fdcbdc71bb8",
+      "s-cluster-c129298be5a2c8d6",
+      "s-cluster-1f4567f41d2105e5"
+    ],
+    "science-health-climate": [
+      "s-cluster-30e84107d61bf3f5",
+      "s-cluster-f8189ad0301f77a8",
+      "s-cluster-23d521062efc54b3"
+    ],
+    "technology-ai": [
+      "s-cluster-5f3a732591cd67e7",
+      "s-cluster-f591853791f5913f",
+      "s-cluster-03618dc37a577c8a"
+    ],
+    "business-economy": [
+      "s-cluster-99194636af378743",
+      "s-cluster-814d96b850afc877",
+      "s-cluster-3b3090387236d8eb"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-fedf9a0505b804a9",
+      "slug": "india-s-cluster-fedf9a0505b804a9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: DHSC: business appointment rules advice, April to June 2026",
+      "deck": "Summaries of advice given under the business appointment rules to applicants at SCS2 and SCS1 level and equivalents.",
+      "whatChanged": [
+        "Summaries of advice given under the business appointment rules to applicants at SCS2 and SCS1 level and equivalents."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 4,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-24T15:00:02.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b740c741de1ae91b",
+      "slug": "policy-geopolitics-s-cluster-b740c741de1ae91b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: Defra: ministerial overseas travel and meetings, April to June 2026",
+      "deck": "Data on ministers’ overseas travel and meetings with external individuals and organisations.",
+      "whatChanged": [
+        "Data on ministers’ overseas travel and meetings with external individuals and organisations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 4,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-24T15:00:02.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1484620bd02621e7",
+      "slug": "policy-geopolitics-s-cluster-1484620bd02621e7",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: Voluntary scheme aggregate net sales and payment information: August 2026",
+      "deck": "Information on how the 2024 voluntary scheme for branded medicines pricing, access and growth (VPAG) is controlling spend on branded medicines in the NHS.",
+      "whatChanged": [
+        "Information on how the 2024 voluntary scheme for branded medicines pricing, access and growth (VPAG) is controlling spend on branded medicines in the NHS."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-22T08:30:01.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9f07ba8e646cdb48",
+      "slug": "india-s-cluster-9f07ba8e646cdb48",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: DESNZ: spending over £500, April 2026",
+      "deck": "Spending by electronic purchasing card solution (ePCS) over £500.",
+      "whatChanged": [
+        "Spending by electronic purchasing card solution (ePCS) over £500."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-24T15:00:03.000Z",
+      "updatedAt": "2026-09-24T15:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ed1f693adab0eb91",
+      "slug": "policy-geopolitics-s-cluster-ed1f693adab0eb91",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Mexico travel advice",
+      "deck": "FCDO travel advice for Mexico. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Mexico. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T10:34:46.000Z",
+      "updatedAt": "2026-09-24T20:04:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a2f09de932871ece",
+      "slug": "india-s-cluster-a2f09de932871ece",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "UK Statement at the High-level Plenary Meeting to Address the Existential Threats Posed by Sea-level Rise",
+      "deck": "Statement by Chris Elmore MP, Minister for the Americas, Multilateral, and Human Rights, at the High-level Plenary Meeting to Address the Existential Threats Posed by Sea-level Rise",
+      "whatChanged": [
+        "Statement by Chris Elmore MP, Minister for the Americas, Multilateral, and Human Rights, at the High-level Plenary Meeting to Address the Existential Threats Posed by Sea-level Rise"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T17:02:15.000Z",
+      "updatedAt": "2026-09-24T17:02:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1449c5c143f3218f",
+      "slug": "science-health-climate-s-cluster-1449c5c143f3218f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: UK space cooling market landscape update",
+      "deck": "A research study to update the UK fixed space cooling market for 2024, covering market size, technologies, key players, routes to market, drivers and barriers.",
+      "whatChanged": [
+        "A research study to update the UK fixed space cooling market for 2024, covering market size, technologies, key players, routes to market, drivers and barriers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T15:11:58.000Z",
+      "updatedAt": "2026-09-24T15:11:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f3a0867e7d73a378",
+      "slug": "science-health-climate-s-cluster-f3a0867e7d73a378",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Prevent groundwater pollution from solvents",
+      "deck": "Follow this groundwater protection code of practice to prevent pollution from solvent use and storage.",
+      "whatChanged": [
+        "Follow this groundwater protection code of practice to prevent pollution from solvent use and storage."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T14:50:11.000Z",
+      "updatedAt": "2026-09-24T14:50:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b0d9fdcbdc71bb8",
+      "slug": "policy-geopolitics-s-cluster-3b0d9fdcbdc71bb8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK announces major package of support for humanitarian relief and early recovery in Gaza",
+      "deck": "More Palestinians are set to receive vital aid as a result of a major new package of UK support announced by the Foreign Secretary today at the UN General Assembly.",
+      "whatChanged": [
+        "More Palestinians are set to receive vital aid as a result of a major new package of UK support announced by the Foreign Secretary today at the UN General Assembly."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T16:30:00.000Z",
+      "updatedAt": "2026-09-24T16:30:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c129298be5a2c8d6",
+      "slug": "policy-geopolitics-s-cluster-c129298be5a2c8d6",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Press statement by co-hosts of the UNGA Foreign Ministers Dialogue on Climate Change and Ecosystem Degradation as National Security Risks",
+      "deck": "Press statement by the co-hosts UK Foreign Secretary Ed Miliband, High Representative for Foreign Affairs and Security Policy and Vice-President of the European Commission Kaja Kallas, and Prime Cabinet Secretary and Cabinet Secretary fo...",
+      "whatChanged": [
+        "Press statement by the co-hosts UK Foreign Secretary Ed Miliband, High Representative for Foreign Affairs and Security Policy and Vice-President of the European Commission Kaja Kallas, and Prime Cabinet Secretary and Cabinet Secretary for Foreign and Diaspora Affairs H.E. Dr Musalia Mudavadi of Kenya on the security risks of the intensifying climate and nature crisis."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T14:20:00.000Z",
+      "updatedAt": "2026-09-24T14:20:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1f4567f41d2105e5",
+      "slug": "policy-geopolitics-s-cluster-1f4567f41d2105e5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/USA: Amendment to the Agreement for Cooperation on the Uses of Atomic Energy for Mutual Defense Purposes [TS No.41/2026]",
+      "deck": "This treaty was presented to Parliament in September 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T13:00:03.000Z",
+      "updatedAt": "2026-09-24T13:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-30e84107d61bf3f5",
+      "slug": "science-health-climate-s-cluster-30e84107d61bf3f5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Gaza: A Call to Action on Humanitarian Access and Health",
+      "deck": "A Call to Action on Humanitarian Access and Health in Gaza from Australia, Denmark, Egypt, Jordan, Kuwait, Qatar, Saudi Arabia and the UK",
+      "whatChanged": [
+        "A Call to Action on Humanitarian Access and Health in Gaza from Australia, Denmark, Egypt, Jordan, Kuwait, Qatar, Saudi Arabia and the UK"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T16:29:00.000Z",
+      "updatedAt": "2026-09-24T16:29:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f8189ad0301f77a8",
+      "slug": "science-health-climate-s-cluster-f8189ad0301f77a8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Controls of fish and shellfish diseases in England and Wales",
+      "deck": "Reduce the risk of disease and find out where listed diseases have been confirmed in England and Wales",
+      "whatChanged": [
+        "Reduce the risk of disease and find out where listed diseases have been confirmed in England and Wales"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T13:44:57.000Z",
+      "updatedAt": "2026-09-24T13:44:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-23d521062efc54b3",
+      "slug": "science-health-climate-s-cluster-23d521062efc54b3",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Statutory guidance: General licence to move sheep, non-breeding animals of other species and all slaughter animals from a bluetongue restricted zone to the f...",
+      "deck": "Use this licence to move sheep, non-breeding animals of other species and all slaughter animals from a bluetongue Restricted Zone (RZ) to the free area of Scotland.",
+      "whatChanged": [
+        "Use this licence to move sheep, non-breeding animals of other species and all slaughter animals from a bluetongue Restricted Zone (RZ) to the free area of Scotland."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T13:38:46.000Z",
+      "updatedAt": "2026-09-24T13:38:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f3a732591cd67e7",
+      "slug": "technology-ai-s-cluster-5f3a732591cd67e7",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Transparency data: GDS Responsible AI Advisory Panel: meeting summaries",
+      "deck": "Summary of the meetings for the GDS Responsible AI Advisory Panel.",
+      "whatChanged": [
+        "Summary of the meetings for the GDS Responsible AI Advisory Panel."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T14:36:56.000Z",
+      "updatedAt": "2026-09-24T14:36:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T08:42:09.000Z",
+      "updatedAt": "2026-09-24T08:42:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T08:41:48.000Z",
+      "updatedAt": "2026-09-16T08:41:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-99194636af378743",
+      "slug": "business-economy-s-cluster-99194636af378743",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the Call to Action for the Children of Gaza and the West Bank",
+      "deck": "European Commission Speech New York, 23 Sep 2026 A kite. A piece of fabric on a string, held in a child's hand, dancing in the wind. The simplest toy. The simplest joy of an ordinary childhood. But in Gaza tod...",
+      "whatChanged": [
+        "European Commission Speech New York, 23 Sep 2026 A kite. A piece of fabric on a string, held in a child's hand, dancing in the wind. The simplest toy. The simplest joy of an ordinary childhood. But in Gaza tod..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T21:02:53.000Z",
+      "updatedAt": "2026-09-23T21:02:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-814d96b850afc877",
+      "slug": "business-economy-s-cluster-814d96b850afc877",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis on Better Regulation at plenary session of the European Economic and Social Committee",
+      "deck": "European Commission Statement Brussels, 23 Sep 2026 President Boland, Honourable Members of the European Economic and Social Committee. Thank you for the opportunity to join you today to discuss the European Comm...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 23 Sep 2026 President Boland, Honourable Members of the European Economic and Social Committee. Thank you for the opportunity to join you today to discuss the European Comm..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T11:45:23.000Z",
+      "updatedAt": "2026-09-23T11:45:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b3090387236d8eb",
+      "slug": "business-economy-s-cluster-3b3090387236d8eb",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Correspondence: Keep Britain Working review update: a national growth opportunity, September 2026",
+      "deck": "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth.",
+      "whatChanged": [
+        "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-22T23:01:04.000Z",
+      "updatedAt": "2026-09-22T23:01:04.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Ethiopia travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/ethiopia",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T09:10:00.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Accredited official statistics: Energy prices: April to June 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/energy-prices-april-to-june-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T08:30:18.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DHSC: senior officials’ business expenses, hospitality and meetings, April to June 2026",
+      "url": "https://www.gov.uk/government/publications/dhsc-senior-officials-business-expenses-hospitality-and-meetings-april-to-june-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-17T10:26:17.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DSIT: senior officials’ business expenses and hospitality: April to June 2026",
+      "url": "https://www.gov.uk/government/publications/dsit-senior-officials-business-expenses-and-hospitality-april-to-june-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-07T14:59:37.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T08:30:14.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Lahbib on Haiti during the UN General Assembly",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1975",
+      "sourceType": "official",
+      "publishedAt": "2026-09-21T10:02:15.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
