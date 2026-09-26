@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-26",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-26T05:13:55.729Z",
+  "updatedAt": "2026-09-26T05:13:55.729Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-fedf9a0505b804a9",
+    "s-cluster-b740c741de1ae91b",
+    "s-cluster-1484620bd02621e7",
+    "s-cluster-0cfcd91f4952dd57",
+    "s-cluster-8d8aea6ed50d60f1",
+    "s-cluster-a248cc82298fd561",
+    "s-cluster-9dcafcd29bc8126a",
+    "s-cluster-9904dc36af262a1b"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-541b58918fed30f9",
+      "s-cluster-3b0d9fdcbdc71bb8",
+      "s-cluster-c129298be5a2c8d6"
+    ],
+    "science-health-climate": [
+      "s-cluster-921957d957efc3a4",
+      "s-cluster-48c3a53d360dc116",
+      "s-cluster-442c3a9496802285"
+    ],
+    "business-economy": [
+      "s-cluster-8fa361b123be9c26",
+      "s-cluster-99194636af378743",
+      "s-cluster-814d96b850afc877"
+    ],
+    "technology-ai": [
+      "s-cluster-5f3a732591cd67e7",
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0afcfe39c63893c4"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-fedf9a0505b804a9",
+      "slug": "india-s-cluster-fedf9a0505b804a9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: DHSC: business appointment rules advice, April to June 2026",
+      "deck": "Summaries of advice given under the business appointment rules to applicants at SCS2 and SCS1 level and equivalents.",
+      "whatChanged": [
+        "Summaries of advice given under the business appointment rules to applicants at SCS2 and SCS1 level and equivalents."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 4,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-24T15:00:02.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b740c741de1ae91b",
+      "slug": "policy-geopolitics-s-cluster-b740c741de1ae91b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: Defra: ministerial overseas travel and meetings, April to June 2026",
+      "deck": "Data on ministers’ overseas travel and meetings with external individuals and organisations.",
+      "whatChanged": [
+        "Data on ministers’ overseas travel and meetings with external individuals and organisations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 4,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-24T15:00:02.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1484620bd02621e7",
+      "slug": "policy-geopolitics-s-cluster-1484620bd02621e7",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: Voluntary scheme aggregate net sales and payment information: August 2026",
+      "deck": "Information on how the 2024 voluntary scheme for branded medicines pricing, access and growth (VPAG) is controlling spend on branded medicines in the NHS.",
+      "whatChanged": [
+        "Information on how the 2024 voluntary scheme for branded medicines pricing, access and growth (VPAG) is controlling spend on branded medicines in the NHS."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-22T08:30:01.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0cfcd91f4952dd57",
+      "slug": "india-s-cluster-0cfcd91f4952dd57",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Official veterinary surgeon (OVS) notes",
+      "deck": "Changes to import controls for animals and products of animal origin.",
+      "whatChanged": [
+        "Changes to import controls for animals and products of animal origin."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T15:26:53.000Z",
+      "updatedAt": "2026-09-25T15:26:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d8aea6ed50d60f1",
+      "slug": "policy-geopolitics-s-cluster-8d8aea6ed50d60f1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Our focus must be on helping people move beyond prolonged displacement: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Refugees.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Refugees."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T15:45:10.000Z",
+      "updatedAt": "2026-09-25T15:45:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a248cc82298fd561",
+      "slug": "india-s-cluster-a248cc82298fd561",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Renewables obligation level calculations: 2027 to 2028",
+      "deck": "The level of the Renewables Obligation for 2027 to 2028, and the underpinning calculation methodology.",
+      "whatChanged": [
+        "The level of the Renewables Obligation for 2027 to 2028, and the underpinning calculation methodology."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T13:19:49.000Z",
+      "updatedAt": "2026-09-25T13:19:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9dcafcd29bc8126a",
+      "slug": "science-health-climate-s-cluster-9dcafcd29bc8126a",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Henry Hub natural gas prices this summer were 6% lower than last summer",
+      "deck": "The Henry Hub natural gas spot price averaged $2.93 per million British thermal units from June through August, 6% less than the same period last year. Prices were lower this summer despite exceptionally hot weather that increased electr...",
+      "whatChanged": [
+        "The Henry Hub natural gas spot price averaged $2.93 per million British thermal units from June through August, 6% less than the same period last year. Prices were lower this summer despite exceptionally hot weather that increased electricity demand for air conditioning. Natural gas-fired power plants often help meet higher demand during such periods."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T14:00:00.000Z",
+      "updatedAt": "2026-09-25T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9904dc36af262a1b",
+      "slug": "business-economy-s-cluster-9904dc36af262a1b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Albuquerque at the Interparliamentary Conference on Stability, Economic Coordination and Governance in the EU",
+      "deck": "European Commission Speech Dublin, 25 Sep 2026 Good morning, ladies and gentlemen. It is a pleasure to join you today for this Interparliamentary Conference. National parliaments have an essential role in sh...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 25 Sep 2026 Good morning, ladies and gentlemen. It is a pleasure to join you today for this Interparliamentary Conference. National parliaments have an essential role in sh..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T13:26:07.000Z",
+      "updatedAt": "2026-09-25T13:26:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-541b58918fed30f9",
+      "slug": "policy-geopolitics-s-cluster-541b58918fed30f9",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Cuba travel advice",
+      "deck": "FCDO travel advice for Cuba. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Cuba. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T11:36:31.000Z",
+      "updatedAt": "2026-09-25T15:13:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b0d9fdcbdc71bb8",
+      "slug": "policy-geopolitics-s-cluster-3b0d9fdcbdc71bb8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK announces major package of support for humanitarian relief and early recovery in Gaza",
+      "deck": "More Palestinians are set to receive vital aid as a result of a major new package of UK support announced by the Foreign Secretary today at the UN General Assembly.",
+      "whatChanged": [
+        "More Palestinians are set to receive vital aid as a result of a major new package of UK support announced by the Foreign Secretary today at the UN General Assembly."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T16:30:00.000Z",
+      "updatedAt": "2026-09-24T16:30:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c129298be5a2c8d6",
+      "slug": "policy-geopolitics-s-cluster-c129298be5a2c8d6",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Press statement by co-hosts of the UNGA Foreign Ministers Dialogue on Climate Change and Ecosystem Degradation as National Security Risks",
+      "deck": "Press statement by the co-hosts UK Foreign Secretary Ed Miliband, High Representative for Foreign Affairs and Security Policy and Vice-President of the European Commission Kaja Kallas, and Prime Cabinet Secretary and Cabinet Secretary fo...",
+      "whatChanged": [
+        "Press statement by the co-hosts UK Foreign Secretary Ed Miliband, High Representative for Foreign Affairs and Security Policy and Vice-President of the European Commission Kaja Kallas, and Prime Cabinet Secretary and Cabinet Secretary for Foreign and Diaspora Affairs H.E. Dr Musalia Mudavadi of Kenya on the security risks of the intensifying climate and nature crisis."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T14:20:00.000Z",
+      "updatedAt": "2026-09-24T14:20:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-921957d957efc3a4",
+      "slug": "science-health-climate-s-cluster-921957d957efc3a4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "UK standards for air quality monitoring instruments",
+      "deck": "The standard instruments, methods and requirements for monitoring air pollution in the UK.",
+      "whatChanged": [
+        "The standard instruments, methods and requirements for monitoring air pollution in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T15:00:28.000Z",
+      "updatedAt": "2026-09-25T15:00:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-48c3a53d360dc116",
+      "slug": "science-health-climate-s-cluster-48c3a53d360dc116",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Travel with assistance dogs: transport companies and routes",
+      "deck": "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners.",
+      "whatChanged": [
+        "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T14:35:25.000Z",
+      "updatedAt": "2026-09-25T14:35:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-442c3a9496802285",
+      "slug": "science-health-climate-s-cluster-442c3a9496802285",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Precision bred organism marketing notice (reference: PBM/26/MUAC/001)",
+      "deck": "Information on a precision breeding marketing notice submitted for a banana plant and its precision bred status.",
+      "whatChanged": [
+        "Information on a precision breeding marketing notice submitted for a banana plant and its precision bred status."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T13:37:00.000Z",
+      "updatedAt": "2026-09-25T13:37:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T14:31:17.000Z",
+      "updatedAt": "2026-09-25T14:31:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-99194636af378743",
+      "slug": "business-economy-s-cluster-99194636af378743",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the Call to Action for the Children of Gaza and the West Bank",
+      "deck": "European Commission Speech New York, 23 Sep 2026 A kite. A piece of fabric on a string, held in a child's hand, dancing in the wind. The simplest toy. The simplest joy of an ordinary childhood. But in Gaza tod...",
+      "whatChanged": [
+        "European Commission Speech New York, 23 Sep 2026 A kite. A piece of fabric on a string, held in a child's hand, dancing in the wind. The simplest toy. The simplest joy of an ordinary childhood. But in Gaza tod..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T21:02:53.000Z",
+      "updatedAt": "2026-09-23T21:02:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-814d96b850afc877",
+      "slug": "business-economy-s-cluster-814d96b850afc877",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis on Better Regulation at plenary session of the European Economic and Social Committee",
+      "deck": "European Commission Statement Brussels, 23 Sep 2026 President Boland, Honourable Members of the European Economic and Social Committee. Thank you for the opportunity to join you today to discuss the European Comm...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 23 Sep 2026 President Boland, Honourable Members of the European Economic and Social Committee. Thank you for the opportunity to join you today to discuss the European Comm..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-23T11:45:23.000Z",
+      "updatedAt": "2026-09-23T11:45:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5f3a732591cd67e7",
+      "slug": "technology-ai-s-cluster-5f3a732591cd67e7",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Transparency data: GDS Responsible AI Advisory Panel: meeting summaries",
+      "deck": "Summary of the meetings for the GDS Responsible AI Advisory Panel.",
+      "whatChanged": [
+        "Summary of the meetings for the GDS Responsible AI Advisory Panel."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T14:36:56.000Z",
+      "updatedAt": "2026-09-24T14:36:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T08:41:48.000Z",
+      "updatedAt": "2026-09-16T08:41:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Our focus must be on helping people move beyond prolonged displacement: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/our-focus-must-be-on-helping-people-move-beyond-prolonged-displacement-uk-statement-at-the-un-security-council",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T14:20:00.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Renewables obligation level calculations: 2027 to 2028",
+      "url": "https://www.gov.uk/government/publications/renewables-obligation-level-calculations-2027-to-2028",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T10:46:21.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DHSC: senior officials’ business expenses, hospitality and meetings, April to June 2026",
+      "url": "https://www.gov.uk/government/publications/dhsc-senior-officials-business-expenses-hospitality-and-meetings-april-to-june-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-17T10:26:17.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DSIT: senior officials’ business expenses and hospitality: April to June 2026",
+      "url": "https://www.gov.uk/government/publications/dsit-senior-officials-business-expenses-and-hospitality-april-to-june-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-07T14:59:37.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Official veterinary surgeon (OVS) notes",
+      "url": "https://www.gov.uk/government/publications/official-veterinary-surgeon-ovs-notes",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T14:50:11.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "Henry Hub natural gas prices this summer were 6% lower than last summer",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68204",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Albuquerque at the Interparliamentary Conference on Stability, Economic Coordination and Governance in the EU",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1986",
+      "sourceType": "official",
+      "publishedAt": "2026-09-21T22:00:00.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
