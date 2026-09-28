@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-28",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-28T05:38:46.823Z",
+  "updatedAt": "2026-09-28T05:38:46.823Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-dfd6172b824a7317",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-fedf9a0505b804a9",
+    "s-cluster-b740c741de1ae91b",
+    "s-cluster-1484620bd02621e7",
+    "s-cluster-9f07ba8e646cdb48",
+    "s-cluster-d516e2bfbae46bd5",
+    "s-cluster-d7ba203b61feeaf6"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-3e83961b7691735b",
+      "s-cluster-8d8aea6ed50d60f1",
+      "s-cluster-3b0d9fdcbdc71bb8"
+    ],
+    "science-health-climate": [
+      "s-cluster-d37f9b2aa085b5fa",
+      "s-cluster-921957d957efc3a4",
+      "s-cluster-48c3a53d360dc116"
+    ],
+    "business-economy": [
+      "s-cluster-8fa361b123be9c26",
+      "s-cluster-9904dc36af262a1b",
+      "s-cluster-13e943c9c1143926"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0afcfe39c63893c4",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-dfd6172b824a7317",
+      "slug": "policy-geopolitics-s-cluster-dfd6172b824a7317",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Cuba travel advice",
+      "deck": "FCDO travel advice for Cuba. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Cuba. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T11:36:31.000Z",
+      "updatedAt": "2026-09-28T05:10:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-27T17:14:57.000Z",
+      "updatedAt": "2026-09-27T17:14:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fedf9a0505b804a9",
+      "slug": "india-s-cluster-fedf9a0505b804a9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: DHSC: business appointment rules advice, April to June 2026",
+      "deck": "Summaries of advice given under the business appointment rules to applicants at SCS2 and SCS1 level and equivalents.",
+      "whatChanged": [
+        "Summaries of advice given under the business appointment rules to applicants at SCS2 and SCS1 level and equivalents."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 4,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-24T15:00:02.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b740c741de1ae91b",
+      "slug": "policy-geopolitics-s-cluster-b740c741de1ae91b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: Defra: ministerial overseas travel and meetings, April to June 2026",
+      "deck": "Data on ministers’ overseas travel and meetings with external individuals and organisations.",
+      "whatChanged": [
+        "Data on ministers’ overseas travel and meetings with external individuals and organisations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 4,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-24T15:00:02.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1484620bd02621e7",
+      "slug": "policy-geopolitics-s-cluster-1484620bd02621e7",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: Voluntary scheme aggregate net sales and payment information: August 2026",
+      "deck": "Information on how the 2024 voluntary scheme for branded medicines pricing, access and growth (VPAG) is controlling spend on branded medicines in the NHS.",
+      "whatChanged": [
+        "Information on how the 2024 voluntary scheme for branded medicines pricing, access and growth (VPAG) is controlling spend on branded medicines in the NHS."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-22T08:30:01.000Z",
+      "updatedAt": "2026-09-24T15:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9f07ba8e646cdb48",
+      "slug": "india-s-cluster-9f07ba8e646cdb48",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: DESNZ: spending over £500, April 2026",
+      "deck": "Spending by electronic purchasing card solution (ePCS) over £500.",
+      "whatChanged": [
+        "Spending by electronic purchasing card solution (ePCS) over £500."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-24T15:00:03.000Z",
+      "updatedAt": "2026-09-24T15:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d516e2bfbae46bd5",
+      "slug": "science-health-climate-s-cluster-d516e2bfbae46bd5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Commissioner Šuica addresses the Ministerial roundtable on Health and Humanitarian access in Gaza",
+      "deck": "European Commission Speech New York, 25 Sep 2026 Excellencies, Dear Colleagues, Let me thank the United Kingdom, Jordan, and Qatar for bringing us together today. Gaza cannot wait. Right now, Gazans have littl...",
+      "whatChanged": [
+        "European Commission Speech New York, 25 Sep 2026 Excellencies, Dear Colleagues, Let me thank the United Kingdom, Jordan, and Qatar for bringing us together today. Gaza cannot wait. Right now, Gazans have littl..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner", "fcdo"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-23T22:00:00.000Z",
+      "updatedAt": "2026-09-24T16:29:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d7ba203b61feeaf6",
+      "slug": "world-s-cluster-d7ba203b61feeaf6",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Commissioner Šuica addresses the Global Alliance for the Implementation of the Two-State Solution",
+      "deck": "European Commission Speech New York, 25 Sep 2026 Dear colleagues, Let me thank the HRVP and the Kingdom of Saudi Arabia for bringing us together. The European Commission co-chaired, with the League of Arab Sta...",
+      "whatChanged": [
+        "European Commission Speech New York, 25 Sep 2026 Dear colleagues, Let me thank the HRVP and the Kingdom of Saudi Arabia for bringing us together. The European Commission co-chaired, with the League of Arab Sta..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner", "fcdo"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-23T22:00:00.000Z",
+      "updatedAt": "2026-09-24T16:25:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d8aea6ed50d60f1",
+      "slug": "policy-geopolitics-s-cluster-8d8aea6ed50d60f1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Our focus must be on helping people move beyond prolonged displacement: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Refugees.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Refugees."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T15:45:10.000Z",
+      "updatedAt": "2026-09-25T15:45:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b0d9fdcbdc71bb8",
+      "slug": "policy-geopolitics-s-cluster-3b0d9fdcbdc71bb8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK announces major package of support for humanitarian relief and early recovery in Gaza",
+      "deck": "More Palestinians are set to receive vital aid as a result of a major new package of UK support announced by the Foreign Secretary today at the UN General Assembly.",
+      "whatChanged": [
+        "More Palestinians are set to receive vital aid as a result of a major new package of UK support announced by the Foreign Secretary today at the UN General Assembly."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-24T16:30:00.000Z",
+      "updatedAt": "2026-09-24T16:30:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-921957d957efc3a4",
+      "slug": "science-health-climate-s-cluster-921957d957efc3a4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "UK standards for air quality monitoring instruments",
+      "deck": "The standard instruments, methods and requirements for monitoring air pollution in the UK.",
+      "whatChanged": [
+        "The standard instruments, methods and requirements for monitoring air pollution in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T15:00:28.000Z",
+      "updatedAt": "2026-09-25T15:00:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-48c3a53d360dc116",
+      "slug": "science-health-climate-s-cluster-48c3a53d360dc116",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Travel with assistance dogs: transport companies and routes",
+      "deck": "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners.",
+      "whatChanged": [
+        "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T14:35:25.000Z",
+      "updatedAt": "2026-09-25T14:35:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T14:31:17.000Z",
+      "updatedAt": "2026-09-25T14:31:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9904dc36af262a1b",
+      "slug": "business-economy-s-cluster-9904dc36af262a1b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Albuquerque at the Interparliamentary Conference on Stability, Economic Coordination and Governance in the EU",
+      "deck": "European Commission Speech Dublin, 25 Sep 2026 Good morning, ladies and gentlemen. It is a pleasure to join you today for this Interparliamentary Conference. National parliaments have an essential role in sh...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 25 Sep 2026 Good morning, ladies and gentlemen. It is a pleasure to join you today for this Interparliamentary Conference. National parliaments have an essential role in sh..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-25T13:26:07.000Z",
+      "updatedAt": "2026-09-25T13:26:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13e943c9c1143926",
+      "slug": "business-economy-s-cluster-13e943c9c1143926",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Waterborne shipments from the U.S. Gulf Coast increased in April and May",
+      "deck": "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel...",
+      "whatChanged": [
+        "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel between U.S. ports. Shipments from the U.S. Gulf Coast to the East Coast (PADD 1) also increased."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-17T14:00:00.000Z",
+      "updatedAt": "2026-08-17T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-16T08:41:48.000Z",
+      "updatedAt": "2026-09-16T08:41:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0afcfe39c63893c4",
+      "slug": "technology-ai-s-cluster-0afcfe39c63893c4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI Risk Management Toolkit",
+      "deck": "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products.",
+      "whatChanged": [
+        "Guidance to help anyone involved in AI projects understand, assess and manage risks when designing, procuring or delivering AI products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-08T10:53:29.000Z",
+      "updatedAt": "2026-09-08T10:53:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Thailand travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/thailand",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T15:00:06.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T14:50:11.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Renewables obligation level calculations: 2027 to 2028",
+      "url": "https://www.gov.uk/government/publications/renewables-obligation-level-calculations-2027-to-2028",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T10:46:21.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DHSC: senior officials’ business expenses, hospitality and meetings, April to June 2026",
+      "url": "https://www.gov.uk/government/publications/dhsc-senior-officials-business-expenses-hospitality-and-meetings-april-to-june-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-17T10:26:17.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DSIT: senior officials’ business expenses and hospitality: April to June 2026",
+      "url": "https://www.gov.uk/government/publications/dsit-senior-officials-business-expenses-and-hospitality-april-to-june-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-07T14:59:37.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Wystąpienie komisarza Piotra Serafina podczas XXVI Międzynarodowej Konferencji „Rola chrześcijan w procesie integracji europejskiej” pt. „Europa skazana na podział czy zjednoczenie?”",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1989",
+      "sourceType": "official",
+      "publishedAt": "2026-09-21T22:00:00.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Zulker Naeen",
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "Henry Hub natural gas prices this summer were 6% lower than last summer",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68204",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
