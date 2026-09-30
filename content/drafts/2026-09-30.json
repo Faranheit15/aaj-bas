@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-30",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-09-30T05:46:38.016Z",
+  "updatedAt": "2026-09-30T05:46:38.016Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-d9342a9f401ebd09",
+    "s-cluster-94ba752d8eca9ba7",
+    "s-cluster-fb992ff459625ffd",
+    "s-cluster-94b6f32d8ec788ea",
+    "s-cluster-0cdbbf86c585e628",
+    "s-cluster-820e6086a824f58d",
+    "s-cluster-8fa361b123be9c26",
+    "s-cluster-4609fa2961f5ef70"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-d13321579cf080db",
+      "s-cluster-60c462a8e418ed4a",
+      "s-cluster-4334a247725d03ca"
+    ],
+    "technology-ai": [
+      "s-cluster-f16426252fe8378d",
+      "s-cluster-68db2e6c96e0a3af",
+      "s-cluster-36b339ac809c2411"
+    ],
+    "science-health-climate": [
+      "s-cluster-abcb2b3741a17398",
+      "s-cluster-24109cec3b4f3731",
+      "s-cluster-578813260948fb48"
+    ],
+    "business-economy": [
+      "s-cluster-68d2c8dee5d6fd4c",
+      "s-cluster-a3f23cc0fa683b14",
+      "s-cluster-fb72373306a1e91d"
+    ],
+    "sports": ["s-cluster-94b6f22d8ec78737"],
+    "culture-entertainment": [
+      "s-cluster-b9c9a3351754c677",
+      "s-cluster-94ba732d8eca9841"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-d9342a9f401ebd09",
+      "slug": "india-s-cluster-d9342a9f401ebd09",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Decision: Coastal access: Section 52 notices for Eastbourne to Camber",
+      "deck": "These notices set out the Secretary of State’s decision to approve the proposals for improving coastal access between Eastbourne and Camber.",
+      "whatChanged": [
+        "These notices set out the Secretary of State’s decision to approve the proposals for improving coastal access between Eastbourne and Camber."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T23:30:04.000Z",
+      "updatedAt": "2026-09-29T23:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94ba752d8eca9ba7",
+      "slug": "india-s-cluster-94ba752d8eca9ba7",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Speech by President von der Leyen at the inauguration ceremony for the David Maria Sassoli building of the European Parliament",
+      "deck": "European Commission Speech Brussels, 29 Sep 2026 President Metsola, dear Roberta, Excellencies, Cara Alessandra, Giulio and Livia, David Sassoli was a true custodian of the values our Union was built on. The ...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 29 Sep 2026 President Metsola, dear Roberta, Excellencies, Cara Alessandra, Giulio and Livia, David Sassoli was a true custodian of the values our Union was built on. The ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T10:56:10.000Z",
+      "updatedAt": "2026-09-29T10:56:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb992ff459625ffd",
+      "slug": "india-s-cluster-fb992ff459625ffd",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Adult social care digital skills framework",
+      "deck": "A resource to help people working in adult social care understand and develop the digital skills they need.",
+      "whatChanged": [
+        "A resource to help people working in adult social care understand and develop the digital skills they need."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:49:21.000Z",
+      "updatedAt": "2026-09-29T15:49:39.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94b6f32d8ec788ea",
+      "slug": "policy-geopolitics-s-cluster-94b6f32d8ec788ea",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Opening remarks by Commissioner Jørgensen at the press conference concluding the Informal Energy Council",
+      "deck": "European Commission Speech Dublin, 29 Sep 2026 Thank you, Minister, for hosting these important discussions here in Dublin.And thank you for your putting energy affordability and security at the top of the a...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 29 Sep 2026 Thank you, Minister, for hosting these important discussions here in Dublin.And thank you for your putting energy affordability and security at the top of the a..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T17:02:17.000Z",
+      "updatedAt": "2026-09-29T17:02:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0cdbbf86c585e628",
+      "slug": "policy-geopolitics-s-cluster-0cdbbf86c585e628",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Mexico travel advice",
+      "deck": "FCDO travel advice for Mexico. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Mexico. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-28T19:33:06.000Z",
+      "updatedAt": "2026-09-29T16:00:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-820e6086a824f58d",
+      "slug": "policy-geopolitics-s-cluster-820e6086a824f58d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "We hope the Gang Suppression Force can bring about the security and stability that the Haitian people deserve: UK Explanation of Vote at the UN Security Council",
+      "deck": "UK Explanation of Vote delivered by Jennifer MacNaughtan, UK Minister Counsellor, following the UN Security Council vote on Haiti.",
+      "whatChanged": [
+        "UK Explanation of Vote delivered by Jennifer MacNaughtan, UK Minister Counsellor, following the UN Security Council vote on Haiti."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:17:06.000Z",
+      "updatedAt": "2026-09-29T15:17:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:24:00.000Z",
+      "updatedAt": "2026-09-29T15:24:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4609fa2961f5ef70",
+      "slug": "technology-ai-s-cluster-4609fa2961f5ef70",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Setting up your internet as an adult social care provider",
+      "deck": "Choose your broadband connection, manage your contract and wifi security, and get ready for the digital phone switchover.",
+      "whatChanged": [
+        "Choose your broadband connection, manage your contract and wifi security, and get ready for the digital phone switchover."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:46:49.000Z",
+      "updatedAt": "2026-09-29T15:48:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d13321579cf080db",
+      "slug": "policy-geopolitics-s-cluster-d13321579cf080db",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Commission proposes 5-point plan to strengthen resilience and security of EU external borders",
+      "deck": "European Commission Press release Brussels, 29 Sep 2026 Today, the Commission is proposing a 5-point plan to prevent, anticipate and respond to sudden, mass illegal arrivals. It will strengthen the resilience and security of EU external...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 29 Sep 2026 Today, the Commission is proposing a 5-point plan to prevent, anticipate and respond to sudden, mass illegal arrivals. It will strengthen the resilience and security of EU external borders"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T09:00:26.000Z",
+      "updatedAt": "2026-09-29T14:18:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-60c462a8e418ed4a",
+      "slug": "policy-geopolitics-s-cluster-60c462a8e418ed4a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "ISIL (Da’esh) and Al-Qaida: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T10:15:41.000Z",
+      "updatedAt": "2026-09-29T10:15:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T10:15:29.000Z",
+      "updatedAt": "2026-09-29T10:15:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f16426252fe8378d",
+      "slug": "technology-ai-s-cluster-f16426252fe8378d",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Digital social care records: choosing and implementing solutions",
+      "deck": "Help for adult social care providers when choosing and setting up digital social care records (DSCRs) software.",
+      "whatChanged": [
+        "Help for adult social care providers when choosing and setting up digital social care records (DSCRs) software."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:47:51.000Z",
+      "updatedAt": "2026-09-29T15:47:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-68db2e6c96e0a3af",
+      "slug": "technology-ai-s-cluster-68db2e6c96e0a3af",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Discours de la Commissaire Lahbib au Parlement fédéral Belge",
+      "deck": "European Commission Discours Brussels, 29 Sep 2026 C'est un plaisir d'être de retour au Parlement belge, l'enceinte où les échanges sont toujours enrichissants, j'ai pu y aiguiser mon combat politique... J'ai un p...",
+      "whatChanged": [
+        "European Commission Discours Brussels, 29 Sep 2026 C'est un plaisir d'être de retour au Parlement belge, l'enceinte où les échanges sont toujours enrichissants, j'ai pu y aiguiser mon combat politique... J'ai un p..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T08:35:51.000Z",
+      "updatedAt": "2026-09-29T08:35:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-36b339ac809c2411",
+      "slug": "technology-ai-s-cluster-36b339ac809c2411",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Transparency data: Women in Tech Taskforce: Terms of Reference",
+      "deck": "Terms of Reference for the Women in Tech Taskforce.",
+      "whatChanged": ["Terms of Reference for the Women in Tech Taskforce."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T08:21:56.000Z",
+      "updatedAt": "2026-09-29T08:21:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-abcb2b3741a17398",
+      "slug": "science-health-climate-s-cluster-abcb2b3741a17398",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Local air quality management",
+      "deck": "Local air quality management (LAQM) is the framework local authorities must follow to protect against air pollution in their area.",
+      "whatChanged": [
+        "Local air quality management (LAQM) is the framework local authorities must follow to protect against air pollution in their area."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T14:39:58.000Z",
+      "updatedAt": "2026-09-29T14:39:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-24109cec3b4f3731",
+      "slug": "science-health-climate-s-cluster-24109cec3b4f3731",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Women in Research Charter",
+      "deck": "A voluntary commitment to improve outcomes for women across the UK research system, with actions for research funders and research performing organisations.",
+      "whatChanged": [
+        "A voluntary commitment to improve outcomes for women across the UK research system, with actions for research funders and research performing organisations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T12:00:23.000Z",
+      "updatedAt": "2026-09-29T12:00:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-578813260948fb48",
+      "slug": "science-health-climate-s-cluster-578813260948fb48",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: The Gambia: doctors",
+      "deck": "List of medical practitioners and facilities for British nationals in The Gambia.",
+      "whatChanged": [
+        "List of medical practitioners and facilities for British nationals in The Gambia."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T11:23:40.000Z",
+      "updatedAt": "2026-09-29T11:23:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-68d2c8dee5d6fd4c",
+      "slug": "business-economy-s-cluster-68d2c8dee5d6fd4c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Dombrovskis at the European Forum for Family Business",
+      "deck": "European Commission Speech Brussels, 29 Sep 2026 Good evening, ladies and gentlemen. Thank you for the invitation to join you this evening. Family businesses hold a special place in the European economy. You r...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 29 Sep 2026 Good evening, ladies and gentlemen. Thank you for the invitation to join you this evening. Family businesses hold a special place in the European economy. You r..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T13:12:13.000Z",
+      "updatedAt": "2026-09-29T13:23:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a3f23cc0fa683b14",
+      "slug": "business-economy-s-cluster-a3f23cc0fa683b14",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Energy Trends: September 2026, special feature article - Competition in UK electricity markets, 2025",
+      "deck": "Special feature article from the September 2026 edition of Energy trends statistical publication.",
+      "whatChanged": [
+        "Special feature article from the September 2026 edition of Energy trends statistical publication."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T08:30:05.000Z",
+      "updatedAt": "2026-09-29T08:30:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb72373306a1e91d",
+      "slug": "business-economy-s-cluster-fb72373306a1e91d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Monthly and annual prices of road fuels and petroleum products",
+      "deck": "Monthly and annual prices of road fuels and fuels used for home heating, plus an index of crude oil prices.",
+      "whatChanged": [
+        "Monthly and annual prices of road fuels and fuels used for home heating, plus an index of crude oil prices."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T08:30:06.000Z",
+      "updatedAt": "2026-09-29T08:30:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94b6f22d8ec78737",
+      "slug": "sports-s-cluster-94b6f22d8ec78737",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's keynote speech at the conference 'The Stress Test of the Nature Directives: Next Steps for Wildlife Management'",
+      "deck": "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T16:29:33.000Z",
+      "updatedAt": "2026-09-29T16:29:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b9c9a3351754c677",
+      "slug": "culture-entertainment-s-cluster-b9c9a3351754c677",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Level 5 Award in Understanding Digital Leadership in Adult Social Care qualification",
+      "deck": "Learn about who is eligible to apply and the benefits the qualification offers for adult social care providers.",
+      "whatChanged": [
+        "Learn about who is eligible to apply and the benefits the qualification offers for adult social care providers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:49:54.000Z",
+      "updatedAt": "2026-09-29T15:49:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94ba732d8eca9841",
+      "slug": "culture-entertainment-s-cluster-94ba732d8eca9841",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall gives an opening address at the 9th Water Festival",
+      "deck": "European Commission Speech Rome, 28 Sep 2026 Distinguished guests, colleagues, ladies and gentlemen, I am delighted to be part of the 9th edition of the Water Festival. Today is a celebration of water....",
+      "whatChanged": [
+        "European Commission Speech Rome, 28 Sep 2026 Distinguished guests, colleagues, ladies and gentlemen, I am delighted to be part of the 9th edition of the Water Festival. Today is a celebration of water...."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-28T17:28:09.000Z",
+      "updatedAt": "2026-09-28T17:28:09.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Decision: Coastal access: Section 52 notices for Gretna to Allonby",
+      "url": "https://www.gov.uk/government/publications/coastal-access-section-52-notice-for-gretna-to-allonby",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T09:10:22.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Opening remarks by Commissioner Jørgensen at the press conference concluding the Informal Energy Council",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2016",
+      "sourceType": "official",
+      "publishedAt": "2026-09-23T11:45:23.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Level 5 Award in Understanding Digital Leadership in Adult Social Care qualification",
+      "url": "https://www.gov.uk/guidance/level-5-award-in-understanding-digital-leadership-in-adult-social-care-qualification",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T15:00:04.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Brazil travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/brazil",
+      "sourceType": "official",
+      "publishedAt": "2026-09-25T15:13:20.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Women in Research Charter",
+      "url": "https://www.gov.uk/government/publications/women-in-research-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-09-18T13:37:31.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Great British Grid to speed up connections and cut bills",
+      "url": "https://www.gov.uk/government/news/great-british-grid-to-speed-up-connections-and-cut-bills",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T08:30:05.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
