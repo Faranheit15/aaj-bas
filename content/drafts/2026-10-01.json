@@ -1,0 +1,570 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-01",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-01T06:15:23.317Z",
+  "updatedAt": "2026-10-01T06:15:23.317Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-0733c8d65af62578",
+    "s-cluster-24dfcf8eb4600f44",
+    "s-cluster-28aa9bfbb515e0a4",
+    "s-cluster-be65d2cee2cdb6e8",
+    "s-cluster-8d59bbab7ae41fe8",
+    "s-cluster-9dc3e8d29bc1d1c0",
+    "s-cluster-ff47cdf57498558b",
+    "s-cluster-5abcc8ba4bdcc7f4"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-257d569f9d79da94",
+      "s-cluster-9d4b0c10e06bfeb7",
+      "s-cluster-3c00788e2c700616"
+    ],
+    "science-health-climate": [
+      "s-cluster-e92b576f2b261a9a",
+      "s-cluster-8d8fda715fd532cd",
+      "s-cluster-731dfd01c6ab254a"
+    ],
+    "business-economy": [
+      "s-cluster-40a9cf5d6a857027",
+      "s-cluster-21a303a5df82e725",
+      "s-cluster-68d2c8dee5d6fd4c"
+    ],
+    "technology-ai": [
+      "s-cluster-196d85382cb176c6",
+      "s-cluster-e9e4a99c87602254",
+      "s-cluster-4609fa2961f5ef70"
+    ],
+    "culture-entertainment": [
+      "s-cluster-94c0e62d8ecfc758",
+      "s-cluster-b9c9a3351754c677",
+      "s-cluster-94ba732d8eca9841"
+    ],
+    "sports": ["s-cluster-6886018f17a0ac5e", "s-cluster-94b6f22d8ec78737"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-0733c8d65af62578",
+      "slug": "india-s-cluster-0733c8d65af62578",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Renewal Not Rupture: The Future of the UK-US Relationship",
+      "deck": "Speech by British Ambassador to the United States, Sir Christian Turner, at the King’s Birthday Party on 30 September 2026.",
+      "whatChanged": [
+        "Speech by British Ambassador to the United States, Sir Christian Turner, at the King’s Birthday Party on 30 September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T23:12:25.000Z",
+      "updatedAt": "2026-09-30T23:12:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-24dfcf8eb4600f44",
+      "slug": "india-s-cluster-24dfcf8eb4600f44",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Farmer Collaboration Fund",
+      "deck": "Apply for funding to support farmers, land managers and growers to work together to manage land in a productive, nature friendly and sustainable way.",
+      "whatChanged": [
+        "Apply for funding to support farmers, land managers and growers to work together to manage land in a productive, nature friendly and sustainable way."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T23:01:09.000Z",
+      "updatedAt": "2026-09-30T23:01:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-28aa9bfbb515e0a4",
+      "slug": "india-s-cluster-28aa9bfbb515e0a4",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Applications Open for Scheme to Slash Electricity Bills for Over 10,000 Manufacturers",
+      "deck": "More than 10,000 businesses across Great Britain are a step closer to vital government support to slash their electricity bills, as applications open today for the British Industrial Competitiveness Scheme (BICS).",
+      "whatChanged": [
+        "More than 10,000 businesses across Great Britain are a step closer to vital government support to slash their electricity bills, as applications open today for the British Industrial Competitiveness Scheme (BICS)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T23:01:09.000Z",
+      "updatedAt": "2026-09-30T23:01:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-be65d2cee2cdb6e8",
+      "slug": "science-health-climate-s-cluster-be65d2cee2cdb6e8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Funding for farmers, growers and land managers",
+      "deck": "Apply for grants and other funding to increase productivity, manage your land to benefit the environment and support your agricultural business.",
+      "whatChanged": [
+        "Apply for grants and other funding to increase productivity, manage your land to benefit the environment and support your agricultural business."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T23:01:09.000Z",
+      "updatedAt": "2026-09-30T23:01:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d59bbab7ae41fe8",
+      "slug": "science-health-climate-s-cluster-8d59bbab7ae41fe8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: The Gambia: doctors",
+      "deck": "List of medical practitioners and facilities for British nationals in The Gambia.",
+      "whatChanged": [
+        "List of medical practitioners and facilities for British nationals in The Gambia."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-dhsc"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-09-29T11:23:40.000Z",
+      "updatedAt": "2026-09-30T12:32:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9dc3e8d29bc1d1c0",
+      "slug": "business-economy-s-cluster-9dc3e8d29bc1d1c0",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "U.S. electricity use for electric vehicles increasing at a slower pace in 2026",
+      "deck": "We estimate light-duty electric vehicles in the United States consumed 8% more electricity during the first six months of 2026 than in the last half of 2025 (2H25) in our Monthly Energy Review, down from the 13-24% growth seen in six-mon...",
+      "whatChanged": [
+        "We estimate light-duty electric vehicles in the United States consumed 8% more electricity during the first six months of 2026 than in the last half of 2025 (2H25) in our Monthly Energy Review, down from the 13-24% growth seen in six-month periods in recent years. The slowing electric vehicle electricity consumption growth followed a decline in sales after U.S. federal tax credits expired in September 2025. Overall, U.S. light-duty electric vehicle electricity use has more than doubled since 1H23, totaling nearly 14 billion kilowatthours in 1H26."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T14:00:00.000Z",
+      "updatedAt": "2026-09-30T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ff47cdf57498558b",
+      "slug": "business-economy-s-cluster-ff47cdf57498558b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Energy trends: April to June 2027",
+      "deck": "Energy production, consumption and trade of total energy, coal, oil, gas, electricity and renewables during the second calendar quarter of 2027.",
+      "whatChanged": [
+        "Energy production, consumption and trade of total energy, coal, oil, gas, electricity and renewables during the second calendar quarter of 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T13:36:23.000Z",
+      "updatedAt": "2026-09-30T13:36:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5abcc8ba4bdcc7f4",
+      "slug": "science-health-climate-s-cluster-5abcc8ba4bdcc7f4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Statutory guidance: The Primary Dental Services Statement of Financial Entitlements (Amendment) (No. 4) Directions 2026",
+      "deck": "Makes changes to the payments made by NHS England to contractors under dental service contracts with effect from 30 September 2026.",
+      "whatChanged": [
+        "Makes changes to the payments made by NHS England to contractors under dental service contracts with effect from 30 September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T11:33:08.000Z",
+      "updatedAt": "2026-09-30T12:58:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-257d569f9d79da94",
+      "slug": "policy-geopolitics-s-cluster-257d569f9d79da94",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Getting help if someone goes missing abroad",
+      "deck": "What to do if a British national goes missing abroad, reporting it to the police and how the Foreign, Commonwealth & Development Office and others can help.",
+      "whatChanged": [
+        "What to do if a British national goes missing abroad, reporting it to the police and how the Foreign, Commonwealth & Development Office and others can help."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T15:53:25.000Z",
+      "updatedAt": "2026-09-30T15:53:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9d4b0c10e06bfeb7",
+      "slug": "policy-geopolitics-s-cluster-9d4b0c10e06bfeb7",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "What happens when intensified official controls are triggered at the EU border",
+      "deck": "Guidance on intensified official controls and imposed checks at the EU border. Understand what happens, who to contact and what you need to do.",
+      "whatChanged": [
+        "Guidance on intensified official controls and imposed checks at the EU border. Understand what happens, who to contact and what you need to do."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T15:30:05.000Z",
+      "updatedAt": "2026-09-30T15:30:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3c00788e2c700616",
+      "slug": "policy-geopolitics-s-cluster-3c00788e2c700616",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Foreign embassies in the UK",
+      "deck": "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission.",
+      "whatChanged": [
+        "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T13:53:30.000Z",
+      "updatedAt": "2026-09-30T13:53:30.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e92b576f2b261a9a",
+      "slug": "science-health-climate-s-cluster-e92b576f2b261a9a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bluetongue: how to spot and report it",
+      "deck": "The signs of bluetongue virus, how you must report it and what happens when you do.",
+      "whatChanged": [
+        "The signs of bluetongue virus, how you must report it and what happens when you do."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T16:03:37.000Z",
+      "updatedAt": "2026-09-30T16:03:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d8fda715fd532cd",
+      "slug": "science-health-climate-s-cluster-8d8fda715fd532cd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Using export health certificate (EHC) online: certifier guidance",
+      "deck": "Guidance for Official Veterinarians (OVs) and Food Competent Certifying Officers (FCCOs) on registering for EHC Online and certifying export health certificates.",
+      "whatChanged": [
+        "Guidance for Official Veterinarians (OVs) and Food Competent Certifying Officers (FCCOs) on registering for EHC Online and certifying export health certificates."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T14:16:15.000Z",
+      "updatedAt": "2026-09-30T14:24:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-731dfd01c6ab254a",
+      "slug": "science-health-climate-s-cluster-731dfd01c6ab254a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Accessibility statement for the export health certificates service",
+      "deck": "This statement explains how accessible the export health certificates online service is.",
+      "whatChanged": [
+        "This statement explains how accessible the export health certificates online service is."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T14:17:26.000Z",
+      "updatedAt": "2026-09-30T14:19:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-40a9cf5d6a857027",
+      "slug": "business-economy-s-cluster-40a9cf5d6a857027",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Road fuel prices: 30 August 2027",
+      "deck": "Weekly prices of unleaded petrol and diesel.",
+      "whatChanged": ["Weekly prices of unleaded petrol and diesel."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T13:24:00.000Z",
+      "updatedAt": "2026-09-30T13:35:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-21a303a5df82e725",
+      "slug": "business-economy-s-cluster-21a303a5df82e725",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "International treaty: UK/USA: Agreement on Trade in Wine [TS No.42/2026]",
+      "deck": "This treaty was presented to Parliament in September 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T13:00:09.000Z",
+      "updatedAt": "2026-09-30T13:00:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-68d2c8dee5d6fd4c",
+      "slug": "business-economy-s-cluster-68d2c8dee5d6fd4c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Dombrovskis at the European Forum for Family Business",
+      "deck": "European Commission Speech Brussels, 29 Sep 2026 Good evening, ladies and gentlemen. Thank you for the invitation to join you this evening. Family businesses hold a special place in the European economy. You r...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 29 Sep 2026 Good evening, ladies and gentlemen. Thank you for the invitation to join you this evening. Family businesses hold a special place in the European economy. You r..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T13:12:13.000Z",
+      "updatedAt": "2026-09-29T13:23:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-196d85382cb176c6",
+      "slug": "technology-ai-s-cluster-196d85382cb176c6",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "TechFirst Developing news story from verified sources",
+      "deck": "TechFirst is the government’s flagship tech skills programme opening pathways into the UK’s fast-growing tech sector, providing opportunities across all parts of the UK.",
+      "whatChanged": [
+        "TechFirst is the government’s flagship tech skills programme opening pathways into the UK’s fast-growing tech sector, providing opportunities across all parts of the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T09:24:34.000Z",
+      "updatedAt": "2026-09-30T09:24:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9e4a99c87602254",
+      "slug": "technology-ai-s-cluster-e9e4a99c87602254",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Three in four EU employees faced cyber threats at work, new Eurobarometer finds",
+      "deck": "European Commission Press release Brussels, 30 Sep 2026 Three in four employees in the European Union encountered suspicious emails, messages or links at work, according to a new Eurobarometer survey published by the European Commission...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 30 Sep 2026 Three in four employees in the European Union encountered suspicious emails, messages or links at work, according to a new Eurobarometer survey published by the European Commission today. The results were released as European Cybersecurity Month begins across all 27 Member States."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T08:48:53.000Z",
+      "updatedAt": "2026-09-30T08:48:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4609fa2961f5ef70",
+      "slug": "technology-ai-s-cluster-4609fa2961f5ef70",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Setting up your internet as an adult social care provider",
+      "deck": "Choose your broadband connection, manage your contract and wifi security, and get ready for the digital phone switchover.",
+      "whatChanged": [
+        "Choose your broadband connection, manage your contract and wifi security, and get ready for the digital phone switchover."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:46:49.000Z",
+      "updatedAt": "2026-09-29T15:48:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94c0e62d8ecfc758",
+      "slug": "culture-entertainment-s-cluster-94c0e62d8ecfc758",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib on Equality Data",
+      "deck": "European Commission Speech Brussels, 30 Sep 2026 Like many of you, I love music. Pop, jazz, rap, classical. You name it. One of my favourite artists is Rachmaninoff. Sometimes when I am listening to his music,...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 30 Sep 2026 Like many of you, I love music. Pop, jazz, rap, classical. You name it. One of my favourite artists is Rachmaninoff. Sometimes when I am listening to his music,..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T13:30:10.000Z",
+      "updatedAt": "2026-09-30T13:30:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b9c9a3351754c677",
+      "slug": "culture-entertainment-s-cluster-b9c9a3351754c677",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Level 5 Award in Understanding Digital Leadership in Adult Social Care qualification",
+      "deck": "Learn about who is eligible to apply and the benefits the qualification offers for adult social care providers.",
+      "whatChanged": [
+        "Learn about who is eligible to apply and the benefits the qualification offers for adult social care providers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:49:54.000Z",
+      "updatedAt": "2026-09-29T15:49:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94ba732d8eca9841",
+      "slug": "culture-entertainment-s-cluster-94ba732d8eca9841",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall gives an opening address at the 9th Water Festival",
+      "deck": "European Commission Speech Rome, 28 Sep 2026 Distinguished guests, colleagues, ladies and gentlemen, I am delighted to be part of the 9th edition of the Water Festival. Today is a celebration of water....",
+      "whatChanged": [
+        "European Commission Speech Rome, 28 Sep 2026 Distinguished guests, colleagues, ladies and gentlemen, I am delighted to be part of the 9th edition of the Water Festival. Today is a celebration of water...."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-28T17:28:09.000Z",
+      "updatedAt": "2026-09-28T17:28:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6886018f17a0ac5e",
+      "slug": "sports-s-cluster-6886018f17a0ac5e",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Form: Test for suspected tuberculosis (TB) in pet mammals (BA704)",
+      "deck": "Use this form to submit tissue samples (this includes biopsy samples) from pet, zoo or wild mammals to test for the bacteria that can cause TB.",
+      "whatChanged": [
+        "Use this form to submit tissue samples (this includes biopsy samples) from pet, zoo or wild mammals to test for the bacteria that can cause TB."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T11:07:33.000Z",
+      "updatedAt": "2026-09-30T11:07:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94b6f22d8ec78737",
+      "slug": "sports-s-cluster-94b6f22d8ec78737",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's keynote speech at the conference 'The Stress Test of the Nature Directives: Next Steps for Wildlife Management'",
+      "deck": "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T16:29:33.000Z",
+      "updatedAt": "2026-09-29T16:29:33.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Renewal Not Rupture: The Future of the UK-US Relationship",
+      "url": "https://www.gov.uk/government/speeches/renewal-not-rupture-the-future-of-the-uk-us-relationship--2",
+      "sourceType": "official",
+      "publishedAt": "2026-09-28T16:15:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Farmer Collaboration Fund",
+      "url": "https://www.gov.uk/government/publications/farmer-collaboration-fund",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T10:48:42.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Applications Open for Scheme to Slash Electricity Bills for Over 10,000 Manufacturers",
+      "url": "https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T08:30:06.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Support for families and babies rolled out to all family hubs",
+      "url": "https://www.gov.uk/government/news/support-for-families-and-babies-rolled-out-to-all-family-hubs",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T08:33:53.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. electricity use for electric vehicles increasing at a slower pace in 2026",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68224",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by President von der Leyen at the joint press conference with Albanian Prime Minister Rama",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2031",
+      "sourceType": "official",
+      "publishedAt": "2026-09-23T22:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Data use and productivity study: information for participants",
+      "url": "https://www.gov.uk/government/publications/data-use-and-productivity-study-information-for-participants",
+      "sourceType": "official",
+      "publishedAt": "2026-09-21T15:48:45.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
