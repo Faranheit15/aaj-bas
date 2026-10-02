@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-02",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-02T05:56:40.771Z",
+  "updatedAt": "2026-10-02T05:56:40.771Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-065222b4c3b1d28e",
+    "s-cluster-12a9c3e4232634f0",
+    "s-cluster-bee3fef38b991e59",
+    "s-cluster-5daf857f882ca793",
+    "s-cluster-94c7eb2d8ed5ee85",
+    "s-cluster-d533d88fffcc3567",
+    "s-cluster-13a329d146ccc036",
+    "s-cluster-7b8cabe4460dc3d8"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-acb005d6f812255e",
+      "s-cluster-a9a014711db46a19",
+      "s-cluster-b31380dc22c2b008"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-decdaecb11ecdb71",
+      "s-cluster-ff95b834eec0eb19",
+      "s-cluster-3c00788e2c700616"
+    ],
+    "business-economy": [
+      "s-cluster-94c7e82d8ed5e96c",
+      "s-cluster-70058fe460bbda0e",
+      "s-cluster-94c0e42d8ecfc3f2"
+    ],
+    "technology-ai": [
+      "s-cluster-a6298d3e1af182fe",
+      "s-cluster-196d85382cb176c6",
+      "s-cluster-e9e4a99c87602254"
+    ],
+    "culture-entertainment": [
+      "s-cluster-95ac28ca0d66409e",
+      "s-cluster-fb92629404af2d0d",
+      "s-cluster-b9c9a3351754c677"
+    ],
+    "sports": ["s-cluster-94b6f22d8ec78737"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-065222b4c3b1d28e",
+      "slug": "india-s-cluster-065222b4c3b1d28e",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Madagascar: information for victims of rape and sexual assault",
+      "deck": "Information to help British nationals make informed decisions following a rape or other form of sexual assault in Madagascar.",
+      "whatChanged": [
+        "Information to help British nationals make informed decisions following a rape or other form of sexual assault in Madagascar."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T05:28:13.000Z",
+      "updatedAt": "2026-10-02T05:28:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-12a9c3e4232634f0",
+      "slug": "india-s-cluster-12a9c3e4232634f0",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Decision: Coastal access: Section 52 notice for Lulworth Cove to Kimmeridge Bay",
+      "deck": "This notice sets out the Secretary of State’s decision to approve the proposals for improving coastal access between Lulworth Cove and Kimmeridge Bay.",
+      "whatChanged": [
+        "This notice sets out the Secretary of State’s decision to approve the proposals for improving coastal access between Lulworth Cove and Kimmeridge Bay."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T23:30:04.000Z",
+      "updatedAt": "2026-10-01T23:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bee3fef38b991e59",
+      "slug": "india-s-cluster-bee3fef38b991e59",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T13:31:31.000Z",
+      "updatedAt": "2026-10-01T16:48:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5daf857f882ca793",
+      "slug": "policy-geopolitics-s-cluster-5daf857f882ca793",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Nepal travel advice",
+      "deck": "FCDO travel advice for Nepal. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Nepal. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T12:09:36.000Z",
+      "updatedAt": "2026-10-01T17:05:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94c7eb2d8ed5ee85",
+      "slug": "policy-geopolitics-s-cluster-94c7eb2d8ed5ee85",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Opening Statement by Commissioner Kubilius at the European Parliament Security and Defence Committee hearings",
+      "deck": "European Commission Speech Brussels, 01 Oct 2026 It's a pleasure to come back to SEDE. I am grateful for our great partnership. First of all, I have sent you my annual implementation report. And I welcome yo...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 01 Oct 2026 It's a pleasure to come back to SEDE. I am grateful for our great partnership. First of all, I have sent you my annual implementation report. And I welcome yo..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T08:40:28.000Z",
+      "updatedAt": "2026-10-01T08:40:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d533d88fffcc3567",
+      "slug": "world-s-cluster-d533d88fffcc3567",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Statement by President von der Leyen at the joint press conference with Albanian Prime Minister Rama",
+      "deck": "European Commission Statement Tirana, 01 Oct 2026 Dear Edi, It is always a pleasure to see you and to be in Tirana. My experience is that Albanians carry Europe in their hearts. It's wonderful to be back. And y...",
+      "whatChanged": [
+        "European Commission Statement Tirana, 01 Oct 2026 Dear Edi, It is always a pleasure to see you and to be in Tirana. My experience is that Albanians carry Europe in their hearts. It's wonderful to be back. And y..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T15:11:34.000Z",
+      "updatedAt": "2026-10-01T14:23:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13a329d146ccc036",
+      "slug": "science-health-climate-s-cluster-13a329d146ccc036",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Final evaluation of BDUK legacy vouchers schemes",
+      "deck": "A report of the final phase of Building Digital UK legacy voucher schemes.",
+      "whatChanged": [
+        "A report of the final phase of Building Digital UK legacy voucher schemes."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T10:02:56.000Z",
+      "updatedAt": "2026-10-01T10:02:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b8cabe4460dc3d8",
+      "slug": "business-economy-s-cluster-7b8cabe4460dc3d8",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: Economic Estimates: Employment in the Digital Sector, January 2024 to December 2024",
+      "deck": "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individual...",
+      "whatChanged": [
+        "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individuals, and part-time and full-time employment."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T08:30:11.000Z",
+      "updatedAt": "2026-10-01T08:30:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-acb005d6f812255e",
+      "slug": "science-health-climate-s-cluster-acb005d6f812255e",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Bluetongue virus in Europe",
+      "deck": "Preliminary outbreak assessments, qualitative risk assessments and updated situation assessments for bluetongue virus in Europe.",
+      "whatChanged": [
+        "Preliminary outbreak assessments, qualitative risk assessments and updated situation assessments for bluetongue virus in Europe."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T16:46:39.000Z",
+      "updatedAt": "2026-10-01T16:46:39.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a9a014711db46a19",
+      "slug": "science-health-climate-s-cluster-a9a014711db46a19",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Fish health checks: before moving fish into inland waters",
+      "deck": "When fishery owners and suppliers of live fish must get a fish health check. How to arrange the check and how to report the results.",
+      "whatChanged": [
+        "When fishery owners and suppliers of live fish must get a fish health check. How to arrange the check and how to report the results."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T15:24:11.000Z",
+      "updatedAt": "2026-10-01T15:24:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b31380dc22c2b008",
+      "slug": "science-health-climate-s-cluster-b31380dc22c2b008",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in Iceland",
+      "deck": "Information about support for British nationals experiencing mental health difficulties in Iceland.",
+      "whatChanged": [
+        "Information about support for British nationals experiencing mental health difficulties in Iceland."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T09:29:55.000Z",
+      "updatedAt": "2026-10-01T09:29:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-decdaecb11ecdb71",
+      "slug": "policy-geopolitics-s-cluster-decdaecb11ecdb71",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Despite these vetoes of the Panel of Experts’ mandate, UN sanctions on Iranian proliferation remain fully in force: UK statement at the UN General Assembly",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN General Assembly meeting on the use of the veto.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN General Assembly meeting on the use of the veto."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T15:20:17.000Z",
+      "updatedAt": "2026-10-01T15:20:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ff95b834eec0eb19",
+      "slug": "policy-geopolitics-s-cluster-ff95b834eec0eb19",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Treaty Action Bulletin: September 2026",
+      "deck": "Updates on UK actions for multilateral treaties, publication and depositary work.",
+      "whatChanged": [
+        "Updates on UK actions for multilateral treaties, publication and depositary work."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T14:36:56.000Z",
+      "updatedAt": "2026-10-01T14:36:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3c00788e2c700616",
+      "slug": "policy-geopolitics-s-cluster-3c00788e2c700616",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Foreign embassies in the UK",
+      "deck": "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission.",
+      "whatChanged": [
+        "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T09:59:49.000Z",
+      "updatedAt": "2026-10-01T09:59:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94c7e82d8ed5e96c",
+      "slug": "business-economy-s-cluster-94c7e82d8ed5e96c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Piotr Serafin at the 8th Annual EC-EIB-ESM Capital Markets Seminar, 1 October 2026, Luxembourg",
+      "deck": "European Commission Speech Luxembourg, 01 Oct 2026 Ladies and gentlemen, I want to start by welcoming you on behalf of the European Commission to the second day of this Seminar. I am pleased to see that this Sem...",
+      "whatChanged": [
+        "European Commission Speech Luxembourg, 01 Oct 2026 Ladies and gentlemen, I want to start by welcoming you on behalf of the European Commission to the second day of this Seminar. I am pleased to see that this Sem..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T10:19:27.000Z",
+      "updatedAt": "2026-10-01T10:19:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-70058fe460bbda0e",
+      "slug": "business-economy-s-cluster-70058fe460bbda0e",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: Economic Estimates: Employment in the Digital Sector, January 2025 to December 2025",
+      "deck": "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individual...",
+      "whatChanged": [
+        "Official Statistics in Development estimating the number of filled jobs in the Digital Sector, derived from the Office for National Statistics (ONS) Annual Population Survey (APS). This includes both employed and self-employed individuals, and part-time and full-time employment."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T08:30:09.000Z",
+      "updatedAt": "2026-10-01T08:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94c0e42d8ecfc3f2",
+      "slug": "business-economy-s-cluster-94c0e42d8ecfc3f2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Dombrovskis at National Bank of Moldova annual conference",
+      "deck": "European Commission Speech Chișinău, 01 Oct 2026 Honourable Governor Dragu, distinguished guests, ladies and gentlemen. Good morning. It is a great pleasure to be with you today in Chișinău. I will begin by sa...",
+      "whatChanged": [
+        "European Commission Speech Chișinău, 01 Oct 2026 Honourable Governor Dragu, distinguished guests, ladies and gentlemen. Good morning. It is a great pleasure to be with you today in Chișinău. I will begin by sa..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T22:00:00.000Z",
+      "updatedAt": "2026-09-30T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a6298d3e1af182fe",
+      "slug": "technology-ai-s-cluster-a6298d3e1af182fe",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: Software Security Ambassadors Scheme",
+      "deck": "A scheme to champion secure software development and support a resilient cyber ecosystem.",
+      "whatChanged": [
+        "A scheme to champion secure software development and support a resilient cyber ecosystem."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T08:42:25.000Z",
+      "updatedAt": "2026-10-01T08:42:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-196d85382cb176c6",
+      "slug": "technology-ai-s-cluster-196d85382cb176c6",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "TechFirst Developing news story from verified sources",
+      "deck": "TechFirst is the government’s flagship tech skills programme opening pathways into the UK’s fast-growing tech sector, providing opportunities across all parts of the UK.",
+      "whatChanged": [
+        "TechFirst is the government’s flagship tech skills programme opening pathways into the UK’s fast-growing tech sector, providing opportunities across all parts of the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T09:24:34.000Z",
+      "updatedAt": "2026-09-30T09:24:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9e4a99c87602254",
+      "slug": "technology-ai-s-cluster-e9e4a99c87602254",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Three in four EU employees faced cyber threats at work, new Eurobarometer finds",
+      "deck": "European Commission Press release Brussels, 30 Sep 2026 Three in four employees in the European Union encountered suspicious emails, messages or links at work, according to a new Eurobarometer survey published by the European Commission...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 30 Sep 2026 Three in four employees in the European Union encountered suspicious emails, messages or links at work, according to a new Eurobarometer survey published by the European Commission today. The results were released as European Cybersecurity Month begins across all 27 Member States."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T08:48:53.000Z",
+      "updatedAt": "2026-09-30T08:48:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-95ac28ca0d66409e",
+      "slug": "culture-entertainment-s-cluster-95ac28ca0d66409e",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib on Equality Data",
+      "deck": "European Commission Speech Brussels, 30 Sep 2026 Like many of you, I love music. Pop, jazz, rap, classical. You name it. One of my favourite artists is Rachmaninoff. Sometimes when I am listening to his music,...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 30 Sep 2026 Like many of you, I love music. Pop, jazz, rap, classical. You name it. One of my favourite artists is Rachmaninoff. Sometimes when I am listening to his music,..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T13:30:10.000Z",
+      "updatedAt": "2026-10-01T07:46:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb92629404af2d0d",
+      "slug": "culture-entertainment-s-cluster-fb92629404af2d0d",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission decides to refer Belgium to the Court of Justice of the European Union over recognition of investor-State arbitration awards that violate the prin...",
+      "deck": "European Commission Press release Brussels, 01 Oct 2026 Today, the European Commission decided to refer Belgium (INFR(2025)2199) to the Court of Justice of the European Union for failing to comply with its obligation under EU law not to...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 01 Oct 2026 Today, the European Commission decided to refer Belgium (INFR(2025)2199) to the Court of Justice of the European Union for failing to comply with its obligation under EU law not to recognise investor-State arbitration awards that violate the principle of autonomy of EU law."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T22:00:00.000Z",
+      "updatedAt": "2026-09-30T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b9c9a3351754c677",
+      "slug": "culture-entertainment-s-cluster-b9c9a3351754c677",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Level 5 Award in Understanding Digital Leadership in Adult Social Care qualification",
+      "deck": "Learn about who is eligible to apply and the benefits the qualification offers for adult social care providers.",
+      "whatChanged": [
+        "Learn about who is eligible to apply and the benefits the qualification offers for adult social care providers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T15:49:54.000Z",
+      "updatedAt": "2026-09-29T15:49:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94b6f22d8ec78737",
+      "slug": "sports-s-cluster-94b6f22d8ec78737",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's keynote speech at the conference 'The Stress Test of the Nature Directives: Next Steps for Wildlife Management'",
+      "deck": "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T16:29:33.000Z",
+      "updatedAt": "2026-09-29T16:29:33.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Madagascar: information for victims of rape and sexual assault",
+      "url": "https://www.gov.uk/guidance/madagascar-information-for-victims-of-rape-and-sexual-assault",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T13:25:18.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Decision: Coastal access: Section 52 notice for Lulworth Cove to Kimmeridge Bay",
+      "url": "https://www.gov.uk/government/publications/coastal-access-section-52-notice-for-lulworth-cove-to-kimmeridge-bay",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T23:01:09.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by President von der Leyen with Prime Minister of Montenegro Spajić",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2049",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T09:00:26.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Final evaluation of BDUK legacy vouchers schemes",
+      "url": "https://www.gov.uk/government/publications/final-evaluation-of-bduk-legacy-vouchers-schemes",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T15:00:06.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Safeguarding children affected by a parent's alcohol or drug use",
+      "url": "https://www.gov.uk/government/publications/safeguarding-children-affected-by-a-parents-alcohol-or-drug-use",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T15:48:40.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
