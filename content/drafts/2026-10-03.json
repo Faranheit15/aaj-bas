@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-03T05:31:32.932Z",
+  "updatedAt": "2026-10-03T05:31:32.932Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-89b12529601c9d8c",
+    "s-cluster-2ee3308980106c65",
+    "s-cluster-cfb2558452a40883",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-9dc3e9d29bc1d373",
+    "s-cluster-dcc1e1782c3cce1d",
+    "s-cluster-ecda4eccf718e8b0",
+    "s-cluster-b0350c9da3968703"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-3843ef88aab1db35",
+      "s-cluster-d15c98ccd161f2b5",
+      "s-cluster-4334a247725d03ca"
+    ],
+    "business-economy": [
+      "s-cluster-77b7cdbed2d2e495",
+      "s-cluster-9dbd7cd29bbcae8e",
+      "s-cluster-94c7e82d8ed5e96c"
+    ],
+    "technology-ai": [
+      "s-cluster-f591853791f5913f",
+      "s-cluster-a6298d3e1af182fe",
+      "s-cluster-196d85382cb176c6"
+    ],
+    "science-health-climate": [
+      "s-cluster-2be405bdb78065a5",
+      "s-cluster-731900ca31b0e65e",
+      "s-cluster-d382fa629f78eb8a"
+    ],
+    "sports": ["s-cluster-6886018f17a0ac5e", "s-cluster-94b6f22d8ec78737"],
+    "culture-entertainment": [
+      "s-cluster-95ac28ca0d66409e",
+      "s-cluster-fb92629404af2d0d"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-89b12529601c9d8c",
+      "slug": "india-s-cluster-89b12529601c9d8c",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "BBNJ forms and downloadable resources",
+      "deck": "Use these forms and downloadable documents to provide information required under the Biodiversity Beyond National Jurisdiction Act 2026.",
+      "whatChanged": [
+        "Use these forms and downloadable documents to provide information required under the Biodiversity Beyond National Jurisdiction Act 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-02T11:17:09.000Z",
+      "updatedAt": "2026-10-02T11:17:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2ee3308980106c65",
+      "slug": "business-economy-s-cluster-2ee3308980106c65",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "G7 Leaders' Statement on global energy security and market stability",
+      "deck": "European Commission Statement Brussels, 02 Oct 2026 Today, we, the Leaders of the G7, convened a virtual meeting to address the deepening challenges to our energy security. Facing unprecedented volatility in oil ...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 02 Oct 2026 Today, we, the Leaders of the G7, convened a virtual meeting to address the deepening challenges to our energy security. Facing unprecedented volatility in oil ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner", "fcdo"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-02T14:23:24.000Z",
+      "updatedAt": "2026-10-02T14:28:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-cfb2558452a40883",
+      "slug": "science-health-climate-s-cluster-cfb2558452a40883",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Air Pollution Awareness Coalition (APAC)",
+      "deck": "The Air Pollution Awareness Coalition (APAC) is a cross-sector coalition to improve public understanding of air pollution and support action to reduce harm.",
+      "whatChanged": [
+        "The Air Pollution Awareness Coalition (APAC) is a cross-sector coalition to improve public understanding of air pollution and support action to reduce harm."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-dhsc"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-02T12:47:05.000Z",
+      "updatedAt": "2026-10-02T12:47:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T18:28:49.000Z",
+      "updatedAt": "2026-10-02T18:28:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9dc3e9d29bc1d373",
+      "slug": "india-s-cluster-9dc3e9d29bc1d373",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "U.S. natural gas production reached a record high in July 2026",
+      "deck": "U.S. natural gas production hit an all-time high in July 2026, driven primarily by increased output in the Permian Basin, according to our latest Natural Gas Monthly.",
+      "whatChanged": [
+        "U.S. natural gas production hit an all-time high in July 2026, driven primarily by increased output in the Permian Basin, according to our latest Natural Gas Monthly."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:00:00.000Z",
+      "updatedAt": "2026-10-02T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dcc1e1782c3cce1d",
+      "slug": "policy-geopolitics-s-cluster-dcc1e1782c3cce1d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Tanzania travel advice",
+      "deck": "FCDO travel advice for Tanzania. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Tanzania. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T15:28:23.000Z",
+      "updatedAt": "2026-10-02T15:26:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ecda4eccf718e8b0",
+      "slug": "science-health-climate-s-cluster-ecda4eccf718e8b0",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Cardiovascular disease modern service framework",
+      "deck": "Sets out the government’s 10-year strategic vision for the health and care system to reduce premature deaths from heart disease and stroke in England.",
+      "whatChanged": [
+        "Sets out the government’s 10-year strategic vision for the health and care system to reduce premature deaths from heart disease and stroke in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:30:04.000Z",
+      "updatedAt": "2026-10-02T14:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b0350c9da3968703",
+      "slug": "world-s-cluster-b0350c9da3968703",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Statement by Commissioner Lahbib on the siege of Oleshky, Ukraine",
+      "deck": "European Commission Statement Brussels, 02 Oct 2026 What is happening in Oleshky, Ukraine, is appalling. Civilians are trapped under siege by Russian forces without access to food, medicine, clean water and basic...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 02 Oct 2026 What is happening in Oleshky, Ukraine, is appalling. Civilians are trapped under siege by Russian forces without access to food, medicine, clean water and basic..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T15:38:58.000Z",
+      "updatedAt": "2026-10-02T15:38:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3843ef88aab1db35",
+      "slug": "policy-geopolitics-s-cluster-3843ef88aab1db35",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Other live animals - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing other live animals or genetic material to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing other live animals or genetic material to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:20:25.000Z",
+      "updatedAt": "2026-10-02T14:20:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T09:00:13.000Z",
+      "updatedAt": "2026-10-02T09:00:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T08:59:59.000Z",
+      "updatedAt": "2026-10-02T08:59:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-77b7cdbed2d2e495",
+      "slug": "business-economy-s-cluster-77b7cdbed2d2e495",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Farm Business Income by type of farm in England 2025/26",
+      "deck": "This publication gives annual statistics about farm business income in England. This represents the financial return to all unpaid labour on their capital invested in the farm business, including land and buildings. It is designed to com...",
+      "whatChanged": [
+        "This publication gives annual statistics about farm business income in England. This represents the financial return to all unpaid labour on their capital invested in the farm business, including land and buildings. It is designed to compare performance across different types of farming."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T12:48:37.000Z",
+      "updatedAt": "2026-10-02T13:33:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9dbd7cd29bbcae8e",
+      "slug": "business-economy-s-cluster-9dbd7cd29bbcae8e",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "U.S. exports of propane reached records in the first half of 2026",
+      "deck": "U.S. propane exports increased to 2 million barrels per day (b/d) in the first half of 2026, 11% more than during the same period in 2025. Increased U.S. propane production and changing trade flows, particularly increased exports to Indi...",
+      "whatChanged": [
+        "U.S. propane exports increased to 2 million barrels per day (b/d) in the first half of 2026, 11% more than during the same period in 2025. Increased U.S. propane production and changing trade flows, particularly increased exports to India and other countries in South Asia, drove propane exports to a record high of 2.1 million (b/d) in April 2026. Since then, total propane exports, including exports to India, have continued at levels well above the five-year average."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T14:00:00.000Z",
+      "updatedAt": "2026-10-01T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94c7e82d8ed5e96c",
+      "slug": "business-economy-s-cluster-94c7e82d8ed5e96c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Piotr Serafin at the 8th Annual EC-EIB-ESM Capital Markets Seminar, 1 October 2026, Luxembourg",
+      "deck": "European Commission Speech Luxembourg, 01 Oct 2026 Ladies and gentlemen, I want to start by welcoming you on behalf of the European Commission to the second day of this Seminar. I am pleased to see that this Sem...",
+      "whatChanged": [
+        "European Commission Speech Luxembourg, 01 Oct 2026 Ladies and gentlemen, I want to start by welcoming you on behalf of the European Commission to the second day of this Seminar. I am pleased to see that this Sem..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T10:19:27.000Z",
+      "updatedAt": "2026-10-01T10:19:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:21:48.000Z",
+      "updatedAt": "2026-10-02T14:21:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a6298d3e1af182fe",
+      "slug": "technology-ai-s-cluster-a6298d3e1af182fe",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: Software Security Ambassadors Scheme",
+      "deck": "A scheme to champion secure software development and support a resilient cyber ecosystem.",
+      "whatChanged": [
+        "A scheme to champion secure software development and support a resilient cyber ecosystem."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T08:42:25.000Z",
+      "updatedAt": "2026-10-01T08:42:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-196d85382cb176c6",
+      "slug": "technology-ai-s-cluster-196d85382cb176c6",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "TechFirst Developing news story from verified sources",
+      "deck": "TechFirst is the government’s flagship tech skills programme opening pathways into the UK’s fast-growing tech sector, providing opportunities across all parts of the UK.",
+      "whatChanged": [
+        "TechFirst is the government’s flagship tech skills programme opening pathways into the UK’s fast-growing tech sector, providing opportunities across all parts of the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T09:24:34.000Z",
+      "updatedAt": "2026-09-30T09:24:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2be405bdb78065a5",
+      "slug": "science-health-climate-s-cluster-2be405bdb78065a5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Providing healthcare public health advice to integrated care boards",
+      "deck": "This guidance explains how local authorities should give healthcare public health advice to integrated care boards.",
+      "whatChanged": [
+        "This guidance explains how local authorities should give healthcare public health advice to integrated care boards."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T10:00:00.000Z",
+      "updatedAt": "2026-10-02T10:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-731900ca31b0e65e",
+      "slug": "science-health-climate-s-cluster-731900ca31b0e65e",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Public health grants to local authorities: 2026 to 2027",
+      "deck": "The public health grant allocations and monetary conditions for local authorities to improve health in local populations.",
+      "whatChanged": [
+        "The public health grant allocations and monetary conditions for local authorities to improve health in local populations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T10:00:00.000Z",
+      "updatedAt": "2026-10-02T10:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d382fa629f78eb8a",
+      "slug": "science-health-climate-s-cluster-d382fa629f78eb8a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Nutrient analysis of beef",
+      "deck": "An analysis of fresh beef cuts bought in the UK in 2024, to measure their macronutrient, mineral and vitamin content.",
+      "whatChanged": [
+        "An analysis of fresh beef cuts bought in the UK in 2024, to measure their macronutrient, mineral and vitamin content."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T09:00:04.000Z",
+      "updatedAt": "2026-10-02T09:00:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6886018f17a0ac5e",
+      "slug": "sports-s-cluster-6886018f17a0ac5e",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Form: Test for suspected tuberculosis (TB) in pet mammals (BA704)",
+      "deck": "Use this form to submit tissue samples (this includes biopsy samples) from pet, zoo or wild mammals to test for the bacteria that can cause TB.",
+      "whatChanged": [
+        "Use this form to submit tissue samples (this includes biopsy samples) from pet, zoo or wild mammals to test for the bacteria that can cause TB."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:17:01.000Z",
+      "updatedAt": "2026-10-02T14:17:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94b6f22d8ec78737",
+      "slug": "sports-s-cluster-94b6f22d8ec78737",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's keynote speech at the conference 'The Stress Test of the Nature Directives: Next Steps for Wildlife Management'",
+      "deck": "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T16:29:33.000Z",
+      "updatedAt": "2026-09-29T16:29:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-95ac28ca0d66409e",
+      "slug": "culture-entertainment-s-cluster-95ac28ca0d66409e",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib on Equality Data",
+      "deck": "European Commission Speech Brussels, 30 Sep 2026 Like many of you, I love music. Pop, jazz, rap, classical. You name it. One of my favourite artists is Rachmaninoff. Sometimes when I am listening to his music,...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 30 Sep 2026 Like many of you, I love music. Pop, jazz, rap, classical. You name it. One of my favourite artists is Rachmaninoff. Sometimes when I am listening to his music,..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T13:30:10.000Z",
+      "updatedAt": "2026-10-01T07:46:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb92629404af2d0d",
+      "slug": "culture-entertainment-s-cluster-fb92629404af2d0d",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission decides to refer Belgium to the Court of Justice of the European Union over recognition of investor-State arbitration awards that violate the prin...",
+      "deck": "European Commission Press release Brussels, 01 Oct 2026 Today, the European Commission decided to refer Belgium (INFR(2025)2199) to the Court of Justice of the European Union for failing to comply with its obligation under EU law not to...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 01 Oct 2026 Today, the European Commission decided to refer Belgium (INFR(2025)2199) to the Court of Justice of the European Union for failing to comply with its obligation under EU law not to recognise investor-State arbitration awards that violate the principle of autonomy of EU law."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T22:00:00.000Z",
+      "updatedAt": "2026-09-30T22:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "UN Human Rights Council 63: UK Statement for the Interactive Dialogue with the High Commissioner on the oral update on Ukraine",
+      "url": "https://www.gov.uk/government/speeches/un-human-rights-council-63-uk-statement-for-the-interactive-dialogue-with-the-high-commissioner-on-the-oral-update-on-ukraine",
+      "sourceType": "official",
+      "publishedAt": "2026-10-01T15:28:23.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-10-02T09:30:13.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by Commissioner Lahbib on the siege of Oleshky, Ukraine",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2063",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T12:31:04.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Cardiovascular disease modern service framework",
+      "url": "https://www.gov.uk/government/publications/cardiovascular-disease-modern-service-framework",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T14:22:49.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. natural gas production reached a record high in July 2026",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68225",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: IT Reuse for Good Charter",
+      "url": "https://www.gov.uk/government/publications/it-reuse-for-good-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T15:00:06.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
