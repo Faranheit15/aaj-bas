@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-05",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-05T05:59:21.762Z",
+  "updatedAt": "2026-10-05T05:59:21.762Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-78347d63efd87b8a",
+    "s-cluster-2ee3308980106c65",
+    "s-cluster-cfb2558452a40883",
+    "s-cluster-bee3fef38b991e59",
+    "s-cluster-2b39bbce7a493cd8",
+    "s-cluster-3170de2ad55a674e",
+    "s-cluster-94c7eb2d8ed5ee85",
+    "s-cluster-dcc1e1782c3cce1d"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-3e83961b7691735b",
+      "s-cluster-3843ef88aab1db35",
+      "s-cluster-d15c98ccd161f2b5"
+    ],
+    "science-health-climate": [
+      "s-cluster-d37f9b2aa085b5fa",
+      "s-cluster-ecda4eccf718e8b0",
+      "s-cluster-2be405bdb78065a5"
+    ],
+    "business-economy": [
+      "s-cluster-77b7cdbed2d2e495",
+      "s-cluster-13e943c9c1143926",
+      "s-cluster-13f744c9c1207835"
+    ],
+    "technology-ai": [
+      "s-cluster-f591853791f5913f",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-196d85382cb176c6"
+    ],
+    "sports": ["s-cluster-6886018f17a0ac5e", "s-cluster-94b6f22d8ec78737"],
+    "culture-entertainment": [
+      "s-cluster-95ac28ca0d66409e",
+      "s-cluster-fb92629404af2d0d"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-78347d63efd87b8a",
+      "slug": "science-health-climate-s-cluster-78347d63efd87b8a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Government joins forces with Breast Cancer Now",
+      "deck": "Partnership to help women spot symptoms of breast cancer earlier",
+      "whatChanged": [
+        "Partnership to help women spot symptoms of breast cancer earlier"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-04T23:01:12.000Z",
+      "updatedAt": "2026-10-04T23:01:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2ee3308980106c65",
+      "slug": "business-economy-s-cluster-2ee3308980106c65",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "G7 Leaders' Statement on global energy security and market stability",
+      "deck": "European Commission Statement Brussels, 02 Oct 2026 Today, we, the Leaders of the G7, convened a virtual meeting to address the deepening challenges to our energy security. Facing unprecedented volatility in oil ...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 02 Oct 2026 Today, we, the Leaders of the G7, convened a virtual meeting to address the deepening challenges to our energy security. Facing unprecedented volatility in oil ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner", "fcdo"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-02T14:23:24.000Z",
+      "updatedAt": "2026-10-02T14:28:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-cfb2558452a40883",
+      "slug": "science-health-climate-s-cluster-cfb2558452a40883",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Air Pollution Awareness Coalition (APAC)",
+      "deck": "The Air Pollution Awareness Coalition (APAC) is a cross-sector coalition to improve public understanding of air pollution and support action to reduce harm.",
+      "whatChanged": [
+        "The Air Pollution Awareness Coalition (APAC) is a cross-sector coalition to improve public understanding of air pollution and support action to reduce harm."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-dhsc"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-02T12:47:05.000Z",
+      "updatedAt": "2026-10-02T12:47:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bee3fef38b991e59",
+      "slug": "india-s-cluster-bee3fef38b991e59",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-03T14:45:23.000Z",
+      "updatedAt": "2026-10-03T15:54:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2b39bbce7a493cd8",
+      "slug": "india-s-cluster-2b39bbce7a493cd8",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "What India’s ‘Cockroach’ protests reveal about digital authoritarianism",
+      "deck": "“Democratic freedoms depend not only on protection from direct state violence but on citizens being able to organise without assuming their participation is permanently recorded.”",
+      "whatChanged": [
+        "“Democratic freedoms depend not only on protection from direct state violence but on citizens being able to organise without assuming their participation is permanently recorded.”"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T08:33:09.000Z",
+      "updatedAt": "2026-09-15T08:33:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3170de2ad55a674e",
+      "slug": "india-s-cluster-3170de2ad55a674e",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "Beyond the passport: The legal ambiguity of Indian citizenship",
+      "deck": "A recent government statement sparked controversy by clarifying that passports are only travel documents. This article explores the legal complexities of proving citizenship in India and its implications for rights.",
+      "whatChanged": [
+        "A recent government statement sparked controversy by clarifying that passports are only travel documents. This article explores the legal complexities of proving citizenship in India and its implications for rights."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-13T06:05:37.000Z",
+      "updatedAt": "2026-07-13T06:05:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94c7eb2d8ed5ee85",
+      "slug": "policy-geopolitics-s-cluster-94c7eb2d8ed5ee85",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Opening Statement by Commissioner Kubilius at the European Parliament Security and Defence Committee hearings",
+      "deck": "European Commission Speech Brussels, 01 Oct 2026 It's a pleasure to come back to SEDE. I am grateful for our great partnership. First of all, I have sent you my annual implementation report. And I welcome yo...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 01 Oct 2026 It's a pleasure to come back to SEDE. I am grateful for our great partnership. First of all, I have sent you my annual implementation report. And I welcome yo..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T08:40:28.000Z",
+      "updatedAt": "2026-10-01T08:40:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dcc1e1782c3cce1d",
+      "slug": "policy-geopolitics-s-cluster-dcc1e1782c3cce1d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Tanzania travel advice",
+      "deck": "FCDO travel advice for Tanzania. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Tanzania. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-01T15:28:23.000Z",
+      "updatedAt": "2026-10-02T15:26:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3843ef88aab1db35",
+      "slug": "policy-geopolitics-s-cluster-3843ef88aab1db35",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Other live animals - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing other live animals or genetic material to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing other live animals or genetic material to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:20:25.000Z",
+      "updatedAt": "2026-10-02T14:20:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T09:00:13.000Z",
+      "updatedAt": "2026-10-02T09:00:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ecda4eccf718e8b0",
+      "slug": "science-health-climate-s-cluster-ecda4eccf718e8b0",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Cardiovascular disease modern service framework",
+      "deck": "Sets out the government’s 10-year strategic vision for the health and care system to reduce premature deaths from heart disease and stroke in England.",
+      "whatChanged": [
+        "Sets out the government’s 10-year strategic vision for the health and care system to reduce premature deaths from heart disease and stroke in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:30:04.000Z",
+      "updatedAt": "2026-10-02T14:30:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2be405bdb78065a5",
+      "slug": "science-health-climate-s-cluster-2be405bdb78065a5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Providing healthcare public health advice to integrated care boards",
+      "deck": "This guidance explains how local authorities should give healthcare public health advice to integrated care boards.",
+      "whatChanged": [
+        "This guidance explains how local authorities should give healthcare public health advice to integrated care boards."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T10:00:00.000Z",
+      "updatedAt": "2026-10-02T10:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-77b7cdbed2d2e495",
+      "slug": "business-economy-s-cluster-77b7cdbed2d2e495",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Farm Business Income by type of farm in England 2025/26",
+      "deck": "This publication gives annual statistics about farm business income in England. This represents the financial return to all unpaid labour on their capital invested in the farm business, including land and buildings. It is designed to com...",
+      "whatChanged": [
+        "This publication gives annual statistics about farm business income in England. This represents the financial return to all unpaid labour on their capital invested in the farm business, including land and buildings. It is designed to compare performance across different types of farming."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T12:48:37.000Z",
+      "updatedAt": "2026-10-02T13:33:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13e943c9c1143926",
+      "slug": "business-economy-s-cluster-13e943c9c1143926",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Waterborne shipments from the U.S. Gulf Coast increased in April and May",
+      "deck": "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel...",
+      "whatChanged": [
+        "Waterborne shipments of crude oil and petroleum products from the U.S. Gulf Coast (PADD 3) to the West Coast (PADD 5) more than quadrupled year-on-year in April and May following a waiver that permitted a broader group of ships to travel between U.S. ports. Shipments from the U.S. Gulf Coast to the East Coast (PADD 1) also increased."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-17T14:00:00.000Z",
+      "updatedAt": "2026-08-17T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13f744c9c1207835",
+      "slug": "business-economy-s-cluster-13f744c9c1207835",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Battery storage capacity averaged 70% growth over the last three years",
+      "deck": "Utility-scale battery storage capacity in the United States increased significantly during the last three years, with an annual average growth rate of 70%. By the end of 2025, the U.S. power system had operational battery storage capacit...",
+      "whatChanged": [
+        "Utility-scale battery storage capacity in the United States increased significantly during the last three years, with an annual average growth rate of 70%. By the end of 2025, the U.S. power system had operational battery storage capacity of 43.6 gigawatts (GW). During the first six months of 2026, operators added another 8.3 GW of battery storage capacity, reaching nearly 52 GW of nameplate battery storage capacity, based on our latest Preliminary Monthly Electric Generator Inventory."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-08-07T14:00:00.000Z",
+      "updatedAt": "2026-08-07T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:21:48.000Z",
+      "updatedAt": "2026-10-02T14:21:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-196d85382cb176c6",
+      "slug": "technology-ai-s-cluster-196d85382cb176c6",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "TechFirst Developing news story from verified sources",
+      "deck": "TechFirst is the government’s flagship tech skills programme opening pathways into the UK’s fast-growing tech sector, providing opportunities across all parts of the UK.",
+      "whatChanged": [
+        "TechFirst is the government’s flagship tech skills programme opening pathways into the UK’s fast-growing tech sector, providing opportunities across all parts of the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T09:24:34.000Z",
+      "updatedAt": "2026-09-30T09:24:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6886018f17a0ac5e",
+      "slug": "sports-s-cluster-6886018f17a0ac5e",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Form: Test for suspected tuberculosis (TB) in pet mammals (BA704)",
+      "deck": "Use this form to submit tissue samples (this includes biopsy samples) from pet, zoo or wild mammals to test for the bacteria that can cause TB.",
+      "whatChanged": [
+        "Use this form to submit tissue samples (this includes biopsy samples) from pet, zoo or wild mammals to test for the bacteria that can cause TB."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-02T14:17:01.000Z",
+      "updatedAt": "2026-10-02T14:17:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94b6f22d8ec78737",
+      "slug": "sports-s-cluster-94b6f22d8ec78737",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's keynote speech at the conference 'The Stress Test of the Nature Directives: Next Steps for Wildlife Management'",
+      "deck": "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 29 Sep 2026 Dear Juan, Honourable Members, Representatives of FACE and the European Landowners' Organisation, Ladies and gentlemen, We have just experienced a scorchi..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-29T16:29:33.000Z",
+      "updatedAt": "2026-09-29T16:29:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-95ac28ca0d66409e",
+      "slug": "culture-entertainment-s-cluster-95ac28ca0d66409e",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib on Equality Data",
+      "deck": "European Commission Speech Brussels, 30 Sep 2026 Like many of you, I love music. Pop, jazz, rap, classical. You name it. One of my favourite artists is Rachmaninoff. Sometimes when I am listening to his music,...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 30 Sep 2026 Like many of you, I love music. Pop, jazz, rap, classical. You name it. One of my favourite artists is Rachmaninoff. Sometimes when I am listening to his music,..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T13:30:10.000Z",
+      "updatedAt": "2026-10-01T07:46:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb92629404af2d0d",
+      "slug": "culture-entertainment-s-cluster-fb92629404af2d0d",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission decides to refer Belgium to the Court of Justice of the European Union over recognition of investor-State arbitration awards that violate the prin...",
+      "deck": "European Commission Press release Brussels, 01 Oct 2026 Today, the European Commission decided to refer Belgium (INFR(2025)2199) to the Court of Justice of the European Union for failing to comply with its obligation under EU law not to...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 01 Oct 2026 Today, the European Commission decided to refer Belgium (INFR(2025)2199) to the Court of Justice of the European Union for failing to comply with its obligation under EU law not to recognise investor-State arbitration awards that violate the principle of autonomy of EU law."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T22:00:00.000Z",
+      "updatedAt": "2026-09-30T22:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Government joins forces with Breast Cancer Now",
+      "url": "https://www.gov.uk/government/news/government-joins-forces-with-breast-cancer-now",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T15:38:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by Commissioner Lahbib on the siege of Oleshky, Ukraine",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2063",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T12:31:04.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "UN Human Rights Council 63: UK Statement for the Interactive Dialogue with the High Commissioner on the oral update on Ukraine",
+      "url": "https://www.gov.uk/government/speeches/un-human-rights-council-63-uk-statement-for-the-interactive-dialogue-with-the-high-commissioner-on-the-oral-update-on-ukraine",
+      "sourceType": "official",
+      "publishedAt": "2026-10-01T15:28:23.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bird flu (avian influenza): latest situation in England",
+      "url": "https://www.gov.uk/guidance/bird-flu-avian-influenza-latest-situation-in-england",
+      "sourceType": "official",
+      "publishedAt": "2026-10-02T12:47:05.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Guest Contributor",
+        "Alok Prasanna Kumar",
+        "Zulker Naeen",
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. natural gas production reached a record high in July 2026",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68225",
+      "sourceType": "research",
+      "publishedAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: IT Reuse for Good Charter",
+      "url": "https://www.gov.uk/government/publications/it-reuse-for-good-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-09-24T15:00:06.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
