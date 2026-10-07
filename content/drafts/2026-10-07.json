@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-07",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-07T06:14:41.083Z",
+  "updatedAt": "2026-10-07T06:14:41.083Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-c56f611cd6c4a2d4",
+    "s-cluster-61fbc750fee8185a",
+    "s-cluster-ff0fa59cb61b8524",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-d29f5227c501c227",
+    "s-cluster-616a38339b5de780",
+    "s-cluster-ad5e6e6ae16bc541",
+    "s-cluster-949eea2d8eb2e7be"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-56453cefec69946e",
+      "s-cluster-3216e6a447ec1516",
+      "s-cluster-e2fc16a2547351d1"
+    ],
+    "business-economy": [
+      "s-cluster-32cdd90b35bee1ac",
+      "s-cluster-b408c402c5ce0dc8",
+      "s-cluster-ba29b7e84f7b31af"
+    ],
+    "science-health-climate": [
+      "s-cluster-936c35d6c266602d",
+      "s-cluster-3b4723ddcb55298b",
+      "s-cluster-fd1ea55dbb06fdea"
+    ],
+    "technology-ai": [
+      "s-cluster-01ccd863d50d749a",
+      "s-cluster-e9d7159c87549c7c",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "culture-entertainment": ["s-cluster-fb92629404af2d0d"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-c56f611cd6c4a2d4",
+      "slug": "science-health-climate-s-cluster-c56f611cd6c4a2d4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in Singapore",
+      "deck": "Information about support for British nationals experiencing mental health difficulties in Singapore.",
+      "whatChanged": [
+        "Information about support for British nationals experiencing mental health difficulties in Singapore."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T02:46:32.000Z",
+      "updatedAt": "2026-10-07T02:46:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-61fbc750fee8185a",
+      "slug": "science-health-climate-s-cluster-61fbc750fee8185a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK International Climate Finance results 2026",
+      "deck": "This publication highlights the main achievements of UK International Climate Finance from 2011 to 2026. It summarises results from 15 key measures used to track progress in UK international development programmes that have climate chang...",
+      "whatChanged": [
+        "This publication highlights the main achievements of UK International Climate Finance from 2011 to 2026. It summarises results from 15 key measures used to track progress in UK international development programmes that have climate change adaptation or mitigation as an objective."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-05T14:21:40.000Z",
+      "updatedAt": "2026-10-06T12:35:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ff0fa59cb61b8524",
+      "slug": "india-s-cluster-ff0fa59cb61b8524",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Correspondence: Animal Sentience Committee letter regarding the National Plan for Homelessness strategy",
+      "deck": "Letter to the Ministry of Housing, Communities and Local Government regarding the ‘National Plan to End Homelessness’ strategy.",
+      "whatChanged": [
+        "Letter to the Ministry of Housing, Communities and Local Government regarding the ‘National Plan to End Homelessness’ strategy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T17:33:35.000Z",
+      "updatedAt": "2026-10-06T17:33:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T16:09:39.000Z",
+      "updatedAt": "2026-10-06T16:09:39.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d29f5227c501c227",
+      "slug": "india-s-cluster-d29f5227c501c227",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Road fuel sales, deliveries and stock levels: 27 September 2026",
+      "deck": "Official statistics in development on average road fuel sales, deliveries and stock levels at sampled filling stations in the United Kingdom from 27 January 2020 to 27 September 2026.",
+      "whatChanged": [
+        "Official statistics in development on average road fuel sales, deliveries and stock levels at sampled filling stations in the United Kingdom from 27 January 2020 to 27 September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T15:50:00.000Z",
+      "updatedAt": "2026-10-06T15:50:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T16:32:16.000Z",
+      "updatedAt": "2026-10-06T16:32:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ad5e6e6ae16bc541",
+      "slug": "policy-geopolitics-s-cluster-ad5e6e6ae16bc541",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Daily News 05 / 10 / 2026",
+      "deck": "European Commission Daily news Brussels, 05 Oct 2026 Commission greenlights Finland's fifth payment request for €229.2 million under NextGenerationEU Today, the European Commission positively assessed Finland's f...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 05 Oct 2026 Commission greenlights Finland's fifth payment request for €229.2 million under NextGenerationEU Today, the European Commission positively assessed Finland's f..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-05T09:26:54.000Z",
+      "updatedAt": "2026-10-06T13:26:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-949eea2d8eb2e7be",
+      "slug": "world-s-cluster-949eea2d8eb2e7be",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Video message by President von der Leyen to mark 25th Anniversary of IFOAM Organics Europe",
+      "deck": "European Commission Speech Brussels, 06 Oct 2026 President Drexler, Dear Dora, Ladies and gentlemen, Congratulations on your 25th anniversary! IFOAM Organics Europe and all its members have so much to be proud...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 06 Oct 2026 President Drexler, Dear Dora, Ladies and gentlemen, Congratulations on your 25th anniversary! IFOAM Organics Europe and all its members have so much to be proud..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T15:07:09.000Z",
+      "updatedAt": "2026-10-06T15:07:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-56453cefec69946e",
+      "slug": "policy-geopolitics-s-cluster-56453cefec69946e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "At a time of deepening conflict and insecurity across parts of the continent, the partnership between the United Nations and African Union is indispensable:...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Cooperation between the UN and the African Union.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Cooperation between the UN and the African Union."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T18:21:40.000Z",
+      "updatedAt": "2026-10-06T18:21:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3216e6a447ec1516",
+      "slug": "policy-geopolitics-s-cluster-3216e6a447ec1516",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Colombia travel advice",
+      "deck": "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T12:48:58.000Z",
+      "updatedAt": "2026-10-06T15:15:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e2fc16a2547351d1",
+      "slug": "policy-geopolitics-s-cluster-e2fc16a2547351d1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Form: Foreign, Commonwealth & Development Office honours nomination form",
+      "deck": "Use this honours form to nominate someone who lives or works abroad.",
+      "whatChanged": [
+        "Use this honours form to nominate someone who lives or works abroad."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T13:53:12.000Z",
+      "updatedAt": "2026-10-06T13:53:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-32cdd90b35bee1ac",
+      "slug": "business-economy-s-cluster-32cdd90b35bee1ac",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "International treaty: Decision No. 2/2022 EEA EFTA-UK Joint Committee “Amendments to Annex XX to Agreement on International Mobile Roaming Rates” under Free...",
+      "deck": "This treaty was presented to Parliament in October 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in October 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T13:00:03.000Z",
+      "updatedAt": "2026-10-06T13:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b408c402c5ce0dc8",
+      "slug": "business-economy-s-cluster-b408c402c5ce0dc8",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK trade in Food, Feed and Drink, 2025 updated",
+      "deck": "The release shows UK trade in Food, Feed and Drink in current prices and real terms.",
+      "whatChanged": [
+        "The release shows UK trade in Food, Feed and Drink in current prices and real terms."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T09:23:12.000Z",
+      "updatedAt": "2026-10-06T09:23:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ba29b7e84f7b31af",
+      "slug": "business-economy-s-cluster-ba29b7e84f7b31af",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Questions and answers on the pre-enlargement policy reviews",
+      "deck": "European Commission Questions and answers Strasbourg, 06 Oct 2026 What's included in the pre-enlargement policy reviews? EU enlargement is a strategic investment in Europe's peace, security and prosperity. It delivers sign...",
+      "whatChanged": [
+        "European Commission Questions and answers Strasbourg, 06 Oct 2026 What's included in the pre-enlargement policy reviews? EU enlargement is a strategic investment in Europe's peace, security and prosperity. It delivers sign..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-05T22:00:00.000Z",
+      "updatedAt": "2026-10-05T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-936c35d6c266602d",
+      "slug": "science-health-climate-s-cluster-936c35d6c266602d",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK Clinical Research Delivery key performance indicators: data to September 2026",
+      "deck": "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme.",
+      "whatChanged": [
+        "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T09:41:18.000Z",
+      "updatedAt": "2026-10-06T09:41:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b4723ddcb55298b",
+      "slug": "science-health-climate-s-cluster-3b4723ddcb55298b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: DHSC public appointments: 2026 to 2027",
+      "deck": "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027.",
+      "whatChanged": [
+        "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T09:00:04.000Z",
+      "updatedAt": "2026-10-06T09:00:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fd1ea55dbb06fdea",
+      "slug": "science-health-climate-s-cluster-fd1ea55dbb06fdea",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Statistics at Defra",
+      "deck": "We publish Official Statistics relating to the environment, rural communities, food, and farming.",
+      "whatChanged": [
+        "We publish Official Statistics relating to the environment, rural communities, food, and farming."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:10:21.000Z",
+      "updatedAt": "2026-10-06T08:10:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9d7159c87549c7c",
+      "slug": "technology-ai-s-cluster-e9d7159c87549c7c",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission registers European Citizens' Initiative for sovereign European AI domains",
+      "deck": "European Commission Press release Brussels, 06 Oct 2026 Today, the European Commission registered the European Citizens' Initiative (ECI) entitled ‘Creation of a European Digital Space (.IA) for Sovereign AI Governance'.",
+      "whatChanged": [
+        "European Commission Press release Brussels, 06 Oct 2026 Today, the European Commission registered the European Citizens' Initiative (ECI) entitled ‘Creation of a European Digital Space (.IA) for Sovereign AI Governance'."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-05T22:00:00.000Z",
+      "updatedAt": "2026-10-05T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb92629404af2d0d",
+      "slug": "culture-entertainment-s-cluster-fb92629404af2d0d",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission decides to refer Belgium to the Court of Justice of the European Union over recognition of investor-State arbitration awards that violate the prin...",
+      "deck": "European Commission Press release Brussels, 01 Oct 2026 Today, the European Commission decided to refer Belgium (INFR(2025)2199) to the Court of Justice of the European Union for failing to comply with its obligation under EU law not to...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 01 Oct 2026 Today, the European Commission decided to refer Belgium (INFR(2025)2199) to the Court of Justice of the European Union for failing to comply with its obligation under EU law not to recognise investor-State arbitration awards that violate the principle of autonomy of EU law."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-30T22:00:00.000Z",
+      "updatedAt": "2026-09-30T22:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Mental health support for British nationals in Singapore",
+      "url": "https://www.gov.uk/guidance/mental-health-support-for-british-nationals-in-singapore",
+      "sourceType": "official",
+      "publishedAt": "2026-10-02T15:26:35.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Correspondence: Animal Sentience Committee letter regarding the National Plan for Homelessness strategy",
+      "url": "https://www.gov.uk/government/publications/animal-sentience-committee-letter-regarding-the-national-plan-for-homelessness-strategy",
+      "sourceType": "official",
+      "publishedAt": "2026-10-02T14:20:25.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Road fuel sales, deliveries and stock levels: 27 September 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/road-fuel-sales-deliveries-and-stock-levels-27-september-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T13:45:20.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "url": "https://www.gov.uk/government/publications/cyber-resilience-pledge-list-of-signatories",
+      "sourceType": "official",
+      "publishedAt": "2026-09-28T11:35:22.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Video message by President von der Leyen to mark 25th Anniversary of IFOAM Organics Europe",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2089",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T22:00:00.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: NHS injury costs recovery scheme: April 2026 to March 2027",
+      "url": "https://www.gov.uk/government/publications/nhs-injury-costs-recovery-scheme-april-2026-to-march-2027",
+      "sourceType": "official",
+      "publishedAt": "2026-10-01T11:18:01.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
