@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-08",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-08T06:23:51.301Z",
+  "updatedAt": "2026-10-08T06:23:51.301Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-f08916b510885d7d",
+    "s-cluster-4c48177a9feb6644",
+    "s-cluster-949be22d8eb0a44f",
+    "s-cluster-48edbb87a76c14c9",
+    "s-cluster-f85bbcd29a31dac9",
+    "s-cluster-d51a34548c07ad31",
+    "s-cluster-5dd85764fb90ddaa",
+    "s-cluster-616a38339b5de780"
+  ],
+  "interestPools": {
+    "business-economy": [
+      "s-cluster-672a5e11ade5602a",
+      "s-cluster-a5534f1acd5ec166",
+      "s-cluster-949be52d8eb0a968"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-c459ff99af48ad1a",
+      "s-cluster-4334a247725d03ca",
+      "s-cluster-dca525ca161576d1"
+    ],
+    "science-health-climate": [
+      "s-cluster-9ddd6a8a81af2798",
+      "s-cluster-575f9de5bd6de457",
+      "s-cluster-c56f611cd6c4a2d4"
+    ],
+    "technology-ai": [
+      "s-cluster-01ccd863d50d749a",
+      "s-cluster-e9d7159c87549c7c",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "culture-entertainment": ["s-cluster-949be02d8eb0a0e9"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-f08916b510885d7d",
+      "slug": "policy-geopolitics-s-cluster-f08916b510885d7d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary statement on the UK's diplomatic presence in Jerusalem",
+      "deck": "Following discussions with the Government of Israel, our Consulate General building will not be closing, and will be known as the UK Mission, Jerusalem from today",
+      "whatChanged": [
+        "Following discussions with the Government of Israel, our Consulate General building will not be closing, and will be known as the UK Mission, Jerusalem from today"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T06:13:24.000Z",
+      "updatedAt": "2026-10-08T06:13:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4c48177a9feb6644",
+      "slug": "technology-ai-s-cluster-4c48177a9feb6644",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Drivers set to save as petrol prices launch on Google Maps",
+      "deck": "Drivers to save at the pump as near real-time petrol and diesel prices are included on Google Maps for the first time.",
+      "whatChanged": [
+        "Drivers to save at the pump as near real-time petrol and diesel prices are included on Google Maps for the first time."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T23:01:02.000Z",
+      "updatedAt": "2026-10-07T23:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-949be22d8eb0a44f",
+      "slug": "india-s-cluster-949be22d8eb0a44f",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Opening remarks by Commissioner Serafin during the European Parliament plenary debate – an ambitious multiannual financial framework 2028-2034 for a strong a...",
+      "deck": "European Commission Speech Strasbourg, 07 Oct 2026 Honourable members, dear Minister Byrne, More than a year ago, the Commission has put forward its proposal for the next MFF. We have proposed a budget that refl...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 07 Oct 2026 Honourable members, dear Minister Byrne, More than a year ago, the Commission has put forward its proposal for the next MFF. We have proposed a budget that refl..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T09:14:50.000Z",
+      "updatedAt": "2026-10-07T09:14:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-48edbb87a76c14c9",
+      "slug": "india-s-cluster-48edbb87a76c14c9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "UK REACH alternative transitional registration: technical consultation",
+      "deck": "We are seeking views on draft legal provisions for the alternative transitional registration model (ATRm) for UK REACH.",
+      "whatChanged": [
+        "We are seeking views on draft legal provisions for the alternative transitional registration model (ATRm) for UK REACH."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T15:15:21.000Z",
+      "updatedAt": "2026-10-07T15:15:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f85bbcd29a31dac9",
+      "slug": "india-s-cluster-f85bbcd29a31dac9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: Defra: spending over £25,000, December 2025",
+      "deck": "Reports on departmental spending over £25,000.",
+      "whatChanged": ["Reports on departmental spending over £25,000."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T14:58:09.000Z",
+      "updatedAt": "2026-10-07T15:01:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d51a34548c07ad31",
+      "slug": "policy-geopolitics-s-cluster-d51a34548c07ad31",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Colombia travel advice",
+      "deck": "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T12:48:58.000Z",
+      "updatedAt": "2026-10-07T15:46:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5dd85764fb90ddaa",
+      "slug": "policy-geopolitics-s-cluster-5dd85764fb90ddaa",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Daily News 05 / 10 / 2026",
+      "deck": "European Commission Daily news Brussels, 05 Oct 2026 Commission greenlights Finland's fifth payment request for €229.2 million under NextGenerationEU Today, the European Commission positively assessed Finland's f...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 05 Oct 2026 Commission greenlights Finland's fifth payment request for €229.2 million under NextGenerationEU Today, the European Commission positively assessed Finland's f..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-05T09:26:54.000Z",
+      "updatedAt": "2026-10-07T09:38:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T16:32:16.000Z",
+      "updatedAt": "2026-10-06T16:32:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-672a5e11ade5602a",
+      "slug": "business-economy-s-cluster-672a5e11ade5602a",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "By advancing investment, resilience and reform, we can expand opportunity, strengthen economies, and improve lives around the world: UK statement at the UN S...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Second Committee.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Second Committee."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T14:49:43.000Z",
+      "updatedAt": "2026-10-07T14:49:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a5534f1acd5ec166",
+      "slug": "business-economy-s-cluster-a5534f1acd5ec166",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Transparency data: Trade Specialised Committee on Level Playing Field for Open and Fair Competition and Sustainable Development",
+      "deck": "This page brings together information about this Trade Specialised Committee under the EU-UK Trade and Cooperation Agreement.",
+      "whatChanged": [
+        "This page brings together information about this Trade Specialised Committee under the EU-UK Trade and Cooperation Agreement."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T10:00:03.000Z",
+      "updatedAt": "2026-10-07T10:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-949be52d8eb0a968",
+      "slug": "business-economy-s-cluster-949be52d8eb0a968",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Kubilius in the conference \"Military Schengen 2026. Military Logistics: Requirements for Infrastructure and Carriers\"",
+      "deck": "European Commission Speech Hamburg, 07 Oct 2026 Good afternoon, It's a pleasure to be in Hamburg. And to speak about military mobility. Because everybody knows, how important Hamburg Port is for the economy...",
+      "whatChanged": [
+        "European Commission Speech Hamburg, 07 Oct 2026 Good afternoon, It's a pleasure to be in Hamburg. And to speak about military mobility. Because everybody knows, how important Hamburg Port is for the economy..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T09:53:23.000Z",
+      "updatedAt": "2026-10-07T09:53:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c459ff99af48ad1a",
+      "slug": "policy-geopolitics-s-cluster-c459ff99af48ad1a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK Food Security Digest 2026",
+      "deck": "The UK Food Security Digest (UKFSD) contains a selection of summary statistics on issues relevant to a range of aspects of food security, drawn from official national and international sources. Its objective is to supply up to date infor...",
+      "whatChanged": [
+        "The UK Food Security Digest (UKFSD) contains a selection of summary statistics on issues relevant to a range of aspects of food security, drawn from official national and international sources. Its objective is to supply up to date information in the years in between the comprehensive triennial UK Food Security Report."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T13:14:07.000Z",
+      "updatedAt": "2026-10-07T13:14:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T09:29:00.000Z",
+      "updatedAt": "2026-10-07T09:29:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dca525ca161576d1",
+      "slug": "policy-geopolitics-s-cluster-dca525ca161576d1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Iraq: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T09:28:50.000Z",
+      "updatedAt": "2026-10-07T09:28:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9ddd6a8a81af2798",
+      "slug": "science-health-climate-s-cluster-9ddd6a8a81af2798",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Data for Theme F: Resilience",
+      "deck": "Data for 'Theme F: Resilience' indicators of the Environmental Indicator Framework.",
+      "whatChanged": [
+        "Data for 'Theme F: Resilience' indicators of the Environmental Indicator Framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T11:10:24.000Z",
+      "updatedAt": "2026-10-07T11:10:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-575f9de5bd6de457",
+      "slug": "science-health-climate-s-cluster-575f9de5bd6de457",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Environmental Indicator Framework Theme F (Resilience)",
+      "deck": "This release contains all indicators which fall under Theme F (Resilience) of the Environmental Indicator Framework.",
+      "whatChanged": [
+        "This release contains all indicators which fall under Theme F (Resilience) of the Environmental Indicator Framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T11:09:00.000Z",
+      "updatedAt": "2026-10-07T11:09:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c56f611cd6c4a2d4",
+      "slug": "science-health-climate-s-cluster-c56f611cd6c4a2d4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in Singapore",
+      "deck": "Information about support for British nationals experiencing mental health difficulties in Singapore.",
+      "whatChanged": [
+        "Information about support for British nationals experiencing mental health difficulties in Singapore."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T02:46:32.000Z",
+      "updatedAt": "2026-10-07T02:46:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9d7159c87549c7c",
+      "slug": "technology-ai-s-cluster-e9d7159c87549c7c",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission registers European Citizens' Initiative for sovereign European AI domains",
+      "deck": "European Commission Press release Brussels, 06 Oct 2026 Today, the European Commission registered the European Citizens' Initiative (ECI) entitled ‘Creation of a European Digital Space (.IA) for Sovereign AI Governance'.",
+      "whatChanged": [
+        "European Commission Press release Brussels, 06 Oct 2026 Today, the European Commission registered the European Citizens' Initiative (ECI) entitled ‘Creation of a European Digital Space (.IA) for Sovereign AI Governance'."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-05T22:00:00.000Z",
+      "updatedAt": "2026-10-05T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-949be02d8eb0a0e9",
+      "slug": "culture-entertainment-s-cluster-949be02d8eb0a0e9",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Costas Kadis at the opening reception of the 10th anniversary of the Malta Maritime Summit and the Malta Maritime Awards 2026 Ceremony",
+      "deck": "European Commission Speech Malta, 07 Oct 2026 Secretary-General Dominguez,Chairman Mizzi,Commissioner Vella (Dear Karmenu),Distinguished guests,Ladies and gentlemen, I am deeply honoured to participate in t...",
+      "whatChanged": [
+        "European Commission Speech Malta, 07 Oct 2026 Secretary-General Dominguez,Chairman Mizzi,Commissioner Vella (Dear Karmenu),Distinguished guests,Ladies and gentlemen, I am deeply honoured to participate in t..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-04T22:00:00.000Z",
+      "updatedAt": "2026-10-04T22:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Foreign Secretary statement on the UK's diplomatic presence in Jerusalem",
+      "url": "https://www.gov.uk/government/news/foreign-secretary-statement-on-the-uks-diplomatic-presence-in-jerusalem",
+      "sourceType": "official",
+      "publishedAt": "2026-10-06T12:48:58.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Drivers set to save as petrol prices launch on Google Maps",
+      "url": "https://www.gov.uk/government/news/drivers-set-to-save-as-petrol-prices-launch-on-google-maps",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T11:17:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Remarks by Commissioner Hoekstra at the Pre-COP31 High-Level Session on Pacific Energy Transition: From Ambition to Implementation",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2101",
+      "sourceType": "official",
+      "publishedAt": "2026-10-01T07:19:05.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "UK REACH alternative transitional registration: technical consultation",
+      "url": "https://www.gov.uk/government/consultations/uk-reach-alternative-transitional-registration-technical-consultation",
+      "sourceType": "official",
+      "publishedAt": "2026-10-06T15:09:53.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "url": "https://www.gov.uk/government/publications/cyber-resilience-pledge-list-of-signatories",
+      "sourceType": "official",
+      "publishedAt": "2026-09-28T11:35:22.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
