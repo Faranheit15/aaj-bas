@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-09",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-09T06:25:07.586Z",
+  "updatedAt": "2026-10-09T06:25:07.586Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-841bdbecdbacac57",
+    "s-cluster-9bd9a152c41bdfaa",
+    "s-cluster-430000c762d1cd49",
+    "s-cluster-c0d5d05420222319",
+    "s-cluster-228fdac14d2eb72d",
+    "s-cluster-8d5a3b2d8afa03e6",
+    "s-cluster-64745f5c4176ed94",
+    "s-cluster-3b546bf64769f379"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-3d8ae6bcddd31f26",
+      "s-cluster-4334a247725d03ca",
+      "s-cluster-2d4eb0c765a1a479"
+    ],
+    "business-economy": [
+      "s-cluster-1d714f69ca7115b1",
+      "s-cluster-b783c59da757d05e",
+      "s-cluster-949be52d8eb0a968"
+    ],
+    "technology-ai": [
+      "s-cluster-4c48177a9feb6644",
+      "s-cluster-616a38339b5de780",
+      "s-cluster-01ccd863d50d749a"
+    ],
+    "science-health-climate": [
+      "s-cluster-9ddd6a8a81af2798",
+      "s-cluster-575f9de5bd6de457",
+      "s-cluster-d37f9b2aa085b5fa"
+    ],
+    "culture-entertainment": ["s-cluster-949be02d8eb0a0e9"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-841bdbecdbacac57",
+      "slug": "india-s-cluster-841bdbecdbacac57",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Illegal waste at Hoad’s Wood fully cleared as crackdown continues",
+      "deck": "Well-loved local beauty spot in Kent cleared of 39,500 tonnes of illegal waste.",
+      "whatChanged": [
+        "Well-loved local beauty spot in Kent cleared of 39,500 tonnes of illegal waste."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T23:01:01.000Z",
+      "updatedAt": "2026-10-08T23:01:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9bd9a152c41bdfaa",
+      "slug": "policy-geopolitics-s-cluster-9bd9a152c41bdfaa",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Saudi Arabia travel advice",
+      "deck": "FCDO travel advice for Saudi Arabia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Saudi Arabia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T18:35:10.000Z",
+      "updatedAt": "2026-10-08T23:26:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-430000c762d1cd49",
+      "slug": "india-s-cluster-430000c762d1cd49",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Energy Statistics for Rural England",
+      "deck": "Energy Statistics for Rural England - May 2026",
+      "whatChanged": ["Energy Statistics for Rural England - May 2026"],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-07T11:12:25.000Z",
+      "updatedAt": "2026-10-08T08:30:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c0d5d05420222319",
+      "slug": "india-s-cluster-c0d5d05420222319",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Social Housing Decarbonisation Fund statistics: October 2026",
+      "deck": "Data to monitor the installation of energy efficiency measures in domestic properties via the Social Housing Decarbonisation Fund (SHDF) scheme in England.",
+      "whatChanged": [
+        "Data to monitor the installation of energy efficiency measures in domestic properties via the Social Housing Decarbonisation Fund (SHDF) scheme in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T16:10:12.000Z",
+      "updatedAt": "2026-10-08T16:10:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-228fdac14d2eb72d",
+      "slug": "policy-geopolitics-s-cluster-228fdac14d2eb72d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia’s war threatening civilian shipping in the Black Sea: UK statement to the OSCE",
+      "deck": "Colonel Joby Rimmer, UK Senior Military Advisor, condemns attacks on civilian shipping in the Black Sea and highlights the wider consequences of Russia’s war for maritime security and freedom of navigation.",
+      "whatChanged": [
+        "Colonel Joby Rimmer, UK Senior Military Advisor, condemns attacks on civilian shipping in the Black Sea and highlights the wider consequences of Russia’s war for maritime security and freedom of navigation."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T15:59:30.000Z",
+      "updatedAt": "2026-10-08T15:59:30.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d5a3b2d8afa03e6",
+      "slug": "policy-geopolitics-s-cluster-8d5a3b2d8afa03e6",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the Irish EU Affairs Committee",
+      "deck": "European Commission Speech Dublin, 08 Oct 2026 It is a pleasure to be with you during Ireland's Presidency at an important moment for Europe and for the security of our citizens. Earlier this year I was in G...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 08 Oct 2026 It is a pleasure to be with you during Ireland's Presidency at an important moment for Europe and for the security of our citizens. Earlier this year I was in G..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T12:17:26.000Z",
+      "updatedAt": "2026-10-08T12:17:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-64745f5c4176ed94",
+      "slug": "science-health-climate-s-cluster-64745f5c4176ed94",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "£33.2m to protect public from future epidemics and pandemics",
+      "deck": "£33.2m will fund eight vaccine projects targeting deadly diseases, strengthening UK pandemic preparedness and helping protect people worldwide.",
+      "whatChanged": [
+        "£33.2m will fund eight vaccine projects targeting deadly diseases, strengthening UK pandemic preparedness and helping protect people worldwide."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T13:27:43.000Z",
+      "updatedAt": "2026-10-08T13:27:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b546bf64769f379",
+      "slug": "technology-ai-s-cluster-3b546bf64769f379",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Pro-Worker AI Adoption Prize",
+      "deck": "The Pro-Worker AI Adoption Prize recognises organisations using artificial intelligence (AI) that benefits workers.",
+      "whatChanged": [
+        "The Pro-Worker AI Adoption Prize recognises organisations using artificial intelligence (AI) that benefits workers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T10:22:10.000Z",
+      "updatedAt": "2026-10-08T10:22:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3d8ae6bcddd31f26",
+      "slug": "policy-geopolitics-s-cluster-3d8ae6bcddd31f26",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Supporting practical OSCE action in Turkmenistan: UK statement to the OSCE",
+      "deck": "UK Chargé d’Affaires, Deputy Ambassador James Ford reaffirms the UK's strong support for the OSCE field presence in Ashgabat and its practical work across all three dimensions of security. We welcome progress on border management, resili...",
+      "whatChanged": [
+        "UK Chargé d’Affaires, Deputy Ambassador James Ford reaffirms the UK's strong support for the OSCE field presence in Ashgabat and its practical work across all three dimensions of security. We welcome progress on border management, resilient energy infrastructure, judicial reform, media literacy and Women, Peace and Security."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T14:38:12.000Z",
+      "updatedAt": "2026-10-08T14:38:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T14:30:01.000Z",
+      "updatedAt": "2026-10-08T14:30:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2d4eb0c765a1a479",
+      "slug": "policy-geopolitics-s-cluster-2d4eb0c765a1a479",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T14:29:38.000Z",
+      "updatedAt": "2026-10-08T14:29:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1d714f69ca7115b1",
+      "slug": "business-economy-s-cluster-1d714f69ca7115b1",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK trade in Food, Feed and Drink, 2025 updated",
+      "deck": "The release shows UK trade in Food, Feed and Drink in current prices and real terms.",
+      "whatChanged": [
+        "The release shows UK trade in Food, Feed and Drink in current prices and real terms."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T08:30:08.000Z",
+      "updatedAt": "2026-10-08T08:30:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b783c59da757d05e",
+      "slug": "business-economy-s-cluster-b783c59da757d05e",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis at Eurogroup press conference",
+      "deck": "European Commission Statement Luxembourg, 08 Oct 2026 Thank you, Kyriakos. Good evening, everyone. I will begin with our discussion on energy. The European economy continues to face the consequences of the energy p...",
+      "whatChanged": [
+        "European Commission Statement Luxembourg, 08 Oct 2026 Thank you, Kyriakos. Good evening, everyone. I will begin with our discussion on energy. The European economy continues to face the consequences of the energy p..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T22:00:00.000Z",
+      "updatedAt": "2026-10-07T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-949be52d8eb0a968",
+      "slug": "business-economy-s-cluster-949be52d8eb0a968",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Kubilius in the conference \"Military Schengen 2026. Military Logistics: Requirements for Infrastructure and Carriers\"",
+      "deck": "European Commission Speech Hamburg, 07 Oct 2026 Good afternoon, It's a pleasure to be in Hamburg. And to speak about military mobility. Because everybody knows, how important Hamburg Port is for the economy...",
+      "whatChanged": [
+        "European Commission Speech Hamburg, 07 Oct 2026 Good afternoon, It's a pleasure to be in Hamburg. And to speak about military mobility. Because everybody knows, how important Hamburg Port is for the economy..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T09:53:23.000Z",
+      "updatedAt": "2026-10-07T09:53:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4c48177a9feb6644",
+      "slug": "technology-ai-s-cluster-4c48177a9feb6644",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Drivers set to save as petrol prices launch on Google Maps",
+      "deck": "Drivers to save at the pump as near real-time petrol and diesel prices are included on Google Maps for the first time.",
+      "whatChanged": [
+        "Drivers to save at the pump as near real-time petrol and diesel prices are included on Google Maps for the first time."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T23:01:02.000Z",
+      "updatedAt": "2026-10-07T23:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T16:32:16.000Z",
+      "updatedAt": "2026-10-06T16:32:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9ddd6a8a81af2798",
+      "slug": "science-health-climate-s-cluster-9ddd6a8a81af2798",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Data for Theme F: Resilience",
+      "deck": "Data for 'Theme F: Resilience' indicators of the Environmental Indicator Framework.",
+      "whatChanged": [
+        "Data for 'Theme F: Resilience' indicators of the Environmental Indicator Framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T11:10:24.000Z",
+      "updatedAt": "2026-10-07T11:10:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-575f9de5bd6de457",
+      "slug": "science-health-climate-s-cluster-575f9de5bd6de457",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Environmental Indicator Framework Theme F (Resilience)",
+      "deck": "This release contains all indicators which fall under Theme F (Resilience) of the Environmental Indicator Framework.",
+      "whatChanged": [
+        "This release contains all indicators which fall under Theme F (Resilience) of the Environmental Indicator Framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-07T11:09:00.000Z",
+      "updatedAt": "2026-10-07T11:09:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-949be02d8eb0a0e9",
+      "slug": "culture-entertainment-s-cluster-949be02d8eb0a0e9",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Costas Kadis at the opening reception of the 10th anniversary of the Malta Maritime Summit and the Malta Maritime Awards 2026 Ceremony",
+      "deck": "European Commission Speech Malta, 07 Oct 2026 Secretary-General Dominguez,Chairman Mizzi,Commissioner Vella (Dear Karmenu),Distinguished guests,Ladies and gentlemen, I am deeply honoured to participate in t...",
+      "whatChanged": [
+        "European Commission Speech Malta, 07 Oct 2026 Secretary-General Dominguez,Chairman Mizzi,Commissioner Vella (Dear Karmenu),Distinguished guests,Ladies and gentlemen, I am deeply honoured to participate in t..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-04T22:00:00.000Z",
+      "updatedAt": "2026-10-04T22:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Illegal waste at Hoad’s Wood fully cleared as crackdown continues",
+      "url": "https://www.gov.uk/government/news/illegal-waste-at-hoads-wood-fully-cleared-as-crackdown-continues",
+      "sourceType": "official",
+      "publishedAt": "2026-10-07T09:35:48.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Chile travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/chile",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T12:20:38.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Social Housing Decarbonisation Fund statistics: November 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/social-housing-decarbonisation-fund-statistics-november-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T13:24:15.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Lahbib at the Irish EU Affairs Committee",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2117",
+      "sourceType": "official",
+      "publishedAt": "2026-10-01T11:55:55.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "£33.2m to protect public from future epidemics and pandemics",
+      "url": "https://www.gov.uk/government/news/332m-to-protect-public-from-future-epidemics-and-pandemics",
+      "sourceType": "official",
+      "publishedAt": "2026-10-02T12:47:05.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Pro-Worker AI Adoption Prize",
+      "url": "https://www.gov.uk/guidance/pro-worker-ai-adoption-prize",
+      "sourceType": "official",
+      "publishedAt": "2026-09-28T11:35:22.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Madhumay Mallik"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
