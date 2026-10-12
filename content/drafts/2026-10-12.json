@@ -1,0 +1,483 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-12",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-12T06:15:06.510Z",
+  "updatedAt": "2026-10-12T06:15:06.510Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-a4477341ad69faf2",
+    "s-cluster-a004f38db2317419",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-2b886b7562172da4",
+    "s-cluster-19ee72fef3f666cc",
+    "s-cluster-a8c7c4643f7aab66",
+    "s-cluster-2b39bbce7a493cd8",
+    "s-cluster-3e83961b7691735b"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-d37f9b2aa085b5fa",
+      "s-cluster-5ba3e05f335e4811",
+      "s-cluster-06d509e190b599ba"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-50f7fc5fdf0a9291",
+      "s-cluster-8d50452d8af1c05f",
+      "s-cluster-8931ca3bbac49526"
+    ],
+    "business-economy": [
+      "s-cluster-3b3090387236d8eb",
+      "s-cluster-43fac0c3bc14cbad",
+      "s-cluster-831ce568ee15d8cf"
+    ],
+    "technology-ai": [
+      "s-cluster-7acb424e67bc343d",
+      "s-cluster-01ccd863d50d749a",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-a4477341ad69faf2",
+      "slug": "science-health-climate-s-cluster-a4477341ad69faf2",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "New ‘one stop shop’ for flood preparedness launched as we approach more weather whiplash",
+      "deck": "'Flood action online' brings together clear, actionable guidance for people to check their flood risk and find the latest weather alerts",
+      "whatChanged": [
+        "'Flood action online' brings together clear, actionable guidance for people to check their flood risk and find the latest weather alerts"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-11T23:01:02.000Z",
+      "updatedAt": "2026-10-11T23:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a004f38db2317419",
+      "slug": "policy-geopolitics-s-cluster-a004f38db2317419",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Chile travel advice",
+      "deck": "FCDO travel advice for Chile. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Chile. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T23:26:56.000Z",
+      "updatedAt": "2026-10-11T21:11:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-11T18:10:56.000Z",
+      "updatedAt": "2026-10-11T18:10:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2b886b7562172da4",
+      "slug": "world-s-cluster-2b886b7562172da4",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Read-out by President von der Leyen following her call with President Zelenskyy",
+      "deck": "European Commission Read-out Brussels, 11 Oct 2026 Good call with President Zelenskyy. Fully supported the call of President Zelenskyy for a ceasefire that would protect global food supplies and energy infrastru...",
+      "whatChanged": [
+        "European Commission Read-out Brussels, 11 Oct 2026 Good call with President Zelenskyy. Fully supported the call of President Zelenskyy for a ceasefire that would protect global food supplies and energy infrastru..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-11T15:26:32.000Z",
+      "updatedAt": "2026-10-11T15:26:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-19ee72fef3f666cc",
+      "slug": "india-s-cluster-19ee72fef3f666cc",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "The Blue Belt Programme",
+      "deck": "The Blue Belt Programme supports the UK Overseas Territories with the protection and sustainable management of their marine environments.",
+      "whatChanged": [
+        "The Blue Belt Programme supports the UK Overseas Territories with the protection and sustainable management of their marine environments."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-09T13:54:42.000Z",
+      "updatedAt": "2026-10-09T13:54:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a8c7c4643f7aab66",
+      "slug": "policy-geopolitics-s-cluster-a8c7c4643f7aab66",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Statement on the International Criminal Court following announcement of US sanctions",
+      "deck": "European Commission Statement Brussels, 09 Oct 2026 The European Union has been a constant supporter of the International Criminal Court (ICC). It is deeply regrettable that the United States has announced intent...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 09 Oct 2026 The European Union has been a constant supporter of the International Criminal Court (ICC). It is deeply regrettable that the United States has announced intent..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner", "fcdo"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-09T12:14:20.000Z",
+      "updatedAt": "2026-10-09T16:22:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2b39bbce7a493cd8",
+      "slug": "india-s-cluster-2b39bbce7a493cd8",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "What India’s ‘Cockroach’ protests reveal about digital authoritarianism",
+      "deck": "“Democratic freedoms depend not only on protection from direct state violence but on citizens being able to organise without assuming their participation is permanently recorded.”",
+      "whatChanged": [
+        "“Democratic freedoms depend not only on protection from direct state violence but on citizens being able to organise without assuming their participation is permanently recorded.”"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T08:33:09.000Z",
+      "updatedAt": "2026-09-15T08:33:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ba3e05f335e4811",
+      "slug": "science-health-climate-s-cluster-5ba3e05f335e4811",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Independent report: Independent review into mental health conditions, ADHD and autism: final report",
+      "deck": "Final report detailing the findings of the independent review into the prevalence and support for mental health conditions, ADHD and autism.",
+      "whatChanged": [
+        "Final report detailing the findings of the independent review into the prevalence and support for mental health conditions, ADHD and autism."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T08:00:00.000Z",
+      "updatedAt": "2026-10-09T14:30:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-06d509e190b599ba",
+      "slug": "science-health-climate-s-cluster-06d509e190b599ba",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bird keepers reminded to take action to protect against Avian Influenza as disease returns to the UK",
+      "deck": "All bird keepers are urged to review and strengthen their biosecurity to protect their birds",
+      "whatChanged": [
+        "All bird keepers are urged to review and strengthen their biosecurity to protect their birds"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T10:06:18.000Z",
+      "updatedAt": "2026-10-09T10:06:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-50f7fc5fdf0a9291",
+      "slug": "policy-geopolitics-s-cluster-50f7fc5fdf0a9291",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom unequivocally condemns the dangerous escalation by the Houthis in Yemen: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Yemen.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Yemen."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T15:54:00.000Z",
+      "updatedAt": "2026-10-09T15:54:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d50452d8af1c05f",
+      "slug": "policy-geopolitics-s-cluster-8d50452d8af1c05f",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Press Remarks by Commissioner Lahbib at the Foreign Affairs Council on Development",
+      "deck": "European Commission Speech Dublin, 09 Oct 2026 Yesterday evening we discussed the future of development, along with the important link between humanitarian aid and development, together with key stakeholders...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 09 Oct 2026 Yesterday evening we discussed the future of development, along with the important link between humanitarian aid and development, together with key stakeholders..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T15:09:05.000Z",
+      "updatedAt": "2026-10-09T15:09:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8931ca3bbac49526",
+      "slug": "policy-geopolitics-s-cluster-8931ca3bbac49526",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: List of Foreign, Commonwealth & Development Office posts abroad",
+      "deck": "List of Foreign, Commonwealth & Development Office embassies, high commissions, consulates and other forms of UK representation, by country and territory.",
+      "whatChanged": [
+        "List of Foreign, Commonwealth & Development Office embassies, high commissions, consulates and other forms of UK representation, by country and territory."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T09:07:31.000Z",
+      "updatedAt": "2026-10-09T09:07:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b3090387236d8eb",
+      "slug": "business-economy-s-cluster-3b3090387236d8eb",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Correspondence: Keep Britain Working review update: a national growth opportunity, September 2026",
+      "deck": "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth.",
+      "whatChanged": [
+        "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T10:58:26.000Z",
+      "updatedAt": "2026-10-09T10:58:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-43fac0c3bc14cbad",
+      "slug": "business-economy-s-cluster-43fac0c3bc14cbad",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Joint Statement at the second meeting of the EU-China Trade and Investment Consultations",
+      "deck": "European Commission Statement Beijing, 09 Oct 2026 On 8-9 October 2026, Wang Wentao, Minister of Commerce of China, and Maroš Šefčovič, Commissioner for Trade and Economic Security, Interinstitutional Relations and Transparency, of the E...",
+      "whatChanged": [
+        "European Commission Statement Beijing, 09 Oct 2026 On 8-9 October 2026, Wang Wentao, Minister of Commerce of China, and Maroš Šefčovič, Commissioner for Trade and Economic Security, Interinstitutional Relations and Transparency, of the European Commission, held the second meeting of the EU-China Trade and Investment Consultations (TIC) in Beijing."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T09:05:57.000Z",
+      "updatedAt": "2026-10-09T09:33:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-831ce568ee15d8cf",
+      "slug": "business-economy-s-cluster-831ce568ee15d8cf",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 08 / 10 / 2026",
+      "deck": "European Commission Daily news Brussels, 08 Oct 2026 Eurobarometer shows consumers' growing trust in EU Ecolabel Released on the occasion of the World Ecolabel Day, the latest Eurobarometer survey shows an increas...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 08 Oct 2026 Eurobarometer shows consumers' growing trust in EU Ecolabel Released on the occasion of the World Ecolabel Day, the latest Eurobarometer survey shows an increas..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T09:35:35.000Z",
+      "updatedAt": "2026-10-09T09:08:45.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7acb424e67bc343d",
+      "slug": "technology-ai-s-cluster-7acb424e67bc343d",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Energy Related Products Policy and Energy Technology List (ETL): privacy notice",
+      "deck": "Find details here about the Energy Related Products Policy and Energy Technology List privacy policy and how we collect and process your data.",
+      "whatChanged": [
+        "Find details here about the Energy Related Products Policy and Energy Technology List privacy policy and how we collect and process your data."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T11:40:59.000Z",
+      "updatedAt": "2026-10-09T11:40:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "New ‘one stop shop’ for flood preparedness launched as we approach more weather whiplash",
+      "url": "https://www.gov.uk/government/news/new-one-stop-shop-for-flood-preparedness-launched-as-we-approach-more-weather-whiplash",
+      "sourceType": "official",
+      "publishedAt": "2026-10-09T08:30:03.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Saudi Arabia travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/saudi-arabia",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T15:20:59.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Read-out by President von der Leyen following her call with President Zelenskyy",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/read_26_2131",
+      "sourceType": "official",
+      "publishedAt": "2026-10-05T07:43:20.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Guest Contributor",
+        "Zulker Naeen",
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Deprivation of Liberty Safeguards, England: 2025 to 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/deprivation-of-liberty-safeguards-england-2025-to-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-10-06T09:00:04.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Decision: Steeple Renewables Project: development consent order, Planning Act 2008",
+      "url": "https://www.gov.uk/government/publications/steeple-renewables-project-development-consent-order-planning-act-2008",
+      "sourceType": "official",
+      "publishedAt": "2026-09-30T13:25:22.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Pro-Worker AI Adoption Prize",
+      "url": "https://www.gov.uk/guidance/pro-worker-ai-adoption-prize",
+      "sourceType": "official",
+      "publishedAt": "2026-09-28T11:35:22.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
