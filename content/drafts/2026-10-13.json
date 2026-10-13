@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-13",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-13T06:56:12.863Z",
+  "updatedAt": "2026-10-13T06:56:12.863Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-58e192538a854ef9",
+    "s-cluster-26c4337d034ca6cf",
+    "s-cluster-5413673f68a729cc",
+    "s-cluster-8d493d2d8aeb9419",
+    "s-cluster-b3a1b1c1159e2138",
+    "s-cluster-dfc3e34ad958415b",
+    "s-cluster-54efc25f092c101a",
+    "s-cluster-8d493f2d8aeb977f"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-5addd6f67a17c93a",
+      "s-cluster-4334a247725d03ca",
+      "s-cluster-72b9a85e30d4291d"
+    ],
+    "business-economy": [
+      "s-cluster-39ada460465cca74",
+      "s-cluster-6584ad1dc3ad723c",
+      "s-cluster-3b3090387236d8eb"
+    ],
+    "science-health-climate": [
+      "s-cluster-2e088421a3155dfd",
+      "s-cluster-a4477341ad69faf2",
+      "s-cluster-d37f9b2aa085b5fa"
+    ],
+    "technology-ai": [
+      "s-cluster-616a38339b5de780",
+      "s-cluster-f305549c8cad98f4",
+      "s-cluster-01ccd863d50d749a"
+    ],
+    "culture-entertainment": ["s-cluster-5db2cd1108cf382b"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-58e192538a854ef9",
+      "slug": "india-s-cluster-58e192538a854ef9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "New pioneering certificates to help homeowners cut flood risk",
+      "deck": "New Flood Performance Certificate to give homeowners and insurers a clear assessment of a property's flood risk and resilience",
+      "whatChanged": [
+        "New Flood Performance Certificate to give homeowners and insurers a clear assessment of a property's flood risk and resilience"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T23:01:07.000Z",
+      "updatedAt": "2026-10-12T23:01:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-26c4337d034ca6cf",
+      "slug": "india-s-cluster-26c4337d034ca6cf",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Data Use and Access Act 2025: plans for commencement",
+      "deck": "A summary of the government’s plans for bringing into force provisions in the Data (Use and Access) Act 2025.",
+      "whatChanged": [
+        "A summary of the government’s plans for bringing into force provisions in the Data (Use and Access) Act 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T16:24:24.000Z",
+      "updatedAt": "2026-10-12T16:24:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5413673f68a729cc",
+      "slug": "india-s-cluster-5413673f68a729cc",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Road fuel prices: 12 October 2026",
+      "deck": "Weekly prices of unleaded petrol and diesel.",
+      "whatChanged": ["Weekly prices of unleaded petrol and diesel."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T16:01:51.000Z",
+      "updatedAt": "2026-10-12T16:01:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d493d2d8aeb9419",
+      "slug": "science-health-climate-s-cluster-8d493d2d8aeb9419",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Press remarks by Commissioner Hoekstra following the Environment (ENVI) Council",
+      "deck": "European Commission Speech Luxembourg, 12 Oct 2026 Ladies and gentlemen, First of all, let me thank the two ministers and the Irish Presidency for the work today. This was a testament to our commitment on climat...",
+      "whatChanged": [
+        "European Commission Speech Luxembourg, 12 Oct 2026 Ladies and gentlemen, First of all, let me thank the two ministers and the Irish Presidency for the work today. This was a testament to our commitment on climat..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T18:04:16.000Z",
+      "updatedAt": "2026-10-12T18:04:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b3a1b1c1159e2138",
+      "slug": "policy-geopolitics-s-cluster-b3a1b1c1159e2138",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom will continue to champion the Colombia Peace Agreement through implementation at local levels: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Colombia.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Colombia."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T16:16:00.000Z",
+      "updatedAt": "2026-10-12T16:16:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dfc3e34ad958415b",
+      "slug": "business-economy-s-cluster-dfc3e34ad958415b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Taking part in the UK Emissions Trading Scheme markets",
+      "deck": "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market.",
+      "whatChanged": [
+        "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T16:15:02.000Z",
+      "updatedAt": "2026-10-12T16:15:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-54efc25f092c101a",
+      "slug": "policy-geopolitics-s-cluster-54efc25f092c101a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary statement on Iran, 12 October",
+      "deck": "Statement from the Foreign Secretary on measures announced against Iranian individuals.",
+      "whatChanged": [
+        "Statement from the Foreign Secretary on measures announced against Iranian individuals."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T14:54:00.000Z",
+      "updatedAt": "2026-10-12T15:06:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d493f2d8aeb977f",
+      "slug": "policy-geopolitics-s-cluster-8d493f2d8aeb977f",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Kubilius at the Inauguration of the new European Security and Strategy faculty in College of Europe in Natolin",
+      "deck": "European Commission Speech Warsaw, 12 Oct 2026 Good afternoon! It's pleasure to be here, at the very famous College of Europe in Natolin. I have heard a lot about Natolin college from those who graduated he...",
+      "whatChanged": [
+        "European Commission Speech Warsaw, 12 Oct 2026 Good afternoon! It's pleasure to be here, at the very famous College of Europe in Natolin. I have heard a lot about Natolin college from those who graduated he..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T14:10:12.000Z",
+      "updatedAt": "2026-10-12T14:10:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5addd6f67a17c93a",
+      "slug": "policy-geopolitics-s-cluster-5addd6f67a17c93a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Iran: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T14:35:44.000Z",
+      "updatedAt": "2026-10-12T14:35:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T14:35:30.000Z",
+      "updatedAt": "2026-10-12T14:35:30.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-72b9a85e30d4291d",
+      "slug": "policy-geopolitics-s-cluster-72b9a85e30d4291d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/USA: Exchange of Letters on Amendments to Agreement on Mutual Recognition of Certificate of Conformity for Marine Equipment [CS No.1...",
+      "deck": "This treaty was presented to Parliament in October 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in October 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T14:34:07.000Z",
+      "updatedAt": "2026-10-12T14:34:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-39ada460465cca74",
+      "slug": "business-economy-s-cluster-39ada460465cca74",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Clean Heat Market Mechanism: revisions ahead of the 2027/28 scheme year",
+      "deck": "We're seeking views on the targets for years 3 to 6 of the scheme and other proposals, including support for investment in resilient and sustainable supply chains.",
+      "whatChanged": [
+        "We're seeking views on the targets for years 3 to 6 of the scheme and other proposals, including support for investment in resilient and sustainable supply chains."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T13:31:55.000Z",
+      "updatedAt": "2026-10-12T13:31:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6584ad1dc3ad723c",
+      "slug": "business-economy-s-cluster-6584ad1dc3ad723c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Wholesale fruit and vegetable prices",
+      "deck": "Series of fortnightly average wholesale market prices of selected home grown horticultural produce.",
+      "whatChanged": [
+        "Series of fortnightly average wholesale market prices of selected home grown horticultural produce."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T08:30:02.000Z",
+      "updatedAt": "2026-10-12T08:30:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b3090387236d8eb",
+      "slug": "business-economy-s-cluster-3b3090387236d8eb",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Correspondence: Keep Britain Working review update: a national growth opportunity, September 2026",
+      "deck": "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth.",
+      "whatChanged": [
+        "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T10:58:26.000Z",
+      "updatedAt": "2026-10-09T10:58:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2e088421a3155dfd",
+      "slug": "science-health-climate-s-cluster-2e088421a3155dfd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Defra International indicator results – Statement of voluntary application of the Code of Practice for Statistics",
+      "deck": "Statement of voluntary application of the Code of Practice for Statistics.",
+      "whatChanged": [
+        "Statement of voluntary application of the Code of Practice for Statistics."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T13:08:34.000Z",
+      "updatedAt": "2026-10-12T13:08:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a4477341ad69faf2",
+      "slug": "science-health-climate-s-cluster-a4477341ad69faf2",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "New ‘one stop shop’ for flood preparedness launched as we approach more weather whiplash",
+      "deck": "'Flood action online' brings together clear, actionable guidance for people to check their flood risk and find the latest weather alerts",
+      "whatChanged": [
+        "'Flood action online' brings together clear, actionable guidance for people to check their flood risk and find the latest weather alerts"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-11T23:01:02.000Z",
+      "updatedAt": "2026-10-11T23:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T09:14:41.000Z",
+      "updatedAt": "2026-10-12T09:14:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f305549c8cad98f4",
+      "slug": "technology-ai-s-cluster-f305549c8cad98f4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission welcomes adoption of €115 million ‘AGILE' programme for rapid defence innovation",
+      "deck": "European Commission Press release Brussels, 12 Oct 2026 The European Commission welcomes the adoption of the Regulation establishing Programme for agile and rapid defence innovation (AGILE) which will bring disruptive defence technology...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 12 Oct 2026 The European Commission welcomes the adoption of the Regulation establishing Programme for agile and rapid defence innovation (AGILE) which will bring disruptive defence technology from the lab to the field at record speed. The new €115 million funding tool will provide dedicated support to small and medium sized enterprises (SMEs), including start-ups and scale ups to develop innovative defence solutions and support their uptake."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T07:44:05.000Z",
+      "updatedAt": "2026-10-12T07:44:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5db2cd1108cf382b",
+      "slug": "culture-entertainment-s-cluster-5db2cd1108cf382b",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "New 'Missy and Stanley's Tale' film helps the public prepare for flooding risk",
+      "deck": "Created in partnership with Aardman, the Environment Agency and East Sussex County Council",
+      "whatChanged": [
+        "Created in partnership with Aardman, the Environment Agency and East Sussex County Council"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T10:09:51.000Z",
+      "updatedAt": "2026-10-12T10:09:51.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "New pioneering certificates to help homeowners cut flood risk",
+      "url": "https://www.gov.uk/government/news/new-pioneering-certificates-to-help-homeowners-cut-flood-risk",
+      "sourceType": "official",
+      "publishedAt": "2026-10-09T09:16:59.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Data Use and Access Act 2025: plans for commencement",
+      "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+      "sourceType": "official",
+      "publishedAt": "2026-09-28T15:02:55.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Taking part in the UK Emissions Trading Scheme markets",
+      "url": "https://www.gov.uk/government/publications/taking-part-in-the-uk-emissions-trading-scheme-markets",
+      "sourceType": "official",
+      "publishedAt": "2026-10-05T15:25:06.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Press remarks by Commissioner Hoekstra following the Environment (ENVI) Council",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2145",
+      "sourceType": "official",
+      "publishedAt": "2026-10-05T22:00:00.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "The United Kingdom will continue to champion the Colombia Peace Agreement through implementation at local levels: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/the-united-kingdom-will-continue-to-champion-the-colombia-peace-agreement-through-implementation-at-local-levels-uk-statement-at-the-un-security-counc",
+      "sourceType": "official",
+      "publishedAt": "2026-10-09T13:35:03.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Measures from the adult social care outcomes framework, England: 2024 to 2025",
+      "url": "https://www.gov.uk/government/statistics/measures-from-the-adult-social-care-outcomes-framework-england-2024-to-2025",
+      "sourceType": "official",
+      "publishedAt": "2026-10-06T09:41:18.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Madhumay Mallik"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
