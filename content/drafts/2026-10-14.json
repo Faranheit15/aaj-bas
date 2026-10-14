@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-14T05:08:12.596Z",
+  "updatedAt": "2026-10-14T05:08:12.596Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-9a2e42ec3cc3ddc2",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-769976f589a4b648",
+    "s-cluster-8d4ccb2d8aeebb3a",
+    "s-cluster-470150aec7ab41c7",
+    "s-cluster-7c3a9ab4daad6304",
+    "s-cluster-8d4cc82d8aeeb621",
+    "s-cluster-89f670819dad5083"
+  ],
+  "interestPools": {
+    "business-economy": [
+      "s-cluster-893b83b74ad54773",
+      "s-cluster-9c1d79073c97439b",
+      "s-cluster-0d3e4471d5c481ef"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-5b604d400126fa57",
+      "s-cluster-7b032159e9d6094c",
+      "s-cluster-1b4ed5b47010e213"
+    ],
+    "science-health-climate": [
+      "s-cluster-1d78bcd6222c9ca8",
+      "s-cluster-71db753925ab003c",
+      "s-cluster-1ebfa36bf2861cb6"
+    ],
+    "technology-ai": [
+      "s-cluster-616a38339b5de780",
+      "s-cluster-f305549c8cad98f4",
+      "s-cluster-01ccd863d50d749a"
+    ],
+    "culture-entertainment": ["s-cluster-5db2cd1108cf382b"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-9a2e42ec3cc3ddc2",
+      "slug": "policy-geopolitics-s-cluster-9a2e42ec3cc3ddc2",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Mexico travel advice",
+      "deck": "FCDO travel advice for Mexico. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Mexico. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T08:45:22.000Z",
+      "updatedAt": "2026-10-13T18:31:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T15:42:51.000Z",
+      "updatedAt": "2026-10-13T15:42:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-769976f589a4b648",
+      "slug": "india-s-cluster-769976f589a4b648",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Stronger protections for heating oil customers",
+      "deck": "Reforms to the heating oil sector are being planned to ensure stronger regulation and protections for consumers",
+      "whatChanged": [
+        "Reforms to the heating oil sector are being planned to ensure stronger regulation and protections for consumers"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T15:33:05.000Z",
+      "updatedAt": "2026-10-13T15:33:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d4ccb2d8aeebb3a",
+      "slug": "india-s-cluster-8d4ccb2d8aeebb3a",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Opening remarks by Commissioner Serafin at the General Affairs Council in Luxembourg",
+      "deck": "European Commission Speech Luxembourg, 13 Oct 2026 Dear Ministers, dear Presidency, I want to start by thanking Thomas and his team for their hard work in preparing a revised nego-box. I have heard a lot of crit...",
+      "whatChanged": [
+        "European Commission Speech Luxembourg, 13 Oct 2026 Dear Ministers, dear Presidency, I want to start by thanking Thomas and his team for their hard work in preparing a revised nego-box. I have heard a lot of crit..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T15:25:37.000Z",
+      "updatedAt": "2026-10-13T15:25:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-470150aec7ab41c7",
+      "slug": "policy-geopolitics-s-cluster-470150aec7ab41c7",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom continues to support the humanitarian response in the DRC, including through our assistance to the Ebola response: UK statement at the UN...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on the Great Lakes Region.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on the Great Lakes Region."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T16:42:09.000Z",
+      "updatedAt": "2026-10-13T16:42:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7c3a9ab4daad6304",
+      "slug": "science-health-climate-s-cluster-7c3a9ab4daad6304",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Rabies quarantine: authorised premises and carriers",
+      "deck": "List of rabies quarantine premises and transporters authorised by the Department for Environment, Food and Rural Affairs.",
+      "whatChanged": [
+        "List of rabies quarantine premises and transporters authorised by the Department for Environment, Food and Rural Affairs."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T15:58:57.000Z",
+      "updatedAt": "2026-10-13T15:58:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d4cc82d8aeeb621",
+      "slug": "world-s-cluster-8d4cc82d8aeeb621",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's opening speech at the event, 'Water Innovation Europe 2026'",
+      "deck": "European Commission Speech Dublin, 13 Oct 2026 Distinguished guests, ladies and gentlemen, I am delighted to be back in Dublin and happy to once again open the Water Innovation Europe conference. Let m...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 13 Oct 2026 Distinguished guests, ladies and gentlemen, I am delighted to be back in Dublin and happy to once again open the Water Innovation Europe conference. Let m..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T13:06:33.000Z",
+      "updatedAt": "2026-10-13T13:06:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-89f670819dad5083",
+      "slug": "business-economy-s-cluster-89f670819dad5083",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Policy paper: Heating oil: government response to CMA market study",
+      "deck": "Response to the Competition and Markets Authority (CMA) market study into the retail supply of heating oil for domestic use in the UK.",
+      "whatChanged": [
+        "Response to the Competition and Markets Authority (CMA) market study into the retail supply of heating oil for domestic use in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T09:58:53.000Z",
+      "updatedAt": "2026-10-13T09:58:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-893b83b74ad54773",
+      "slug": "business-economy-s-cluster-893b83b74ad54773",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Respect for Syria’s sovereignty and territorial integrity remains essential for long-term stability, political progress and economic recovery: UK statement a...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Syria."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T15:42:00.000Z",
+      "updatedAt": "2026-10-13T15:42:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9c1d79073c97439b",
+      "slug": "business-economy-s-cluster-9c1d79073c97439b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Businesses set to be protected from Argentinian economic coercion",
+      "deck": "Businesses investing in the Falklands Islands are set to be protected from Argentinian domestic measures targeting companies and individuals involved in lawful economic activity",
+      "whatChanged": [
+        "Businesses investing in the Falklands Islands are set to be protected from Argentinian domestic measures targeting companies and individuals involved in lawful economic activity"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T14:07:00.000Z",
+      "updatedAt": "2026-10-13T14:07:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0d3e4471d5c481ef",
+      "slug": "business-economy-s-cluster-0d3e4471d5c481ef",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Press remarks by Commissioner Šefčovič on the EU-Türkiye High-Level Dialogue on Trade",
+      "deck": "European Commission Speech Brussels, 13 Oct 2026 Good evening. I am pleased to welcome Minister Bolat to Brussels, as we co-chair our High-Level Dialogue on Trade. We meet often at fora like the OECD and the G...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 13 Oct 2026 Good evening. I am pleased to welcome Minister Bolat to Brussels, as we co-chair our High-Level Dialogue on Trade. We meet often at fora like the OECD and the G..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T22:00:00.000Z",
+      "updatedAt": "2026-10-12T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5b604d400126fa57",
+      "slug": "policy-geopolitics-s-cluster-5b604d400126fa57",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Joint statement on the postponement of Palestinian elections",
+      "deck": "Statement from the Foreign Ministers of Australia, Canada, France and the United Kingdom",
+      "whatChanged": [
+        "Statement from the Foreign Ministers of Australia, Canada, France and the United Kingdom"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T14:31:00.000Z",
+      "updatedAt": "2026-10-13T14:31:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b032159e9d6094c",
+      "slug": "policy-geopolitics-s-cluster-7b032159e9d6094c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/Australia: Agreement on Cooperation and Mutual Administrative Assistance in Customs Matters [CS No.1/2026]",
+      "deck": "This treaty was presented to Parliament in October 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in October 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T13:00:01.000Z",
+      "updatedAt": "2026-10-13T13:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1b4ed5b47010e213",
+      "slug": "policy-geopolitics-s-cluster-1b4ed5b47010e213",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Back Zelenskyy and Ukraine with an energy ceasefire, Foreign Secretary tells European partners",
+      "deck": "The Foreign Secretary attends Warsaw Security Forum today, which takes place as Ukraine faces another freezing winter, amid escalating Russian energy strikes",
+      "whatChanged": [
+        "The Foreign Secretary attends Warsaw Security Forum today, which takes place as Ukraine faces another freezing winter, amid escalating Russian energy strikes"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T09:34:00.000Z",
+      "updatedAt": "2026-10-13T09:34:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1d78bcd6222c9ca8",
+      "slug": "science-health-climate-s-cluster-1d78bcd6222c9ca8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Medical repatriation companies in the UK",
+      "deck": "List of medical repatriation companies for British nationals who are seriously ill or injured abroad and need medical evacuation to the UK.",
+      "whatChanged": [
+        "List of medical repatriation companies for British nationals who are seriously ill or injured abroad and need medical evacuation to the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T09:22:41.000Z",
+      "updatedAt": "2026-10-13T09:22:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-71db753925ab003c",
+      "slug": "science-health-climate-s-cluster-71db753925ab003c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Carbon capture, usage and storage (CCUS): business models",
+      "deck": "Updates on the proposed commercial frameworks for transport and storage, power, and industrial carbon capture business models.",
+      "whatChanged": [
+        "Updates on the proposed commercial frameworks for transport and storage, power, and industrial carbon capture business models."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T09:01:23.000Z",
+      "updatedAt": "2026-10-13T09:01:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1ebfa36bf2861cb6",
+      "slug": "science-health-climate-s-cluster-1ebfa36bf2861cb6",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in Slovakia",
+      "deck": "Information about support for British nationals experiencing mental health difficulties in Slovakia.",
+      "whatChanged": [
+        "Information about support for British nationals experiencing mental health difficulties in Slovakia."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T07:31:58.000Z",
+      "updatedAt": "2026-10-13T07:31:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T09:14:41.000Z",
+      "updatedAt": "2026-10-12T09:14:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f305549c8cad98f4",
+      "slug": "technology-ai-s-cluster-f305549c8cad98f4",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission welcomes adoption of €115 million ‘AGILE' programme for rapid defence innovation",
+      "deck": "European Commission Press release Brussels, 12 Oct 2026 The European Commission welcomes the adoption of the Regulation establishing Programme for agile and rapid defence innovation (AGILE) which will bring disruptive defence technology...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 12 Oct 2026 The European Commission welcomes the adoption of the Regulation establishing Programme for agile and rapid defence innovation (AGILE) which will bring disruptive defence technology from the lab to the field at record speed. The new €115 million funding tool will provide dedicated support to small and medium sized enterprises (SMEs), including start-ups and scale ups to develop innovative defence solutions and support their uptake."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T07:44:05.000Z",
+      "updatedAt": "2026-10-12T07:44:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5db2cd1108cf382b",
+      "slug": "culture-entertainment-s-cluster-5db2cd1108cf382b",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "New 'Missy and Stanley's Tale' film helps the public prepare for flooding risk",
+      "deck": "Created in partnership with Aardman, the Environment Agency and East Sussex County Council",
+      "whatChanged": [
+        "Created in partnership with Aardman, the Environment Agency and East Sussex County Council"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T10:09:51.000Z",
+      "updatedAt": "2026-10-12T10:09:51.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Mauritius travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/mauritius",
+      "sourceType": "official",
+      "publishedAt": "2026-10-12T16:16:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Rabies quarantine: authorised premises and carriers",
+      "url": "https://www.gov.uk/government/publications/rabies-quarantine-authorised-premises-and-carriers",
+      "sourceType": "official",
+      "publishedAt": "2026-10-09T14:38:15.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Stronger protections for heating oil customers",
+      "url": "https://www.gov.uk/government/news/stronger-protections-for-heating-oil-customers",
+      "sourceType": "official",
+      "publishedAt": "2026-10-07T23:01:02.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Opening remarks by Commissioner Serafin at the General Affairs Council in Luxembourg",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2157",
+      "sourceType": "official",
+      "publishedAt": "2026-10-06T22:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Telecoms Modernisation: Critical National Infrastructure Charter",
+      "url": "https://www.gov.uk/government/publications/telecoms-modernisation-critical-national-infrastructure-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T08:30:03.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
