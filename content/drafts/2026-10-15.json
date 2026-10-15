@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-15",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-15T04:56:02.959Z",
+  "updatedAt": "2026-10-15T04:56:02.959Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-2bd2ebc5957aded9",
+    "s-cluster-2da35dc0b7de975a",
+    "s-cluster-8d42bc2d8ae64d38",
+    "s-cluster-8d42b62d8ae64306",
+    "s-cluster-e7c393c692bfd2ef",
+    "s-cluster-8e3bb7241da8d787",
+    "s-cluster-ef0957639efbcb9d",
+    "s-cluster-3e83961b7691735b"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-2ea114d213dc10fb",
+      "s-cluster-8ea99b1caa3242ae",
+      "s-cluster-470150aec7ab41c7"
+    ],
+    "business-economy": [
+      "s-cluster-d9f07dbabc1dec59",
+      "s-cluster-042ed6c3b98a5c90",
+      "s-cluster-7c6800d338a3228d"
+    ],
+    "culture-entertainment": ["s-cluster-f316519c8cbc070e"],
+    "technology-ai": [
+      "s-cluster-f316549c8cbc0c27",
+      "s-cluster-8d4cc62d8aeeb2bb",
+      "s-cluster-616a38339b5de780"
+    ],
+    "science-health-climate": [
+      "s-cluster-f30bbe9c8cb2b8c0",
+      "s-cluster-7c3a9ab4daad6304",
+      "s-cluster-71db753925ab003c"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-2bd2ebc5957aded9",
+      "slug": "india-s-cluster-2bd2ebc5957aded9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Britain funds critical repairs to Chornobyl nuclear power plant damaged by Russian drone attack",
+      "deck": "UK to provide £17m in funding towards repairs to the Chornobyl nuclear power plant damaged by Russian drone strike last year.",
+      "whatChanged": [
+        "UK to provide £17m in funding towards repairs to the Chornobyl nuclear power plant damaged by Russian drone strike last year."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T23:01:02.000Z",
+      "updatedAt": "2026-10-14T23:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2da35dc0b7de975a",
+      "slug": "world-s-cluster-2da35dc0b7de975a",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "We are witnessing an industrial-scale assault by hostile actors like Russia on the information environment in the UK: UK Statement at the UN First Committee",
+      "deck": "Statement by David Riley, Ambassador and Permanent Representative to the Conference on Disarmament in Geneva.",
+      "whatChanged": [
+        "Statement by David Riley, Ambassador and Permanent Representative to the Conference on Disarmament in Geneva."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T00:04:27.000Z",
+      "updatedAt": "2026-10-15T00:04:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d42bc2d8ae64d38",
+      "slug": "science-health-climate-s-cluster-8d42bc2d8ae64d38",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's speech at the Inaugural Convening of the Women Public Sector Climate Leaders Network",
+      "deck": "European Commission Speech Brussels, 14 Oct 2026 Good morning, I am delighted to be part of today's inaugural event. And I'm delighted to be sharing a room with such inspirational and impressive leaders. ...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 14 Oct 2026 Good morning, I am delighted to be part of today's inaugural event. And I'm delighted to be sharing a room with such inspirational and impressive leaders. ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T20:24:59.000Z",
+      "updatedAt": "2026-10-14T20:24:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d42b62d8ae64306",
+      "slug": "india-s-cluster-8d42b62d8ae64306",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Opening Remarks by Commissioner Hansen at the Farmers' Congress in Sweden",
+      "deck": "European Commission Speech Stockholm, 14 Oct 2026 Commissioner Hansen addresses the Farmers' Congress in Sweden, setting out his vision for a robust, innovative and resilient European agriculture, anchored in a strong common policy.",
+      "whatChanged": [
+        "European Commission Speech Stockholm, 14 Oct 2026 Commissioner Hansen addresses the Farmers' Congress in Sweden, setting out his vision for a robust, innovative and resilient European agriculture, anchored in a strong common policy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T09:37:47.000Z",
+      "updatedAt": "2026-10-14T09:37:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e7c393c692bfd2ef",
+      "slug": "india-s-cluster-e7c393c692bfd2ef",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Reciprocal healthcare privacy notice",
+      "deck": "Sets out how DHSC and NHSBSA collect and use personal information as part of the process of providing reciprocal healthcare.",
+      "whatChanged": [
+        "Sets out how DHSC and NHSBSA collect and use personal information as part of the process of providing reciprocal healthcare."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T15:37:18.000Z",
+      "updatedAt": "2026-10-14T15:37:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8e3bb7241da8d787",
+      "slug": "science-health-climate-s-cluster-8e3bb7241da8d787",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Genetically modified organisms: Lallemand UK Limited (GM/26/01)",
+      "deck": "Inviting representations on an application from Lallemand UK Limited to market a genetically modified yeast, reference GM/26/01",
+      "whatChanged": [
+        "Inviting representations on an application from Lallemand UK Limited to market a genetically modified yeast, reference GM/26/01"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T12:28:34.000Z",
+      "updatedAt": "2026-10-14T12:28:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ef0957639efbcb9d",
+      "slug": "business-economy-s-cluster-ef0957639efbcb9d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Plan to unlock organic market for stronger farms, more homegrown food",
+      "deck": "Long-term plan to grow England’s organic sector and help farmers meet growing consumer demand launched",
+      "whatChanged": [
+        "Long-term plan to grow England’s organic sector and help farmers meet growing consumer demand launched"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T10:56:55.000Z",
+      "updatedAt": "2026-10-14T10:56:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2ea114d213dc10fb",
+      "slug": "policy-geopolitics-s-cluster-2ea114d213dc10fb",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Kazakhstan travel advice",
+      "deck": "FCDO travel advice for Kazakhstan. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Kazakhstan. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T14:04:04.000Z",
+      "updatedAt": "2026-10-14T19:09:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8ea99b1caa3242ae",
+      "slug": "policy-geopolitics-s-cluster-8ea99b1caa3242ae",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The UN sanctions regime remains an essential tool to address insecurity in Haiti and to alleviate the suffering of the Haitian people: UK Explanation of Vote...",
+      "deck": "UK Explanation of Vote delivered by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, following the UN Security Council vote on Haiti.",
+      "whatChanged": [
+        "UK Explanation of Vote delivered by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, following the UN Security Council vote on Haiti."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T15:45:56.000Z",
+      "updatedAt": "2026-10-14T15:45:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-470150aec7ab41c7",
+      "slug": "policy-geopolitics-s-cluster-470150aec7ab41c7",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom continues to support the humanitarian response in the DRC, including through our assistance to the Ebola response: UK statement at the UN...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on the Great Lakes Region.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on the Great Lakes Region."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T16:42:09.000Z",
+      "updatedAt": "2026-10-13T16:42:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d9f07dbabc1dec59",
+      "slug": "business-economy-s-cluster-d9f07dbabc1dec59",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Libyan parties must honour commitments made to give security, economic opportunity and democratic freedom to the Libyan people: UK statement at the UN Securi...",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Libya",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Libya"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T16:03:05.000Z",
+      "updatedAt": "2026-10-14T16:03:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-042ed6c3b98a5c90",
+      "slug": "business-economy-s-cluster-042ed6c3b98a5c90",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Foreign Secretary, Ed Miliband, speech: A global financial system that works for all – action on debt, investment and resilience",
+      "deck": "The Foreign Secretary delivered a keynote speech at a Rockefeller Foundation event in Bangkok, where he proposed action on developing countries’ debt, private investment, support for fragile states and resilience to shocks set to be inte...",
+      "whatChanged": [
+        "The Foreign Secretary delivered a keynote speech at a Rockefeller Foundation event in Bangkok, where he proposed action on developing countries’ debt, private investment, support for fragile states and resilience to shocks set to be intensified by El Nino"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T11:51:53.000Z",
+      "updatedAt": "2026-10-14T11:51:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7c6800d338a3228d",
+      "slug": "business-economy-s-cluster-7c6800d338a3228d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: Rural Economic Bulletin",
+      "deck": "Economics Statistics for Rural England - October 2026",
+      "whatChanged": ["Economics Statistics for Rural England - October 2026"],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T08:30:09.000Z",
+      "updatedAt": "2026-10-14T08:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f316519c8cbc070e",
+      "slug": "culture-entertainment-s-cluster-f316519c8cbc070e",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission awards six projects making lasting contributions for Europe's cohesion at REGIOSTARS ceremony",
+      "deck": "European Commission Press release Brussels, 14 Oct 2026 Six outstanding EU-funded projects, and the people behind them, were honored last night in Brussels at the 2026 REGIOSTARS Awards, held as part of the 24th European Week of Regions...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 14 Oct 2026 Six outstanding EU-funded projects, and the people behind them, were honored last night in Brussels at the 2026 REGIOSTARS Awards, held as part of the 24th European Week of Regions and Cities."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T16:10:29.000Z",
+      "updatedAt": "2026-10-14T16:10:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f316549c8cbc0c27",
+      "slug": "technology-ai-s-cluster-f316549c8cbc0c27",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Eurobarometer survey highlights growing use of AI in European companies",
+      "deck": "European Commission Press release Brussels, 14 Oct 2026 European businesses rely increasingly on artificial intelligence (AI). That is what the results of the latest Eurobarometer survey showed, published today.",
+      "whatChanged": [
+        "European Commission Press release Brussels, 14 Oct 2026 European businesses rely increasingly on artificial intelligence (AI). That is what the results of the latest Eurobarometer survey showed, published today."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T08:42:46.000Z",
+      "updatedAt": "2026-10-14T08:42:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d4cc62d8aeeb2bb",
+      "slug": "technology-ai-s-cluster-8d4cc62d8aeeb2bb",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Speech by Executive Vice-President Virkkunen at the International AI Summit in Dublin",
+      "deck": "European Commission Speech Dublin, 14 Oct 2026 Prime Minister Martin, Minister Smyth, Minister Burke, thank you for inviting me. I would like to begin with a remarkable story from Ireland's past. In 1858, on...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 14 Oct 2026 Prime Minister Martin, Minister Smyth, Minister Burke, thank you for inviting me. I would like to begin with a remarkable story from Ireland's past. In 1858, on..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T22:00:00.000Z",
+      "updatedAt": "2026-10-13T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T09:14:41.000Z",
+      "updatedAt": "2026-10-12T09:14:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f30bbe9c8cb2b8c0",
+      "slug": "science-health-climate-s-cluster-f30bbe9c8cb2b8c0",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Commission accepts commitments by Sanofi to address possible anticompetitive disparagement of competing flu vaccine for vulnerable patients",
+      "deck": "European Commission Press release Brussels, 14 Oct 2026 The European Commission has made commitments offered by Sanofi legally binding under EU antitrust rules. The commitments relate to the Commission's preliminary competition concerns...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 14 Oct 2026 The European Commission has made commitments offered by Sanofi legally binding under EU antitrust rules. The commitments relate to the Commission's preliminary competition concerns relating to Sanofi's alleged disparagement campaigns in Germany and France against Fluad, the only enhanced flu vaccine for vulnerable patients that competes with Sanofi's Efluelda."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T22:00:00.000Z",
+      "updatedAt": "2026-10-13T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7c3a9ab4daad6304",
+      "slug": "science-health-climate-s-cluster-7c3a9ab4daad6304",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Rabies quarantine: authorised premises and carriers",
+      "deck": "List of rabies quarantine premises and transporters authorised by the Department for Environment, Food and Rural Affairs.",
+      "whatChanged": [
+        "List of rabies quarantine premises and transporters authorised by the Department for Environment, Food and Rural Affairs."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T15:58:57.000Z",
+      "updatedAt": "2026-10-13T15:58:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-71db753925ab003c",
+      "slug": "science-health-climate-s-cluster-71db753925ab003c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Carbon capture, usage and storage (CCUS): business models",
+      "deck": "Updates on the proposed commercial frameworks for transport and storage, power, and industrial carbon capture business models.",
+      "whatChanged": [
+        "Updates on the proposed commercial frameworks for transport and storage, power, and industrial carbon capture business models."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T09:01:23.000Z",
+      "updatedAt": "2026-10-13T09:01:23.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "We are witnessing an industrial-scale assault by hostile actors like Russia on the information environment in the UK: UK Statement at the UN First Committee",
+      "url": "https://www.gov.uk/government/speeches/we-are-witnessing-an-industrial-scale-assault-by-hostile-actors-like-russia-on-the-information-environment-in-the-uk-uk-statement-at-the-un-first-comm",
+      "sourceType": "official",
+      "publishedAt": "2026-10-13T13:00:01.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Commissioner Roswall's speech at the Inaugural Convening of the Women Public Sector Climate Leaders Network",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2168",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T12:17:26.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Reciprocal healthcare privacy notice",
+      "url": "https://www.gov.uk/government/publications/reciprocal-healthcare-privacy-notice",
+      "sourceType": "official",
+      "publishedAt": "2026-10-07T09:14:08.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Using leftover milk and milk products as farm animal feed",
+      "url": "https://www.gov.uk/guidance/using-leftover-milk-and-milk-products-as-farm-animal-feed",
+      "sourceType": "official",
+      "publishedAt": "2026-10-12T13:23:35.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Zulker Naeen"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Telecoms Modernisation: Critical National Infrastructure Charter",
+      "url": "https://www.gov.uk/government/publications/telecoms-modernisation-critical-national-infrastructure-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T08:30:03.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Building an energy system that delivers for all",
+      "url": "https://www.gov.uk/government/speeches/building-an-energy-system-that-delivers-for-all",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T15:00:33.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
