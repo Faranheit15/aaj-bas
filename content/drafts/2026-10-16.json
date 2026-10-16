@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-16",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-16T04:46:22.762Z",
+  "updatedAt": "2026-10-16T04:46:22.762Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-9f7e07c3fbed5860",
+    "s-cluster-8d46372d8ae95410",
+    "s-cluster-1f6cece0149b058a",
+    "s-cluster-b165b6a147aca7a6",
+    "s-cluster-7187b8cdaebadb55",
+    "s-cluster-b7874c9da75aeb9a",
+    "s-cluster-1e7b359e2b69f23c",
+    "s-cluster-3e83961b7691735b"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-7a849c0278b8eec4",
+      "s-cluster-d15c98ccd161f2b5",
+      "s-cluster-4334a247725d03ca"
+    ],
+    "science-health-climate": [
+      "s-cluster-71efa971ce2877c1",
+      "s-cluster-9a16c7c53e6946fe",
+      "s-cluster-8d42bc2d8ae64d38"
+    ],
+    "technology-ai": [
+      "s-cluster-f312d39c8cb8fb1d",
+      "s-cluster-f316549c8cbc0c27",
+      "s-cluster-8d4cc62d8aeeb2bb"
+    ],
+    "business-economy": [
+      "s-cluster-f75ef1fa49d3ec4f",
+      "s-cluster-d9f07dbabc1dec59",
+      "s-cluster-ef0957639efbcb9d"
+    ],
+    "culture-entertainment": ["s-cluster-f316519c8cbc070e"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-9f7e07c3fbed5860",
+      "slug": "policy-geopolitics-s-cluster-9f7e07c3fbed5860",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom has acted in defence of the two-state solution, and we continue to work with partners to secure lasting peace and security for Israelis an...",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on the Middle East.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on the Middle East."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T20:03:00.000Z",
+      "updatedAt": "2026-10-15T20:03:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d46372d8ae95410",
+      "slug": "india-s-cluster-8d46372d8ae95410",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's keynote address at the 12th Congress of European Farmers",
+      "deck": "European Commission Speech Stockholm, 15 Oct 2026 Lennart, Palle, Minister, Farmers, Ladies and gentlemen It is a pleasure to be part of the 2026 Congress of European Farmers. And a pleasure to discuss a q...",
+      "whatChanged": [
+        "European Commission Speech Stockholm, 15 Oct 2026 Lennart, Palle, Minister, Farmers, Ladies and gentlemen It is a pleasure to be part of the 2026 Congress of European Farmers. And a pleasure to discuss a q..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T10:44:35.000Z",
+      "updatedAt": "2026-10-15T10:44:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1f6cece0149b058a",
+      "slug": "india-s-cluster-1f6cece0149b058a",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Policy paper: The UK and the Arctic: an update to the United Kingdom’s Arctic Policy Framework",
+      "deck": "This document sets out the UK government's approach to the Arctic, and provides an update to the UK Arctic policy framework.",
+      "whatChanged": [
+        "This document sets out the UK government's approach to the Arctic, and provides an update to the UK Arctic policy framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T14:30:03.000Z",
+      "updatedAt": "2026-10-15T16:10:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b165b6a147aca7a6",
+      "slug": "india-s-cluster-b165b6a147aca7a6",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Enabling a Natural Capital Approach (ENCA): Guidance",
+      "deck": "Enabling a Natural Capital Approach (ENCA) guidance is a comprehensive document providing information and resources for Natural Capital.",
+      "whatChanged": [
+        "Enabling a Natural Capital Approach (ENCA) guidance is a comprehensive document providing information and resources for Natural Capital."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T15:44:28.000Z",
+      "updatedAt": "2026-10-15T15:44:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7187b8cdaebadb55",
+      "slug": "science-health-climate-s-cluster-7187b8cdaebadb55",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Form: Defra approved disinfectant: application",
+      "deck": "Form for a manufacturing company to apply for Defra approval of a disinfectant to be used in the event of an animal disease outbreak.",
+      "whatChanged": [
+        "Form for a manufacturing company to apply for Defra approval of a disinfectant to be used in the event of an animal disease outbreak."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T15:43:24.000Z",
+      "updatedAt": "2026-10-15T15:43:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b7874c9da75aeb9a",
+      "slug": "policy-geopolitics-s-cluster-b7874c9da75aeb9a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Rescheduling of the EU-GCC Summit",
+      "deck": "European Commission Statement Brussels, 15 Oct 2026 The second Summit between the European Union and the Gulf Cooperation Council, originally planned for 24 October 2026 in Riyadh, Saudi Arabia, has been postpone...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 15 Oct 2026 The second Summit between the European Union and the Gulf Cooperation Council, originally planned for 24 October 2026 in Riyadh, Saudi Arabia, has been postpone..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T10:31:50.000Z",
+      "updatedAt": "2026-10-15T10:31:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1e7b359e2b69f23c",
+      "slug": "science-health-climate-s-cluster-1e7b359e2b69f23c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Consultants in public health: appointments guidance",
+      "deck": "Sets out arrangements of public health consultant and consultant academic appointments by local authorities and higher education institutions.",
+      "whatChanged": [
+        "Sets out arrangements of public health consultant and consultant academic appointments by local authorities and higher education institutions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T07:55:20.000Z",
+      "updatedAt": "2026-10-15T07:55:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7a849c0278b8eec4",
+      "slug": "policy-geopolitics-s-cluster-7a849c0278b8eec4",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Senegal travel advice",
+      "deck": "FCDO travel advice for Senegal. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Senegal. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T09:00:14.000Z",
+      "updatedAt": "2026-10-15T18:01:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T10:56:03.000Z",
+      "updatedAt": "2026-10-15T10:56:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T10:55:54.000Z",
+      "updatedAt": "2026-10-15T10:55:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-71efa971ce2877c1",
+      "slug": "science-health-climate-s-cluster-71efa971ce2877c1",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: Defra statistics release calendar, annual and monthly",
+      "deck": "A calendar of release dates across the group for the year ahead, providing a split by month.",
+      "whatChanged": [
+        "A calendar of release dates across the group for the year ahead, providing a split by month."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T13:49:39.000Z",
+      "updatedAt": "2026-10-15T13:26:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9a16c7c53e6946fe",
+      "slug": "science-health-climate-s-cluster-9a16c7c53e6946fe",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "How you'll be regulated: environmental permits",
+      "deck": "How the Environment Agency checks you're complying with your permit through assessments, inspections and permit reviews, and what happens if you do not follow the rules.",
+      "whatChanged": [
+        "How the Environment Agency checks you're complying with your permit through assessments, inspections and permit reviews, and what happens if you do not follow the rules."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T10:02:54.000Z",
+      "updatedAt": "2026-10-15T10:02:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d42bc2d8ae64d38",
+      "slug": "science-health-climate-s-cluster-8d42bc2d8ae64d38",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's speech at the Inaugural Convening of the Women Public Sector Climate Leaders Network",
+      "deck": "European Commission Speech Brussels, 14 Oct 2026 Good morning, I am delighted to be part of today's inaugural event. And I'm delighted to be sharing a room with such inspirational and impressive leaders. ...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 14 Oct 2026 Good morning, I am delighted to be part of today's inaugural event. And I'm delighted to be sharing a room with such inspirational and impressive leaders. ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T20:24:59.000Z",
+      "updatedAt": "2026-10-14T20:24:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f312d39c8cb8fb1d",
+      "slug": "technology-ai-s-cluster-f312d39c8cb8fb1d",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission launches RAISE pledging initiative to boost AI support for researchers across Europe",
+      "deck": "European Commission Press release Brussels, 15 Oct 2026 Today, at the European AI in Science Summit in Dublin, the European Commission launched the RAISE (Resource for AI Science in Europe) pledging initiative for AI in Science Enablers.",
+      "whatChanged": [
+        "European Commission Press release Brussels, 15 Oct 2026 Today, at the European AI in Science Summit in Dublin, the European Commission launched the RAISE (Resource for AI Science in Europe) pledging initiative for AI in Science Enablers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T12:03:07.000Z",
+      "updatedAt": "2026-10-15T12:03:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f316549c8cbc0c27",
+      "slug": "technology-ai-s-cluster-f316549c8cbc0c27",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Eurobarometer survey highlights growing use of AI in European companies",
+      "deck": "European Commission Press release Brussels, 14 Oct 2026 European businesses rely increasingly on artificial intelligence (AI). That is what the results of the latest Eurobarometer survey showed, published today.",
+      "whatChanged": [
+        "European Commission Press release Brussels, 14 Oct 2026 European businesses rely increasingly on artificial intelligence (AI). That is what the results of the latest Eurobarometer survey showed, published today."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T08:42:46.000Z",
+      "updatedAt": "2026-10-14T08:42:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d4cc62d8aeeb2bb",
+      "slug": "technology-ai-s-cluster-8d4cc62d8aeeb2bb",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Speech by Executive Vice-President Virkkunen at the International AI Summit in Dublin",
+      "deck": "European Commission Speech Dublin, 14 Oct 2026 Prime Minister Martin, Minister Smyth, Minister Burke, thank you for inviting me. I would like to begin with a remarkable story from Ireland's past. In 1858, on...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 14 Oct 2026 Prime Minister Martin, Minister Smyth, Minister Burke, thank you for inviting me. I would like to begin with a remarkable story from Ireland's past. In 1858, on..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-13T22:00:00.000Z",
+      "updatedAt": "2026-10-13T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f75ef1fa49d3ec4f",
+      "slug": "business-economy-s-cluster-f75ef1fa49d3ec4f",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Steady progress on the One Europe, One Market roadmap",
+      "deck": "European Commission Joint press release Brussels, 15 Oct 2026 In their second review of the joint declaration and roadmap, designed to boost economic growth, the EU institutions reaffirmed their commitment to timely delivery.",
+      "whatChanged": [
+        "European Commission Joint press release Brussels, 15 Oct 2026 In their second review of the joint declaration and roadmap, designed to boost economic growth, the EU institutions reaffirmed their commitment to timely delivery."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T06:36:43.000Z",
+      "updatedAt": "2026-10-15T06:36:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d9f07dbabc1dec59",
+      "slug": "business-economy-s-cluster-d9f07dbabc1dec59",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Libyan parties must honour commitments made to give security, economic opportunity and democratic freedom to the Libyan people: UK statement at the UN Securi...",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Libya",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Libya"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T16:03:05.000Z",
+      "updatedAt": "2026-10-14T16:03:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ef0957639efbcb9d",
+      "slug": "business-economy-s-cluster-ef0957639efbcb9d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Plan to unlock organic market for stronger farms, more homegrown food",
+      "deck": "Long-term plan to grow England’s organic sector and help farmers meet growing consumer demand launched",
+      "whatChanged": [
+        "Long-term plan to grow England’s organic sector and help farmers meet growing consumer demand launched"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T10:56:55.000Z",
+      "updatedAt": "2026-10-14T10:56:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f316519c8cbc070e",
+      "slug": "culture-entertainment-s-cluster-f316519c8cbc070e",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission awards six projects making lasting contributions for Europe's cohesion at REGIOSTARS ceremony *",
+      "deck": "European Commission Press release Brussels, 15 Oct 2026 Six outstanding EU-funded projects, and the people behind them, were honored last night in Brussels at the 2026 REGIOSTARS Awards, held as part of the 24th European Week of Regions...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 15 Oct 2026 Six outstanding EU-funded projects, and the people behind them, were honored last night in Brussels at the 2026 REGIOSTARS Awards, held as part of the 24th European Week of Regions and Cities."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T16:10:29.000Z",
+      "updatedAt": "2026-10-14T16:10:29.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "The United Kingdom has acted in defence of the two-state solution, and we continue to work with partners to secure lasting peace and security for Israelis and for Palestinians alike",
+      "url": "https://www.gov.uk/government/speeches/a-viable-palestinian-state-requires-not-only-recovery-in-gaza-and-political-progress-but-an-end-to-the-violence-displacement-and-settlement-expansion-",
+      "sourceType": "official",
+      "publishedAt": "2026-10-14T15:33:15.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Albuquerque (by video message) for the Malta's Financial Wellbeing Conference 2026: From Access to Trust",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2176",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T22:00:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Substances proposed as persistent organic pollutants (POPs) 2026: request for information",
+      "url": "https://www.gov.uk/government/publications/substances-proposed-as-persistent-organic-pollutants-pops-2026-request-for-information",
+      "sourceType": "official",
+      "publishedAt": "2026-10-14T08:30:09.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Independent report: COVID-19 vaccination in autumn 2026 and spring 2027: JCVI advice, 16 July 2025",
+      "url": "https://www.gov.uk/government/publications/covid-19-vaccination-in-autumn-2026-and-spring-2027-jcvi-advice-16-july-2025",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T08:29:33.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Zulker Naeen"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
