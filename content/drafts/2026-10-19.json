@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-19T04:59:51.265Z",
+  "updatedAt": "2026-10-19T04:59:51.265Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-b79b4a9da76b913e",
+    "s-cluster-1e7accbcc904b117",
+    "s-cluster-d384db656f194e83",
+    "s-cluster-2b39bbce7a493cd8",
+    "s-cluster-3e83961b7691735b",
+    "s-cluster-aab2ac7314fb2b67",
+    "s-cluster-97fc913d7356d34c",
+    "s-cluster-bbbbd51797bf3561"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-d37f9b2aa085b5fa",
+      "s-cluster-0bccd42bac45e165",
+      "s-cluster-3e0432a9ff9b3634"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-60c462a8e418ed4a",
+      "s-cluster-4334a247725d03ca",
+      "s-cluster-8d493f2d8aeb977f"
+    ],
+    "technology-ai": [
+      "s-cluster-a67b23d2a0b5a107",
+      "s-cluster-f591853791f5913f",
+      "s-cluster-01ccd863d50d749a"
+    ],
+    "business-economy": [
+      "s-cluster-0d3e4471d5c481ef",
+      "s-cluster-39ada460465cca74",
+      "s-cluster-3b3090387236d8eb"
+    ],
+    "culture-entertainment": [
+      "s-cluster-f2e6c29c8c93a34f",
+      "s-cluster-f316519c8cbc070e"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-b79b4a9da76b913e",
+      "slug": "india-s-cluster-b79b4a9da76b913e",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Commission statement on the protests in Albania",
+      "deck": "European Commission Statement Brussels, 18 Oct 2026 We condemn the use of violence in Tirana and other cities in Albania, including arson, attacks on State institutions and the destruction of public and private p...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 18 Oct 2026 We condemn the use of violence in Tirana and other cities in Albania, including arson, attacks on State institutions and the destruction of public and private p..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-18T15:31:57.000Z",
+      "updatedAt": "2026-10-18T15:31:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1e7accbcc904b117",
+      "slug": "india-s-cluster-1e7accbcc904b117",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "£140 million boost to urgent care to ease winter pressures on NHS",
+      "deck": "£140 million will fund 14 urgent care schemes, with 25 more sites opening for winter, to boost NHS capacity and ease pressure on A&E.",
+      "whatChanged": [
+        "£140 million will fund 14 urgent care schemes, with 25 more sites opening for winter, to boost NHS capacity and ease pressure on A&E."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-17T23:23:38.000Z",
+      "updatedAt": "2026-10-17T23:23:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d384db656f194e83",
+      "slug": "policy-geopolitics-s-cluster-d384db656f194e83",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Albania travel advice",
+      "deck": "FCDO travel advice for Albania. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Albania. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-15T15:44:54.000Z",
+      "updatedAt": "2026-10-17T19:49:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2b39bbce7a493cd8",
+      "slug": "india-s-cluster-2b39bbce7a493cd8",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "What India’s ‘Cockroach’ protests reveal about digital authoritarianism",
+      "deck": "“Democratic freedoms depend not only on protection from direct state violence but on citizens being able to organise without assuming their participation is permanently recorded.”",
+      "whatChanged": [
+        "“Democratic freedoms depend not only on protection from direct state violence but on citizens being able to organise without assuming their participation is permanently recorded.”"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T08:33:09.000Z",
+      "updatedAt": "2026-09-15T08:33:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-aab2ac7314fb2b67",
+      "slug": "business-economy-s-cluster-aab2ac7314fb2b67",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Regulations: batteries and accumulators",
+      "deck": "Guidance for manufacturers on placing batteries and accumulators on the market.",
+      "whatChanged": [
+        "Guidance for manufacturers on placing batteries and accumulators on the market."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-17T08:30:02.000Z",
+      "updatedAt": "2026-10-17T08:30:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-97fc913d7356d34c",
+      "slug": "policy-geopolitics-s-cluster-97fc913d7356d34c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "As we remember the victims of El Fasher, the parties need to protect civilians, allow humanitarian assistance to reach those who need it, and choose diplomac...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Sudan.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Sudan."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T15:38:55.000Z",
+      "updatedAt": "2026-10-16T15:38:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bbbbd51797bf3561",
+      "slug": "science-health-climate-s-cluster-bbbbd51797bf3561",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "£1.6m fine for Anglian Water's pollution of Essex river",
+      "deck": "Anglian Water has been fined £1.6m after repeated sewage pollution of the River Brain over six weeks in 2022.",
+      "whatChanged": [
+        "Anglian Water has been fined £1.6m after repeated sewage pollution of the River Brain over six weeks in 2022."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T17:35:11.000Z",
+      "updatedAt": "2026-10-16T17:35:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0bccd42bac45e165",
+      "slug": "science-health-climate-s-cluster-0bccd42bac45e165",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Independent report: Thirlwall Inquiry report",
+      "deck": "Report and recommendations of the public inquiry established to examine the events at the Countess of Chester Hospital from 2015 to 2018.",
+      "whatChanged": [
+        "Report and recommendations of the public inquiry established to examine the events at the Countess of Chester Hospital from 2015 to 2018."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T13:21:52.000Z",
+      "updatedAt": "2026-10-16T13:21:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e0432a9ff9b3634",
+      "slug": "science-health-climate-s-cluster-3e0432a9ff9b3634",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Air quality compliance assessment 2025: results and data tables",
+      "deck": "Data used in the 'Air pollution in the UK 2025' report, which presents the results of the UK’s compliance assessment against the Air Quality Standards Regulations (2010).",
+      "whatChanged": [
+        "Data used in the 'Air pollution in the UK 2025' report, which presents the results of the UK’s compliance assessment against the Air Quality Standards Regulations (2010)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T12:39:59.000Z",
+      "updatedAt": "2026-10-16T12:39:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-60c462a8e418ed4a",
+      "slug": "policy-geopolitics-s-cluster-60c462a8e418ed4a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "ISIL (Da’esh) and Al-Qaida: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T09:31:33.000Z",
+      "updatedAt": "2026-10-16T09:31:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T09:30:50.000Z",
+      "updatedAt": "2026-10-16T09:30:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8d493f2d8aeb977f",
+      "slug": "policy-geopolitics-s-cluster-8d493f2d8aeb977f",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Kubilius at the Inauguration of the new European Security and Strategy faculty in College of Europe in Natolin",
+      "deck": "European Commission Speech Warsaw, 12 Oct 2026 Good afternoon! It's pleasure to be here, at the very famous College of Europe in Natolin. I have heard a lot about Natolin college from those who graduated he...",
+      "whatChanged": [
+        "European Commission Speech Warsaw, 12 Oct 2026 Good afternoon! It's pleasure to be here, at the very famous College of Europe in Natolin. I have heard a lot about Natolin college from those who graduated he..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T14:10:12.000Z",
+      "updatedAt": "2026-10-12T14:10:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a67b23d2a0b5a107",
+      "slug": "technology-ai-s-cluster-a67b23d2a0b5a107",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "U.S. small-scale solar generation has quadrupled in the last decade",
+      "deck": "We estimate that U.S. generation from small-scale or rooftop solar photovoltaic systems (smaller than 1 megawatt of capacity) has increased from 18,812 gigawatthours (GWh) to 92,979 GWh over the last decade. The four states with the high...",
+      "whatChanged": [
+        "We estimate that U.S. generation from small-scale or rooftop solar photovoltaic systems (smaller than 1 megawatt of capacity) has increased from 18,812 gigawatthours (GWh) to 92,979 GWh over the last decade. The four states with the highest generation of small-scale solar in the country-California, Arizona, Texas, and Florida-are in regions with more abundant solar resources. Even though it is in a region with lower solar resources, New York ranks as the fifth-largest rooftop solar generation producer as a result of capacity growth supported by technology improvements and state incentives."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T14:00:00.000Z",
+      "updatedAt": "2026-10-16T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T10:58:27.000Z",
+      "updatedAt": "2026-10-16T10:58:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0d3e4471d5c481ef",
+      "slug": "business-economy-s-cluster-0d3e4471d5c481ef",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Press remarks by Commissioner Šefčovič on the EU-Türkiye High-Level Dialogue on Trade",
+      "deck": "European Commission Speech Brussels, 13 Oct 2026 Good evening. I am pleased to welcome Minister Bolat to Brussels, as we co-chair our High-Level Dialogue on Trade. We meet often at fora like the OECD and the G...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 13 Oct 2026 Good evening. I am pleased to welcome Minister Bolat to Brussels, as we co-chair our High-Level Dialogue on Trade. We meet often at fora like the OECD and the G..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T22:00:00.000Z",
+      "updatedAt": "2026-10-12T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-39ada460465cca74",
+      "slug": "business-economy-s-cluster-39ada460465cca74",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Clean Heat Market Mechanism: revisions ahead of the 2027/28 scheme year",
+      "deck": "We're seeking views on the targets for years 3 to 6 of the scheme and other proposals, including support for investment in resilient and sustainable supply chains.",
+      "whatChanged": [
+        "We're seeking views on the targets for years 3 to 6 of the scheme and other proposals, including support for investment in resilient and sustainable supply chains."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-12T13:31:55.000Z",
+      "updatedAt": "2026-10-12T13:31:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b3090387236d8eb",
+      "slug": "business-economy-s-cluster-3b3090387236d8eb",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Correspondence: Keep Britain Working review update: a national growth opportunity, September 2026",
+      "deck": "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth.",
+      "whatChanged": [
+        "September 2026 update on implementing the independent review of employers' role in tackling health based economic inactivity and promoting healthy and inclusive workplaces to change outcomes, improve lives and drive growth."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-09T10:58:26.000Z",
+      "updatedAt": "2026-10-09T10:58:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f2e6c29c8c93a34f",
+      "slug": "culture-entertainment-s-cluster-f2e6c29c8c93a34f",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission awards 2026 New European Bauhaus prizes for sustainable, inclusive and beautiful projects",
+      "deck": "European Commission Press release Brussels, 16 Oct 2026 The European Commission has awarded the New European Bauhaus (NEB) Prizes 2026 to 13 laureates from several EU countries, Ukraine and North Macedonia, as well as Japan and Brazil, w...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 16 Oct 2026 The European Commission has awarded the New European Bauhaus (NEB) Prizes 2026 to 13 laureates from several EU countries, Ukraine and North Macedonia, as well as Japan and Brazil, which won the international competition of the awards."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T08:50:22.000Z",
+      "updatedAt": "2026-10-16T08:50:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f316519c8cbc070e",
+      "slug": "culture-entertainment-s-cluster-f316519c8cbc070e",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission awards six projects making lasting contributions for Europe's cohesion at REGIOSTARS ceremony *",
+      "deck": "European Commission Press release Brussels, 15 Oct 2026 Six outstanding EU-funded projects, and the people behind them, were honored last night in Brussels at the 2026 REGIOSTARS Awards, held as part of the 24th European Week of Regions...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 15 Oct 2026 Six outstanding EU-funded projects, and the people behind them, were honored last night in Brussels at the 2026 REGIOSTARS Awards, held as part of the 24th European Week of Regions and Cities."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T16:10:29.000Z",
+      "updatedAt": "2026-10-14T16:10:29.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Commission statement on the protests in Albania",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
+      "sourceType": "official",
+      "publishedAt": "2026-10-12T09:18:41.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "£140 million boost to urgent care to ease winter pressures on NHS",
+      "url": "https://www.gov.uk/government/news/140-million-boost-to-urgent-care-to-ease-winter-pressures-on-nhs",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T08:54:47.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Belgium travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/belgium",
+      "sourceType": "official",
+      "publishedAt": "2026-10-15T12:26:09.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Guest Contributor", "Zulker Naeen", "Madhumay Mallik"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "How two elections reshaped the India–Bangladesh border",
+      "url": "https://globalvoices.org/2026/09/20/how-two-elections-reshaped-the-india-bangladesh-border/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-19T20:37:08.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Regulations: batteries and accumulators",
+      "url": "https://www.gov.uk/guidance/batteries",
+      "sourceType": "official",
+      "publishedAt": "2026-10-15T11:26:26.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. small-scale solar generation has quadrupled in the last decade",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68324",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Telecoms Modernisation: Critical National Infrastructure Charter",
+      "url": "https://www.gov.uk/government/publications/telecoms-modernisation-critical-national-infrastructure-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T08:30:03.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Improving standards for industrial fans",
+      "url": "https://www.gov.uk/government/consultations/improving-standards-for-industrial-fans",
+      "sourceType": "official",
+      "publishedAt": "2026-10-09T15:33:09.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
