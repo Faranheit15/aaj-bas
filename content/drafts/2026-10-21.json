@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-21T05:05:01.522Z",
+  "updatedAt": "2026-10-21T05:05:01.522Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-57f0e9c69bc05b7a",
+    "s-cluster-c092f49dac960117",
+    "s-cluster-25ea309582a671d1",
+    "s-cluster-bee3fef38b991e59",
+    "s-cluster-db97def3bbbd5e92",
+    "s-cluster-8440a22d85b2ca8a",
+    "s-cluster-b6bb01dd7fae7023",
+    "s-cluster-fc3d6382bfa00172"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-607678767e0ab6f4",
+      "s-cluster-d7bf429c7cdd92e9",
+      "s-cluster-40c8ca763727688e"
+    ],
+    "business-economy": [
+      "s-cluster-57243b1810ae32f2",
+      "s-cluster-d7c2459c7cdfcdd9",
+      "s-cluster-a67b22d2a0b59f54"
+    ],
+    "science-health-climate": [
+      "s-cluster-a83d5bed99c5f54f",
+      "s-cluster-0bf1f23a68b58104",
+      "s-cluster-4a88c8c6b0e4fff3"
+    ],
+    "technology-ai": [
+      "s-cluster-85237cce9031b6a2",
+      "s-cluster-f2e6c19c8c93a19c",
+      "s-cluster-01ccd863d50d749a"
+    ],
+    "sports": ["s-cluster-d8c7302183655bcd", "s-cluster-495ef2312c88ce4e"],
+    "culture-entertainment": [
+      "s-cluster-f2e6c29c8c93a34f",
+      "s-cluster-f316519c8cbc070e"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-57f0e9c69bc05b7a",
+      "slug": "policy-geopolitics-s-cluster-57f0e9c69bc05b7a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Normalisation of relations between Kosovo and Serbia remains essential to long term stability: UK statement at the UN Security Council",
+      "deck": "Statement by Jennifer MacNaughtan, UK Political Coordinator, at the Security Council meeting on Kosovo.",
+      "whatChanged": [
+        "Statement by Jennifer MacNaughtan, UK Political Coordinator, at the Security Council meeting on Kosovo."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T20:57:41.000Z",
+      "updatedAt": "2026-10-20T20:57:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c092f49dac960117",
+      "slug": "india-s-cluster-c092f49dac960117",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Joint statement by Presidents von der Leyen and Costa",
+      "deck": "European Commission Statement Brussels, 20 Oct 2026 We deeply regret the ratification today by the Libyan Parliament of the so-called Libyan-Türkiye Memorandum of Understanding on the delimitation of maritime jur...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 20 Oct 2026 We deeply regret the ratification today by the Libyan Parliament of the so-called Libyan-Türkiye Memorandum of Understanding on the delimitation of maritime jur..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T17:36:58.000Z",
+      "updatedAt": "2026-10-20T17:36:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-25ea309582a671d1",
+      "slug": "india-s-cluster-25ea309582a671d1",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: NHS continuing healthcare decision support tool",
+      "deck": "Screening tool to help identify individuals who may need a referral for a full assessment of eligibility for NHS continuing healthcare.",
+      "whatChanged": [
+        "Screening tool to help identify individuals who may need a referral for a full assessment of eligibility for NHS continuing healthcare."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T16:07:13.000Z",
+      "updatedAt": "2026-10-20T16:07:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bee3fef38b991e59",
+      "slug": "india-s-cluster-bee3fef38b991e59",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): latest situation in England",
+      "deck": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
+      "whatChanged": [
+        "Find out about the latest bird flu situation in England and guidance for bird keepers and the public."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T16:41:23.000Z",
+      "updatedAt": "2026-10-20T15:38:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-db97def3bbbd5e92",
+      "slug": "policy-geopolitics-s-cluster-db97def3bbbd5e92",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kindgom welcomes the continued consolidation of peace and stability in the Central African Republic: UK statement at the UN Security Council",
+      "deck": "Statement by Jess Jambert-Gray, Deputy Political Coordinator, at the UN Security Council meeting on the Central African Republic.",
+      "whatChanged": [
+        "Statement by Jess Jambert-Gray, Deputy Political Coordinator, at the UN Security Council meeting on the Central African Republic."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T15:46:00.000Z",
+      "updatedAt": "2026-10-20T15:46:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8440a22d85b2ca8a",
+      "slug": "policy-geopolitics-s-cluster-8440a22d85b2ca8a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Šefčovič at the European Parliament Plenary debate on the EU-UK Summit: renewed ambition for a closer partnership",
+      "deck": "European Commission Speech Strasbourg, 20 Oct 2026 Madam President, Honourable members. We have been working intensively with our UK partners to prepare our upcoming Summit on 20 November. This will be the se...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 20 Oct 2026 Madam President, Honourable members. We have been working intensively with our UK partners to prepare our upcoming Summit on 20 November. This will be the se..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T09:02:46.000Z",
+      "updatedAt": "2026-10-20T09:02:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b6bb01dd7fae7023",
+      "slug": "science-health-climate-s-cluster-b6bb01dd7fae7023",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Newcastle disease: how to spot and report it",
+      "deck": "How to spot Newcastle disease, what to do if you suspect it and measures to prevent its spread.",
+      "whatChanged": [
+        "How to spot Newcastle disease, what to do if you suspect it and measures to prevent its spread."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T14:48:25.000Z",
+      "updatedAt": "2026-10-20T14:48:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fc3d6382bfa00172",
+      "slug": "science-health-climate-s-cluster-fc3d6382bfa00172",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Pathways to SF6 free distribution networks",
+      "deck": "Report examining the potential impacts of phasing out sulphur hexafluoride (SF6) from the distribution network in Great Britain.",
+      "whatChanged": [
+        "Report examining the potential impacts of phasing out sulphur hexafluoride (SF6) from the distribution network in Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T14:30:08.000Z",
+      "updatedAt": "2026-10-20T14:30:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-607678767e0ab6f4",
+      "slug": "policy-geopolitics-s-cluster-607678767e0ab6f4",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "France travel advice",
+      "deck": "FCDO travel advice for France. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for France. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T17:40:21.000Z",
+      "updatedAt": "2026-10-20T14:35:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d7bf429c7cdd92e9",
+      "slug": "policy-geopolitics-s-cluster-d7bf429c7cdd92e9",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "EU sets out a new Strategy for the Arctic",
+      "deck": "European Commission Press release Strasbourg, 20 Oct 2026 Today, the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy presented a new Strategy for the Arctic. The Strategy presents a ne...",
+      "whatChanged": [
+        "European Commission Press release Strasbourg, 20 Oct 2026 Today, the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy presented a new Strategy for the Arctic. The Strategy presents a new framework of political cooperation for like-minded partners that places people, security, climate and prosperity at its core. It has four priorities: strengthening security and resilience, responding to climate change in the Arctic, prosperity, and opportunities for people and communities in the Arctic."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T22:00:00.000Z",
+      "updatedAt": "2026-10-19T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-40c8ca763727688e",
+      "slug": "policy-geopolitics-s-cluster-40c8ca763727688e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Haiti cannot afford another year in which insecurity outpaces political progress: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Haiti.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Haiti."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T17:28:48.000Z",
+      "updatedAt": "2026-10-19T17:28:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-57243b1810ae32f2",
+      "slug": "business-economy-s-cluster-57243b1810ae32f2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Factsheet on Vision 2040 for fisheries and aquaculture in the EU",
+      "deck": "European Commission Factsheet Brussels, 20 Oct 2026 Factsheet on Vision 2040 for fisheries and aquaculture in the EU Factsheet on the Vision 2040",
+      "whatChanged": [
+        "European Commission Factsheet Brussels, 20 Oct 2026 Factsheet on Vision 2040 for fisheries and aquaculture in the EU Factsheet on the Vision 2040"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T22:00:00.000Z",
+      "updatedAt": "2026-10-20T14:43:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d7c2459c7cdfcdd9",
+      "slug": "business-economy-s-cluster-d7c2459c7cdfcdd9",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission welcomes political agreement on the future organic rulebook",
+      "deck": "European Commission Press release Brussels, 20 Oct 2026 The European Commission welcomes today's agreement between the European Parliament and the Council to amend certain production, labelling and certification rules, as well as rules o...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 20 Oct 2026 The European Commission welcomes today's agreement between the European Parliament and the Council to amend certain production, labelling and certification rules, as well as rules on trade with non-EU countries, in the organic sector."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T10:42:39.000Z",
+      "updatedAt": "2026-10-20T10:42:39.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a67b22d2a0b59f54",
+      "slug": "business-economy-s-cluster-a67b22d2a0b59f54",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Hybrid sales rise while battery electric sales remain lower after tax credit expiration",
+      "deck": "In the third quarter of 2026 (3Q26), 23% of new light-duty vehicles sold in the United States were hybrid electric, battery electric, or plug-in hybrid electric vehicles, down slightly from 24% in 3Q25. Between 3Q25 and 3Q26, hybrid elec...",
+      "whatChanged": [
+        "In the third quarter of 2026 (3Q26), 23% of new light-duty vehicles sold in the United States were hybrid electric, battery electric, or plug-in hybrid electric vehicles, down slightly from 24% in 3Q25. Between 3Q25 and 3Q26, hybrid electric vehicles continued to gain market share, reaching 16% of light-duty vehicle sales. Growth of hybrid electric vehicle sales has slowed this quarter as the average transaction price for a new vehicle passed $50,000-the first time this price has been reached so far this year, according to Kelley Blue Book."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T14:00:00.000Z",
+      "updatedAt": "2026-10-19T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a83d5bed99c5f54f",
+      "slug": "science-health-climate-s-cluster-a83d5bed99c5f54f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Apply for a specific movement licence in a bird flu disease zone",
+      "deck": "Apply for a specific licence for any movement or activity in a bird flu (avian influenza) disease zone not covered by a general licence.",
+      "whatChanged": [
+        "Apply for a specific licence for any movement or activity in a bird flu (avian influenza) disease zone not covered by a general licence."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T14:11:53.000Z",
+      "updatedAt": "2026-10-20T14:11:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0bf1f23a68b58104",
+      "slug": "science-health-climate-s-cluster-0bf1f23a68b58104",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Foot and Mouth Disease (FMD) in Namibia",
+      "deck": "Preliminary and updated outbreak assessments for Foot and Mouth Disease (FMD) in Namibia.",
+      "whatChanged": [
+        "Preliminary and updated outbreak assessments for Foot and Mouth Disease (FMD) in Namibia."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T09:28:12.000Z",
+      "updatedAt": "2026-10-20T09:28:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4a88c8c6b0e4fff3",
+      "slug": "science-health-climate-s-cluster-4a88c8c6b0e4fff3",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: UK Eutrophying and Acidifying Atmospheric Pollutants (UKEAP) Network technical reports",
+      "deck": "Annual technical reports from the UK Eutrophying and Acidifying Atmospheric Pollutants (UKEAP) Network, part of the UK's air pollution monitoring regime.",
+      "whatChanged": [
+        "Annual technical reports from the UK Eutrophying and Acidifying Atmospheric Pollutants (UKEAP) Network, part of the UK's air pollution monitoring regime."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T15:54:55.000Z",
+      "updatedAt": "2026-10-19T15:54:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-85237cce9031b6a2",
+      "slug": "technology-ai-s-cluster-85237cce9031b6a2",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Daily News 19 / 10 / 2026",
+      "deck": "European Commission Daily news Brussels, 19 Oct 2026 Commission invests €3.4 billion in net-zero technology projects Today, the European Commission has selected 77 European net-zero technology projects to receive...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 19 Oct 2026 Commission invests €3.4 billion in net-zero technology projects Today, the European Commission has selected 77 European net-zero technology projects to receive..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T09:24:42.000Z",
+      "updatedAt": "2026-10-20T09:45:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f2e6c19c8c93a19c",
+      "slug": "technology-ai-s-cluster-f2e6c19c8c93a19c",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission invests €3.4 billion in net-zero technology projects",
+      "deck": "European Commission Press release Brussels, 19 Oct 2026 Today, the European Commission has selected 77 European net-zero technology projects to receive funding support worth €3.4 billion under the second call of the Innovation Fund, laun...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 19 Oct 2026 Today, the European Commission has selected 77 European net-zero technology projects to receive funding support worth €3.4 billion under the second call of the Innovation Fund, launched in December 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-18T22:00:00.000Z",
+      "updatedAt": "2026-10-18T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d8c7302183655bcd",
+      "slug": "sports-s-cluster-d8c7302183655bcd",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Guidance: APHA test fees for export, captive avian import and ABC",
+      "deck": "Fees for testing animals for disease for export purposes, importing captive birds and Animal Breeding Control (ABC).",
+      "whatChanged": [
+        "Fees for testing animals for disease for export purposes, importing captive birds and Animal Breeding Control (ABC)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T12:53:34.000Z",
+      "updatedAt": "2026-10-20T12:53:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-495ef2312c88ce4e",
+      "slug": "sports-s-cluster-495ef2312c88ce4e",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Form: Horses: CEM organism test for export and breeding (LSW013)",
+      "deck": "Vets can use this form to test horses for the Contagious Equine Metritis (CEM) organism for export and breeding purposes.",
+      "whatChanged": [
+        "Vets can use this form to test horses for the Contagious Equine Metritis (CEM) organism for export and breeding purposes."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T10:05:35.000Z",
+      "updatedAt": "2026-10-20T10:05:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f2e6c29c8c93a34f",
+      "slug": "culture-entertainment-s-cluster-f2e6c29c8c93a34f",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission awards 2026 New European Bauhaus prizes for sustainable, inclusive and beautiful projects",
+      "deck": "European Commission Press release Brussels, 16 Oct 2026 The European Commission has awarded the New European Bauhaus (NEB) Prizes 2026 to 13 laureates from several EU countries, Ukraine and North Macedonia, as well as Japan and Brazil, w...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 16 Oct 2026 The European Commission has awarded the New European Bauhaus (NEB) Prizes 2026 to 13 laureates from several EU countries, Ukraine and North Macedonia, as well as Japan and Brazil, which won the international competition of the awards."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T08:50:22.000Z",
+      "updatedAt": "2026-10-16T08:50:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f316519c8cbc070e",
+      "slug": "culture-entertainment-s-cluster-f316519c8cbc070e",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission awards six projects making lasting contributions for Europe's cohesion at REGIOSTARS ceremony *",
+      "deck": "European Commission Press release Brussels, 15 Oct 2026 Six outstanding EU-funded projects, and the people behind them, were honored last night in Brussels at the 2026 REGIOSTARS Awards, held as part of the 24th European Week of Regions...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 15 Oct 2026 Six outstanding EU-funded projects, and the people behind them, were honored last night in Brussels at the 2026 REGIOSTARS Awards, held as part of the 24th European Week of Regions and Cities."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-14T16:10:29.000Z",
+      "updatedAt": "2026-10-14T16:10:29.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Normalisation of relations between Kosovo and Serbia remains essential to long term stability: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/normalisation-of-relations-between-kosovo-and-serbia-remains-essential-to-long-term-stability-uk-statement-at-the-un-security-council",
+      "sourceType": "official",
+      "publishedAt": "2026-10-16T15:38:55.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Joint statement by Presidents von der Leyen and Costa",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2221",
+      "sourceType": "official",
+      "publishedAt": "2026-10-13T22:00:00.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: NHS continuing healthcare fast track pathway tool",
+      "url": "https://www.gov.uk/government/publications/nhs-continuing-healthcare-fast-track-pathway-tool",
+      "sourceType": "official",
+      "publishedAt": "2026-10-12T13:29:50.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-10-19T15:54:55.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Pathways to SF6 free distribution networks",
+      "url": "https://www.gov.uk/government/publications/pathways-to-sf6-free-distribution-networks",
+      "sourceType": "official",
+      "publishedAt": "2026-10-13T09:01:23.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "Hybrid sales rise while battery electric sales remain lower after tax credit expiration",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68325",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Telecoms Modernisation: Critical National Infrastructure Charter",
+      "url": "https://www.gov.uk/government/publications/telecoms-modernisation-critical-national-infrastructure-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-09-28T15:02:55.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
