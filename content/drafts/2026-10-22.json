@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-22T05:07:22.962Z",
+  "updatedAt": "2026-10-22T05:07:22.962Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-9fc1e7c7e2c50889",
+    "s-cluster-84368e2d85aa5409",
+    "s-cluster-55692e6d19a9cd42",
+    "s-cluster-1067461fa8300c80",
+    "s-cluster-e026d2870b58bc70",
+    "s-cluster-dfc3e34ad958415b",
+    "s-cluster-909a0a7f601bd77a",
+    "s-cluster-335c5304f9e27d47"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-ed451730fcaf0866",
+      "s-cluster-d5943fc4daa7a49e",
+      "s-cluster-8440a22d85b2ca8a"
+    ],
+    "science-health-climate": [
+      "s-cluster-1d78bcd6222c9ca8",
+      "s-cluster-3b4723ddcb55298b",
+      "s-cluster-ef18adf56fa8e71a"
+    ],
+    "business-economy": [
+      "s-cluster-c47e04c64283df5e",
+      "s-cluster-d7bf459c7cdd9802",
+      "s-cluster-57243b1810ae32f2"
+    ],
+    "technology-ai": [
+      "s-cluster-2b558736da28413b",
+      "s-cluster-01ccd863d50d749a",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "sports": ["s-cluster-d8c7302183655bcd"],
+    "culture-entertainment": ["s-cluster-f2e6c29c8c93a34f"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-9fc1e7c7e2c50889",
+      "slug": "india-s-cluster-9fc1e7c7e2c50889",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "Protest as a pillar of democracy",
+      "deck": "This spotlight is, then, a form of protest in its own right: a way of reasserting that protest is legitimate, important for democracy, and everywhere.",
+      "whatChanged": [
+        "This spotlight is, then, a form of protest in its own right: a way of reasserting that protest is legitimate, important for democracy, and everywhere."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T23:56:56.000Z",
+      "updatedAt": "2026-10-21T23:56:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-84368e2d85aa5409",
+      "slug": "india-s-cluster-84368e2d85aa5409",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Opening remarks by Commissioner Serafin during the European Parliament debate Cutting costs and unnecessary reporting obligations now – concrete next steps t...",
+      "deck": "European Commission Speech Strasbourg, 21 Oct 2026 Honourable Members, dear Minister, The debate today is about a very simple question: is Europe doing enough to make life easier for those who create jobs, inves...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 21 Oct 2026 Honourable Members, dear Minister, The debate today is about a very simple question: is Europe doing enough to make life easier for those who create jobs, inves..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T15:10:43.000Z",
+      "updatedAt": "2026-10-21T15:10:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-55692e6d19a9cd42",
+      "slug": "india-s-cluster-55692e6d19a9cd42",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Your finances when travelling abroad",
+      "deck": "How to avoid getting into financial difficulties abroad or get financial help abroad if something goes wrong.",
+      "whatChanged": [
+        "How to avoid getting into financial difficulties abroad or get financial help abroad if something goes wrong."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T16:23:22.000Z",
+      "updatedAt": "2026-10-21T16:23:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1067461fa8300c80",
+      "slug": "policy-geopolitics-s-cluster-1067461fa8300c80",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Mauritania travel advice",
+      "deck": "FCDO travel advice for Mauritania. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Mauritania. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T19:07:15.000Z",
+      "updatedAt": "2026-10-21T17:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e026d2870b58bc70",
+      "slug": "science-health-climate-s-cluster-e026d2870b58bc70",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Newcastle disease: how to spot and report it",
+      "deck": "How to spot Newcastle disease, what to do if you suspect it and measures to prevent its spread.",
+      "whatChanged": [
+        "How to spot Newcastle disease, what to do if you suspect it and measures to prevent its spread."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T14:48:25.000Z",
+      "updatedAt": "2026-10-21T16:11:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dfc3e34ad958415b",
+      "slug": "business-economy-s-cluster-dfc3e34ad958415b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Taking part in the UK Emissions Trading Scheme markets",
+      "deck": "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market.",
+      "whatChanged": [
+        "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T16:05:44.000Z",
+      "updatedAt": "2026-10-21T16:05:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-909a0a7f601bd77a",
+      "slug": "science-health-climate-s-cluster-909a0a7f601bd77a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Update your kept bird record",
+      "deck": "Use this service to tell the Animal and Plant Health Agency (APHA) about a change to your kept bird record or to confirm your details every 12 months.",
+      "whatChanged": [
+        "Use this service to tell the Animal and Plant Health Agency (APHA) about a change to your kept bird record or to confirm your details every 12 months."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T15:47:35.000Z",
+      "updatedAt": "2026-10-21T15:47:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-335c5304f9e27d47",
+      "slug": "science-health-climate-s-cluster-335c5304f9e27d47",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "World-first taskforce to protect communities from climate change",
+      "deck": "Communities across the UK will be better protected against the growing threats of climate change and nature loss.",
+      "whatChanged": [
+        "Communities across the UK will be better protected against the growing threats of climate change and nature loss."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T15:26:00.000Z",
+      "updatedAt": "2026-10-21T15:26:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ed451730fcaf0866",
+      "slug": "policy-geopolitics-s-cluster-ed451730fcaf0866",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia's recruitment of foreign fighters is exploitative: UK statement to the OSCE",
+      "deck": "Colonel Joby Rimmer, UK Senior Military Advisor, says Russia's recruitment of foreign fighters relies on deception and asks how many foreign nationals serve in its armed forces.",
+      "whatChanged": [
+        "Colonel Joby Rimmer, UK Senior Military Advisor, says Russia's recruitment of foreign fighters relies on deception and asks how many foreign nationals serve in its armed forces."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T13:11:48.000Z",
+      "updatedAt": "2026-10-21T13:11:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d5943fc4daa7a49e",
+      "slug": "policy-geopolitics-s-cluster-d5943fc4daa7a49e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Plant imports: authorised border control posts in the UK",
+      "deck": "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports.",
+      "whatChanged": [
+        "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T11:34:41.000Z",
+      "updatedAt": "2026-10-21T11:34:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8440a22d85b2ca8a",
+      "slug": "policy-geopolitics-s-cluster-8440a22d85b2ca8a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Šefčovič at the European Parliament Plenary debate on the EU-UK Summit: renewed ambition for a closer partnership",
+      "deck": "European Commission Speech Strasbourg, 20 Oct 2026 Madam President, Honourable members. We have been working intensively with our UK partners to prepare our upcoming Summit on 20 November. This will be the se...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 20 Oct 2026 Madam President, Honourable members. We have been working intensively with our UK partners to prepare our upcoming Summit on 20 November. This will be the se..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T09:02:46.000Z",
+      "updatedAt": "2026-10-20T09:02:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1d78bcd6222c9ca8",
+      "slug": "science-health-climate-s-cluster-1d78bcd6222c9ca8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Medical repatriation companies in the UK",
+      "deck": "List of medical repatriation companies for British nationals who are seriously ill or injured abroad and need medical evacuation to the UK.",
+      "whatChanged": [
+        "List of medical repatriation companies for British nationals who are seriously ill or injured abroad and need medical evacuation to the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T12:57:27.000Z",
+      "updatedAt": "2026-10-21T12:57:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b4723ddcb55298b",
+      "slug": "science-health-climate-s-cluster-3b4723ddcb55298b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: DHSC public appointments: 2026 to 2027",
+      "deck": "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027.",
+      "whatChanged": [
+        "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T10:00:04.000Z",
+      "updatedAt": "2026-10-21T10:00:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ef18adf56fa8e71a",
+      "slug": "science-health-climate-s-cluster-ef18adf56fa8e71a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research at FCDO",
+      "deck": "Information on research, science, analytical expertise, data and evidence at the Foreign, Commonwealth & Development Office (FCDO).",
+      "whatChanged": [
+        "Information on research, science, analytical expertise, data and evidence at the Foreign, Commonwealth & Development Office (FCDO)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T09:58:28.000Z",
+      "updatedAt": "2026-10-21T09:58:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c47e04c64283df5e",
+      "slug": "business-economy-s-cluster-c47e04c64283df5e",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Major investment to drive growth and jobs across Britain as Sultan of Oman visits UK",
+      "deck": "UK and Oman commit to closer cooperation across security, defence and trade on State Visit",
+      "whatChanged": [
+        "UK and Oman commit to closer cooperation across security, defence and trade on State Visit"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T08:52:00.000Z",
+      "updatedAt": "2026-10-21T08:52:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d7bf459c7cdd9802",
+      "slug": "business-economy-s-cluster-d7bf459c7cdd9802",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission welcomes political agreement on rules enhancing stability and long-term resilience of EU carbon market",
+      "deck": "European Commission Press release Brussels, 21 Oct 2026 The European Commission welcomes the provisional political agreement reached by the European Parliament and the Council on a targeted amendment to strengthen the Market Stability Re...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 21 Oct 2026 The European Commission welcomes the provisional political agreement reached by the European Parliament and the Council on a targeted amendment to strengthen the Market Stability Reserve (MSR) of the EU's Emissions Trading System (EU ETS)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T22:00:00.000Z",
+      "updatedAt": "2026-10-20T22:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-57243b1810ae32f2",
+      "slug": "business-economy-s-cluster-57243b1810ae32f2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Factsheet on Vision 2040 for fisheries and aquaculture in the EU",
+      "deck": "European Commission Factsheet Brussels, 20 Oct 2026 Factsheet on Vision 2040 for fisheries and aquaculture in the EU Factsheet on the Vision 2040",
+      "whatChanged": [
+        "European Commission Factsheet Brussels, 20 Oct 2026 Factsheet on Vision 2040 for fisheries and aquaculture in the EU Factsheet on the Vision 2040"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T22:00:00.000Z",
+      "updatedAt": "2026-10-20T14:43:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2b558736da28413b",
+      "slug": "technology-ai-s-cluster-2b558736da28413b",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Daily News 19 / 10 / 2026",
+      "deck": "European Commission Daily news Brussels, 19 Oct 2026 Commission invests €3.4 billion in net-zero technology projects Today, the European Commission has selected 77 European net-zero technology projects to receive...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 19 Oct 2026 Commission invests €3.4 billion in net-zero technology projects Today, the European Commission has selected 77 European net-zero technology projects to receive..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T09:24:42.000Z",
+      "updatedAt": "2026-10-21T09:23:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d8c7302183655bcd",
+      "slug": "sports-s-cluster-d8c7302183655bcd",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Guidance: APHA test fees for export, captive avian import and ABC",
+      "deck": "Fees for testing animals for disease for export purposes, importing captive birds and Animal Breeding Control (ABC).",
+      "whatChanged": [
+        "Fees for testing animals for disease for export purposes, importing captive birds and Animal Breeding Control (ABC)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T12:53:34.000Z",
+      "updatedAt": "2026-10-20T12:53:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f2e6c29c8c93a34f",
+      "slug": "culture-entertainment-s-cluster-f2e6c29c8c93a34f",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission awards 2026 New European Bauhaus prizes for sustainable, inclusive and beautiful projects",
+      "deck": "European Commission Press release Brussels, 16 Oct 2026 The European Commission has awarded the New European Bauhaus (NEB) Prizes 2026 to 13 laureates from several EU countries, Ukraine and North Macedonia, as well as Japan and Brazil, w...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 16 Oct 2026 The European Commission has awarded the New European Bauhaus (NEB) Prizes 2026 to 13 laureates from several EU countries, Ukraine and North Macedonia, as well as Japan and Brazil, which won the international competition of the awards."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T08:50:22.000Z",
+      "updatedAt": "2026-10-16T08:50:22.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Malka Older", "Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Opening remarks by Commissioner Serafin during the European Parliament debate Cutting costs and unnecessary reporting obligations now – concrete next steps to deliver swift relief for EU's entrepreneurs",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2233",
+      "sourceType": "official",
+      "publishedAt": "2026-10-14T22:00:00.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Nigeria travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/nigeria",
+      "sourceType": "official",
+      "publishedAt": "2026-10-19T19:07:15.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: how to spot and report it",
+      "url": "https://www.gov.uk/guidance/bluetongue",
+      "sourceType": "official",
+      "publishedAt": "2026-10-20T11:14:15.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: UK Emissions Trading Scheme (UK ETS): policy overview",
+      "url": "https://www.gov.uk/government/publications/uk-emissions-trading-scheme-uk-ets-policy-overview",
+      "sourceType": "official",
+      "publishedAt": "2026-10-16T09:00:01.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Accredited official statistics: Abortion statistics for England and Wales: 2024",
+      "url": "https://www.gov.uk/government/statistics/announcements/abortion-statistics-for-england-and-wales-2024",
+      "sourceType": "official",
+      "publishedAt": "2026-10-16T13:21:40.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Telecoms Modernisation: Critical National Infrastructure Charter",
+      "url": "https://www.gov.uk/government/publications/telecoms-modernisation-critical-national-infrastructure-charter",
+      "sourceType": "official",
+      "publishedAt": "2026-09-28T15:02:55.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
