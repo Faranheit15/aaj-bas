@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-23T05:07:14.663Z",
+  "updatedAt": "2026-10-23T05:07:14.663Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-46c8104d824cc14c",
+    "s-cluster-bee3fef38b991e59",
+    "s-cluster-5cb1b747211b9f2a",
+    "s-cluster-8cc1e71c8eaa39b4",
+    "s-cluster-c3b8bc10a2b0ab8b",
+    "s-cluster-200997cda332a463",
+    "s-cluster-c32c8343c2fd55f0",
+    "s-cluster-a68227d2a0bbc681"
+  ],
+  "interestPools": {
+    "technology-ai": [
+      "s-cluster-f1573cc9143ae7c2",
+      "s-cluster-01ccd863d50d749a",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "science-health-climate": [
+      "s-cluster-f349532460f64a3b",
+      "s-cluster-80ac7377ac16524a",
+      "s-cluster-ac8ee9866aaa3a3d"
+    ],
+    "business-economy": [
+      "s-cluster-8bfa736f92501198",
+      "s-cluster-dfc3e34ad958415b",
+      "s-cluster-c47e04c64283df5e"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-ed451730fcaf0866",
+      "s-cluster-8440a22d85b2ca8a",
+      "s-cluster-d5943fc4daa7a49e"
+    ],
+    "culture-entertainment": ["s-cluster-f2e6c29c8c93a34f"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-46c8104d824cc14c",
+      "slug": "science-health-climate-s-cluster-46c8104d824cc14c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK Clinical Research Delivery key performance indicators: data to September 2026",
+      "deck": "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme.",
+      "whatChanged": [
+        "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-21T08:30:07.000Z",
+      "updatedAt": "2026-10-22T13:43:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bee3fef38b991e59",
+      "slug": "india-s-cluster-bee3fef38b991e59",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): latest situation in England",
+      "deck": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
+      "whatChanged": [
+        "Find out about the latest bird flu situation in England and guidance for bird keepers and the public."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T11:04:01.000Z",
+      "updatedAt": "2026-10-22T16:44:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5cb1b747211b9f2a",
+      "slug": "india-s-cluster-5cb1b747211b9f2a",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Bathing water quality statistics - England (2026)",
+      "deck": "Annual update on bathing water quality at designated bathing waters in England.",
+      "whatChanged": [
+        "Annual update on bathing water quality at designated bathing waters in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T15:33:47.000Z",
+      "updatedAt": "2026-10-22T15:33:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8cc1e71c8eaa39b4",
+      "slug": "india-s-cluster-8cc1e71c8eaa39b4",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Oil and gas: offshore environmental legislation",
+      "deck": "Environmental regulations and guidance on offshore oil and gas exploration and production offshore gas unloading and storage and offshore carbon dioxide storage activities",
+      "whatChanged": [
+        "Environmental regulations and guidance on offshore oil and gas exploration and production offshore gas unloading and storage and offshore carbon dioxide storage activities"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T15:07:02.000Z",
+      "updatedAt": "2026-10-22T15:07:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c3b8bc10a2b0ab8b",
+      "slug": "policy-geopolitics-s-cluster-c3b8bc10a2b0ab8b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Italy travel advice",
+      "deck": "FCDO travel advice for Italy. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Italy. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T10:01:07.000Z",
+      "updatedAt": "2026-10-22T17:05:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-200997cda332a463",
+      "slug": "science-health-climate-s-cluster-200997cda332a463",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Health Bill: summary - fact sheet",
+      "deck": "Outlines the context behind the Health Bill, including a summary of the main objectives and specific measures.",
+      "whatChanged": [
+        "Outlines the context behind the Health Bill, including a summary of the main objectives and specific measures."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T16:16:59.000Z",
+      "updatedAt": "2026-10-22T16:17:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c32c8343c2fd55f0",
+      "slug": "science-health-climate-s-cluster-c32c8343c2fd55f0",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in Grenada",
+      "deck": "Information about support for British nationals experiencing mental health difficulties in Grenada.",
+      "whatChanged": [
+        "Information about support for British nationals experiencing mental health difficulties in Grenada."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T11:43:29.000Z",
+      "updatedAt": "2026-10-22T12:58:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a68227d2a0bbc681",
+      "slug": "world-s-cluster-a68227d2a0bbc681",
+      "topic": "world",
+      "reportingType": "reporting",
+      "headline": "U.S. refineries have been running at very high rates in 2026",
+      "deck": "The U.S. refinery fleet has run at higher-than-normal rates this year, with refinery utilization averaging more than 95% of capacity between May and September, the highest for those months since 1998. Tight global product supplies this y...",
+      "whatChanged": [
+        "The U.S. refinery fleet has run at higher-than-normal rates this year, with refinery utilization averaging more than 95% of capacity between May and September, the highest for those months since 1998. Tight global product supplies this year have boosted margins for petroleum products, particularly for diesel, incentivizing the increased run rates."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T14:00:00.000Z",
+      "updatedAt": "2026-10-22T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f1573cc9143ae7c2",
+      "slug": "technology-ai-s-cluster-f1573cc9143ae7c2",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Social media campaign urges Brits to get vaccinated for winter",
+      "deck": "Government launches a social media campaign to promote a new NHS App feature which helps people check their eligibility and book their flu vaccination",
+      "whatChanged": [
+        "Government launches a social media campaign to promote a new NHS App feature which helps people check their eligibility and book their flu vaccination"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T14:29:08.000Z",
+      "updatedAt": "2026-10-22T14:29:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f349532460f64a3b",
+      "slug": "science-health-climate-s-cluster-f349532460f64a3b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Toxic Organic Micro Pollutants (TOMPs) Network technical reports",
+      "deck": "Annual technical reports for the UK's Toxic Organic Micro Pollutants (TOMPs) Network, part of the UK's air pollution monitoring regime.",
+      "whatChanged": [
+        "Annual technical reports for the UK's Toxic Organic Micro Pollutants (TOMPs) Network, part of the UK's air pollution monitoring regime."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T12:43:37.000Z",
+      "updatedAt": "2026-10-22T12:43:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-80ac7377ac16524a",
+      "slug": "science-health-climate-s-cluster-80ac7377ac16524a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Government response to the HSCC's report on healthy ageing and physical activity",
+      "deck": "The government's response to the House of Commons' Health and Social Care Committee's (HSCC) 'Healthy Ageing: physical activity in an ageing society' report.",
+      "whatChanged": [
+        "The government's response to the House of Commons' Health and Social Care Committee's (HSCC) 'Healthy Ageing: physical activity in an ageing society' report."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T09:49:02.000Z",
+      "updatedAt": "2026-10-22T09:49:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ac8ee9866aaa3a3d",
+      "slug": "science-health-climate-s-cluster-ac8ee9866aaa3a3d",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Particle Concentrations and Numbers (PCN) Network and Black Carbon Network technical reports",
+      "deck": "Annual technical reports for the Particle Concentrations and Numbers (PCN) Network and the Black Carbon Network, part of the UK's air pollution monitoring regime.",
+      "whatChanged": [
+        "Annual technical reports for the Particle Concentrations and Numbers (PCN) Network and the Black Carbon Network, part of the UK's air pollution monitoring regime."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T08:57:31.000Z",
+      "updatedAt": "2026-10-22T08:57:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8bfa736f92501198",
+      "slug": "business-economy-s-cluster-8bfa736f92501198",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Official Statistics: Plant Health – international trade and controlled consignments, 2021-2025 – statistics publication",
+      "deck": "These statistics present an analysis of trade with the UK in plant and plant commodities (including live plants, fruit, vegetables and cereals), covering both the financial value and the physical scale (mass) of this trade.",
+      "whatChanged": [
+        "These statistics present an analysis of trade with the UK in plant and plant commodities (including live plants, fruit, vegetables and cereals), covering both the financial value and the physical scale (mass) of this trade."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-22T08:30:09.000Z",
+      "updatedAt": "2026-10-22T08:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dfc3e34ad958415b",
+      "slug": "business-economy-s-cluster-dfc3e34ad958415b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Taking part in the UK Emissions Trading Scheme markets",
+      "deck": "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market.",
+      "whatChanged": [
+        "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T16:05:44.000Z",
+      "updatedAt": "2026-10-21T16:05:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c47e04c64283df5e",
+      "slug": "business-economy-s-cluster-c47e04c64283df5e",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Major investment to drive growth and jobs across Britain as Sultan of Oman visits UK",
+      "deck": "UK and Oman commit to closer cooperation across security, defence and trade on State Visit",
+      "whatChanged": [
+        "UK and Oman commit to closer cooperation across security, defence and trade on State Visit"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T08:52:00.000Z",
+      "updatedAt": "2026-10-21T08:52:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ed451730fcaf0866",
+      "slug": "policy-geopolitics-s-cluster-ed451730fcaf0866",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia's recruitment of foreign fighters is exploitative: UK statement to the OSCE",
+      "deck": "Colonel Joby Rimmer, UK Senior Military Advisor, says Russia's recruitment of foreign fighters relies on deception and asks how many foreign nationals serve in its armed forces.",
+      "whatChanged": [
+        "Colonel Joby Rimmer, UK Senior Military Advisor, says Russia's recruitment of foreign fighters relies on deception and asks how many foreign nationals serve in its armed forces."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T13:11:48.000Z",
+      "updatedAt": "2026-10-21T13:11:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8440a22d85b2ca8a",
+      "slug": "policy-geopolitics-s-cluster-8440a22d85b2ca8a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Šefčovič at the European Parliament Plenary debate on the EU-UK Summit: renewed ambition for a closer partnership",
+      "deck": "European Commission Speech Strasbourg, 20 Oct 2026 Madam President, Honourable members. We have been working intensively with our UK partners to prepare our upcoming Summit on 20 November. This will be the se...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 20 Oct 2026 Madam President, Honourable members. We have been working intensively with our UK partners to prepare our upcoming Summit on 20 November. This will be the se..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T09:02:46.000Z",
+      "updatedAt": "2026-10-20T09:02:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d5943fc4daa7a49e",
+      "slug": "policy-geopolitics-s-cluster-d5943fc4daa7a49e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Plant imports: authorised border control posts in the UK",
+      "deck": "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports.",
+      "whatChanged": [
+        "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T11:34:41.000Z",
+      "updatedAt": "2026-10-21T11:34:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f2e6c29c8c93a34f",
+      "slug": "culture-entertainment-s-cluster-f2e6c29c8c93a34f",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Commission awards 2026 New European Bauhaus prizes for sustainable, inclusive and beautiful projects",
+      "deck": "European Commission Press release Brussels, 16 Oct 2026 The European Commission has awarded the New European Bauhaus (NEB) Prizes 2026 to 13 laureates from several EU countries, Ukraine and North Macedonia, as well as Japan and Brazil, w...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 16 Oct 2026 The European Commission has awarded the New European Bauhaus (NEB) Prizes 2026 to 13 laureates from several EU countries, Ukraine and North Macedonia, as well as Japan and Brazil, which won the international competition of the awards."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-16T08:50:22.000Z",
+      "updatedAt": "2026-10-16T08:50:22.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Health Bill: patient safety - fact sheet",
+      "url": "https://www.gov.uk/government/publications/health-bill-patient-safety-fact-sheet",
+      "sourceType": "official",
+      "publishedAt": "2026-10-19T12:13:39.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: BDUK delivery performance, quarterly: July 2026 to September 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/bduk-delivery-performance-quarterly-july-2026-to-september-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-09-29T08:30:03.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-10-20T14:42:55.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Oil and gas: offshore environmental legislation",
+      "url": "https://www.gov.uk/guidance/oil-and-gas-offshore-environmental-legislation",
+      "sourceType": "official",
+      "publishedAt": "2026-10-19T10:44:10.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Réunion travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/reunion",
+      "sourceType": "official",
+      "publishedAt": "2026-10-21T08:52:00.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. refineries have been running at very high rates in 2026",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68344",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Lahbib at the Resilient Europe Conference",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2239",
+      "sourceType": "official",
+      "publishedAt": "2026-10-15T10:31:50.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
