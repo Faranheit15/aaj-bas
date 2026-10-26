@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-26T05:04:35.754Z",
+  "updatedAt": "2026-10-26T05:04:35.754Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-318e73677b213c39",
+    "s-cluster-9c11c334718b9e4b",
+    "s-cluster-0e6d3a860fb49d12",
+    "s-cluster-40acf05c00f11bf3",
+    "s-cluster-cf56120187cfb1fd",
+    "s-cluster-46c8104d824cc14c",
+    "s-cluster-3dd384f27b901fa6",
+    "s-cluster-3e83961b7691735b"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-8440a22d85b2ca8a",
+      "s-cluster-b04d50cecbc9df01",
+      "s-cluster-d7ccd69c7ce918c1"
+    ],
+    "science-health-climate": [
+      "s-cluster-d37f9b2aa085b5fa",
+      "s-cluster-b0366210a23432e3",
+      "s-cluster-b168f553ccd1a8a3"
+    ],
+    "business-economy": [
+      "s-cluster-844b0d2d85bbd4e0",
+      "s-cluster-57243b1810ae32f2",
+      "s-cluster-949951d2966c2897"
+    ],
+    "technology-ai": [
+      "s-cluster-f591853791f5913f",
+      "s-cluster-01ccd863d50d749a",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-318e73677b213c39",
+      "slug": "india-s-cluster-318e73677b213c39",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "New plans to end carbon dioxide stunning of pigs to prevent suffering",
+      "deck": "Carbon dioxide stunning to be replaced with more available humane alternatives",
+      "whatChanged": [
+        "Carbon dioxide stunning to be replaced with more available humane alternatives"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T00:01:05.000Z",
+      "updatedAt": "2026-10-26T00:01:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9c11c334718b9e4b",
+      "slug": "policy-geopolitics-s-cluster-9c11c334718b9e4b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Jordan travel advice",
+      "deck": "FCDO travel advice for Jordan. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Jordan. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-25T15:33:37.000Z",
+      "updatedAt": "2026-10-25T15:33:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0e6d3a860fb49d12",
+      "slug": "world-s-cluster-0e6d3a860fb49d12",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Policy paper: Delivering the 30by30 commitment",
+      "deck": "A report setting out how countries, communities and conservation partners are turning the global 30by30 commitment into real-world conservation outcomes.",
+      "whatChanged": [
+        "A report setting out how countries, communities and conservation partners are turning the global 30by30 commitment into real-world conservation outcomes."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-25T12:00:08.000Z",
+      "updatedAt": "2026-10-25T12:00:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-40acf05c00f11bf3",
+      "slug": "india-s-cluster-40acf05c00f11bf3",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, September 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-23T08:30:01.000Z",
+      "updatedAt": "2026-10-23T11:50:39.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-cf56120187cfb1fd",
+      "slug": "science-health-climate-s-cluster-cf56120187cfb1fd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Notice: Life Sciences Healthcare Goals",
+      "deck": "The Healthcare Goals programme brings together industry, academia, the third sector and the NHS to tackle healthcare challenges such as dementia, cancer, mental health, obesity and addiction.",
+      "whatChanged": [
+        "The Healthcare Goals programme brings together industry, academia, the third sector and the NHS to tackle healthcare challenges such as dementia, cancer, mental health, obesity and addiction."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-23T08:30:09.000Z",
+      "updatedAt": "2026-10-23T08:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-46c8104d824cc14c",
+      "slug": "science-health-climate-s-cluster-46c8104d824cc14c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK Clinical Research Delivery key performance indicators: data to September 2026",
+      "deck": "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme.",
+      "whatChanged": [
+        "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-21T08:30:07.000Z",
+      "updatedAt": "2026-10-22T13:43:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3dd384f27b901fa6",
+      "slug": "india-s-cluster-3dd384f27b901fa6",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Joint Press Release on the R4 Ministerial Meeting in Istanbul",
+      "deck": "Joint Press Release on the R4 Ministerial Meeting with Counterparts from France, Germany, Italy and United Kingdom, Istanbul, 23 October 2026.",
+      "whatChanged": [
+        "Joint Press Release on the R4 Ministerial Meeting with Counterparts from France, Germany, Italy and United Kingdom, Istanbul, 23 October 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-24T07:41:00.000Z",
+      "updatedAt": "2026-10-24T07:41:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8440a22d85b2ca8a",
+      "slug": "policy-geopolitics-s-cluster-8440a22d85b2ca8a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Šefčovič at the European Parliament Plenary debate on the EU-UK Summit: renewed ambition for a closer partnership",
+      "deck": "European Commission Speech Strasbourg, 20 Oct 2026 Madam President, Honourable members. We have been working intensively with our UK partners to prepare our upcoming Summit on 20 November. This will be the se...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 20 Oct 2026 Madam President, Honourable members. We have been working intensively with our UK partners to prepare our upcoming Summit on 20 November. This will be the se..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-20T09:02:46.000Z",
+      "updatedAt": "2026-10-20T09:02:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b04d50cecbc9df01",
+      "slug": "policy-geopolitics-s-cluster-b04d50cecbc9df01",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Nigeria travel advice",
+      "deck": "FCDO travel advice for Nigeria. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Nigeria. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-21T17:00:06.000Z",
+      "updatedAt": "2026-10-23T15:17:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d7ccd69c7ce918c1",
+      "slug": "policy-geopolitics-s-cluster-d7ccd69c7ce918c1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "EU announces an additional €22.5 million to reinforce humanitarian assistance in Yemen",
+      "deck": "European Commission Press release Brussels, 23 Oct 2026 The European Commission is releasing €22.5 million in humanitarian aid to Yemen, in addition to the €87.5 million previously allocated for 2026, to address the consequences of the r...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 23 Oct 2026 The European Commission is releasing €22.5 million in humanitarian aid to Yemen, in addition to the €87.5 million previously allocated for 2026, to address the consequences of the renewed conflict escalation and the critical needs of millions of people."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-23T08:38:09.000Z",
+      "updatedAt": "2026-10-23T08:38:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b0366210a23432e3",
+      "slug": "science-health-climate-s-cluster-b0366210a23432e3",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Form: Young Voices for Climate and Nature (closed)",
+      "deck": "We're asking young people from across the UK to share their ideas about climate and nature action.",
+      "whatChanged": [
+        "We're asking young people from across the UK to share their ideas about climate and nature action."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-24T07:07:06.000Z",
+      "updatedAt": "2026-10-24T07:07:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b168f553ccd1a8a3",
+      "slug": "science-health-climate-s-cluster-b168f553ccd1a8a3",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: UK national risk assessment on security of gas supply 2026",
+      "deck": "A risk assessment in relation to the security of gas supply in the UK.",
+      "whatChanged": [
+        "A risk assessment in relation to the security of gas supply in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-23T14:59:52.000Z",
+      "updatedAt": "2026-10-23T14:59:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-844b0d2d85bbd4e0",
+      "slug": "business-economy-s-cluster-844b0d2d85bbd4e0",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Šefčovič at the press conference following the informal Foreign Affairs Council (Trade)",
+      "deck": "European Commission Speech Dublin, 23 Oct 2026 Good afternoon and thank you, Minister – dear Helen – for your hospitality. I always leave Dublin impressed by its positive energy and this time, also grateful ...",
+      "whatChanged": [
+        "European Commission Speech Dublin, 23 Oct 2026 Good afternoon and thank you, Minister – dear Helen – for your hospitality. I always leave Dublin impressed by its positive energy and this time, also grateful ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-23T14:54:52.000Z",
+      "updatedAt": "2026-10-23T14:54:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-57243b1810ae32f2",
+      "slug": "business-economy-s-cluster-57243b1810ae32f2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Factsheet on Vision 2040 for fisheries and aquaculture in the EU",
+      "deck": "European Commission Factsheet Brussels, 20 Oct 2026 Factsheet on Vision 2040 for fisheries and aquaculture in the EU Factsheet on the Vision 2040",
+      "whatChanged": [
+        "European Commission Factsheet Brussels, 20 Oct 2026 Factsheet on Vision 2040 for fisheries and aquaculture in the EU Factsheet on the Vision 2040"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-19T22:00:00.000Z",
+      "updatedAt": "2026-10-20T14:43:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-949951d2966c2897",
+      "slug": "business-economy-s-cluster-949951d2966c2897",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Public companies produce most U.S. crude oil and natural gas",
+      "deck": "Publicly traded companies represent a tiny share of the total number of companies producing crude oil and natural gas in the United States, but they make up a large share of U.S. production. In 2025, publicly traded companies accounted f...",
+      "whatChanged": [
+        "Publicly traded companies represent a tiny share of the total number of companies producing crude oil and natural gas in the United States, but they make up a large share of U.S. production. In 2025, publicly traded companies accounted for just 2% of about 12,000 oil and natural gas producers but produced 68% of the crude oil and natural gas in the Lower 48 states."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-22T14:00:00.000Z",
+      "updatedAt": "2026-09-22T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-23T07:00:00.000Z",
+      "updatedAt": "2026-10-23T07:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "New plans to end carbon dioxide stunning of pigs to prevent suffering",
+      "url": "https://www.gov.uk/government/news/new-plans-to-end-carbon-dioxide-stunning-of-pigs-to-prevent-suffering",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T08:41:07.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Jordan travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/jordan",
+      "sourceType": "official",
+      "publishedAt": "2026-10-21T16:23:22.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Restrictions on the performance of high-risk cosmetic and wellbeing procedures in England",
+      "url": "https://www.gov.uk/government/consultations/restrictions-on-the-performance-of-high-risk-cosmetic-and-wellbeing-procedures-in-england",
+      "sourceType": "official",
+      "publishedAt": "2026-10-21T08:30:07.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Project Gigabit network build contract - North Dorset",
+      "url": "https://www.gov.uk/guidance/project-gigabit-network-build-contract-north-dorset",
+      "sourceType": "official",
+      "publishedAt": "2026-10-01T08:30:13.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Zulker Naeen",
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Remarks by Commissioner Šefčovič at the press conference following the informal Foreign Affairs Council (Trade)",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2252",
+      "sourceType": "official",
+      "publishedAt": "2026-10-16T09:38:24.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Form: Young Voices for Climate and Nature (closed)",
+      "url": "https://www.gov.uk/government/publications/young-voices-for-climate-and-nature",
+      "sourceType": "official",
+      "publishedAt": "2026-10-21T14:40:39.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. refineries have been running at very high rates in 2026",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68344",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
