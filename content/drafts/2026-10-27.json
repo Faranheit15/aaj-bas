@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-27T05:20:25.115Z",
+  "updatedAt": "2026-10-27T05:20:25.115Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-9218e546f1553be1",
+    "s-cluster-dd59302f52e972ca",
+    "s-cluster-1308281f22561c42",
+    "s-cluster-9809d3c64dac6da3",
+    "s-cluster-8fa361b123be9c26",
+    "s-cluster-89935127fd84e795",
+    "s-cluster-01d0b091635dc65f",
+    "s-cluster-3e47a4754db216bf"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-01101b0429f374ff",
+      "s-cluster-b8b17ded6fbee648",
+      "s-cluster-aec2dec0cc7c521b"
+    ],
+    "science-health-climate": [
+      "s-cluster-8c52bb2b4a887f4e",
+      "s-cluster-933ed89ec5724036",
+      "s-cluster-cf56120187cfb1fd"
+    ],
+    "business-economy": [
+      "s-cluster-d7cfd79c7ceb504b",
+      "s-cluster-6584ad1dc3ad723c",
+      "s-cluster-8e4962be765b8e7f"
+    ],
+    "technology-ai": [
+      "s-cluster-01ccd863d50d749a",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-3b546bf64769f379"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-9218e546f1553be1",
+      "slug": "india-s-cluster-9218e546f1553be1",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Indonesia: information for victims of rape and sexual assault",
+      "deck": "Information to help British nationals make informed decisions following a rape or other form of sexual assault abroad.",
+      "whatChanged": [
+        "Information to help British nationals make informed decisions following a rape or other form of sexual assault abroad."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T02:44:42.000Z",
+      "updatedAt": "2026-10-27T02:44:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dd59302f52e972ca",
+      "slug": "policy-geopolitics-s-cluster-dd59302f52e972ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom remains committed to working with Iraq, Kuwait, and the Tripartite Commission to provide answers for families of missing loved ones: UK st...",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on the situation between Iraq and Kuwait.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on the situation between Iraq and Kuwait."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T20:07:23.000Z",
+      "updatedAt": "2026-10-26T20:07:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1308281f22561c42",
+      "slug": "india-s-cluster-1308281f22561c42",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Government welcomes Official Partners for COP31 Pavilion",
+      "deck": "Kraken Technologies, National Grid, Octopus Energy, and SSE will sponsor the UK Pavilion at COP31 in Antalya, Türkiye.",
+      "whatChanged": [
+        "Kraken Technologies, National Grid, Octopus Energy, and SSE will sponsor the UK Pavilion at COP31 in Antalya, Türkiye."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T15:21:31.000Z",
+      "updatedAt": "2026-10-26T15:21:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9809d3c64dac6da3",
+      "slug": "india-s-cluster-9809d3c64dac6da3",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: UKAEA financial transactions statistical data from 2026 to 2027",
+      "deck": "Datasets showing financial transactions of the UK Atomic Energy Authority from April 2026 to March 2027.",
+      "whatChanged": [
+        "Datasets showing financial transactions of the UK Atomic Energy Authority from April 2026 to March 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T14:36:03.000Z",
+      "updatedAt": "2026-10-26T14:36:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T16:41:27.000Z",
+      "updatedAt": "2026-10-26T16:41:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-89935127fd84e795",
+      "slug": "science-health-climate-s-cluster-89935127fd84e795",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Newcastle disease in Europe",
+      "deck": "Preliminary outbreak assessments for Newcastle disease in Europe.",
+      "whatChanged": [
+        "Preliminary outbreak assessments for Newcastle disease in Europe."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T16:35:43.000Z",
+      "updatedAt": "2026-10-26T16:35:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01d0b091635dc65f",
+      "slug": "science-health-climate-s-cluster-01d0b091635dc65f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Joint DHSC and NHS England written evidence for the NHSPRB: pay round 2027 to 2028",
+      "deck": "Evidence submitted to the NHS Pay Review Body (NHSPRB) by the Department of Health and Social Care and NHS England for the 2027 to 2028 pay round.",
+      "whatChanged": [
+        "Evidence submitted to the NHS Pay Review Body (NHSPRB) by the Department of Health and Social Care and NHS England for the 2027 to 2028 pay round."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T16:34:45.000Z",
+      "updatedAt": "2026-10-26T16:34:45.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e47a4754db216bf",
+      "slug": "science-health-climate-s-cluster-3e47a4754db216bf",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Framework agreement between DHSC and the Human Tissue Authority: 2026 to 2029",
+      "deck": "Describes the working relationship between the Department of Health and Social Care and the Human Tissue Authority.",
+      "whatChanged": [
+        "Describes the working relationship between the Department of Health and Social Care and the Human Tissue Authority."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T12:13:00.000Z",
+      "updatedAt": "2026-10-26T12:13:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01101b0429f374ff",
+      "slug": "policy-geopolitics-s-cluster-01101b0429f374ff",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "We must protect and build on 30 years of work supporting the protection of children in conflicts: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Children and Armed Conflict.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Children and Armed Conflict."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T17:27:21.000Z",
+      "updatedAt": "2026-10-26T17:27:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b8b17ded6fbee648",
+      "slug": "policy-geopolitics-s-cluster-b8b17ded6fbee648",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Burkina Faso travel advice",
+      "deck": "FCDO travel advice for Burkina Faso. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Burkina Faso. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T15:58:48.000Z",
+      "updatedAt": "2026-10-26T16:58:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-aec2dec0cc7c521b",
+      "slug": "policy-geopolitics-s-cluster-aec2dec0cc7c521b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK sanctions senior commanders implicated in campaign of rape in Sudan and unveils new support for survivors",
+      "deck": "One year after the fall of El Fasher, the UK is bringing forward a new package of action designed to shine a spotlight on the horrific violence seen during the siege of the city.",
+      "whatChanged": [
+        "One year after the fall of El Fasher, the UK is bringing forward a new package of action designed to shine a spotlight on the horrific violence seen during the siege of the city."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T10:10:00.000Z",
+      "updatedAt": "2026-10-26T10:10:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8c52bb2b4a887f4e",
+      "slug": "science-health-climate-s-cluster-8c52bb2b4a887f4e",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: 2026 post-implementation review of the SECR regulations 2018",
+      "deck": "This research examines how effective the Streamlined Energy and Carbon Reporting (SECR) regulations have been in increasing transparency on organisational energy use and emissions.",
+      "whatChanged": [
+        "This research examines how effective the Streamlined Energy and Carbon Reporting (SECR) regulations have been in increasing transparency on organisational energy use and emissions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T12:35:32.000Z",
+      "updatedAt": "2026-10-26T12:35:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-933ed89ec5724036",
+      "slug": "science-health-climate-s-cluster-933ed89ec5724036",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: DESNZ Public Attitudes Tracker: Summer 2026",
+      "deck": "This regular survey collects data on public awareness, behaviours and attitudes relating to the department’s policy areas. These include Net Zero and climate change, different types of energy infrastructure, energy use in the home and en...",
+      "whatChanged": [
+        "This regular survey collects data on public awareness, behaviours and attitudes relating to the department’s policy areas. These include Net Zero and climate change, different types of energy infrastructure, energy use in the home and energy bills."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T11:00:06.000Z",
+      "updatedAt": "2026-10-26T11:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-cf56120187cfb1fd",
+      "slug": "science-health-climate-s-cluster-cf56120187cfb1fd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Notice: Life Sciences Healthcare Goals",
+      "deck": "The Healthcare Goals programme brings together industry, academia, the third sector and the NHS to tackle healthcare challenges such as dementia, cancer, mental health, obesity and addiction.",
+      "whatChanged": [
+        "The Healthcare Goals programme brings together industry, academia, the third sector and the NHS to tackle healthcare challenges such as dementia, cancer, mental health, obesity and addiction."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-23T08:30:09.000Z",
+      "updatedAt": "2026-10-23T08:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d7cfd79c7ceb504b",
+      "slug": "business-economy-s-cluster-d7cfd79c7ceb504b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission launches T-MED Investment Platform with up to €4.5 billion in EU guarantees",
+      "deck": "European Commission Press release Brussels, 26 Oct 2026 Today, the European Commission launched the T-MED Investment Platform, to mobilise large-scale investment in renewable energy and clean technologies across the Mediterranean. The pl...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 26 Oct 2026 Today, the European Commission launched the T-MED Investment Platform, to mobilise large-scale investment in renewable energy and clean technologies across the Mediterranean. The platform is a key component of the Trans-Mediterranean Renewable Energy and Clean Tech Cooperation Initiative (T-MED), a flagship initiative of the Pact for the Mediterranean."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T10:41:12.000Z",
+      "updatedAt": "2026-10-26T10:41:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6584ad1dc3ad723c",
+      "slug": "business-economy-s-cluster-6584ad1dc3ad723c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Wholesale fruit and vegetable prices",
+      "deck": "Series of fortnightly average wholesale market prices of selected home grown horticultural produce.",
+      "whatChanged": [
+        "Series of fortnightly average wholesale market prices of selected home grown horticultural produce."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T09:30:01.000Z",
+      "updatedAt": "2026-10-26T09:30:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8e4962be765b8e7f",
+      "slug": "business-economy-s-cluster-8e4962be765b8e7f",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Policy paper: Mobilising private finance for local nature recovery",
+      "deck": "The government’s approach to attracting private investment for local nature recovery and sustainable growth.",
+      "whatChanged": [
+        "The government’s approach to attracting private investment for local nature recovery and sustainable growth."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-26T09:30:00.000Z",
+      "updatedAt": "2026-10-26T09:30:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b546bf64769f379",
+      "slug": "technology-ai-s-cluster-3b546bf64769f379",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Pro-Worker AI Adoption Prize",
+      "deck": "The Pro-Worker AI Adoption Prize recognises organisations using artificial intelligence (AI) that benefits workers.",
+      "whatChanged": [
+        "The Pro-Worker AI Adoption Prize recognises organisations using artificial intelligence (AI) that benefits workers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-08T10:22:10.000Z",
+      "updatedAt": "2026-10-08T10:22:10.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Indonesia: information for victims of rape and sexual assault",
+      "url": "https://www.gov.uk/government/publications/indonesia-information-for-victims-of-rape-and-sexual-assault",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T17:02:17.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Government welcomes Official Partners for COP31 Pavilion",
+      "url": "https://www.gov.uk/government/news/government-welcomes-official-partners-for-cop31-pavilion",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T14:13:39.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "url": "https://www.gov.uk/guidance/imports-exports-and-eu-trade-of-animals-and-animal-products-topical-issues",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T12:03:14.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Joint DHSC and NHS England written evidence for the NHSPRB: pay round 2027 to 2028",
+      "url": "https://www.gov.uk/government/publications/joint-dhsc-and-nhs-england-written-evidence-for-the-nhsprb-pay-round-2027-to-2028",
+      "sourceType": "official",
+      "publishedAt": "2026-10-21T14:09:02.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Project Gigabit network build contract - North Dorset",
+      "url": "https://www.gov.uk/guidance/project-gigabit-network-build-contract-north-dorset",
+      "sourceType": "official",
+      "publishedAt": "2026-10-01T08:30:13.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by Commissioner Serafin on the presentation of the High-Level Group Report on the Future of the European Commission's Civil Service",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2259",
+      "sourceType": "official",
+      "publishedAt": "2026-10-18T22:00:00.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
