@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-29",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-29T06:07:03.857Z",
+  "updatedAt": "2026-10-29T06:07:03.857Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-d9279c5342a593df",
+    "s-cluster-3a810cdf3085b037",
+    "s-cluster-132612961dab0dd2",
+    "s-cluster-9dcb32bda5ab9c25",
+    "s-cluster-1b749f2b5fadbe67",
+    "s-cluster-2c7e3a76ba1cdca1",
+    "s-cluster-cf56120187cfb1fd",
+    "s-cluster-4681104b18e31bc5"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-f6017690e6676d8c",
+      "s-cluster-995a8c83a0585663",
+      "s-cluster-41dbe7e261cf1a69"
+    ],
+    "business-economy": [
+      "s-cluster-62e629ca1d65faf7",
+      "s-cluster-8fa361b123be9c26",
+      "s-cluster-949951d2966c2897"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-e6f1264589975c81",
+      "s-cluster-3e83961b7691735b"
+    ],
+    "technology-ai": [
+      "s-cluster-2102cd3c6221504f",
+      "s-cluster-01ccd863d50d749a",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-d9279c5342a593df",
+      "slug": "india-s-cluster-d9279c5342a593df",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Arrested or in prison in the USA",
+      "deck": "This guide provides information about being arrested in the USA and what conditions are like in prison there.",
+      "whatChanged": [
+        "This guide provides information about being arrested in the USA and what conditions are like in prison there."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T17:28:25.000Z",
+      "updatedAt": "2026-10-28T17:28:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3a810cdf3085b037",
+      "slug": "india-s-cluster-3a810cdf3085b037",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Subnational estimates of properties not connected to the gas network 2015-2025",
+      "deck": "Estimates of the number of domestic properties not connected to the gas grid, at region and local authority levels from 2015 to 2025",
+      "whatChanged": [
+        "Estimates of the number of domestic properties not connected to the gas grid, at region and local authority levels from 2015 to 2025"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T16:36:37.000Z",
+      "updatedAt": "2026-10-28T16:36:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-132612961dab0dd2",
+      "slug": "india-s-cluster-132612961dab0dd2",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Subnational electricity consumption in Northern Ireland: 2009-2025",
+      "deck": "Consumption of electricity in Northern Ireland at local council level from 2009 to 2025",
+      "whatChanged": [
+        "Consumption of electricity in Northern Ireland at local council level from 2009 to 2025"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T16:36:29.000Z",
+      "updatedAt": "2026-10-28T16:36:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9dcb32bda5ab9c25",
+      "slug": "policy-geopolitics-s-cluster-9dcb32bda5ab9c25",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Bahrain travel advice",
+      "deck": "FCDO travel advice for Bahrain. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Bahrain. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T16:06:21.000Z",
+      "updatedAt": "2026-10-28T16:15:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1b749f2b5fadbe67",
+      "slug": "science-health-climate-s-cluster-1b749f2b5fadbe67",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Environmental Indicator Framework: recent updates",
+      "deck": "Recent updates to the Environmental Indicator Framework.",
+      "whatChanged": [
+        "Recent updates to the Environmental Indicator Framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T14:45:01.000Z",
+      "updatedAt": "2026-10-28T15:01:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2c7e3a76ba1cdca1",
+      "slug": "science-health-climate-s-cluster-2c7e3a76ba1cdca1",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Data for Theme K: International",
+      "deck": "Data for 'Theme K: International' indicators of the Environmental Indicator Framework.",
+      "whatChanged": [
+        "Data for 'Theme K: International' indicators of the Environmental Indicator Framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T14:48:01.000Z",
+      "updatedAt": "2026-10-28T14:49:45.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-cf56120187cfb1fd",
+      "slug": "science-health-climate-s-cluster-cf56120187cfb1fd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Notice: Life Sciences Healthcare Goals",
+      "deck": "The Healthcare Goals programme brings together industry, academia, the third sector and the NHS to tackle healthcare challenges such as dementia, cancer, mental health, obesity and addiction.",
+      "whatChanged": [
+        "The Healthcare Goals programme brings together industry, academia, the third sector and the NHS to tackle healthcare challenges such as dementia, cancer, mental health, obesity and addiction."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-23T08:30:09.000Z",
+      "updatedAt": "2026-10-23T08:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4681104b18e31bc5",
+      "slug": "business-economy-s-cluster-4681104b18e31bc5",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Economic Estimates: Digital Sector Regional Gross Value Added (2023 to 2024)",
+      "deck": "Accredited Official Statistics estimating the contribution of the Digital Sector to each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA). Digital Sector Economic Estimates are transferring from for...",
+      "whatChanged": [
+        "Accredited Official Statistics estimating the contribution of the Digital Sector to each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA). Digital Sector Economic Estimates are transferring from former DSIT to DCMS, with the aim of bringing all DCMS Economic Estimates together in due course. This release is being produced by former DSIT under the direction of the former DSIT Chief Statistician."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T11:42:10.000Z",
+      "updatedAt": "2026-10-27T11:42:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f6017690e6676d8c",
+      "slug": "science-health-climate-s-cluster-f6017690e6676d8c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "What the Autumn Budget 2026 means for your energy bills",
+      "deck": "The Autumn Budget will create breathing space for families with the cost of living.",
+      "whatChanged": [
+        "The Autumn Budget will create breathing space for families with the cost of living."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T16:19:43.000Z",
+      "updatedAt": "2026-10-28T16:19:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-995a8c83a0585663",
+      "slug": "science-health-climate-s-cluster-995a8c83a0585663",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Mental health support for British nationals in the USA",
+      "deck": "Information for British nationals in the USA about mental health support, emergency help, medication, hospital treatment and returning to the UK.",
+      "whatChanged": [
+        "Information for British nationals in the USA about mental health support, emergency help, medication, hospital treatment and returning to the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T15:19:42.000Z",
+      "updatedAt": "2026-10-28T15:19:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-41dbe7e261cf1a69",
+      "slug": "science-health-climate-s-cluster-41dbe7e261cf1a69",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Biodiversity finance trends 2026",
+      "deck": "The Biodiversity Finance Trends Dashboard tracks international trends in biodiversity finance – in particular nature finance to developing countries and co-benefits with climate finance.",
+      "whatChanged": [
+        "The Biodiversity Finance Trends Dashboard tracks international trends in biodiversity finance – in particular nature finance to developing countries and co-benefits with climate finance."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T13:17:22.000Z",
+      "updatedAt": "2026-10-28T13:17:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-62e629ca1d65faf7",
+      "slug": "business-economy-s-cluster-62e629ca1d65faf7",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: United Kingdom milk prices and composition of milk statistics (data for September 2026)",
+      "deck": "This release presents the latest information on average farm gate milk prices, volumes and the butterfat and protein content of milk produced in the United Kingdom.",
+      "whatChanged": [
+        "This release presents the latest information on average farm gate milk prices, volumes and the butterfat and protein content of milk produced in the United Kingdom."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T12:10:03.000Z",
+      "updatedAt": "2026-10-28T13:08:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T12:41:55.000Z",
+      "updatedAt": "2026-10-27T12:41:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-949951d2966c2897",
+      "slug": "business-economy-s-cluster-949951d2966c2897",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "Public companies produce most U.S. crude oil and natural gas",
+      "deck": "Publicly traded companies represent a tiny share of the total number of companies producing crude oil and natural gas in the United States, but they make up a large share of U.S. production. In 2025, publicly traded companies accounted f...",
+      "whatChanged": [
+        "Publicly traded companies represent a tiny share of the total number of companies producing crude oil and natural gas in the United States, but they make up a large share of U.S. production. In 2025, publicly traded companies accounted for just 2% of about 12,000 oil and natural gas producers but produced 68% of the crude oil and natural gas in the Lower 48 states."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-22T14:00:00.000Z",
+      "updatedAt": "2026-09-22T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e6f1264589975c81",
+      "slug": "policy-geopolitics-s-cluster-e6f1264589975c81",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Peace cannot be sustainable while half the population is shut out of shaping it: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Women, Peace and Security.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Women, Peace and Security."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T20:32:41.000Z",
+      "updatedAt": "2026-10-27T20:32:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-01ccd863d50d749a",
+      "slug": "technology-ai-s-cluster-01ccd863d50d749a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: AI security companies survey: privacy notice 2026 to 2027",
+      "deck": "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use personal data when organisations respond to the AI security companies survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-06T08:52:48.000Z",
+      "updatedAt": "2026-10-06T08:52:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Arrested or in prison in the USA",
+      "url": "https://www.gov.uk/guidance/arrested-or-in-prison-in-the-usa",
+      "sourceType": "official",
+      "publishedAt": "2026-10-27T16:06:21.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Subnational estimates of properties not connected to the gas network 2015-2025",
+      "url": "https://www.gov.uk/government/statistics/announcements/sub-national-estimates-of-properties-not-connected-to-the-gas-network-2015-2025",
+      "sourceType": "official",
+      "publishedAt": "2026-10-28T09:31:06.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Waste disposal fees for large producers under EPR for packaging",
+      "url": "https://www.gov.uk/guidance/waste-disposal-fees-for-large-producers-under-epr-for-packaging",
+      "sourceType": "official",
+      "publishedAt": "2026-10-27T11:00:00.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Adult social care activity report, England: 2025 to 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/adult-social-care-activity-report-england-2025-to-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T16:16:59.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "url": "https://www.gov.uk/government/publications/tech-town-business-survey-privacy-notice-2026-to-2027",
+      "sourceType": "official",
+      "publishedAt": "2026-10-01T10:02:00.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. refineries have been running at very high rates in 2026",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68344",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Zulker Naeen", "Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
