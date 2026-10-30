@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-10-30T06:07:24.764Z",
+  "updatedAt": "2026-10-30T06:07:24.764Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-571102c2c6a29e42",
+    "s-cluster-9008301f318906b8",
+    "s-cluster-cabf58b7db2aada8",
+    "s-cluster-3794d38981daf347",
+    "s-cluster-a4eaae4d9e6d2a59",
+    "s-cluster-4af84434b7fc0cef",
+    "s-cluster-a68893d2a0c0e9b3",
+    "s-cluster-66f1fd136f08edaa"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-c32f676c9a5d4f3b",
+      "s-cluster-6c1d8a78af502f2b",
+      "s-cluster-f9ae73f42d7ebbe5"
+    ],
+    "science-health-climate": [
+      "s-cluster-3fc95fe397b095a1",
+      "s-cluster-52af8cb036211ca8",
+      "s-cluster-96d5b585b86a6368"
+    ],
+    "technology-ai": [
+      "s-cluster-616a38339b5de780",
+      "s-cluster-2102cd3c6221504f",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "business-economy": [
+      "s-cluster-74b47ff70d763ad3",
+      "s-cluster-fb72373306a1e91d",
+      "s-cluster-252309c4db1f2988"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-571102c2c6a29e42",
+      "slug": "policy-geopolitics-s-cluster-571102c2c6a29e42",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Kenya travel advice",
+      "deck": "FCDO travel advice for Kenya. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Kenya. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T11:16:05.000Z",
+      "updatedAt": "2026-10-30T00:40:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9008301f318906b8",
+      "slug": "technology-ai-s-cluster-9008301f318906b8",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Transparency data: DESNZ: spending over £25,000, February 2026",
+      "deck": "Reports on departmental spending over £25,000.",
+      "whatChanged": ["Reports on departmental spending over £25,000."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-29T16:00:06.000Z",
+      "updatedAt": "2026-10-29T16:00:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-cabf58b7db2aada8",
+      "slug": "science-health-climate-s-cluster-cabf58b7db2aada8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Government steps up action on breast cancer",
+      "deck": "More than 1,000 people join trial testing shorter radiotherapy treatment, potentially saving patients 10 hospital trips.",
+      "whatChanged": [
+        "More than 1,000 people join trial testing shorter radiotherapy treatment, potentially saving patients 10 hospital trips."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T00:15:05.000Z",
+      "updatedAt": "2026-10-30T00:15:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3794d38981daf347",
+      "slug": "world-s-cluster-3794d38981daf347",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Guidance: UK-China Intellectual Property newsletter",
+      "deck": "At the end of every month we publish a newsletter covering recent intellectual property (IP) developments in China.",
+      "whatChanged": [
+        "At the end of every month we publish a newsletter covering recent intellectual property (IP) developments in China."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T03:39:05.000Z",
+      "updatedAt": "2026-10-30T03:39:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a4eaae4d9e6d2a59",
+      "slug": "india-s-cluster-a4eaae4d9e6d2a59",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Transparency data: DHSC: register of senior civil servants' secondary paid employment, 2025 to 2026",
+      "deck": "Register of any paid outside employment held by members of the Senior Civil Service at DHSC during the 2025 to 2026 financial year.",
+      "whatChanged": [
+        "Register of any paid outside employment held by members of the Senior Civil Service at DHSC during the 2025 to 2026 financial year."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T16:00:07.000Z",
+      "updatedAt": "2026-10-29T16:00:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4af84434b7fc0cef",
+      "slug": "india-s-cluster-4af84434b7fc0cef",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue serotype 3 (BTV-3) vaccination",
+      "deck": "Information on BTV-3 vaccines for keepers and vets, including rules for reporting vaccinations and keeping records.",
+      "whatChanged": [
+        "Information on BTV-3 vaccines for keepers and vets, including rules for reporting vaccinations and keeping records."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T15:38:16.000Z",
+      "updatedAt": "2026-10-29T15:38:16.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a68893d2a0c0e9b3",
+      "slug": "india-s-cluster-a68893d2a0c0e9b3",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "LNG imports make up increasing share of Colombia's natural gas supply",
+      "deck": "Colombia is importing more liquefied natural gas (LNG) as domestic production continues to fall. A potential drought this fall and winter could limit the availability of hydroelectric generation and boost the country's demand for natural...",
+      "whatChanged": [
+        "Colombia is importing more liquefied natural gas (LNG) as domestic production continues to fall. A potential drought this fall and winter could limit the availability of hydroelectric generation and boost the country's demand for natural gas power generation. Colombia's government has declared a national disaster in anticipation of a drought resulting from an expected strong El Ni�o."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T14:00:00.000Z",
+      "updatedAt": "2026-10-29T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-66f1fd136f08edaa",
+      "slug": "world-s-cluster-66f1fd136f08edaa",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Press remarks by Commissioner Jørgensen following the Dialogue with European refineries",
+      "deck": "European Commission Statement Brussels, 28 Oct 2026 Once again, due to geopolitical turbulence, Europe faces another energy crisis. As in 2022, after the Russia's illegal invasion of Ukraine, prices of crude oil ...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 28 Oct 2026 Once again, due to geopolitical turbulence, Europe faces another energy crisis. As in 2022, after the Russia's illegal invasion of Ukraine, prices of crude oil ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T11:39:10.000Z",
+      "updatedAt": "2026-10-29T18:46:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c32f676c9a5d4f3b",
+      "slug": "policy-geopolitics-s-cluster-c32f676c9a5d4f3b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: FCDO workforce management information: September 2026",
+      "deck": "Information on Foreign, Commonwealth & Development Office (FCDO) staff numbers and costs, for September 2026.",
+      "whatChanged": [
+        "Information on Foreign, Commonwealth & Development Office (FCDO) staff numbers and costs, for September 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T16:30:00.000Z",
+      "updatedAt": "2026-10-29T16:30:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6c1d8a78af502f2b",
+      "slug": "policy-geopolitics-s-cluster-6c1d8a78af502f2b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Berlin Process Leaders’ Summit 2026: UK statement to the OSCE",
+      "deck": "Ambassador Holland congratulates Montenegro on a successful Berlin Process Summit, and welcomes the practical progress the Berlin Process is delivering on integration, resilience and reconciliation in the Western Balkans.",
+      "whatChanged": [
+        "Ambassador Holland congratulates Montenegro on a successful Berlin Process Summit, and welcomes the practical progress the Berlin Process is delivering on integration, resilience and reconciliation in the Western Balkans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T16:20:57.000Z",
+      "updatedAt": "2026-10-29T16:20:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f9ae73f42d7ebbe5",
+      "slug": "policy-geopolitics-s-cluster-f9ae73f42d7ebbe5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The UK is ready to work across the wider UN membership to ensure emerging technologies help deliver safer seas: UK Statement at the UN Security Council",
+      "deck": "Statement by Chris Elmore MP, Parliamentary Under-Secretary of State, Foreign Commonwealth & Development Office at the UN Security Council Meeting on Maritime Security",
+      "whatChanged": [
+        "Statement by Chris Elmore MP, Parliamentary Under-Secretary of State, Foreign Commonwealth & Development Office at the UN Security Council Meeting on Maritime Security"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T15:28:29.000Z",
+      "updatedAt": "2026-10-29T15:28:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3fc95fe397b095a1",
+      "slug": "science-health-climate-s-cluster-3fc95fe397b095a1",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Ordering and retaining medical certificates of cause of death (MCCDs)",
+      "deck": "Guidance for GP practices, hospitals, hospices and medical examiner offices on how to order MCCDs and what to do with completed MCCDs.",
+      "whatChanged": [
+        "Guidance for GP practices, hospitals, hospices and medical examiner offices on how to order MCCDs and what to do with completed MCCDs."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T17:17:00.000Z",
+      "updatedAt": "2026-10-29T17:17:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-52af8cb036211ca8",
+      "slug": "science-health-climate-s-cluster-52af8cb036211ca8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Artificial Intelligence sector study 2025",
+      "deck": "An analysis of the UK’s artificial intelligence (AI) sector, developing estimates of the scale and scope of firms developing AI products and services in the UK.",
+      "whatChanged": [
+        "An analysis of the UK’s artificial intelligence (AI) sector, developing estimates of the scale and scope of firms developing AI products and services in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T16:41:56.000Z",
+      "updatedAt": "2026-10-29T16:41:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-96d5b585b86a6368",
+      "slug": "science-health-climate-s-cluster-96d5b585b86a6368",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Under-18 sales ban extended to nicotine products and all vapes",
+      "deck": "Government implements new restrictions on the sale and promotion of vapes and nicotine products across the UK",
+      "whatChanged": [
+        "Government implements new restrictions on the sale and promotion of vapes and nicotine products across the UK"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T09:52:33.000Z",
+      "updatedAt": "2026-10-29T12:36:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T14:39:00.000Z",
+      "updatedAt": "2026-10-29T14:39:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-74b47ff70d763ad3",
+      "slug": "business-economy-s-cluster-74b47ff70d763ad3",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Energy Trends: UK electricity",
+      "deck": "Data on electricity generation, supply, consumption and fuel use for generation.",
+      "whatChanged": [
+        "Data on electricity generation, supply, consumption and fuel use for generation."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T09:30:14.000Z",
+      "updatedAt": "2026-10-29T11:42:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb72373306a1e91d",
+      "slug": "business-economy-s-cluster-fb72373306a1e91d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Monthly and annual prices of road fuels and petroleum products",
+      "deck": "Monthly and annual prices of road fuels and fuels used for home heating, plus an index of crude oil prices.",
+      "whatChanged": [
+        "Monthly and annual prices of road fuels and fuels used for home heating, plus an index of crude oil prices."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T09:30:15.000Z",
+      "updatedAt": "2026-10-29T09:30:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-252309c4db1f2988",
+      "slug": "business-economy-s-cluster-252309c4db1f2988",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Apply to become a CITES registered breeder",
+      "deck": "When and how you must register to breed specimens under the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES).",
+      "whatChanged": [
+        "When and how you must register to breed specimens under the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T09:00:00.000Z",
+      "updatedAt": "2026-10-29T09:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: UK-China Intellectual Property newsletter",
+      "url": "https://www.gov.uk/government/publications/china-ip-newsletter",
+      "sourceType": "official",
+      "publishedAt": "2026-10-28T11:16:05.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DESNZ: spending over £25,000, January 2026",
+      "url": "https://www.gov.uk/government/publications/desnz-spending-over-25000-january-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-10-29T09:30:14.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Artificial Intelligence sector study 2025",
+      "url": "https://www.gov.uk/government/publications/artificial-intelligence-sector-study-2025",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T10:22:10.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Government steps up action on breast cancer",
+      "url": "https://www.gov.uk/government/news/government-steps-up-action-on-breast-cancer",
+      "sourceType": "official",
+      "publishedAt": "2026-10-26T12:13:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue serotype 3 (BTV-3) vaccination",
+      "url": "https://www.gov.uk/guidance/bluetongue-serotype-3-btv-3-vaccination",
+      "sourceType": "official",
+      "publishedAt": "2026-10-28T14:48:01.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "LNG imports make up increasing share of Colombia's natural gas supply",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68364",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Press remarks by Commissioner Jørgensen following the Energy Council",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2302",
+      "sourceType": "official",
+      "publishedAt": "2026-10-21T11:53:18.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
