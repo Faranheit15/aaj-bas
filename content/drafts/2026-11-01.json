@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-01T06:32:13.847Z",
+  "updatedAt": "2026-11-01T06:32:13.847Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-07fb17ebca719714",
+    "s-cluster-0fb73eff57b36532",
+    "s-cluster-24bfbb2f3feccb66",
+    "s-cluster-10ad32236f37a646",
+    "s-cluster-963e4c962c66bf3a",
+    "s-cluster-6e34c194f203da21",
+    "s-cluster-c9ac979db1dd4b71",
+    "s-cluster-8fa361b123be9c26"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-d09a9401f0f7c63c",
+      "s-cluster-b528140d5a9be1c4",
+      "s-cluster-4334a247725d03ca"
+    ],
+    "science-health-climate": [
+      "s-cluster-e5d8ad008586a457",
+      "s-cluster-b078d4a4a5b1fc05",
+      "s-cluster-66432510a4c32304"
+    ],
+    "business-economy": [
+      "s-cluster-16ef4202f81cd217",
+      "s-cluster-fb72373306a1e91d",
+      "s-cluster-4681104b18e31bc5"
+    ],
+    "technology-ai": [
+      "s-cluster-616a38339b5de780",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-07fb17ebca719714",
+      "slug": "india-s-cluster-07fb17ebca719714",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Intensive farming risk assessment for your environmental permit",
+      "deck": "What you must do to carry out a risk assessment if you're a farmer applying for a bespoke permit for intensive farming.",
+      "whatChanged": [
+        "What you must do to carry out a risk assessment if you're a farmer applying for a bespoke permit for intensive farming."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-01T00:01:00.000Z",
+      "updatedAt": "2026-11-01T00:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0fb73eff57b36532",
+      "slug": "policy-geopolitics-s-cluster-0fb73eff57b36532",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Colombia travel advice",
+      "deck": "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T00:40:46.000Z",
+      "updatedAt": "2026-11-01T02:47:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-24bfbb2f3feccb66",
+      "slug": "science-health-climate-s-cluster-24bfbb2f3feccb66",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DESNZ: spending over £25,000, February 2026",
+      "deck": "Reports on departmental spending over £25,000.",
+      "whatChanged": ["Reports on departmental spending over £25,000."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-29T16:00:06.000Z",
+      "updatedAt": "2026-10-30T11:34:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-10ad32236f37a646",
+      "slug": "policy-geopolitics-s-cluster-10ad32236f37a646",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Factsheet - 2026 EU-Canada Summit",
+      "deck": "European Commission Factsheet Montreal, 30 Oct 2026 Factsheet - 2026 EU-Canada Summit Factsheet - 2026 EU-Canada Summit",
+      "whatChanged": [
+        "European Commission Factsheet Montreal, 30 Oct 2026 Factsheet - 2026 EU-Canada Summit Factsheet - 2026 EU-Canada Summit"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T09:40:56.000Z",
+      "updatedAt": "2026-10-31T09:45:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-963e4c962c66bf3a",
+      "slug": "india-s-cluster-963e4c962c66bf3a",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Notice: UK ETS Allocation Table for operators of installations",
+      "deck": "This table contains a list of each installation’s free allocation for the 2021 to 2026 allocation period.",
+      "whatChanged": [
+        "This table contains a list of each installation’s free allocation for the 2021 to 2026 allocation period."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T17:05:01.000Z",
+      "updatedAt": "2026-10-30T17:05:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6e34c194f203da21",
+      "slug": "india-s-cluster-6e34c194f203da21",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Minister McNeill speech: From Hunger Hotspots to political action",
+      "deck": "From Hunger Hotspots to political action: What should the UK do when a hunger crisis is coming? Speech from Development Minister, Kirsty McNeill, on 28 October.",
+      "whatChanged": [
+        "From Hunger Hotspots to political action: What should the UK do when a hunger crisis is coming? Speech from Development Minister, Kirsty McNeill, on 28 October."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T16:48:12.000Z",
+      "updatedAt": "2026-10-30T16:48:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c9ac979db1dd4b71",
+      "slug": "policy-geopolitics-s-cluster-c9ac979db1dd4b71",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Joint Statement: The European Union and Canada building together an Alliance for the future",
+      "deck": "European Commission Statement Montreal, 30 Oct 2026 1. Today we, the Leaders of the European Union (EU) and Canada, at our 21st Summit in Montréal, launch the EU-Canada Alliance for the Future to create a common ...",
+      "whatChanged": [
+        "European Commission Statement Montreal, 30 Oct 2026 1. Today we, the Leaders of the European Union (EU) and Canada, at our 21st Summit in Montréal, launch the EU-Canada Alliance for the Future to create a common ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T14:15:09.000Z",
+      "updatedAt": "2026-10-30T14:15:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T15:56:26.000Z",
+      "updatedAt": "2026-10-30T15:56:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d09a9401f0f7c63c",
+      "slug": "policy-geopolitics-s-cluster-d09a9401f0f7c63c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "We urge those who did not support the US’ resolution to seek to find a solution on the basis of that draft: UK statement at the UN Security Council",
+      "deck": "Explanation of Vote by Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Western Sahara.",
+      "whatChanged": [
+        "Explanation of Vote by Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Western Sahara."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T20:57:58.000Z",
+      "updatedAt": "2026-10-30T20:57:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b528140d5a9be1c4",
+      "slug": "policy-geopolitics-s-cluster-b528140d5a9be1c4",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "This mandate will strengthen UNSMIL’s ability to advance a Libyan-led and Libyan-owned political process: UK statement at the UN Security Council",
+      "deck": "Explanation of Vote by Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Libya.",
+      "whatChanged": [
+        "Explanation of Vote by Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Libya."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T19:26:00.000Z",
+      "updatedAt": "2026-10-30T19:26:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T16:07:59.000Z",
+      "updatedAt": "2026-10-30T16:07:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e5d8ad008586a457",
+      "slug": "science-health-climate-s-cluster-e5d8ad008586a457",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Air Pollution Trends Reports",
+      "deck": "Air Pollutions Trends Reports track how air pollution policies have reduced the risk of damage to UK habitats.",
+      "whatChanged": [
+        "Air Pollutions Trends Reports track how air pollution policies have reduced the risk of damage to UK habitats."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T15:34:45.000Z",
+      "updatedAt": "2026-10-30T15:34:45.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b078d4a4a5b1fc05",
+      "slug": "science-health-climate-s-cluster-b078d4a4a5b1fc05",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Precision bred organism release notice (reference: PBR/26/012)",
+      "deck": "Details of a notification to release a precision bred potato plant in England.",
+      "whatChanged": [
+        "Details of a notification to release a precision bred potato plant in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T14:56:54.000Z",
+      "updatedAt": "2026-10-30T14:56:54.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-66432510a4c32304",
+      "slug": "science-health-climate-s-cluster-66432510a4c32304",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Foot and mouth disease: latest situation",
+      "deck": "Current cases of foot and mouth disease, trade restrictions and risk level.",
+      "whatChanged": [
+        "Current cases of foot and mouth disease, trade restrictions and risk level."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-30T11:14:17.000Z",
+      "updatedAt": "2026-10-30T13:47:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-16ef4202f81cd217",
+      "slug": "business-economy-s-cluster-16ef4202f81cd217",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Road fuel prices: 4 October 2027",
+      "deck": "Weekly prices of unleaded petrol and diesel.",
+      "whatChanged": ["Weekly prices of unleaded petrol and diesel."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T11:39:53.000Z",
+      "updatedAt": "2026-10-29T11:42:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb72373306a1e91d",
+      "slug": "business-economy-s-cluster-fb72373306a1e91d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Monthly and annual prices of road fuels and petroleum products",
+      "deck": "Monthly and annual prices of road fuels and fuels used for home heating, plus an index of crude oil prices.",
+      "whatChanged": [
+        "Monthly and annual prices of road fuels and fuels used for home heating, plus an index of crude oil prices."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T09:30:15.000Z",
+      "updatedAt": "2026-10-29T09:30:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4681104b18e31bc5",
+      "slug": "business-economy-s-cluster-4681104b18e31bc5",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Economic Estimates: Digital Sector Regional Gross Value Added (2023 to 2024)",
+      "deck": "Accredited Official Statistics estimating the contribution of the Digital Sector to each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA). Digital Sector Economic Estimates are transferring from for...",
+      "whatChanged": [
+        "Accredited Official Statistics estimating the contribution of the Digital Sector to each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA). Digital Sector Economic Estimates are transferring from former DSIT to DCMS, with the aim of bringing all DCMS Economic Estimates together in due course. This release is being produced by former DSIT under the direction of the former DSIT Chief Statistician."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T11:42:10.000Z",
+      "updatedAt": "2026-10-27T11:42:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T14:39:00.000Z",
+      "updatedAt": "2026-10-29T14:39:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Intensive farming risk assessment for your environmental permit",
+      "url": "https://www.gov.uk/guidance/intensive-farming-risk-assessment-for-your-environmental-permit",
+      "sourceType": "official",
+      "publishedAt": "2026-10-29T09:30:11.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Ecuador travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/ecuador",
+      "sourceType": "official",
+      "publishedAt": "2026-10-29T16:30:00.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Notice: UK ETS Allocation Table for operators of installations",
+      "url": "https://www.gov.uk/government/publications/uk-ets-allocation-table-for-operators-of-installations",
+      "sourceType": "official",
+      "publishedAt": "2026-10-29T09:30:15.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Statutory guidance: Care Act 2014: supporting implementation",
+      "url": "https://www.gov.uk/government/publications/care-act-2014-supporting-implementation",
+      "sourceType": "official",
+      "publishedAt": "2026-10-28T12:13:47.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Artificial Intelligence sector study 2025",
+      "url": "https://www.gov.uk/government/publications/artificial-intelligence-sector-study-2025",
+      "sourceType": "official",
+      "publishedAt": "2026-10-08T10:22:10.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "EU-Canada Summit 2026: Leaders mark a historic moment in bilateral relations",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2318",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T07:40:27.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
