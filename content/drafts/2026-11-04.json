@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-04T06:46:33.994Z",
+  "updatedAt": "2026-11-04T06:46:33.994Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-300441d45bd517ac",
+    "s-cluster-4930933ab76cc7a1",
+    "s-cluster-b994b1e9581e367d",
+    "s-cluster-8cc1e71c8eaa39b4",
+    "s-cluster-31c05037942bf091",
+    "s-cluster-d15c98ccd161f2b5",
+    "s-cluster-add7cad2a4830928",
+    "s-cluster-1d2f680732b986c2"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-4334a247725d03ca",
+      "s-cluster-3c00788e2c700616",
+      "s-cluster-7b316e2d80749152"
+    ],
+    "science-health-climate": [
+      "s-cluster-391a730c07c66afe",
+      "s-cluster-878b3c9e7582f3f0",
+      "s-cluster-3d43ee7afc260cf4"
+    ],
+    "technology-ai": [
+      "s-cluster-a6298d3e1af182fe",
+      "s-cluster-74805db0db458502",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "business-economy": [
+      "s-cluster-a86a0de38d205ddf",
+      "s-cluster-4681104b18e31bc5",
+      "s-cluster-845c0d2d85ca4813"
+    ],
+    "culture-entertainment": ["s-cluster-1eb003f21e45d6e2"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-300441d45bd517ac",
+      "slug": "science-health-climate-s-cluster-300441d45bd517ac",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "“We must keep up the pressure”: Environment Secretary forms new Waste Crime Crackdown Group",
+      "deck": "Ministers, police, Mayors and local authorities join forces to target organised waste crime",
+      "whatChanged": [
+        "Ministers, police, Mayors and local authorities join forces to target organised waste crime"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T00:01:07.000Z",
+      "updatedAt": "2026-11-04T00:01:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4930933ab76cc7a1",
+      "slug": "policy-geopolitics-s-cluster-4930933ab76cc7a1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Greece travel advice",
+      "deck": "FCDO travel advice for Greece. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Greece. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T11:18:20.000Z",
+      "updatedAt": "2026-11-03T20:29:30.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b994b1e9581e367d",
+      "slug": "india-s-cluster-b994b1e9581e367d",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): latest situation in England",
+      "deck": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
+      "whatChanged": [
+        "Find out about the latest bird flu situation in England and guidance for bird keepers and the public."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T16:44:55.000Z",
+      "updatedAt": "2026-11-03T16:44:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8cc1e71c8eaa39b4",
+      "slug": "india-s-cluster-8cc1e71c8eaa39b4",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Oil and gas: offshore environmental legislation",
+      "deck": "Environmental regulations and guidance on offshore oil and gas exploration and production offshore gas unloading and storage and offshore carbon dioxide storage activities",
+      "whatChanged": [
+        "Environmental regulations and guidance on offshore oil and gas exploration and production offshore gas unloading and storage and offshore carbon dioxide storage activities"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T16:30:03.000Z",
+      "updatedAt": "2026-11-03T16:30:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-31c05037942bf091",
+      "slug": "india-s-cluster-31c05037942bf091",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: UK ETS technical guidance: Monitoring and Reporting Regulation (MRR) 2018",
+      "deck": "Technical guidance to assist UK ETS installation operators in complying with the requirements that relate to the Monitoring and Reporting Regulation (MRR) 2018.",
+      "whatChanged": [
+        "Technical guidance to assist UK ETS installation operators in complying with the requirements that relate to the Monitoring and Reporting Regulation (MRR) 2018."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T15:42:36.000Z",
+      "updatedAt": "2026-11-03T15:43:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T15:57:33.000Z",
+      "updatedAt": "2026-11-03T15:57:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-add7cad2a4830928",
+      "slug": "world-s-cluster-add7cad2a4830928",
+      "topic": "world",
+      "reportingType": "reporting",
+      "headline": "Global refinery inputs fell sharply in the second quarter of 2026 before modest recovery",
+      "deck": "Global crude oil refinery inputs fell by 4.8 million barrels per day (b/d) in the second quarter of 2026 (2Q26), or 6%, following the start of conflict in late February in the Middle East, according to data from Kpler. Throughput then in...",
+      "whatChanged": [
+        "Global crude oil refinery inputs fell by 4.8 million barrels per day (b/d) in the second quarter of 2026 (2Q26), or 6%, following the start of conflict in late February in the Middle East, according to data from Kpler. Throughput then increased by 1.8 million b/d in the third quarter, primarily as refiners in the region adjusted to new trade flows."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T14:00:00.000Z",
+      "updatedAt": "2026-11-03T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1d2f680732b986c2",
+      "slug": "science-health-climate-s-cluster-1d2f680732b986c2",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Prevent: guidance for NHS mental health services",
+      "deck": "How those working in NHS mental health services can help reduce the risk of radicalisation in children, young people and adults.",
+      "whatChanged": [
+        "How those working in NHS mental health services can help reduce the risk of radicalisation in children, young people and adults."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T11:25:18.000Z",
+      "updatedAt": "2026-11-03T11:25:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T15:57:14.000Z",
+      "updatedAt": "2026-11-03T15:57:14.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3c00788e2c700616",
+      "slug": "policy-geopolitics-s-cluster-3c00788e2c700616",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Foreign embassies in the UK",
+      "deck": "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission.",
+      "whatChanged": [
+        "Details of foreign embassies, high commissions and consulates in the UK, including heads of mission."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T12:28:55.000Z",
+      "updatedAt": "2026-11-03T12:28:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b316e2d80749152",
+      "slug": "policy-geopolitics-s-cluster-7b316e2d80749152",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the Opening of the European Civil Protection Forum",
+      "deck": "European Commission Speech Brussels, 03 Nov 2026 Allow me to start with a personal memory. Twenty-five years ago, I was in Afghanistan as a young reporter for Belgian television. It was autumn 2001. The war ha...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 03 Nov 2026 Allow me to start with a personal memory. Twenty-five years ago, I was in Afghanistan as a young reporter for Belgian television. It was autumn 2001. The war ha..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T09:12:47.000Z",
+      "updatedAt": "2026-11-03T09:12:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-391a730c07c66afe",
+      "slug": "science-health-climate-s-cluster-391a730c07c66afe",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Environment Act 2021: Post Legislative Scrutiny Memorandum",
+      "deck": "Post-legislative scrutiny of the Environment Act 2021, assessing its implementation, achievements and challenges.",
+      "whatChanged": [
+        "Post-legislative scrutiny of the Environment Act 2021, assessing its implementation, achievements and challenges."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T14:44:59.000Z",
+      "updatedAt": "2026-11-03T14:44:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-878b3c9e7582f3f0",
+      "slug": "science-health-climate-s-cluster-878b3c9e7582f3f0",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Ambient gamma radiation dose rates across the UK",
+      "deck": "Data received from fixed and mobile monitors measuring the ambient (background) gamma radiation dose rate across the UK.",
+      "whatChanged": [
+        "Data received from fixed and mobile monitors measuring the ambient (background) gamma radiation dose rate across the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T14:12:06.000Z",
+      "updatedAt": "2026-11-03T14:12:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3d43ee7afc260cf4",
+      "slug": "science-health-climate-s-cluster-3d43ee7afc260cf4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Austria: doctors",
+      "deck": "List of English-speaking medical facilities and main hospitals for British nationals in Austria.",
+      "whatChanged": [
+        "List of English-speaking medical facilities and main hospitals for British nationals in Austria."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T12:09:47.000Z",
+      "updatedAt": "2026-11-03T12:09:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a6298d3e1af182fe",
+      "slug": "technology-ai-s-cluster-a6298d3e1af182fe",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: Software Security Ambassadors Scheme",
+      "deck": "A scheme to champion secure software development and support a resilient cyber ecosystem.",
+      "whatChanged": [
+        "A scheme to champion secure software development and support a resilient cyber ecosystem."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T12:38:22.000Z",
+      "updatedAt": "2026-11-03T12:38:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-74805db0db458502",
+      "slug": "technology-ai-s-cluster-74805db0db458502",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Load Control Licence: standard licence conditions",
+      "deck": "Standard licence conditions for Load Control Licence holders, covering operational, cyber security and consumer protection requirements.",
+      "whatChanged": [
+        "Standard licence conditions for Load Control Licence holders, covering operational, cyber security and consumer protection requirements."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-02T09:00:03.000Z",
+      "updatedAt": "2026-11-02T09:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a86a0de38d205ddf",
+      "slug": "business-economy-s-cluster-a86a0de38d205ddf",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Independent report: Independent regulatory skills and capability review of the Office of Gas and Electricity Markets (Ofgem)",
+      "deck": "Review of the future skills and capabilities of the Office of Gas and Electricity Markets (Ofgem), with recommendations from an independent expert panel",
+      "whatChanged": [
+        "Review of the future skills and capabilities of the Office of Gas and Electricity Markets (Ofgem), with recommendations from an independent expert panel"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T09:30:03.000Z",
+      "updatedAt": "2026-11-03T09:30:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4681104b18e31bc5",
+      "slug": "business-economy-s-cluster-4681104b18e31bc5",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Economic Estimates: Digital Sector Regional Gross Value Added (2023 to 2024)",
+      "deck": "Accredited Official Statistics estimating the contribution of the Digital Sector to each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA). Digital Sector Economic Estimates are transferring from for...",
+      "whatChanged": [
+        "Accredited Official Statistics estimating the contribution of the Digital Sector to each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA). Digital Sector Economic Estimates are transferring from former DSIT to DCMS, with the aim of bringing all DCMS Economic Estimates together in due course. This release is being produced by former DSIT under the direction of the former DSIT Chief Statistician."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T11:42:10.000Z",
+      "updatedAt": "2026-10-27T11:42:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-845c0d2d85ca4813",
+      "slug": "business-economy-s-cluster-845c0d2d85ca4813",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's address at a High-level side-event at CBD COP17, “Restoring nature – from commitments to action”",
+      "deck": "European Commission Speech Yerevan, 28 Oct 2026 Excellencies, distinguished guests, Let me start with a simple but powerful truth. Our natural world is the bedrock of our economic security, our food and energ...",
+      "whatChanged": [
+        "European Commission Speech Yerevan, 28 Oct 2026 Excellencies, distinguished guests, Let me start with a simple but powerful truth. Our natural world is the bedrock of our economic security, our food and energ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-28T16:16:31.000Z",
+      "updatedAt": "2026-10-28T16:16:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1eb003f21e45d6e2",
+      "slug": "culture-entertainment-s-cluster-1eb003f21e45d6e2",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Guidance: Green Book supplementary guidance: valuation of energy use and greenhouse gas emissions for appraisal",
+      "deck": "Supplementary guidance to Treasury’s Green Book providing government analysts with rules for valuing energy usage and greenhouse gas emissions.",
+      "whatChanged": [
+        "Supplementary guidance to Treasury’s Green Book providing government analysts with rules for valuing energy usage and greenhouse gas emissions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-02T09:30:06.000Z",
+      "updatedAt": "2026-11-02T09:30:06.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "“We must keep up the pressure”: Environment Secretary forms new Waste Crime Crackdown Group",
+      "url": "https://www.gov.uk/government/news/we-must-keep-up-the-pressure-environment-secretary-forms-new-waste-crime-crackdown-group",
+      "sourceType": "official",
+      "publishedAt": "2026-11-03T11:26:35.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Paraguay travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/paraguay",
+      "sourceType": "official",
+      "publishedAt": "2026-10-30T16:48:12.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Oil and gas: offshore environmental legislation",
+      "url": "https://www.gov.uk/guidance/oil-and-gas-offshore-environmental-legislation",
+      "sourceType": "official",
+      "publishedAt": "2026-10-29T16:00:06.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "Global refinery inputs fell sharply in the second quarter of 2026 before modest recovery",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68404",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Digital social care records: how to get more from your system",
+      "url": "https://www.gov.uk/guidance/digital-social-care-records-how-to-get-more-from-your-system",
+      "sourceType": "official",
+      "publishedAt": "2026-10-29T10:56:24.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Commission greenlights Latvia's fifth and final payment request for €504 million under NextGenerationEU",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2328",
+      "sourceType": "official",
+      "publishedAt": "2026-10-26T10:41:12.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Software Security Ambassadors Scheme",
+      "url": "https://www.gov.uk/government/publications/software-security-ambassadors-scheme",
+      "sourceType": "official",
+      "publishedAt": "2026-10-13T15:00:30.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
