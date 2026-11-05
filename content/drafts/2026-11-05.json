@@ -1,0 +1,532 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-05T07:07:13.686Z",
+  "updatedAt": "2026-11-05T07:07:13.686Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-8eef4cc922684475",
+    "s-cluster-a857106794aec777",
+    "s-cluster-f62010d9435da17c",
+    "s-cluster-1b662d01d8513e20",
+    "s-cluster-2fc44ba6837c43ab",
+    "s-cluster-7b37f62d8079e418",
+    "s-cluster-811cc1e609a056b9",
+    "s-cluster-26d83e530977541e"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-2b03189ca99530e0",
+      "s-cluster-61cfb0e15960b54f",
+      "s-cluster-fd5dfb50953774d0"
+    ],
+    "business-economy": [
+      "s-cluster-97a145b49d55e988",
+      "s-cluster-e0e2ed9c822d3f60",
+      "s-cluster-176707a0ea8c567b"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-92d20a18bb024034",
+      "s-cluster-2afdc573152e2dff",
+      "s-cluster-d5943fc4daa7a49e"
+    ],
+    "sports": ["s-cluster-4ea4725106d7d6f6", "s-cluster-1c389d28ca799840"],
+    "technology-ai": [
+      "s-cluster-a6298d3e1af182fe",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f"
+    ],
+    "culture-entertainment": ["s-cluster-1eb003f21e45d6e2"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-8eef4cc922684475",
+      "slug": "india-s-cluster-8eef4cc922684475",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Policy paper: Bovine TB control strategy for England",
+      "deck": "Sets out our strategy for achieving bovine TB-free status in England by 2038.",
+      "whatChanged": [
+        "Sets out our strategy for achieving bovine TB-free status in England by 2038."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T00:01:02.000Z",
+      "updatedAt": "2026-11-05T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a857106794aec777",
+      "slug": "science-health-climate-s-cluster-a857106794aec777",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bringing clean solar power to communities in Bangladesh",
+      "deck": "The UK’s International Climate Finance is helping Bangladesh sustain clean, affordable electricity for millions of people in rural and off-grid communities.",
+      "whatChanged": [
+        "The UK’s International Climate Finance is helping Bangladesh sustain clean, affordable electricity for millions of people in rural and off-grid communities."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra", "uk-desnz"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-04T09:30:06.000Z",
+      "updatedAt": "2026-11-04T09:30:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f62010d9435da17c",
+      "slug": "science-health-climate-s-cluster-f62010d9435da17c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Protecting the world’s most biodiverse coral reef ecosystems",
+      "deck": "Supported by the UK’s International Climate Finance (ICF), Indonesia is scaling solutions to protect its globally significant coral reefs supporting food security, sustainable livelihoods, and greater climate resilience.",
+      "whatChanged": [
+        "Supported by the UK’s International Climate Finance (ICF), Indonesia is scaling solutions to protect its globally significant coral reefs supporting food security, sustainable livelihoods, and greater climate resilience."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra", "uk-desnz"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-04T09:30:06.000Z",
+      "updatedAt": "2026-11-04T09:30:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1b662d01d8513e20",
+      "slug": "science-health-climate-s-cluster-1b662d01d8513e20",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Government bid to make England TB-free by 2038, with vaccines for cattle and badgers",
+      "deck": "No badgers culled due to the disease in 2026 – first year in over a decade with no culling",
+      "whatChanged": [
+        "No badgers culled due to the disease in 2026 – first year in over a decade with no culling"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T00:01:02.000Z",
+      "updatedAt": "2026-11-05T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2fc44ba6837c43ab",
+      "slug": "policy-geopolitics-s-cluster-2fc44ba6837c43ab",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the Opening of the European Civil Protection Forum",
+      "deck": "European Commission Speech Brussels, 03 Nov 2026 Allow me to start with a personal memory. Twenty-five years ago, I was in Afghanistan as a young reporter for Belgian television. It was autumn 2001. The war ha...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 03 Nov 2026 Allow me to start with a personal memory. Twenty-five years ago, I was in Afghanistan as a young reporter for Belgian television. It was autumn 2001. The war ha..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T09:12:47.000Z",
+      "updatedAt": "2026-11-04T16:29:14.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b37f62d8079e418",
+      "slug": "india-s-cluster-7b37f62d8079e418",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Remarks by High Representative/Vice-President Kallas and Commissioner Kos on the 2026 Enlargement Package",
+      "deck": "European Commission Speech Brussels, 04 Nov 2026 High Representative/Vice-President Kallas Good afternoon. Today, the European Commission adopted the annual report on Enlargement, a scorecard of 10 accession c...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 04 Nov 2026 High Representative/Vice-President Kallas Good afternoon. Today, the European Commission adopted the annual report on Enlargement, a scorecard of 10 accession c..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T13:56:15.000Z",
+      "updatedAt": "2026-11-04T13:56:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-811cc1e609a056b9",
+      "slug": "india-s-cluster-811cc1e609a056b9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Energy Independence Bill: factsheets",
+      "deck": "Factsheets relating to the Energy Independence Bill.",
+      "whatChanged": ["Factsheets relating to the Energy Independence Bill."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T13:03:00.000Z",
+      "updatedAt": "2026-11-04T13:03:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-26d83e530977541e",
+      "slug": "world-s-cluster-26d83e530977541e",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Policy paper: UK candidacy for International Telecommunication Union Council elections 2026",
+      "deck": "This document outlines the UK’s candidacy for re-election to the International Telecommunication Union (ITU) Council in 2026.",
+      "whatChanged": [
+        "This document outlines the UK’s candidacy for re-election to the International Telecommunication Union (ITU) Council in 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T16:33:30.000Z",
+      "updatedAt": "2026-11-04T16:33:30.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2b03189ca99530e0",
+      "slug": "science-health-climate-s-cluster-2b03189ca99530e0",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK International Climate Finance results 2026",
+      "deck": "This page provides the 2026 International Climate Finance (ICF) results for the UK government.",
+      "whatChanged": [
+        "This page provides the 2026 International Climate Finance (ICF) results for the UK government."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra", "uk-desnz"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-04T09:30:00.000Z",
+      "updatedAt": "2026-11-04T09:30:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-61cfb0e15960b54f",
+      "slug": "science-health-climate-s-cluster-61cfb0e15960b54f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Independent report: Chief Medical Officer's annual report 2026: health in rural areas and small towns",
+      "deck": "Professor Chris Whitty’s annual report discusses the health and wellbeing of communities in England’s small towns and rural areas.",
+      "whatChanged": [
+        "Professor Chris Whitty’s annual report discusses the health and wellbeing of communities in England’s small towns and rural areas."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T09:30:05.000Z",
+      "updatedAt": "2026-11-04T09:30:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fd5dfb50953774d0",
+      "slug": "science-health-climate-s-cluster-fd5dfb50953774d0",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Independent report: Appraisal methods for research and development spending",
+      "deck": "A report on how other nations appraise research and development (R&D) policies, and a potential framework for assessing R&D value for money.",
+      "whatChanged": [
+        "A report on how other nations appraise research and development (R&D) policies, and a potential framework for assessing R&D value for money."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T09:30:05.000Z",
+      "updatedAt": "2026-11-04T09:30:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-97a145b49d55e988",
+      "slug": "business-economy-s-cluster-97a145b49d55e988",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Communities to get a stronger say over billions of pounds of water investment",
+      "deck": "Eight new regional water councils will put communities at the heart of decisions on tackling sewage, flooding, drought and securing future water supplies",
+      "whatChanged": [
+        "Eight new regional water councils will put communities at the heart of decisions on tackling sewage, flooding, drought and securing future water supplies"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T00:01:02.000Z",
+      "updatedAt": "2026-11-05T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e0e2ed9c822d3f60",
+      "slug": "business-economy-s-cluster-e0e2ed9c822d3f60",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "€525 million investment set to drive new generation of European chip design companies",
+      "deck": "European Commission Press release Brussels, 04 Nov 2026 Launching today, the European Chip Design Platform will mobilise €525 million in investment to stimulate a new generation of European chip design companies.",
+      "whatChanged": [
+        "European Commission Press release Brussels, 04 Nov 2026 Launching today, the European Chip Design Platform will mobilise €525 million in investment to stimulate a new generation of European chip design companies."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T14:48:20.000Z",
+      "updatedAt": "2026-11-04T14:48:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-176707a0ea8c567b",
+      "slug": "business-economy-s-cluster-176707a0ea8c567b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Research: Functioning of the UK carbon market, 2025",
+      "deck": "A high-level summary of the performance of the UK Emissions Trading Scheme during the fourth scheme year of its operation.",
+      "whatChanged": [
+        "A high-level summary of the performance of the UK Emissions Trading Scheme during the fourth scheme year of its operation."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T09:45:55.000Z",
+      "updatedAt": "2026-11-04T09:45:55.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-92d20a18bb024034",
+      "slug": "policy-geopolitics-s-cluster-92d20a18bb024034",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary speech at the 'Blue Finance and Innovation' event at the Commonwealth Heads of Government Meeting (CHOGM)",
+      "deck": "Ed Miliband delivered a speech at the 'Blue Finance and Innovation' event at CHOGM on 03 November 2026. He outlined UK leadership on ocean finance, private finance mobilisation, climate resilience and sustainable growth.",
+      "whatChanged": [
+        "Ed Miliband delivered a speech at the 'Blue Finance and Innovation' event at CHOGM on 03 November 2026. He outlined UK leadership on ocean finance, private finance mobilisation, climate resilience and sustainable growth."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T18:53:59.000Z",
+      "updatedAt": "2026-11-04T18:53:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2afdc573152e2dff",
+      "slug": "policy-geopolitics-s-cluster-2afdc573152e2dff",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Madagascar travel advice",
+      "deck": "FCDO travel advice for Madagascar. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Madagascar. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T16:23:39.000Z",
+      "updatedAt": "2026-11-04T17:07:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d5943fc4daa7a49e",
+      "slug": "policy-geopolitics-s-cluster-d5943fc4daa7a49e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Plant imports: authorised border control posts in the UK",
+      "deck": "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports.",
+      "whatChanged": [
+        "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T08:42:21.000Z",
+      "updatedAt": "2026-11-04T08:42:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4ea4725106d7d6f6",
+      "slug": "sports-s-cluster-4ea4725106d7d6f6",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "New NHS blood test trial to help spot cancers earlier",
+      "deck": "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers.",
+      "whatChanged": [
+        "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T08:34:00.000Z",
+      "updatedAt": "2026-11-04T08:34:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1c389d28ca799840",
+      "slug": "sports-s-cluster-1c389d28ca799840",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement",
+      "deck": "European Commission Factsheet Brussels, 04 Nov 2026 Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement Factsheet - 2026 Annual Overview Report on Simplification, Implemen...",
+      "whatChanged": [
+        "European Commission Factsheet Brussels, 04 Nov 2026 Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement Factsheet - 2026 Annual Overview Report on Simplification, Implemen..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T23:00:00.000Z",
+      "updatedAt": "2026-11-03T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a6298d3e1af182fe",
+      "slug": "technology-ai-s-cluster-a6298d3e1af182fe",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: Software Security Ambassadors Scheme",
+      "deck": "A scheme to champion secure software development and support a resilient cyber ecosystem.",
+      "whatChanged": [
+        "A scheme to champion secure software development and support a resilient cyber ecosystem."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T12:38:22.000Z",
+      "updatedAt": "2026-11-03T12:38:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1eb003f21e45d6e2",
+      "slug": "culture-entertainment-s-cluster-1eb003f21e45d6e2",
+      "topic": "culture-entertainment",
+      "reportingType": "official",
+      "headline": "Guidance: Green Book supplementary guidance: valuation of energy use and greenhouse gas emissions for appraisal",
+      "deck": "Supplementary guidance to Treasury’s Green Book providing government analysts with rules for valuing energy usage and greenhouse gas emissions.",
+      "whatChanged": [
+        "Supplementary guidance to Treasury’s Green Book providing government analysts with rules for valuing energy usage and greenhouse gas emissions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-02T09:30:06.000Z",
+      "updatedAt": "2026-11-02T09:30:06.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Communities to get a stronger say over billions of pounds of water investment",
+      "url": "https://www.gov.uk/government/news/communities-to-get-a-stronger-say-over-billions-of-pounds-of-water-investment",
+      "sourceType": "official",
+      "publishedAt": "2026-11-03T14:49:23.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Foreign Secretary speech at the 'Blue Finance and Innovation' event at the Commonwealth Heads of Government Meeting (CHOGM)",
+      "url": "https://www.gov.uk/government/speeches/foreign-secretary-speech-at-the-blue-finance-and-innovation-event-at-the-commonwealth-heads-of-government-meeting-chogm",
+      "sourceType": "official",
+      "publishedAt": "2026-11-03T15:57:33.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Energy Independence Bill: factsheets",
+      "url": "https://www.gov.uk/government/publications/energy-independence-bill-factsheets",
+      "sourceType": "official",
+      "publishedAt": "2026-11-02T09:30:06.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement following meeting on prosperity talks today",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2348",
+      "sourceType": "official",
+      "publishedAt": "2026-10-28T11:39:10.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: UK candidacy for International Telecommunication Union Council elections 2026",
+      "url": "https://www.gov.uk/government/publications/uk-candidacy-for-international-telecommunication-union-council-elections-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T09:14:38.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Independent report: Chief Medical Officer's annual report 2026: health in rural areas and small towns",
+      "url": "https://www.gov.uk/government/publications/chief-medical-officers-annual-report-2026-health-in-rural-areas-and-small-towns",
+      "sourceType": "official",
+      "publishedAt": "2026-10-29T13:20:00.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
