@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-06T07:06:11.023Z",
+  "updatedAt": "2026-11-06T07:06:11.023Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-7b3b782d807cf6d5",
+    "s-cluster-7731072049029897",
+    "s-cluster-4a45cc469b85806d",
+    "s-cluster-a4c35810a0102727",
+    "s-cluster-0220ff293db76c8e",
+    "s-cluster-d5943fc4daa7a49e",
+    "s-cluster-012f7e363012d1b9",
+    "s-cluster-579c5464cd2efd8a"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-9a8af9e31c68757a",
+      "s-cluster-7b3b802d807d046d",
+      "s-cluster-92d20a18bb024034"
+    ],
+    "business-economy": [
+      "s-cluster-6584ad1dc3ad723c",
+      "s-cluster-49cc567cc7690fba",
+      "s-cluster-97a145b49d55e988"
+    ],
+    "science-health-climate": [
+      "s-cluster-113b7fd9ca6deb35",
+      "s-cluster-1b662d01d8513e20",
+      "s-cluster-d4b53e26906aeceb"
+    ],
+    "technology-ai": [
+      "s-cluster-e0df6a9c822a2af0",
+      "s-cluster-e51fbee6d833f206",
+      "s-cluster-a6298d3e1af182fe"
+    ],
+    "sports": ["s-cluster-4ea4725106d7d6f6", "s-cluster-1c389d28ca799840"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-7b3b782d807cf6d5",
+      "slug": "india-s-cluster-7b3b782d807cf6d5",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Serafin during the Budget Committee meeting at the European Parliament",
+      "deck": "European Commission Speech Brussels, 05 Nov 2026 OPENING REMARKS Dear Chair, Honourable Members, I am very pleased to join you today to discuss the state of play on the next multi-annual EU budget. Our common ...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 05 Nov 2026 OPENING REMARKS Dear Chair, Honourable Members, I am very pleased to join you today to discuss the state of play on the next multi-annual EU budget. Our common ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T12:11:35.000Z",
+      "updatedAt": "2026-11-05T12:11:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7731072049029897",
+      "slug": "science-health-climate-s-cluster-7731072049029897",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "UK citizen returned from DRC for specialist Ebola care",
+      "deck": "UK government worked with the DRC government and international health partners to bring the patient home on a medical evacuation flight",
+      "whatChanged": [
+        "UK government worked with the DRC government and international health partners to bring the patient home on a medical evacuation flight"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T19:47:15.000Z",
+      "updatedAt": "2026-11-05T19:47:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4a45cc469b85806d",
+      "slug": "india-s-cluster-4a45cc469b85806d",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Future of access to HM Land Registry information",
+      "deck": "Consultation on proposals to increase the public value of HM Land Registry data and explore potential safeguarding measures.",
+      "whatChanged": [
+        "Consultation on proposals to increase the public value of HM Land Registry data and explore potential safeguarding measures."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T16:39:21.000Z",
+      "updatedAt": "2026-11-05T16:39:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a4c35810a0102727",
+      "slug": "india-s-cluster-a4c35810a0102727",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "53rd Universal Periodic Review of human rights: UK Statement on Hungary",
+      "deck": "Statement by the UK's Human Rights Ambassador, Eleanor Sanders, at Hungary's Universal Periodic Review at the Human Rights Council in Geneva.",
+      "whatChanged": [
+        "Statement by the UK's Human Rights Ambassador, Eleanor Sanders, at Hungary's Universal Periodic Review at the Human Rights Council in Geneva."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T10:24:17.000Z",
+      "updatedAt": "2026-11-05T16:05:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0220ff293db76c8e",
+      "slug": "policy-geopolitics-s-cluster-0220ff293db76c8e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Togo travel advice",
+      "deck": "FCDO travel advice for Togo. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Togo. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T16:27:18.000Z",
+      "updatedAt": "2026-11-05T16:48:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d5943fc4daa7a49e",
+      "slug": "policy-geopolitics-s-cluster-d5943fc4daa7a49e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Plant imports: authorised border control posts in the UK",
+      "deck": "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports.",
+      "whatChanged": [
+        "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T15:34:27.000Z",
+      "updatedAt": "2026-11-05T15:34:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-012f7e363012d1b9",
+      "slug": "science-health-climate-s-cluster-012f7e363012d1b9",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK Clinical Research Delivery key performance indicators: data to October 2026",
+      "deck": "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme.",
+      "whatChanged": [
+        "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T10:38:39.000Z",
+      "updatedAt": "2026-11-05T14:19:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-579c5464cd2efd8a",
+      "slug": "business-economy-s-cluster-579c5464cd2efd8a",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Capacity Market: new technologies 2026",
+      "deck": "We are seeking views on whether technologies capable of contributing to electricity security of supply could enter future Capacity Market auctions.",
+      "whatChanged": [
+        "We are seeking views on whether technologies capable of contributing to electricity security of supply could enter future Capacity Market auctions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T11:45:15.000Z",
+      "updatedAt": "2026-11-05T11:45:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9a8af9e31c68757a",
+      "slug": "policy-geopolitics-s-cluster-9a8af9e31c68757a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Continued violations of Abyei’s demilitarised status are unacceptable: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Sudan and South Sudan.",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on Sudan and South Sudan."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T16:11:59.000Z",
+      "updatedAt": "2026-11-05T16:11:59.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b3b802d807d046d",
+      "slug": "policy-geopolitics-s-cluster-7b3b802d807d046d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Keynote address by Commissioner Kubilius at the Konrad Adenauer Stiftung's Global Security Forum",
+      "deck": "European Commission Speech Brussels, 05 Nov 2026 It's a big honour for me to be invited to give the opening speech at the first ever Global Security Forum, organized by the Konrad Adenauer foundation. First ma...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 05 Nov 2026 It's a big honour for me to be invited to give the opening speech at the first ever Global Security Forum, organized by the Konrad Adenauer foundation. First ma..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T09:05:13.000Z",
+      "updatedAt": "2026-11-05T09:05:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-92d20a18bb024034",
+      "slug": "policy-geopolitics-s-cluster-92d20a18bb024034",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary speech at the 'Blue Finance and Innovation' event at the Commonwealth Heads of Government Meeting (CHOGM)",
+      "deck": "Ed Miliband delivered a speech at the 'Blue Finance and Innovation' event at CHOGM on 03 November 2026. He outlined UK leadership on ocean finance, private finance mobilisation, climate resilience and sustainable growth.",
+      "whatChanged": [
+        "Ed Miliband delivered a speech at the 'Blue Finance and Innovation' event at CHOGM on 03 November 2026. He outlined UK leadership on ocean finance, private finance mobilisation, climate resilience and sustainable growth."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T18:53:00.000Z",
+      "updatedAt": "2026-11-04T18:53:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6584ad1dc3ad723c",
+      "slug": "business-economy-s-cluster-6584ad1dc3ad723c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Wholesale fruit and vegetable prices",
+      "deck": "Series of fortnightly average wholesale market prices of selected home grown horticultural produce.",
+      "whatChanged": [
+        "Series of fortnightly average wholesale market prices of selected home grown horticultural produce."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T15:17:43.000Z",
+      "updatedAt": "2026-11-05T15:17:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-49cc567cc7690fba",
+      "slug": "business-economy-s-cluster-49cc567cc7690fba",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission proposes 2027 fishing opportunities for fish stocks in the Atlantic, Kattegat and Skagerrak",
+      "deck": "European Commission Press release Brussels, 05 Nov 2026 Today, the European Commission adopted its proposal for the 2027 fishing opportunities for 11 fish stocks managed by the EU in the Atlantic, Kattegat and Skagerrak.",
+      "whatChanged": [
+        "European Commission Press release Brussels, 05 Nov 2026 Today, the European Commission adopted its proposal for the 2027 fishing opportunities for 11 fish stocks managed by the EU in the Atlantic, Kattegat and Skagerrak."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T09:47:10.000Z",
+      "updatedAt": "2026-11-05T10:28:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-97a145b49d55e988",
+      "slug": "business-economy-s-cluster-97a145b49d55e988",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Communities to get a stronger say over billions of pounds of water investment",
+      "deck": "Eight new regional water councils will put communities at the heart of decisions on tackling sewage, flooding, drought and securing future water supplies",
+      "whatChanged": [
+        "Eight new regional water councils will put communities at the heart of decisions on tackling sewage, flooding, drought and securing future water supplies"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T00:01:00.000Z",
+      "updatedAt": "2026-11-05T00:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-113b7fd9ca6deb35",
+      "slug": "science-health-climate-s-cluster-113b7fd9ca6deb35",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Quarterly reports on the pesticide residues monitoring programme: background and methodology",
+      "deck": "Supporting documents for the quarterly reports on the pesticide residues monitoring programme.",
+      "whatChanged": [
+        "Supporting documents for the quarterly reports on the pesticide residues monitoring programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T13:41:04.000Z",
+      "updatedAt": "2026-11-05T13:41:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1b662d01d8513e20",
+      "slug": "science-health-climate-s-cluster-1b662d01d8513e20",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Government bid to make England TB-free by 2038, with vaccines for cattle and badgers",
+      "deck": "No badgers culled due to the disease in 2026 – first year in over a decade with no culling",
+      "whatChanged": [
+        "No badgers culled due to the disease in 2026 – first year in over a decade with no culling"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T00:01:02.000Z",
+      "updatedAt": "2026-11-05T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d4b53e26906aeceb",
+      "slug": "science-health-climate-s-cluster-d4b53e26906aeceb",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT spending over £25,000 in 2026",
+      "deck": "The Department for Science, Innovation and Technology (DSIT) spending over £25,000 in 2026.",
+      "whatChanged": [
+        "The Department for Science, Innovation and Technology (DSIT) spending over £25,000 in 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-10-29T16:00:07.000Z",
+      "updatedAt": "2026-10-30T11:34:38.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e0df6a9c822a2af0",
+      "slug": "technology-ai-s-cluster-e0df6a9c822a2af0",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "European Innovation Council launches €1.8 billion in funding for 2027",
+      "deck": "European Commission Press release Brussels, 05 Nov 2026 The European Commission has adopted the 2027 European Innovation Council (EIC) Work Programme, unlocking €1.8 billion to support Europe's most promising deep tech entrepreneurs and...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 05 Nov 2026 The European Commission has adopted the 2027 European Innovation Council (EIC) Work Programme, unlocking €1.8 billion to support Europe's most promising deep tech entrepreneurs and researchers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T09:45:37.000Z",
+      "updatedAt": "2026-11-05T09:45:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e51fbee6d833f206",
+      "slug": "technology-ai-s-cluster-e51fbee6d833f206",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Factsheet: Education and Skills package",
+      "deck": "European Commission Factsheet Brussels, 05 Nov 2026 Factsheet: Education and Skills package Factsheet: Education and Skills package",
+      "whatChanged": [
+        "European Commission Factsheet Brussels, 05 Nov 2026 Factsheet: Education and Skills package Factsheet: Education and Skills package"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T23:00:00.000Z",
+      "updatedAt": "2026-11-04T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a6298d3e1af182fe",
+      "slug": "technology-ai-s-cluster-a6298d3e1af182fe",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: Software Security Ambassadors Scheme",
+      "deck": "A scheme to champion secure software development and support a resilient cyber ecosystem.",
+      "whatChanged": [
+        "A scheme to champion secure software development and support a resilient cyber ecosystem."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T12:38:22.000Z",
+      "updatedAt": "2026-11-03T12:38:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4ea4725106d7d6f6",
+      "slug": "sports-s-cluster-4ea4725106d7d6f6",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "New NHS blood test trial to help spot cancers earlier",
+      "deck": "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers.",
+      "whatChanged": [
+        "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T08:34:00.000Z",
+      "updatedAt": "2026-11-04T08:34:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1c389d28ca799840",
+      "slug": "sports-s-cluster-1c389d28ca799840",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement",
+      "deck": "European Commission Factsheet Brussels, 04 Nov 2026 Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement Factsheet - 2026 Annual Overview Report on Simplification, Implemen...",
+      "whatChanged": [
+        "European Commission Factsheet Brussels, 04 Nov 2026 Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement Factsheet - 2026 Annual Overview Report on Simplification, Implemen..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T23:00:00.000Z",
+      "updatedAt": "2026-11-03T23:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Remarks by Commissioner Serafin during the Budget Committee meeting at the European Parliament",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2358",
+      "sourceType": "official",
+      "publishedAt": "2026-10-30T08:17:48.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "UK citizen returned from DRC for specialist Ebola care",
+      "url": "https://www.gov.uk/government/news/uk-citizen-returned-from-drc-for-specialist-ebola-care",
+      "sourceType": "official",
+      "publishedAt": "2026-10-29T17:17:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Future of access to HM Land Registry information",
+      "url": "https://www.gov.uk/government/consultations/future-of-access-to-hm-land-registry-information",
+      "sourceType": "official",
+      "publishedAt": "2026-11-04T10:14:04.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Belize travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/belize",
+      "sourceType": "official",
+      "publishedAt": "2026-11-04T16:27:18.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Capacity Market: new technologies 2026",
+      "url": "https://www.gov.uk/government/consultations/capacity-market-new-technologies-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-11-02T15:54:16.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: UK candidacy for International Telecommunication Union Council elections 2026",
+      "url": "https://www.gov.uk/government/publications/uk-candidacy-for-international-telecommunication-union-council-elections-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T09:14:38.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
