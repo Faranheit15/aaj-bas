@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-07",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-07T06:18:55.278Z",
+  "updatedAt": "2026-11-07T06:18:55.278Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-8e4c94941bc01c39",
+    "s-cluster-97f01ccec986c8c9",
+    "s-cluster-886228f80e06b10d",
+    "s-cluster-5ed27a3b991afbbb",
+    "s-cluster-5c1fc4ef8922eadb",
+    "s-cluster-61cfb0e15960b54f",
+    "s-cluster-b55d838355e631de",
+    "s-cluster-adde3fd2a4883ba5"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-d5943fc4daa7a49e",
+      "s-cluster-f83e46bebd7e6b21",
+      "s-cluster-e04a8a9e95158ca1"
+    ],
+    "business-economy": [
+      "s-cluster-7b426c2d8083011f",
+      "s-cluster-6584ad1dc3ad723c",
+      "s-cluster-579c5464cd2efd8a"
+    ],
+    "science-health-climate": [
+      "s-cluster-8c07a8505cf36c0a",
+      "s-cluster-9a16c7c53e6946fe",
+      "s-cluster-3b4723ddcb55298b"
+    ],
+    "technology-ai": [
+      "s-cluster-e0df6a9c822a2af0",
+      "s-cluster-e51fbee6d833f206",
+      "s-cluster-0f37ae2ac216caf6"
+    ],
+    "sports": ["s-cluster-4ea4725106d7d6f6", "s-cluster-1c389d28ca799840"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-8e4c94941bc01c39",
+      "slug": "business-economy-s-cluster-8e4c94941bc01c39",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Research: Functioning of the UK carbon market, 2025",
+      "deck": "A high-level summary of the performance of the UK Emissions Trading Scheme during the fourth scheme year of its operation.",
+      "whatChanged": [
+        "A high-level summary of the performance of the UK Emissions Trading Scheme during the fourth scheme year of its operation."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-04T09:45:55.000Z",
+      "updatedAt": "2026-11-06T09:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-97f01ccec986c8c9",
+      "slug": "india-s-cluster-97f01ccec986c8c9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Notice: Boiler Upgrade Scheme: approval to over-allocate vouchers, November 2026",
+      "deck": "This notice confirms changes to the Boiler Upgrade Scheme (BUS) in November 2026.",
+      "whatChanged": [
+        "This notice confirms changes to the Boiler Upgrade Scheme (BUS) in November 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T09:29:57.000Z",
+      "updatedAt": "2026-11-06T15:24:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-886228f80e06b10d",
+      "slug": "policy-geopolitics-s-cluster-886228f80e06b10d",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Belize travel advice",
+      "deck": "FCDO travel advice for Belize. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Belize. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T16:48:48.000Z",
+      "updatedAt": "2026-11-06T17:00:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5ed27a3b991afbbb",
+      "slug": "india-s-cluster-5ed27a3b991afbbb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bluetongue: latest situation",
+      "deck": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+      "whatChanged": [
+        "Overview of current bluetongue cases, risk level, vaccinations and restrictions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T14:45:51.000Z",
+      "updatedAt": "2026-11-06T14:45:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5c1fc4ef8922eadb",
+      "slug": "india-s-cluster-5c1fc4ef8922eadb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Exporting controlled goods from Great Britain during HMRC system issues",
+      "deck": "Find out which controlled goods follow the normal export declaration rules if HMRC apply continuity plans due to system issues.",
+      "whatChanged": [
+        "Find out which controlled goods follow the normal export declaration rules if HMRC apply continuity plans due to system issues."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T14:13:15.000Z",
+      "updatedAt": "2026-11-06T14:13:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-61cfb0e15960b54f",
+      "slug": "science-health-climate-s-cluster-61cfb0e15960b54f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Independent report: Chief Medical Officer's annual report 2026: health in rural areas and small towns",
+      "deck": "Professor Chris Whitty’s annual report discusses the health and wellbeing of communities in England’s small towns and rural areas.",
+      "whatChanged": [
+        "Professor Chris Whitty’s annual report discusses the health and wellbeing of communities in England’s small towns and rural areas."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T15:06:15.000Z",
+      "updatedAt": "2026-11-06T15:06:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b55d838355e631de",
+      "slug": "policy-geopolitics-s-cluster-b55d838355e631de",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: FCDO statistics: statement on confidentiality",
+      "deck": "This policy sets out how FCDO protects the confidentiality of personal information used in producing official statistics, ensuring compliance with data protection law and the Code of Practice for Statistics.",
+      "whatChanged": [
+        "This policy sets out how FCDO protects the confidentiality of personal information used in producing official statistics, ensuring compliance with data protection law and the Code of Practice for Statistics."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T12:51:07.000Z",
+      "updatedAt": "2026-11-06T13:03:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-adde3fd2a4883ba5",
+      "slug": "business-economy-s-cluster-adde3fd2a4883ba5",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "U.S. crude oil imports from Venezuela in July were highest since 2017",
+      "deck": "In July 2026, U.S. imports of crude oil from Venezuela averaged 701,000 barrels per day (b/d), the most since May 2017, before decreasing to 655,000 b/d in August, according to data published in our Petroleum Supply Monthly",
+      "whatChanged": [
+        "In July 2026, U.S. imports of crude oil from Venezuela averaged 701,000 barrels per day (b/d), the most since May 2017, before decreasing to 655,000 b/d in August, according to data published in our Petroleum Supply Monthly"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T14:00:00.000Z",
+      "updatedAt": "2026-11-06T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d5943fc4daa7a49e",
+      "slug": "policy-geopolitics-s-cluster-d5943fc4daa7a49e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Plant imports: authorised border control posts in the UK",
+      "deck": "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports.",
+      "whatChanged": [
+        "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T12:57:32.000Z",
+      "updatedAt": "2026-11-06T12:57:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f83e46bebd7e6b21",
+      "slug": "policy-geopolitics-s-cluster-f83e46bebd7e6b21",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Commission launches second Annual Migration Management Cycle under the Pact on Migration and Asylum",
+      "deck": "European Commission Press release Brussels, 06 Nov 2026 Today, the European Commission is launching the second Annual Migration Management Cycle, delivering on a core component of the Pact on Migration and Asylum.",
+      "whatChanged": [
+        "European Commission Press release Brussels, 06 Nov 2026 Today, the European Commission is launching the second Annual Migration Management Cycle, delivering on a core component of the Pact on Migration and Asylum."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T09:39:32.000Z",
+      "updatedAt": "2026-11-06T11:52:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e04a8a9e95158ca1",
+      "slug": "policy-geopolitics-s-cluster-e04a8a9e95158ca1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Statement on the sentencing of Joshua Wong",
+      "deck": "Joint statement from the foreign ministries of Australia, Canada, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom, and the United States.",
+      "whatChanged": [
+        "Joint statement from the foreign ministries of Australia, Canada, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom, and the United States."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T10:58:48.000Z",
+      "updatedAt": "2026-11-06T10:58:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b426c2d8083011f",
+      "slug": "business-economy-s-cluster-7b426c2d8083011f",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Hoekstra at the 22nd Athens Tax Forum",
+      "deck": "European Commission Speech Athens, 06 Nov 2026 Ladies and Gentlemen, A very good morning to all of you. It's a great pleasure to be back in beautiful Greece and to be here today at the 22nd Athens Tax Forum ...",
+      "whatChanged": [
+        "European Commission Speech Athens, 06 Nov 2026 Ladies and Gentlemen, A very good morning to all of you. It's a great pleasure to be back in beautiful Greece and to be here today at the 22nd Athens Tax Forum ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T13:25:32.000Z",
+      "updatedAt": "2026-11-06T13:25:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6584ad1dc3ad723c",
+      "slug": "business-economy-s-cluster-6584ad1dc3ad723c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Wholesale fruit and vegetable prices",
+      "deck": "Series of fortnightly average wholesale market prices of selected home grown horticultural produce.",
+      "whatChanged": [
+        "Series of fortnightly average wholesale market prices of selected home grown horticultural produce."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T15:17:43.000Z",
+      "updatedAt": "2026-11-05T15:17:43.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-579c5464cd2efd8a",
+      "slug": "business-economy-s-cluster-579c5464cd2efd8a",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Capacity Market: new technologies 2026",
+      "deck": "We are seeking views on whether technologies capable of contributing to electricity security of supply could enter future Capacity Market auctions.",
+      "whatChanged": [
+        "We are seeking views on whether technologies capable of contributing to electricity security of supply could enter future Capacity Market auctions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T11:45:15.000Z",
+      "updatedAt": "2026-11-05T11:45:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8c07a8505cf36c0a",
+      "slug": "science-health-climate-s-cluster-8c07a8505cf36c0a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Independent report: Chikungunya vaccine for UK travellers: JCVI advice, 16 July 2025",
+      "deck": "Statement setting out advice from the Joint Committee on Vaccination and Immunisation (JCVI) on the use of chikungunya vaccines in UK travellers.",
+      "whatChanged": [
+        "Statement setting out advice from the Joint Committee on Vaccination and Immunisation (JCVI) on the use of chikungunya vaccines in UK travellers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T11:00:05.000Z",
+      "updatedAt": "2026-11-06T11:00:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9a16c7c53e6946fe",
+      "slug": "science-health-climate-s-cluster-9a16c7c53e6946fe",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "How you'll be regulated: environmental permits",
+      "deck": "How the Environment Agency checks you're complying with your permit through assessments, inspections and permit reviews, and what happens if you do not follow the rules.",
+      "whatChanged": [
+        "How the Environment Agency checks you're complying with your permit through assessments, inspections and permit reviews, and what happens if you do not follow the rules."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T10:17:15.000Z",
+      "updatedAt": "2026-11-06T10:17:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b4723ddcb55298b",
+      "slug": "science-health-climate-s-cluster-3b4723ddcb55298b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: DHSC public appointments: 2026 to 2027",
+      "deck": "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027.",
+      "whatChanged": [
+        "Non-executive appointments to the Department of Health and Social Care's public bodies and committees from April 2026 to March 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T10:00:09.000Z",
+      "updatedAt": "2026-11-06T10:00:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e0df6a9c822a2af0",
+      "slug": "technology-ai-s-cluster-e0df6a9c822a2af0",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "European Innovation Council launches €1.8 billion in funding for 2027",
+      "deck": "European Commission Press release Brussels, 05 Nov 2026 The European Commission has adopted the 2027 European Innovation Council (EIC) Work Programme, unlocking €1.8 billion to support Europe's most promising deep tech entrepreneurs and...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 05 Nov 2026 The European Commission has adopted the 2027 European Innovation Council (EIC) Work Programme, unlocking €1.8 billion to support Europe's most promising deep tech entrepreneurs and researchers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-05T09:45:37.000Z",
+      "updatedAt": "2026-11-05T09:45:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e51fbee6d833f206",
+      "slug": "technology-ai-s-cluster-e51fbee6d833f206",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Factsheet: Education and Skills package",
+      "deck": "European Commission Factsheet Brussels, 05 Nov 2026 Factsheet: Education and Skills package Factsheet: Education and Skills package",
+      "whatChanged": [
+        "European Commission Factsheet Brussels, 05 Nov 2026 Factsheet: Education and Skills package Factsheet: Education and Skills package"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T23:00:00.000Z",
+      "updatedAt": "2026-11-04T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4ea4725106d7d6f6",
+      "slug": "sports-s-cluster-4ea4725106d7d6f6",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "New NHS blood test trial to help spot cancers earlier",
+      "deck": "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers.",
+      "whatChanged": [
+        "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T08:34:00.000Z",
+      "updatedAt": "2026-11-04T08:34:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1c389d28ca799840",
+      "slug": "sports-s-cluster-1c389d28ca799840",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement",
+      "deck": "European Commission Factsheet Brussels, 04 Nov 2026 Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement Factsheet - 2026 Annual Overview Report on Simplification, Implemen...",
+      "whatChanged": [
+        "European Commission Factsheet Brussels, 04 Nov 2026 Factsheet - 2026 Annual Overview Report on Simplification, Implementation and Enforcement Factsheet - 2026 Annual Overview Report on Simplification, Implemen..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T23:00:00.000Z",
+      "updatedAt": "2026-11-03T23:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Boiler Upgrade Scheme: November 2026",
+      "url": "https://www.gov.uk/government/statistics/announcements/boiler-upgrade-scheme-november-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-11-03T09:30:03.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: UK software market analysis",
+      "url": "https://www.gov.uk/government/publications/uk-software-market-analysis",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T13:43:07.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Kenya travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/kenya",
+      "sourceType": "official",
+      "publishedAt": "2026-11-05T14:16:06.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bluetongue: latest situation",
+      "url": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+      "sourceType": "official",
+      "publishedAt": "2026-11-05T00:01:02.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Independent report: Chief Medical Officer's annual report 2026: health in rural areas and small towns",
+      "url": "https://www.gov.uk/government/publications/chief-medical-officers-annual-report-2026-health-in-rural-areas-and-small-towns",
+      "sourceType": "official",
+      "publishedAt": "2026-10-30T09:26:24.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "U.S. crude oil imports from Venezuela in July were highest since 2017",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68425",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Hoekstra at the 22nd Athens Tax Forum",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2370",
+      "sourceType": "official",
+      "publishedAt": "2026-11-03T09:12:47.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
