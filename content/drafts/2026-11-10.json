@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-10T07:34:06.408Z",
+  "updatedAt": "2026-11-10T07:34:06.408Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-8e230b1a522c1701",
+    "s-cluster-7b45f52d80861fc1",
+    "s-cluster-b994b1e9581e367d",
+    "s-cluster-849d91802dc701c8",
+    "s-cluster-2c0ee444f4e0efbc",
+    "s-cluster-bb65805db406d0be",
+    "s-cluster-c4e2d1ff43e482b4",
+    "s-cluster-8f6d7daf3dd955ed"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-3b9af2e240357b01",
+      "s-cluster-48c3a53d360dc116",
+      "s-cluster-5d8e3740dcd8d216"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-940a313d6e7ba626",
+      "s-cluster-a22fc46c01e4a2d8",
+      "s-cluster-3e83961b7691735b"
+    ],
+    "business-economy": [
+      "s-cluster-1456b93c2df97c39",
+      "s-cluster-caf63b903465d78c",
+      "s-cluster-02ffdf4dfad0fcc1"
+    ],
+    "technology-ai": [
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f",
+      "s-cluster-616a38339b5de780"
+    ],
+    "sports": ["s-cluster-0eee8bb76c9456a5", "s-cluster-4ea4725106d7d6f6"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-8e230b1a522c1701",
+      "slug": "india-s-cluster-8e230b1a522c1701",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Major clean-up begins at notorious illegal waste site in Wigan",
+      "deck": "Government-funded operation to remove 18,000 tonnes of waste from illegal site",
+      "whatChanged": [
+        "Government-funded operation to remove 18,000 tonnes of waste from illegal site"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T00:01:06.000Z",
+      "updatedAt": "2026-11-10T00:01:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b45f52d80861fc1",
+      "slug": "india-s-cluster-7b45f52d80861fc1",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Kos at the Plenary Session of the Parliament of the Republic of Moldova",
+      "deck": "European Commission Speech Chișinău, 09 Nov 2026 Dear Chairman, Honourable Members of Parliament, Dear citizens of Moldova, When I receive visitors in my office in Brussels, there is something special that ne...",
+      "whatChanged": [
+        "European Commission Speech Chișinău, 09 Nov 2026 Dear Chairman, Honourable Members of Parliament, Dear citizens of Moldova, When I receive visitors in my office in Brussels, there is something special that ne..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T14:35:48.000Z",
+      "updatedAt": "2026-11-09T14:35:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b994b1e9581e367d",
+      "slug": "india-s-cluster-b994b1e9581e367d",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): latest situation in England",
+      "deck": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
+      "whatChanged": [
+        "Find out about the latest bird flu situation in England and guidance for bird keepers and the public."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T18:11:18.000Z",
+      "updatedAt": "2026-11-09T18:11:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-849d91802dc701c8",
+      "slug": "policy-geopolitics-s-cluster-849d91802dc701c8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Côte d'Ivoire travel advice",
+      "deck": "FCDO travel advice for Côte d'Ivoire. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Côte d'Ivoire. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T16:16:31.000Z",
+      "updatedAt": "2026-11-09T16:20:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2c0ee444f4e0efbc",
+      "slug": "science-health-climate-s-cluster-2c0ee444f4e0efbc",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Statutory guidance: Primary Medical Services (Directed Enhanced Services) Directions",
+      "deck": "Directions for the NHS from the Secretary of State for Health and Social Care governing the provision of Directed Enhanced Services (DESs) in general practice.",
+      "whatChanged": [
+        "Directions for the NHS from the Secretary of State for Health and Social Care governing the provision of Directed Enhanced Services (DESs) in general practice."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T16:42:42.000Z",
+      "updatedAt": "2026-11-09T16:42:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bb65805db406d0be",
+      "slug": "science-health-climate-s-cluster-bb65805db406d0be",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Rough sleeping: actions for the health and care sector",
+      "deck": "What health and care organisations should do to support the Rough Sleeping Programme and help people move off the streets, including actions for winter 2026 to 2027.",
+      "whatChanged": [
+        "What health and care organisations should do to support the Rough Sleeping Programme and help people move off the streets, including actions for winter 2026 to 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T16:37:53.000Z",
+      "updatedAt": "2026-11-09T16:37:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c4e2d1ff43e482b4",
+      "slug": "science-health-climate-s-cluster-c4e2d1ff43e482b4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "COP31: what it is and the UK’s priorities",
+      "deck": "An explainer on the UN's annual climate conference and the government's priorities for COP31.",
+      "whatChanged": [
+        "An explainer on the UN's annual climate conference and the government's priorities for COP31."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T16:05:58.000Z",
+      "updatedAt": "2026-11-09T16:05:58.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8f6d7daf3dd955ed",
+      "slug": "policy-geopolitics-s-cluster-8f6d7daf3dd955ed",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Botswana travel advice",
+      "deck": "FCDO travel advice for Botswana. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Botswana. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T14:39:38.000Z",
+      "updatedAt": "2026-11-09T14:38:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3b9af2e240357b01",
+      "slug": "science-health-climate-s-cluster-3b9af2e240357b01",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Animal gatherings: licences",
+      "deck": "How to get and maintain an animal gathering licence from the Animal and Plant Health Agency (APHA) for England and Wales.",
+      "whatChanged": [
+        "How to get and maintain an animal gathering licence from the Animal and Plant Health Agency (APHA) for England and Wales."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T15:51:26.000Z",
+      "updatedAt": "2026-11-09T15:51:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-48c3a53d360dc116",
+      "slug": "science-health-climate-s-cluster-48c3a53d360dc116",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Travel with assistance dogs: transport companies and routes",
+      "deck": "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners.",
+      "whatChanged": [
+        "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T13:56:28.000Z",
+      "updatedAt": "2026-11-09T13:56:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5d8e3740dcd8d216",
+      "slug": "science-health-climate-s-cluster-5d8e3740dcd8d216",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Extreme weather and natural hazards",
+      "deck": "How to prepare and what to do if you’re affected by extreme weather and natural hazards while travelling or living abroad.",
+      "whatChanged": [
+        "How to prepare and what to do if you’re affected by extreme weather and natural hazards while travelling or living abroad."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T11:05:20.000Z",
+      "updatedAt": "2026-11-09T11:05:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-940a313d6e7ba626",
+      "slug": "policy-geopolitics-s-cluster-940a313d6e7ba626",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/Korea: Agreement on the Protection of Classified Military Information [TS No.44/2026]",
+      "deck": "This treaty was presented to Parliament in November 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in November 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T14:00:00.000Z",
+      "updatedAt": "2026-11-09T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a22fc46c01e4a2d8",
+      "slug": "policy-geopolitics-s-cluster-a22fc46c01e4a2d8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: Hong Kong International Convention for the Safe and Environmentally Sound Recycling of Ships, 2009 [MS No.12/2026]",
+      "deck": "This treaty was presented to Parliament in November 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in November 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T14:00:00.000Z",
+      "updatedAt": "2026-11-09T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1456b93c2df97c39",
+      "slug": "business-economy-s-cluster-1456b93c2df97c39",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis at Eurogroup press conference",
+      "deck": "European Commission Statement Brussels, 09 Nov 2026 Thank you, Kyriakos. Good afternoon, everyone. Let me begin on the economic outlook. While growth data has been more positive this year than previously expected...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 09 Nov 2026 Thank you, Kyriakos. Good afternoon, everyone. Let me begin on the economic outlook. While growth data has been more positive this year than previously expected..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T07:49:03.000Z",
+      "updatedAt": "2026-11-09T13:35:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-caf63b903465d78c",
+      "slug": "business-economy-s-cluster-caf63b903465d78c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Transparency data: Trade Specialised Committee on Goods",
+      "deck": "The Specialised Committee monitors the implementation and functioning of the Goods market access and national treatment chapter of the Trade and Cooperation Agreement.",
+      "whatChanged": [
+        "The Specialised Committee monitors the implementation and functioning of the Goods market access and national treatment chapter of the Trade and Cooperation Agreement."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T13:00:02.000Z",
+      "updatedAt": "2026-11-09T13:00:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-02ffdf4dfad0fcc1",
+      "slug": "business-economy-s-cluster-02ffdf4dfad0fcc1",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "New cameras and sensors to help protect fish stocks & marine life in English waters",
+      "deck": "Large industrial-scale fishing vessels will be legally required to carry Remote Electronic Monitoring equipment, including cameras, sensors and GPS",
+      "whatChanged": [
+        "Large industrial-scale fishing vessels will be legally required to carry Remote Electronic Monitoring equipment, including cameras, sensors and GPS"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T11:00:23.000Z",
+      "updatedAt": "2026-11-09T11:00:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T14:39:00.000Z",
+      "updatedAt": "2026-10-29T14:39:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0eee8bb76c9456a5",
+      "slug": "sports-s-cluster-0eee8bb76c9456a5",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Questions and answers on the 2026 Annual Overview Report on Simplification, Implementation and Enforcement",
+      "deck": "European Commission Questions and answers Brussels, 04 Nov 2026 1. What is the main goal of this overview report – and what does it show? This second annual overview report covers the period from 1 August 2025 to 31 July 202...",
+      "whatChanged": [
+        "European Commission Questions and answers Brussels, 04 Nov 2026 1. What is the main goal of this overview report – and what does it show? This second annual overview report covers the period from 1 August 2025 to 31 July 202..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-03T23:00:00.000Z",
+      "updatedAt": "2026-11-03T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4ea4725106d7d6f6",
+      "slug": "sports-s-cluster-4ea4725106d7d6f6",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "New NHS blood test trial to help spot cancers earlier",
+      "deck": "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers.",
+      "whatChanged": [
+        "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T08:34:00.000Z",
+      "updatedAt": "2026-11-04T08:34:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Major clean-up begins at notorious illegal waste site in Wigan",
+      "url": "https://www.gov.uk/government/news/major-clean-up-begins-at-notorious-illegal-waste-site-in-wigan",
+      "sourceType": "official",
+      "publishedAt": "2026-11-05T16:39:21.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Kos at the Plenary Session of the Parliament of the Republic of Moldova",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2383",
+      "sourceType": "official",
+      "publishedAt": "2026-11-03T23:00:00.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Combating antisemitism at home and abroad",
+      "url": "https://www.gov.uk/government/speeches/combating-antisemitism-at-home-and-abroad",
+      "sourceType": "official",
+      "publishedAt": "2026-11-06T12:58:37.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Statutory guidance: Primary Medical Services (Directed Enhanced Services) Directions",
+      "url": "https://www.gov.uk/government/publications/primary-medical-services-directed-enhanced-services-directions",
+      "sourceType": "official",
+      "publishedAt": "2026-10-30T11:34:35.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "COP31: what it is and the UK’s priorities",
+      "url": "https://www.gov.uk/government/news/cop31-what-it-is-and-the-uks-priorities",
+      "sourceType": "official",
+      "publishedAt": "2026-11-03T09:30:03.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Zulker Naeen", "Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: UK software market analysis",
+      "url": "https://www.gov.uk/government/publications/uk-software-market-analysis",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T13:43:07.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
