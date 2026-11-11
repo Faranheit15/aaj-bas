@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-11T06:52:38.043Z",
+  "updatedAt": "2026-11-11T06:52:38.043Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-2d6accb488d19d1c",
+    "s-cluster-b8a6992da37fb81b",
+    "s-cluster-9bc255896463e26f",
+    "s-cluster-d0cf60322aad6787",
+    "s-cluster-e135d1eaed543c6a",
+    "s-cluster-7ee296c806a74c04",
+    "s-cluster-f591853791f5913f",
+    "s-cluster-7b48fb2d80885fca"
+  ],
+  "interestPools": {
+    "business-economy": [
+      "s-cluster-dfc3e34ad958415b",
+      "s-cluster-e0d8839c822436bd",
+      "s-cluster-8e4c94941bc01c39"
+    ],
+    "science-health-climate": [
+      "s-cluster-50c65b0c8a23b77a",
+      "s-cluster-1d78bcd6222c9ca8",
+      "s-cluster-aa78ea4de5cca3dc"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-3848e92a7f76f0a8",
+      "s-cluster-d15c98ccd161f2b5",
+      "s-cluster-4334a247725d03ca"
+    ],
+    "technology-ai": [
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f",
+      "s-cluster-616a38339b5de780"
+    ],
+    "sports": ["s-cluster-4ea4725106d7d6f6"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-2d6accb488d19d1c",
+      "slug": "business-economy-s-cluster-2d6accb488d19d1c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Prime Minister hails major investment in UK renewables",
+      "deck": "Thousands of jobs will be supported as two major offshore wind projects mark progress towards delivering clean homegrown energy for millions of homes, ahead of the Prime Minister’s travel to the COP31 Leaders’ Summit in Türkiye.",
+      "whatChanged": [
+        "Thousands of jobs will be supported as two major offshore wind projects mark progress towards delivering clean homegrown energy for millions of homes, ahead of the Prime Minister’s travel to the COP31 Leaders’ Summit in Türkiye."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T06:10:18.000Z",
+      "updatedAt": "2026-11-11T06:10:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b8a6992da37fb81b",
+      "slug": "india-s-cluster-b8a6992da37fb81b",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Commissioner Šuica delivers a keynote speech at the European Parliament event “Beyond promises: Building a Digital Future that Works for Children”",
+      "deck": "European Commission Speech Brussels, 10 Nov 2026 Dear Mr López-Istúriz White,Dear Co-Chairs, Ms Incir and Ms Vautmans,Honourable Members of the European Parliament,Prince Harry, Duke of Sussex,Dear families,La...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 10 Nov 2026 Dear Mr López-Istúriz White,Dear Co-Chairs, Ms Incir and Ms Vautmans,Honourable Members of the European Parliament,Prince Harry, Duke of Sussex,Dear families,La..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T16:23:53.000Z",
+      "updatedAt": "2026-11-10T16:23:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9bc255896463e26f",
+      "slug": "india-s-cluster-9bc255896463e26f",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Renewables obligation: certificates and generation - July 2026",
+      "deck": "Monthly data on the number of certificates issued for generation under the Renewables Obligation.",
+      "whatChanged": [
+        "Monthly data on the number of certificates issued for generation under the Renewables Obligation."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T17:08:24.000Z",
+      "updatedAt": "2026-11-10T17:08:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d0cf60322aad6787",
+      "slug": "india-s-cluster-d0cf60322aad6787",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Protected food and drink names: applications",
+      "deck": "See the list of applications to protect or cancel the geographical name of a food, drink or agricultural product in Great Britain.",
+      "whatChanged": [
+        "See the list of applications to protect or cancel the geographical name of a food, drink or agricultural product in Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T16:04:28.000Z",
+      "updatedAt": "2026-11-10T16:04:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e135d1eaed543c6a",
+      "slug": "policy-geopolitics-s-cluster-e135d1eaed543c6a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "South Sudan's authorities must allow UNMISS to operate without obstruction: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on South Sudan",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on South Sudan"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T17:04:02.000Z",
+      "updatedAt": "2026-11-10T17:04:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7ee296c806a74c04",
+      "slug": "world-s-cluster-7ee296c806a74c04",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Policy paper: Global Clean Power Alliance: finance mission country action plans",
+      "deck": "Country action plans launched with the Global Clean Power Alliance (GCPA) finance mission.",
+      "whatChanged": [
+        "Country action plans launched with the Global Clean Power Alliance (GCPA) finance mission."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-10T08:00:01.000Z",
+      "updatedAt": "2026-11-10T08:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f591853791f5913f",
+      "slug": "technology-ai-s-cluster-f591853791f5913f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Report receipt of waste: choose a software provider",
+      "deck": "You can use software to automatically upload your waste records into the report receipt of waste service.",
+      "whatChanged": [
+        "You can use software to automatically upload your waste records into the report receipt of waste service."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T18:05:57.000Z",
+      "updatedAt": "2026-11-10T18:05:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b48fb2d80885fca",
+      "slug": "policy-geopolitics-s-cluster-7b48fb2d80885fca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Commissioner Šuica addresses the Senior Officials Meeting on the launch of the second iteration of the Action Plan of the Pact of the Mediterranean",
+      "deck": "European Commission Speech Brussels, 10 Nov 2026 Thank you, Michael, and Hélène, Dear Acting Secretary-General the Union for the Mediterranean, Ambassador Hajali, Dear Rapporteur of ARLEM, President Maupertuis...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 10 Nov 2026 Thank you, Michael, and Hélène, Dear Acting Secretary-General the Union for the Mediterranean, Ambassador Hajali, Dear Rapporteur of ARLEM, President Maupertuis..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T14:03:52.000Z",
+      "updatedAt": "2026-11-10T14:03:52.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dfc3e34ad958415b",
+      "slug": "business-economy-s-cluster-dfc3e34ad958415b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Taking part in the UK Emissions Trading Scheme markets",
+      "deck": "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market.",
+      "whatChanged": [
+        "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T18:11:44.000Z",
+      "updatedAt": "2026-11-10T18:11:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e0d8839c822436bd",
+      "slug": "business-economy-s-cluster-e0d8839c822436bd",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission approves €2 billion Belgian State aid to support offshore wind energy",
+      "deck": "European Commission Press release Brussels, 10 Nov 2026 The European Commission has approved a €2.04 billion Belgian scheme to support offshore wind energy in line with the objectives of the Clean Industrial Deal. This measure will contr...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 10 Nov 2026 The European Commission has approved a €2.04 billion Belgian scheme to support offshore wind energy in line with the objectives of the Clean Industrial Deal. This measure will contribute to the transition towards a net-zero economy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T23:00:00.000Z",
+      "updatedAt": "2026-11-09T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8e4c94941bc01c39",
+      "slug": "business-economy-s-cluster-8e4c94941bc01c39",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Research: Functioning of the UK carbon market, 2025",
+      "deck": "A high-level summary of the performance of the UK Emissions Trading Scheme during the fourth scheme year of its operation.",
+      "whatChanged": [
+        "A high-level summary of the performance of the UK Emissions Trading Scheme during the fourth scheme year of its operation."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz", "uk-dsit"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-04T09:45:55.000Z",
+      "updatedAt": "2026-11-06T09:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-50c65b0c8a23b77a",
+      "slug": "science-health-climate-s-cluster-50c65b0c8a23b77a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: FRAME-Agriculture: framework for assessing greenhouse gases",
+      "deck": "FRAME-Agriculture is a Defra research project developing a standard approach for reporting, assessing and modelling greenhouse gas emissions in UK agriculture.",
+      "whatChanged": [
+        "FRAME-Agriculture is a Defra research project developing a standard approach for reporting, assessing and modelling greenhouse gas emissions in UK agriculture."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T16:36:46.000Z",
+      "updatedAt": "2026-11-10T16:36:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1d78bcd6222c9ca8",
+      "slug": "science-health-climate-s-cluster-1d78bcd6222c9ca8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Medical repatriation companies in the UK",
+      "deck": "List of medical repatriation companies for British nationals who are seriously ill or injured abroad and need medical evacuation to the UK.",
+      "whatChanged": [
+        "List of medical repatriation companies for British nationals who are seriously ill or injured abroad and need medical evacuation to the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T10:28:02.000Z",
+      "updatedAt": "2026-11-10T10:28:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-aa78ea4de5cca3dc",
+      "slug": "science-health-climate-s-cluster-aa78ea4de5cca3dc",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Apply to renew a Northern Ireland plant health label (NIPHL) scheme authorisation",
+      "deck": "Use this service to apply to renew an existing Northern Ireland plant health label authorisation.",
+      "whatChanged": [
+        "Use this service to apply to renew an existing Northern Ireland plant health label authorisation."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T10:00:04.000Z",
+      "updatedAt": "2026-11-10T10:00:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3848e92a7f76f0a8",
+      "slug": "policy-geopolitics-s-cluster-3848e92a7f76f0a8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Eswatini travel advice",
+      "deck": "FCDO travel advice for Eswatini. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Eswatini. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T14:38:31.000Z",
+      "updatedAt": "2026-11-10T15:29:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T15:01:44.000Z",
+      "updatedAt": "2026-11-10T15:01:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T15:01:29.000Z",
+      "updatedAt": "2026-11-10T15:01:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T14:39:00.000Z",
+      "updatedAt": "2026-10-29T14:39:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4ea4725106d7d6f6",
+      "slug": "sports-s-cluster-4ea4725106d7d6f6",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "New NHS blood test trial to help spot cancers earlier",
+      "deck": "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers.",
+      "whatChanged": [
+        "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T08:34:00.000Z",
+      "updatedAt": "2026-11-04T08:34:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Prime Minister hails major investment in UK renewables",
+      "url": "https://www.gov.uk/government/news/prime-minister-hails-major-investment-in-uk-renewables",
+      "sourceType": "official",
+      "publishedAt": "2026-11-04T09:45:55.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Commissioner Šuica delivers a keynote speech at the European Parliament event “Beyond promises: Building a Digital Future that Works for Children”",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2406",
+      "sourceType": "official",
+      "publishedAt": "2026-11-04T14:48:20.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Report receipt of waste: choose a software provider",
+      "url": "https://www.gov.uk/government/publications/report-receipt-of-waste-choose-a-software-provider",
+      "sourceType": "official",
+      "publishedAt": "2026-11-09T11:15:14.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "South Sudan's authorities must allow UNMISS to operate without obstruction: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/south-sudans-authorities-must-allow-unmiss-to-operate-without-obstruction-uk-statement-at-the-un-security-council",
+      "sourceType": "official",
+      "publishedAt": "2026-11-09T14:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: UK software market analysis",
+      "url": "https://www.gov.uk/government/publications/uk-software-market-analysis",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T13:43:07.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Minister Alison McGovern speech at the Youth Access Conference",
+      "url": "https://www.gov.uk/government/speeches/minister-alison-mcgovern-speech-at-the-youth-access-conference",
+      "sourceType": "official",
+      "publishedAt": "2026-11-02T17:10:53.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
