@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-12T07:28:50.722Z",
+  "updatedAt": "2026-11-12T07:28:50.722Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-31c337e48db72f6c",
+    "s-cluster-ccdd84b909a313e1",
+    "s-cluster-0ef73c6739f62791",
+    "s-cluster-c4b956202d9bbfa2",
+    "s-cluster-9d0e12245a6300c3",
+    "s-cluster-2276da91e85e3960",
+    "s-cluster-ce41bb3f4a98bd37",
+    "s-cluster-3e0432a9ff9b3634"
+  ],
+  "interestPools": {
+    "business-economy": [
+      "s-cluster-bdccd9f5c6b61b3c",
+      "s-cluster-b8a3152da37ca1f8",
+      "s-cluster-b8a31c2da37caddd"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-2de36be3309c9a06",
+      "s-cluster-e135d1eaed543c6a",
+      "s-cluster-d15c98ccd161f2b5"
+    ],
+    "science-health-climate": [
+      "s-cluster-6d45670d3d48883b",
+      "s-cluster-b8a3192da37ca8c4",
+      "s-cluster-51336a2e983f6921"
+    ],
+    "technology-ai": [
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f",
+      "s-cluster-616a38339b5de780"
+    ],
+    "sports": ["s-cluster-4ea4725106d7d6f6"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-31c337e48db72f6c",
+      "slug": "india-s-cluster-31c337e48db72f6c",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Policy paper: UK clean electrification roadmap",
+      "deck": "The UK clean electrification roadmap sets out current plans and policies to accelerate clean electrification across buildings, transport and industry.",
+      "whatChanged": [
+        "The UK clean electrification roadmap sets out current plans and policies to accelerate clean electrification across buildings, transport and industry."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T07:00:03.000Z",
+      "updatedAt": "2026-11-12T07:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ccdd84b909a313e1",
+      "slug": "india-s-cluster-ccdd84b909a313e1",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "More familiar carers and less travel under new social care plans",
+      "deck": "People receiving care at home are set to benefit from more personalised support from familiar carers under neighbourhood commissioning of social care",
+      "whatChanged": [
+        "People receiving care at home are set to benefit from more personalised support from familiar carers under neighbourhood commissioning of social care"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T00:01:02.000Z",
+      "updatedAt": "2026-11-12T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0ef73c6739f62791",
+      "slug": "science-health-climate-s-cluster-0ef73c6739f62791",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "New report shows progress in cutting levels of ‘forever chemicals’ in England’s rivers",
+      "deck": "Scientists find levels of two key forever chemicals in rivers have fallen by 30% and 29%",
+      "whatChanged": [
+        "Scientists find levels of two key forever chemicals in rivers have fallen by 30% and 29%"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T00:01:02.000Z",
+      "updatedAt": "2026-11-12T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c4b956202d9bbfa2",
+      "slug": "business-economy-s-cluster-c4b956202d9bbfa2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Voluntary carbon and nature markets: raising integrity",
+      "deck": "We're seeking views on the implementation of the UK government’s principles for voluntary carbon and nature market integrity.",
+      "whatChanged": [
+        "We're seeking views on the implementation of the UK government’s principles for voluntary carbon and nature market integrity."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T07:00:03.000Z",
+      "updatedAt": "2026-11-12T07:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9d0e12245a6300c3",
+      "slug": "india-s-cluster-9d0e12245a6300c3",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Recovery support services and lived experience initiatives",
+      "deck": "Guidance on supporting lived experience initiatives and recovery support services to help people start and sustain recovery from problem alcohol and drug use.",
+      "whatChanged": [
+        "Guidance on supporting lived experience initiatives and recovery support services to help people start and sustain recovery from problem alcohol and drug use."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T17:03:47.000Z",
+      "updatedAt": "2026-11-11T17:03:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2276da91e85e3960",
+      "slug": "policy-geopolitics-s-cluster-2276da91e85e3960",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Nigeria travel advice",
+      "deck": "FCDO travel advice for Nigeria. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Nigeria. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T14:13:23.000Z",
+      "updatedAt": "2026-11-11T16:56:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ce41bb3f4a98bd37",
+      "slug": "policy-geopolitics-s-cluster-ce41bb3f4a98bd37",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary Ed Miliband's speech at the World Leaders' Summit on Forests at COP31",
+      "deck": "The Foreign Secretary delivered a speech at the 'World Leaders' Summit on Forests: The Contribution of Forests to Addressing Climate Change' event at COP31 in Antalya on 11 November 2026.",
+      "whatChanged": [
+        "The Foreign Secretary delivered a speech at the 'World Leaders' Summit on Forests: The Contribution of Forests to Addressing Climate Change' event at COP31 in Antalya on 11 November 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T14:40:01.000Z",
+      "updatedAt": "2026-11-11T16:16:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e0432a9ff9b3634",
+      "slug": "science-health-climate-s-cluster-3e0432a9ff9b3634",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Air quality compliance assessment 2025: results and data tables",
+      "deck": "Data used in the 'Air pollution in the UK 2025' report, which presents the results of the UK’s compliance assessment against the Air Quality Standards Regulations (2010).",
+      "whatChanged": [
+        "Data used in the 'Air pollution in the UK 2025' report, which presents the results of the UK’s compliance assessment against the Air Quality Standards Regulations (2010)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T17:08:20.000Z",
+      "updatedAt": "2026-11-11T17:08:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bdccd9f5c6b61b3c",
+      "slug": "business-economy-s-cluster-bdccd9f5c6b61b3c",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Moving, exporting or placing deforestation-free products on the market in Northern Ireland",
+      "deck": "Steps businesses must take to make sure their products meet the EU regulation on deforestation-free products (EUDR) if they market them in, move them to or export them from Northern Ireland.",
+      "whatChanged": [
+        "Steps businesses must take to make sure their products meet the EU regulation on deforestation-free products (EUDR) if they market them in, move them to or export them from Northern Ireland."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T16:29:10.000Z",
+      "updatedAt": "2026-11-11T16:29:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b8a3152da37ca1f8",
+      "slug": "business-economy-s-cluster-b8a3152da37ca1f8",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Albuquerque at the Latvijas Banka's Economic Conference 2026: From policy to Impact",
+      "deck": "European Commission Speech Riga, 11 Nov 2026 Good morning, ladies and gentlemen. Let me begin with a word of thanks to our hosts at Latvijas Banka and to Mārtiņš for inviting me to speak here today. I'd al...",
+      "whatChanged": [
+        "European Commission Speech Riga, 11 Nov 2026 Good morning, ladies and gentlemen. Let me begin with a word of thanks to our hosts at Latvijas Banka and to Mārtiņš for inviting me to speak here today. I'd al..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T12:48:44.000Z",
+      "updatedAt": "2026-11-11T12:48:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b8a31c2da37caddd",
+      "slug": "business-economy-s-cluster-b8a31c2da37caddd",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Opening remarks by Commissioner Hansen at the first in-person meeting of the Women in Farming Platform",
+      "deck": "European Commission Speech Brussels, 11 Nov 2026 Ladies and gentlemen, Dear women farmers and entrepreneurs, Dear representatives of the European Investment Bank, and National financial institutions, Thank you...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 11 Nov 2026 Ladies and gentlemen, Dear women farmers and entrepreneurs, Dear representatives of the European Investment Bank, and National financial institutions, Thank you..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T10:41:44.000Z",
+      "updatedAt": "2026-11-11T10:41:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2de36be3309c9a06",
+      "slug": "policy-geopolitics-s-cluster-2de36be3309c9a06",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Joint declaration following the G7 Foreign Ministers' Meeting in Paris",
+      "deck": "G7 Foreign Ministers' Statement following the G7 Foreign Ministers' Meeting in Paris on 9- 10 November 2026",
+      "whatChanged": [
+        "G7 Foreign Ministers' Statement following the G7 Foreign Ministers' Meeting in Paris on 9- 10 November 2026"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T12:42:15.000Z",
+      "updatedAt": "2026-11-11T12:42:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e135d1eaed543c6a",
+      "slug": "policy-geopolitics-s-cluster-e135d1eaed543c6a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "South Sudan's authorities must allow UNMISS to operate without obstruction: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on South Sudan",
+      "whatChanged": [
+        "Statement by Ambassador Kate Foster, UK Deputy Permanent Representative to the UN, at the UN Security Council meeting on South Sudan"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T17:04:02.000Z",
+      "updatedAt": "2026-11-10T17:04:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T15:01:44.000Z",
+      "updatedAt": "2026-11-10T15:01:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6d45670d3d48883b",
+      "slug": "science-health-climate-s-cluster-6d45670d3d48883b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Switzerland: Doctors",
+      "deck": "List of English-speaking medical facilities in Switzerland.",
+      "whatChanged": [
+        "List of English-speaking medical facilities in Switzerland."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T12:52:06.000Z",
+      "updatedAt": "2026-11-11T12:52:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b8a3192da37ca8c4",
+      "slug": "science-health-climate-s-cluster-b8a3192da37ca8c4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Speech by President von der Leyen at the United Nations Climate Change Conference (COP31)",
+      "deck": "European Commission Speech Antalya, 11 Nov 2026 Mr President, Heads of State and Government, Excellencies, This summer was the summer of truth. Devastating floods in Nepal, droughts from Sudan to Central Amer...",
+      "whatChanged": [
+        "European Commission Speech Antalya, 11 Nov 2026 Mr President, Heads of State and Government, Excellencies, This summer was the summer of truth. Devastating floods in Nepal, droughts from Sudan to Central Amer..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-11T09:32:34.000Z",
+      "updatedAt": "2026-11-11T09:32:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-51336a2e983f6921",
+      "slug": "science-health-climate-s-cluster-51336a2e983f6921",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Minister McGovern speech at the Youth Access conference",
+      "deck": "Minister for Social Care and Mental Health, Alison McGovern, delivered the keynote speech at the Youth Access conference in Camden.",
+      "whatChanged": [
+        "Minister for Social Care and Mental Health, Alison McGovern, delivered the keynote speech at the Youth Access conference in Camden."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T12:58:00.000Z",
+      "updatedAt": "2026-11-10T12:58:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-29T14:39:00.000Z",
+      "updatedAt": "2026-10-29T14:39:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4ea4725106d7d6f6",
+      "slug": "sports-s-cluster-4ea4725106d7d6f6",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "New NHS blood test trial to help spot cancers earlier",
+      "deck": "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers.",
+      "whatChanged": [
+        "Tens of thousands of patients to take part in landmark trial to see if blood tests can spot cancers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-04T08:34:00.000Z",
+      "updatedAt": "2026-11-04T08:34:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Voluntary carbon and nature markets: raising integrity",
+      "url": "https://www.gov.uk/government/consultations/voluntary-carbon-and-nature-markets-raising-integrity",
+      "sourceType": "official",
+      "publishedAt": "2026-11-05T00:00:00.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "More familiar carers and less travel under new social care plans",
+      "url": "https://www.gov.uk/government/news/more-familiar-carers-and-less-travel-under-new-social-care-plans",
+      "sourceType": "official",
+      "publishedAt": "2026-11-03T11:25:18.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "New report shows progress in cutting levels of ‘forever chemicals’ in England’s rivers",
+      "url": "https://www.gov.uk/government/news/new-report-shows-progress-in-cutting-levels-of-forever-chemicals-in-englands-rivers",
+      "sourceType": "official",
+      "publishedAt": "2026-11-11T14:51:18.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Liberia travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/liberia",
+      "sourceType": "official",
+      "publishedAt": "2026-11-10T10:41:04.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Kadis at the Plenary Session of the Organisation of African, Caribbean and Pacific States-European Union",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2417",
+      "sourceType": "official",
+      "publishedAt": "2026-11-05T10:28:43.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: UK software market analysis",
+      "url": "https://www.gov.uk/government/publications/uk-software-market-analysis",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T13:43:07.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
