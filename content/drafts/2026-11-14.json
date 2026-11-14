@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-14",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-14T06:49:45.574Z",
+  "updatedAt": "2026-11-14T06:49:45.574Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-18dd77d1157992c4",
+    "s-cluster-da017449fe7cae9c",
+    "s-cluster-97f8f5730e570dbe",
+    "s-cluster-6253a716da6e9ccb",
+    "s-cluster-8cc1e71c8eaa39b4",
+    "s-cluster-adca3bd2a4778bcf",
+    "s-cluster-d2b8be9db71938bb",
+    "s-cluster-ce172645b663b199"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-fb246d0f1a1bc1aa",
+      "s-cluster-e3627d5992cadfa4",
+      "s-cluster-40abe06d74319b9c"
+    ],
+    "science-health-climate": [
+      "s-cluster-f278064e8de87b1c",
+      "s-cluster-e9dec654482d2dfd",
+      "s-cluster-a1f0eb8e0c3284c2"
+    ],
+    "business-economy": [
+      "s-cluster-8fa361b123be9c26",
+      "s-cluster-0c1db79c9aa384e6",
+      "s-cluster-adca3ad2a4778a1c"
+    ],
+    "technology-ai": [
+      "s-cluster-616a38339b5de780",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-18dd77d1157992c4",
+      "slug": "policy-geopolitics-s-cluster-18dd77d1157992c4",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Portugal travel advice",
+      "deck": "FCDO travel advice for Portugal. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Portugal. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T11:00:21.000Z",
+      "updatedAt": "2026-11-14T02:26:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-da017449fe7cae9c",
+      "slug": "india-s-cluster-da017449fe7cae9c",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Bird flu: designated slaughterhouses",
+      "deck": "List of designated slaughterhouses to use for bird flu restricted premises.",
+      "whatChanged": [
+        "List of designated slaughterhouses to use for bird flu restricted premises."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T20:43:36.000Z",
+      "updatedAt": "2026-11-13T20:43:36.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-97f8f5730e570dbe",
+      "slug": "science-health-climate-s-cluster-97f8f5730e570dbe",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: UK-Ukraine joint statement: Strategic Dialogue, November 2026",
+      "deck": "Ukrainian and UK officials met in Kyiv on 11 and 12 November 2026 for the annual Ukraine-UK Strategic Dialogue.",
+      "whatChanged": [
+        "Ukrainian and UK officials met in Kyiv on 11 and 12 November 2026 for the annual Ukraine-UK Strategic Dialogue."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-13T10:48:00.000Z",
+      "updatedAt": "2026-11-13T13:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6253a716da6e9ccb",
+      "slug": "science-health-climate-s-cluster-6253a716da6e9ccb",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): housing your birds safely",
+      "deck": "Manage your birds’ housing and welfare when they must be kept inside because of disease outbreaks.",
+      "whatChanged": [
+        "Manage your birds’ housing and welfare when they must be kept inside because of disease outbreaks."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T00:01:07.000Z",
+      "updatedAt": "2026-11-13T20:44:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8cc1e71c8eaa39b4",
+      "slug": "india-s-cluster-8cc1e71c8eaa39b4",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Oil and gas: offshore environmental legislation",
+      "deck": "Environmental regulations and guidance on offshore oil and gas exploration and production offshore gas unloading and storage and offshore carbon dioxide storage activities",
+      "whatChanged": [
+        "Environmental regulations and guidance on offshore oil and gas exploration and production offshore gas unloading and storage and offshore carbon dioxide storage activities"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T15:14:17.000Z",
+      "updatedAt": "2026-11-13T15:14:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-adca3bd2a4778bcf",
+      "slug": "india-s-cluster-adca3bd2a4778bcf",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "Hydropower generation in the Southwest fell to record lows this summer",
+      "deck": "Prolonged drought conditions affecting the Colorado River Basin led to record low hydropower generation this summer in the Southwestern electricity supply region, which includes Arizona, New Mexico, and small parts of Nevada and Californ...",
+      "whatChanged": [
+        "Prolonged drought conditions affecting the Colorado River Basin led to record low hydropower generation this summer in the Southwestern electricity supply region, which includes Arizona, New Mexico, and small parts of Nevada and California. Hydropower generation from April through August 2026 was 19% lower than during the same period last year and 28% lower than the 10-year average, according to the latest data from our Form EIA-923 survey"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T14:00:00.000Z",
+      "updatedAt": "2026-11-13T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d2b8be9db71938bb",
+      "slug": "world-s-cluster-d2b8be9db71938bb",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Statement by President von der Leyen at the joint press conference with President Costa following the informal meeting of the European Council of November 2026",
+      "deck": "European Commission Statement Dublin, 13 Nov 2026 First of all, I also want to thank you dear Taoiseach, dear Micheál for the fantastic hospitality and the fantastic atmosphere in which we spent the last two da...",
+      "whatChanged": [
+        "European Commission Statement Dublin, 13 Nov 2026 First of all, I also want to thank you dear Taoiseach, dear Micheál for the fantastic hospitality and the fantastic atmosphere in which we spent the last two da..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T15:26:05.000Z",
+      "updatedAt": "2026-11-13T15:26:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ce172645b663b199",
+      "slug": "world-s-cluster-ce172645b663b199",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Kos at the opening of 30 Years of Transparency International Switzerland",
+      "deck": "European Commission Rede Brussels, 13 Nov 2026 „Helping the good guys win“ – Wie der EU-Beitrittsprozess Gesellschaften stärkt Im Juni war ich mit meinem Team auf dem Weg nach Moldau und in die Ukraine. Bei...",
+      "whatChanged": [
+        "European Commission Rede Brussels, 13 Nov 2026 „Helping the good guys win“ – Wie der EU-Beitrittsprozess Gesellschaften stärkt Im Juni war ich mit meinem Team auf dem Weg nach Moldau und in die Ukraine. Bei..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T14:50:21.000Z",
+      "updatedAt": "2026-11-13T14:50:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb246d0f1a1bc1aa",
+      "slug": "policy-geopolitics-s-cluster-fb246d0f1a1bc1aa",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom stands in solidarity with our Gulf partners: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on the Middle East.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on the Middle East."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T21:42:23.000Z",
+      "updatedAt": "2026-11-13T21:42:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e3627d5992cadfa4",
+      "slug": "policy-geopolitics-s-cluster-e3627d5992cadfa4",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "This resolution demonstrates this Council’s determination to take decisive action against reckless attacks by the Houthis in Yemen: UK Explanation of Vote at...",
+      "deck": "Explanation of Vote by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, following the UN Security Council vote on the Yemen sanctions regime.",
+      "whatChanged": [
+        "Explanation of Vote by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, following the UN Security Council vote on the Yemen sanctions regime."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T20:53:00.000Z",
+      "updatedAt": "2026-11-12T20:53:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-40abe06d74319b9c",
+      "slug": "policy-geopolitics-s-cluster-40abe06d74319b9c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Global clean electricity to cut bills and boost energy security",
+      "deck": "UK backs Türkiye’s COP31 '35 by 35' pledge.",
+      "whatChanged": ["UK backs Türkiye’s COP31 '35 by 35' pledge."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T17:06:00.000Z",
+      "updatedAt": "2026-11-12T17:06:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f278064e8de87b1c",
+      "slug": "science-health-climate-s-cluster-f278064e8de87b1c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bird flu: rules in disease control zones in England",
+      "deck": "Find bird flu disease control zones and the rules you must follow in each zone.",
+      "whatChanged": [
+        "Find bird flu disease control zones and the rules you must follow in each zone."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T00:01:07.000Z",
+      "updatedAt": "2026-11-13T16:40:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9dec654482d2dfd",
+      "slug": "science-health-climate-s-cluster-e9dec654482d2dfd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Seasonal workers reviews and surveys",
+      "deck": "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025.",
+      "whatChanged": [
+        "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T14:50:05.000Z",
+      "updatedAt": "2026-11-13T14:50:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a1f0eb8e0c3284c2",
+      "slug": "science-health-climate-s-cluster-a1f0eb8e0c3284c2",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Trinidad and Tobago: information for victims of rape and sexual assault",
+      "deck": "Advice for British nationals in Trinidad and Tobago on reporting rape or sexual assault, finding medical treatment and engaging with legal authorities.",
+      "whatChanged": [
+        "Advice for British nationals in Trinidad and Tobago on reporting rape or sexual assault, finding medical treatment and engaging with legal authorities."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T14:38:32.000Z",
+      "updatedAt": "2026-11-13T14:38:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T09:30:07.000Z",
+      "updatedAt": "2026-11-13T09:30:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0c1db79c9aa384e6",
+      "slug": "business-economy-s-cluster-0c1db79c9aa384e6",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission sends Supplementary Statement of Objections to PPC over predatory pricing in the Greek wholesale electricity market",
+      "deck": "European Commission Press release Brussels, 13 Nov 2026 The European Commission has sent a Supplementary Statement of Objections to the Greek electricity provider Public Power Corporation S.A. ('PPC').",
+      "whatChanged": [
+        "European Commission Press release Brussels, 13 Nov 2026 The European Commission has sent a Supplementary Statement of Objections to the Greek electricity provider Public Power Corporation S.A. ('PPC')."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T23:00:00.000Z",
+      "updatedAt": "2026-11-12T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-adca3ad2a4778a1c",
+      "slug": "business-economy-s-cluster-adca3ad2a4778a1c",
+      "topic": "business-economy",
+      "reportingType": "reporting",
+      "headline": "EIA forecasts Alaskan crude oil production to grow 13% in 2027",
+      "deck": "After decades of decline, crude oil production in Alaska is growing, driven by two projects on Alaska's North Slope. In our latest Short-Term Energy Outlook, we expect a 23,000 barrels per day (b/d) (6%) increase in 2026, followed by a 6...",
+      "whatChanged": [
+        "After decades of decline, crude oil production in Alaska is growing, driven by two projects on Alaska's North Slope. In our latest Short-Term Energy Outlook, we expect a 23,000 barrels per day (b/d) (6%) increase in 2026, followed by a 60,000 b/d (13%) rise in 2027. At a forecast 505,000 b/d in 2027, output would be the most since 2014."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["eia-today-in-energy"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T14:00:00.000Z",
+      "updatedAt": "2026-11-12T14:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T09:46:19.000Z",
+      "updatedAt": "2026-11-12T09:46:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "USA travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/usa",
+      "sourceType": "official",
+      "publishedAt": "2026-11-12T11:00:21.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bird flu (avian influenza): latest situation in England",
+      "url": "https://www.gov.uk/guidance/bird-flu-avian-influenza-latest-situation-in-england",
+      "sourceType": "official",
+      "publishedAt": "2026-11-12T09:30:15.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Oil and gas: offshore environmental legislation",
+      "url": "https://www.gov.uk/guidance/oil-and-gas-offshore-environmental-legislation",
+      "sourceType": "official",
+      "publishedAt": "2026-11-11T08:00:02.000Z"
+    },
+    {
+      "id": "eia-today-in-energy",
+      "publisher": "U.S. Energy Information Administration",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "termsUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+      "title": "Hydropower generation in the Southwest fell to record lows this summer",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68445",
+      "sourceType": "research",
+      "publishedAt": "2001-10-09T14:00:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by President von der Leyen at the joint press conference with President Costa following the informal meeting of the European Council of November 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2441",
+      "sourceType": "official",
+      "publishedAt": "2026-11-09T07:27:59.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "url": "https://www.gov.uk/government/publications/cyber-resilience-pledge-list-of-signatories",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T13:43:07.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
