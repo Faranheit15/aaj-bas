@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-16",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-16T06:56:40.154Z",
+  "updatedAt": "2026-11-16T06:56:40.154Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-1276512d47fa3002",
+    "s-cluster-97f8f5730e570dbe",
+    "s-cluster-2b39bbce7a493cd8",
+    "s-cluster-3170de2ad55a674e",
+    "s-cluster-53e501c1203e8515",
+    "s-cluster-a931b1fe705c237d",
+    "s-cluster-6253a716da6e9ccb",
+    "s-cluster-f278064e8de87b1c"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-3e83961b7691735b",
+      "s-cluster-a55ccc728beac29c",
+      "s-cluster-fb246d0f1a1bc1aa"
+    ],
+    "science-health-climate": [
+      "s-cluster-d37f9b2aa085b5fa",
+      "s-cluster-e9dec654482d2dfd",
+      "s-cluster-a1f0eb8e0c3284c2"
+    ],
+    "business-economy": [
+      "s-cluster-8fa361b123be9c26",
+      "s-cluster-0c1db79c9aa384e6",
+      "s-cluster-1456b93c2df97c39"
+    ],
+    "technology-ai": [
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f",
+      "s-cluster-616a38339b5de780"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-1276512d47fa3002",
+      "slug": "policy-geopolitics-s-cluster-1276512d47fa3002",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Joint Foreign Ministers Statement on Gaza",
+      "deck": "Joint statement on Gaza by the Foreign Ministers of Australia, Canada, Italy and the United Kingdom.",
+      "whatChanged": [
+        "Joint statement on Gaza by the Foreign Ministers of Australia, Canada, Italy and the United Kingdom."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-15T19:03:00.000Z",
+      "updatedAt": "2026-11-15T19:03:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-97f8f5730e570dbe",
+      "slug": "science-health-climate-s-cluster-97f8f5730e570dbe",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: UK-Ukraine joint statement: Strategic Dialogue, November 2026",
+      "deck": "Ukrainian and UK officials met in Kyiv on 11 and 12 November 2026 for the annual Ukraine-UK Strategic Dialogue.",
+      "whatChanged": [
+        "Ukrainian and UK officials met in Kyiv on 11 and 12 November 2026 for the annual Ukraine-UK Strategic Dialogue."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-13T10:48:00.000Z",
+      "updatedAt": "2026-11-13T13:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2b39bbce7a493cd8",
+      "slug": "india-s-cluster-2b39bbce7a493cd8",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "What India’s ‘Cockroach’ protests reveal about digital authoritarianism",
+      "deck": "“Democratic freedoms depend not only on protection from direct state violence but on citizens being able to organise without assuming their participation is permanently recorded.”",
+      "whatChanged": [
+        "“Democratic freedoms depend not only on protection from direct state violence but on citizens being able to organise without assuming their participation is permanently recorded.”"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-15T08:33:09.000Z",
+      "updatedAt": "2026-09-15T08:33:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3170de2ad55a674e",
+      "slug": "india-s-cluster-3170de2ad55a674e",
+      "topic": "india",
+      "reportingType": "reporting",
+      "headline": "Beyond the passport: The legal ambiguity of Indian citizenship",
+      "deck": "A recent government statement sparked controversy by clarifying that passports are only travel documents. This article explores the legal complexities of proving citizenship in India and its implications for rights.",
+      "whatChanged": [
+        "A recent government statement sparked controversy by clarifying that passports are only travel documents. This article explores the legal complexities of proving citizenship in India and its implications for rights."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-13T06:05:37.000Z",
+      "updatedAt": "2026-07-13T06:05:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-53e501c1203e8515",
+      "slug": "india-s-cluster-53e501c1203e8515",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Opening Remarks of Commissioner McGrath at the European Parliament Plenary Debate on Media freedom and rule of law in the Czech Republic: threats to the inde...",
+      "deck": "European Commission Speech Brussels, 12 Nov 2026 Dear Chair, Honourable Members, Thank you for this opportunity to discuss with you today the situation of media freedom and pluralism in Czechia, with special a...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 12 Nov 2026 Dear Chair, Honourable Members, Thank you for this opportunity to discuss with you today the situation of media freedom and pluralism in Czechia, with special a..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T23:00:00.000Z",
+      "updatedAt": "2026-11-10T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a931b1fe705c237d",
+      "slug": "world-s-cluster-a931b1fe705c237d",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Policy paper: Global Clean Power Alliance: finance mission country action plans",
+      "deck": "Country action plans launched with the Global Clean Power Alliance (GCPA) finance mission.",
+      "whatChanged": [
+        "Country action plans launched with the Global Clean Power Alliance (GCPA) finance mission."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-11T08:00:02.000Z",
+      "updatedAt": "2026-11-12T15:35:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6253a716da6e9ccb",
+      "slug": "science-health-climate-s-cluster-6253a716da6e9ccb",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): housing your birds safely",
+      "deck": "Manage your birds’ housing and welfare when they must be kept inside because of disease outbreaks.",
+      "whatChanged": [
+        "Manage your birds’ housing and welfare when they must be kept inside because of disease outbreaks."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T00:01:07.000Z",
+      "updatedAt": "2026-11-13T20:44:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f278064e8de87b1c",
+      "slug": "science-health-climate-s-cluster-f278064e8de87b1c",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bird flu: rules in disease control zones in England",
+      "deck": "Find bird flu disease control zones and the rules you must follow in each zone.",
+      "whatChanged": [
+        "Find bird flu disease control zones and the rules you must follow in each zone."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T00:01:07.000Z",
+      "updatedAt": "2026-11-13T16:40:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3e83961b7691735b",
+      "slug": "policy-geopolitics-s-cluster-3e83961b7691735b",
+      "topic": "policy-geopolitics",
+      "reportingType": "reporting",
+      "headline": "How two elections reshaped the India–Bangladesh border",
+      "deck": "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims.",
+      "whatChanged": [
+        "Since Bangladesh’s 2024 political transition, India-Bangladesh border “push-ins” have intensified, with thousands deported to Bangladesh outside agreed verification and repatriation procedures and ignoring disputed nationality claims."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-09-20T14:30:33.000Z",
+      "updatedAt": "2026-09-20T14:30:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a55ccc728beac29c",
+      "slug": "policy-geopolitics-s-cluster-a55ccc728beac29c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Georgia travel advice",
+      "deck": "FCDO travel advice for Georgia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Georgia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T16:54:23.000Z",
+      "updatedAt": "2026-11-14T02:26:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb246d0f1a1bc1aa",
+      "slug": "policy-geopolitics-s-cluster-fb246d0f1a1bc1aa",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The United Kingdom stands in solidarity with our Gulf partners: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on the Middle East.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on the Middle East."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T21:42:00.000Z",
+      "updatedAt": "2026-11-13T21:42:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d37f9b2aa085b5fa",
+      "slug": "science-health-climate-s-cluster-d37f9b2aa085b5fa",
+      "topic": "science-health-climate",
+      "reportingType": "reporting",
+      "headline": "Protecting Pangolins in India: When an armor is not enough",
+      "deck": "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans.",
+      "whatChanged": [
+        "After 80 million years of evolution, and one group of species still fights for survival. This time, though, the threat is humans."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9dec654482d2dfd",
+      "slug": "science-health-climate-s-cluster-e9dec654482d2dfd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Seasonal workers reviews and surveys",
+      "deck": "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025.",
+      "whatChanged": [
+        "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T14:50:05.000Z",
+      "updatedAt": "2026-11-13T14:50:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a1f0eb8e0c3284c2",
+      "slug": "science-health-climate-s-cluster-a1f0eb8e0c3284c2",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Trinidad and Tobago: information for victims of rape and sexual assault",
+      "deck": "Advice for British nationals in Trinidad and Tobago on reporting rape or sexual assault, finding medical treatment and engaging with legal authorities.",
+      "whatChanged": [
+        "Advice for British nationals in Trinidad and Tobago on reporting rape or sexual assault, finding medical treatment and engaging with legal authorities."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T14:38:32.000Z",
+      "updatedAt": "2026-11-13T14:38:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-13T09:30:07.000Z",
+      "updatedAt": "2026-11-13T09:30:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0c1db79c9aa384e6",
+      "slug": "business-economy-s-cluster-0c1db79c9aa384e6",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission sends Supplementary Statement of Objections to PPC over predatory pricing in the Greek wholesale electricity market",
+      "deck": "European Commission Press release Brussels, 13 Nov 2026 The European Commission has sent a Supplementary Statement of Objections to the Greek electricity provider Public Power Corporation S.A. ('PPC').",
+      "whatChanged": [
+        "European Commission Press release Brussels, 13 Nov 2026 The European Commission has sent a Supplementary Statement of Objections to the Greek electricity provider Public Power Corporation S.A. ('PPC')."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T23:00:00.000Z",
+      "updatedAt": "2026-11-12T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1456b93c2df97c39",
+      "slug": "business-economy-s-cluster-1456b93c2df97c39",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis at Eurogroup press conference",
+      "deck": "European Commission Statement Brussels, 09 Nov 2026 Thank you, Kyriakos. Good afternoon, everyone. Let me begin on the economic outlook. While growth data has been more positive this year than previously expected...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 09 Nov 2026 Thank you, Kyriakos. Good afternoon, everyone. Let me begin on the economic outlook. While growth data has been more positive this year than previously expected..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-09T07:49:03.000Z",
+      "updatedAt": "2026-11-09T13:35:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-616a38339b5de780",
+      "slug": "technology-ai-s-cluster-616a38339b5de780",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "deck": "A list of organisations which have signed the Cyber Resilience Pledge.",
+      "whatChanged": [
+        "A list of organisations which have signed the Cyber Resilience Pledge."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T09:46:19.000Z",
+      "updatedAt": "2026-11-12T09:46:19.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Joint Foreign Ministers Statement on Gaza",
+      "url": "https://www.gov.uk/government/news/joint-foreign-ministers-statement-on-gaza--2",
+      "sourceType": "official",
+      "publishedAt": "2026-11-12T11:54:33.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Oil and gas: offshore environmental legislation",
+      "url": "https://www.gov.uk/guidance/oil-and-gas-offshore-environmental-legislation",
+      "sourceType": "official",
+      "publishedAt": "2026-11-11T08:00:02.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": [
+        "Guest Contributor",
+        "Alok Prasanna Kumar",
+        "Zulker Naeen",
+        "Madhumay Mallik",
+        "Association for Progressive Communications"
+      ],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by President von der Leyen at the joint press conference with President Costa following the informal meeting of the European Council of November 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2441",
+      "sourceType": "official",
+      "publishedAt": "2026-11-09T07:27:59.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bird flu (avian influenza): latest situation in England",
+      "url": "https://www.gov.uk/guidance/bird-flu-avian-influenza-latest-situation-in-england",
+      "sourceType": "official",
+      "publishedAt": "2026-11-12T09:30:15.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Cyber Resilience Pledge - list of signatories",
+      "url": "https://www.gov.uk/government/publications/cyber-resilience-pledge-list-of-signatories",
+      "sourceType": "official",
+      "publishedAt": "2026-10-22T13:43:07.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
