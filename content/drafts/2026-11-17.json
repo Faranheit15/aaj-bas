@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-17",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-17T08:14:07.727Z",
+  "updatedAt": "2026-11-17T08:14:07.727Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-61cfb0e15960b54f",
+    "s-cluster-9565fe68d35eff43",
+    "s-cluster-beedd9c6cc4c0817",
+    "s-cluster-1429be104977e311",
+    "s-cluster-86e6b57d7923863a",
+    "s-cluster-3d6d558eb3db0e51",
+    "s-cluster-b895892da37129b8",
+    "s-cluster-a027c4d23a5edce0"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-6d39ef18595fc7fa",
+      "s-cluster-6097ea7a4b79f853",
+      "s-cluster-0c35be9c9ab822ac"
+    ],
+    "science-health-climate": [
+      "s-cluster-2a6d183d7196fe20",
+      "s-cluster-00946db7ac4f6de5",
+      "s-cluster-f8189ad0301f77a8"
+    ],
+    "technology-ai": [
+      "s-cluster-6194ff7f112307c7",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f"
+    ],
+    "business-economy": [
+      "s-cluster-0c1db79c9aa384e6",
+      "s-cluster-178094d98c3654f9",
+      "s-cluster-37acb241808a9e07"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-61cfb0e15960b54f",
+      "slug": "science-health-climate-s-cluster-61cfb0e15960b54f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Independent report: Chief Medical Officer's annual report 2026: health in rural areas and small towns",
+      "deck": "Professor Chris Whitty’s annual report discusses the health and wellbeing of communities in England’s small towns and rural areas.",
+      "whatChanged": [
+        "Professor Chris Whitty’s annual report discusses the health and wellbeing of communities in England’s small towns and rural areas."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T08:04:47.000Z",
+      "updatedAt": "2026-11-17T08:04:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9565fe68d35eff43",
+      "slug": "policy-geopolitics-s-cluster-9565fe68d35eff43",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Lasting stability depends on an inclusive, representative and non-sectarian political process that protects the rights and reflects the diversity of all Syri...",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Syria",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on Syria"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T18:34:29.000Z",
+      "updatedAt": "2026-11-16T18:34:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-beedd9c6cc4c0817",
+      "slug": "india-s-cluster-beedd9c6cc4c0817",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Form: Natural England’s nutrient mitigation scheme for developers",
+      "deck": "Apply to buy nutrient mitigation credits from Natural England to offset nutrient pollution from housing development.",
+      "whatChanged": [
+        "Apply to buy nutrient mitigation credits from Natural England to offset nutrient pollution from housing development."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T16:13:02.000Z",
+      "updatedAt": "2026-11-16T16:13:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1429be104977e311",
+      "slug": "india-s-cluster-1429be104977e311",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Businesses approved to export to the EU",
+      "deck": "Check if your business in Great Britain or one of the Crown Dependencies is approved to export to the EU and find out what your TRACES number is.",
+      "whatChanged": [
+        "Check if your business in Great Britain or one of the Crown Dependencies is approved to export to the EU and find out what your TRACES number is."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T16:04:50.000Z",
+      "updatedAt": "2026-11-16T16:04:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-86e6b57d7923863a",
+      "slug": "india-s-cluster-86e6b57d7923863a",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Atlantic Future Forum 2026: UK Nordic-Baltic States Joint Statement",
+      "deck": "The UK and Nordic-Baltics states have released a joint statement",
+      "whatChanged": [
+        "The UK and Nordic-Baltics states have released a joint statement"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T15:47:18.000Z",
+      "updatedAt": "2026-11-16T15:47:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3d6d558eb3db0e51",
+      "slug": "science-health-climate-s-cluster-3d6d558eb3db0e51",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "UK-wide framework puts nurses and midwives at heart of prevention",
+      "deck": "A new UK-wide framework will help nurses, midwives and nursing associates prevent illness, reduce health inequalities and help more people live well for longer.",
+      "whatChanged": [
+        "A new UK-wide framework will help nurses, midwives and nursing associates prevent illness, reduce health inequalities and help more people live well for longer."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T17:32:57.000Z",
+      "updatedAt": "2026-11-16T17:32:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b895892da37129b8",
+      "slug": "policy-geopolitics-s-cluster-b895892da37129b8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Kubilius at the DIGITAL SME summit - Breaking Europe's Digital Frontiers",
+      "deck": "European Commission Speech Brussels, 16 Nov 2026 Dear Colleagues, It is a big pleasure to be together with you. The Digital SME alliance is a real power with 40000 SMEs. That is why I am very happy to have thi...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 16 Nov 2026 Dear Colleagues, It is a big pleasure to be together with you. The Digital SME alliance is a real power with 40000 SMEs. That is why I am very happy to have thi..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T14:07:41.000Z",
+      "updatedAt": "2026-11-16T14:07:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a027c4d23a5edce0",
+      "slug": "world-s-cluster-a027c4d23a5edce0",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Speech by President von der Leyen at the Enlargement Forum",
+      "deck": "European Commission Speech Brussels, 16 Nov 2026 President Stubb, Dear Alex, President Sandu, Dear Maia, Prime Minister Koretsky, Dear Sergii, Prime Minister Mickoski, Dear Hristijan, Dear Marta, Dear Andrius,...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 16 Nov 2026 President Stubb, Dear Alex, President Sandu, Dear Maia, Prime Minister Koretsky, Dear Sergii, Prime Minister Mickoski, Dear Hristijan, Dear Marta, Dear Andrius,..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T08:45:03.000Z",
+      "updatedAt": "2026-11-16T15:13:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6d39ef18595fc7fa",
+      "slug": "policy-geopolitics-s-cluster-6d39ef18595fc7fa",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Madagascar travel advice",
+      "deck": "FCDO travel advice for Madagascar. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Madagascar. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T10:56:40.000Z",
+      "updatedAt": "2026-11-16T16:17:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6097ea7a4b79f853",
+      "slug": "policy-geopolitics-s-cluster-6097ea7a4b79f853",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Humanitarian Diplomacy, Data and Deployment (HD3) Programme",
+      "deck": "The FCDO invites expressions of interest by 11 December 2026, and full proposals by 22 January 2027, for programme design and to identify delivery partnerships to achieve HD3 outcomes.",
+      "whatChanged": [
+        "The FCDO invites expressions of interest by 11 December 2026, and full proposals by 22 January 2027, for programme design and to identify delivery partnerships to achieve HD3 outcomes."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T11:43:25.000Z",
+      "updatedAt": "2026-11-16T11:43:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0c35be9c9ab822ac",
+      "slug": "policy-geopolitics-s-cluster-0c35be9c9ab822ac",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Ministers from EU, Black Sea, South Caucasus and Central Asia advance cooperation on cross-regional security and connectivity",
+      "deck": "European Commission Press release Brussels, 16 Nov 2026 Today, the High Representative for Foreign Affairs and Security Policy/Vice-President of the European Commission Kaja Kallas, Commissioner for Enlargement Marta Kos, and Commissione...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 16 Nov 2026 Today, the High Representative for Foreign Affairs and Security Policy/Vice-President of the European Commission Kaja Kallas, Commissioner for Enlargement Marta Kos, and Commissioner for International Partnerships Jozef Síkela hosted representatives from the EU, the Black Sea region, the South Caucasus and Central Asia for the second Ministerial Meeting on Cross-Regional Security and Connectivity in Brussels."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T10:13:24.000Z",
+      "updatedAt": "2026-11-16T10:13:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2a6d183d7196fe20",
+      "slug": "science-health-climate-s-cluster-2a6d183d7196fe20",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK Clinical Research Delivery key performance indicators: data to November 2026",
+      "deck": "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme.",
+      "whatChanged": [
+        "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T17:13:07.000Z",
+      "updatedAt": "2026-11-16T17:13:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-00946db7ac4f6de5",
+      "slug": "science-health-climate-s-cluster-00946db7ac4f6de5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Join the list of authorised distance plant sellers",
+      "deck": "Add your business to the Animal and Plant Health Agency list of authorised distance plant sellers.",
+      "whatChanged": [
+        "Add your business to the Animal and Plant Health Agency list of authorised distance plant sellers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T14:31:14.000Z",
+      "updatedAt": "2026-11-16T14:31:14.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f8189ad0301f77a8",
+      "slug": "science-health-climate-s-cluster-f8189ad0301f77a8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Controls of fish and shellfish diseases in England and Wales",
+      "deck": "Reduce the risk of disease and find out where listed diseases have been confirmed in England and Wales",
+      "whatChanged": [
+        "Reduce the risk of disease and find out where listed diseases have been confirmed in England and Wales"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T14:13:35.000Z",
+      "updatedAt": "2026-11-16T14:13:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6194ff7f112307c7",
+      "slug": "technology-ai-s-cluster-6194ff7f112307c7",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Independent report: AI Champions’ AI Adoption Plans",
+      "deck": "Independent AI adoption plans setting out recommendations from the AI Champions, to accelerate AI adoption across key UK sectors, with a pro-worker approach.",
+      "whatChanged": [
+        "Independent AI adoption plans setting out recommendations from the AI Champions, to accelerate AI adoption across key UK sectors, with a pro-worker approach."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T10:05:24.000Z",
+      "updatedAt": "2026-11-16T10:05:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0c1db79c9aa384e6",
+      "slug": "business-economy-s-cluster-0c1db79c9aa384e6",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission sends Supplementary Statement of Objections to PPC over predatory pricing in the Greek wholesale electricity market",
+      "deck": "European Commission Press release Brussels, 13 Nov 2026 The European Commission has sent a Supplementary Statement of Objections to the Greek electricity provider Public Power Corporation S.A. ('PPC').",
+      "whatChanged": [
+        "European Commission Press release Brussels, 13 Nov 2026 The European Commission has sent a Supplementary Statement of Objections to the Greek electricity provider Public Power Corporation S.A. ('PPC')."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-12T23:00:00.000Z",
+      "updatedAt": "2026-11-12T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-178094d98c3654f9",
+      "slug": "business-economy-s-cluster-178094d98c3654f9",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Research: UK software market analysis",
+      "deck": "An analysis of the UK software market, including details of the number and type of firms within the sector and the products and services they offer.",
+      "whatChanged": [
+        "An analysis of the UK software market, including details of the number and type of firms within the sector and the products and services they offer."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-06T09:00:00.000Z",
+      "updatedAt": "2026-11-06T09:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-37acb241808a9e07",
+      "slug": "business-economy-s-cluster-37acb241808a9e07",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 10 / 11 / 2026",
+      "deck": "European Commission Daily news Brussels, 10 Nov 2026 Commission greenlights final payment requests from Estonia and Luxembourg under NextGenerationEU for €190.6 million and €59 million respectively Today, the Euro...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 10 Nov 2026 Commission greenlights final payment requests from Estonia and Luxembourg under NextGenerationEU for €190.6 million and €59 million respectively Today, the Euro..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-10T10:40:27.000Z",
+      "updatedAt": "2026-11-12T09:41:26.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Independent report: Chief Medical Officer's annual report 2026: health in rural areas and small towns",
+      "url": "https://www.gov.uk/government/publications/chief-medical-officers-annual-report-2026-health-in-rural-areas-and-small-towns",
+      "sourceType": "official",
+      "publishedAt": "2026-11-10T08:24:22.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Lasting stability depends on an inclusive, representative and non-sectarian political process that protects the rights and reflects the diversity of all Syrians: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/lasting-stability-depends-on-an-inclusive-representative-and-non-sectarian-political-process-that-protects-the-rights-and-reflects-the-diversity-of-al",
+      "sourceType": "official",
+      "publishedAt": "2026-11-12T14:38:54.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Form: Natural England’s nutrient mitigation scheme for developers",
+      "url": "https://www.gov.uk/government/publications/natural-englands-nutrient-mitigation-scheme-for-developers",
+      "sourceType": "official",
+      "publishedAt": "2026-11-13T00:01:07.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Discurso da Comissária Albuquerque no IV Fórum da Gestão de Ativos e dos Fundos de Pensões (APFIPP)",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/pt/speech_26_2462",
+      "sourceType": "official",
+      "publishedAt": "2026-11-10T09:22:38.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Independent report: AI Champions’ AI Adoption Plans",
+      "url": "https://www.gov.uk/government/publications/ai-champions-ai-adoption-plans",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T08:30:01.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
