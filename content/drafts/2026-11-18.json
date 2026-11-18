@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-18",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-18T07:47:20.814Z",
+  "updatedAt": "2026-11-18T07:47:20.814Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-5582304367ad886b",
+    "s-cluster-881514f2b896edd5",
+    "s-cluster-b8c18b2da3966809",
+    "s-cluster-e0066a01bb8e7626",
+    "s-cluster-b12d7d6ab60a0d26",
+    "s-cluster-e9dec654482d2dfd",
+    "s-cluster-b8c18c2da39669bc",
+    "s-cluster-ed50c158d70cb96e"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-48c3a53d360dc116",
+      "s-cluster-bfae9b93b5e68dd1",
+      "s-cluster-a627606f52986028"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-3d6a2e97a261259c",
+      "s-cluster-4334a247725d03ca",
+      "s-cluster-2afa351a4ed37bf8"
+    ],
+    "business-economy": [
+      "s-cluster-e9a363ebe070aecd",
+      "s-cluster-abc884c7eea8bec0",
+      "s-cluster-b89c0d2da37675b2"
+    ],
+    "technology-ai": [
+      "s-cluster-6194ff7f112307c7",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-5582304367ad886b",
+      "slug": "india-s-cluster-5582304367ad886b",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Arrested or in prison in Armenia",
+      "deck": "This guide provides information about being arrested in Armenia and what conditions are like in prison there.",
+      "whatChanged": [
+        "This guide provides information about being arrested in Armenia and what conditions are like in prison there."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T10:58:40.000Z",
+      "updatedAt": "2026-11-18T02:24:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-881514f2b896edd5",
+      "slug": "science-health-climate-s-cluster-881514f2b896edd5",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK Clinical Research Delivery key performance indicators: data to November 2026",
+      "deck": "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme.",
+      "whatChanged": [
+        "Report bringing together data on the delivery of globally competitive clinical research through the UK Clinical Research Delivery programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-dhsc"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-16T17:13:07.000Z",
+      "updatedAt": "2026-11-17T15:53:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b8c18b2da3966809",
+      "slug": "india-s-cluster-b8c18b2da3966809",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Dombrovskis at German Digital Ministers' Conference",
+      "deck": "European Commission Speech Brussels, 17 Nov 2026 Sehr geehrter Herr Bundesminister Dr. Wildberger, sehr geehrte Ministerinnen und Minister der Länder, meine sehr geehrten Damen und Herren, herzlichen Dank für ...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 17 Nov 2026 Sehr geehrter Herr Bundesminister Dr. Wildberger, sehr geehrte Ministerinnen und Minister der Länder, meine sehr geehrten Damen und Herren, herzlichen Dank für ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T17:57:09.000Z",
+      "updatedAt": "2026-11-17T17:57:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e0066a01bb8e7626",
+      "slug": "india-s-cluster-e0066a01bb8e7626",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Survey of seasonal workers scheme privacy notice",
+      "deck": "Privacy notice explaining how we will use and manage the personal data you submit to the Seasonal Workers Survey.",
+      "whatChanged": [
+        "Privacy notice explaining how we will use and manage the personal data you submit to the Seasonal Workers Survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T15:53:37.000Z",
+      "updatedAt": "2026-11-17T15:53:37.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b12d7d6ab60a0d26",
+      "slug": "science-health-climate-s-cluster-b12d7d6ab60a0d26",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Corporate report: DHSC annual report and accounts: 2025 to 2026",
+      "deck": "How the Department of Health and Social Care has funded its activities and used its resources during the financial year 2025 to 2026.",
+      "whatChanged": [
+        "How the Department of Health and Social Care has funded its activities and used its resources during the financial year 2025 to 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T17:32:21.000Z",
+      "updatedAt": "2026-11-17T17:32:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9dec654482d2dfd",
+      "slug": "science-health-climate-s-cluster-e9dec654482d2dfd",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Seasonal workers reviews and surveys",
+      "deck": "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025.",
+      "whatChanged": [
+        "Reports and surveys reviewing the performance of the seasonal workers pilot from 2019 to 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T16:23:08.000Z",
+      "updatedAt": "2026-11-17T16:23:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b8c18c2da39669bc",
+      "slug": "world-s-cluster-b8c18c2da39669bc",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at the EIGE Gender Equality Forum",
+      "deck": "European Commission Speech Brussels, 17 Nov 2026 Last year, on this very day, 17 November, Europe marked Equal Pay Day. From that morning until New Year's Eve, women in the EU were in effect working for free. ...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 17 Nov 2026 Last year, on this very day, 17 November, Europe marked Equal Pay Day. From that morning until New Year's Eve, women in the EU were in effect working for free. ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T17:11:40.000Z",
+      "updatedAt": "2026-11-17T17:11:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ed50c158d70cb96e",
+      "slug": "policy-geopolitics-s-cluster-ed50c158d70cb96e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Madagascar travel advice",
+      "deck": "FCDO travel advice for Madagascar. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Madagascar. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T10:56:40.000Z",
+      "updatedAt": "2026-11-17T13:27:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-48c3a53d360dc116",
+      "slug": "science-health-climate-s-cluster-48c3a53d360dc116",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Travel with assistance dogs: transport companies and routes",
+      "deck": "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners.",
+      "whatChanged": [
+        "Check the air, sea and rail carriers registered with the Animal and Plant Health Agency to transport assistance dogs with their owners."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T14:38:45.000Z",
+      "updatedAt": "2026-11-17T14:38:45.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bfae9b93b5e68dd1",
+      "slug": "science-health-climate-s-cluster-bfae9b93b5e68dd1",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Homelessness: applying All Our Health",
+      "deck": "Evidence and information for health and care professionals and the wider public health workforce to support people experiencing or at risk of homelessness.",
+      "whatChanged": [
+        "Evidence and information for health and care professionals and the wider public health workforce to support people experiencing or at risk of homelessness."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T14:36:08.000Z",
+      "updatedAt": "2026-11-17T14:36:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a627606f52986028",
+      "slug": "science-health-climate-s-cluster-a627606f52986028",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Stable sales support long-term decline in animal antibiotic use",
+      "deck": "New figures show antibiotic sales for animals remain 56% below 2014 levels, helping protect animal and human health",
+      "whatChanged": [
+        "New figures show antibiotic sales for animals remain 56% below 2014 levels, helping protect animal and human health"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T13:38:00.000Z",
+      "updatedAt": "2026-11-17T13:38:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-3d6a2e97a261259c",
+      "slug": "policy-geopolitics-s-cluster-3d6a2e97a261259c",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Democratic People's Republic of Korea: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T11:00:45.000Z",
+      "updatedAt": "2026-11-17T12:20:25.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T12:20:11.000Z",
+      "updatedAt": "2026-11-17T12:20:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2afa351a4ed37bf8",
+      "slug": "policy-geopolitics-s-cluster-2afa351a4ed37bf8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: FCDO Programme Operating Framework",
+      "deck": "The Programme Operating Framework (PrOF) sets the standard for how the Foreign, Commonwealth & Development Office (FCDO) delivers its programmes and projects.",
+      "whatChanged": [
+        "The Programme Operating Framework (PrOF) sets the standard for how the Foreign, Commonwealth & Development Office (FCDO) delivers its programmes and projects."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T08:41:40.000Z",
+      "updatedAt": "2026-11-17T08:41:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-e9a363ebe070aecd",
+      "slug": "business-economy-s-cluster-e9a363ebe070aecd",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Strengthening secure and resilient economic connectivity: UK statement to the OSCE",
+      "deck": "The UK reaffirms its support for practical OSCE co-operation on secure and resilient economic connectivity, calling for open markets, free trade, good governance and diversified supply chains.",
+      "whatChanged": [
+        "The UK reaffirms its support for practical OSCE co-operation on secure and resilient economic connectivity, calling for open markets, free trade, good governance and diversified supply chains."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T10:12:41.000Z",
+      "updatedAt": "2026-11-17T10:12:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-abc884c7eea8bec0",
+      "slug": "business-economy-s-cluster-abc884c7eea8bec0",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "UK cracks down on companies building settlements in the West Bank and groups blocking aid access into Gaza",
+      "deck": "The UK has imposed new sanctions on companies involved in the expansion of illegal settlements in the West Bank and an activist group responsible for blocking aid to Gaza.",
+      "whatChanged": [
+        "The UK has imposed new sanctions on companies involved in the expansion of illegal settlements in the West Bank and an activist group responsible for blocking aid to Gaza."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T10:04:00.000Z",
+      "updatedAt": "2026-11-17T10:04:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b89c0d2da37675b2",
+      "slug": "business-economy-s-cluster-b89c0d2da37675b2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis at the press conference presenting the Autumn 2026 Economic Forecast",
+      "deck": "European Commission Speech Brussels, 17 Nov 2026 Good morning. While autumn brings shorter days, I'm afraid it has not shortened the length of my presentation. So, let me get straight to what you want to hear,...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 17 Nov 2026 Good morning. While autumn brings shorter days, I'm afraid it has not shortened the length of my presentation. So, let me get straight to what you want to hear,..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T09:50:24.000Z",
+      "updatedAt": "2026-11-17T09:50:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6194ff7f112307c7",
+      "slug": "technology-ai-s-cluster-6194ff7f112307c7",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Independent report: AI Champions’ AI Adoption Plans",
+      "deck": "Independent AI adoption plans setting out recommendations from the AI Champions, to accelerate AI adoption across key UK sectors, with a pro-worker approach.",
+      "whatChanged": [
+        "Independent AI adoption plans setting out recommendations from the AI Champions, to accelerate AI adoption across key UK sectors, with a pro-worker approach."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T10:05:24.000Z",
+      "updatedAt": "2026-11-16T10:05:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Arrested or in prison in Malaysia",
+      "url": "https://www.gov.uk/guidance/arrested-or-in-prison-in-malaysia",
+      "sourceType": "official",
+      "publishedAt": "2026-11-15T19:03:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Seasonal workers reviews and surveys",
+      "url": "https://www.gov.uk/government/publications/seasonal-workers-pilot-review",
+      "sourceType": "official",
+      "publishedAt": "2026-11-16T14:47:52.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Corporate report: DHSC annual report and accounts: 2025 to 2026",
+      "url": "https://www.gov.uk/government/publications/dhsc-annual-report-and-accounts-2025-to-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-11-10T12:58:00.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Commissioner Dombrovskis at German Digital Ministers' Conference",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2484",
+      "sourceType": "official",
+      "publishedAt": "2026-11-11T23:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Independent report: AI Champions’ AI Adoption Plans",
+      "url": "https://www.gov.uk/government/publications/ai-champions-ai-adoption-plans",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T08:30:01.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
