@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-19T07:42:37.364Z",
+  "updatedAt": "2026-11-19T07:42:37.364Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-c2ae912db697e774",
+    "s-cluster-153af49c9fee0ac5",
+    "s-cluster-af906d2d9e3b6dcd",
+    "s-cluster-4e8e891305df4843",
+    "s-cluster-b994b1e9581e367d",
+    "s-cluster-14868dd1b39bc8e4",
+    "s-cluster-4e22c5d5213d6bd9",
+    "s-cluster-38ef86def0b01267"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-945c112bd76e6308",
+      "s-cluster-ef25afdc5e3c8755",
+      "s-cluster-31df920c8f5d57cb"
+    ],
+    "business-economy": [
+      "s-cluster-178094d98c3654f9",
+      "s-cluster-af90652d9e3b6035",
+      "s-cluster-b89c0d2da37675b2"
+    ],
+    "science-health-climate": [
+      "s-cluster-0e2820a285cb4360",
+      "s-cluster-af76098dc833b318",
+      "s-cluster-bfcdac091000b061"
+    ],
+    "technology-ai": [
+      "s-cluster-6194ff7f112307c7",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-2102cd3c6221504f"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-c2ae912db697e774",
+      "slug": "science-health-climate-s-cluster-c2ae912db697e774",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Environment Secretary launches £43 million schemes to test farming tech, boost climate resilience and build reservoirs",
+      "deck": "Farmers backed with £28m innovation competition, as part of the largest ever annual investment to boost business resilience through better soil and water management",
+      "whatChanged": [
+        "Farmers backed with £28m innovation competition, as part of the largest ever annual investment to boost business resilience through better soil and water management"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-19T00:01:00.000Z",
+      "updatedAt": "2026-11-19T00:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-153af49c9fee0ac5",
+      "slug": "business-economy-s-cluster-153af49c9fee0ac5",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "EU and Jordan advance strategic partnership backed by €3 billion to boost investment, create jobs and strengthen regional stability",
+      "deck": "European Commission Press release Amman, 19 Nov 2026 Today, European Commission President Ursula von der Leyen and Commissioner for the Mediterranean Dubravka Šuica took part in the EU-Jordan Investment Conference at the Dead Sea. Alongs...",
+      "whatChanged": [
+        "European Commission Press release Amman, 19 Nov 2026 Today, European Commission President Ursula von der Leyen and Commissioner for the Mediterranean Dubravka Šuica took part in the EU-Jordan Investment Conference at the Dead Sea. Alongside His Majesty King Abdullah II bin Al-Hussein, President von der Leyen witnessed the signing of agreements to support Jordan's economic modernisation and resilience."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T23:00:00.000Z",
+      "updatedAt": "2026-11-18T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-af906d2d9e3b6dcd",
+      "slug": "business-economy-s-cluster-af906d2d9e3b6dcd",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by President von der Leyen at the EU-Jordan Investment Conference",
+      "deck": "European Commission Speech Sweimeh, 19 Nov 2026 Your Majesty, King Abdullah II, Thank you for the very warm welcome. It has been nearly two years since you, your Majesty, travelled to Brussels to open a new c...",
+      "whatChanged": [
+        "European Commission Speech Sweimeh, 19 Nov 2026 Your Majesty, King Abdullah II, Thank you for the very warm welcome. It has been nearly two years since you, your Majesty, travelled to Brussels to open a new c..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T23:00:00.000Z",
+      "updatedAt": "2026-11-18T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4e8e891305df4843",
+      "slug": "world-s-cluster-4e8e891305df4843",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Russia cannot bomb its way to victory: UK statement to the OSCE",
+      "deck": "Counsellor for Politico-Military Affairs, Arron Newble, condemns Russia’s strikes on Ukraine’s civilian energy system and on Black Sea shipping.",
+      "whatChanged": [
+        "Counsellor for Politico-Military Affairs, Arron Newble, condemns Russia’s strikes on Ukraine’s civilian energy system and on Black Sea shipping."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-19T07:05:05.000Z",
+      "updatedAt": "2026-11-19T07:05:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b994b1e9581e367d",
+      "slug": "india-s-cluster-b994b1e9581e367d",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): latest situation in England",
+      "deck": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
+      "whatChanged": [
+        "Find out about the latest bird flu situation in England and guidance for bird keepers and the public."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T19:38:05.000Z",
+      "updatedAt": "2026-11-18T19:38:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-14868dd1b39bc8e4",
+      "slug": "india-s-cluster-14868dd1b39bc8e4",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "New Champion to give unpaid carers a stronger voice",
+      "deck": "Anna Dixon MP appointed as the Champion for Unpaid Carers",
+      "whatChanged": [
+        "Anna Dixon MP appointed as the Champion for Unpaid Carers"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T19:20:10.000Z",
+      "updatedAt": "2026-11-18T19:20:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4e22c5d5213d6bd9",
+      "slug": "india-s-cluster-4e22c5d5213d6bd9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Official Statistics: Social Housing Decarbonisation Fund statistics: February 2027",
+      "deck": "Data to monitor the installation of energy efficiency measures in domestic properties via the Social Housing Decarbonisation Fund (SHDF) scheme in England.",
+      "whatChanged": [
+        "Data to monitor the installation of energy efficiency measures in domestic properties via the Social Housing Decarbonisation Fund (SHDF) scheme in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T16:41:39.000Z",
+      "updatedAt": "2026-11-18T16:41:47.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-38ef86def0b01267",
+      "slug": "policy-geopolitics-s-cluster-38ef86def0b01267",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Cambodia travel advice",
+      "deck": "FCDO travel advice for Cambodia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Cambodia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T15:21:31.000Z",
+      "updatedAt": "2026-11-18T16:36:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-945c112bd76e6308",
+      "slug": "policy-geopolitics-s-cluster-945c112bd76e6308",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "United Arab Emirates travel advice",
+      "deck": "FCDO travel advice for United Arab Emirates. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for United Arab Emirates. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T16:33:03.000Z",
+      "updatedAt": "2026-11-18T16:33:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ef25afdc5e3c8755",
+      "slug": "policy-geopolitics-s-cluster-ef25afdc5e3c8755",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The UK further welcomes the strengthened cooperation between the Office of the Prosecutor and the Libyan authorities: UK statement at the UN Security Council",
+      "deck": "Statement by Legal Adviser Colin McIntyre at the UN Security Council meeting on Libya.",
+      "whatChanged": [
+        "Statement by Legal Adviser Colin McIntyre at the UN Security Council meeting on Libya."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T16:28:41.000Z",
+      "updatedAt": "2026-11-18T16:28:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-31df920c8f5d57cb",
+      "slug": "policy-geopolitics-s-cluster-31df920c8f5d57cb",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Keynote speech by Commissioner Kubilius at the DIGITAL SME summit - Breaking Europe's Digital Frontiers",
+      "deck": "European Commission Speech Brussels, 16 Nov 2026 Dear Colleagues, It is a big pleasure to be together with you. The Digital SME alliance is a real power with 40000 SMEs. That is why I am very happy to have thi...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 16 Nov 2026 Dear Colleagues, It is a big pleasure to be together with you. The Digital SME alliance is a real power with 40000 SMEs. That is why I am very happy to have thi..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T14:07:41.000Z",
+      "updatedAt": "2026-11-18T13:52:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-178094d98c3654f9",
+      "slug": "business-economy-s-cluster-178094d98c3654f9",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Research: UK software market analysis",
+      "deck": "An analysis of the UK software market, including details of the number and type of firms within the sector and the products and services they offer.",
+      "whatChanged": [
+        "An analysis of the UK software market, including details of the number and type of firms within the sector and the products and services they offer."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T16:25:41.000Z",
+      "updatedAt": "2026-11-18T16:25:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-af90652d9e3b6035",
+      "slug": "business-economy-s-cluster-af90652d9e3b6035",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Opening remarks by Commissioner Hansen at the EU-Mexico Agri-food Trade Relations Business Forum in Mexico City",
+      "deck": "European Commission Speech Mexico City, 18 Nov 2026 Secretary of Agriculture, Señora López, Excellencies, Distinguished business representatives, Ladies and gentlemen, It is a great pleasure to ...",
+      "whatChanged": [
+        "European Commission Speech Mexico City, 18 Nov 2026 Secretary of Agriculture, Señora López, Excellencies, Distinguished business representatives, Ladies and gentlemen, It is a great pleasure to ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T11:40:19.000Z",
+      "updatedAt": "2026-11-18T11:40:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b89c0d2da37675b2",
+      "slug": "business-economy-s-cluster-b89c0d2da37675b2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis at the press conference presenting the Autumn 2026 Economic Forecast",
+      "deck": "European Commission Speech Brussels, 17 Nov 2026 Good morning. While autumn brings shorter days, I'm afraid it has not shortened the length of my presentation. So, let me get straight to what you want to hear,...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 17 Nov 2026 Good morning. While autumn brings shorter days, I'm afraid it has not shortened the length of my presentation. So, let me get straight to what you want to hear,..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-17T09:50:24.000Z",
+      "updatedAt": "2026-11-17T09:50:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0e2820a285cb4360",
+      "slug": "science-health-climate-s-cluster-0e2820a285cb4360",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: Research integrity concordat: Defra compliance statement 2023 to 2024",
+      "deck": "Defra group annual statement of compliance with the concordat to support research integrity for the period 2023 to 2024.",
+      "whatChanged": [
+        "Defra group annual statement of compliance with the concordat to support research integrity for the period 2023 to 2024."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T16:14:41.000Z",
+      "updatedAt": "2026-11-18T16:14:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-af76098dc833b318",
+      "slug": "science-health-climate-s-cluster-af76098dc833b318",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Data for Theme A: Air",
+      "deck": "Data for 'Theme A: Air' indicators of the Environmental Indicator Framework.",
+      "whatChanged": [
+        "Data for 'Theme A: Air' indicators of the Environmental Indicator Framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T15:44:53.000Z",
+      "updatedAt": "2026-11-18T15:45:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bfcdac091000b061",
+      "slug": "science-health-climate-s-cluster-bfcdac091000b061",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Environmental Indicator Framework: recent updates",
+      "deck": "Recent updates to the Environmental Indicator Framework.",
+      "whatChanged": [
+        "Recent updates to the Environmental Indicator Framework."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T15:39:34.000Z",
+      "updatedAt": "2026-11-18T15:42:33.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6194ff7f112307c7",
+      "slug": "technology-ai-s-cluster-6194ff7f112307c7",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Independent report: AI Champions’ AI Adoption Plans",
+      "deck": "Independent AI adoption plans setting out recommendations from the AI Champions, to accelerate AI adoption across key UK sectors, with a pro-worker approach.",
+      "whatChanged": [
+        "Independent AI adoption plans setting out recommendations from the AI Champions, to accelerate AI adoption across key UK sectors, with a pro-worker approach."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-16T10:05:24.000Z",
+      "updatedAt": "2026-11-16T10:05:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Environment Secretary launches £43 million schemes to test farming tech, boost climate resilience and build reservoirs",
+      "url": "https://www.gov.uk/government/news/environment-secretary-launches-43-million-schemes-to-test-farming-tech-boost-climate-resilience-and-build-reservoirs",
+      "sourceType": "official",
+      "publishedAt": "2026-11-18T14:11:51.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "EU and Jordan advance strategic partnership backed by €3 billion to boost investment, create jobs and strengthen regional stability",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2508",
+      "sourceType": "official",
+      "publishedAt": "2026-11-16T10:05:45.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Russia cannot bomb its way to victory: UK statement to the OSCE",
+      "url": "https://www.gov.uk/government/speeches/russia-cannot-bomb-its-way-to-victory-uk-statement-to-the-osce",
+      "sourceType": "official",
+      "publishedAt": "2026-11-18T15:21:31.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "New Champion to give unpaid carers a stronger voice",
+      "url": "https://www.gov.uk/government/news/new-champion-to-give-unpaid-carers-a-stronger-voice",
+      "sourceType": "official",
+      "publishedAt": "2026-11-12T12:07:05.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Social Housing Decarbonisation Fund statistics: November 2027",
+      "url": "https://www.gov.uk/government/statistics/announcements/social-housing-decarbonisation-fund-statistics-november-2027",
+      "sourceType": "official",
+      "publishedAt": "2026-11-17T11:20:40.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: UK software market analysis",
+      "url": "https://www.gov.uk/government/publications/uk-software-market-analysis",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T08:30:01.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
