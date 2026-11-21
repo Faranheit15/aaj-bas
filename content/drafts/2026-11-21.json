@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-21",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-21T07:29:59.442Z",
+  "updatedAt": "2026-11-21T07:29:59.442Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-b994b1e9581e367d",
+    "s-cluster-0d87169a569dfb5a",
+    "s-cluster-f285a8289be39d59",
+    "s-cluster-92da1de39b528621",
+    "s-cluster-7d8b11eff91a6766",
+    "s-cluster-dfc3e34ad958415b",
+    "s-cluster-5bd2b5711418b669",
+    "s-cluster-242217aedcdbb394"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-58827f3647b028f4",
+      "s-cluster-d0efd53ab2c4f187",
+      "s-cluster-cb008641370628ca"
+    ],
+    "business-economy": [
+      "s-cluster-af40381c02fa68e0",
+      "s-cluster-d61209a55f1db888",
+      "s-cluster-c82aa4996c703969"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-d15c98ccd161f2b5",
+      "s-cluster-4334a247725d03ca",
+      "s-cluster-da22eb9dbaf20eea"
+    ],
+    "technology-ai": [
+      "s-cluster-13bf16c8105e59c0",
+      "s-cluster-ab505c8cf67a91fd",
+      "s-cluster-7de37d395722d33c"
+    ],
+    "sports": ["s-cluster-af93612d9e3d8f40"]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-b994b1e9581e367d",
+      "slug": "india-s-cluster-b994b1e9581e367d",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): latest situation in England",
+      "deck": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
+      "whatChanged": [
+        "Find out about the latest bird flu situation in England and guidance for bird keepers and the public."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T18:18:09.000Z",
+      "updatedAt": "2026-11-20T18:18:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0d87169a569dfb5a",
+      "slug": "policy-geopolitics-s-cluster-0d87169a569dfb5a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Laos travel advice",
+      "deck": "Updated information on flooding risks during periods of heavy rain (‘Safety and security’ page).",
+      "whatChanged": [
+        "Updated information on flooding risks during periods of heavy rain (‘Safety and security’ page)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-19T14:37:32.000Z",
+      "updatedAt": "2026-11-20T19:57:12.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f285a8289be39d59",
+      "slug": "india-s-cluster-f285a8289be39d59",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "When someone dies in Tajikistan",
+      "deck": "The process when a British national dies in Tajikistan, including registering the death, funerals and cremations, and bringing the person’s body to the UK.",
+      "whatChanged": [
+        "The process when a British national dies in Tajikistan, including registering the death, funerals and cremations, and bringing the person’s body to the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T16:45:26.000Z",
+      "updatedAt": "2026-11-20T16:45:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-92da1de39b528621",
+      "slug": "india-s-cluster-92da1de39b528621",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Changes to moving plants and UAFM from Great Britain to Northern Ireland",
+      "deck": "Changes to how plants and used agricultural and forestry machinery (UAFM) will move from Great Britain to Northern Ireland due to the UK-EU Sanitary and Phytosanitary (SPS) Agreement.",
+      "whatChanged": [
+        "Changes to how plants and used agricultural and forestry machinery (UAFM) will move from Great Britain to Northern Ireland due to the UK-EU Sanitary and Phytosanitary (SPS) Agreement."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T16:41:01.000Z",
+      "updatedAt": "2026-11-20T16:41:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7d8b11eff91a6766",
+      "slug": "policy-geopolitics-s-cluster-7d8b11eff91a6766",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "The EU and the United Kingdom turn closeness into common strength and prosperity at second bilateral summit",
+      "deck": "European Commission News Brussels, 20 Nov 2026 Commission President Ursula von der Leyen and European Council President António Costa hosted British Prime Minister Andy Burnham in Brussels today for the sec...",
+      "whatChanged": [
+        "European Commission News Brussels, 20 Nov 2026 Commission President Ursula von der Leyen and European Council President António Costa hosted British Prime Minister Andy Burnham in Brussels today for the sec..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T17:17:57.000Z",
+      "updatedAt": "2026-11-20T17:17:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-dfc3e34ad958415b",
+      "slug": "business-economy-s-cluster-dfc3e34ad958415b",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Taking part in the UK Emissions Trading Scheme markets",
+      "deck": "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market.",
+      "whatChanged": [
+        "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T14:22:20.000Z",
+      "updatedAt": "2026-11-20T14:22:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5bd2b5711418b669",
+      "slug": "policy-geopolitics-s-cluster-5bd2b5711418b669",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Daily News 18 / 11 / 2026",
+      "deck": "European Commission Daily news Brussels, 18 Nov 2026 Commission sets up new EU Sanctions Office and appoints new EU Sanctions Envoy Today, the European Commission has created the EU Sanctions Office to bring toge...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 18 Nov 2026 Commission sets up new EU Sanctions Office and appoints new EU Sanctions Envoy Today, the European Commission has created the EU Sanctions Office to bring toge..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T10:29:20.000Z",
+      "updatedAt": "2026-11-20T10:34:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-242217aedcdbb394",
+      "slug": "business-economy-s-cluster-242217aedcdbb394",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Energy trends, UK submission for JODI: November 2026 (Energy Trends Tables 3.16 and 4.5)",
+      "deck": "Monthly data on oil and gas production, trade and stock levels, as reported to the Joint Organisations Data Initiative (JODI), and published as part of the suite of Energy Trends products as 3.16 (oil) and 4.5 (gas). These data are publi...",
+      "whatChanged": [
+        "Monthly data on oil and gas production, trade and stock levels, as reported to the Joint Organisations Data Initiative (JODI), and published as part of the suite of Energy Trends products as 3.16 (oil) and 4.5 (gas). These data are published outside of the usual Energy Trends window due to later availability of these data combined with an early publication date for Energy Trends in December."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T10:44:49.000Z",
+      "updatedAt": "2026-11-20T10:44:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-58827f3647b028f4",
+      "slug": "science-health-climate-s-cluster-58827f3647b028f4",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Promotional material: Bluetongue: leaflets, videos and posters",
+      "deck": "A collection of leaflets, videos and posters about bluetongue virus.",
+      "whatChanged": [
+        "A collection of leaflets, videos and posters about bluetongue virus."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T17:23:13.000Z",
+      "updatedAt": "2026-11-20T17:23:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d0efd53ab2c4f187",
+      "slug": "science-health-climate-s-cluster-d0efd53ab2c4f187",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Estimating clean energy R&D spending using tax credit data",
+      "deck": "First estimates of UK business spending on clean energy and climate mitigation research and development (R&D), based on HMRC R&D tax credit data.",
+      "whatChanged": [
+        "First estimates of UK business spending on clean energy and climate mitigation research and development (R&D), based on HMRC R&D tax credit data."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T09:28:40.000Z",
+      "updatedAt": "2026-11-20T09:28:40.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-cb008641370628ca",
+      "slug": "science-health-climate-s-cluster-cb008641370628ca",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Methane Emissions from Anaerobic Digestion (MEAD) 2.0",
+      "deck": "This study examined the mechanisms, locations, scale and mitigation of fugitive methane from anaerobic digestion sites.",
+      "whatChanged": [
+        "This study examined the mechanisms, locations, scale and mitigation of fugitive methane from anaerobic digestion sites."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T09:27:11.000Z",
+      "updatedAt": "2026-11-20T09:27:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-af40381c02fa68e0",
+      "slug": "business-economy-s-cluster-af40381c02fa68e0",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: SPS agreement: preparing your business",
+      "deck": "Prepare your business for the sanitary and phytosanitary (SPS) agreement if you trade or move plants, plant products, animals, animal products, feed and food.",
+      "whatChanged": [
+        "Prepare your business for the sanitary and phytosanitary (SPS) agreement if you trade or move plants, plant products, animals, animal products, feed and food."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T16:54:24.000Z",
+      "updatedAt": "2026-11-20T16:54:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d61209a55f1db888",
+      "slug": "business-economy-s-cluster-d61209a55f1db888",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Fish and shellfish changes: preparing your business",
+      "deck": "How the UK-EU SPS agreement will impact businesses involved in supplying fish and fishery products to the UK market.",
+      "whatChanged": [
+        "How the UK-EU SPS agreement will impact businesses involved in supplying fish and fishery products to the UK market."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T16:37:43.000Z",
+      "updatedAt": "2026-11-20T16:38:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c82aa4996c703969",
+      "slug": "business-economy-s-cluster-c82aa4996c703969",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Changes to digital systems for trading SPS goods",
+      "deck": "Find out how the digital systems you use will change under the SPS Agreement for trade between GB and the EU, and non-EU countries.",
+      "whatChanged": [
+        "Find out how the digital systems you use will change under the SPS Agreement for trade between GB and the EU, and non-EU countries."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T16:37:45.000Z",
+      "updatedAt": "2026-11-20T16:37:45.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d15c98ccd161f2b5",
+      "slug": "policy-geopolitics-s-cluster-d15c98ccd161f2b5",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Russia: list of designations and sanctions notices",
+      "deck": "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List.",
+      "whatChanged": [
+        "List of designated persons and notices issued about new designations, revocations, delistings and other changes to the UK Sanctions List."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T11:38:18.000Z",
+      "updatedAt": "2026-11-20T11:38:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T10:05:34.000Z",
+      "updatedAt": "2026-11-20T10:05:34.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-da22eb9dbaf20eea",
+      "slug": "policy-geopolitics-s-cluster-da22eb9dbaf20eea",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Statement by President von der Leyen at the joint press conference with President Costa and Prime Minister Burnham following the EU-UK Summit",
+      "deck": "European Commission Statement Brussels, 20 Nov 2026 Thank you very much dear António, Dear Andy, A very warm welcome ministers, I am also glad to see my Commissioners here, And thank you, dear Andy, for your amb...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 20 Nov 2026 Thank you very much dear António, Dear Andy, A very warm welcome ministers, I am also glad to see my Commissioners here, And thank you, dear Andy, for your amb..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T08:28:36.000Z",
+      "updatedAt": "2026-11-20T08:28:36.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13bf16c8105e59c0",
+      "slug": "technology-ai-s-cluster-13bf16c8105e59c0",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Artificial intelligence (AI) in social care",
+      "deck": "Non-statutory guidance on the use of artificial intelligence in children’s and adults’ social care in England.",
+      "whatChanged": [
+        "Non-statutory guidance on the use of artificial intelligence in children’s and adults’ social care in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T10:00:01.000Z",
+      "updatedAt": "2026-11-20T10:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ab505c8cf67a91fd",
+      "slug": "technology-ai-s-cluster-ab505c8cf67a91fd",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "New AI guidance to cut paperwork and free more time for care",
+      "deck": "Drive for artificial intelligence in social care, as guidance sets out how more social care services can harness digital tools to support care",
+      "whatChanged": [
+        "Drive for artificial intelligence in social care, as guidance sets out how more social care services can harness digital tools to support care"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T09:57:29.000Z",
+      "updatedAt": "2026-11-20T09:57:29.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7de37d395722d33c",
+      "slug": "technology-ai-s-cluster-7de37d395722d33c",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission decides to refer Austria to the Court of Justice of the European Union for incorrectly applying the European arrest warrant",
+      "deck": "European Commission Press release Brussels, 19 Nov 2026 Today, the European Commission decided to refer Austria (INFR(2020)2307) to the Court of Justice of the European Union for failing to comply with the Framework Decision on the Europ...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 19 Nov 2026 Today, the European Commission decided to refer Austria (INFR(2020)2307) to the Court of Justice of the European Union for failing to comply with the Framework Decision on the European Arrest Warrant (2002/584/JHA)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-18T23:00:00.000Z",
+      "updatedAt": "2026-11-18T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-af93612d9e3d8f40",
+      "slug": "sports-s-cluster-af93612d9e3d8f40",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's opening speech at the EPP Group Hearing, ‘From Stress Test to Solutions – Practical Lessons for the Birds and Habitats Directives'",
+      "deck": "European Commission Speech Brussels, 19 Nov 2026 Dear Norbert, Honourable Members, ladies and gentlemen, I am delighted to join you today. Let me begin by thanking the EPP Group for organising this hearing on ...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 19 Nov 2026 Dear Norbert, Honourable Members, ladies and gentlemen, I am delighted to join you today. Let me begin by thanking the EPP Group for organising this hearing on ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-19T10:52:19.000Z",
+      "updatedAt": "2026-11-19T10:52:19.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bird flu (avian influenza): latest situation in England",
+      "url": "https://www.gov.uk/guidance/bird-flu-avian-influenza-latest-situation-in-england",
+      "sourceType": "official",
+      "publishedAt": "2026-11-20T16:37:43.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "USA travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/usa",
+      "sourceType": "official",
+      "publishedAt": "2026-11-19T11:24:18.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "The EU and the United Kingdom turn closeness into common strength and prosperity at second bilateral summit",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2555",
+      "sourceType": "official",
+      "publishedAt": "2026-11-17T23:00:00.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Decision: Tinsley Viaduct Gas Pipeline Diversion (Cadent Gas Ltd): environmental determination",
+      "url": "https://www.gov.uk/government/publications/tinsley-viaduct-gas-pipeline-diversion-cadent-gas-ltd-environmental-determination",
+      "sourceType": "official",
+      "publishedAt": "2026-11-19T11:44:23.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: Suicide rates in men aged 40 to 59 years, England: 2021 to 2025",
+      "url": "https://www.gov.uk/government/statistics/announcements/suicide-rates-in-men-aged-40-to-59-years-england-2021-to-2025",
+      "sourceType": "official",
+      "publishedAt": "2026-11-18T09:30:00.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
