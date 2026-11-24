@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-24",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-24T10:10:49.691Z",
+  "updatedAt": "2026-11-24T10:10:49.691Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-049ebb380d33ca0e",
+    "s-cluster-20c9602c6a8adcd6",
+    "s-cluster-29c085b31e953a8c",
+    "s-cluster-9383eb8ce74b0599",
+    "s-cluster-5a5153b5e1664fa4",
+    "s-cluster-1441ef00f18fcd9b",
+    "s-cluster-d3f991abef310429",
+    "s-cluster-b6465133dad25f88"
+  ],
+  "interestPools": {
+    "policy-geopolitics": [
+      "s-cluster-68bc5cb0a8a83794",
+      "s-cluster-83495fa291304b90",
+      "s-cluster-94ebe19d587a09b4"
+    ],
+    "science-health-climate": [
+      "s-cluster-36ed1f46d007b40a",
+      "s-cluster-083fbc9889dc0d9e",
+      "s-cluster-b868076b1b340f69"
+    ],
+    "business-economy": [
+      "s-cluster-6665be2463f7ee3d",
+      "s-cluster-afa1692d9e49da34",
+      "s-cluster-153e629c9ff0fb86"
+    ],
+    "sports": ["s-cluster-9c572083bdfcdc1c", "s-cluster-af93612d9e3d8f40"],
+    "technology-ai": [
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-13bf16c8105e59c0",
+      "s-cluster-2102cd3c6221504f"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-049ebb380d33ca0e",
+      "slug": "science-health-climate-s-cluster-049ebb380d33ca0e",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK International Climate Finance results 2026",
+      "deck": "This page provides the 2026 International Climate Finance (ICF) results for the UK government.",
+      "whatChanged": [
+        "This page provides the 2026 International Climate Finance (ICF) results for the UK government."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-24T09:38:32.000Z",
+      "updatedAt": "2026-11-24T09:38:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-20c9602c6a8adcd6",
+      "slug": "india-s-cluster-20c9602c6a8adcd6",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Policy paper: Digital Inclusion Innovation Fund: evaluation report",
+      "deck": "An evaluation report of the Digital Inclusion Innovation Fund assessing the process, impact and value for money.",
+      "whatChanged": [
+        "An evaluation report of the Digital Inclusion Innovation Fund assessing the process, impact and value for money."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T00:01:02.000Z",
+      "updatedAt": "2026-11-24T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-29c085b31e953a8c",
+      "slug": "india-s-cluster-29c085b31e953a8c",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Use of dual energy x-ray absorptiometry (DEXA) scans: government position",
+      "deck": "Sets out the government's current position on the use of DEXA scans in the UK.",
+      "whatChanged": [
+        "Sets out the government's current position on the use of DEXA scans in the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T09:50:30.000Z",
+      "updatedAt": "2026-11-24T09:51:15.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9383eb8ce74b0599",
+      "slug": "india-s-cluster-9383eb8ce74b0599",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Contact Defra",
+      "deck": "Information to help answer your query.",
+      "whatChanged": ["Information to help answer your query."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:08.000Z",
+      "updatedAt": "2026-11-24T10:00:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-5a5153b5e1664fa4",
+      "slug": "policy-geopolitics-s-cluster-5a5153b5e1664fa4",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Pet food and feed for other animals - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing pet food and feed for other animals, including fish bait, to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing pet food and feed for other animals, including fish bait, to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:07.000Z",
+      "updatedAt": "2026-11-24T10:00:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1441ef00f18fcd9b",
+      "slug": "science-health-climate-s-cluster-1441ef00f18fcd9b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: IPS for alcohol and drug dependence: data linkage outcomes 2026",
+      "deck": "Outcomes of the Individual Placement and Support for adults and young people aged 16 years and over in treatment for alcohol and drug dependence in England.",
+      "whatChanged": [
+        "Outcomes of the Individual Placement and Support for adults and young people aged 16 years and over in treatment for alcohol and drug dependence in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:04.000Z",
+      "updatedAt": "2026-11-24T10:00:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d3f991abef310429",
+      "slug": "business-economy-s-cluster-d3f991abef310429",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Notice: Electricity transmission licence exemption: Dogger Bank A wind farm, 2026",
+      "deck": "A proposal to provide an exemption from the requirement to hold a transmission licence.",
+      "whatChanged": [
+        "A proposal to provide an exemption from the requirement to hold a transmission licence."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-23T09:30:01.000Z",
+      "updatedAt": "2026-11-24T09:30:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b6465133dad25f88",
+      "slug": "policy-geopolitics-s-cluster-b6465133dad25f88",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary Statement to the House of Commons: 23 November 2026",
+      "deck": "Foreign Secretary statement on Myanmar.",
+      "whatChanged": ["Foreign Secretary statement on Myanmar."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-23T22:18:11.000Z",
+      "updatedAt": "2026-11-23T22:18:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-68bc5cb0a8a83794",
+      "slug": "policy-geopolitics-s-cluster-68bc5cb0a8a83794",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Deer urine or faeces and lures - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing deer urine or faeces and lures to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing deer urine or faeces and lures to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:06.000Z",
+      "updatedAt": "2026-11-24T10:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-83495fa291304b90",
+      "slug": "policy-geopolitics-s-cluster-83495fa291304b90",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Blood and blood products - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing blood and blood products to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing blood and blood products to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:06.000Z",
+      "updatedAt": "2026-11-24T10:00:06.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94ebe19d587a09b4",
+      "slug": "policy-geopolitics-s-cluster-94ebe19d587a09b4",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Processed animal by-products for use as educational tools - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing certain processed animal by-products as educational tools to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing certain processed animal by-products as educational tools to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:07.000Z",
+      "updatedAt": "2026-11-24T10:00:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-36ed1f46d007b40a",
+      "slug": "science-health-climate-s-cluster-36ed1f46d007b40a",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bovine TB: how to spot and report the disease",
+      "deck": "How to spot bovine tuberculosis (bovine TB), what to do if you suspect it and measures to prevent its spread.",
+      "whatChanged": [
+        "How to spot bovine tuberculosis (bovine TB), what to do if you suspect it and measures to prevent its spread."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:08.000Z",
+      "updatedAt": "2026-11-24T10:00:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-083fbc9889dc0d9e",
+      "slug": "science-health-climate-s-cluster-083fbc9889dc0d9e",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Second wave of Gaza children arrive for specialist NHS treatment",
+      "deck": "Second wave of critically ill children from Gaza arrive for NHS treatment in new medical evacuation",
+      "whatChanged": [
+        "Second wave of critically ill children from Gaza arrive for NHS treatment in new medical evacuation"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-23T10:34:44.000Z",
+      "updatedAt": "2026-11-23T10:34:44.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b868076b1b340f69",
+      "slug": "science-health-climate-s-cluster-b868076b1b340f69",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: People-centred governance in an age of uncertainty",
+      "deck": "This publication marks the 20th anniversary of the 2006 UK Development White Paper, bringing together the views of researchers, practitioners and local people on the future of governance.",
+      "whatChanged": [
+        "This publication marks the 20th anniversary of the 2006 UK Development White Paper, bringing together the views of researchers, practitioners and local people on the future of governance."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-23T07:46:10.000Z",
+      "updatedAt": "2026-11-23T07:46:10.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-6665be2463f7ee3d",
+      "slug": "business-economy-s-cluster-6665be2463f7ee3d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Gelatine and collagen (not for human consumption) - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing gelatine and collagen that is not for human consumption to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing gelatine and collagen that is not for human consumption to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:06.000Z",
+      "updatedAt": "2026-11-24T10:00:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-afa1692d9e49da34",
+      "slug": "business-economy-s-cluster-afa1692d9e49da34",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Lahbib at HERA Industry Days",
+      "deck": "European Commission Speech Brussels, 23 Nov 2026 This surgical mask only costs a few cents, but in April 2020 it was worth its weight in gold. Planes full of masks that European regions had already paid for we...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 23 Nov 2026 This surgical mask only costs a few cents, but in April 2020 it was worth its weight in gold. Planes full of masks that European regions had already paid for we..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-23T09:20:27.000Z",
+      "updatedAt": "2026-11-23T09:20:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-153e629c9ff0fb86",
+      "slug": "business-economy-s-cluster-153e629c9ff0fb86",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Commission opens formal investigation into possible anticompetitive conduct by Coca-Cola Europacific Partners in the non-alcoholic drinks sector",
+      "deck": "European Commission Press release Brussels, 23 Nov 2026 The European Commission has opened a formal antitrust investigation to assess whether Coca-Cola Europacific Partners (‘CCEP') has breached EU competition rules by (i) hindering the...",
+      "whatChanged": [
+        "European Commission Press release Brussels, 23 Nov 2026 The European Commission has opened a formal antitrust investigation to assess whether Coca-Cola Europacific Partners (‘CCEP') has breached EU competition rules by (i) hindering the cross-border trade of carbonated soft drinks and sports drinks; and (ii) denying certain wholesale customers the possibility to negotiate the procurement of these products on a multi-country basis."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-22T23:00:00.000Z",
+      "updatedAt": "2026-11-22T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9c572083bdfcdc1c",
+      "slug": "sports-s-cluster-9c572083bdfcdc1c",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Form: GEN02: Sam data fix request",
+      "deck": "Request a correction to data incorrectly entered into Sam, APHA's online system for submitting tuberculosis (TB) test results.",
+      "whatChanged": [
+        "Request a correction to data incorrectly entered into Sam, APHA's online system for submitting tuberculosis (TB) test results."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:08.000Z",
+      "updatedAt": "2026-11-24T10:00:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-af93612d9e3d8f40",
+      "slug": "sports-s-cluster-af93612d9e3d8f40",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Commissioner Roswall's opening speech at the EPP Group Hearing, ‘From Stress Test to Solutions – Practical Lessons for the Birds and Habitats Directives'",
+      "deck": "European Commission Speech Brussels, 19 Nov 2026 Dear Norbert, Honourable Members, ladies and gentlemen, I am delighted to join you today. Let me begin by thanking the EPP Group for organising this hearing on ...",
+      "whatChanged": [
+        "European Commission Speech Brussels, 19 Nov 2026 Dear Norbert, Honourable Members, ladies and gentlemen, I am delighted to join you today. Let me begin by thanking the EPP Group for organising this hearing on ..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-19T10:52:19.000Z",
+      "updatedAt": "2026-11-19T10:52:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13bf16c8105e59c0",
+      "slug": "technology-ai-s-cluster-13bf16c8105e59c0",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Artificial intelligence (AI) in social care",
+      "deck": "Non-statutory guidance on the use of artificial intelligence in children’s and adults’ social care in England.",
+      "whatChanged": [
+        "Non-statutory guidance on the use of artificial intelligence in children’s and adults’ social care in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T10:00:01.000Z",
+      "updatedAt": "2026-11-20T10:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Legalisation: next-day service providers",
+      "url": "https://www.gov.uk/government/publications/legalisation-next-day-service-providers",
+      "sourceType": "official",
+      "publishedAt": "2026-11-20T16:08:23.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Official Statistics: UK International Climate Finance results 2026",
+      "url": "https://www.gov.uk/government/statistics/uk-international-climate-finance-results-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-11-20T09:28:40.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Digital Inclusion Innovation Fund: evaluation report",
+      "url": "https://www.gov.uk/government/publications/digital-inclusion-innovation-fund-evaluation-report",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T14:55:19.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: IPS for alcohol and drug dependence: data linkage outcomes 2026",
+      "url": "https://www.gov.uk/government/publications/ips-for-alcohol-and-drug-dependence-data-linkage-outcomes-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-11-18T13:10:00.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Bovine TB: how to spot and report the disease",
+      "url": "https://www.gov.uk/guidance/bovine-tb",
+      "sourceType": "official",
+      "publishedAt": "2026-11-24T10:00:06.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Speech by Executive Vice-President Teresa Ribera at College of Europe, Natolin, Poland",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2570",
+      "sourceType": "official",
+      "publishedAt": "2026-11-18T23:00:00.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
