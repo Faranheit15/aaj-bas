@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-25T08:56:02.814Z",
+  "updatedAt": "2026-11-25T08:56:02.814Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-3adfae3e5d122500",
+    "s-cluster-620d01cda0ed2ec9",
+    "s-cluster-afab722d9e523e04",
+    "s-cluster-afab742d9e52416a",
+    "s-cluster-049ebb380d33ca0e",
+    "s-cluster-b309d7769bd907e1",
+    "s-cluster-1a0db98cae25186d",
+    "s-cluster-8fa361b123be9c26"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-37e04e2a71f9aa8f",
+      "s-cluster-d50dc5fa367bc4e2",
+      "s-cluster-59b5472998452004"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-60201d91afd9c4ed",
+      "s-cluster-d5943fc4daa7a49e",
+      "s-cluster-941447984ced4fbe"
+    ],
+    "business-economy": [
+      "s-cluster-2033667434a4a1ff",
+      "s-cluster-c56e23c32ca9c2c0",
+      "s-cluster-998ac74321c26f76"
+    ],
+    "sports": ["s-cluster-9c572083bdfcdc1c"],
+    "technology-ai": [
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-13bf16c8105e59c0",
+      "s-cluster-2102cd3c6221504f"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-3adfae3e5d122500",
+      "slug": "india-s-cluster-3adfae3e5d122500",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Designated standards: washing machines and washer dryers",
+      "deck": "Notices of publication and a consolidated list for designated standards for washing machines and washer dryers in relation to ecodesign and energy labelling.",
+      "whatChanged": [
+        "Notices of publication and a consolidated list for designated standards for washing machines and washer dryers in relation to ecodesign and energy labelling."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T00:01:04.000Z",
+      "updatedAt": "2026-11-25T00:01:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-620d01cda0ed2ec9",
+      "slug": "india-s-cluster-620d01cda0ed2ec9",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Designated standards: Professional refrigerated storage cabinets",
+      "deck": "Notices of publication and consolidated list for designated standards for professional refrigerated storage cabinets relating to ecodesign and energy labelling.",
+      "whatChanged": [
+        "Notices of publication and consolidated list for designated standards for professional refrigerated storage cabinets relating to ecodesign and energy labelling."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T00:01:04.000Z",
+      "updatedAt": "2026-11-25T00:01:04.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-afab722d9e523e04",
+      "slug": "india-s-cluster-afab722d9e523e04",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Remarks by Commissioner Dombrovskis at Eurochambres meeting",
+      "deck": "European Commission Speech Strasbourg, 25 Nov 2026 Good morning. It is a pleasure to join you this morning. Because Eurochambres doesn't just tell us that our rules are too complicated. You come back with report...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 25 Nov 2026 Good morning. It is a pleasure to join you this morning. Because Eurochambres doesn't just tell us that our rules are too complicated. You come back with report..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T07:51:26.000Z",
+      "updatedAt": "2026-11-25T07:51:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-afab742d9e52416a",
+      "slug": "world-s-cluster-afab742d9e52416a",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Speech by President von der Leyen at the European Parliament plenary debate on Europe's role and capacity to protect the international order and secure a jus...",
+      "deck": "European Commission Speech Strasbourg, 25 Nov 2026 “Check against delivery” Dear Vice-President, dear Sabine, Honourable Members, Almost five years ago, Russia launched its full-scale invasion of Ukraine. It...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 25 Nov 2026 “Check against delivery” Dear Vice-President, dear Sabine, Honourable Members, Almost five years ago, Russia launched its full-scale invasion of Ukraine. It..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T23:00:00.000Z",
+      "updatedAt": "2026-11-24T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-049ebb380d33ca0e",
+      "slug": "science-health-climate-s-cluster-049ebb380d33ca0e",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK International Climate Finance results 2026",
+      "deck": "This page provides the 2026 International Climate Finance (ICF) results for the UK government.",
+      "whatChanged": [
+        "This page provides the 2026 International Climate Finance (ICF) results for the UK government."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-24T09:38:32.000Z",
+      "updatedAt": "2026-11-24T09:38:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b309d7769bd907e1",
+      "slug": "policy-geopolitics-s-cluster-b309d7769bd907e1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Technology will not make peace for us, but used well, it can help us to build, protect and support it: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on conflict resolution in the era of rapid technological change.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on conflict resolution in the era of rapid technological change."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T19:27:20.000Z",
+      "updatedAt": "2026-11-24T19:27:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1a0db98cae25186d",
+      "slug": "technology-ai-s-cluster-1a0db98cae25186d",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: Livestock Information Transformation Programme (LITP)",
+      "deck": "The Livestock Information Transformation Programme (LITP) is introducing new technology to trace livestock movements more quickly and accurately in England.",
+      "whatChanged": [
+        "The Livestock Information Transformation Programme (LITP) is introducing new technology to trace livestock movements more quickly and accurately in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T17:23:28.000Z",
+      "updatedAt": "2026-11-24T17:23:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T15:51:00.000Z",
+      "updatedAt": "2026-11-24T15:51:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-37e04e2a71f9aa8f",
+      "slug": "science-health-climate-s-cluster-37e04e2a71f9aa8f",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Designated standards: Space Heaters and combination heaters",
+      "deck": "Notices of publication and a consolidated list for designated standards for space heaters and combination heaters in relation to ecodesign and energy labelling.",
+      "whatChanged": [
+        "Notices of publication and a consolidated list for designated standards for space heaters and combination heaters in relation to ecodesign and energy labelling."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T00:01:04.000Z",
+      "updatedAt": "2026-11-25T00:01:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d50dc5fa367bc4e2",
+      "slug": "science-health-climate-s-cluster-d50dc5fa367bc4e2",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Health and safety at work: 8 August to become European day of remembrance for victims of accidents at work",
+      "deck": "European Commission Joint press release Brussels, 24 Nov 2026 The European Commission, European Parliament and Council signed today a joint declaration establishing a European day of remembrance for victims of accidents at work.",
+      "whatChanged": [
+        "European Commission Joint press release Brussels, 24 Nov 2026 The European Commission, European Parliament and Council signed today a joint declaration establishing a European day of remembrance for victims of accidents at work."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T12:56:50.000Z",
+      "updatedAt": "2026-11-24T12:56:50.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-59b5472998452004",
+      "slug": "science-health-climate-s-cluster-59b5472998452004",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Avian influenza (bird flu) in Europe and the UK",
+      "deck": "Preliminary and updated outbreak assessments for avian influenza (bird flu) in Europe and the UK.",
+      "whatChanged": [
+        "Preliminary and updated outbreak assessments for avian influenza (bird flu) in Europe and the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T11:20:07.000Z",
+      "updatedAt": "2026-11-24T11:20:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-60201d91afd9c4ed",
+      "slug": "policy-geopolitics-s-cluster-60201d91afd9c4ed",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "International treaty: UK/Korea: Protocol Amending the Agreement for Co-operation in the Peaceful Uses of Nuclear Energy [CS Korea No.1/2026]",
+      "deck": "This treaty was presented to Parliament in November 2026.",
+      "whatChanged": [
+        "This treaty was presented to Parliament in November 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T14:00:02.000Z",
+      "updatedAt": "2026-11-24T14:00:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d5943fc4daa7a49e",
+      "slug": "policy-geopolitics-s-cluster-d5943fc4daa7a49e",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: Plant imports: authorised border control posts in the UK",
+      "deck": "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports.",
+      "whatChanged": [
+        "A list of places where you can bring consignments of plants, seeds and produce into the UK, including ports and airports."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T12:28:51.000Z",
+      "updatedAt": "2026-11-24T12:28:51.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-941447984ced4fbe",
+      "slug": "policy-geopolitics-s-cluster-941447984ced4fbe",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK steps up response to renewed Houthi aggression",
+      "deck": "The UK government has announced sanctions against the Houthis and their top officials, following renewed aggression inside Yemen and against Saudi Arabia.",
+      "whatChanged": [
+        "The UK government has announced sanctions against the Houthis and their top officials, following renewed aggression inside Yemen and against Saudi Arabia."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T11:13:00.000Z",
+      "updatedAt": "2026-11-24T11:13:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2033667434a4a1ff",
+      "slug": "business-economy-s-cluster-2033667434a4a1ff",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 24/ 11 / 2026",
+      "deck": "European Commission Daily news Brussels, 24 Nov 2026 Commission calls for joint EU efforts to reduce tax gaps and boost public finances Today, the European Commission published its Mind the Gap 2026 Communication,...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 24 Nov 2026 Commission calls for joint EU efforts to reduce tax gaps and boost public finances Today, the European Commission published its Mind the Gap 2026 Communication,..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T14:25:28.000Z",
+      "updatedAt": "2026-11-24T14:25:28.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c56e23c32ca9c2c0",
+      "slug": "business-economy-s-cluster-c56e23c32ca9c2c0",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Moving, living or retiring abroad",
+      "deck": "What to consider when moving, living, or retiring abroad – including visas, healthcare, tax and pensions.",
+      "whatChanged": [
+        "What to consider when moving, living, or retiring abroad – including visas, healthcare, tax and pensions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:38:08.000Z",
+      "updatedAt": "2026-11-24T10:38:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-998ac74321c26f76",
+      "slug": "business-economy-s-cluster-998ac74321c26f76",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Guidance: Research and trade samples or display items (not for human consumption) - Import Information Notes",
+      "deck": "Guidance for vets, importers and border control officials when importing research and trade samples or display items to Great Britain.",
+      "whatChanged": [
+        "Guidance for vets, importers and border control officials when importing research and trade samples or display items to Great Britain."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:07.000Z",
+      "updatedAt": "2026-11-24T10:00:07.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9c572083bdfcdc1c",
+      "slug": "sports-s-cluster-9c572083bdfcdc1c",
+      "topic": "sports",
+      "reportingType": "official",
+      "headline": "Form: GEN02: Sam data fix request",
+      "deck": "Request a correction to data incorrectly entered into Sam, APHA's online system for submitting tuberculosis (TB) test results.",
+      "whatChanged": [
+        "Request a correction to data incorrectly entered into Sam, APHA's online system for submitting tuberculosis (TB) test results."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:00:08.000Z",
+      "updatedAt": "2026-11-24T10:00:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13bf16c8105e59c0",
+      "slug": "technology-ai-s-cluster-13bf16c8105e59c0",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Guidance: Artificial intelligence (AI) in social care",
+      "deck": "Non-statutory guidance on the use of artificial intelligence in children’s and adults’ social care in England.",
+      "whatChanged": [
+        "Non-statutory guidance on the use of artificial intelligence in children’s and adults’ social care in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-20T10:00:01.000Z",
+      "updatedAt": "2026-11-20T10:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2102cd3c6221504f",
+      "slug": "technology-ai-s-cluster-2102cd3c6221504f",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Notice: Tech Town Business Survey: privacy notice 2026 to 2027",
+      "deck": "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey.",
+      "whatChanged": [
+        "How the Department for Science, Innovation and Technology (DSIT) uses personal data collected through the Tech Town business survey."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-10-27T14:13:22.000Z",
+      "updatedAt": "2026-10-27T14:13:22.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Designated standards: water heaters",
+      "url": "https://www.gov.uk/government/publications/designated-standards-water-heaters",
+      "sourceType": "official",
+      "publishedAt": "2026-11-23T17:05:03.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Remarks by Commissioner Dombrovskis at Eurochambres meeting",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2582",
+      "sourceType": "official",
+      "publishedAt": "2026-11-19T15:04:25.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Technology will not make peace for us, but used well, it can help us to build, protect and support it: UK statement at the UN Security Council",
+      "url": "https://www.gov.uk/government/speeches/technology-will-not-make-peace-for-us-but-used-well-it-can-help-us-to-build-protect-and-support-it-uk-statement-at-the-un-security-council",
+      "sourceType": "official",
+      "publishedAt": "2026-11-23T10:55:23.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Livestock Information Transformation Programme (LITP)",
+      "url": "https://www.gov.uk/government/publications/livestock-information-transformation-programme-litp",
+      "sourceType": "official",
+      "publishedAt": "2026-11-24T10:00:07.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "New Chair to lead landmark care worker pay talks",
+      "url": "https://www.gov.uk/government/news/new-chair-to-lead-landmark-care-worker-pay-talks",
+      "sourceType": "official",
+      "publishedAt": "2026-11-18T19:20:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Legislative proposals to address broadband rollout in leasehold flats",
+      "url": "https://www.gov.uk/government/consultations/legislative-proposals-to-address-broadband-rollout-in-leasehold-flats",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T14:55:19.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
