@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-26",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-26T08:41:41.334Z",
+  "updatedAt": "2026-11-26T08:41:41.334Z",
+  "estimatedMinutes": 4,
+  "coreStoryIds": [
+    "s-cluster-6439fae46013593f",
+    "s-cluster-7d314c19a0b8c4ec",
+    "s-cluster-58cb35f9044cf94d",
+    "s-cluster-68e221d3977c3d23",
+    "s-cluster-13452ed2edfc7646",
+    "s-cluster-bfda30fc4072ca01",
+    "s-cluster-da0adb9dbadd61d9",
+    "s-cluster-da0e619dbae07b62"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-a473b2ae6481ce34",
+      "s-cluster-72f7851fbf1a74a8",
+      "s-cluster-4993ec3ac76c9013"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-020a4f020948eb75",
+      "s-cluster-2da0d77b859e1ce8",
+      "s-cluster-b309d7769bd907e1"
+    ],
+    "business-economy": [
+      "s-cluster-0bd5e2a60a6db6a2",
+      "s-cluster-8fa361b123be9c26",
+      "s-cluster-c56e23c32ca9c2c0"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-1533f59c9fe7edca",
+      "s-cluster-1a0db98cae25186d"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-6439fae46013593f",
+      "slug": "india-s-cluster-6439fae46013593f",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Millions more trees on the way for communities across the country",
+      "deck": "England's green spaces are branching out under the new Trees Action Plan, which will see millions more trees planted and new woodland for the public to enjoy.",
+      "whatChanged": [
+        "England's green spaces are branching out under the new Trees Action Plan, which will see millions more trees planted and new woodland for the public to enjoy."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T00:01:02.000Z",
+      "updatedAt": "2026-11-26T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7d314c19a0b8c4ec",
+      "slug": "india-s-cluster-7d314c19a0b8c4ec",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Importing or moving fish to the UK",
+      "deck": "How to import or move fish for human consumption to the UK.",
+      "whatChanged": [
+        "How to import or move fish for human consumption to the UK."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T00:01:02.000Z",
+      "updatedAt": "2026-11-26T00:01:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-58cb35f9044cf94d",
+      "slug": "science-health-climate-s-cluster-58cb35f9044cf94d",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: UK International Climate Finance results 2026",
+      "deck": "This page provides the 2026 International Climate Finance (ICF) results for the UK government.",
+      "whatChanged": [
+        "This page provides the 2026 International Climate Finance (ICF) results for the UK government."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-defra"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-24T09:38:32.000Z",
+      "updatedAt": "2026-11-25T15:01:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-68e221d3977c3d23",
+      "slug": "india-s-cluster-68e221d3977c3d23",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Solar PV deployment: October 2026",
+      "deck": "Monthly deployment of solar photovoltaic capacity in the United Kingdom.",
+      "whatChanged": [
+        "Monthly deployment of solar photovoltaic capacity in the United Kingdom."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-25T10:00:17.000Z",
+      "updatedAt": "2026-11-25T10:53:24.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-13452ed2edfc7646",
+      "slug": "business-economy-s-cluster-13452ed2edfc7646",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Energy trends and prices: September - November 2026",
+      "deck": "Monthly production, trade, electricity generation and consumption of coal, electricity, gas, oil and total energy; retail price and EU comparative price data, and petrol & diesel price data.",
+      "whatChanged": [
+        "Monthly production, trade, electricity generation and consumption of coal, electricity, gas, oil and total energy; retail price and EU comparative price data, and petrol & diesel price data."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra", "uk-desnz"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-25T10:00:53.000Z",
+      "updatedAt": "2026-11-25T13:04:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-bfda30fc4072ca01",
+      "slug": "policy-geopolitics-s-cluster-bfda30fc4072ca01",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Mexico travel advice",
+      "deck": "FCDO travel advice for Mexico. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Mexico. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:36:16.000Z",
+      "updatedAt": "2026-11-25T15:24:11.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-da0adb9dbadd61d9",
+      "slug": "world-s-cluster-da0adb9dbadd61d9",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Statement by President von der Leyen with President Costa following the EU-Western Balkans Summit",
+      "deck": "European Commission Statement Brussels, 25 Nov 2026 Good evening, I am convinced that enlargement is a strategic imperative for Europe. Today, the momentum is real. If you look at all the negotiations we have had...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 25 Nov 2026 Good evening, I am convinced that enlargement is a strategic imperative for Europe. Today, the momentum is real. If you look at all the negotiations we have had..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T18:05:05.000Z",
+      "updatedAt": "2026-11-25T18:05:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-da0e619dbae07b62",
+      "slug": "world-s-cluster-da0e619dbae07b62",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Statement by Commissioner Dombrovskis at the European Parliament on the EU's support for Ukraine",
+      "deck": "European Commission Statement Strasbourg, 25 Nov 2026 Madam Chair, Minister, honourable Members, Allow me to conclude on behalf of the Commission by reiterating some key points. As President von der Leyen has alrea...",
+      "whatChanged": [
+        "European Commission Statement Strasbourg, 25 Nov 2026 Madam Chair, Minister, honourable Members, Allow me to conclude on behalf of the Commission by reiterating some key points. As President von der Leyen has alrea..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T08:05:35.000Z",
+      "updatedAt": "2026-11-25T08:05:35.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a473b2ae6481ce34",
+      "slug": "science-health-climate-s-cluster-a473b2ae6481ce34",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Bird flu (avian influenza): housing your birds safely",
+      "deck": "Manage your birds’ housing and welfare when they must be kept inside because of disease outbreaks.",
+      "whatChanged": [
+        "Manage your birds’ housing and welfare when they must be kept inside because of disease outbreaks."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T12:49:06.000Z",
+      "updatedAt": "2026-11-25T18:57:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-72f7851fbf1a74a8",
+      "slug": "science-health-climate-s-cluster-72f7851fbf1a74a8",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "UK Medical teams deliver lifeline healthcare in Gaza",
+      "deck": "UK allocates £14 million for UK-Med to deliver lifesaving emergency treatment, surgery and rehabilitation for Palestinians in Gaza.",
+      "whatChanged": [
+        "UK allocates £14 million for UK-Med to deliver lifesaving emergency treatment, surgery and rehabilitation for Palestinians in Gaza."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T15:17:00.000Z",
+      "updatedAt": "2026-11-25T15:17:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4993ec3ac76c9013",
+      "slug": "science-health-climate-s-cluster-4993ec3ac76c9013",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Man arrested for waste dumping at notorious Kidlington site",
+      "deck": "Arrest forms part of Environment Agency investigation, supported by the South East Regional Organised Crime Unit",
+      "whatChanged": [
+        "Arrest forms part of Environment Agency investigation, supported by the South East Regional Organised Crime Unit"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T15:12:26.000Z",
+      "updatedAt": "2026-11-25T15:12:26.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-020a4f020948eb75",
+      "slug": "policy-geopolitics-s-cluster-020a4f020948eb75",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "NATO is defensive. Russia is the aggressor: UK statement to the OSCE",
+      "deck": "UK Senior Military Advisor, Colonel Joby Rimmer, rejects Russia's claim that the West seeks its \"strategic defeat\". He says the UK's aim is the end of Russia's war of aggression, that NATO is defensive by design, and that Russia can end...",
+      "whatChanged": [
+        "UK Senior Military Advisor, Colonel Joby Rimmer, rejects Russia's claim that the West seeks its \"strategic defeat\". He says the UK's aim is the end of Russia's war of aggression, that NATO is defensive by design, and that Russia can end the war by withdrawing its forces from Ukraine."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T13:47:49.000Z",
+      "updatedAt": "2026-11-25T13:47:49.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2da0d77b859e1ce8",
+      "slug": "policy-geopolitics-s-cluster-2da0d77b859e1ce8",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "UK cracks down on online abuse ahead of international summit seeking to end violence against women and girls",
+      "deck": "Women and girls in the UK and around the world will be better protected from online abuse by a new UK-funded programme",
+      "whatChanged": [
+        "Women and girls in the UK and around the world will be better protected from online abuse by a new UK-funded programme"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T10:34:00.000Z",
+      "updatedAt": "2026-11-25T10:34:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b309d7769bd907e1",
+      "slug": "policy-geopolitics-s-cluster-b309d7769bd907e1",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Technology will not make peace for us, but used well, it can help us to build, protect and support it: UK statement at the UN Security Council",
+      "deck": "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on conflict resolution in the era of rapid technological change.",
+      "whatChanged": [
+        "Statement by Ambassador Sarah MacIntosh, UK Permanent Representative to the UN, at the UN Security Council meeting on conflict resolution in the era of rapid technological change."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T19:27:20.000Z",
+      "updatedAt": "2026-11-24T19:27:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0bd5e2a60a6db6a2",
+      "slug": "business-economy-s-cluster-0bd5e2a60a6db6a2",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Daily News 23 / 11 / 2026",
+      "deck": "European Commission Daily news Brussels, 23 Nov 2026 Commission welcomes European Citizens' Panel recommendations on Democratic Resilience The European Citizens' Panel on Democratic Resilience concluded yesterday...",
+      "whatChanged": [
+        "European Commission Daily news Brussels, 23 Nov 2026 Commission welcomes European Citizens' Panel recommendations on Democratic Resilience The European Citizens' Panel on Democratic Resilience concluded yesterday..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-23T10:24:10.000Z",
+      "updatedAt": "2026-11-25T10:10:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8fa361b123be9c26",
+      "slug": "business-economy-s-cluster-8fa361b123be9c26",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Imports, exports and EU trade of animals and animal products: topical issues",
+      "deck": "Current issues relating to imports and exports of animals and animal products.",
+      "whatChanged": [
+        "Current issues relating to imports and exports of animals and animal products."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T15:51:00.000Z",
+      "updatedAt": "2026-11-24T15:51:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c56e23c32ca9c2c0",
+      "slug": "business-economy-s-cluster-c56e23c32ca9c2c0",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Moving, living or retiring abroad",
+      "deck": "What to consider when moving, living, or retiring abroad – including visas, healthcare, tax and pensions.",
+      "whatChanged": [
+        "What to consider when moving, living, or retiring abroad – including visas, healthcare, tax and pensions."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T10:38:08.000Z",
+      "updatedAt": "2026-11-24T10:38:08.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T10:00:03.000Z",
+      "updatedAt": "2026-11-25T10:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1533f59c9fe7edca",
+      "slug": "technology-ai-s-cluster-1533f59c9fe7edca",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission proposes Quantum Act and new Sovereign Tech Equity Fund to strengthen Europe's industrial capacity and security",
+      "deck": "European Commission Press release Strasbourg, 25 Nov 2026 The European Commission today proposed the Quantum Act, a new framework to help turn Europe's quantum research into products and services, strengthen supply chains and prepare Eur...",
+      "whatChanged": [
+        "European Commission Press release Strasbourg, 25 Nov 2026 The European Commission today proposed the Quantum Act, a new framework to help turn Europe's quantum research into products and services, strengthen supply chains and prepare Europe's digital systems for post-quantum cryptography. The proposal also lays the groundwork for the Sovereign Tech Equity Fund (STEF)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T23:00:00.000Z",
+      "updatedAt": "2026-11-24T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1a0db98cae25186d",
+      "slug": "technology-ai-s-cluster-1a0db98cae25186d",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Policy paper: Livestock Information Transformation Programme (LITP)",
+      "deck": "The Livestock Information Transformation Programme (LITP) is introducing new technology to trace livestock movements more quickly and accurately in England.",
+      "whatChanged": [
+        "The Livestock Information Transformation Programme (LITP) is introducing new technology to trace livestock movements more quickly and accurately in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T17:23:28.000Z",
+      "updatedAt": "2026-11-24T17:23:28.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Millions more trees on the way for communities across the country",
+      "url": "https://www.gov.uk/government/news/millions-more-trees-on-the-way-for-communities-across-the-country",
+      "sourceType": "official",
+      "publishedAt": "2026-11-24T12:28:51.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Serbia travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/serbia",
+      "sourceType": "official",
+      "publishedAt": "2026-11-24T09:38:32.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "£100 Household Energy Payment factsheet",
+      "url": "https://www.gov.uk/government/news/100-household-energy-payment-factsheet",
+      "sourceType": "official",
+      "publishedAt": "2026-11-25T00:01:04.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by President von der Leyen with President Costa following the EU-Western Balkans Summit",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2591",
+      "sourceType": "official",
+      "publishedAt": "2026-11-20T12:29:15.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DSIT: workforce management information, October 2026",
+      "url": "https://www.gov.uk/government/publications/dsit-workforce-management-information-october-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T14:56:06.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
