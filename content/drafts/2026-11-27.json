@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-27T08:52:44.489Z",
+  "updatedAt": "2026-11-27T08:52:44.489Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-441ed20692ae8a6a",
+    "s-cluster-1a9a3510f6d632bc",
+    "s-cluster-9982e2f985e22201",
+    "s-cluster-fbc61508a363e6ae",
+    "s-cluster-f674ce3a4fec2f61",
+    "s-cluster-a5b1964555ac9e97",
+    "s-cluster-9e1edb00fa5ff98b",
+    "s-cluster-922db108ab65788b"
+  ],
+  "interestPools": {
+    "science-health-climate": [
+      "s-cluster-1e2873d2214c0c9b",
+      "s-cluster-afaedb2d9e552646",
+      "s-cluster-a705957b15a73a80"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-2e63659ee7111a8f",
+      "s-cluster-2308e44bae9c96d0",
+      "s-cluster-4334a247725d03ca"
+    ],
+    "business-economy": [
+      "s-cluster-fb72373306a1e91d",
+      "s-cluster-8172cbf82efc0d39",
+      "s-cluster-ff8617a4fe99a33f"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-1533f59c9fe7edca",
+      "s-cluster-0f37ae2ac216caf6"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-441ed20692ae8a6a",
+      "slug": "policy-geopolitics-s-cluster-441ed20692ae8a6a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, October 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-25T13:58:14.000Z",
+      "updatedAt": "2026-11-26T16:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1a9a3510f6d632bc",
+      "slug": "india-s-cluster-1a9a3510f6d632bc",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Water charter: your customer rights",
+      "deck": "This charter sets out the standards you can expect from your water or sewerage company, and the support available if something goes wrong.",
+      "whatChanged": [
+        "This charter sets out the standards you can expect from your water or sewerage company, and the support available if something goes wrong."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T00:01:05.000Z",
+      "updatedAt": "2026-11-27T00:01:05.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9982e2f985e22201",
+      "slug": "india-s-cluster-9982e2f985e22201",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Agriculture in the United Kingdom 1988 – 2010",
+      "deck": "Historical annual statistics about agriculture in the United Kingdom.",
+      "whatChanged": [
+        "Historical annual statistics about agriculture in the United Kingdom."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T08:23:20.000Z",
+      "updatedAt": "2026-11-27T08:23:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fbc61508a363e6ae",
+      "slug": "world-s-cluster-fbc61508a363e6ae",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Joint statement by the Commission and the High Representative ahead of the International Day for the Elimination of Violence against Women",
+      "deck": "European Commission Statement Brussels, 25 Nov 2026 Every woman and girl has the right to live free from fear, violence, abuse and harm. And yet worldwide, one in three women, including in the EU, has been a vict...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 25 Nov 2026 Every woman and girl has the right to live free from fear, violence, abuse and harm. And yet worldwide, one in three women, including in the EU, has been a vict..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner", "fcdo"],
+      "sourceCount": 2,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-24T14:21:29.000Z",
+      "updatedAt": "2026-11-26T15:37:48.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-f674ce3a4fec2f61",
+      "slug": "world-s-cluster-f674ce3a4fec2f61",
+      "topic": "world",
+      "reportingType": "official",
+      "headline": "Statement by President von der Leyen with President Costa following the EU-Western Balkans Summit",
+      "deck": "European Commission Statement Brussels, 25 Nov 2026 Good evening, I am convinced that enlargement is a strategic imperative for Europe. Today, the momentum is real. If you look at all the negotiations we have had...",
+      "whatChanged": [
+        "European Commission Statement Brussels, 25 Nov 2026 Good evening, I am convinced that enlargement is a strategic imperative for Europe. Today, the momentum is real. If you look at all the negotiations we have had..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T18:05:05.000Z",
+      "updatedAt": "2026-11-26T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a5b1964555ac9e97",
+      "slug": "india-s-cluster-a5b1964555ac9e97",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Preparing for winter sports abroad",
+      "deck": "Travel advice and safety information for people planning a winter sports holiday abroad, including advice on skiing and snowboarding.",
+      "whatChanged": [
+        "Travel advice and safety information for people planning a winter sports holiday abroad, including advice on skiing and snowboarding."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T17:09:13.000Z",
+      "updatedAt": "2026-11-26T17:09:13.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9e1edb00fa5ff98b",
+      "slug": "policy-geopolitics-s-cluster-9e1edb00fa5ff98b",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Serbia travel advice",
+      "deck": "FCDO travel advice for Serbia. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Serbia. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T15:24:11.000Z",
+      "updatedAt": "2026-11-26T16:39:27.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-922db108ab65788b",
+      "slug": "science-health-climate-s-cluster-922db108ab65788b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Transparency data: DHSC: spending over £25,000, August 2026",
+      "deck": "Reports on departmental spending over £25,000.",
+      "whatChanged": ["Reports on departmental spending over £25,000."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T16:00:01.000Z",
+      "updatedAt": "2026-11-26T16:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1e2873d2214c0c9b",
+      "slug": "science-health-climate-s-cluster-1e2873d2214c0c9b",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Research: Genetically modified organisms: John Innes Centre (26/R52/01)",
+      "deck": "Inviting representations on an application from John Innes Centre to release a genetically modified organism (reference 26/R52/01).",
+      "whatChanged": [
+        "Inviting representations on an application from John Innes Centre to release a genetically modified organism (reference 26/R52/01)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T08:41:21.000Z",
+      "updatedAt": "2026-11-27T08:41:21.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-afaedb2d9e552646",
+      "slug": "science-health-climate-s-cluster-afaedb2d9e552646",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Speech by Commissioner Hoekstra in the European Parliament's Plenary debate on the Outcome of the Antalya UN climate summit (COP 31)",
+      "deck": "European Commission Speech Strasbourg, 26 Nov 2026 Ladies and gentlemen, Good morning to all of you. In conversations and in negotiations you sometimes arrive at a moment where you simply have to say no. No, bec...",
+      "whatChanged": [
+        "European Commission Speech Strasbourg, 26 Nov 2026 Ladies and gentlemen, Good morning to all of you. In conversations and in negotiations you sometimes arrive at a moment where you simply have to say no. No, bec..."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T10:23:20.000Z",
+      "updatedAt": "2026-11-26T10:23:20.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-a705957b15a73a80",
+      "slug": "science-health-climate-s-cluster-a705957b15a73a80",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Minister Smyth speech at the NHS Alliance Autumn Conference",
+      "deck": "The Minister of State for Health made a speech at the NHS Alliance Autumn conference, the theme of which was Turning Ambition Into Action.",
+      "whatChanged": [
+        "The Minister of State for Health made a speech at the NHS Alliance Autumn conference, the theme of which was Turning Ambition Into Action."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T13:53:23.000Z",
+      "updatedAt": "2026-11-26T13:53:23.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2e63659ee7111a8f",
+      "slug": "policy-geopolitics-s-cluster-2e63659ee7111a8f",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Foreign Secretary welcomes next British Council Chair",
+      "deck": "Foreign Secretary Ed Miliband's statement, welcoming William Eccleshare as the next Chair of the British Council.",
+      "whatChanged": [
+        "Foreign Secretary Ed Miliband's statement, welcoming William Eccleshare as the next Chair of the British Council."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T13:30:46.000Z",
+      "updatedAt": "2026-11-26T13:30:46.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-2308e44bae9c96d0",
+      "slug": "policy-geopolitics-s-cluster-2308e44bae9c96d0",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: FCDO ministerial travel and meetings, January to March 2026",
+      "deck": "Data on Foreign, Commonwealth and Development Office (FCDO) ministers’ external meetings and overseas travel.",
+      "whatChanged": [
+        "Data on Foreign, Commonwealth and Development Office (FCDO) ministers’ external meetings and overseas travel."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T13:13:19.000Z",
+      "updatedAt": "2026-11-26T13:13:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4334a247725d03ca",
+      "slug": "policy-geopolitics-s-cluster-4334a247725d03ca",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Guidance: The UK Sanctions List",
+      "deck": "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why.",
+      "whatChanged": [
+        "Find out which people, entities and ships are designated or specified under regulations made under the Sanctions and Anti-Money Laundering Act 2018, and why."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T12:39:18.000Z",
+      "updatedAt": "2026-11-26T12:39:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-fb72373306a1e91d",
+      "slug": "business-economy-s-cluster-fb72373306a1e91d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Monthly and annual prices of road fuels and petroleum products",
+      "deck": "Monthly and annual prices of road fuels and fuels used for home heating, plus an index of crude oil prices.",
+      "whatChanged": [
+        "Monthly and annual prices of road fuels and fuels used for home heating, plus an index of crude oil prices."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T09:30:22.000Z",
+      "updatedAt": "2026-11-26T09:30:22.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8172cbf82efc0d39",
+      "slug": "business-economy-s-cluster-8172cbf82efc0d39",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Economic Estimates: Digital Sector Regional Gross Value Added (2010 to 2024)",
+      "deck": "Accredited Official Statistics estimating the contribution of the Digital Sector to the UK economy and each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA).",
+      "whatChanged": [
+        "Accredited Official Statistics estimating the contribution of the Digital Sector to the UK economy and each UK International Territorial Level 1 (ITL1) region, measured by Gross Value Added (GVA)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T09:30:18.000Z",
+      "updatedAt": "2026-11-26T09:30:18.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ff8617a4fe99a33f",
+      "slug": "business-economy-s-cluster-ff8617a4fe99a33f",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Research: Market Sustainability and Improvement Fund 2026 to 2027: care provider fees",
+      "deck": "Data and analysis of fees paid to care providers by local authorities, reported as part of the Market Sustainability and Improvement Fund.",
+      "whatChanged": [
+        "Data and analysis of fees paid to care providers by local authorities, reported as part of the Market Sustainability and Improvement Fund."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T09:30:09.000Z",
+      "updatedAt": "2026-11-26T09:30:09.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T10:00:03.000Z",
+      "updatedAt": "2026-11-25T10:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1533f59c9fe7edca",
+      "slug": "technology-ai-s-cluster-1533f59c9fe7edca",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission proposes Quantum Act and new Sovereign Tech Equity Fund to strengthen Europe's industrial capacity and security",
+      "deck": "European Commission Press release Strasbourg, 25 Nov 2026 The European Commission today proposed the Quantum Act, a new framework to help turn Europe's quantum research into products and services, strengthen supply chains and prepare Eur...",
+      "whatChanged": [
+        "European Commission Press release Strasbourg, 25 Nov 2026 The European Commission today proposed the Quantum Act, a new framework to help turn Europe's quantum research into products and services, strengthen supply chains and prepare Europe's digital systems for post-quantum cryptography. The proposal also lays the groundwork for the Sovereign Tech Equity Fund (STEF)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T23:00:00.000Z",
+      "updatedAt": "2026-11-24T23:00:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Preparing for winter sports abroad",
+      "url": "https://www.gov.uk/guidance/winter-sports-stay-safe-on-the-slopes",
+      "sourceType": "official",
+      "publishedAt": "2026-11-25T15:17:00.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Transparency data: DHSC: spending over £25,000, June 2026",
+      "url": "https://www.gov.uk/government/publications/dhsc-spending-over-25000-june-2026",
+      "sourceType": "official",
+      "publishedAt": "2026-11-20T10:00:00.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Accredited official statistics: Economic Estimates: Digital Sector Regional Gross Value Added (2010 to 2024)",
+      "url": "https://www.gov.uk/government/statistics/economic-estimates-digital-sector-regional-gross-value-added-2010-to-2024",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T14:56:15.000Z"
+    },
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Research: Genetically modified organisms: John Innes Centre (26/R52/01)",
+      "url": "https://www.gov.uk/government/publications/genetically-modified-organisms-john-innes-centre-26r5201",
+      "sourceType": "official",
+      "publishedAt": "2026-11-25T15:26:31.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Statement by President von der Leyen with President Costa following the Special European Council meeting of November 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2603",
+      "sourceType": "official",
+      "publishedAt": "2026-11-20T23:00:00.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Notice: Heat Pump Ready Programme: successful projects",
+      "url": "https://www.gov.uk/government/publications/heat-pump-ready-programme-successful-projects",
+      "sourceType": "official",
+      "publishedAt": "2026-11-26T09:30:18.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
