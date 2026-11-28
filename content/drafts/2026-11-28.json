@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-28",
+  "editionVersion": 1,
+  "status": "draft",
+  "publishedAt": "2026-11-28T08:12:16.943Z",
+  "updatedAt": "2026-11-28T08:12:16.943Z",
+  "estimatedMinutes": 3,
+  "coreStoryIds": [
+    "s-cluster-73add49f8ef62f57",
+    "s-cluster-1d12917fe7f95c05",
+    "s-cluster-ffc897294c118459",
+    "s-cluster-c32d88a1020691fb",
+    "s-cluster-441ed20692ae8a6a",
+    "s-cluster-85337f1f13134598",
+    "s-cluster-4ef29330c7636382",
+    "s-cluster-1573e53a54dd5b8d"
+  ],
+  "interestPools": {
+    "business-economy": [
+      "s-cluster-8feafbea5594bd1d",
+      "s-cluster-b7208033d20e6c9a",
+      "s-cluster-239c6dae1ad2a2a5"
+    ],
+    "policy-geopolitics": [
+      "s-cluster-7b86aa8a53f93f97",
+      "s-cluster-94cf9c5fda1a5946",
+      "s-cluster-ac1ef4c36d00cba2"
+    ],
+    "science-health-climate": [
+      "s-cluster-d0cdacd50d6284a9",
+      "s-cluster-c73bdf4d09be7b59",
+      "s-cluster-9bc46cfd807175fc"
+    ],
+    "technology-ai": [
+      "s-cluster-03618dc37a577c8a",
+      "s-cluster-0f37ae2ac216caf6",
+      "s-cluster-1533f59c9fe7edca"
+    ]
+  },
+  "stories": [
+    {
+      "id": "s-cluster-73add49f8ef62f57",
+      "slug": "india-s-cluster-73add49f8ef62f57",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Millions in water company fines to go to water clean-up projects across the country",
+      "deck": "More than 300 local projects will get funding to bring local waterways back to life.",
+      "whatChanged": [
+        "More than 300 local projects will get funding to bring local waterways back to life."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-28T00:01:00.000Z",
+      "updatedAt": "2026-11-28T00:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1d12917fe7f95c05",
+      "slug": "science-health-climate-s-cluster-1d12917fe7f95c05",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Policy paper: Water Environment Improvement Fund projects for 2026 to 2027",
+      "deck": "Projects funded by the Water Environment Improvement Fund (WEIF) for 2026 to 2027.",
+      "whatChanged": [
+        "Projects funded by the Water Environment Improvement Fund (WEIF) for 2026 to 2027."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-28T00:01:00.000Z",
+      "updatedAt": "2026-11-28T00:01:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ffc897294c118459",
+      "slug": "business-economy-s-cluster-ffc897294c118459",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Pharmacy shake-up to save patients repeat trips for medicines",
+      "deck": "Everyday fix for patients as pharmacists able to supply alternative strength or form of medicine if stocks are short",
+      "whatChanged": [
+        "Everyday fix for patients as pharmacists able to supply alternative strength or form of medicine if stocks are short"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-28T06:00:02.000Z",
+      "updatedAt": "2026-11-28T06:00:02.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c32d88a1020691fb",
+      "slug": "india-s-cluster-c32d88a1020691fb",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "Guidance: Medicines eligible for Northern Ireland MHRA Authorised Route",
+      "deck": "Sets out medicines that can be moved to Northern Ireland to meet patient need.",
+      "whatChanged": [
+        "Sets out medicines that can be moved to Northern Ireland to meet patient need."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T16:39:56.000Z",
+      "updatedAt": "2026-11-27T16:39:56.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-441ed20692ae8a6a",
+      "slug": "policy-geopolitics-s-cluster-441ed20692ae8a6a",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: DSIT: workforce management information, October 2026",
+      "deck": "Reports on departmental staff numbers and costs.",
+      "whatChanged": ["Reports on departmental staff numbers and costs."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo", "uk-dhsc", "uk-dsit"],
+      "sourceCount": 3,
+      "confidence": "multi-source",
+      "firstPublishedAt": "2026-11-25T13:58:14.000Z",
+      "updatedAt": "2026-11-26T16:00:01.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-85337f1f13134598",
+      "slug": "policy-geopolitics-s-cluster-85337f1f13134598",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Mauritius travel advice",
+      "deck": "FCDO travel advice for Mauritius. Includes safety and security, insurance, entry requirements and legal differences.",
+      "whatChanged": [
+        "FCDO travel advice for Mauritius. Includes safety and security, insurance, entry requirements and legal differences."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-26T16:39:27.000Z",
+      "updatedAt": "2026-11-27T16:40:32.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-4ef29330c7636382",
+      "slug": "india-s-cluster-4ef29330c7636382",
+      "topic": "india",
+      "reportingType": "official",
+      "headline": "UK education support in Syria reaches one million children",
+      "deck": "The Syria Education Programme (SEP) has supported the education of one million children across northwest Syria since 2018. Following the success of the project, the UK government is also announcing funding for third iteration of programme.",
+      "whatChanged": [
+        "The Syria Education Programme (SEP) has supported the education of one million children across northwest Syria since 2018. Following the success of the project, the UK government is also announcing funding for third iteration of programme."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T14:09:00.000Z",
+      "updatedAt": "2026-11-27T14:09:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1573e53a54dd5b8d",
+      "slug": "science-health-climate-s-cluster-1573e53a54dd5b8d",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Guidance: Determinations of the UK ETS carbon price",
+      "deck": "Determinations made by the UK ETS Authority under article 46 of the Greenhouse Gas Emission Trading Scheme Order 2020.",
+      "whatChanged": [
+        "Determinations made by the UK ETS Authority under article 46 of the Greenhouse Gas Emission Trading Scheme Order 2020."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-desnz"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T17:15:00.000Z",
+      "updatedAt": "2026-11-27T17:15:00.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-8feafbea5594bd1d",
+      "slug": "business-economy-s-cluster-8feafbea5594bd1d",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "England 2014 to 2020 European Structural and Investment Funds",
+      "deck": "Information about the European Structural and Investment Funds programme for 2014 to 2020 in England.",
+      "whatChanged": [
+        "Information about the European Structural and Investment Funds programme for 2014 to 2020 in England."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T17:06:57.000Z",
+      "updatedAt": "2026-11-27T17:06:57.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-b7208033d20e6c9a",
+      "slug": "business-economy-s-cluster-b7208033d20e6c9a",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Huge trade boost for Northern Ireland as UK-EU trade deal tears down 90% of checks on goods from Great Britain",
+      "deck": "Baroness Hayman visits Creative Gardens and Lidl in Northern Ireland to see how fewer checks and less paperwork will help businesses of all sizes",
+      "whatChanged": [
+        "Baroness Hayman visits Creative Gardens and Lidl in Northern Ireland to see how fewer checks and less paperwork will help businesses of all sizes"
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T15:49:42.000Z",
+      "updatedAt": "2026-11-27T15:49:42.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-239c6dae1ad2a2a5",
+      "slug": "business-economy-s-cluster-239c6dae1ad2a2a5",
+      "topic": "business-economy",
+      "reportingType": "official",
+      "headline": "Accredited official statistics: Farm Accounts in England 2025/26",
+      "deck": "Farm Accounts in England is the primary publication from the Farm Business Survey. It provides information on farm incomes, outputs and costs for the various farm types, farm sizes, regions and economic performance.",
+      "whatChanged": [
+        "Farm Accounts in England is the primary publication from the Farm Business Survey. It provides information on farm incomes, outputs and costs for the various farm types, farm sizes, regions and economic performance."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T09:10:53.000Z",
+      "updatedAt": "2026-11-27T09:10:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-7b86aa8a53f93f97",
+      "slug": "policy-geopolitics-s-cluster-7b86aa8a53f93f97",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Minister of State for International Development speech at the RSA-UK Bilateral Forum Reception",
+      "deck": "Minister Kirsty McNeill's speech at the RSA-UK Bilateral Forum Reception on Thursday 26 November 2026.",
+      "whatChanged": [
+        "Minister Kirsty McNeill's speech at the RSA-UK Bilateral Forum Reception on Thursday 26 November 2026."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T15:34:31.000Z",
+      "updatedAt": "2026-11-27T15:34:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-94cf9c5fda1a5946",
+      "slug": "policy-geopolitics-s-cluster-94cf9c5fda1a5946",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: FCDO government procurement card spend over £500, March 2025",
+      "deck": "Data on Foreign, Commonwealth & Development Office spend over £500 with a government procurement card, covering March 2025.",
+      "whatChanged": [
+        "Data on Foreign, Commonwealth & Development Office spend over £500 with a government procurement card, covering March 2025."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T12:11:55.000Z",
+      "updatedAt": "2026-11-27T12:12:17.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-ac1ef4c36d00cba2",
+      "slug": "policy-geopolitics-s-cluster-ac1ef4c36d00cba2",
+      "topic": "policy-geopolitics",
+      "reportingType": "official",
+      "headline": "Transparency data: Foreign, Commonwealth & Development Office: spending over £25,000, February 2025",
+      "deck": "Reports on FCDO departmental spending over £25,000.",
+      "whatChanged": ["Reports on FCDO departmental spending over £25,000."],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["fcdo"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T12:08:42.000Z",
+      "updatedAt": "2026-11-27T12:09:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-d0cdacd50d6284a9",
+      "slug": "science-health-climate-s-cluster-d0cdacd50d6284a9",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Official Statistics: Medicine supply disruption statistics, UK: data to December 2026",
+      "deck": "Twice-yearly official statistics on medicine supply issue and discontinuation notifications reported to the Department of Health and Social Care by pharmaceutical suppliers.",
+      "whatChanged": [
+        "Twice-yearly official statistics on medicine supply issue and discontinuation notifications reported to the Department of Health and Social Care by pharmaceutical suppliers."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dhsc"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T16:20:19.000Z",
+      "updatedAt": "2026-11-27T16:20:19.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-c73bdf4d09be7b59",
+      "slug": "science-health-climate-s-cluster-c73bdf4d09be7b59",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Air pollution monitoring: UK Urban Nitrogen Dioxide (NO2) Network",
+      "deck": "The UK Urban NO2 Network (UUNN) monitors levels of nitrogen dioxide on major roads.",
+      "whatChanged": [
+        "The UK Urban NO2 Network (UUNN) monitors levels of nitrogen dioxide on major roads."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T13:08:31.000Z",
+      "updatedAt": "2026-11-27T13:08:31.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-9bc46cfd807175fc",
+      "slug": "science-health-climate-s-cluster-9bc46cfd807175fc",
+      "topic": "science-health-climate",
+      "reportingType": "official",
+      "headline": "Air pollution monitoring: Polycyclic Aromatic Hydrocarbon Network",
+      "deck": "The Polycyclic Aromatic Hydrocarbon (PAH) Network monitors polycyclic aromatic hydrocarbons (PAHs).",
+      "whatChanged": [
+        "The Polycyclic Aromatic Hydrocarbon (PAH) Network monitors polycyclic aromatic hydrocarbons (PAHs)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-defra"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-27T09:49:44.000Z",
+      "updatedAt": "2026-11-27T10:56:53.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-03618dc37a577c8a",
+      "slug": "technology-ai-s-cluster-03618dc37a577c8a",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Cyber Essentials management information",
+      "deck": "Figures showing the number of Cyber Essentials certificates awarded, by quarter.",
+      "whatChanged": [
+        "Figures showing the number of Cyber Essentials certificates awarded, by quarter."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["uk-dsit"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-25T10:00:03.000Z",
+      "updatedAt": "2026-11-25T10:00:03.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-0f37ae2ac216caf6",
+      "slug": "technology-ai-s-cluster-0f37ae2ac216caf6",
+      "topic": "technology-ai",
+      "reportingType": "reporting",
+      "headline": "Why gender diversity matters in technology",
+      "deck": "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations.",
+      "whatChanged": [
+        "In the face of widespread oppression and commodification of the global south, our hope rests on the strength of our diversity as we move together imperfectly towards our collective liberations."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["global-voices-india"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-06-30T17:33:41.000Z",
+      "updatedAt": "2026-06-30T17:33:41.000Z",
+      "reviewed": false
+    },
+    {
+      "id": "s-cluster-1533f59c9fe7edca",
+      "slug": "technology-ai-s-cluster-1533f59c9fe7edca",
+      "topic": "technology-ai",
+      "reportingType": "official",
+      "headline": "Commission proposes Quantum Act and new Sovereign Tech Equity Fund to strengthen Europe's industrial capacity and security",
+      "deck": "European Commission Press release Strasbourg, 25 Nov 2026 The European Commission today proposed the Quantum Act, a new framework to help turn Europe's quantum research into products and services, strengthen supply chains and prepare Eur...",
+      "whatChanged": [
+        "European Commission Press release Strasbourg, 25 Nov 2026 The European Commission today proposed the Quantum Act, a new framework to help turn Europe's quantum research into products and services, strengthen supply chains and prepare Europe's digital systems for post-quantum cryptography. The proposal also lays the groundwork for the Sovereign Tech Equity Fund (STEF)."
+      ],
+      "whyItMatters": "No additional context is included because the reviewed source provided no permitted description material.",
+      "sourceIds": ["european-commission-press-corner"],
+      "sourceCount": 1,
+      "confidence": "single-source",
+      "firstPublishedAt": "2026-11-24T23:00:00.000Z",
+      "updatedAt": "2026-11-24T23:00:00.000Z",
+      "reviewed": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "uk-defra",
+      "publisher": "UK Department for Environment, Food and Rural Affairs",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Policy paper: Water Environment Improvement Fund projects for 2026 to 2027",
+      "url": "https://www.gov.uk/government/publications/water-environment-improvement-fund-projects-for-2026-to-2027",
+      "sourceType": "official",
+      "publishedAt": "2026-11-27T09:10:53.000Z"
+    },
+    {
+      "id": "uk-dhsc",
+      "publisher": "UK Department of Health and Social Care",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Pharmacy shake-up to save patients repeat trips for medicines",
+      "url": "https://www.gov.uk/government/news/pharmacy-shake-up-to-save-patients-repeat-trips-for-medicines",
+      "sourceType": "official",
+      "publishedAt": "2026-11-24T11:19:35.000Z"
+    },
+    {
+      "id": "fcdo",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Poland travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/poland",
+      "sourceType": "official",
+      "publishedAt": "2026-11-26T12:39:18.000Z"
+    },
+    {
+      "id": "uk-dsit",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Accredited official statistics: Economic Estimates: Digital Sector Regional Gross Value Added (2010 to 2024)",
+      "url": "https://www.gov.uk/government/statistics/economic-estimates-digital-sector-regional-gross-value-added-2010-to-2024",
+      "sourceType": "official",
+      "publishedAt": "2026-10-23T14:56:15.000Z"
+    },
+    {
+      "id": "uk-desnz",
+      "publisher": "UK Department for Energy Security and Net Zero",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "termsUrl": "https://www.gov.uk/help/reuse-govuk-content",
+      "title": "Guidance: Determinations of the UK ETS carbon price",
+      "url": "https://www.gov.uk/government/publications/determinations-of-the-uk-ets-carbon-price",
+      "sourceType": "official",
+      "publishedAt": "2026-11-26T09:30:22.000Z"
+    },
+    {
+      "id": "global-voices-india",
+      "publisher": "Global Voices",
+      "attribution": "Global Voices; adapted from the linked original under CC BY 3.0.",
+      "authors": ["Association for Progressive Communications"],
+      "termsUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "title": "Protest as a pillar of democracy",
+      "url": "https://globalvoices.org/2026/10/21/protest-as-a-pillar-of-democracy/",
+      "sourceType": "publisher",
+      "publishedAt": "2026-05-28T09:29:41.000Z"
+    },
+    {
+      "id": "european-commission-press-corner",
+      "publisher": "European Commission Press Corner",
+      "attribution": "European Commission content, licensed under CC BY 4.0.",
+      "termsUrl": "https://commission.europa.eu/legal-notice_en",
+      "title": "Keynote speech by Commissioner Albuquerque at the Training Day' of the 10th Anniversary of the ECB Simulation Conference for University Students",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2613",
+      "sourceType": "official",
+      "publishedAt": "2026-11-20T23:00:00.000Z"
+    }
+  ],
+  "correctionNotes": []
+}
